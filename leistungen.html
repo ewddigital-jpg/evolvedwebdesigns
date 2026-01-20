@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Webdesign Leistungen Friedrichshafen | SEO, Hosting & Support | EWD</title>
+    <meta name="description" content="Unsere Webdesign-Leistungen: ✓ Responsive Websites ✓ SEO-Optimierung ✓ Sicheres Hosting ✓ Support → Alle Services im Überblick!">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://evowebdesign.de/leistungen.html">
+    
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#0066FF">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #0066FF;
+            --primary-dark: #0052CC;
+            --primary-light: #4D94FF;
+            --accent: #00D9FF;
+            --bg-body: #0D1117;
+            --bg-card: #161B22;
+            --bg-card-hover: #1C2128;
+            --bg-lighter: #21262D;
+            --text: #F0F6FC;
+            --text-secondary: #8B949E;
+            --border: rgba(240, 246, 252, 0.1);
+            --border-hover: rgba(0, 102, 255, 0.4);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-body);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 0%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(13, 17, 23, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+        .logo-img { height: 45px; width: auto; }
+        .logo-text-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo-text-sub {
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-light); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--text) !important;
+            padding: 0.65rem 1.4rem;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+        }
+        .mobile-toggle span {
+            width: 24px; height: 2px;
+            background: var(--primary-light);
+            border-radius: 2px;
+        }
+
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5.5rem 2rem 1rem;
+        }
+        .breadcrumb-list {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+            font-size: 0.85rem;
+        }
+        .breadcrumb-list a { color: var(--text-secondary); text-decoration: none; }
+        .breadcrumb-list a:hover { color: var(--primary-light); }
+        .breadcrumb-list .current { color: var(--primary-light); }
+
+        .page-hero {
+            padding: 1.5rem 2rem 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .page-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .page-hero p { color: var(--text-secondary); font-size: 1.05rem; }
+
+        .services-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .service-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .service-section:last-of-type { border-bottom: none; }
+        .service-section.reverse .service-content { order: 2; }
+        .service-section.reverse .service-visual { order: 1; }
+        
+        .service-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.4rem, 3vw, 1.75rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .service-content > p {
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            line-height: 1.7;
+        }
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        .service-features li::before {
+            content: '✓';
+            color: var(--primary-light);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .service-visual {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .service-visual:hover { border-color: var(--border-hover); }
+        .service-icon-large { font-size: 3.5rem; margin-bottom: 1.25rem; }
+        .service-visual h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .service-visual p { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.6rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--text);
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover { border-color: var(--primary); color: var(--primary-light); }
+
+        .process-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label {
+            display: inline-block;
+            color: var(--primary-light);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+        }
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        .process-step { text-align: center; padding: 1rem; }
+        .process-number {
+            width: 50px; height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            margin: 0 auto 1.25rem;
+        }
+        .process-step h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+        }
+        .process-step p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; }
+
+        .cta-section {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 217, 255, 0.05));
+            border: 1px solid rgba(0, 102, 255, 0.2);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        .cta-section h2 { margin-bottom: 0.75rem; font-size: 1.5rem; }
+        .cta-section p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        footer {
+            background: var(--bg-lighter);
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+        .footer-content { max-width: 1200px; margin: 0 auto; }
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--primary-light); }
+        .social-links { display: flex; gap: 0.75rem; justify-content: center; margin: 1.25rem 0; }
+        .social-link {
+            width: 40px; height: 40px;
+            background: rgba(0, 102, 255, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-link img { width: 20px; height: 20px; }
+        .social-link:hover { background: var(--primary); }
+        .footer-legal {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+        .footer-legal a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; }
+
+        @media (max-width: 992px) {
+            .service-section { grid-template-columns: 1fr; gap: 2rem; }
+            .service-section.reverse .service-content { order: 1; }
+            .service-section.reverse .service-visual { order: 2; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 65px; left: -100%;
+                width: 100%; height: calc(100vh - 65px);
+                background: rgba(13, 17, 23, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                transition: left 0.3s ease;
+            }
+            .nav-links.active { left: 0; }
+            .mobile-toggle { display: flex; }
+            .process-grid { grid-template-columns: 1fr; }
+            .breadcrumb { padding: 5rem 1.5rem 0.5rem; }
+            .page-hero { padding: 1rem 1.5rem 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo-nobg.png" alt="EWD Logo" class="logo-img" width="45" height="45">
+                <div>
+                    <div class="logo-text-main">EWD</div>
+                    <div class="logo-text-sub">Evolved Web Designs</div>
+                </div>
+            </a>
+            <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="leistungen.html" class="active">Leistungen</a></li>
+                <li><a href="projekte.html">Projekte</a></li>
+                <li><a href="ueber-uns.html">Über uns</a></li>
+                <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="index.html" itemprop="item"><span itemprop="name">Startseite</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li><span style="color: var(--text-secondary);">›</span></li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span class="current" itemprop="name">Leistungen</span>
+                <meta itemprop="position" content="2">
+            </li>
+        </ol>
+    </nav>
+
+    <main>
+        <div class="page-hero">
+            <h1>Unsere <span class="gradient-text">Leistungen</span></h1>
+            <p>Modernes Webdesign, strategische SEO und zuverlässiger Support – alles aus einer Hand für Ihren digitalen Erfolg.</p>
+        </div>
+
+        <div class="services-container">
+            <section class="service-section" id="webdesign">
+                <div class="service-content">
+                    <h2>Webdesign & <span class="gradient-text">Entwicklung</span></h2>
+                    <p>Wir erstellen moderne, responsive Websites, die nicht nur gut aussehen, sondern auch Ergebnisse liefern.</p>
+                    <ul class="service-features">
+                        <li>Individuelles Design nach Ihren Wünschen</li>
+                        <li>Mobile-First Entwicklung für alle Geräte</li>
+                        <li>Schnelle Ladezeiten</li>
+                        <li>Klare Benutzerführung für bessere Conversions</li>
+                        <li>Übersichtliches und benutzerfreundliches Design</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn btn-primary">Projekt anfragen →</a>
+                </div>
+                <div class="service-visual">
+                    <div class="service-icon-large">🎨</div>
+                    <h3>Kreatives Design</h3>
+                    <p>Moderne Ästhetik trifft auf funktionales UX-Design.</p>
+                </div>
+            </section>
+
+            <section class="service-section reverse" id="seo">
+                <div class="service-content">
+                    <h2>SEO & <span class="gradient-text">lokale Rankings</span></h2>
+                    <p>Mit gezielter Suchmaschinenoptimierung bringen wir Ihre Website auf die erste Seite bei Google.</p>
+                    <ul class="service-features">
+                        <li>On-Page SEO: Optimierte Inhalte und Struktur</li>
+                        <li>Technisches SEO: Ladezeit, Mobile-Optimierung</li>
+                        <li>Lokale SEO für ihr Standort</li>
+                        <li><a href="https://www.google.com/business/" target="_blank" rel="noopener" style="color: var(--primary-light);">Google Business</a> Einrichtung</li>
+                        <li>Keyword-Recherche und Content-Strategie</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn btn-primary">SEO-Beratung anfragen →</a>
+                </div>
+                <div class="service-visual">
+                    <div class="service-icon-large">🚀</div>
+                    <h3>Mehr Sichtbarkeit</h3>
+                    <p>Werden Sie gefunden, wo Ihre Kunden suchen.</p>
+                </div>
+            </section>
+
+            <section class="service-section" id="hosting">
+                <div class="service-content">
+                    <h2>Hosting & <span class="gradient-text">Support</span></h2>
+                    <p>Rundum-sorglos-Paket: Schnelles, sicheres Hosting mit persönlichem Support.</p>
+                    <ul class="service-features">
+                        <li>SSL-Zertifikat (HTTPS) inklusive</li>
+                        <li>Moderne, zuverlässige Hosting‑Infrastruktur</li>
+                        <li>Schnelle Ladezeiten durch optimierte Umsetzung</li>
+                        <li>Regelmäßige Überprüfung der Website auf Funktion & Erreichbarkeit</li>
+                        <li>Wartungsarme Technik ohne komplexe Updates</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn btn-primary">Hosting anfragen →</a>
+                </div>
+                <div class="service-visual">
+                    <div class="service-icon-large">🛡️</div>
+                    <h3>Sicher & Zuverlässig</h3>
+                    <p>Ihre Website professionell gehostet und geschützt.</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="process-section">
+            <div class="section-header">
+                <span class="section-label">So arbeiten wir</span>
+                <h2>Unser <span class="gradient-text">Prozess</span></h2>
+            </div>
+            <div class="process-grid">
+                <article class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>Erstgespräch</h3>
+                    <p>Kostenlos und unverbindlich – wir lernen Sie kennen.</p>
+                </article>
+                <article class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>Konzept & Design</h3>
+                    <p>Maßgeschneidertes Konzept für Ihre Website.</p>
+                </article>
+                <article class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>Entwicklung</h3>
+                    <p>Umsetzung mit wöchentlichen Updates.</p>
+                </article>
+                <article class="process-step">
+                    <div class="process-number">4</div>
+                    <h3>Launch & Support</h3>
+                    <p>Go-Live und fortlaufende Betreuung.</p>
+                </article>
+            </div>
+        </section>
+
+        <section style="padding: 2rem;">
+            <div class="cta-section">
+                <h2>Bereit, loszulegen?</h2>
+                <p>Kostenlose Erstberatung – unverbindlich und persönlich.</p>
+                <div class="cta-buttons">
+                    <a href="kontakt.html" class="btn btn-primary">Jetzt Kontakt aufnehmen →</a>
+                    <a href="projekte.html" class="btn btn-secondary">Unsere Projekte</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Startseite</a>
+                <a href="leistungen.html">Leistungen</a>
+                <a href="projekte.html">Projekte</a>
+                <a href="ueber-uns.html">Über uns</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+            <div class="social-links">
+                <a href="https://instagram.com/ewd.official" class="social-link" target="_blank" rel="noopener"><img src="icon-instagram.png" alt="Instagram" width="20" height="20"></a>
+                <a href="https://tiktok.com/@ewd.webdesigns" class="social-link" target="_blank" rel="noopener"><img src="icon-tiktok.png" alt="TikTok" width="20" height="20"></a>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.85rem;">© 2025 Evolved Web Designs GbR · Friedrichshafen</p>
+            <div class="footer-legal">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

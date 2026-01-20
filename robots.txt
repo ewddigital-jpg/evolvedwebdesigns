@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://evowebdesign.de/sitemap.xml
+
+# Evolved Web Designs - Webdesign Friedrichshafen
