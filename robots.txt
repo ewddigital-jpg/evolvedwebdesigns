@@ -1,6 +1,16 @@
+# robots.txt für evowebdesign.de
+# Optimiert für Google, Bing und andere Suchmaschinen
+
 User-agent: *
 Allow: /
 
+# Sitemap Location
 Sitemap: https://evowebdesign.de/sitemap.xml
 
-# Evolved Web Designs - Webdesign Friedrichshafen
+# Verbiete bestimmte Ordner (falls vorhanden)
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /backup/
+
+# Crawl-Delay (optional, nur wenn Server überlastet)
+# Crawl-delay: 1
