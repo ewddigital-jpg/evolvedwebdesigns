@@ -1,87 +1,103 @@
+# ==========================================================================
 # .htaccess für evowebdesign.de
-# Canonical URL Handling und SEO-Optimierung
+# SEO-Optimierung: Redirects, HTTPS, Duplicate Content Prevention
+# ==========================================================================
 
-# ==========================================
-# 1. HTTPS Erzwingen (HTTP → HTTPS)
-# ==========================================
+# ----------------------------------------------------------------------
+# HTTPS Redirect (alle HTTP-Anfragen auf HTTPS)
+# ----------------------------------------------------------------------
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# ==========================================
-# 2. WWW zu Nicht-WWW (www → ohne www)
-# ==========================================
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+# ----------------------------------------------------------------------
+# www auf non-www Redirect (Canonical Domain)
+# evowebdesign.de/index.html → evowebdesign.de/
+# ----------------------------------------------------------------------
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-# ==========================================
-# 3. Trailing Slash entfernen
-# ==========================================
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [R=301,L]
+# ----------------------------------------------------------------------
+# Duplicate Content Prevention: index.html entfernen
+# /index.html → /
+# /subpage/index.html → /subpage/
+# ----------------------------------------------------------------------
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)index\.html\ HTTP/
+RewriteRule ^(.*)index\.html$ https://evowebdesign.de/$1 [R=301,L]
 
-# ==========================================
-# 4. Security Headers
-# ==========================================
+# ----------------------------------------------------------------------
+# Trailing Slash für Verzeichnisse (optional, aber empfohlen)
+# /about → /about/
+# ----------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ https://evowebdesign.de/$1/ [L,R=301]
+
+# ----------------------------------------------------------------------
+# .html Extension entfernen (Clean URLs)
+# /faq.html → /faq
+# /leistungen.html → /leistungen
+# ----------------------------------------------------------------------
+# Externe Redirects (Browser sieht /leistungen)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
+RewriteRule ^([^.]+)\.html$ https://evowebdesign.de/$1 [R=301,L]
+
+# Interne Rewrites (Server findet die .html Datei)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# ----------------------------------------------------------------------
+# 404 Error Page (optional)
+# ----------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# ----------------------------------------------------------------------
+# Security Headers (Bonus)
+# ----------------------------------------------------------------------
 <IfModule mod_headers.c>
-    # X-Content-Type-Options
-    Header set X-Content-Type-Options "nosniff"
+    # X-Frame-Options gegen Clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
     
-    # X-Frame-Options
-    Header set X-Frame-Options "SAMEORIGIN"
-    
-    # Referrer Policy
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    # X-Content-Type-Options gegen MIME-Sniffing
+    Header always set X-Content-Type-Options "nosniff"
     
     # X-XSS-Protection
-    Header set X-XSS-Protection "1; mode=block"
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
-# ==========================================
-# 5. Compression (Schnellere Ladezeiten)
-# ==========================================
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
-</IfModule>
-
-# ==========================================
-# 6. Browser Caching (Performance)
-# ==========================================
+# ----------------------------------------------------------------------
+# Browser Caching (Performance)
+# ----------------------------------------------------------------------
 <IfModule mod_expires.c>
     ExpiresActive On
-    # Images
+    
+    # Bilder (1 Jahr)
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/x-icon "access plus 1 year"
     
-    # CSS and JavaScript
+    # CSS & JavaScript (1 Monat)
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
     
-    # Fonts
+    # Fonts (1 Jahr)
     ExpiresByType font/woff2 "access plus 1 year"
     ExpiresByType font/woff "access plus 1 year"
+    
+    # HTML (keine Caching)
+    ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 
-# ==========================================
-# 7. Custom Error Pages
-# ==========================================
-ErrorDocument 404 /404.html
-ErrorDocument 500 /500.html
-
-# ==========================================
-# 8. Disable Directory Listing (Security)
-# ==========================================
-Options -Indexes
-
-# ==========================================
-# 9. Protect sensitive files
-# ==========================================
-<FilesMatch "^\.">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
+# ----------------------------------------------------------------------
+# GZIP Compression (Performance)
+# ----------------------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
