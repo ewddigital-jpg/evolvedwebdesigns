@@ -29,11 +29,6 @@ RewriteRule ^(.*)index\.html$ https://evowebdesign.de/$1 [R=301,L]
 # Trailing Slash für Verzeichnisse (optional, aber empfohlen)
 # /about → /about/
 # ----------------------------------------------------------------------
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} !(.*)/$
-RewriteRule ^(.*)$ https://evowebdesign.de/$1/ [L,R=301]
-
-# ----------------------------------------------------------------------
 # .html Extension entfernen (Clean URLs)
 # /faq.html → /faq
 # /leistungen.html → /leistungen
