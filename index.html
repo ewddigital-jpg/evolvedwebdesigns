@@ -688,143 +688,187 @@
     </section>
 
     <!-- ─── WHY EWD ─── -->
-    <section aria-labelledby="warum-heading">
-      <div class="section-header">
-        <span class="section-label">Warum EWD?</span>
-        <!-- H2 -->
-        <h2 id="warum-heading">Wir bauen keine „Websites" – wir bauen <span class="gradient-text">Anfrage-Systeme</span></h2>
-        <div class="divider"></div>
-      </div>
+ <!-- ─── WARUM EWD + FORM ─── -->
+<section aria-labelledby="warum-heading">
+  <div class="section-header">
+    <span class="section-label">Warum EWD?</span>
+    <h2 id="warum-heading">Wir bauen keine „Websites" – wir bauen <span class="gradient-text">Anfrage-Systeme</span></h2>
+    <div class="divider"></div>
+  </div>
 
-      <div class="split">
-        <div class="panel">
-          <!-- H3 -->
-          <h3>Was Sie bei unserer Webagentur Friedrichshafen bekommen</h3>
-          <p>
-            Viele Agenturen liefern Design. Wir liefern als <strong>Internetagentur Friedrichshafen</strong>:
-            <strong>Struktur + Speed + lokale Sichtbarkeit + Conversion</strong>.
-            Das ist der Unterschied zwischen „online sein" und „online Kunden gewinnen".
-          </p>
-          <div class="bullets">
-            <div class="bullet"><span>✓</span> Klare Seitenstruktur – Google versteht Sie schneller</div>
-            <div class="bullet"><span>✓</span> Texte, die nicht generisch klingen (und verkaufen)</div>
-            <div class="bullet"><span>✓</span> Saubere Technik – Speed, Mobil, Sicherheit, Basics</div>
-            <div class="bullet"><span>✓</span> Lokaler Fokus: Webdesign Bodensee &amp; Friedrichshafen</div>
-            <div class="bullet"><span>✓</span> UX-optimiert als erfahrene UX Agentur Friedrichshafen</div>
-          </div>
+  <div class="split">
+
+    <!-- Linke Seite -->
+    <div class="panel">
+      <h3>Was Sie bei unserer Webagentur Friedrichshafen bekommen</h3>
+      <p>
+        Viele Agenturen liefern Design. Wir liefern als <strong>Internetagentur Friedrichshafen</strong>:
+        <strong>Struktur + Speed + lokale Sichtbarkeit + Conversion</strong>.
+        Das ist der Unterschied zwischen „online sein" und „online Kunden gewinnen".
+      </p>
+      <div class="bullets">
+        <div class="bullet"><span>✓</span> Klare Seitenstruktur – Google versteht Sie schneller</div>
+        <div class="bullet"><span>✓</span> Texte, die nicht generisch klingen (und verkaufen)</div>
+        <div class="bullet"><span>✓</span> Saubere Technik – Speed, Mobil, Sicherheit, Basics</div>
+        <div class="bullet"><span>✓</span> Lokaler Fokus: Webdesign Bodensee &amp; Friedrichshafen</div>
+        <div class="bullet"><span>✓</span> UX-optimiert als erfahrene UX Agentur Friedrichshafen</div>
+      </div>
+    </div>
+
+    <!-- Rechte Seite: Formspree-Formular -->
+    <div class="panel" id="check">
+      <h3>Kostenloser Website-Check (48h)</h3>
+      <p>
+        Sie schicken uns Ihre URL. Wir prüfen als <strong>Webdesign Agentur Bodensee</strong>:
+        <strong>Ladezeit</strong>, <strong>SEO-Struktur</strong>,
+        <strong>lokale Rankings</strong> und <strong>Conversion</strong> – und geben Ihnen konkrete To-dos.
+      </p>
+
+      <form class="form" id="checkForm"
+            action="https://formspree.io/f/mbdlnwqw"
+            method="POST">
+
+        <!-- Honeypot Anti-Spam -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div>
+          <label for="cf-name">Name</label>
+          <input class="input" id="cf-name" name="name" type="text"
+                 placeholder="Ihr Name" required autocomplete="name" />
+        </div>
+        <div>
+          <label for="cf-email">E-Mail</label>
+          <input class="input" id="cf-email" name="email" type="email"
+                 placeholder="name@firma.de" required autocomplete="email" />
+        </div>
+        <div>
+          <label for="cf-website">Website (falls vorhanden)</label>
+          <input class="input" id="cf-website" name="website" type="url"
+                 placeholder="https://…" autocomplete="url" />
+        </div>
+        <div>
+          <label for="cf-ziel">Ihr Ziel (1 Satz)</label>
+          <input class="input" id="cf-ziel" name="ziel" type="text"
+                 placeholder="z.B. mehr Anfragen für … in Friedrichshafen" />
         </div>
 
-        <div class="panel" id="check">
-          <!-- H3 -->
-          <div class="panel" id="check">
-  <h3>Kostenloser Website-Check (48h)</h3>
-  <p>
-    Sie schicken uns Ihre URL. Wir prüfen als <strong>Webdesign Agentur Bodensee</strong>:
-    <strong>Ladezeit</strong>, <strong>SEO-Struktur</strong>,
-    <strong>lokale Rankings</strong> und <strong>Conversion</strong> – und geben Ihnen konkrete To-dos.
-  </p>
+        <button class="btn btn-primary" type="submit" id="submitBtn">
+          Check anfordern →
+        </button>
 
-  <form class="form" id="checkForm"
-        action="https://formspree.io/f/mbdlnwqw"
-        method="POST">
+        <!-- Feedback -->
+        <div id="formMsg" role="alert" aria-live="polite"
+             style="display:none; margin-top:.75rem; padding:.75rem 1rem;
+                    border-radius:10px; font-size:.92rem; font-weight:600;">
+        </div>
 
-    <!-- Honeypot Anti-Spam -->
-    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-
-    <div>
-      <label for="name">Name</label>
-      <input class="input" id="name" name="name" type="text"
-             placeholder="Ihr Name" required autocomplete="name" />
-    </div>
-    <div>
-      <label for="email">E-Mail</label>
-      <input class="input" id="email" name="email" type="email"
-             placeholder="name@firma.de" required autocomplete="email" />
-    </div>
-    <div>
-      <label for="website">Website (falls vorhanden)</label>
-      <input class="input" id="website" name="website" type="url"
-             placeholder="https://…" autocomplete="url" />
-    </div>
-    <div>
-      <label for="ziel">Ihr Ziel (1 Satz)</label>
-      <input class="input" id="ziel" name="ziel" type="text"
-             placeholder="z.B. mehr Anfragen für … in Friedrichshafen" />
+        <p class="helper">
+          Oder direkt an:
+          <a href="mailto:kontakt@evowebdesign.de"
+             style="color:var(--primary-light);font-weight:700;">
+            kontakt@evowebdesign.de
+          </a>
+        </p>
+      </form>
     </div>
 
-    <button class="btn btn-primary" type="submit" id="submitBtn">
-      Check anfordern →
-    </button>
+  </div>
+</section>
 
-    <!-- Feedback-Meldung -->
-    <div id="formMsg" style="display:none; margin-top:.75rem; padding:.75rem 1rem;
-         border-radius:10px; font-size:.92rem; font-weight:600;"></div>
 
-    <p class="helper">
-      Oder direkt an:
-      <a href="mailto:kontakt@evowebdesign.de"
-         style="color:var(--primary-light);font-weight:700;">
-        kontakt@evowebdesign.de
-      </a>
+<!-- ─── PROZESS 2×2 ─── -->
+<section id="prozess" aria-labelledby="prozess-heading">
+  <div class="section-header">
+    <span class="section-label">Ablauf</span>
+    <h2 id="prozess-heading">In 4 Schritten zur Website, die <span class="gradient-text">verkauft</span></h2>
+    <div class="divider"></div>
+    <p style="color:var(--text-secondary);max-width:680px;margin:1.25rem auto 0;">
+      So arbeitet Ihre <strong>Webdesign Agentur Friedrichshafen</strong> – transparent, strukturiert, ergebnisorientiert.
     </p>
-  </form>
-</div>
+  </div>
 
+  <div class="process-grid">
+    <article class="process-card">
+      <div class="process-number">01</div>
+      <h3>Analyse</h3>
+      <p>Zielgruppe, Angebot, lokale Keywords, Wettbewerber. Ohne Strategie bauen wir keine Pixel.</p>
+    </article>
+    <article class="process-card">
+      <div class="process-number">02</div>
+      <h3>Struktur &amp; Copy</h3>
+      <p>Seitenstruktur + Texte so, dass Google &amp; Menschen sofort verstehen: „Warum Sie?"</p>
+    </article>
+    <article class="process-card">
+      <div class="process-number">03</div>
+      <h3>Design &amp; Build</h3>
+      <p>Modernes UI, mobil-first, schnell. Technische Basis sauber (Speed/SEO/Accessibility).</p>
+    </article>
+    <article class="process-card">
+      <div class="process-number">04</div>
+      <h3>Launch &amp; Optimierung</h3>
+      <p>Tracking/Events, klare CTAs, Nachbesserungen. Eine Website ist nie „fertig" – sie wird besser.</p>
+    </article>
+  </div>
+</section>
+
+
+<!-- ─── Formspree JS ─── -->
 <script>
-  var form      = document.getElementById('checkForm');
-  var submitBtn = document.getElementById('submitBtn');
-  var formMsg   = document.getElementById('formMsg');
+  (function () {
+    var form      = document.getElementById('checkForm');
+    var submitBtn = document.getElementById('submitBtn');
+    var formMsg   = document.getElementById('formMsg');
+    if (!form) return;
 
-  function showMsg(text, isSuccess) {
-    formMsg.textContent = text;
-    formMsg.style.display = 'block';
-    formMsg.style.background = isSuccess
-      ? 'rgba(0,217,100,0.12)' : 'rgba(255,60,60,0.12)';
-    formMsg.style.border = '1px solid ' + (isSuccess
-      ? 'rgba(0,217,100,0.35)' : 'rgba(255,60,60,0.35)');
-    formMsg.style.color = isSuccess ? '#4ade80' : '#f87171';
-  }
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    var name  = document.getElementById('name').value.trim();
-    var email = document.getElementById('email').value.trim();
-
-    if (!name || !email) {
-      showMsg('Bitte Name und E-Mail ausfüllen.', false);
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showMsg('Bitte eine gültige E-Mail-Adresse eingeben.', false);
-      return;
+    function showMsg(text, ok) {
+      formMsg.textContent = text;
+      formMsg.style.display  = 'block';
+      formMsg.style.background = ok ? 'rgba(0,217,100,0.1)'  : 'rgba(255,60,60,0.1)';
+      formMsg.style.border     = '1px solid ' + (ok ? 'rgba(0,217,100,0.35)' : 'rgba(255,60,60,0.35)');
+      formMsg.style.color      = ok ? '#4ade80' : '#f87171';
     }
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Wird gesendet…';
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    fetch('https://formspree.io/f/mbdlnwqw', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    })
-    .then(function(res) {
-      if (res.ok) {
-        showMsg('✓ Danke! Wir melden uns innerhalb von 48h.', true);
-        form.reset();
-        submitBtn.textContent = 'Gesendet ✓';
-      } else {
-        return res.json().then(function(data) {
-          throw new Error(data.error || 'Unbekannter Fehler');
-        });
+      var name  = document.getElementById('cf-name').value.trim();
+      var email = document.getElementById('cf-email').value.trim();
+
+      if (!name || !email) {
+        showMsg('Bitte Name und E-Mail ausfüllen.', false);
+        return;
       }
-    })
-    .catch(function(err) {
-      showMsg('Fehler beim Senden. Bitte direkt an kontakt@evowebdesign.de schreiben.', false);
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Check anfordern →';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showMsg('Bitte eine gültige E-Mail-Adresse eingeben.', false);
+        return;
+      }
+
+      submitBtn.disabled    = true;
+      submitBtn.textContent = 'Wird gesendet…';
+
+      fetch('https://formspree.io/f/mbdlnwqw', {
+        method:  'POST',
+        headers: { 'Accept': 'application/json' },
+        body:    new FormData(form)
+      })
+      .then(function (res) {
+        if (res.ok) {
+          showMsg('✓ Danke! Wir melden uns innerhalb von 48h bei Ihnen.', true);
+          form.reset();
+          submitBtn.textContent = 'Gesendet ✓';
+        } else {
+          return res.json().then(function (data) {
+            throw new Error(data.error || 'Serverfehler');
+          });
+        }
+      })
+      .catch(function () {
+        showMsg('Fehler beim Senden – bitte direkt an kontakt@evowebdesign.de schreiben.', false);
+        submitBtn.disabled    = false;
+        submitBtn.textContent = 'Check anfordern →';
+      });
     });
-  });
+  }());
 </script>
     <!-- ─── PROCESS – 2×2 Grid ─── -->
     <section id="prozess" aria-labelledby="prozess-heading">
