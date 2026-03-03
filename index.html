@@ -716,40 +716,116 @@
 
         <div class="panel" id="check">
           <!-- H3 -->
-          <h3>Kostenloser Website-Check (48h)</h3>
-          <p>
-            Sie schicken uns Ihre URL. Wir prüfen als <strong>Webdesign Agentur Bodensee</strong>:
-            <strong>Ladezeit</strong>, <strong>SEO-Struktur</strong>,
-            <strong>lokale Rankings</strong> und <strong>Conversion</strong> – und geben Ihnen konkrete To-dos.
-          </p>
+          <div class="panel" id="check">
+  <h3>Kostenloser Website-Check (48h)</h3>
+  <p>
+    Sie schicken uns Ihre URL. Wir prüfen als <strong>Webdesign Agentur Bodensee</strong>:
+    <strong>Ladezeit</strong>, <strong>SEO-Struktur</strong>,
+    <strong>lokale Rankings</strong> und <strong>Conversion</strong> – und geben Ihnen konkrete To-dos.
+  </p>
 
-          <form class="form" id="checkForm" novalidate>
-            <div>
-              <label for="name">Name</label>
-              <input class="input" id="name" name="name" type="text" placeholder="Ihr Name" required autocomplete="name" />
-            </div>
-            <div>
-              <label for="email">E-Mail</label>
-              <input class="input" id="email" name="email" type="email" placeholder="name@firma.de" required autocomplete="email" />
-            </div>
-            <div>
-              <label for="url">Website (falls vorhanden)</label>
-              <input class="input" id="url" name="website" type="url" placeholder="https://…" autocomplete="url" />
-            </div>
-            <div>
-              <label for="ziel">Ihr Ziel (1 Satz)</label>
-              <input class="input" id="ziel" name="ziel" type="text" placeholder="z.B. mehr Anfragen für … in Friedrichshafen" />
-            </div>
-            <button class="btn btn-primary" type="submit">Check anfordern →</button>
-            <p class="helper">
-              Oder direkt an:
-              <a href="mailto:kontakt@evowebdesign.de" style="color:var(--primary-light);font-weight:700;">kontakt@evowebdesign.de</a>
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
+  <form class="form" id="checkForm"
+        action="https://formspree.io/f/mbdlnwqw"
+        method="POST">
 
+    <!-- Honeypot Anti-Spam -->
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+    <div>
+      <label for="name">Name</label>
+      <input class="input" id="name" name="name" type="text"
+             placeholder="Ihr Name" required autocomplete="name" />
+    </div>
+    <div>
+      <label for="email">E-Mail</label>
+      <input class="input" id="email" name="email" type="email"
+             placeholder="name@firma.de" required autocomplete="email" />
+    </div>
+    <div>
+      <label for="website">Website (falls vorhanden)</label>
+      <input class="input" id="website" name="website" type="url"
+             placeholder="https://…" autocomplete="url" />
+    </div>
+    <div>
+      <label for="ziel">Ihr Ziel (1 Satz)</label>
+      <input class="input" id="ziel" name="ziel" type="text"
+             placeholder="z.B. mehr Anfragen für … in Friedrichshafen" />
+    </div>
+
+    <button class="btn btn-primary" type="submit" id="submitBtn">
+      Check anfordern →
+    </button>
+
+    <!-- Feedback-Meldung -->
+    <div id="formMsg" style="display:none; margin-top:.75rem; padding:.75rem 1rem;
+         border-radius:10px; font-size:.92rem; font-weight:600;"></div>
+
+    <p class="helper">
+      Oder direkt an:
+      <a href="mailto:kontakt@evowebdesign.de"
+         style="color:var(--primary-light);font-weight:700;">
+        kontakt@evowebdesign.de
+      </a>
+    </p>
+  </form>
+</div>
+
+<script>
+  var form      = document.getElementById('checkForm');
+  var submitBtn = document.getElementById('submitBtn');
+  var formMsg   = document.getElementById('formMsg');
+
+  function showMsg(text, isSuccess) {
+    formMsg.textContent = text;
+    formMsg.style.display = 'block';
+    formMsg.style.background = isSuccess
+      ? 'rgba(0,217,100,0.12)' : 'rgba(255,60,60,0.12)';
+    formMsg.style.border = '1px solid ' + (isSuccess
+      ? 'rgba(0,217,100,0.35)' : 'rgba(255,60,60,0.35)');
+    formMsg.style.color = isSuccess ? '#4ade80' : '#f87171';
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var name  = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+
+    if (!name || !email) {
+      showMsg('Bitte Name und E-Mail ausfüllen.', false);
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showMsg('Bitte eine gültige E-Mail-Adresse eingeben.', false);
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Wird gesendet…';
+
+    fetch('https://formspree.io/f/mbdlnwqw', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+    .then(function(res) {
+      if (res.ok) {
+        showMsg('✓ Danke! Wir melden uns innerhalb von 48h.', true);
+        form.reset();
+        submitBtn.textContent = 'Gesendet ✓';
+      } else {
+        return res.json().then(function(data) {
+          throw new Error(data.error || 'Unbekannter Fehler');
+        });
+      }
+    })
+    .catch(function(err) {
+      showMsg('Fehler beim Senden. Bitte direkt an kontakt@evowebdesign.de schreiben.', false);
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Check anfordern →';
+    });
+  });
+</script>
     <!-- ─── PROCESS – 2×2 Grid ─── -->
     <section id="prozess" aria-labelledby="prozess-heading">
       <div class="section-header">
