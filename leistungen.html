@@ -573,25 +573,30 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo-wrapper">
-                <img src="logo-nobg.png" alt="EWD Logo" class="logo-img" width="45" height="45">
-                <div>
-                    <div class="logo-text-main">EWD</div>
-                    <div class="logo-text-sub">Evolved Web Designs</div>
-                </div>
-            </a>
-            <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="leistungen.html" class="active">Leistungen</a></li>
-                <li><a href="projekte.html">Projekte</a></li>
-                <li><a href="ueber-uns.html">Über uns</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+  <body>
+   <header id="header">
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html" class="logo-wrapper" aria-label="EWD Startseite – Webdesign Agentur Friedrichshafen">
+        <img src="logo-nobg.png" alt="Evolved Web Designs – Webdesign Agentur Bodensee" class="logo-img" width="45" height="45" />
+        <div>
+          <div class="logo-text-main">EWD</div>
+          <div class="logo-text-sub">Evolved Web Designs</div>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen/schließen" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="https://evowebdesign.de/leistungen.html">Leistungen</a></li>
+        <li><a href="https://evowebdesign.de/projekte.html" title="Webdesign Projekte &amp; Referenzen Friedrichshafen | EWD Portfolio">Projekte</a></li>
+        <li><a href="https://evowebdesign.de/ueber-uns.html">Über uns</a></li>
+        <li><a href="https://evowebdesign.de/faq.html">Ablauf & Preise</a></li>
+        <li><a href="#check" class="nav-cta">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
