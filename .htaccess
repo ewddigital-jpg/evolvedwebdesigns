@@ -1,98 +1,49 @@
-# ==========================================================================
-# .htaccess für evowebdesign.de
-# SEO-Optimierung: Redirects, HTTPS, Duplicate Content Prevention
-# ==========================================================================
+# ============================================================
+#  EWD Security Headers – oben in .htaccess einfügen
+#  Getestet für: Google Fonts, Formspree, WhatsApp, IONOS
+# ============================================================
 
-# ----------------------------------------------------------------------
-# HTTPS Redirect (alle HTTP-Anfragen auf HTTPS)
-# ----------------------------------------------------------------------
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# ----------------------------------------------------------------------
-# www auf non-www Redirect (Canonical Domain)
-# evowebdesign.de/index.html → evowebdesign.de/
-# ----------------------------------------------------------------------
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
-# ----------------------------------------------------------------------
-# Duplicate Content Prevention: index.html entfernen
-# /index.html → /
-# /subpage/index.html → /subpage/
-# ----------------------------------------------------------------------
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)index\.html\ HTTP/
-RewriteRule ^(.*)index\.html$ https://evowebdesign.de/$1 [R=301,L]
-
-# ----------------------------------------------------------------------
-# Trailing Slash für Verzeichnisse (optional, aber empfohlen)
-# /about → /about/
-# ----------------------------------------------------------------------
-# .html Extension entfernen (Clean URLs)
-# /faq.html → /faq
-# /leistungen.html → /leistungen
-# ----------------------------------------------------------------------
-# Externe Redirects (Browser sieht /leistungen)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
-RewriteRule ^([^.]+)\.html$ https://evowebdesign.de/$1 [R=301,L]
-
-# Interne Rewrites (Server findet die .html Datei)
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)$ $1.html [L]
-
-# ----------------------------------------------------------------------
-# 404 Error Page (optional)
-# ----------------------------------------------------------------------
-ErrorDocument 404 /404.html
-
-# ----------------------------------------------------------------------
-# Security Headers (Bonus)
-# ----------------------------------------------------------------------
 <IfModule mod_headers.c>
-    # X-Frame-Options gegen Clickjacking
+
+    # ── 1. HTTPS erzwingen (HSTS) ──────────────────────────
+    # Browser merkt sich: Diese Seite ist immer HTTPS
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # ── 2. Clickjacking verhindern ─────────────────────────
+    # Eure Seite kann nicht in einen iFrame eingebettet werden
     Header always set X-Frame-Options "SAMEORIGIN"
-    
-    # X-Content-Type-Options gegen MIME-Sniffing
+
+    # ── 3. MIME-Sniffing blockieren ────────────────────────
+    # Browser führt Dateien nur als das aus, was sie wirklich sind
     Header always set X-Content-Type-Options "nosniff"
-    
-    # X-XSS-Protection
-    Header always set X-XSS-Protection "1; mode=block"
-    
-    # Referrer Policy
+
+    # ── 4. Referrer-Policy ─────────────────────────────────
+    # Beim Klick auf externe Links wird die volle URL nicht weitergegeben
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # ── 5. Permissions-Policy ──────────────────────────────
+    # Kamera, Mikrofon, GPS etc. gesperrt – ihr braucht das nicht
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+    # ── 6. Content-Security-Policy (CSP) ───────────────────
+    # Erlaubt: eigene Domain, Google Fonts, Formspree, WhatsApp
+    # Alles andere wird blockiert
+    Header always set Content-Security-Policy "\
+        default-src 'self'; \
+        script-src 'self' 'unsafe-inline'; \
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; \
+        font-src 'self' https://fonts.gstatic.com; \
+        img-src 'self' data:; \
+        connect-src 'self' https://formspree.io; \
+        frame-src 'none'; \
+        object-src 'none'; \
+        base-uri 'self'; \
+        form-action 'self' https://formspree.io; \
+    "
+
+    # ── 7. XSS-Filter (ältere Browser) ────────────────────
+    Header always set X-XSS-Protection "1; mode=block"
+
 </IfModule>
 
-# ----------------------------------------------------------------------
-# Browser Caching (Performance)
-# ----------------------------------------------------------------------
-<IfModule mod_expires.c>
-    ExpiresActive On
-    
-    # Bilder (1 Jahr)
-    ExpiresByType image/jpeg "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType image/x-icon "access plus 1 year"
-    
-    # CSS & JavaScript (1 Monat)
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
-    
-    # Fonts (1 Jahr)
-    ExpiresByType font/woff2 "access plus 1 year"
-    ExpiresByType font/woff "access plus 1 year"
-    
-    # HTML (keine Caching)
-    ExpiresByType text/html "access plus 0 seconds"
-</IfModule>
-
-# ----------------------------------------------------------------------
-# GZIP Compression (Performance)
-# ----------------------------------------------------------------------
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
-    AddOutputFilterByType DEFLATE application/javascript application/json
-    AddOutputFilterByType DEFLATE image/svg+xml
-</IfModule>
+# ============================================================
