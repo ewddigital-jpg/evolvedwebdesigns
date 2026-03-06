@@ -48,21 +48,24 @@
         p,address{color:var(--text-secondary);margin-bottom:1rem;font-style:normal}
         a{color:var(--primary-light);text-decoration:none;transition:color 0.3s ease}
         a:hover{color:var(--accent)}
+        /* Footer styles (werden von footer.html gebraucht) */
         footer{background:var(--bg-lighter);border-top:1px solid var(--border);padding:2.5rem 2rem}
         .footer-content{max-width:1200px;margin:0 auto;text-align:center}
-        .footer-links{display:flex;gap:1.5rem;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap}
-        .footer-links a{color:var(--text-secondary);font-size:0.9rem}
+        .footer-links{display:flex;gap:1.5rem;justify-content:center;margin-bottom:1.25rem;flex-wrap:wrap}
+        .footer-links a{color:var(--text-secondary);text-decoration:none;font-size:0.9rem;transition:color 0.3s ease}
         .footer-links a:hover{color:var(--primary-light)}
         .social-links{display:flex;gap:0.75rem;justify-content:center;margin:1.25rem 0}
         .social-link{width:40px;height:40px;background:rgba(0,102,255,0.1);border:1px solid var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease}
         .social-link img{width:20px;height:20px}
         .social-link:hover{background:var(--primary);transform:translateY(-3px)}
         .footer-legal{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
-        .footer-legal a{color:var(--text-secondary);margin:0 0.75rem;font-size:0.85rem}
+        .footer-legal a{color:var(--text-secondary);text-decoration:none;margin:0 0.75rem;font-size:0.85rem}
+        .footer-legal a:hover{color:var(--primary-light)}
         @media(max-width:768px){.nav-links{position:fixed;top:65px;left:-100%;width:100%;height:calc(100vh - 65px);background:rgba(13,17,23,0.98);flex-direction:column;padding:2rem;gap:1.5rem;transition:left 0.3s ease}.nav-links.active{left:0}.mobile-toggle{display:flex}.breadcrumb{padding:5rem 1.5rem 0.5rem}main{padding:1rem 1.5rem 3rem}.content-card{padding:1.5rem}}
     </style>
 </head>
 <body>
+
     <header>
         <nav>
             <a href="https://evowebdesign.de/" class="logo-wrapper">
@@ -71,10 +74,10 @@
             </a>
             <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="leistungen.html">Leistungen</a></li>
-                <li><a href="projekte.html">Projekte</a></li>
-                <li><a href="ueber-uns.html">Über uns</a></li>
-                <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
+                <li><a href="https://evowebdesign.de/leistungen.html">Leistungen</a></li>
+                <li><a href="https://evowebdesign.de/projekte.html">Projekte</a></li>
+                <li><a href="https://evowebdesign.de/ueber-uns.html">Über uns</a></li>
+                <li><a href="https://evowebdesign.de/kontakt.html" class="nav-cta">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -110,21 +113,22 @@
         </div>
     </main>
 
-  </main>
+    <!-- Footer wird aus footer.html geladen -->
+    <div id="footer-placeholder"></div>
 
-<div id="footer-placeholder"></div>
-<script>
-    fetch('/footer.html')
-        .then(res => res.text())
-        .then(html => {
-            document.getElementById('footer-placeholder').innerHTML = html;
+    <script>
+        // Footer laden
+        fetch('/footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+
+        // Mobile Menu
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
         });
-</script>
+    </script>
 
-<script>document.getElementById('mobileToggle')...</script>
-</body>
-</html>
-
-    <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('active');});</script>
 </body>
 </html>
