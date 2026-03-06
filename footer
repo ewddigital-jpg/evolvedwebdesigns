@@ -1,33 +1,28 @@
- <footer>
+<footer>
     <div class="footer-content">
-      <div class="footer-links">
-        <a href="https://evowebdesign.de/">Startseite</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="projekte.html">Projekte</a>
-        <a href="ueber-uns.html">Über uns</a>
-        <a href="faq.html">FAQ</a>
-        <a href="kontakt.html">Kontakt</a>
-      </div>
-
-      <div class="social-links">
-        <a href="https://instagram.com/evolvedwebdesigns" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="EWD auf Instagram">
-          <img src="icon-instagram.png" alt="Instagram – Evolved Web Designs" width="20" height="20" />
-        </a>
-        <a href="https://tiktok.com/@evolvedwebdesigns" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="EWD auf TikTok">
-          <img src="icon-tiktok.png" alt="TikTok – Evolved Web Designs" width="20" height="20" />
-        </a>
-      </div>
-
-      <p style="color:var(--text-secondary);font-size:.85rem;line-height:1.7">
-        © 2026 Evolved Web Designs GbR · <strong>Webdesign Friedrichshafen</strong> &amp; Bodensee<br />
-        <a href="mailto:kontakt@evowebdesign.de" style="color:var(--primary-light);font-weight:700;">kontakt@evowebdesign.de</a>
-      </p>
-
-      <div class="footer-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
+        <div class="footer-links">
+            <a href="https://evowebdesign.de/">Startseite</a>
+            <a href="https://evowebdesign.de/leistungen.html">Leistungen</a>
+            <a href="https://evowebdesign.de/projekte.html">Projekte</a>
+            <a href="https://evowebdesign.de/ueber-uns.html">Über uns</a>
+            <a href="https://evowebdesign.de/faq.html">Ablauf &amp; Preise</a>
+            <a href="https://evowebdesign.de/kontakt.html">Kontakt</a>
+        </div>
+        <div class="social-links">
+            <a href="https://instagram.com/evolvedwebdesigns" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="EWD auf Instagram">
+                <img src="/icon-instagram.png" alt="Instagram – Evolved Web Designs" width="20" height="20">
+            </a>
+            <a href="https://tiktok.com/@evolvedwebdesigns" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="EWD auf TikTok">
+                <img src="/icon-tiktok.png" alt="TikTok – Evolved Web Designs" width="20" height="20">
+            </a>
+        </div>
+        <p style="color:var(--text-secondary);font-size:.85rem;line-height:1.7">
+            © 2026 Evolved Web Designs GbR · <strong>Webdesign Friedrichshafen</strong> &amp; Bodensee<br>
+            <a href="mailto:kontakt@evowebdesign.de" style="color:var(--primary-light);font-weight:700;">kontakt@evowebdesign.de</a>
+        </p>
+        <div class="footer-legal">
+            <a href="https://evowebdesign.de/impressum.html">Impressum</a>
+            <a href="https://evowebdesign.de/datenschutz.html">Datenschutz</a>
+        </div>
     </div>
-  </footer>
-
-  <script>
+</footer>
