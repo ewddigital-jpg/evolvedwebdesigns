@@ -65,7 +65,7 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo-wrapper">
+            <a href="https://evowebdesign.de/" class="logo-wrapper">
                 <img src="logo-nobg.png" alt="EWD Logo" class="logo-img" width="45" height="45">
                 <div><div class="logo-text-main">EWD</div><div class="logo-text-sub">Evolved Web Designs</div></div>
             </a>
@@ -81,7 +81,7 @@
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol class="breadcrumb-list">
-            <li><a href="index.html">Startseite</a></li>
+            <li><a href="https://evowebdesign.de/">Startseite</a></li>
             <li><span style="color:var(--text-secondary);">›</span></li>
             <li><span class="current">Impressum</span></li>
         </ol>
@@ -110,23 +110,20 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="index.html">Startseite</a>
-                <a href="leistungen.html">Leistungen</a>
-                <a href="projekte.html">Projekte</a>
-                <a href="ueber-uns.html">Über uns</a>
-                <a href="kontakt.html">Kontakt</a>
-            </div>
-            <div class="social-links">
-                <a href="https://instagram.com/evolvedwebdesigns" class="social-link" target="_blank" rel="noopener"><img src="icon-instagram.png" alt="Instagram" width="20" height="20"></a>
-                <a href="https://tiktok.com/@evolvedwebdesigns" class="social-link" target="_blank" rel="noopener"><img src="icon-tiktok.png" alt="TikTok" width="20" height="20"></a>
-            </div>
-            <p style="color:var(--text-secondary);font-size:0.85rem;">© 2025 Evolved Web Designs GbR · Webdesign Friedrichshafen</p>
-            <div class="footer-legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
-        </div>
-    </footer>
+  </main>
+
+<div id="footer-placeholder"></div>
+<script>
+    fetch('/footer.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('footer-placeholder').innerHTML = html;
+        });
+</script>
+
+<script>document.getElementById('mobileToggle')...</script>
+</body>
+</html>
 
     <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('active');});</script>
 </body>
