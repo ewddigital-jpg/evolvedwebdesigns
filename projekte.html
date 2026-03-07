@@ -31,9 +31,7 @@
             --border-hover: rgba(0, 102, 255, 0.4);
             --google-green: #1a7a4a;
         }
-
         html { scroll-behavior: smooth; }
-
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-body);
@@ -41,7 +39,6 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
-
         body::before {
             content: '';
             position: fixed;
@@ -53,33 +50,12 @@
             pointer-events: none;
         }
 
-        /* ===== ANIMATIONS ===== */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes scaleIn {
-            from { opacity: 0; transform: scale(0.96); }
-            to   { opacity: 1; transform: scale(1); }
-        }
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-30px); }
-            to   { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(30px); }
-            to   { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.3); }
-            50%       { box-shadow: 0 0 0 8px rgba(0, 102, 255, 0); }
-        }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes scaleIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
 
-        /* ===== HEADER ===== */
         header {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -89,443 +65,104 @@
             border-bottom: 1px solid var(--border);
             animation: fadeInDown 0.6s ease both;
         }
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
+        nav { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo-wrapper { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; transition: transform 0.3s ease; }
         .logo-wrapper:hover { transform: scale(1.02); }
         .logo-img { height: 45px; width: auto; }
-        .logo-text-main {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .logo-text-sub {
-            font-size: 0.6rem;
-            color: var(--text-secondary);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+        .logo-text-main { font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .logo-text-sub { font-size: 0.6rem; color: var(--text-secondary); letter-spacing: 1px; text-transform: uppercase; }
         .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
         .nav-links a { color: var(--text-secondary); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
         .nav-links a:hover, .nav-links a.active { color: var(--primary-light); }
-        .nav-cta {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: var(--text) !important;
-            padding: 0.65rem 1.4rem;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
+        .nav-cta { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--text) !important; padding: 0.65rem 1.4rem; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; }
         .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3); }
         .mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
         .mobile-toggle span { width: 24px; height: 2px; background: var(--primary-light); border-radius: 2px; transition: all 0.3s ease; }
 
-        /* ===== BREADCRUMB ===== */
-        .breadcrumb {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 5.5rem 2rem 1rem;
-            animation: fadeInUp 0.5s ease 0.2s both;
-        }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 5.5rem 2rem 1rem; animation: fadeInUp 0.5s ease 0.2s both; }
         .breadcrumb-list { display: flex; gap: 0.5rem; list-style: none; font-size: 0.85rem; }
         .breadcrumb-list a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease; }
         .breadcrumb-list a:hover { color: var(--primary-light); }
         .breadcrumb-list .current { color: var(--primary-light); }
 
-        /* ===== PAGE HERO ===== */
-        .page-hero {
-            padding: 1.5rem 2rem 3rem;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            animation: fadeInUp 0.7s ease 0.3s both;
-        }
-        .page-hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+        .page-hero { padding: 1.5rem 2rem 3rem; text-align: center; max-width: 800px; margin: 0 auto; animation: fadeInUp 0.7s ease 0.3s both; }
+        .page-hero h1 { font-family: 'Poppins', sans-serif; font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
+        .gradient-text { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .page-hero p { color: var(--text-secondary); font-size: 1.05rem; }
 
-        /* ===== PROJECTS SECTION ===== */
-        .projects-section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 2rem 2rem;
-        }
+        .projects-section { max-width: 1000px; margin: 0 auto; padding: 0 2rem 2rem; }
 
-        /* ===== PROJECT CARD (image + text) ===== */
-        .project-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            align-items: center;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2rem;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: fadeInUp 0.7s ease 0.4s both;
-            transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
-        }
-        .project-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-6px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        }
-        .project-image {
-            background: var(--bg-lighter);
-            border-radius: 12px;
-            overflow: hidden;
-            aspect-ratio: 16/10;
-            animation: slideInLeft 0.7s ease 0.5s both;
-        }
+        .project-card { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; margin-bottom: 1rem; opacity: 0; animation: fadeInUp 0.7s ease 0.4s both; transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease; }
+        .project-card:hover { border-color: var(--border-hover); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); }
+        .project-image { background: var(--bg-lighter); border-radius: 12px; overflow: hidden; aspect-ratio: 16/10; animation: slideInLeft 0.7s ease 0.5s both; }
         .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .project-card:hover .project-image img { transform: scale(1.04); }
+        .project-content { animation: slideInRight 0.7s ease 0.5s both; }
+        .project-tag { display: inline-block; background: rgba(0, 102, 255, 0.1); color: var(--primary-light); padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.85rem; }
+        .project-content h2 { font-family: 'Poppins', sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.6rem; }
+        .project-content > p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.1rem; line-height: 1.7; }
+        .project-features { list-style: none; margin-bottom: 1.4rem; }
+        .project-features li { padding: 0.3rem 0; color: var(--text-secondary); font-size: 0.88rem; display: flex; align-items: center; gap: 0.6rem; }
+        .project-features li::before { content: '✓'; color: var(--primary-light); font-weight: 700; flex-shrink: 0; }
 
-        .project-content {
-            animation: slideInRight 0.7s ease 0.5s both;
-        }
-        .project-tag {
-            display: inline-block;
-            background: rgba(0, 102, 255, 0.1);
-            color: var(--primary-light);
-            padding: 0.35rem 0.9rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 0.85rem;
-        }
-        .project-content h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 0.6rem;
-        }
-        .project-content > p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 1.1rem;
-            line-height: 1.7;
-        }
-        .project-features {
-            list-style: none;
-            margin-bottom: 1.4rem;
-        }
-        .project-features li {
-            padding: 0.3rem 0;
-            color: var(--text-secondary);
-            font-size: 0.88rem;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-        .project-features li::before {
-            content: '✓';
-            color: var(--primary-light);
-            font-weight: 700;
-            flex-shrink: 0;
-        }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.7rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-size: 0.95rem; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--text); box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 102, 255, 0.45); }
+        .btn-secondary { background: transparent; color: var(--text); border: 2px solid var(--border); }
+        .btn-secondary:hover { border-color: var(--primary); color: var(--primary-light); transform: translateY(-2px); }
 
-        /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.85rem 1.7rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: var(--text);
-            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
-        }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.45);
-        }
-        .btn-secondary {
-            background: transparent;
-            color: var(--text);
-            border: 2px solid var(--border);
-        }
-        .btn-secondary:hover {
-            border-color: var(--primary);
-            color: var(--primary-light);
-            transform: translateY(-2px);
-        }
+        .review-section { max-width: 1000px; margin: 0 auto; padding: 2rem 2rem 0; opacity: 0; animation: fadeInUp 0.7s ease 0.6s both; }
+        .review-section-label { text-align: center; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; }
+        .review-section-heading { text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; }
 
-        /* ===== REVIEW SECTION ===== */
-        .review-section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem 2rem 0;
-            opacity: 0;
-            animation: fadeInUp 0.7s ease 0.6s both;
-        }
-        .review-section-label {
-            text-align: center;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-        }
-        .review-section-heading {
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        /* ===== GOOGLE REVIEW CARD ===== */
-        .google-review-card {
-            background: #fff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-            max-width: 500px;
-            margin: 0 auto 1.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .google-review-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-        }
-        .google-review-header {
-            background: var(--google-green);
-            padding: 0.7rem 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.65rem;
-        }
-        .google-icon {
-            width: 24px;
-            height: 24px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            font-weight: 800;
-            color: var(--google-green);
-            flex-shrink: 0;
-        }
-        .google-review-header span {
-            color: white;
-            font-size: 0.88rem;
-            font-weight: 600;
-        }
-        .google-review-body {
-            padding: 1.2rem 1.4rem;
-            background: #fff;
-        }
-        .reviewer-row {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.65rem;
-        }
-        .reviewer-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0066FF, #00D9FF);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1rem;
-            color: white;
-            flex-shrink: 0;
-        }
+        .google-review-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); max-width: 500px; margin: 0 auto 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .google-review-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); }
+        .google-review-header { background: var(--google-green); padding: 0.7rem 1.2rem; display: flex; align-items: center; gap: 0.65rem; }
+        .google-icon { width: 24px; height: 24px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800; color: var(--google-green); flex-shrink: 0; }
+        .google-review-header span { color: white; font-size: 0.88rem; font-weight: 600; }
+        .google-review-body { padding: 1.2rem 1.4rem; background: #fff; }
+        .reviewer-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.65rem; }
+        .reviewer-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #0066FF, #00D9FF); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: white; flex-shrink: 0; }
         .reviewer-name { font-weight: 700; font-size: 0.9rem; color: #1a1a1a; }
         .reviewer-meta { font-size: 0.78rem; color: #888; }
-        .stars-row {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.75rem;
-        }
+        .stars-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
         .stars { color: #f5a623; font-size: 1.05rem; letter-spacing: 1px; }
         .review-time { font-size: 0.78rem; color: #999; }
-        .review-text {
-            font-size: 0.88rem;
-            color: #333;
-            line-height: 1.65;
-            margin-bottom: 1rem;
-        }
-        .review-text .highlight {
-            color: var(--primary);
-            font-weight: 600;
-        }
-        .review-actions {
-            display: flex;
-            gap: 1.2rem;
-            padding-top: 0.6rem;
-            border-top: 1px solid #f0f0f0;
-        }
-        .review-action-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
-            font-size: 0.78rem;
-            color: #666;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.2rem 0;
-            font-family: inherit;
-            transition: color 0.2s ease;
-        }
+        .review-text { font-size: 0.88rem; color: #333; line-height: 1.65; margin-bottom: 1rem; }
+        .review-text .highlight { color: var(--primary); font-weight: 600; }
+        .review-actions { display: flex; gap: 1.2rem; padding-top: 0.6rem; border-top: 1px solid #f0f0f0; }
+        .review-action-btn { display: flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; color: #666; background: none; border: none; cursor: pointer; padding: 0.2rem 0; font-family: inherit; transition: color 0.2s ease; }
         .review-action-btn:hover { color: var(--primary); }
-        .google-review-footer {
-            background: var(--google-green);
-            padding: 0.6rem 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+        .google-review-footer { background: var(--google-green); padding: 0.6rem 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
         .google-review-footer span { color: white; font-size: 0.82rem; font-weight: 600; }
 
-        /* ===== DAS ERGEBNIS ===== */
-        .ergebnis-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 1.6rem;
-            max-width: 500px;
-            margin: 0 auto;
-            transition: border-color 0.3s ease;
-        }
+        .ergebnis-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; max-width: 500px; margin: 0 auto; transition: border-color 0.3s ease; }
         .ergebnis-card:hover { border-color: rgba(0, 217, 255, 0.3); }
-        .ergebnis-label {
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 0.6rem;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-        .ergebnis-text {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.75;
-        }
+        .ergebnis-label { font-size: 0.82rem; font-weight: 700; color: var(--accent); margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.4rem; }
+        .ergebnis-text { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.75; }
 
-        /* ===== CTA SECTION ===== */
-        .cta-wrapper {
-            padding: 3rem 2rem 4rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            opacity: 0;
-            animation: fadeInUp 0.7s ease 0.8s both;
-        }
-        .cta-section {
-            background: linear-gradient(135deg, #0D1F40 0%, #0a1628 50%, #0D1F40 100%);
-            border: 1px solid rgba(0, 102, 255, 0.25);
-            border-radius: 20px;
-            padding: 3.5rem 2rem;
-            text-align: center;
-        }
-        .cta-section h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-        }
-        .cta-section p {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin-bottom: 2rem;
-        }
+        .cta-wrapper { padding: 3rem 2rem 4rem; max-width: 1000px; margin: 0 auto; opacity: 0; animation: fadeInUp 0.7s ease 0.8s both; }
+        .cta-section { background: linear-gradient(135deg, #0D1F40 0%, #0a1628 50%, #0D1F40 100%); border: 1px solid rgba(0, 102, 255, 0.25); border-radius: 20px; padding: 3.5rem 2rem; text-align: center; }
+        .cta-section h2 { font-family: 'Poppins', sans-serif; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-section p { color: var(--text-secondary); font-size: 1rem; margin-bottom: 2rem; }
         .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-        /* ===== FOOTER ===== */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 2.5rem 2rem;
-        }
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-            align-items: center;
-        }
-        .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+        footer { background: var(--bg-lighter); border-top: 1px solid var(--border); padding: 2.5rem 2rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; text-align: center; }
+        .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1.25rem; flex-wrap: wrap; }
         .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
         .footer-links a:hover { color: var(--primary-light); }
-        .social-links { display: flex; gap: 1rem; }
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        .social-link:hover { border-color: var(--primary); transform: translateY(-3px); }
-        .footer-legal { display: flex; gap: 1.5rem; }
-        .footer-legal a { color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; transition: color 0.3s ease; }
+        .social-links { display: flex; gap: 0.75rem; justify-content: center; margin: 1.25rem 0; }
+        .social-link { width: 40px; height: 40px; background: rgba(0, 102, 255, 0.1); border: 1px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+        .social-link img { width: 20px; height: 20px; }
+        .social-link:hover { background: var(--primary); transform: translateY(-3px); }
+        .footer-legal { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+        .footer-legal a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; }
         .footer-legal a:hover { color: var(--primary-light); }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 992px) {
-            .project-card { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 992px) { .project-card { grid-template-columns: 1fr; } }
         @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 65px; left: -100%;
-                width: 100%; height: calc(100vh - 65px);
-                background: rgba(13, 17, 23, 0.98);
-                flex-direction: column;
-                padding: 2rem;
-                gap: 1.5rem;
-                transition: left 0.3s ease;
-                z-index: 999;
-            }
+            .nav-links { position: fixed; top: 65px; left: -100%; width: 100%; height: calc(100vh - 65px); background: rgba(13, 17, 23, 0.98); flex-direction: column; padding: 2rem; gap: 1.5rem; transition: left 0.3s ease; z-index: 999; }
             .nav-links.active { left: 0; }
             .mobile-toggle { display: flex; }
             .breadcrumb { padding: 5rem 1.5rem 0.5rem; }
@@ -539,30 +176,27 @@
 </head>
 <body>
 
-  <body>
-   <header id="header">
-    <nav aria-label="Hauptnavigation">
-      <a href="https://evowebdesign.de/" class="logo-wrapper" aria-label="EWD Startseite – Webdesign Agentur Friedrichshafen">
-        <img src="logo-nobg.png" alt="Evolved Web Designs – Webdesign Agentur Bodensee" class="logo-img" width="45" height="45" />
-        <div>
-          <div class="logo-text-main">EWD</div>
-          <div class="logo-text-sub">Evolved Web Designs</div>
-        </div>
-      </a>
-
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen/schließen" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
-
-      <ul class="nav-links" id="navLinks" role="list">
-        <li><a href="https://evowebdesign.de/leistungen.html">Leistungen</a></li>
-        <li><a href="https://evowebdesign.de/projekte.html" title="Webdesign Projekte &amp; Referenzen Friedrichshafen | EWD Portfolio">Projekte</a></li>
-        <li><a href="https://evowebdesign.de/ueber-uns.html">Über uns</a></li>
-        <li><a href="https://evowebdesign.de/faq.html">Ablauf & Preise</a></li>
-        <li><a href="https://evowebdesign.de/kontakt.html" class="nav-cta">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header id="header">
+        <nav aria-label="Hauptnavigation">
+            <a href="https://evowebdesign.de/" class="logo-wrapper" aria-label="EWD Startseite – Webdesign Agentur Friedrichshafen">
+                <img src="logo-nobg.png" alt="Evolved Web Designs – Webdesign Agentur Bodensee" class="logo-img" width="45" height="45">
+                <div>
+                    <div class="logo-text-main">EWD</div>
+                    <div class="logo-text-sub">Evolved Web Designs</div>
+                </div>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen/schließen" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks" role="list">
+                <li><a href="https://evowebdesign.de/leistungen.html">Leistungen</a></li>
+                <li><a href="https://evowebdesign.de/projekte.html" class="active">Projekte</a></li>
+                <li><a href="https://evowebdesign.de/ueber-uns.html">Über uns</a></li>
+                <li><a href="https://evowebdesign.de/faq.html">Ablauf &amp; Preise</a></li>
+                <li><a href="https://evowebdesign.de/kontakt.html" class="nav-cta">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -579,14 +213,11 @@
     </nav>
 
     <main>
-
-        <!-- HERO -->
         <div class="page-hero">
             <h1>Unsere <span class="gradient-text">Projekte</span></h1>
             <p>Entdecken Sie eine Auswahl unserer Webdesign-Projekte für Unternehmen in Friedrichshafen und der Bodenseeregion.</p>
         </div>
 
-        <!-- PROJECT CARD: Bild + Infos -->
         <section class="projects-section">
             <article class="project-card">
                 <div class="project-image">
@@ -602,17 +233,14 @@
                         <li>Schnelle Ladezeiten unter 2 Sekunden</li>
                         <li>Kontaktformular mit direkter Anfrage-Funktion</li>
                     </ul>
-                    <a href="kontakt.html" class="btn btn-primary">Ähnliches Projekt anfragen →</a>
+                    <a href="https://evowebdesign.de/kontakt.html" class="btn btn-primary">Ähnliches Projekt anfragen →</a>
                 </div>
             </article>
         </section>
 
-        <!-- REVIEW SECTION -->
         <section class="review-section">
             <div class="review-section-label">Kundenfeedback</div>
             <div class="review-section-heading">Was unsere <span class="gradient-text">Kunden sagen</span></div>
-
-            <!-- Google Review Card -->
             <div class="google-review-card">
                 <div class="google-review-header">
                     <div class="google-icon">G</div>
@@ -643,8 +271,6 @@
                     <span>Verifizierte Google Bewertung</span>
                 </div>
             </div>
-
-            <!-- Das Ergebnis -->
             <div class="ergebnis-card">
                 <div class="ergebnis-label">✦ Das Ergebnis</div>
                 <div class="ergebnis-text">
@@ -653,48 +279,51 @@
             </div>
         </section>
 
-        <!-- CTA -->
         <div class="cta-wrapper">
             <div class="cta-section">
                 <h2>Ihr Projekt ist das <span class="gradient-text">nächste?</span></h2>
                 <p>Wir bringen auch Ihr Unternehmen digital nach vorne. Starten Sie jetzt mit einer kostenlosen Erstberatung.</p>
                 <div class="cta-buttons">
-                    <a href="kontakt.html" class="btn btn-primary">Projekt starten</a>
-                    <a href="ueber-uns.html" class="btn btn-secondary">Mehr über uns</a>
+                    <a href="https://evowebdesign.de/kontakt.html" class="btn btn-primary">Projekt starten</a>
+                    <a href="https://evowebdesign.de/ueber-uns.html" class="btn btn-secondary">Mehr über uns</a>
                 </div>
             </div>
         </div>
-
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-links">
                 <a href="https://evowebdesign.de/">Startseite</a>
-                <a href="leistungen.html">Leistungen</a>
-                <a href="projekte.html">Projekte</a>
-                <a href="ueber-uns.html">Über uns</a>
-                <a href="kontakt.html">Kontakt</a>
+                <a href="https://evowebdesign.de/leistungen.html">Leistungen</a>
+                <a href="https://evowebdesign.de/projekte.html">Projekte</a>
+                <a href="https://evowebdesign.de/ueber-uns.html">Über uns</a>
+                <a href="https://evowebdesign.de/faq.html">Ablauf &amp; Preise</a>
+                <a href="https://evowebdesign.de/kontakt.html">Kontakt</a>
             </div>
             <div class="social-links">
-                <a href="https://instagram.com/evolvedwebdesigns" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
-                    <img src="icon-instagram.png" alt="Instagram" width="20" height="20">
+                <a href="https://instagram.com/evolvedwebdesigns" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="EWD auf Instagram">
+                    <img src="icon-instagram.png" alt="Instagram – Evolved Web Designs" width="20" height="20">
                 </a>
-                <a href="https://tiktok.com/@evolvedwebdesigns" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
-                    <img src="icon-tiktok.png" alt="TikTok" width="20" height="20">
+                <a href="https://tiktok.com/@evolvedwebdesigns" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="EWD auf TikTok">
+                    <img src="icon-tiktok.png" alt="TikTok – Evolved Web Designs" width="20" height="20">
                 </a>
             </div>
-            <p style="color: var(--text-secondary); font-size: 0.85rem;">© 2025 Evolved Web Designs GbR · Friedrichshafen</p>
+            <p style="color:var(--text-secondary);font-size:.85rem;line-height:1.7">
+                © 2026 Evolved Web Designs GbR · <strong>Webdesign Friedrichshafen</strong> &amp; Bodensee<br>
+                <a href="mailto:kontakt@evowebdesign.de" style="color:var(--primary-light);font-weight:700;">kontakt@evowebdesign.de</a>
+            </p>
             <div class="footer-legal">
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
+                <a href="https://evowebdesign.de/impressum.html">Impressum</a>
+                <a href="https://evowebdesign.de/datenschutz.html">Datenschutz</a>
             </div>
         </div>
     </footer>
 
     <script>
         document.getElementById('mobileToggle').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
+            const isOpen = document.getElementById('navLinks').classList.toggle('active');
+            this.setAttribute('aria-expanded', isOpen);
         });
     </script>
 
