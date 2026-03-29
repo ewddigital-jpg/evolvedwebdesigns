@@ -202,7 +202,53 @@
             .price-table th,.price-table td{padding:0.5rem 0.75rem}
             .process-step:hover{transform:none}
         }
-    </style>
+    
+    /* ─── HEADER v3 override ─── */
+    header{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .3s,box-shadow .3s,border-color .3s}
+    header.top{background:rgba(13,17,23,0.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent}
+    header.scrolled{background:rgba(13,17,23,0.96);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);box-shadow:0 1px 0 var(--border),0 4px 24px rgba(0,0,0,0.25)}
+    nav{max-width:1200px;margin:0 auto;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .logo{display:flex;align-items:center;gap:.85rem;text-decoration:none;flex-shrink:0;transition:opacity .2s}
+    .logo:hover{opacity:.8}
+    .logo-mark{height:44px;width:auto;filter:brightness(1.15)}
+    .logo-name{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:900;letter-spacing:-.02em;color:var(--text)}
+    .nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+    .nav-links a{color:var(--text-secondary);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s;white-space:nowrap;position:relative}
+    .nav-links a:not(.cta):hover{color:var(--text)}
+    .nav-links a:not(.cta)::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--primary-light);transition:width .25s ease}
+    .nav-links a:not(.cta):hover::after{width:100%}
+    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff!important;padding:.6rem 1.35rem;border-radius:8px;font-weight:700;font-size:.87rem;box-shadow:0 2px 14px rgba(0,102,255,0.28);transition:transform .2s,box-shadow .2s}
+    .cta:hover{transform:translateY(-1px);box-shadow:0 4px 22px rgba(0,102,255,0.45)}
+    .cta::after{display:none!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+    .hamburger span{width:22px;height:1.5px;background:var(--text-secondary);border-radius:2px;transition:transform .3s,opacity .3s}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
+    /* ─── FOOTER v3 override ─── */
+    footer{background:var(--bg-card,#161B22);border-top:1px solid var(--border);padding:2rem;position:relative;z-index:1}
+    .foot{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem}
+    .foot-left{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+    .foot-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;opacity:.7;transition:opacity .2s}
+    .foot-logo:hover{opacity:1}
+    .foot-logo img{height:28px;width:auto}
+    .foot-logo span{font-family:'Poppins',sans-serif;font-size:.88rem;font-weight:800;color:var(--text)}
+    .foot-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+    .foot-links a{color:var(--text-secondary);text-decoration:none;font-size:.82rem;transition:color .2s}
+    .foot-links a:hover{color:var(--text)}
+    .foot-right{display:flex;align-items:center;gap:.85rem}
+    .foot-copy{font-size:.78rem;color:var(--text-secondary)}
+    .foot-soc{display:flex;gap:.5rem}
+    .fs{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .2s;text-decoration:none}
+    .fs:hover{background:var(--primary);border-color:var(--primary);transform:translateY(-2px)}
+    .fs img{width:14px;height:14px}
+    @media(max-width:768px){
+      .nav-links{display:none;position:fixed;top:62px;left:0;right:0;flex-direction:column;background:rgba(13,17,23,0.98);backdrop-filter:blur(20px);padding:1.75rem 1.5rem;gap:1.1rem;border-top:1px solid var(--border);box-shadow:0 8px 32px rgba(0,0,0,0.4)}
+      .nav-links.open{display:flex}
+      .hamburger{display:flex}
+      .foot{flex-direction:column;align-items:flex-start}
+    }
+  </style>
 </head>
 <body>
 
@@ -212,27 +258,24 @@
         </a>
     </div>
 
-    <header>
-        <nav>
-            <a href="https://evowebdesign.de/" class="logo-wrapper" aria-label="EWD Startseite">
-                <img src="logo-nobg.png" alt="EWD Webdesign Friedrichshafen Logo" class="logo-img" width="45" height="45">
-                <div>
-                    <div class="logo-text-main">EWD</div>
-                    <div class="logo-text-sub">Evolved Web Designs</div>
-                </div>
-            </a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="https://evowebdesign.de/leistungen.html">Leistungen</a></li>
-                <li><a href="https://evowebdesign.de/projekte.html">Projekte</a></li>
-                <li><a href="https://evowebdesign.de/ueber-uns.html">Über uns</a></li>
-                <li><a href="https://evowebdesign.de/faq.html" class="active">Ablauf &amp; Preise</a></li>
-                <li><a href="https://evowebdesign.de/kontakt.html" class="nav-cta">Kostenlos anfragen</a></li>
-            </ul>
-        </nav>
-    </header>
+      <header id="hdr" class="top">
+    <nav aria-label="Hauptnavigation">
+      <a href="https://evowebdesign.de/" class="logo" aria-label="Evolved Web Designs – Startseite">
+        <img src="logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="44" height="44" />
+        <span class="logo-name">Evolved Web Designs</span>
+      </a>
+      <button class="hamburger" id="menuBtn" aria-label="Menue" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="https://evowebdesign.de/leistungen.html">Leistungen</a></li>
+        <li><a href="https://evowebdesign.de/projekte.html">Projekte</a></li>
+        <li><a href="https://evowebdesign.de/ueber-uns.html">Über uns</a></li>
+        <li><a href="https://evowebdesign.de/faq.html" class="active">Preise</a></li>
+        <li><a href="https://evowebdesign.de/kontakt.html" class="cta">Jetzt anfragen</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -544,71 +587,55 @@
 
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="https://evowebdesign.de/">Startseite</a>
-                <a href="https://evowebdesign.de/leistungen.html">Leistungen</a>
-                <a href="https://evowebdesign.de/projekte.html">Projekte</a>
-                <a href="https://evowebdesign.de/ueber-uns.html">Über uns</a>
-                <a href="https://evowebdesign.de/faq.html">Ablauf &amp; Preise</a>
-                <a href="https://evowebdesign.de/kontakt.html">Kontakt</a>
-            </div>
-            <div class="social-links">
-                <a href="https://instagram.com/evolvedwebdesigns" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <img src="icon-instagram.png" alt="Instagram" width="20" height="20">
-                </a>
-                <a href="https://tiktok.com/@evolvedwebdesigns" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                    <img src="icon-tiktok.png" alt="TikTok" width="20" height="20">
-                </a>
-            </div>
-            <p style="color:var(--text-secondary);font-size:0.85rem">
-                &copy; 2026 Evolved Web Designs GbR &middot; Webdesign &amp; KI-Bots Bodensee<br>
-                <a href="mailto:kontakt@evowebdesign.de" style="color:var(--primary-light)">kontakt@evowebdesign.de</a>
-                &nbsp;·&nbsp;
-                <a href="tel:+491717031722" style="color:var(--primary-light)">+49 171 7031722</a>
-            </p>
-            <div class="footer-legal">
-                <a href="https://evowebdesign.de/impressum.html">Impressum</a>
-                <a href="https://evowebdesign.de/datenschutz.html">Datenschutz</a>
-            </div>
+      <footer>
+    <div class="foot">
+      <div class="foot-left">
+        <a href="https://evowebdesign.de/" class="foot-logo">
+          <img src="logo-nobg.png" alt="EWD Logo" width="28" height="28" />
+          <span>Evolved Web Designs</span>
+        </a>
+        <nav class="foot-links" aria-label="Footer Navigation">
+          <a href="https://evowebdesign.de/leistungen.html">Leistungen</a>
+          <a href="https://evowebdesign.de/projekte.html">Projekte</a>
+          <a href="https://evowebdesign.de/ueber-uns.html">Über uns</a>
+          <a href="https://evowebdesign.de/faq.html">Preise</a>
+          <a href="https://evowebdesign.de/kontakt.html">Kontakt</a>
+          <a href="https://evowebdesign.de/impressum.html">Impressum</a>
+          <a href="https://evowebdesign.de/datenschutz.html">Datenschutz</a>
+        </nav>
+      </div>
+      <div class="foot-right">
+        <span class="foot-copy">&copy; 2026 EWD GbR</span>
+        <div class="foot-soc">
+          <a href="https://instagram.com/evolvedwebdesigns" class="fs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="icon-instagram.png" alt="" width="14" height="14" />
+          </a>
+          <a href="https://tiktok.com/@evolvedwebdesigns" class="fs" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="icon-tiktok.png" alt="" width="14" height="14" />
+          </a>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-        // ── Mobile Menu ──
-        var toggle = document.getElementById('mobileToggle');
-        var navLinks = document.getElementById('navLinks');
-        toggle.addEventListener('click', function() {
-            var open = navLinks.classList.toggle('active');
-            this.setAttribute('aria-expanded', open);
-        });
-        navLinks.querySelectorAll('a').forEach(function(a) {
-            a.addEventListener('click', function() {
-                navLinks.classList.remove('active');
-                toggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // ── FAQ Accordion ──
-        document.querySelectorAll('.faq-question').forEach(function(question) {
-            question.addEventListener('click', function() {
-                var item = this.parentElement; // .faq-item
-                var isOpen = item.classList.contains('open');
-
-                // close all others in same category
-                var category = item.parentElement;
-                category.querySelectorAll('.faq-item').forEach(function(i) {
-                    i.classList.remove('open');
-                });
-
-                // toggle clicked one
-                if (!isOpen) {
-                    item.classList.add('open');
-                }
-            });
-        });
-    </script>
+      <script>
+  var hdr=document.getElementById('hdr');
+  var menuBtn=document.getElementById('menuBtn');
+  var navEl=document.getElementById('navLinks');
+  window.addEventListener('scroll',function(){hdr.className=window.scrollY>30?'scrolled':'top';},{passive:true});
+  menuBtn.addEventListener('click',function(){
+    var open=navEl.classList.toggle('open');
+    menuBtn.classList.toggle('open',open);
+    menuBtn.setAttribute('aria-expanded',''+open);
+  });
+  navEl.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      navEl.classList.remove('open');
+      menuBtn.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    });
+  });
+  </script>
 
 </body>
 </html>
