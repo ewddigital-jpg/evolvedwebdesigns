@@ -64,12 +64,14 @@
     }
     html { scroll-behavior:smooth }
     body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; -webkit-font-smoothing:antialiased }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0; background: radial-gradient(ellipse 70% 40% at 50% -5%, rgba(0,102,255,0.1) 0%, transparent 60%), radial-gradient(ellipse 50% 35% at 85% 90%, rgba(0,217,255,0.05) 0%, transparent 55%) }
 
     @keyframes fadeUp { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
     @media (prefers-reduced-motion:reduce) { * { animation:none!important; transition:none!important } }
 
     /* ── LAYOUT ── */
     .wrap { max-width:1100px; margin:0 auto; padding:0 2rem }
+    main, header, footer { position:relative; z-index:1 }
 
     /* ── HEADER ── */
     header { position:fixed; top:0; left:0; right:0; z-index:1000; transition:background .3s,box-shadow .3s,border-color .3s }
@@ -561,12 +563,29 @@
       q.addEventListener('click',function(){
         var item=q.closest('.faq-item');
         var isOpen=item.classList.contains('open');
-        // close all
         document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');});
-        // open clicked if it was closed
         if(!isOpen) item.classList.add('open');
       });
     });
+
+    // ── Scroll reveal ──
+    if('IntersectionObserver' in window){
+      var s=document.createElement('style');
+      s.textContent='.rv{opacity:0;transform:translateY(20px);transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1)}.rv.vi{opacity:1;transform:none}';
+      document.head.appendChild(s);
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(!e.isIntersecting)return;
+          var el=e.target;
+          var idx=Array.from(el.parentElement.children).filter(function(c){return c.classList.contains('rv');}).indexOf(el);
+          setTimeout(function(){el.classList.add('vi');},idx*80);
+          io.unobserve(el);
+        });
+      },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
+      document.querySelectorAll('.pc,.step,.faq-item').forEach(function(el){
+        el.classList.add('rv');io.observe(el);
+      });
+    }
   })();
   </script>
 

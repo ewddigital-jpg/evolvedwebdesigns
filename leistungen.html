@@ -590,15 +590,17 @@
   });
   if('IntersectionObserver' in window){
     var s=document.createElement('style');
-    s.textContent='.rv{opacity:0;transform:translateY(18px);transition:opacity .5s cubic-bezier(.4,0,.2,1),transform .5s cubic-bezier(.4,0,.2,1)}.rv.vi{opacity:1;transform:none}';
+    s.textContent='.rv{opacity:0;transform:translateY(20px);transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1)}.rv.vi{opacity:1;transform:none}';
     document.head.appendChild(s);
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(e){
         if(!e.isIntersecting)return;
-        e.target.classList.add('vi');
-        io.unobserve(e.target);
+        var el=e.target;
+        var idx=Array.from(el.parentElement.children).filter(function(c){return c.classList.contains('rv');}).indexOf(el);
+        setTimeout(function(){el.classList.add('vi');},idx*80);
+        io.unobserve(el);
       });
-    },{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
+    },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
     document.querySelectorAll('.service-block,.feat-item,.step,.fg-item').forEach(function(el){
       el.classList.add('rv');io.observe(el);
     });
