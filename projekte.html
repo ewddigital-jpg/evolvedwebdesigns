@@ -443,7 +443,7 @@
   
   if('IntersectionObserver' in window){
     var s=document.createElement('style');
-    s.textContent='.rv{opacity:0;transform:translateY(20px);transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1)}.rv.vi{opacity:1;transform:none}';
+    s.textContent='.rv{opacity:0;transform:translateY(20px)}.rv.vi{opacity:1;transform:none;transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1)}';
     document.head.appendChild(s);
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(e){
@@ -454,7 +454,7 @@
         io.unobserve(el);
       });
     },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.project-card,.ergebnis-card,.google-review-card').forEach(function(el){el.classList.add('rv');io.observe(el);});
+    var _els=document.querySelectorAll('.project-card,.ergebnis-card,.google-review-card');_els.forEach(function(el){el.classList.add('rv');});requestAnimationFrame(function(){requestAnimationFrame(function(){_els.forEach(function(el){io.observe(el);});});});
   }
   </script>
 
