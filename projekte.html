@@ -218,6 +218,30 @@
       .hamburger{display:flex}
       .foot{flex-direction:column;align-items:flex-start}
     }
+  
+    /* ─── FOOTER 4-col override ─── */
+    footer{background:var(--bg-card,#161B22);border-top:1px solid var(--border);padding:3.5rem 0 0}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+    .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border)}
+    .footer-brand{}
+    .footer-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;margin-bottom:.9rem}
+    .footer-logo img{height:32px;width:auto}
+    .footer-logo span{font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:900;color:var(--text);letter-spacing:-.015em}
+    .footer-tagline{font-size:.85rem;color:var(--text-secondary);line-height:1.7;max-width:220px}
+    .footer-socials{display:flex;gap:.5rem;margin-top:1.2rem}
+    .footer-soc-btn{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.05);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .2s;text-decoration:none}
+    .footer-soc-btn:hover{background:var(--primary,#0066FF);border-color:var(--primary,#0066FF);transform:translateY(-2px)}
+    .footer-soc-btn img{width:14px;height:14px}
+    .footer-col h4{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--text-secondary);margin-bottom:.85rem}
+    .footer-col a{display:block;font-size:.85rem;color:var(--text-secondary);text-decoration:none;margin-bottom:.45rem;transition:color .2s}
+    .footer-col a:hover{color:var(--text)}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;padding:1.25rem 0}
+    .footer-copy{font-size:.78rem;color:var(--text-secondary)}
+    .footer-legal{display:flex;gap:1.25rem}
+    .footer-legal a{font-size:.78rem;color:var(--text-secondary);text-decoration:none;transition:color .2s}
+    .footer-legal a:hover{color:var(--text)}
+    @media(max-width:1024px){.footer-top{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+    @media(max-width:768px){.footer-top{grid-template-columns:1fr;gap:2rem}.footer-brand{grid-column:auto}.footer-bottom{flex-direction:column;align-items:flex-start;gap:.5rem}}
   </style>
 </head>
 <body>
@@ -335,32 +359,55 @@
         </div>
     </main>
 
-      <footer>
-    <div class="foot">
-      <div class="foot-left">
-        <a href="https://evowebdesign.de/" class="foot-logo">
-          <img src="logo-nobg.png" alt="EWD Logo" width="28" height="28" />
-          <span>Evolved Web Designs</span>
-        </a>
-        <nav class="foot-links" aria-label="Footer Navigation">
-          <a href="https://evowebdesign.de/leistungen.html">Leistungen</a>
+        <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="https://evowebdesign.de/" class="footer-logo">
+            <img src="logo-nobg.png" alt="Evolved Web Designs Logo" width="32" height="32" />
+            <span>Evolved Web Designs</span>
+          </a>
+          <p class="footer-tagline">Webdesign &amp; KI-Bot aus Friedrichshafen. F&uuml;r Unternehmen am Bodensee, die online Ergebnisse wollen.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="icon-instagram.png" alt="" width="14" height="14" />
+            </a>
+            <a href="https://tiktok.com/@evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <img src="icon-tiktok.png" alt="" width="14" height="14" />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Leistungen</h4>
+          <a href="https://evowebdesign.de/leistungen.html">Website + KI-Bot</a>
+          <a href="https://evowebdesign.de/leistungen.html">Lokale SEO</a>
+          <a href="https://evowebdesign.de/leistungen.html">Hosting &amp; Betreuung</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Unternehmen</h4>
+          <a href="https://evowebdesign.de/ueber-uns.html">&Uuml;ber uns</a>
           <a href="https://evowebdesign.de/projekte.html">Projekte</a>
-          <a href="https://evowebdesign.de/ueber-uns.html">Über uns</a>
-          <a href="https://evowebdesign.de/faq.html">Preise</a>
+          <a href="https://evowebdesign.de/faq.html">Preise &amp; FAQ</a>
           <a href="https://evowebdesign.de/kontakt.html">Kontakt</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <a href="tel:+491717031722">+49 171 7031722</a>
+          <a href="mailto:kontakt@evowebdesign.de">kontakt@evowebdesign.de</a>
+          <a href="https://evowebdesign.de/kontakt.html">Kostenlos anfragen</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Evolved Web Designs GbR &middot; Friedrichshafen am Bodensee</p>
+        <div class="footer-legal">
           <a href="https://evowebdesign.de/impressum.html">Impressum</a>
           <a href="https://evowebdesign.de/datenschutz.html">Datenschutz</a>
-        </nav>
-      </div>
-      <div class="foot-right">
-        <span class="foot-copy">&copy; 2026 EWD GbR</span>
-        <div class="foot-soc">
-          <a href="https://instagram.com/evolvedwebdesigns" class="fs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <img src="icon-instagram.png" alt="" width="14" height="14" />
-          </a>
-          <a href="https://tiktok.com/@evolvedwebdesigns" class="fs" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-            <img src="icon-tiktok.png" alt="" width="14" height="14" />
-          </a>
         </div>
       </div>
     </div>
