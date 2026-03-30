@@ -1,628 +1,271 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Security Headers -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    
-    <!-- SEO Optimized Title - Under 561px -->
-    <title>Leistungen – Website + KI-Bot Paket Friedrichshafen | EWD</title>
-    
-    <!-- SEO Optimized Meta Description - Under 920px -->
-    <meta name="description" content="EWD Leistungen: Website + KI-Bot Paket, lokale SEO und Hosting fuer Unternehmen am Bodensee. Ihr digitaler Mitarbeiter antwortet 24/7 auf Kundenfragen.">
-    
-    <meta name="keywords" content="webdesign leistungen, webdesign friedrichshafen, seo friedrichshafen, website hosting, webdesign für kleine unternehmen">
-    <meta name="author" content="Evolved Web Designs GbR">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://evowebdesign.de/leistungen.html">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Webdesign Leistungen Friedrichshafen | EWD">
-    <meta property="og:description" content="Professionelle Webdesign Leistungen: Websites, SEO, Hosting & Support für Ihr Unternehmen.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://evowebdesign.de/leistungen.html">
-    <meta property="og:locale" content="de_DE">
-    
-    <!-- Favicons -->
-    <link rel="icon" href="favicon.ico" sizes="48x48">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <meta name="theme-color" content="#0066FF">
-    
-    <!-- Structured Data - Services -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "itemListElement": [
-            {
-                "@type": "Service",
-                "position": 1,
-                "name": "Webdesign & Entwicklung",
-                "description": "Modernes, responsives Webdesign für Unternehmen in Friedrichshafen",
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Evolved Web Designs GbR"
-                },
-                "areaServed": "Friedrichshafen"
-            },
-            {
-                "@type": "Service",
-                "position": 2,
-                "name": "SEO & lokale Rankings",
-                "description": "Lokale Suchmaschinenoptimierung für bessere Google-Rankings",
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Evolved Web Designs GbR"
-                },
-                "areaServed": "Friedrichshafen"
-            },
-            {
-                "@type": "Service",
-                "position": 3,
-                "name": "Hosting & Support",
-                "description": "Sicheres Hosting mit SSL und persönlichem Support",
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Evolved Web Designs GbR"
-                },
-                "areaServed": "Friedrichshafen"
-            }
-        ]
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <title>Leistungen – Website + KI-Bot, SEO &amp; Hosting | EWD Friedrichshafen</title>
+  <meta name="description" content="Evolved Web Designs: Website + KI-Bot Paket, lokale SEO und Hosting fuer Unternehmen am Bodensee. Festpreise, persoenlicher Kontakt, fertig in 2–4 Wochen." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://evowebdesign.de/leistungen.html" />
+
+  <meta property="og:title" content="Leistungen – Website + KI-Bot, SEO &amp; Hosting | EWD" />
+  <meta property="og:description" content="Webdesign + KI-Bot aus Friedrichshafen. Festpreise, kein Abo, fertig in 2–4 Wochen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://evowebdesign.de/leistungen.html" />
+  <meta property="og:locale" content="de_DE" />
+
+  <link rel="icon" href="favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <meta name="theme-color" content="#0066FF" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://evowebdesign.de/"},{"@type":"ListItem","position":2,"name":"Leistungen","item":"https://evowebdesign.de/leistungen.html"}]}
+  </script>
+
+  <link rel="preload" as="image" href="logo-nobg.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box }
+    :root {
+      --primary: #0066FF;
+      --primary-dark: #0050CC;
+      --primary-light: #4D94FF;
+      --accent: #00D9FF;
+      --bg: #0D1117;
+      --bg-card: #161B22;
+      --bg-raised: #1C2128;
+      --text: #F0F6FC;
+      --text-secondary: #8B949E;
+      --text-soft: #C9D1D9;
+      --border: rgba(240,246,252,0.08);
+      --border-mid: rgba(240,246,252,0.14);
+      --border-active: rgba(0,102,255,0.45);
+      --green: #25D366;
+      --radius: 14px;
+      --radius-sm: 10px;
     }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Startseite",
-                "item": "https://evowebdesign.de/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Leistungen",
-                "item": "https://evowebdesign.de/leistungen.html"
-            }
-        ]
+
+    html { scroll-behavior: smooth }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.65; overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
-    </script>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary: #0066FF;
-            --primary-dark: #0052CC;
-            --primary-light: #4D94FF;
-            --accent: #00D9FF;
-            --bg-body: #0D1117;
-            --bg-card: #161B22;
-            --bg-card-hover: #1C2128;
-            --bg-lighter: #21262D;
-            --text: #F0F6FC;
-            --text-secondary: #8B949E;
-            --border: rgba(240, 246, 252, 0.1);
-            --border-hover: rgba(0, 102, 255, 0.4);
-        }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-body);
-            color: var(--text);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: 
-                radial-gradient(ellipse at 20% 0%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 100%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
-            z-index: -1;
-            pointer-events: none;
-        }
+    body::before {
+      content: ''; position:fixed; inset:0; pointer-events:none;
+      background: radial-gradient(ellipse 70% 40% at 50% -5%, rgba(0,102,255,0.1) 0%, transparent 60%);
+      z-index: 0;
+    }
 
-        /* Professional Animations */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-40px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(40px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes scaleIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
+    @keyframes fadeUp   { from { opacity:0; transform:translateY(24px) } to { opacity:1; transform:translateY(0) } }
+    @keyframes fadeDown { from { opacity:0; transform:translateY(-16px) } to { opacity:1; transform:translateY(0) } }
+    @keyframes floatY   { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-9px) } }
+    @keyframes blink    { 0%,100% { opacity:1 } 50% { opacity:.25 } }
+    @media (prefers-reduced-motion:reduce) { *, *::before, *::after { animation:none!important; transition:none!important } }
 
-        header {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 1000;
-            background: rgba(13, 17, 23, 0.9);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-            animation: fadeInDown 0.6s ease;
-        }
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-        .logo-wrapper:hover { transform: scale(1.02); }
-        .logo-img { height: 45px; width: auto; }
-        .logo-text-main {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .logo-text-sub {
-            font-size: 0.6rem;
-            color: var(--text-secondary);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            align-items: center;
-        }
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        .nav-links a:hover, .nav-links a.active { color: var(--primary-light); }
-        .nav-cta {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: var(--text) !important;
-            padding: 0.65rem 1.4rem;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3); }
-        .mobile-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 8px;
-        }
-        .mobile-toggle span {
-            width: 24px; height: 2px;
-            background: var(--primary-light);
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
+    .skip { position:absolute; left:-9999px }
+    .skip:focus { left:1rem; top:1rem; z-index:9999; background:var(--bg-card); color:var(--text); padding:.6rem 1rem; border-radius:8px; border:1px solid var(--border-active) }
 
-        .breadcrumb {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 5.5rem 2rem 1rem;
-            animation: fadeInUp 0.6s ease 0.2s both;
-        }
-        .breadcrumb-list {
-            display: flex;
-            gap: 0.5rem;
-            list-style: none;
-            font-size: 0.85rem;
-        }
-        .breadcrumb-list a { 
-            color: var(--text-secondary); 
-            text-decoration: none; 
-            transition: color 0.3s ease; 
-        }
-        .breadcrumb-list a:hover { color: var(--primary-light); }
-        .breadcrumb-list .current { color: var(--primary-light); }
+    /* ── HEADER ── */
+    header { position:fixed; top:0; left:0; right:0; z-index:1000; transition:background .3s,box-shadow .3s,border-color .3s }
+    header.top     { background:rgba(13,17,23,0.55); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid transparent }
+    header.scrolled{ background:rgba(13,17,23,0.97); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid var(--border); box-shadow:0 1px 0 var(--border),0 4px 24px rgba(0,0,0,.28) }
+    nav { max-width:1200px; margin:0 auto; padding:.85rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; animation:fadeDown .5s ease both }
+    .logo { display:flex; align-items:center; gap:.8rem; text-decoration:none; flex-shrink:0; transition:opacity .2s }
+    .logo:hover { opacity:.8 }
+    .logo-mark { height:42px; width:auto; filter:brightness(1.1) }
+    .logo-name { font-family:'Poppins',sans-serif; font-size:1rem; font-weight:900; letter-spacing:-.02em; color:var(--text) }
+    .nav-links { display:flex; align-items:center; gap:1.75rem; list-style:none }
+    .nav-links a { color:var(--text-secondary); text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; white-space:nowrap; position:relative }
+    .nav-links a:not(.nav-cta):hover { color:var(--text) }
+    .nav-links a:not(.nav-cta)::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:var(--primary-light); transition:width .25s }
+    .nav-links a:not(.nav-cta):hover::after { width:100% }
+    .nav-links a.active { color:var(--text) }
+    .nav-links a.active::after { width:100% }
+    .nav-cta { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); color:#fff!important; padding:.58rem 1.3rem; border-radius:8px; font-weight:700; font-size:.85rem; box-shadow:0 2px 14px rgba(0,102,255,.28); transition:transform .2s,box-shadow .2s }
+    .nav-cta:hover { transform:translateY(-1px); box-shadow:0 4px 22px rgba(0,102,255,.45) }
+    .nav-cta::after { display:none!important }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none; background:none }
+    .hamburger span { width:22px; height:1.5px; background:var(--text-secondary); border-radius:2px; transition:transform .3s,opacity .3s }
+    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(4.5px,4.5px) }
+    .hamburger.open span:nth-child(2) { opacity:0 }
+    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(4.5px,-4.5px) }
 
-        .page-hero {
-            padding: 1.5rem 2rem 3rem;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            animation: fadeInUp 0.8s ease 0.3s both;
-        }
-        .page-hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .page-hero p { 
-            color: var(--text-secondary); 
-            font-size: 1.05rem; 
-        }
+    /* ── WHATSAPP ── */
+    .wa { position:fixed; bottom:24px; right:24px; z-index:9999; animation:floatY 3.5s ease-in-out infinite }
+    .wa a { width:56px; height:56px; border-radius:50%; background:var(--green); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(37,211,102,.38); transition:transform .2s; text-decoration:none }
+    .wa a:hover { transform:scale(1.1) }
+    .wa img { width:28px; height:28px }
 
-        .services-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        .service-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border);
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        .service-section:nth-child(1) { animation-delay: 0.4s; }
-        .service-section:nth-child(2) { animation-delay: 0.5s; }
-        .service-section:nth-child(3) { animation-delay: 0.6s; }
-        .service-section:last-of-type { border-bottom: none; }
-        .service-section.reverse .service-content { order: 2; }
-        .service-section.reverse .service-visual { order: 1; }
-        
-        .service-content h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.4rem, 3vw, 1.75rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .service-content > p {
-            color: var(--text-secondary);
-            margin-bottom: 1.25rem;
-            line-height: 1.7;
-        }
-        .service-features {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-        .service-features li {
-            padding: 0.4rem 0;
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.95rem;
-        }
-        .service-features li::before {
-            content: '✓';
-            color: var(--primary-light);
-            font-weight: 700;
-        }
-        
-        .service-visual {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2.5rem;
-            text-align: center;
-            transition: all 0.4s ease;
-        }
-        .service-visual:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        .service-icon-large {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-        .service-visual:hover .service-icon-large { 
-            transform: scale(1.1) rotate(5deg); 
-        }
-        .service-visual h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        .service-visual p { 
-            color: var(--text-secondary); 
-            font-size: 0.9rem; 
-        }
+    /* ── LAYOUT ── */
+    main { padding-top: 70px; position:relative; z-index:1 }
+    .wrap { max-width:1100px; margin:0 auto; padding:0 1.5rem }
+    .wrap-narrow { max-width:780px; margin:0 auto; padding:0 1.5rem }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.9rem 1.8rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: var(--text);
-            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
-        }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
-        }
-        .btn-secondary {
-            background: transparent;
-            color: var(--text);
-            border: 2px solid var(--border);
-        }
-        .btn-secondary:hover {
-            border-color: var(--primary);
-            color: var(--primary-light);
-        }
+    h1 { font-family:'Poppins',sans-serif; font-size:clamp(2rem,4.5vw,3rem); font-weight:900; line-height:1.1; letter-spacing:-.03em }
+    h2 { font-family:'Poppins',sans-serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:800; line-height:1.18; letter-spacing:-.02em }
+    h3 { font-family:'Poppins',sans-serif; font-size:1.05rem; font-weight:700; line-height:1.3 }
+    .label { font-size:.7rem; font-weight:800; text-transform:uppercase; letter-spacing:.16em; color:var(--primary-light); display:block; margin-bottom:.6rem }
+    .accent { background:linear-gradient(135deg,var(--primary-light),var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text }
 
-        .process-section {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .section-label {
-            display: inline-block;
-            color: var(--primary-light);
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 0.75rem;
-        }
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-        }
-        .process-step {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 1.75rem;
-            text-align: center;
-            transition: all 0.4s ease;
-            opacity: 0;
-            animation: scaleIn 0.6s ease forwards;
-        }
-        .process-step:nth-child(1) { animation-delay: 0.7s; }
-        .process-step:nth-child(2) { animation-delay: 0.8s; }
-        .process-step:nth-child(3) { animation-delay: 0.9s; }
-        .process-step:nth-child(4) { animation-delay: 1s; }
-        .process-step:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-        .process-number {
-            width: 50px; height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: white;
-            margin: 0 auto 1rem;
-            transition: transform 0.3s ease;
-        }
-        .process-step:hover .process-number { 
-            transform: rotate(360deg); 
-        }
-        .process-step h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.05rem;
-            margin-bottom: 0.5rem;
-        }
-        .process-step p { 
-            color: var(--text-secondary); 
-            font-size: 0.9rem; 
-        }
+    .btn { display:inline-flex; align-items:center; gap:.4rem; padding:.85rem 1.75rem; border-radius:var(--radius-sm); font-weight:700; font-size:.9rem; text-decoration:none; transition:all .22s; border:none; font-family:'Inter',sans-serif }
+    .btn-primary { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); color:#fff; box-shadow:0 4px 18px rgba(0,102,255,.3) }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,102,255,.5) }
+    .btn-ghost { background:transparent; color:var(--text-soft); border:1px solid var(--border-mid) }
+    .btn-ghost:hover { border-color:rgba(240,246,252,.26); background:rgba(240,246,252,.04) }
 
-        .cta-section {
-            background: linear-gradient(135deg, rgba(0, 102, 255, 0.15), rgba(0, 217, 255, 0.08));
-            border: 1px solid rgba(0, 102, 255, 0.25);
-            border-radius: 24px;
-            padding: 3rem 2rem;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease 1.1s forwards;
-        }
-        .cta-section h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.75rem;
-            margin-bottom: 0.75rem;
-        }
-        .cta-section > p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-        }
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    /* ── PAGE INTRO ── */
+    .page-intro {
+      padding: 3.5rem 0 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .breadcrumb { display:flex; gap:.4rem; list-style:none; font-size:.82rem; margin-bottom:1.5rem }
+    .breadcrumb a { color:var(--text-secondary); text-decoration:none; transition:color .2s }
+    .breadcrumb a:hover { color:var(--text) }
+    .breadcrumb li { color:var(--text-secondary) }
+    .breadcrumb li:last-child { color:var(--primary-light) }
+    .intro-sub { font-size:1rem; color:var(--text-secondary); max-width:560px; margin-top:.75rem; line-height:1.75 }
 
-        footer {
-            background: var(--bg-lighter);
-            border-top: 1px solid var(--border);
-            padding: 2.5rem 2rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-        .footer-content { max-width: 1200px; margin: 0 auto; }
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-        .footer-links a { 
-            color: var(--text-secondary); 
-            text-decoration: none; 
-            font-size: 0.9rem; 
-            transition: color 0.3s ease; 
-        }
-        .footer-links a:hover { color: var(--primary-light); }
-        .social-links { 
-            display: flex; 
-            gap: 0.75rem; 
-            justify-content: center; 
-            margin: 1.25rem 0; 
-        }
-        .social-link {
-            width: 40px; height: 40px;
-            background: rgba(0, 102, 255, 0.1);
-            border: 1px solid var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        .social-link img { width: 20px; height: 20px; }
-        .social-link:hover { 
-            background: var(--primary); 
-            transform: translateY(-3px); 
-        }
-        .footer-legal { 
-            margin-top: 1.5rem; 
-            padding-top: 1.5rem; 
-            border-top: 1px solid var(--border); 
-        }
-        .footer-legal a { 
-            color: var(--text-secondary); 
-            text-decoration: none; 
-            margin: 0 0.75rem; 
-            font-size: 0.85rem; 
-        }
-        .footer-legal a:hover { color: var(--primary-light); }
+    /* ── FEATURED ── */
+    .featured {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .featured-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .featured-left {}
+    .featured-price {
+      display: inline-flex; align-items: baseline; gap:.4rem;
+      margin: 1.1rem 0;
+    }
+    .featured-price strong { font-family:'Poppins',sans-serif; font-size:2.4rem; font-weight:900; color:var(--text); letter-spacing:-.03em }
+    .featured-price span { font-size:.85rem; color:var(--text-secondary) }
+    .featured-left > p { font-size:.95rem; color:var(--text-secondary); line-height:1.85; margin-bottom:1.5rem }
+    .featured-right {
+      background: var(--bg-card);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .feat-list { display:flex; flex-direction:column }
+    .feat-item {
+      display: flex; gap:1rem; align-items:flex-start;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .feat-item:last-child { border-bottom: none }
+    .feat-check { color:var(--primary-light); font-weight:700; font-size:.85rem; flex-shrink:0; margin-top:.18rem }
+    .feat-item-text strong { display:block; font-size:.9rem; color:var(--text); font-weight:600; margin-bottom:.15rem }
+    .feat-item-text span { font-size:.82rem; color:var(--text-secondary); line-height:1.5 }
 
-        @media (max-width: 992px) {
-            .service-section { grid-template-columns: 1fr; }
-            .service-section.reverse .service-content { order: 1; }
-            .service-section.reverse .service-visual { order: 2; }
-            .process-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 65px; left: -100%;
-                width: 100%; height: calc(100vh - 65px);
-                background: rgba(13, 17, 23, 0.98);
-                flex-direction: column;
-                padding: 2rem;
-                gap: 1.5rem;
-                transition: left 0.3s ease;
-            }
-            .nav-links.active { left: 0; }
-            .mobile-toggle { display: flex; }
-            .process-grid { grid-template-columns: 1fr; }
-            .breadcrumb { padding: 5rem 1.5rem 0.5rem; }
-            .page-hero { padding: 1rem 1.5rem 2rem; }
-        }
-    
-    /* ─── HEADER v3 override ─── */
-    header{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .3s,box-shadow .3s,border-color .3s}
-    header.top{background:rgba(13,17,23,0.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent}
-    header.scrolled{background:rgba(13,17,23,0.96);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);box-shadow:0 1px 0 var(--border),0 4px 24px rgba(0,0,0,0.25)}
-    nav{max-width:1200px;margin:0 auto;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
-    .logo{display:flex;align-items:center;gap:.85rem;text-decoration:none;flex-shrink:0;transition:opacity .2s}
-    .logo:hover{opacity:.8}
-    .logo-mark{height:44px;width:auto;filter:brightness(1.15)}
-    .logo-name{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:900;letter-spacing:-.02em;color:var(--text)}
-    .nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
-    .nav-links a{color:var(--text-secondary);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s;white-space:nowrap;position:relative}
-    .nav-links a:not(.cta):hover{color:var(--text)}
-    .nav-links a:not(.cta)::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--primary-light);transition:width .25s ease}
-    .nav-links a:not(.cta):hover::after{width:100%}
-    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff!important;padding:.6rem 1.35rem;border-radius:8px;font-weight:700;font-size:.87rem;box-shadow:0 2px 14px rgba(0,102,255,0.28);transition:transform .2s,box-shadow .2s}
-    .cta:hover{transform:translateY(-1px);box-shadow:0 4px 22px rgba(0,102,255,0.45)}
-    .cta::after{display:none!important}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
-    .hamburger span{width:22px;height:1.5px;background:var(--text-secondary);border-radius:2px;transition:transform .3s,opacity .3s}
-    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
-    .hamburger.open span:nth-child(2){opacity:0}
-    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
-    /* ─── FOOTER v3 override ─── */
-    footer{background:var(--bg-card,#161B22);border-top:1px solid var(--border);padding:2rem;position:relative;z-index:1}
-    .foot{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem}
-    .foot-left{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
-    .foot-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;opacity:.7;transition:opacity .2s}
-    .foot-logo:hover{opacity:1}
-    .foot-logo img{height:28px;width:auto}
-    .foot-logo span{font-family:'Poppins',sans-serif;font-size:.88rem;font-weight:800;color:var(--text)}
-    .foot-links{display:flex;gap:1.25rem;flex-wrap:wrap}
-    .foot-links a{color:var(--text-secondary);text-decoration:none;font-size:.82rem;transition:color .2s}
-    .foot-links a:hover{color:var(--text)}
-    .foot-right{display:flex;align-items:center;gap:.85rem}
-    .foot-copy{font-size:.78rem;color:var(--text-secondary)}
-    .foot-soc{display:flex;gap:.5rem}
-    .fs{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .2s;text-decoration:none}
-    .fs:hover{background:var(--primary);border-color:var(--primary);transform:translateY(-2px)}
-    .fs img{width:14px;height:14px}
-    @media(max-width:768px){
-      .nav-links{display:none;position:fixed;top:62px;left:0;right:0;flex-direction:column;background:rgba(13,17,23,0.98);backdrop-filter:blur(20px);padding:1.75rem 1.5rem;gap:1.1rem;border-top:1px solid var(--border);box-shadow:0 8px 32px rgba(0,0,0,0.4)}
-      .nav-links.open{display:flex}
-      .hamburger{display:flex}
-      .foot{flex-direction:column;align-items:flex-start}
+    /* ── SERVICES ── */
+    .services { padding: 0 }
+    .service-block {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .service-block:last-child { border-bottom: none }
+    .service-meta {}
+    .service-num { font-family:'Poppins',sans-serif; font-size:3.5rem; font-weight:900; color:rgba(240,246,252,0.05); line-height:1; margin-bottom:.5rem; letter-spacing:-.04em }
+    .service-meta h2 { font-size:clamp(1.2rem,2.5vw,1.5rem); margin-bottom:.65rem }
+    .service-meta > p { font-size:.88rem; color:var(--text-secondary); line-height:1.75 }
+    .service-body {}
+    .service-body > p { font-size:.95rem; color:var(--text-secondary); line-height:1.85; margin-bottom:1.25rem }
+    .service-body strong { color:var(--text-soft); font-weight:600 }
+    .feat-grid { display:grid; grid-template-columns:1fr 1fr; gap:.45rem; margin-bottom:1.5rem }
+    .fg-item { display:flex; gap:.6rem; align-items:flex-start; font-size:.86rem; color:var(--text-soft); line-height:1.5; padding:.55rem .7rem; background:var(--bg-card); border-radius:8px; border:1px solid var(--border) }
+    .fg-item::before { content:'✓'; color:var(--primary-light); font-weight:700; font-size:.78rem; flex-shrink:0; margin-top:.1rem }
+
+    /* ── STEPS ── */
+    .steps-section { padding:3rem 0; border-top:1px solid var(--border) }
+    .steps { list-style:none; display:flex; flex-direction:column }
+    .step { display:flex; gap:1.75rem; align-items:flex-start; padding:1.25rem 0; border-bottom:1px solid var(--border) }
+    .step:last-child { border-bottom:none }
+    .step-n { font-family:'Poppins',sans-serif; font-size:1.9rem; font-weight:900; color:rgba(240,246,252,0.07); line-height:1; flex-shrink:0; width:3rem; text-align:right; padding-top:.15rem }
+    .step strong { display:block; font-size:.95rem; font-weight:700; color:var(--text); margin-bottom:.28rem }
+    .step p { font-size:.86rem; color:var(--text-secondary); line-height:1.7 }
+
+    /* ── CTA BAND ── */
+    .cta-band { padding:3.5rem 0; border-top:1px solid var(--border); text-align:center }
+    .cta-band h2 { margin-bottom:.65rem }
+    .cta-band p { color:var(--text-secondary); max-width:500px; margin:0 auto 1.75rem; font-size:.95rem; line-height:1.8 }
+    .cta-btns { display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap }
+
+    /* ── FOOTER ── */
+    footer { background:var(--bg-card); border-top:1px solid var(--border); padding:3.5rem 0 0 }
+    .footer-inner { max-width:1200px; margin:0 auto; padding:0 1.5rem }
+    .footer-top { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:2.5rem; padding-bottom:2.5rem; border-bottom:1px solid var(--border) }
+    .footer-logo { display:flex; align-items:center; gap:.7rem; text-decoration:none; margin-bottom:.9rem }
+    .footer-logo img { height:32px; width:auto }
+    .footer-logo span { font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:900; color:var(--text); letter-spacing:-.015em }
+    .footer-tagline { font-size:.85rem; color:var(--text-secondary); line-height:1.7; max-width:220px }
+    .footer-socials { display:flex; gap:.5rem; margin-top:1.2rem }
+    .footer-soc-btn { width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.05); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:all .2s; text-decoration:none }
+    .footer-soc-btn:hover { background:var(--primary); border-color:var(--primary); transform:translateY(-2px) }
+    .footer-soc-btn img { width:14px; height:14px }
+    .footer-col h4 { font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.14em; color:var(--text-secondary); margin-bottom:.85rem }
+    .footer-col a { display:block; font-size:.85rem; color:var(--text-secondary); text-decoration:none; margin-bottom:.45rem; transition:color .2s }
+    .footer-col a:hover { color:var(--text) }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.75rem; padding:1.25rem 0 }
+    .footer-copy { font-size:.78rem; color:var(--text-secondary) }
+    .footer-legal { display:flex; gap:1.25rem }
+    .footer-legal a { font-size:.78rem; color:var(--text-secondary); text-decoration:none; transition:color .2s }
+    .footer-legal a:hover { color:var(--text) }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:1024px) {
+      .featured-inner { grid-template-columns:1fr }
+      .service-block { grid-template-columns:1fr }
+      .service-num { font-size:2.5rem }
+      .footer-top { grid-template-columns:1fr 1fr }
+      .footer-brand { grid-column:1/-1 }
+    }
+    @media (max-width:768px) {
+      nav { padding:.8rem 1.25rem }
+      .nav-links { display:none; position:fixed; top:62px; left:0; right:0; flex-direction:column; background:rgba(13,17,23,.98); backdrop-filter:blur(20px); padding:1.75rem 1.5rem; gap:1rem; border-top:1px solid var(--border); box-shadow:0 8px 32px rgba(0,0,0,.4) }
+      .nav-links.open { display:flex }
+      .hamburger { display:flex }
+      .feat-grid { grid-template-columns:1fr }
+      .footer-top { grid-template-columns:1fr; gap:2rem }
+      .footer-brand { grid-column:auto }
+      .footer-bottom { flex-direction:column; align-items:flex-start; gap:.5rem }
+    }
+    @media (max-width:480px) {
+      .cta-btns { flex-direction:column; align-items:center }
     }
   </style>
 </head>
 <body>
-      <header id="hdr" class="top">
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+
+  <div class="wa">
+    <a href="https://wa.me/491717031722?text=Hallo%20EWD!%20Ich%20interessiere%20mich%20fuer%20eine%20neue%20Website." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <img src="icon-whatsapp.png" alt="WhatsApp" width="28" height="28" />
+    </a>
+  </div>
+
+  <header id="hdr" class="top">
     <nav aria-label="Hauptnavigation">
       <a href="https://evowebdesign.de/" class="logo" aria-label="Evolved Web Designs – Startseite">
-        <img src="logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="44" height="44" />
+        <img src="logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="42" height="42" />
         <span class="logo-name">Evolved Web Designs</span>
       </a>
       <button class="hamburger" id="menuBtn" aria-label="Menue" aria-expanded="false">
@@ -631,194 +274,304 @@
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="https://evowebdesign.de/leistungen.html" class="active">Leistungen</a></li>
         <li><a href="https://evowebdesign.de/projekte.html">Projekte</a></li>
-        <li><a href="https://evowebdesign.de/ueber-uns.html">Über uns</a></li>
+        <li><a href="https://evowebdesign.de/ueber-uns.html">&Uuml;ber uns</a></li>
         <li><a href="https://evowebdesign.de/faq.html">Preise</a></li>
-        <li><a href="https://evowebdesign.de/kontakt.html" class="cta">Jetzt anfragen</a></li>
+        <li><a href="https://evowebdesign.de/kontakt.html" class="nav-cta">Jetzt anfragen</a></li>
       </ul>
     </nav>
   </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a href="https://evowebdesign.de/" itemprop="item"><span itemprop="name">Startseite</span></a>
-                <meta itemprop="position" content="1">
-            </li>
-            <li><span style="color: var(--text-secondary);">›</span></li>
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span class="current" itemprop="name">Leistungen</span>
-                <meta itemprop="position" content="2">
-            </li>
+  <main id="main">
+
+    <!-- INTRO -->
+    <div class="page-intro">
+      <div class="wrap">
+        <ol class="breadcrumb" aria-label="Breadcrumb">
+          <li><a href="https://evowebdesign.de/">Startseite</a></li>
+          <li>&rsaquo;</li>
+          <li>Leistungen</li>
         </ol>
-    </nav>
-
-    <main>
-        <div class="page-hero">
-            <h1>Unsere <span class="gradient-text">Leistungen</span></h1>
-            <p>Website + KI-Bot, lokale SEO und Hosting – alles aus einer Hand, direkt am Bodensee.</p>
-        </div>
-
-        <section style="max-width:1200px;margin:0 auto;padding:3rem 2rem 1rem">
-  <div style="background:linear-gradient(135deg,rgba(0,102,255,0.1),rgba(0,217,255,0.06));border:1px solid rgba(0,217,255,0.3);border-radius:20px;padding:2.5rem;margin-bottom:2rem">
-    <div style="display:inline-block;background:rgba(0,217,255,0.1);border:1px solid rgba(0,217,255,0.3);border-radius:999px;padding:.25rem .75rem;font-size:.75rem;font-weight:800;color:#00D9FF;margin-bottom:1rem;letter-spacing:.04em;text-transform:uppercase">Unser Hauptangebot</div>
-    <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:800;margin-bottom:1rem">Website + KI-Bot Paket</h2>
-    <p style="color:#8B949E;line-height:1.85;max-width:780px;margin-bottom:1.5rem">
-      Eine moderne Website allein reicht heute nicht mehr. Ihr KI-Assistent beantwort Kundenfragen, erklaert Ihre Leistungen und bucht Termine – automatisch, 24 Stunden am Tag, 7 Tage die Woche.
-      Ihr erster Mitbewerber, der das hat, wird Sie einholen. Seien Sie der Erste.
-    </p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:1.5rem">
-      <div style="background:rgba(0,0,0,0.2);border:1px solid rgba(0,102,255,0.2);border-radius:12px;padding:1rem">
-        <strong style="display:block;color:#F0F6FC;margin-bottom:.25rem">&#10003; Professionelle Website</strong>
-        <span style="font-size:.88rem;color:#8B949E">Modern, mobil-first, schnell geladen, SEO-bereit</span>
-      </div>
-      <div style="background:rgba(0,0,0,0.2);border:1px solid rgba(0,102,255,0.2);border-radius:12px;padding:1rem">
-        <strong style="display:block;color:#F0F6FC;margin-bottom:.25rem">&#10003; KI-Assistent eingebettet</strong>
-        <span style="font-size:.88rem;color:#8B949E">Antwortet auf Fragen, bucht Termine, leitet Anfragen weiter</span>
-      </div>
-      <div style="background:rgba(0,0,0,0.2);border:1px solid rgba(0,102,255,0.2);border-radius:12px;padding:1rem">
-        <strong style="display:block;color:#F0F6FC;margin-bottom:.25rem">&#10003; Individuell konfiguriert</strong>
-        <span style="font-size:.88rem;color:#8B949E">Mit Ihren Preisen, Leistungen und Ihrem Ton</span>
+        <span class="label">Was wir anbieten</span>
+        <h1>Drei Leistungen.<br /><span class="accent">Kein Schnickschnack.</span></h1>
+        <p class="intro-sub">
+          Wir machen keine zwanzig Dinge mit&shy;telm&auml;&szlig;ig.
+          Website&nbsp;+&nbsp;KI-Bot, lokale SEO und Hosting &ndash;
+          alles aus einer Hand, alles mit Festpreis.
+        </p>
       </div>
     </div>
-    <a href="https://evowebdesign.de/kontakt.html" style="display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#0066FF,#0052CC);color:#fff;padding:.9rem 2rem;border-radius:10px;font-weight:700;text-decoration:none;font-size:1rem">Jetzt anfragen &#8594;</a>
-  </div>
-</section>
 
-        <div class="services-container">
-            <section class="service-section" id="webdesign">
-                <div class="service-content">
-                    <h2>Webdesign & <span class="gradient-text">Entwicklung</span></h2>
-                    <p>Wir erstellen moderne, responsive Websites für kleine Unternehmen, die nicht nur gut aussehen, sondern auch Ergebnisse liefern.</p>
-                    <ul class="service-features">
-                        <li>Individuelles Design nach Ihren Wünschen</li>
-                        <li>Mobile-First Entwicklung für alle Geräte</li>
-                        <li>Schnelle Ladezeiten für besseres Google-Ranking</li>
-                        <li>Klare Benutzerführung für bessere Conversions</li>
-                        <li>Übersichtliches und benutzerfreundliches Design</li>
-                    </ul>
-                    <a href="https://evowebdesign.de/kontakt.html" class="btn btn-primary">Projekt anfragen →</a>
-                </div>
-                <div class="service-visual">
-                    <div class="service-icon-large">🎨</div>
-                    <h3>Kreatives Design</h3>
-                    <p>Moderne Ästhetik trifft auf funktionales UX-Design.</p>
-                </div>
-            </section>
+    <!-- FEATURED: Website + KI-Bot -->
+    <div class="featured">
+      <div class="wrap">
+        <div class="featured-inner">
+          <div class="featured-left">
+            <span class="label">Unser Hauptangebot</span>
+            <h2>Website + KI-Bot</h2>
+            <div class="featured-price">
+              <strong>1.490&nbsp;&euro;</strong>
+              <span>einmalig &middot; kein Abo</span>
+            </div>
+            <p>
+              Eine moderne, schnelle Website &ndash; und ein KI-Assistent,
+              der Ihre Kunden empf&auml;ngt, Fragen beantwortet und Termine bucht.
+              Auch wenn Sie schlafen. Auch am Wochenende.
+            </p>
+            <p>
+              Der Bot wird komplett auf Ihr Unternehmen eingestellt:
+              Ihre Preise, Ihre Leistungen, Ihr Ton. Kein generisches „Wie kann ich helfen?".
+            </p>
+            <a href="https://evowebdesign.de/kontakt.html" class="btn btn-primary" style="margin-top:.5rem">Jetzt anfragen &rarr;</a>
+          </div>
 
-            <section class="service-section reverse" id="seo">
-                <div class="service-content">
-                    <h2>SEO & <span class="gradient-text">lokale Rankings</span></h2>
-                    <p>Mit gezielter Suchmaschinenoptimierung bringen wir Ihre Website auf die erste Seite bei Google in Friedrichshafen und der Region.</p>
-                    <ul class="service-features">
-                        <li>On-Page SEO: Optimierte Inhalte und Struktur</li>
-                        <li>Technisches SEO: Ladezeit, Mobile-Optimierung</li>
-                        <li>Lokale SEO für Ihren Standort</li>
-                        <li><a href="https://www.google.com/business/" target="_blank" rel="noopener" style="color: var(--primary-light);">Google Business</a> Einrichtung</li>
-                        <li>Keyword-Recherche und Content-Strategie</li>
-                    </ul>
-                    <a href="https://evowebdesign.de/kontakt.html" class="btn btn-primary">SEO-Beratung anfragen →</a>
+          <div class="featured-right">
+            <div class="feat-list">
+              <div class="feat-item">
+                <span class="feat-check">&#10003;</span>
+                <div class="feat-item-text">
+                  <strong>Vollst&auml;ndige Website (5–7 Seiten)</strong>
+                  <span>Mobil-first, schnell geladen, sauber strukturiert.</span>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon-large">🚀</div>
-                    <h3>Mehr Sichtbarkeit</h3>
-                    <p>Werden Sie gefunden, wo Ihre Kunden suchen.</p>
+              </div>
+              <div class="feat-item">
+                <span class="feat-check">&#10003;</span>
+                <div class="feat-item-text">
+                  <strong>KI-Assistent &ndash; eingebettet &amp; eingestellt</strong>
+                  <span>Beantwortet Fragen, bucht Termine, leitet Anfragen weiter.</span>
                 </div>
-            </section>
+              </div>
+              <div class="feat-item">
+                <span class="feat-check">&#10003;</span>
+                <div class="feat-item-text">
+                  <strong>Lokale SEO</strong>
+                  <span>Damit Sie in Friedrichshafen und am Bodensee gefunden werden.</span>
+                </div>
+              </div>
+              <div class="feat-item">
+                <span class="feat-check">&#10003;</span>
+                <div class="feat-item-text">
+                  <strong>Google Business Optimierung</strong>
+                  <span>Einrichtung und Optimierung Ihres Eintrags.</span>
+                </div>
+              </div>
+              <div class="feat-item">
+                <span class="feat-check">&#10003;</span>
+                <div class="feat-item-text">
+                  <strong>Conversion-Optimierung</strong>
+                  <span>Klare Struktur, CTAs und Nutzerf&uuml;hrung f&uuml;r mehr Anfragen.</span>
+                </div>
+              </div>
+              <div class="feat-item">
+                <span class="feat-check">&#10003;</span>
+                <div class="feat-item-text">
+                  <strong>Fertig in 3&ndash;4 Wochen</strong>
+                  <span>Mit klarem Zeitplan und Zwischenst&auml;nden.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <section class="service-section" id="hosting">
-                <div class="service-content">
-                    <h2>Hosting & <span class="gradient-text">Support</span></h2>
-                    <p>Rundum-sorglos-Paket: Schnelles, sicheres Hosting mit persönlichem Support für Ihre Website.</p>
-                    <ul class="service-features">
-                        <li>SSL-Zertifikat (HTTPS) inklusive</li>
-                        <li>Moderne, zuverlässige Hosting-Infrastruktur</li>
-                        <li>Schnelle Ladezeiten durch optimierte Umsetzung</li>
-                        <li>Regelmäßige Überprüfung der Website auf Funktion & Erreichbarkeit</li>
-                        <li>Wartungsarme Technik ohne komplexe Updates</li>
-                    </ul>
-                    <a href="https://evowebdesign.de/kontakt.html" class="btn btn-primary">Hosting anfragen →</a>
-                </div>
-                <div class="service-visual">
-                    <div class="service-icon-large">🛡️</div>
-                    <h3>Sicher & Zuverlässig</h3>
-                    <p>Ihre Website professionell gehostet und geschützt.</p>
-                </div>
-            </section>
+    <!-- LEISTUNGEN DETAIL -->
+    <section class="services" aria-label="Alle Leistungen">
+      <div class="wrap">
+
+        <!-- Website -->
+        <div class="service-block">
+          <div class="service-meta">
+            <div class="service-num">01</div>
+            <h2>Webdesign &amp;<br />Entwicklung</h2>
+            <p style="margin-top:.5rem">Moderne, schnelle Websites f&uuml;r Unternehmen am Bodensee &ndash; die wirklich Anfragen bringen.</p>
+          </div>
+          <div class="service-body">
+            <p>
+              Wir bauen keine Templates. Jede Website entsteht mit Blick auf Ihre Kunden,
+              Ihr Angebot und Ihren Standort. <strong>Mobile-first</strong>, weil &uuml;ber 70 % Ihrer
+              Besucher vom Smartphone kommen. Schnelle Ladezeiten, weil Google und Kunden
+              abspringen, wenn eine Seite l&auml;nger als 3 Sekunden braucht.
+            </p>
+            <p>
+              Jede Seite hat eine klare Aufgabe: Vertrauen aufbauen, Leistung erkl&auml;ren,
+              zur Anfrage f&uuml;hren. <strong>Kein Design um des Designs willen.</strong>
+            </p>
+            <div class="feat-grid">
+              <div class="fg-item">Individuelles Design nach Ihrem Auftritt</div>
+              <div class="fg-item">Mobile-first, getestet auf allen Ger&auml;ten</div>
+              <div class="fg-item">Schnelle Ladezeiten &ndash; kein schwerer Baukastencode</div>
+              <div class="fg-item">Klare Nutzerf&uuml;hrung f&uuml;r mehr Anfragen</div>
+              <div class="fg-item">Kontaktformular &amp; WhatsApp-Button</div>
+              <div class="fg-item">Fertig in 2&ndash;4 Wochen, mit Festpreis</div>
+            </div>
+            <a href="https://evowebdesign.de/kontakt.html" class="btn btn-ghost">Website anfragen &rarr;</a>
+          </div>
         </div>
 
-        <section class="process-section">
-            <div class="section-header">
-                <span class="section-label">So arbeiten wir</span>
-                <h2>Unser <span class="gradient-text">Prozess</span></h2>
+        <!-- SEO -->
+        <div class="service-block">
+          <div class="service-meta">
+            <div class="service-num">02</div>
+            <h2>Lokale SEO</h2>
+            <p style="margin-top:.5rem">Damit Sie gefunden werden, wenn jemand in Ihrer Region nach Ihrer Leistung sucht.</p>
+          </div>
+          <div class="service-body">
+            <p>
+              Lokale SEO bedeutet: Wenn jemand in Friedrichshafen, Ravensburg oder &Uuml;berlingen
+              nach einem Handwerker, Dienstleister oder Fachbetrieb sucht &ndash; erscheinen Sie.
+              Das ist kein Hexenwerk, aber es braucht <strong>saubere Grundlage</strong>: richtige Titles,
+              strukturierte Daten, schnelle Seite, Google Business.
+            </p>
+            <p>
+              Wir versprechen keine &bdquo;Platz 1 Garantie&ldquo; &ndash; das tut niemand seri&ouml;s.
+              Wir liefern saubere technische Umsetzung, lokal relevante Inhalte
+              und die Grundlage, auf der Google Vertrauen aufbaut.
+            </p>
+            <div class="feat-grid">
+              <div class="fg-item">On-Page SEO: Titles, Metas, Struktur</div>
+              <div class="fg-item">Technisches SEO: Ladezeit, Mobilit&auml;t, SSL</div>
+              <div class="fg-item">Lokale Signale &amp; Standort-relevante Inhalte</div>
+              <div class="fg-item">Google Business Einrichtung &amp; Optimierung</div>
+              <div class="fg-item">Interne Verlinkung &amp; Seitenstruktur</div>
+              <div class="fg-item">Keyword-Recherche f&uuml;r Ihre Region</div>
             </div>
-            <div class="process-grid">
-                <article class="process-step">
-                    <div class="process-number">1</div>
-                    <h3>Erstgespräch</h3>
-                    <p>Kostenlos und unverbindlich – wir lernen Sie kennen.</p>
-                </article>
-                <article class="process-step">
-                    <div class="process-number">2</div>
-                    <h3>Konzept & Design</h3>
-                    <p>Maßgeschneidertes Konzept für Ihre Website.</p>
-                </article>
-                <article class="process-step">
-                    <div class="process-number">3</div>
-                    <h3>Entwicklung</h3>
-                    <p>Umsetzung mit wöchentlichen Updates.</p>
-                </article>
-                <article class="process-step">
-                    <div class="process-number">4</div>
-                    <h3>Launch & Support</h3>
-                    <p>Go-Live und fortlaufende Betreuung.</p>
-                </article>
-            </div>
-        </section>
+            <a href="https://evowebdesign.de/kontakt.html" class="btn btn-ghost">SEO-Beratung anfragen &rarr;</a>
+          </div>
+        </div>
 
-        <section style="padding: 2rem;">
-            <div class="cta-section">
-                <h2>Bereit, loszulegen?</h2>
-                <p>Kostenlose Erstberatung – unverbindlich und persönlich.</p>
-                <div class="cta-buttons">
-                    <a href="https://evowebdesign.de/kontakt.html" class="btn btn-primary">Jetzt Kontakt aufnehmen →</a>
-                    <a href="https://evowebdesign.de/projekte.html" class="btn btn-secondary">Unsere Projekte</a>
-                </div>
+        <!-- Hosting -->
+        <div class="service-block">
+          <div class="service-meta">
+            <div class="service-num">03</div>
+            <h2>Hosting &amp;<br />Betreuung</h2>
+            <p style="margin-top:.5rem">Ihre Website l&auml;uft &ndash; immer. Und wenn Sie Fragen haben, sind wir da.</p>
+          </div>
+          <div class="service-body">
+            <p>
+              Kein komplexes Control-Panel, kein Ticket-System, kein Support-Chatbot.
+              Sie schreiben uns auf WhatsApp &ndash; wir antworten. Punkt.
+            </p>
+            <p>
+              Unsere Websites brauchen kaum Wartung, weil wir auf sauberen, leichtgewichtigen Code
+              setzen &ndash; kein WordPress-Updatechaos, keine Plugin-Konflikte.
+              Trotzdem: <strong>Wenn etwas ist, k&uuml;mmern wir uns.</strong>
+            </p>
+            <div class="feat-grid">
+              <div class="fg-item">SSL-Zertifikat &amp; HTTPS inklusive</div>
+              <div class="fg-item">Zuverl&auml;ssiges Hosting, hohe Verf&uuml;gbarkeit</div>
+              <div class="fg-item">Schnelle Ladezeiten durch optimierten Code</div>
+              <div class="fg-item">Anpassungen auf Anfrage per WhatsApp</div>
+              <div class="fg-item">Keine WordPress-Abh&auml;ngigkeiten</div>
+              <div class="fg-item">Pers&ouml;nlicher Ansprechpartner &ndash; immer</div>
             </div>
-        </section>
-    </main>
+            <a href="https://evowebdesign.de/kontakt.html" class="btn btn-ghost">Hosting anfragen &rarr;</a>
+          </div>
+        </div>
 
-      <footer>
-    <div class="foot">
-      <div class="foot-left">
-        <a href="https://evowebdesign.de/" class="foot-logo">
-          <img src="logo-nobg.png" alt="EWD Logo" width="28" height="28" />
-          <span>Evolved Web Designs</span>
-        </a>
-        <nav class="foot-links" aria-label="Footer Navigation">
-          <a href="https://evowebdesign.de/leistungen.html">Leistungen</a>
+      </div>
+    </section>
+
+    <!-- ABLAUF -->
+    <div class="steps-section">
+      <div class="wrap-narrow">
+        <div style="margin-bottom:2rem">
+          <span class="label">Ablauf</span>
+          <h2>So l&auml;uft es ab.</h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-n">01</span>
+            <div>
+              <strong>Kurzes Gespr&auml;ch</strong>
+              <p>Sie erz&auml;hlen, was Sie brauchen. 20 Minuten, kein Verkaufsgespr&auml;ch. Wir stellen die richtigen Fragen.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">02</span>
+            <div>
+              <strong>Konkretes Angebot</strong>
+              <p>Festpreis, Zeitrahmen, genaue Leistung &ndash; schriftlich. Kein Kleingedrucktes.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">03</span>
+            <div>
+              <strong>Bau mit Zwischenst&auml;nden</strong>
+              <p>Wir bauen, Sie sehen den Fortschritt. Keine b&ouml;sen &Uuml;berraschungen am Ende.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">04</span>
+            <div>
+              <strong>Live. Fertig.</strong>
+              <p>Website geht online, KI-Bot wird aktiviert. Kurze Einf&uuml;hrung von uns &ndash; dann geh&ouml;rt alles Ihnen.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-band">
+      <h2>Bereit anzufangen?</h2>
+      <p>Keine Verpflichtung. Kein Standardpaket. Wir schauen uns Ihre Situation an und sagen Ihnen ehrlich, was hilft.</p>
+      <div class="cta-btns">
+        <a href="https://evowebdesign.de/kontakt.html" class="btn btn-primary">Kostenlos anfragen &rarr;</a>
+        <a href="https://evowebdesign.de/faq.html" class="btn btn-ghost">Preise ansehen</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="https://evowebdesign.de/" class="footer-logo">
+            <img src="logo-nobg.png" alt="Evolved Web Designs Logo" width="32" height="32" />
+            <span>Evolved Web Designs</span>
+          </a>
+          <p class="footer-tagline">Webdesign &amp; KI-Bot aus Friedrichshafen. F&uuml;r Unternehmen am Bodensee, die online Ergebnisse wollen.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="icon-instagram.png" alt="" width="14" height="14" />
+            </a>
+            <a href="https://tiktok.com/@evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <img src="icon-tiktok.png" alt="" width="14" height="14" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Leistungen</h4>
+          <a href="https://evowebdesign.de/leistungen.html">Website + KI-Bot</a>
+          <a href="https://evowebdesign.de/leistungen.html">Lokale SEO</a>
+          <a href="https://evowebdesign.de/leistungen.html">Hosting &amp; Betreuung</a>
+        </div>
+        <div class="footer-col">
+          <h4>Unternehmen</h4>
+          <a href="https://evowebdesign.de/ueber-uns.html">&Uuml;ber uns</a>
           <a href="https://evowebdesign.de/projekte.html">Projekte</a>
-          <a href="https://evowebdesign.de/ueber-uns.html">Über uns</a>
-          <a href="https://evowebdesign.de/faq.html">Preise</a>
+          <a href="https://evowebdesign.de/faq.html">Preise &amp; FAQ</a>
           <a href="https://evowebdesign.de/kontakt.html">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <a href="tel:+491717031722">+49 171 7031722</a>
+          <a href="mailto:kontakt@evowebdesign.de">kontakt@evowebdesign.de</a>
+          <a href="https://evowebdesign.de/kontakt.html">Kostenlos anfragen</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Evolved Web Designs GbR &middot; Friedrichshafen am Bodensee</p>
+        <div class="footer-legal">
           <a href="https://evowebdesign.de/impressum.html">Impressum</a>
           <a href="https://evowebdesign.de/datenschutz.html">Datenschutz</a>
-        </nav>
-      </div>
-      <div class="foot-right">
-        <span class="foot-copy">&copy; 2026 EWD GbR</span>
-        <div class="foot-soc">
-          <a href="https://instagram.com/evolvedwebdesigns" class="fs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <img src="icon-instagram.png" alt="" width="14" height="14" />
-          </a>
-          <a href="https://tiktok.com/@evolvedwebdesigns" class="fs" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-            <img src="icon-tiktok.png" alt="" width="14" height="14" />
-          </a>
         </div>
       </div>
     </div>
   </footer>
 
-      <script>
+  <script>
   var hdr=document.getElementById('hdr');
   var menuBtn=document.getElementById('menuBtn');
   var navEl=document.getElementById('navLinks');
@@ -835,6 +588,21 @@
       menuBtn.setAttribute('aria-expanded','false');
     });
   });
+  if('IntersectionObserver' in window){
+    var s=document.createElement('style');
+    s.textContent='.rv{opacity:0;transform:translateY(18px);transition:opacity .5s cubic-bezier(.4,0,.2,1),transform .5s cubic-bezier(.4,0,.2,1)}.rv.vi{opacity:1;transform:none}';
+    document.head.appendChild(s);
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting)return;
+        e.target.classList.add('vi');
+        io.unobserve(e.target);
+      });
+    },{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.service-block,.feat-item,.step,.fg-item').forEach(function(el){
+      el.classList.add('rv');io.observe(el);
+    });
+  }
   </script>
 </body>
 </html>
