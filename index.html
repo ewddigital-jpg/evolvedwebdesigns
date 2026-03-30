@@ -8,14 +8,14 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <title>Webdesign &amp; KI-Bot Friedrichshafen – Evolved Web Designs | EWD</title>
-  <meta name="description" content="Evolved Web Designs – Webdesign und KI-Bot aus Friedrichshafen. Moderne Websites fuer Unternehmen am Bodensee. Mit eingebautem KI-Assistenten. Ab 790 Euro. Fertig in 2-4 Wochen." />
-  <meta name="keywords" content="Webdesign Friedrichshafen, KI-Bot Website Bodensee, Webagentur Friedrichshafen, Website erstellen lassen Bodensee, Webdesign fuer Handwerker Bodensee, SEO Friedrichshafen" />
+  <title>Webdesign &amp; KI-Bot Friedrichshafen – Evolved Web Designs</title>
+  <meta name="description" content="Evolved Web Designs – Ihre Webagentur aus Friedrichshafen. Moderne Websites mit eingebautem KI-Assistenten fuer Unternehmen am Bodensee. Ab 790 Euro. Fertig in 2–4 Wochen." />
+  <meta name="keywords" content="Webdesign Friedrichshafen, KI-Bot Website, Webagentur Bodensee, Website erstellen Friedrichshafen, SEO Bodensee, Webdesign Handwerker" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://evowebdesign.de/" />
 
-  <meta property="og:title" content="Evolved Web Designs – Webdesign &amp; KI-Bot Friedrichshafen" />
-  <meta property="og:description" content="Moderne Website + KI-Assistent. Ihr digitaler Mitarbeiter antwortet 24/7 auf Kundenfragen. Lokal, persoenlich, am Bodensee." />
+  <meta property="og:title" content="Webdesign &amp; KI-Bot Friedrichshafen – Evolved Web Designs" />
+  <meta property="og:description" content="Moderne Website mit KI-Assistent. Ihr digitaler Mitarbeiter antwortet 24/7. Lokal, persoenlich, Bodensee." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://evowebdesign.de/" />
   <meta property="og:locale" content="de_DE" />
@@ -23,7 +23,6 @@
 
   <link rel="icon" href="favicon.ico" sizes="48x48" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
   <meta name="theme-color" content="#0066FF" />
@@ -67,712 +66,719 @@
   </script>
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    :root{
-      --primary:#0066FF;
-      --primary-dark:#0050CC;
-      --primary-light:#4D94FF;
-      --accent:#00D9FF;
-      --bg:#0D1117;
-      --bg-card:#161B22;
-      --bg-raised:#1C2128;
-      --text:#F0F6FC;
-      --text-secondary:#8B949E;
-      --text-soft:#C9D1D9;
-      --border:rgba(240,246,252,0.08);
-      --border-mid:rgba(240,246,252,0.14);
-      --border-active:rgba(0,102,255,0.5);
-      --green:#25D366;
-      --radius:16px;
-      --radius-sm:10px;
-      --shadow:0 4px 20px rgba(0,0,0,0.3);
-      --shadow-lg:0 16px 48px rgba(0,0,0,0.45);
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box }
+    :root {
+      --primary: #0066FF;
+      --primary-dark: #0050CC;
+      --primary-light: #4D94FF;
+      --accent: #00D9FF;
+      --bg: #0D1117;
+      --bg-card: #161B22;
+      --bg-raised: #1C2128;
+      --text: #F0F6FC;
+      --text-secondary: #8B949E;
+      --text-soft: #C9D1D9;
+      --border: rgba(240,246,252,0.08);
+      --border-mid: rgba(240,246,252,0.14);
+      --border-active: rgba(0,102,255,0.45);
+      --green: #25D366;
+      --radius: 14px;
+      --radius-sm: 10px;
     }
 
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-      background:var(--bg);color:var(--text);
-      line-height:1.65;overflow-x:hidden;
-      -webkit-font-smoothing:antialiased;
+    html { scroll-behavior: smooth }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
-    body::before{
-      content:'';position:fixed;inset:0;pointer-events:none;
+
+    /* Subtle radial glow behind hero */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
       background:
-        radial-gradient(ellipse 80% 50% at 50% -10%,rgba(0,102,255,0.15) 0%,transparent 60%),
-        radial-gradient(ellipse 60% 40% at 80% 80%,rgba(0,217,255,0.06) 0%,transparent 55%);
-      z-index:0;
+        radial-gradient(ellipse 70% 45% at 50% -5%, rgba(0,102,255,0.13) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 35% at 85% 90%, rgba(0,217,255,0.05) 0%, transparent 55%);
+      z-index: 0;
     }
 
-    .skip{position:absolute;left:-9999px}
-    .skip:focus{left:1rem;top:1rem;z-index:9999;background:var(--bg-card);color:var(--text);padding:.65rem 1rem;border-radius:var(--radius-sm);border:1px solid var(--border-active)}
+    @keyframes fadeUp   { from { opacity:0; transform:translateY(28px) } to { opacity:1; transform:translateY(0) } }
+    @keyframes fadeDown { from { opacity:0; transform:translateY(-18px) } to { opacity:1; transform:translateY(0) } }
+    @keyframes shimmer  { 0% { background-position:-200% center } 100% { background-position:200% center } }
+    @keyframes floatY   { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-9px) } }
+    @keyframes blink    { 0%,100% { opacity:1 } 50% { opacity:.25 } }
+    @media (prefers-reduced-motion:reduce) { *, *::before, *::after { animation:none!important; transition:none!important } }
 
-    /* ANIMATIONS */
-    @keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fadeDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
-    @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-    @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-    @keyframes glowBlue{0%,100%{box-shadow:0 0 28px rgba(0,102,255,0.18)}50%{box-shadow:0 0 52px rgba(0,102,255,0.38)}}
+    /* ── SKIP LINK ── */
+    .skip { position:absolute; left:-9999px }
+    .skip:focus { left:1rem; top:1rem; z-index:9999; background:var(--bg-card); color:var(--text); padding:.6rem 1rem; border-radius:8px; border:1px solid var(--border-active) }
 
-    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-
-    /* ─── HEADER ─── */
-    header{
-      position:fixed;top:0;left:0;right:0;z-index:1000;
-      transition:background .3s,box-shadow .3s,border-color .3s;
+    /* ── HEADER ── */
+    header {
+      position: fixed; top:0; left:0; right:0; z-index: 1000;
+      transition: background .3s, box-shadow .3s, border-color .3s;
     }
-    header.top{background:rgba(13,17,23,0.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent}
-    header.scrolled{background:rgba(13,17,23,0.96);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);box-shadow:0 1px 0 var(--border),0 4px 24px rgba(0,0,0,0.25)}
-    nav{
-      max-width:1200px;margin:0 auto;
-      padding:.85rem 2rem;
-      display:flex;align-items:center;justify-content:space-between;gap:2rem;
-      animation:fadeDown .5s ease both;
+    header.top    { background: rgba(13,17,23,0.55); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid transparent }
+    header.scrolled { background: rgba(13,17,23,0.97); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid var(--border); box-shadow:0 1px 0 var(--border), 0 4px 24px rgba(0,0,0,.28) }
+    nav {
+      max-width: 1200px; margin: 0 auto;
+      padding: .85rem 2rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+      animation: fadeDown .5s ease both;
     }
+    .logo { display:flex; align-items:center; gap:.8rem; text-decoration:none; flex-shrink:0; transition:opacity .2s }
+    .logo:hover { opacity:.8 }
+    .logo-mark { height:42px; width:auto; filter:brightness(1.1) }
+    .logo-name { font-family:'Poppins',sans-serif; font-size:1rem; font-weight:900; letter-spacing:-.02em; color:var(--text) }
 
-    /* LOGO */
-    .logo{display:flex;align-items:center;gap:.85rem;text-decoration:none;flex-shrink:0;transition:opacity .2s}
-    .logo:hover{opacity:.8}
-    .logo-mark{height:44px;width:auto;filter:brightness(1.15)}
-    .logo-name{
-      font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:900;
-      letter-spacing:-.02em;color:var(--text);
+    .nav-links { display:flex; align-items:center; gap:1.75rem; list-style:none }
+    .nav-links a { color:var(--text-secondary); text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; white-space:nowrap; position:relative }
+    .nav-links a:not(.nav-cta):hover { color:var(--text) }
+    .nav-links a:not(.nav-cta)::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:var(--primary-light); transition:width .25s }
+    .nav-links a:not(.nav-cta):hover::after { width:100% }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff !important; padding:.58rem 1.3rem; border-radius:8px;
+      font-weight: 700; font-size:.85rem;
+      box-shadow: 0 2px 14px rgba(0,102,255,.28);
+      transition: transform .2s, box-shadow .2s;
     }
+    .nav-cta:hover { transform:translateY(-1px); box-shadow:0 4px 22px rgba(0,102,255,.45) }
+    .nav-cta::after { display:none !important }
 
-    /* NAV */
-    .nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
-    .nav-links a{
-      color:var(--text-secondary);text-decoration:none;
-      font-size:.88rem;font-weight:500;
-      transition:color .2s;white-space:nowrap;
-      position:relative;
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none; background:none }
+    .hamburger span { width:22px; height:1.5px; background:var(--text-secondary); border-radius:2px; transition:transform .3s, opacity .3s }
+    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(4.5px,4.5px) }
+    .hamburger.open span:nth-child(2) { opacity:0 }
+    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(4.5px,-4.5px) }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa { position:fixed; bottom:24px; right:24px; z-index:9999; animation:floatY 3.5s ease-in-out infinite }
+    .wa a { width:56px; height:56px; border-radius:50%; background:var(--green); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(37,211,102,.38); transition:transform .2s; text-decoration:none }
+    .wa a:hover { transform:scale(1.1) }
+    .wa img { width:28px; height:28px }
+
+    /* ── LAYOUT ── */
+    main { padding-top: 70px; position:relative; z-index:1 }
+    .wrap { max-width:1200px; margin:0 auto; padding:0 1.5rem }
+    .wrap-narrow { max-width:820px; margin:0 auto; padding:0 1.5rem }
+    .sec { padding:4rem 0 }
+
+    h2 { font-family:'Poppins',sans-serif; font-size:clamp(1.7rem,3.2vw,2.35rem); font-weight:800; line-height:1.18; letter-spacing:-.02em }
+    h3 { font-family:'Poppins',sans-serif; font-size:1.04rem; font-weight:700; line-height:1.3; margin-bottom:.5rem }
+    .label { font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.16em; color:var(--primary-light); display:block; margin-bottom:.65rem }
+    .accent { background:linear-gradient(135deg,var(--primary-light),var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text }
+
+    .btn { display:inline-flex; align-items:center; gap:.4rem; padding:.9rem 1.85rem; border-radius:var(--radius-sm); font-weight:700; font-size:.95rem; text-decoration:none; transition:all .22s; cursor:pointer; border:none; font-family:'Inter',sans-serif }
+    .btn-primary { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); color:#fff; box-shadow:0 4px 18px rgba(0,102,255,.3) }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,102,255,.5) }
+    .btn-ghost { background:transparent; color:var(--text-soft); border:1px solid var(--border-mid) }
+    .btn-ghost:hover { border-color:rgba(240,246,252,.26); background:rgba(240,246,252,.04) }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align: center;
+      padding: 7rem 1.5rem 4rem;
+      position: relative; overflow:hidden;
     }
-    .nav-links a:not(.cta):hover{color:var(--text)}
-    .nav-links a:not(.cta)::after{
-      content:'';position:absolute;bottom:-3px;left:0;
-      width:0;height:1px;background:var(--primary-light);
-      transition:width .25s ease;
+    .hero h1 {
+      font-family: 'Poppins', sans-serif; font-weight:900;
+      font-size: clamp(2.6rem,7vw,5rem); line-height:1.06; letter-spacing:-.03em;
+      max-width: 920px; margin-bottom:1.5rem;
     }
-    .nav-links a:not(.cta):hover::after{width:100%}
-    .cta{
-      background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-      color:#fff!important;padding:.6rem 1.35rem;border-radius:8px;
-      font-weight:700;font-size:.87rem;
-      box-shadow:0 2px 14px rgba(0,102,255,0.28);
-      transition:transform .2s,box-shadow .2s;
+    .shimmer {
+      background: linear-gradient(90deg, #fff 0%, var(--primary-light) 25%, var(--accent) 50%, var(--primary-light) 75%, #fff 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      animation: shimmer 5s linear infinite, fadeUp .9s ease .1s both;
+      display: block;
     }
-    .cta:hover{transform:translateY(-1px);box-shadow:0 4px 22px rgba(0,102,255,0.45)}
-    .cta::after{display:none!important}
-
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
-    .hamburger span{width:22px;height:1.5px;background:var(--text-secondary);border-radius:2px;transition:transform .3s,opacity .3s}
-    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
-    .hamburger.open span:nth-child(2){opacity:0}
-    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
-
-    /* WHATSAPP */
-    .wa{position:fixed;bottom:26px;right:26px;z-index:9999;animation:floatY 3.5s ease-in-out infinite}
-    .wa a{width:58px;height:58px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.38);transition:transform .2s;text-decoration:none}
-    .wa a:hover{transform:scale(1.1)}
-    .wa img{width:30px;height:30px}
-
-    /* ─── LAYOUT ─── */
-    main{padding-top:70px;position:relative;z-index:1}
-    .wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
-    .sec{padding:3rem 0}
-    .sec-label{display:inline-block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--primary-light);margin-bottom:.75rem}
-    h2{font-family:'Poppins',sans-serif;font-size:clamp(1.75rem,3.5vw,2.45rem);font-weight:800;line-height:1.18}
-    h3{font-family:'Poppins',sans-serif;font-size:1.06rem;font-weight:700;line-height:1.3;margin-bottom:.55rem}
-    .accent{background:linear-gradient(135deg,var(--primary-light),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .rule{width:44px;height:2px;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:2px;margin:.8rem 0 0}
-    .rule.center{margin:.8rem auto 0}
-    .muted{color:var(--text-secondary)}
-    .soft{color:var(--text-soft)}
-
-    /* BUTTONS */
-    .btn{display:inline-flex;align-items:center;gap:.45rem;padding:.95rem 2rem;border-radius:var(--radius-sm);font-weight:700;font-size:.97rem;text-decoration:none;transition:all .22s;cursor:pointer;border:none;font-family:'Inter',sans-serif}
-    .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;box-shadow:0 4px 18px rgba(0,102,255,0.3)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,102,255,0.5)}
-    .btn-outline{background:transparent;color:var(--text);border:1px solid var(--border-mid)}
-    .btn-outline:hover{border-color:rgba(240,246,252,0.28);background:rgba(240,246,252,0.04);transform:translateY(-1px)}
-
-    /* ─── HERO ─── */
-    .hero{
-      min-height:100vh;display:flex;flex-direction:column;
-      align-items:center;justify-content:center;
-      text-align:center;padding:6rem 2rem 3rem;
-      position:relative;overflow:hidden;
+    .hero-plain { display:block; color:var(--text); animation:fadeUp .9s ease .1s both }
+    .hero-desc {
+      font-size: 1.05rem; color:var(--text-secondary);
+      max-width: 640px; line-height:1.8; margin-bottom:2rem;
+      animation: fadeUp .8s ease .3s both;
     }
-    .hero-badge{
-      display:inline-flex;align-items:center;gap:.5rem;
-      border:1px solid var(--border-mid);border-radius:999px;
-      padding:.42rem 1rem;font-size:.78rem;font-weight:600;
-      color:var(--text-secondary);margin-bottom:2rem;
-      background:rgba(255,255,255,0.03);
-      animation:fadeDown .6s ease .1s both;
+    .hero-desc strong { color:var(--text-soft); font-weight:600 }
+    .hero-btns { display:flex; gap:.8rem; flex-wrap:wrap; justify-content:center; animation:fadeUp .8s ease .45s both; margin-bottom:.9rem }
+    .hero-note { font-size:.8rem; color:var(--text-secondary); animation:fadeUp .7s ease .55s both; margin-bottom:3rem }
+
+    .hero-stats {
+      display: flex; gap:0; flex-wrap:wrap; justify-content:center;
+      border-top: 1px solid var(--border);
+      width: 100%; max-width:760px;
+      animation: fadeUp .7s ease .65s both;
     }
-    .badge-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:blink 2.5s ease-in-out infinite;flex-shrink:0}
-    .hero h1{
-      font-family:'Poppins',sans-serif;font-weight:900;
-      font-size:clamp(2.5rem,6.5vw,4.8rem);line-height:1.08;
-      max-width:950px;margin-bottom:1.75rem;
+    .hstat {
+      flex: 1 1 160px;
+      padding: 1.4rem 1rem;
+      text-align: center;
+      border-right: 1px solid var(--border);
     }
-    .shimmer{
-      background:linear-gradient(90deg,
-        #ffffff 0%,
-        var(--primary-light) 25%,
-        var(--accent) 50%,
-        var(--primary-light) 75%,
-        #ffffff 100%);
-      background-size:200% auto;
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-      animation:shimmer 5s linear infinite, fadeUp .9s ease .2s both;
-      display:block;
+    .hstat:last-child { border-right:none }
+    .hstat strong { display:block; font-family:'Poppins',sans-serif; font-size:1.6rem; font-weight:900; color:var(--text); letter-spacing:-.02em }
+    .hstat span { font-size:.78rem; color:var(--text-secondary); display:block; margin-top:.15rem }
+
+    /* ── SERVICES ── */
+    .srv-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin-top:2.5rem }
+    .srv {
+      background: var(--bg-card);
+      padding: 2rem 1.75rem;
+      transition: background .25s;
+      position: relative;
     }
-    .hero-plain{
-      animation:fadeUp .9s ease .2s both;
-      display:block;color:var(--text);
+    .srv:hover { background:var(--bg-raised) }
+    .srv-num { font-family:'Poppins',sans-serif; font-size:.72rem; font-weight:800; color:var(--primary-light); letter-spacing:.1em; margin-bottom:1rem }
+    .srv h3 { margin-bottom:.55rem }
+    .srv p { color:var(--text-secondary); font-size:.88rem; line-height:1.75 }
+    .srv-tag { display:inline-block; margin-top:.9rem; font-size:.78rem; font-weight:700; color:var(--primary-light); text-decoration:none; transition:color .2s }
+    .srv-tag:hover { color:var(--accent) }
+    .srv-featured { background:linear-gradient(160deg,var(--bg-card) 0%,rgba(0,102,255,.05) 100%) }
+    .srv-badge { display:inline-block; font-size:.62rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; background:rgba(0,217,255,.1); border:1px solid rgba(0,217,255,.2); color:var(--accent); padding:.14rem .55rem; border-radius:4px; margin-bottom:.65rem }
+
+    /* ── KI SECTION ── */
+    .ki-layout { display:grid; grid-template-columns:1fr 1fr; gap:3.5rem; align-items:start }
+    .ki-features { display:flex; flex-direction:column; gap:0; margin-top:1.5rem }
+    .ki-feat { display:flex; gap:1rem; align-items:flex-start; padding:.9rem 0; border-bottom:1px solid var(--border) }
+    .ki-feat:last-child { border-bottom:none }
+    .ki-feat-dot { width:6px; height:6px; border-radius:50%; background:var(--accent); flex-shrink:0; margin-top:.45rem }
+    .ki-feat-text strong { display:block; font-size:.9rem; font-weight:700; color:var(--text); margin-bottom:.18rem }
+    .ki-feat-text span { font-size:.82rem; color:var(--text-secondary); line-height:1.55 }
+
+    .chat-card { background:var(--bg-card); border:1px solid rgba(0,102,255,.18); border-radius:var(--radius); overflow:hidden }
+    .chat-bar { display:flex; align-items:center; gap:.55rem; padding:.85rem 1.25rem; border-bottom:1px solid var(--border); font-size:.7rem; font-weight:700; color:var(--text-secondary); text-transform:uppercase; letter-spacing:.08em }
+    .live-dot { width:6px; height:6px; border-radius:50%; background:#22c55e; animation:blink 2s ease-in-out infinite; flex-shrink:0 }
+    .chat-body { padding:1.25rem; display:flex; flex-direction:column; gap:.75rem }
+    .msg { display:flex; gap:.55rem; align-items:flex-end }
+    .msg.out { flex-direction:row-reverse }
+    .avatar { width:26px; height:26px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:.78rem }
+    .avatar.u { background:rgba(255,255,255,.07) }
+    .avatar.b { background:linear-gradient(135deg,var(--primary),var(--accent)) }
+    .bubble { border-radius:12px 12px 12px 3px; padding:.6rem .9rem; font-size:.83rem; color:var(--text-soft); line-height:1.5; max-width:82%; background:rgba(255,255,255,.05); border:1px solid var(--border) }
+    .msg.out .bubble { border-radius:12px 12px 3px 12px; background:rgba(0,102,255,.1); border-color:rgba(0,102,255,.22); margin-left:auto }
+    .chat-sep { text-align:center; font-size:.65rem; color:var(--text-secondary); padding:.1rem 0 }
+    .chat-note { padding:.75rem 1.25rem; border-top:1px solid var(--border); font-size:.76rem; color:var(--text-secondary); line-height:1.5 }
+
+    /* ── PRICING ── */
+    .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:2.5rem }
+    .pc { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.85rem; transition:border-color .25s, box-shadow .25s; display:flex; flex-direction:column }
+    .pc:hover { border-color:var(--border-mid) }
+    .pc.best { border-color:rgba(0,102,255,.4); background:linear-gradient(155deg,var(--bg-card),rgba(0,102,255,.04)); position:relative }
+    .pc-label { font-size:.68rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; color:var(--text-secondary); margin-bottom:.55rem }
+    .pc-price { font-family:'Poppins',sans-serif; font-size:2.6rem; font-weight:900; color:var(--text); line-height:1; letter-spacing:-.03em }
+    .pc-price sup { font-size:1.1rem; font-weight:700; vertical-align:top; margin-top:.3rem; color:var(--text-secondary) }
+    .pc-note { font-size:.76rem; color:var(--text-secondary); margin:.3rem 0 1.25rem }
+    .pc-divider { height:1px; background:var(--border); margin-bottom:1.1rem }
+    .pc-features { display:flex; flex-direction:column; gap:.5rem; margin-bottom:1.5rem; flex:1 }
+    .pc-feat { font-size:.85rem; color:var(--text-soft); display:flex; gap:.55rem; align-items:flex-start; line-height:1.45 }
+    .pc-feat::before { content:'✓'; color:var(--primary-light); font-weight:700; flex-shrink:0; font-size:.78rem; margin-top:.1rem }
+    .pc-btn { display:block; text-align:center; padding:.8rem; border-radius:var(--radius-sm); font-weight:700; font-size:.88rem; text-decoration:none; transition:all .2s; border:1px solid var(--border-mid); color:var(--text-secondary) }
+    .pc-btn:hover { border-color:rgba(240,246,252,.25); color:var(--text) }
+    .pc-btn.prime { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); color:#fff; border-color:transparent; box-shadow:0 4px 16px rgba(0,102,255,.28) }
+    .pc-btn.prime:hover { box-shadow:0 6px 24px rgba(0,102,255,.45); transform:translateY(-1px) }
+    .best-tag { position:absolute; top:-10px; left:50%; transform:translateX(-50%); background:var(--primary); color:#fff; font-size:.62rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; padding:.2rem .8rem; border-radius:999px; white-space:nowrap }
+
+    /* ── ABOUT ── */
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center }
+    .about-text h2 { margin-bottom:1rem }
+    .about-text p { font-size:.95rem; color:var(--text-secondary); line-height:1.85; margin-bottom:.85rem }
+    .about-text p:last-of-type { margin-bottom:0 }
+    .about-text strong { color:var(--text-soft); font-weight:600 }
+    .about-stats { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden }
+    .astat { background:var(--bg-card); padding:1.5rem; text-align:center }
+    .astat strong { display:block; font-family:'Poppins',sans-serif; font-size:1.8rem; font-weight:900; color:var(--text); letter-spacing:-.02em; margin-bottom:.2rem }
+    .astat span { font-size:.78rem; color:var(--text-secondary) }
+
+    /* ── STEPS ── */
+    .steps { list-style:none; display:flex; flex-direction:column }
+    .step { display:flex; gap:1.75rem; align-items:flex-start; padding:1.25rem 0; border-bottom:1px solid var(--border) }
+    .step:last-child { border-bottom:none }
+    .step-n { font-family:'Poppins',sans-serif; font-size:1.9rem; font-weight:900; color:rgba(240,246,252,.07); line-height:1; flex-shrink:0; width:3rem; text-align:right; padding-top:.15rem }
+    .step strong { display:block; font-size:.95rem; font-weight:700; color:var(--text); margin-bottom:.28rem }
+    .step p { font-size:.86rem; color:var(--text-secondary); line-height:1.7 }
+
+    /* ── CONTACT ── */
+    .contact-layout { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start }
+    .contact-info h2 { margin-bottom:1rem }
+    .contact-info > p { font-size:.95rem; color:var(--text-secondary); line-height:1.85; margin-bottom:1.75rem }
+    .clinks { display:flex; flex-direction:column; gap:.6rem }
+    .clink { display:flex; align-items:center; gap:.9rem; padding:.85rem 1rem; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); text-decoration:none; transition:border-color .2s }
+    .clink:hover { border-color:var(--border-active) }
+    .clink-icon { font-size:1.1rem; flex-shrink:0 }
+    .clink strong { display:block; font-size:.88rem; color:var(--text); font-weight:600 }
+    .clink span { font-size:.77rem; color:var(--text-secondary) }
+
+    .form-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:2rem }
+    .form-title { font-size:1.05rem; font-weight:700; margin-bottom:1.4rem }
+    .fg { display:grid; gap:.85rem }
+    label { display:block; font-size:.78rem; font-weight:700; color:var(--text-secondary); margin-bottom:.3rem; letter-spacing:.02em }
+    .inp { width:100%; background:rgba(255,255,255,.03); border:1px solid var(--border-mid); border-radius:var(--radius-sm); padding:.8rem 1rem; color:var(--text); font-size:.88rem; font-family:'Inter',sans-serif; outline:none; transition:border-color .2s, box-shadow .2s }
+    .inp:focus { border-color:var(--border-active); box-shadow:0 0 0 3px rgba(0,102,255,.1) }
+    .inp::placeholder { color:var(--text-secondary); opacity:.5 }
+
+    /* ── CTA BAND ── */
+    .cta-band { padding:4rem 1.5rem; text-align:center; border-top:1px solid var(--border) }
+    .cta-band h2 { margin-bottom:.75rem }
+    .cta-band p { color:var(--text-secondary); max-width:520px; margin:0 auto 2rem; font-size:.97rem; line-height:1.8 }
+    .cta-btns { display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      padding: 3.5rem 0 0;
     }
-    .hero-desc{
-      font-size:1.05rem;color:var(--text-secondary);
-      max-width:680px;line-height:1.8;margin-bottom:2rem;
-      animation:fadeUp .8s ease .4s both;
+    .footer-inner { max-width:1200px; margin:0 auto; padding:0 1.5rem }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
     }
-    .hero-desc strong{color:var(--text-soft);font-weight:600}
-    .hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;animation:fadeUp .8s ease .55s both;margin-bottom:3.5rem}
-    .hero-note{font-size:.82rem;color:var(--text-secondary);animation:fadeUp .7s ease .65s both}
-    .hero-strip{
-      display:flex;gap:2.5rem;flex-wrap:wrap;justify-content:center;
-      padding-top:2rem;border-top:1px solid var(--border);width:100%;max-width:820px;
-      animation:fadeUp .7s ease .75s both;
+    .footer-brand {}
+    .footer-logo {
+      display: flex; align-items:center; gap:.7rem;
+      text-decoration: none; margin-bottom:.9rem;
     }
-    .strip-stat strong{display:block;font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:900;color:var(--text)}
-    .strip-stat span{font-size:.8rem;color:var(--text-secondary);display:block;margin-top:.1rem}
+    .footer-logo img { height:32px; width:auto }
+    .footer-logo span { font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:900; color:var(--text); letter-spacing:-.015em }
+    .footer-tagline { font-size:.85rem; color:var(--text-secondary); line-height:1.7; max-width:220px }
+    .footer-socials { display:flex; gap:.5rem; margin-top:1.2rem }
+    .footer-soc-btn { width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.05); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:all .2s; text-decoration:none }
+    .footer-soc-btn:hover { background:var(--primary); border-color:var(--primary); transform:translateY(-2px) }
+    .footer-soc-btn img { width:14px; height:14px }
 
-    /* ─── WHAT WE DO ─── */
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
-    .srv{
-      background:var(--bg-card);border:1px solid var(--border);
-      border-radius:var(--radius);padding:1.85rem;
-      transition:transform .3s,border-color .3s,box-shadow .3s;
-      position:relative;overflow:hidden;
+    .footer-col h4 { font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.14em; color:var(--text-secondary); margin-bottom:.85rem }
+    .footer-col a { display:block; font-size:.85rem; color:var(--text-secondary); text-decoration:none; margin-bottom:.45rem; transition:color .2s }
+    .footer-col a:hover { color:var(--text) }
+
+    .footer-bottom {
+      display: flex; align-items:center; justify-content:space-between; flex-wrap:wrap;
+      gap: .75rem;
+      padding: 1.25rem 0;
     }
+    .footer-copy { font-size:.78rem; color:var(--text-secondary) }
+    .footer-legal { display:flex; gap:1.25rem }
+    .footer-legal a { font-size:.78rem; color:var(--text-secondary); text-decoration:none; transition:color .2s }
+    .footer-legal a:hover { color:var(--text) }
 
-    .srv:hover{border-color:var(--border-active)}
-
-    .srv-top{width:40px;height:2px;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:2px;margin-bottom:1.5rem;transition:width .3s}
-    .srv:hover .srv-top{width:60px}
-    .srv-featured{border-color:rgba(0,102,255,0.3);background:linear-gradient(145deg,var(--bg-card),rgba(0,102,255,0.04))}
-    .srv-featured .srv-top{width:60px}
-    .srv-chip{display:inline-block;background:rgba(0,217,255,0.08);border:1px solid rgba(0,217,255,0.2);border-radius:4px;font-size:.66rem;font-weight:800;color:var(--accent);padding:.18rem .6rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.9rem}
-    .srv p{color:var(--text-secondary);font-size:.9rem;line-height:1.75;margin-top:.45rem}
-    .srv-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--primary-light);font-size:.85rem;font-weight:700;text-decoration:none;margin-top:1.2rem;transition:gap .2s,color .2s}
-    .srv-link:hover{gap:.75rem;color:var(--accent)}
-
-    /* ─── KI SECTION ─── */
-    .ki-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-    .ki-list{display:flex;flex-direction:column;gap:.8rem;margin-top:1.75rem}
-    .ki-row{display:flex;gap:.75rem;align-items:flex-start;padding:.65rem 0;border-bottom:1px solid var(--border);transition:border-color .25s}
-    .ki-row:hover{border-color:var(--border-mid)}
-    .ki-icon{width:28px;height:28px;border-radius:6px;background:rgba(0,102,255,0.1);border:1px solid rgba(0,102,255,0.2);display:flex;align-items:center;justify-content:center;font-size:.82rem;flex-shrink:0}
-    .ki-info strong{display:block;font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:.15rem}
-    .ki-info span{font-size:.82rem;color:var(--text-secondary);line-height:1.5}
-    .ki-card{background:var(--bg-card);border:1px solid rgba(0,102,255,0.2);border-radius:var(--radius);padding:1.75rem;box-shadow:0 0 40px rgba(0,102,255,0.07)}
-    .ki-card-label{font-size:.68rem;font-weight:800;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem}
-    .live-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:blink 2s ease-in-out infinite}
-    .chat{display:flex;flex-direction:column;gap:.85rem}
-    .cm{display:flex;gap:.6rem;align-items:flex-end}
-    .cm.r{flex-direction:row-reverse}
-    .cb{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:12px 12px 12px 3px;padding:.65rem .95rem;font-size:.85rem;color:var(--text-soft);line-height:1.5;max-width:80%}
-    .cm.r .cb{background:rgba(0,102,255,0.1);border-color:rgba(0,102,255,0.22);border-radius:12px 12px 3px 12px;margin-left:auto}
-    .cav{width:26px;height:26px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.8rem}
-    .cav.u{background:rgba(255,255,255,0.07)}
-    .cav.b{background:linear-gradient(135deg,var(--primary),var(--accent))}
-    .csep{font-size:.66rem;color:var(--text-secondary);text-align:center;padding:.2rem 0}
-    .ki-footnote{margin-top:1.25rem;padding:.7rem .95rem;background:rgba(0,217,255,0.04);border:1px solid rgba(0,217,255,0.12);border-radius:8px;font-size:.78rem;color:var(--text-secondary);line-height:1.55}
-
-    /* ─── PRICING ─── */
-    .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
-    .pc{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.85rem;transition:transform .3s,border-color .3s,box-shadow .3s}
-    .pc:hover{transform:translateY(-4px);border-color:var(--border-mid);box-shadow:var(--shadow-lg)}
-    .pc.highlight{border-color:rgba(0,102,255,0.45);background:linear-gradient(145deg,var(--bg-card),rgba(0,102,255,0.04));position:relative}
-    .pc.highlight::before{content:'Empfehlung';position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:.22rem .85rem;border-radius:999px;white-space:nowrap}
-    .pname{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--text-secondary);margin-bottom:.6rem}
-    .pamount{font-family:'Poppins',sans-serif;font-size:2.4rem;font-weight:900;color:var(--text);line-height:1}
-    .pamount sub{font-size:.95rem;font-weight:600;color:var(--text-secondary);vertical-align:baseline;margin-left:.1rem}
-    .ptag{font-size:.78rem;color:var(--text-secondary);margin:.35rem 0 1.25rem;display:block}
-    .pline{height:1px;background:var(--border);margin-bottom:1.25rem}
-    .pfeats{display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.75rem}
-    .pf{font-size:.86rem;color:var(--text-soft);display:flex;align-items:flex-start;gap:.6rem}
-    .pf::before{content:'—';color:var(--primary-light);font-weight:700;flex-shrink:0;font-size:.82rem;margin-top:.05rem}
-    .pbtn{display:block;text-align:center;padding:.82rem;border-radius:var(--radius-sm);font-weight:700;font-size:.9rem;text-decoration:none;transition:all .22s;border:1px solid var(--border-mid);color:var(--text-secondary)}
-    .pbtn:hover{border-color:rgba(240,246,252,0.25);color:var(--text);background:rgba(255,255,255,0.04)}
-    .pbtn.filled{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;border-color:transparent;box-shadow:0 4px 16px rgba(0,102,255,0.28)}
-    .pbtn.filled:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(0,102,255,0.42)}
-
-    /* ─── STORY ─── */
-    .story{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:center}
-    .story-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--bg-card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center}
-    .story-img img{width:100%;height:100%;object-fit:cover;display:block}
-    .story-img-placeholder{display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:2rem;text-align:center}
-    .story-img-placeholder .ph-icon{font-size:2.5rem;opacity:.25}
-    .story-img-placeholder p{font-size:.8rem;color:var(--text-secondary)}
-    .story-body p{font-size:.95rem;color:var(--text-secondary);line-height:1.85}
-    .story-body p+p{margin-top:.9rem}
-    .story-body strong{color:var(--text-soft);font-weight:600}
-    .story-nums{display:flex;gap:2rem;margin-top:2rem;flex-wrap:wrap;padding-top:1.75rem;border-top:1px solid var(--border)}
-    .sn strong{display:block;font-family:'Poppins',sans-serif;font-size:1.65rem;font-weight:900;background:linear-gradient(135deg,var(--primary-light),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .sn span{font-size:.76rem;color:var(--text-secondary);display:block;margin-top:.1rem}
-
-    /* ─── PROCESS ─── */
-    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem}
-    .ps{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.65rem;transition:border-color .3s,transform .3s;position:relative;overflow:hidden}
-    .ps:hover{border-color:var(--border-active)}
-    .ps-n{font-family:'Poppins',sans-serif;font-size:3rem;font-weight:900;color:var(--bg-raised);position:absolute;bottom:.75rem;right:1rem;line-height:1;user-select:none;letter-spacing:-.04em}
-    .ps h3{font-size:.97rem;margin-bottom:.45rem;position:relative;z-index:1}
-    .ps p{font-size:.84rem;color:var(--text-secondary);line-height:1.7;position:relative;z-index:1}
-
-    /* ─── CONTACT ─── */
-    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
-    .contact-side h2{margin-bottom:1rem}
-    .contact-side p{color:var(--text-secondary);font-size:.95rem;line-height:1.8;margin-bottom:1.75rem}
-    .contact-links{display:flex;flex-direction:column;gap:.65rem}
-    .cl{display:flex;align-items:center;gap:.85rem;padding:.9rem 1.1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);transition:border-color .2s}
-    .cl:hover{border-color:var(--border-active)}
-    .cl-icon{width:36px;height:36px;border-radius:8px;background:rgba(0,102,255,0.1);border:1px solid rgba(0,102,255,0.2);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
-    .cl-text strong{display:block;font-size:.88rem;color:var(--text);font-weight:600}
-    .cl-text span{font-size:.78rem;color:var(--text-secondary)}
-    .form-panel{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem}
-    .form-panel h3{margin-bottom:1.5rem;font-size:1.05rem}
-    .fg{display:grid;gap:.9rem}
-    label{display:block;font-size:.8rem;font-weight:700;color:var(--text-secondary);margin-bottom:.32rem;letter-spacing:.02em}
-    .inp{width:100%;background:var(--bg);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-sm);padding:.82rem 1rem;color:var(--text);font-size:.9rem;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s,box-shadow .2s}
-    .inp:focus{border-color:rgba(0,102,255,0.5);box-shadow:0 0 0 3px rgba(0,102,255,0.1)}
-    .inp::placeholder{color:var(--text-secondary);opacity:.6}
-
-    /* ─── CTA ─── */
-    .cta-box{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center}
-    .cta-box h2{margin-bottom:1rem}
-    .cta-box p{color:var(--text-secondary);max-width:580px;margin:0 auto 2rem;font-size:1rem;line-height:1.8}
-    .cta-btns{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
-
-    /* ─── FOOTER ─── */
-    footer{background:var(--bg-card);border-top:1px solid var(--border);padding:2rem 2rem;position:relative;z-index:1}
-    .foot{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem}
-    .foot-left{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
-    .foot-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;opacity:.7;transition:opacity .2s}
-    .foot-logo:hover{opacity:1}
-    .foot-logo img{height:28px;width:auto}
-    .foot-logo span{font-family:'Poppins',sans-serif;font-size:.88rem;font-weight:800;color:var(--text)}
-    .foot-links{display:flex;gap:1.25rem;flex-wrap:wrap}
-    .foot-links a{color:var(--text-secondary);text-decoration:none;font-size:.82rem;transition:color .2s}
-    .foot-links a:hover{color:var(--text)}
-    .foot-right{display:flex;align-items:center;gap:.85rem}
-    .foot-copy{font-size:.78rem;color:var(--text-secondary)}
-    .foot-soc{display:flex;gap:.5rem}
-    .fs{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .2s;text-decoration:none}
-    .fs:hover{background:var(--primary);border-color:var(--primary);transform:translateY(-2px)}
-    .fs img{width:14px;height:14px}
-
-    /* ─── RESPONSIVE ─── */
-    @media(max-width:1024px){
-      .services-grid{grid-template-columns:repeat(2,1fr)}
-      .prices{grid-template-columns:repeat(2,1fr)}
-      .ki-grid{grid-template-columns:1fr}
-      .story{grid-template-columns:1fr}
-      .process{grid-template-columns:repeat(2,1fr)}
-      .contact-wrap{grid-template-columns:1fr}
+    /* ── MOBILE ── */
+    @media (max-width:1024px) {
+      .srv-grid { grid-template-columns:repeat(2,1fr) }
+      .ki-layout { grid-template-columns:1fr }
+      .price-grid { grid-template-columns:repeat(2,1fr) }
+      .about-grid { grid-template-columns:1fr }
+      .contact-layout { grid-template-columns:1fr }
+      .footer-top { grid-template-columns:1fr 1fr }
+      .footer-brand { grid-column:1/-1 }
     }
-    @media(max-width:768px){
-      nav{padding:.8rem 1.25rem}
-      .nav-links{
-        display:none;position:fixed;top:62px;left:0;right:0;
-        flex-direction:column;background:rgba(13,17,23,0.98);
-        backdrop-filter:blur(20px);padding:1.75rem 1.5rem;
-        gap:1.1rem;border-top:1px solid var(--border);
-        box-shadow:0 8px 32px rgba(0,0,0,0.4);
+    @media (max-width:768px) {
+      nav { padding:.8rem 1.25rem }
+      .nav-links {
+        display:none; position:fixed; top:62px; left:0; right:0;
+        flex-direction:column; background:rgba(13,17,23,.98);
+        backdrop-filter:blur(20px); padding:1.75rem 1.5rem;
+        gap:1rem; border-top:1px solid var(--border);
+        box-shadow:0 8px 32px rgba(0,0,0,.4);
       }
-      .nav-links.open{display:flex}
-      .hamburger{display:flex}
-      .hero h1{font-size:clamp(2.2rem,8vw,3.4rem)}
-      .services-grid{grid-template-columns:1fr}
-      .prices{grid-template-columns:1fr}
-      .process{grid-template-columns:1fr}
-      .sec{padding:2rem 0}
-      .hero-strip{gap:1.75rem}
-      .foot{flex-direction:column;align-items:flex-start}
-      .cta-box{padding:2.5rem 1.25rem}
+      .nav-links.open { display:flex }
+      .hamburger { display:flex }
+      .hero { padding:6rem 1.25rem 3rem }
+      .hero h1 { font-size:clamp(2.2rem,9vw,3.2rem) }
+      .hstat { flex-basis:50%; border-right:1px solid var(--border) }
+      .hstat:nth-child(2n) { border-right:none }
+      .hstat:nth-child(n+3) { border-top:1px solid var(--border) }
+      .srv-grid { grid-template-columns:1fr }
+      .price-grid { grid-template-columns:1fr }
+      .sec { padding:2.5rem 0 }
+      .footer-top { grid-template-columns:1fr; gap:2rem }
+      .footer-brand { grid-column:auto }
+      .footer-bottom { flex-direction:column; align-items:flex-start; gap:.5rem }
+      .about-stats { grid-template-columns:repeat(2,1fr) }
     }
-    @media(max-width:540px){
-      .hero-btns{flex-direction:column;align-items:center;width:100%}
-      .hero-btns .btn{width:100%;justify-content:center}
-      .hero-strip{gap:1.25rem;justify-content:flex-start}
+    @media (max-width:480px) {
+      .hero-btns { flex-direction:column; width:100% }
+      .hero-btns .btn { width:100%; justify-content:center }
+      .cta-btns { flex-direction:column; align-items:center }
+      .hstat { flex-basis:100%; border-right:none; border-top:1px solid var(--border) }
+      .hstat:first-child { border-top:none }
     }
-
-    /* ─── STEPS ─── */
-    .steps{list-style:none;display:flex;flex-direction:column;gap:0}
-    .step{display:flex;gap:2rem;align-items:flex-start;padding:1.4rem 0;border-bottom:1px solid var(--border)}
-    .step:last-child{border-bottom:none}
-    .step-n{font-family:'Poppins',sans-serif;font-size:2.2rem;font-weight:900;color:rgba(240,246,252,0.07);line-height:1;flex-shrink:0;width:3.5rem;text-align:right}
-    .step strong{display:block;font-size:.97rem;font-weight:700;color:var(--text);margin-bottom:.3rem}
-    .step p{font-size:.88rem;color:var(--text-secondary);line-height:1.7}
   </style>
 </head>
 
 <body>
   <a class="skip" href="#content">Zum Inhalt springen</a>
 
-  <!-- WhatsApp -->
   <div class="wa">
-    <a href="https://wa.me/491717031722?text=Hallo%20EWD!%20Ich%20interessiere%20mich%20fuer%20eine%20neue%20Website."
-       target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-      <img src="icon-whatsapp.png" alt="WhatsApp" width="30" height="30" />
+    <a href="https://wa.me/491717031722?text=Hallo%20EWD!%20Ich%20interessiere%20mich%20fuer%20eine%20neue%20Website." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <img src="icon-whatsapp.png" alt="WhatsApp" width="28" height="28" />
     </a>
   </div>
 
-  <!-- ─── HEADER ─── -->
   <header id="hdr" class="top">
     <nav aria-label="Hauptnavigation">
-
-      <!-- Logo -->
       <a href="https://evowebdesign.de/" class="logo" aria-label="Evolved Web Designs – Startseite">
-        <img src="logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="44" height="44" />
+        <img src="logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="42" height="42" />
         <span class="logo-name">Evolved Web Designs</span>
       </a>
-
       <button class="hamburger" id="menuBtn" aria-label="Menue" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="https://evowebdesign.de/leistungen.html">Leistungen</a></li>
         <li><a href="https://evowebdesign.de/projekte.html">Projekte</a></li>
-        <li><a href="https://evowebdesign.de/ueber-uns.html">Ueber uns</a></li>
+        <li><a href="https://evowebdesign.de/ueber-uns.html">&Uuml;ber uns</a></li>
         <li><a href="https://evowebdesign.de/faq.html">Preise</a></li>
-        <li><a href="#anfrage" class="cta">Jetzt anfragen</a></li>
+        <li><a href="#anfrage" class="nav-cta">Jetzt anfragen</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="content">
 
-    <!-- ─── HERO ─── -->
-    <section class="hero" aria-labelledby="h1">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Webdesign &amp; KI-Bot &middot; Friedrichshafen &amp; Bodensee &middot; 2026
-      </div>
-
-      <h1 id="h1">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-h1">
+      <h1 id="hero-h1">
         <span class="shimmer">Websites, die Anfragen bringen.</span>
         <span class="hero-plain">Mit KI-Assistent inklusive.</span>
       </h1>
 
       <p class="hero-desc">
         Wir bauen Ihnen eine <strong>moderne Website mit eingebautem KI-Bot</strong> &ndash;
-        Ihr digitaler Mitarbeiter beantwortet Kundenfragen, erklaert Ihre Leistungen
+        Ihr digitaler Mitarbeiter beantwortet Kundenfragen, erkl&auml;rt Ihre Leistungen
         und bucht Termine. Automatisch. Rund um die Uhr.
-        <strong>Fertig in 2&ndash;4 Wochen.</strong>
       </p>
 
       <div class="hero-btns">
-        <a href="#anfrage" class="btn btn-primary">Kostenlos anfragen &#8594;</a>
-        <a href="https://evowebdesign.de/projekte.html" class="btn btn-outline">Unser erstes Projekt</a>
+        <a href="#anfrage" class="btn btn-primary">Kostenlos anfragen &rarr;</a>
+        <a href="https://evowebdesign.de/projekte.html" class="btn btn-ghost">Unser Projekt ansehen</a>
       </div>
 
-      <p class="hero-note">Kein Vertrag. Keine Verpflichtung. Antwort innerhalb von 24h.</p>
+      <p class="hero-note">Kein Vertrag &middot; Keine Vorauszahlung &middot; Antwort innerhalb von 24h</p>
 
-      <div class="hero-strip">
-        <div class="strip-stat">
+      <div class="hero-stats">
+        <div class="hstat">
           <strong>790&nbsp;&euro;</strong>
           <span>ab diesem Preis</span>
         </div>
-        <div class="strip-stat">
+        <div class="hstat">
           <strong>2&ndash;4 Wo.</strong>
           <span>bis Ihre Seite live ist</span>
         </div>
-        <div class="strip-stat">
+        <div class="hstat">
           <strong>24/7</strong>
           <span>Ihr KI-Bot antwortet</span>
         </div>
-        <div class="strip-stat">
+        <div class="hstat">
           <strong>100&nbsp;%</strong>
           <span>Kundenzufriedenheit</span>
         </div>
       </div>
     </section>
 
-    <!-- ─── LEISTUNGEN ─── -->
-    <div class="sec">
+    <!-- LEISTUNGEN -->
+    <section class="sec" aria-label="Leistungen">
       <div class="wrap">
-        <div style="text-align:center;max-width:640px;margin:0 auto">
-          <h2>Drei Leistungen. <span class="accent">Kein Schnickschnack.</span></h2>
-                    <p style="color:var(--text-secondary);margin-top:.9rem;font-size:.97rem;line-height:1.8">
-            Wir machen keine zwanzig Dinge mittelmaeßig. Wir machen drei Dinge richtig gut.
-          </p>
+        <div style="max-width:580px;margin-bottom:2.5rem">
+          <span class="label">Was wir bauen</span>
+          <h2>Drei Dinge. <span class="accent">Richtig gut.</span></h2>
+          <p style="color:var(--text-secondary);margin-top:.65rem;font-size:.95rem;line-height:1.8">Kein Rundum-sorglos-Blabla. Wir machen drei Sachen &ndash; und die machen wir sehr gut.</p>
         </div>
 
-        <div class="services-grid">
+        <div class="srv-grid">
           <article class="srv srv-featured">
-            <div class="srv-top"></div>
-            <div class="srv-chip">Hauptangebot</div>
+            <div class="srv-badge">Hauptangebot</div>
+            <div class="srv-num">01</div>
             <h3>Website + KI-Bot</h3>
-            <p>Eine moderne, schnelle Website und ein eingebetteter KI-Assistent &ndash; individuell auf Ihr Unternehmen eingestellt. Beantwortet Fragen, bucht Termine, bringt Anfragen.</p>
-            <a href="https://evowebdesign.de/leistungen.html" class="srv-link">Details &#8594;</a>
+            <p>Eine schnelle, moderne Website &ndash; und ein KI-Assistent, der Ihre Kunden empf&auml;ngt, Fragen beantwortet und Termine bucht. Auch wenn Sie schlafen.</p>
+            <a href="https://evowebdesign.de/leistungen.html" class="srv-tag">Mehr erfahren &rarr;</a>
           </article>
 
           <article class="srv">
-            <div class="srv-top"></div>
+            <div class="srv-num">02</div>
             <h3>Lokale SEO</h3>
-            <p>Damit Sie bei Google gefunden werden, wenn jemand in Friedrichshafen oder am Bodensee nach Ihrer Leistung sucht. Sauber, technisch korrekt, ohne leere Versprechen.</p>
-            <a href="https://evowebdesign.de/leistungen.html" class="srv-link">Details &#8594;</a>
+            <p>Damit Sie bei Google oben stehen, wenn jemand in Friedrichshafen oder am Bodensee nach Ihrer Leistung sucht. Sauber umgesetzt &ndash; ohne leere Versprechen.</p>
+            <a href="https://evowebdesign.de/leistungen.html" class="srv-tag">Mehr erfahren &rarr;</a>
           </article>
 
           <article class="srv">
-            <div class="srv-top"></div>
+            <div class="srv-num">03</div>
             <h3>Hosting &amp; Betreuung</h3>
-            <p>Ihre Website laeuft &ndash; immer. Updates, Anpassungen, Fragen. Sie schreiben uns auf WhatsApp und bekommen eine echte Antwort, kein Ticket-System.</p>
-            <a href="https://evowebdesign.de/leistungen.html" class="srv-link">Details &#8594;</a>
+            <p>Ihre Website l&auml;uft &ndash; immer. Updates, Anpassungen, Fragen: Sie schreiben uns auf WhatsApp und bekommen eine echte Antwort. Kein Ticket-System.</p>
+            <a href="https://evowebdesign.de/leistungen.html" class="srv-tag">Mehr erfahren &rarr;</a>
           </article>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ─── KI DEMO ─── -->
-    <div class="sec" style="background:linear-gradient(180deg,transparent 0%,rgba(0,102,255,0.03) 50%,transparent 100%)">
+    <!-- KI SECTION -->
+    <section class="sec" aria-label="KI-Assistent">
       <div class="wrap">
-        <div class="ki-grid">
+        <div class="ki-layout">
           <div>
-              <h2>Ihr Mitarbeiter, der <span class="accent">nie Feierabend hat.</span></h2>
-                        <p style="color:var(--text-secondary);margin-top:1rem;font-size:.97rem;line-height:1.85">
+            <span class="label">KI-Assistent</span>
+            <h2>Ihr Mitarbeiter, der <span class="accent">nie Feierabend hat.</span></h2>
+            <p style="color:var(--text-secondary);margin-top:.75rem;margin-bottom:0;font-size:.95rem;line-height:1.85">
               Kein Unternehmer kann 24 Stunden ans Telefon gehen.
-              Aber Ihre Website kann das. Ihr KI-Bot kennt Ihr Angebot
-              und antwortet in Sekunden &ndash; auch um Mitternacht.
+              Ihr KI-Bot kann das. Er kennt Ihr Angebot und antwortet in Sekunden &ndash; auch um Mitternacht, auch am Wochenende.
             </p>
 
-            <div class="ki-list">
-              <div class="ki-row">
-                <div class="ki-icon">&#128172;</div>
-                <div class="ki-info">
-                  <strong>Fragen beantworten &ndash; sofort, rund um die Uhr</strong>
-                  <span>Preise, Leistungen, Oeffnungszeiten. Immer verfuegbar.</span>
+            <div class="ki-features">
+              <div class="ki-feat">
+                <span class="ki-feat-dot"></span>
+                <div class="ki-feat-text">
+                  <strong>Fragen beantworten &ndash; sofort</strong>
+                  <span>Preise, Leistungen, &Ouml;ffnungszeiten. Immer verf&uuml;gbar, nie ungeduldig.</span>
                 </div>
               </div>
-              <div class="ki-row">
-                <div class="ki-icon">&#128197;</div>
-                <div class="ki-info">
+              <div class="ki-feat">
+                <span class="ki-feat-dot"></span>
+                <div class="ki-feat-text">
                   <strong>Termine vereinbaren</strong>
-                  <span>Koordiniert selbststaendig, besonders wenn Sie auf der Baustelle sind.</span>
+                  <span>Koordiniert selbstst&auml;ndig &ndash; besonders wenn Sie auf der Baustelle sind.</span>
                 </div>
               </div>
-              <div class="ki-row">
-                <div class="ki-icon">&#128233;</div>
-                <div class="ki-info">
+              <div class="ki-feat">
+                <span class="ki-feat-dot"></span>
+                <div class="ki-feat-text">
                   <strong>Anfragen weiterleiten</strong>
-                  <span>Alles was er nicht loest, landet direkt bei Ihnen.</span>
+                  <span>Was er nicht l&ouml;st, landet direkt bei Ihnen &ndash; inklusive Kontext.</span>
                 </div>
               </div>
-              <div class="ki-row">
-                <div class="ki-icon">&#127757;</div>
-                <div class="ki-info">
+              <div class="ki-feat">
+                <span class="ki-feat-dot"></span>
+                <div class="ki-feat-text">
                   <strong>Klingt wie Sie &ndash; nicht wie ein Roboter</strong>
-                  <span>Wir stellen den Bot auf Ihren Ton ein. Freundlich, direkt.</span>
+                  <span>Wir stellen den Bot auf Ihren Ton ein. Freundlich, direkt, professionell.</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div>
-            <div class="ki-card">
-              <div class="ki-card-label"><span class="live-dot"></span>Beispiel &ndash; so klingt Ihr Bot</div>
-              <div class="chat">
-                <div class="cm">
-                  <div class="cav u">&#128100;</div>
-                  <div class="cb">Guten Abend! Was kostet bei Ihnen eine Grundreinigung fuer 80qm?</div>
+            <div class="chat-card">
+              <div class="chat-bar">
+                <span class="live-dot"></span>
+                Live-Beispiel &ndash; so klingt Ihr Bot
+              </div>
+              <div class="chat-body">
+                <div class="msg">
+                  <div class="avatar u">&#128100;</div>
+                  <div class="bubble">Guten Abend! Was kostet bei Ihnen eine Grundreinigung f&uuml;r 80&nbsp;qm?</div>
                 </div>
-                <div class="csep">Bot antwortet sofort</div>
-                <div class="cm r">
-                  <div class="cav b">&#129302;</div>
-                  <div class="cb">Guten Abend! Fuer ca. 80qm liegt eine Grundreinigung bei 180&ndash;240&euro;. Darf ich direkt einen Termin fuer Sie vormerken?</div>
+                <div class="chat-sep">Bot antwortet sofort</div>
+                <div class="msg out">
+                  <div class="avatar b">&#129302;</div>
+                  <div class="bubble">Guten Abend! F&uuml;r ca. 80&nbsp;qm liegt eine Grundreinigung bei 180&ndash;240&nbsp;&euro;. Darf ich direkt einen Termin f&uuml;r Sie vormerken?</div>
                 </div>
-                <div class="cm">
-                  <div class="cav u">&#128100;</div>
-                  <div class="cb">Ja bitte, Samstag Vormittag.</div>
+                <div class="msg">
+                  <div class="avatar u">&#128100;</div>
+                  <div class="bubble">Ja bitte, Samstag Vormittag.</div>
                 </div>
-                <div class="cm r">
-                  <div class="cav b">&#129302;</div>
-                  <div class="cb">Samstag 14. Juni um 9 Uhr ist noch frei. Ich trage das ein und Sie erhalten eine Bestaetigung per E-Mail.</div>
+                <div class="msg out">
+                  <div class="avatar b">&#129302;</div>
+                  <div class="bubble">Samstag 14.&nbsp;Juni um 9&nbsp;Uhr ist noch frei. Ich trage das ein &ndash; Sie erhalten eine Best&auml;tigung per E-Mail.</div>
                 </div>
               </div>
-              <div class="ki-footnote">
-                Ihr Bot wird individuell eingestellt &ndash; mit Ihren echten Preisen, Leistungen und Ihrem Ton.
+              <div class="chat-note">
+                Ihr Bot wird mit Ihren echten Preisen, Leistungen und Ihrem Ton konfiguriert.
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ─── PREISE ─── -->
-    <div class="sec" id="preise">
+    <!-- PREISE -->
+    <section class="sec" id="preise" aria-label="Preise">
       <div class="wrap">
-        <div style="text-align:center;max-width:600px;margin:0 auto">
-          <h2>Fair. Klar. <span class="accent">Keine Ueberraschungen.</span></h2>
-                    <p style="color:var(--text-secondary);margin-top:.9rem;font-size:.95rem;line-height:1.8">
-            Keine Monatsabos versteckt im Kleingedruckten. Einmal bezahlen, fertig.
-          </p>
+        <div style="max-width:560px;margin-bottom:2.5rem">
+          <span class="label">Preise</span>
+          <h2>Fair. Klar. <span class="accent">Keine &Uuml;berraschungen.</span></h2>
+          <p style="color:var(--text-secondary);margin-top:.65rem;font-size:.95rem;line-height:1.8">Einmalige Festpreise &ndash; kein verstecktes Abo, kein Kleingedrucktes.</p>
         </div>
 
-        <div class="prices">
+        <div class="price-grid">
           <div class="pc">
-            <div class="pname">Starter</div>
-            <div class="pamount">790<sub>&euro;</sub></div>
-            <span class="ptag">Einmalig &middot; schnell online</span>
-            <div class="pline"></div>
-            <div class="pfeats">
-              <div class="pf">Bis 3 Seiten (Startseite, Leistungen, Kontakt)</div>
-              <div class="pf">Mobil-optimiert &amp; schnell geladen</div>
-              <div class="pf">Kontaktformular &amp; WhatsApp-Button</div>
-              <div class="pf">Basis-SEO &amp; Google Business Einrichtung</div>
-              <div class="pf">Fertig in 2 Wochen</div>
-            </div>
-            <a href="#anfrage" class="pbtn">Anfragen</a>
+            <div class="pc-label">Starter</div>
+            <div class="pc-price">790<sup>&euro;</sup></div>
+            <p class="pc-note">Einmalig &middot; schnell online</p>
+            <div class="pc-divider"></div>
+            <ul class="pc-features">
+              <li class="pc-feat">Bis 3 Seiten (Start, Leistungen, Kontakt)</li>
+              <li class="pc-feat">Mobil-optimiert &amp; schnell geladen</li>
+              <li class="pc-feat">Kontaktformular &amp; WhatsApp-Button</li>
+              <li class="pc-feat">Basis-SEO &amp; Google Business</li>
+              <li class="pc-feat">Fertig in 2 Wochen</li>
+            </ul>
+            <a href="#anfrage" class="pc-btn">Anfragen</a>
           </div>
 
-          <div class="pc highlight">
-            <div class="pname">Business + KI</div>
-            <div class="pamount">1.490<sub>&euro;</sub></div>
-            <span class="ptag">Einmalig &middot; inkl. KI-Bot</span>
-            <div class="pline"></div>
-            <div class="pfeats">
-              <div class="pf">Vollstaendige Website (5&ndash;7 Seiten)</div>
-              <div class="pf">KI-Assistent eingebettet &amp; eingestellt</div>
-              <div class="pf">Lokale SEO Friedrichshafen &amp; Bodensee</div>
-              <div class="pf">Google Business Optimierung</div>
-              <div class="pf">Conversion-Optimierung</div>
-              <div class="pf">Fertig in 3&ndash;4 Wochen</div>
-            </div>
-            <a href="#anfrage" class="pbtn filled">Jetzt anfragen</a>
+          <div class="pc best">
+            <span class="best-tag">Empfehlung</span>
+            <div class="pc-label">Business + KI</div>
+            <div class="pc-price">1.490<sup>&euro;</sup></div>
+            <p class="pc-note">Einmalig &middot; inkl. KI-Bot</p>
+            <div class="pc-divider"></div>
+            <ul class="pc-features">
+              <li class="pc-feat">Vollst&auml;ndige Website (5&ndash;7 Seiten)</li>
+              <li class="pc-feat">KI-Assistent eingebettet &amp; konfiguriert</li>
+              <li class="pc-feat">Lokale SEO Friedrichshafen &amp; Bodensee</li>
+              <li class="pc-feat">Google Business Optimierung</li>
+              <li class="pc-feat">Conversion-Optimierung</li>
+              <li class="pc-feat">Fertig in 3&ndash;4 Wochen</li>
+            </ul>
+            <a href="#anfrage" class="pc-btn prime">Jetzt anfragen</a>
           </div>
 
           <div class="pc">
-            <div class="pname">Premium</div>
-            <div class="pamount">1.990<sub>&euro;</sub></div>
-            <span class="ptag">Einmalig &middot; alles inklusive</span>
-            <div class="pline"></div>
-            <div class="pfeats">
-              <div class="pf">Alles aus Business + KI</div>
-              <div class="pf">KI-Bot mit Terminbuchungs-Integration</div>
-              <div class="pf">Erweiterte Leistungsseiten &amp; Blog</div>
-              <div class="pf">3 Monate laufende SEO-Betreuung</div>
-              <div class="pf">Monatlicher Bericht &amp; Anpassungen</div>
-              <div class="pf">Direkter WhatsApp-Support</div>
-            </div>
-            <a href="#anfrage" class="pbtn">Anfragen</a>
+            <div class="pc-label">Premium</div>
+            <div class="pc-price">1.990<sup>&euro;</sup></div>
+            <p class="pc-note">Einmalig &middot; alles inklusive</p>
+            <div class="pc-divider"></div>
+            <ul class="pc-features">
+              <li class="pc-feat">Alles aus Business + KI</li>
+              <li class="pc-feat">KI-Bot mit Terminbuchungs-Integration</li>
+              <li class="pc-feat">Erweiterte Seiten &amp; Blog</li>
+              <li class="pc-feat">3 Monate laufende SEO-Betreuung</li>
+              <li class="pc-feat">Monatlicher Bericht &amp; Anpassungen</li>
+              <li class="pc-feat">Direkter WhatsApp-Support</li>
+            </ul>
+            <a href="#anfrage" class="pc-btn">Anfragen</a>
           </div>
         </div>
 
-        <p style="text-align:center;color:var(--text-secondary);font-size:.83rem;margin-top:1.5rem">
-          Alle Preise sind Richtwerte. Nach einem kurzen Gespraech nennen wir Ihnen den genauen Preis.
+        <p style="text-align:center;color:var(--text-secondary);font-size:.8rem;margin-top:1.25rem">
+          Alle Preise sind Richtwerte. Nach einem kurzen Gespr&auml;ch nennen wir Ihnen den genauen Preis.
         </p>
       </div>
-    </div>
+    </section>
 
-    <!-- ─── WER WIR SIND ─── -->
-    <div class="sec">
+    <!-- &Uuml;BER UNS -->
+    <section class="sec" aria-label="&Uuml;ber uns">
       <div class="wrap">
-        <div class="story" style="max-width:720px;margin:0 auto">
-
-          <div class="story-body">
-              <h2>Kein Konzern.<br /><span class="accent">Zwei Gruender. Direkte Antworten.</span></h2>
-                        <p>
-              Wir sind Daniel und Flavio &ndash; beide aus Friedrichshafen,
-              beide mit demselben Ziel: Unternehmen am Bodensee sichtbarer machen.
-              Wir haben Evolved Web Designs 2026 gegruendet, weil wir gesehen haben,
-              wie viele gute Betriebe online kaum stattfinden.
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="label">Wer wir sind</span>
+            <h2>Kein Konzern.<br /><span class="accent">Zwei Gr&uuml;nder. Direkte Antworten.</span></h2>
+            <p>
+              Wir sind Daniel und Flavio &ndash; beide aus Friedrichshafen, beide mit demselben Ziel:
+              Unternehmen am Bodensee sichtbarer machen. Wir haben Evolved Web Designs 2026 gegr&uuml;ndet,
+              weil wir gesehen haben, wie viele gute Betriebe online kaum stattfinden.
             </p>
             <p>
-              <strong>Was das fuer Sie bedeutet:</strong> Sie haben immer einen direkten
-              Ansprechpartner. Kein Ticket-System, kein Warten.
-              Sie schreiben uns &ndash; wir antworten.
+              <strong>Was das f&uuml;r Sie bedeutet:</strong> Sie haben immer einen direkten Ansprechpartner.
+              Kein Ticket-System, kein Warten. Sie schreiben uns &ndash; wir antworten.
             </p>
             <p>
               Wir nutzen die neuesten KI-Tools. Nicht um schneller schlechte Arbeit zu liefern,
-              sondern um Ihnen in derselben Zeit deutlich mehr zu bieten
-              als jede andere Agentur in der Region.
+              sondern um Ihnen in derselben Zeit deutlich mehr zu bieten als jede andere Agentur in der Region.
             </p>
-            <div class="story-nums">
-              <div class="sn"><strong>2026</strong><span>Gegruendet</span></div>
-              <div class="sn"><strong>100&nbsp;%</strong><span>Zufriedenheit</span></div>
-              <div class="sn"><strong>&lt;&nbsp;24h</strong><span>Antwortzeit</span></div>
-              <div class="sn"><strong>Bodensee</strong><span>Unsere Region</span></div>
+            <a href="https://evowebdesign.de/ueber-uns.html" class="btn btn-ghost" style="margin-top:1.25rem;font-size:.88rem;padding:.75rem 1.5rem">
+              Mehr &uuml;ber uns &rarr;
+            </a>
+          </div>
+
+          <div class="about-stats">
+            <div class="astat">
+              <strong>2026</strong>
+              <span>Gegr&uuml;ndet</span>
+            </div>
+            <div class="astat" style="border-left:1px solid var(--border)">
+              <strong>100&nbsp;%</strong>
+              <span>Zufriedenheit</span>
+            </div>
+            <div class="astat" style="border-top:1px solid var(--border)">
+              <strong>&lt;&nbsp;24h</strong>
+              <span>Antwortzeit</span>
+            </div>
+            <div class="astat" style="border-top:1px solid var(--border);border-left:1px solid var(--border)">
+              <strong>Bodensee</strong>
+              <span>Unsere Region</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ─── ABLAUF ─── -->
-    <div class="sec">
-      <div class="wrap">
-        <div style="text-align:center;max-width:560px;margin:0 auto">
-          <h2>Von der Anfrage <span class="accent">bis live</span> &ndash; in 4 Schritten.</h2>
-                  </div>
-
-        <div class="process">
-          <article class="ps">
-            <div class="ps-n">01</div>
-            <h3>Kurzes Gespraech</h3>
-            <p>Sie erzaehlen, was Sie brauchen. Wir stellen ein paar Fragen. 20 Minuten, kein Verkaufsgespraech.</p>
-          </article>
-          <article class="ps">
-            <div class="ps-n">02</div>
-            <h3>Angebot &amp; Plan</h3>
-            <p>Sie bekommen ein konkretes Angebot &ndash; mit Preis, Zeitrahmen und genau dem, was Sie erhalten.</p>
-          </article>
-          <article class="ps">
-            <div class="ps-n">03</div>
-            <h3>Bau &amp; Feedback</h3>
-            <p>Wir bauen. Sie sehen Zwischenstaende. Keine boesen Ueberraschungen am Ende.</p>
-          </article>
-          <article class="ps">
-            <div class="ps-n">04</div>
-            <h3>Live &amp; fertig</h3>
-            <p>Website geht online. KI-Bot wird aktiviert. Sie bekommen eine kurze Einfuehrung. Fertig.</p>
-          </article>
+    <!-- ABLAUF -->
+    <section class="sec" aria-label="Ablauf">
+      <div class="wrap-narrow">
+        <div style="margin-bottom:2rem">
+          <span class="label">Ablauf</span>
+          <h2>Von der Anfrage bis live &ndash; <span class="accent">in 4 Schritten.</span></h2>
         </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-n">01</span>
+            <div>
+              <strong>Kurzes Gespr&auml;ch</strong>
+              <p>Sie erz&auml;hlen, was Sie brauchen. Wir stellen ein paar Fragen. 20 Minuten, kein Verkaufsgespr&auml;ch.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">02</span>
+            <div>
+              <strong>Konkretes Angebot</strong>
+              <p>Mit Preis, Zeitrahmen und genau dem, was Sie erhalten. Kein Kleingedrucktes.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">03</span>
+            <div>
+              <strong>Bau mit Zwischenst&auml;nden</strong>
+              <p>Wir bauen, Sie sehen den Fortschritt. Keine b&ouml;sen &Uuml;berraschungen am Ende.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">04</span>
+            <div>
+              <strong>Live. Fertig.</strong>
+              <p>Website geht online, KI-Bot wird aktiviert. Kurze Einf&uuml;hrung von uns &ndash; dann geh&ouml;rt alles Ihnen.</p>
+            </div>
+          </li>
+        </ol>
       </div>
-    </div>
+    </section>
 
-    <!-- ─── ANFRAGE ─── -->
-    <div class="sec" id="anfrage">
+    <!-- KONTAKT -->
+    <section class="sec" id="anfrage" aria-label="Kontakt">
       <div class="wrap">
-        <div class="contact-wrap">
-          <div class="contact-side">
-              <h2>Schreiben Sie uns.<br /><span class="accent">Wir antworten in 24h.</span></h2>
-                        <p>
-              Keine Verpflichtung, kein Verkaufsgespraech. Wir schauen uns Ihre Situation
-              an und sagen Ihnen ehrlich, ob und wie wir helfen koennen.
+        <div class="contact-layout">
+          <div class="contact-info">
+            <span class="label">Kontakt</span>
+            <h2>Schreiben Sie uns.<br /><span class="accent">Wir antworten in 24h.</span></h2>
+            <p>
+              Keine Verpflichtung, kein Verkaufsgespr&auml;ch. Wir schauen uns Ihre Situation an
+              und sagen Ihnen ehrlich, ob und wie wir helfen k&ouml;nnen.
             </p>
-            <div class="contact-links">
-              <div class="cl">
-                <div class="cl-icon">&#128222;</div>
-                <div class="cl-text">
+            <div class="clinks">
+              <a href="tel:+491717031722" class="clink">
+                <span class="clink-icon">&#128222;</span>
+                <div>
                   <strong>+49 171 7031722</strong>
                   <span>Auch per WhatsApp erreichbar</span>
                 </div>
-              </div>
-              <div class="cl">
-                <div class="cl-icon">&#128140;</div>
-                <div class="cl-text">
+              </a>
+              <a href="mailto:kontakt@evowebdesign.de" class="clink">
+                <span class="clink-icon">&#9993;</span>
+                <div>
                   <strong>kontakt@evowebdesign.de</strong>
                   <span>Antwort innerhalb von 24h</span>
                 </div>
-              </div>
-              <div class="cl">
-                <div class="cl-icon">&#128205;</div>
-                <div class="cl-text">
+              </a>
+              <div class="clink">
+                <span class="clink-icon">&#128205;</span>
+                <div>
                   <strong>Friedrichshafen, Bodensee</strong>
                   <span>Wir kommen auch zu Ihnen</span>
                 </div>
@@ -780,8 +786,8 @@
             </div>
           </div>
 
-          <div class="form-panel">
-            <h3>Direkte Anfrage</h3>
+          <div class="form-card">
+            <p class="form-title">Direkte Anfrage</p>
             <form class="fg" id="cForm" action="https://formspree.io/f/mbdlnwqw" method="POST">
               <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
               <div>
@@ -797,72 +803,87 @@
                 <input class="inp" id="fw" name="website" type="url" placeholder="https://..." />
               </div>
               <div>
-                <label for="fm">Was wuenschen Sie sich?</label>
+                <label for="fm">Was w&uuml;nschen Sie sich?</label>
                 <input class="inp" id="fm" name="nachricht" type="text" placeholder="z.B. neue Website, KI-Bot, SEO ..." />
               </div>
-              <button class="btn btn-primary" type="submit" id="sendBtn" style="width:100%;justify-content:center">
-                Anfrage senden &#8594;
+              <button class="btn btn-primary" type="submit" id="sendBtn" style="width:100%;justify-content:center;margin-top:.25rem">
+                Anfrage senden &rarr;
               </button>
-              <div id="fMsg" role="alert" aria-live="polite" style="display:none;padding:.7rem 1rem;border-radius:var(--radius-sm);font-size:.86rem;font-weight:600;margin-top:.25rem"></div>
-              <p style="font-size:.78rem;color:var(--text-secondary);margin-top:.5rem">Kein Spam. Keine Weitergabe Ihrer Daten.</p>
+              <div id="fMsg" role="alert" aria-live="polite" style="display:none;padding:.7rem 1rem;border-radius:var(--radius-sm);font-size:.85rem;font-weight:600;margin-top:.25rem"></div>
+              <p style="font-size:.75rem;color:var(--text-secondary);margin-top:.5rem;text-align:center">Kein Spam. Keine Weitergabe Ihrer Daten.</p>
             </form>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ─── CTA ─── -->
-    <div class="sec">
-      <div class="wrap">
-        <div class="cta-box">
-                    <h2>Bereit? Dann melden Sie sich.</h2>
-          <p>
-            Keine Verpflichtung, kein Standardpaket von der Stange.
-            Wir schauen uns Ihre Situation an und sagen Ihnen ehrlich, ob und wie wir helfen koennen.
-          </p>
-          <div class="cta-btns">
-            <a href="#anfrage" class="btn btn-primary">Jetzt kostenlos anfragen &#8594;</a>
-            <a href="tel:+491717031722" class="btn btn-outline">&#128222; +49 171 7031722</a>
-          </div>
-        </div>
+    <!-- CTA BAND -->
+    <div class="cta-band">
+      <h2>Bereit? Dann melden Sie sich.</h2>
+      <p>Kostenlos, unverbindlich &ndash; und ehrlich. Wir sagen Ihnen, was wirklich hilft.</p>
+      <div class="cta-btns">
+        <a href="#anfrage" class="btn btn-primary">Kostenlos anfragen &rarr;</a>
+        <a href="https://evowebdesign.de/projekte.html" class="btn btn-ghost">Unser Projekt ansehen</a>
       </div>
     </div>
 
   </main>
 
-  <!-- ─── FOOTER ─── -->
+  <!-- FOOTER -->
   <footer>
-    <div class="foot">
-      <div class="foot-left">
-        <a href="https://evowebdesign.de/" class="foot-logo">
-          <img src="logo-nobg.png" alt="EWD Logo" width="28" height="28" />
-          <span>Evolved Web Designs</span>
-        </a>
-        <nav class="foot-links" aria-label="Footer Navigation">
-          <a href="https://evowebdesign.de/leistungen.html">Leistungen</a>
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="https://evowebdesign.de/" class="footer-logo">
+            <img src="logo-nobg.png" alt="Evolved Web Designs Logo" width="32" height="32" />
+            <span>Evolved Web Designs</span>
+          </a>
+          <p class="footer-tagline">Webdesign &amp; KI-Bot aus Friedrichshafen. F&uuml;r Unternehmen am Bodensee, die online Ergebnisse wollen.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="icon-instagram.png" alt="" width="14" height="14" />
+            </a>
+            <a href="https://tiktok.com/@evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <img src="icon-tiktok.png" alt="" width="14" height="14" />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Leistungen</h4>
+          <a href="https://evowebdesign.de/leistungen.html">Website + KI-Bot</a>
+          <a href="https://evowebdesign.de/leistungen.html">Lokale SEO</a>
+          <a href="https://evowebdesign.de/leistungen.html">Hosting &amp; Betreuung</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Unternehmen</h4>
+          <a href="https://evowebdesign.de/ueber-uns.html">&Uuml;ber uns</a>
           <a href="https://evowebdesign.de/projekte.html">Projekte</a>
-          <a href="https://evowebdesign.de/ueber-uns.html">Ueber uns</a>
-          <a href="https://evowebdesign.de/faq.html">Preise</a>
+          <a href="https://evowebdesign.de/faq.html">Preise &amp; FAQ</a>
           <a href="https://evowebdesign.de/kontakt.html">Kontakt</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <a href="tel:+491717031722">+49 171 7031722</a>
+          <a href="mailto:kontakt@evowebdesign.de">kontakt@evowebdesign.de</a>
+          <a href="#anfrage">Kostenlos anfragen</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Evolved Web Designs GbR &middot; Friedrichshafen am Bodensee</p>
+        <div class="footer-legal">
           <a href="https://evowebdesign.de/impressum.html">Impressum</a>
           <a href="https://evowebdesign.de/datenschutz.html">Datenschutz</a>
-        </nav>
-      </div>
-      <div class="foot-right">
-        <span class="foot-copy">&copy; 2026 EWD GbR</span>
-        <div class="foot-soc">
-          <a href="https://instagram.com/evolvedwebdesigns" class="fs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <img src="icon-instagram.png" alt="" width="14" height="14" />
-          </a>
-          <a href="https://tiktok.com/@evolvedwebdesigns" class="fs" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-            <img src="icon-tiktok.png" alt="" width="14" height="14" />
-          </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
   (function(){
     var form=document.getElementById('cForm'),btn=document.getElementById('sendBtn'),msg=document.getElementById('fMsg');
@@ -874,71 +895,72 @@
       if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){show('Bitte eine gueltige E-Mail eingeben.',false);return;}
       btn.disabled=true;btn.textContent='Wird gesendet...';
       fetch('https://formspree.io/f/mbdlnwqw',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
-      .then(function(r){
-        if(r.ok){show('Danke! Wir melden uns innerhalb von 24h.',true);form.reset();btn.textContent='Gesendet';}
-        else throw 0;
-      }).catch(function(){
-        show('Fehler – bitte direkt an kontakt@evowebdesign.de schreiben.',false);
-        btn.disabled=false;btn.textContent='Anfrage senden';
-      });
+        .then(function(r){
+          if(r.ok){show('Danke! Wir melden uns innerhalb von 24h.',true);form.reset();btn.textContent='Gesendet \u2713';}
+          else throw 0;
+        }).catch(function(){
+          show('Fehler \u2013 bitte direkt an kontakt@evowebdesign.de schreiben.',false);
+          btn.disabled=false;btn.textContent='Anfrage senden \u2192';
+        });
     });
     function show(t,ok){
       msg.textContent=t;msg.style.display='block';
-      msg.style.background=ok?'rgba(34,197,94,0.08)':'rgba(239,68,68,0.08)';
-      msg.style.border='1px solid '+(ok?'rgba(34,197,94,0.25)':'rgba(239,68,68,0.25)');
+      msg.style.background=ok?'rgba(34,197,94,.08)':'rgba(239,68,68,.08)';
+      msg.style.border='1px solid '+(ok?'rgba(34,197,94,.25)':'rgba(239,68,68,.25)');
       msg.style.color=ok?'#4ade80':'#f87171';
+      msg.style.borderRadius='var(--radius-sm)';
     }
   }());
   </script>
 
   <script>
-    var hdr=document.getElementById('hdr');
-    var menuBtn=document.getElementById('menuBtn');
-    var nav=document.getElementById('navLinks');
+  var hdr=document.getElementById('hdr');
+  var menuBtn=document.getElementById('menuBtn');
+  var navEl=document.getElementById('navLinks');
 
-    window.addEventListener('scroll',function(){
-      hdr.className=window.scrollY>30?'scrolled':'top';
-    },{passive:true});
+  window.addEventListener('scroll',function(){
+    hdr.className=window.scrollY>30?'scrolled':'top';
+  },{passive:true});
 
-    menuBtn.addEventListener('click',function(){
-      var open=nav.classList.toggle('open');
-      menuBtn.classList.toggle('open',open);
-      menuBtn.setAttribute('aria-expanded',''+open);
+  menuBtn.addEventListener('click',function(){
+    var open=navEl.classList.toggle('open');
+    menuBtn.classList.toggle('open',open);
+    menuBtn.setAttribute('aria-expanded',''+open);
+  });
+  navEl.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      navEl.classList.remove('open');
+      menuBtn.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
     });
-    nav.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click',function(){
-        nav.classList.remove('open');
-        menuBtn.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded','false');
-      });
-    });
+  });
 
-    document.querySelectorAll('a[href^="#"]').forEach(function(a){
-      a.addEventListener('click',function(e){
-        var t=document.querySelector(this.getAttribute('href'));
-        if(!t)return;
-        e.preventDefault();
-        window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-(hdr?hdr.offsetHeight:70)-12,behavior:'smooth'});
-      });
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(this.getAttribute('href'));
+      if(!t)return;
+      e.preventDefault();
+      window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-(hdr?hdr.offsetHeight:70)-12,behavior:'smooth'});
     });
+  });
 
-    if('IntersectionObserver' in window){
-      var s=document.createElement('style');
-      s.textContent='.rv{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}.rv.vi{opacity:1;transform:none}';
-      document.head.appendChild(s);
-      var io=new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if(!e.isIntersecting)return;
-          var el=e.target;
-          var i=Array.from(el.parentElement.children).filter(function(c){return c.classList.contains('rv');}).indexOf(el);
-          setTimeout(function(){el.classList.add('vi');},i*80);
-          io.unobserve(el);
-        });
-      },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
-      document.querySelectorAll('.srv,.pc,.ps,.ki-row,.cl,.strip-stat,.sn').forEach(function(el){
-        el.classList.add('rv');io.observe(el);
+  if('IntersectionObserver' in window){
+    var s=document.createElement('style');
+    s.textContent='.rv{opacity:0;transform:translateY(20px);transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1)}.rv.vi{opacity:1;transform:none}';
+    document.head.appendChild(s);
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting)return;
+        var el=e.target;
+        var i=Array.from(el.parentElement.children).filter(function(c){return c.classList.contains('rv');}).indexOf(el);
+        setTimeout(function(){el.classList.add('vi');},i*70);
+        io.unobserve(el);
       });
-    }
+    },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.srv,.pc,.step,.ki-feat,.astat,.clink').forEach(function(el){
+      el.classList.add('rv');io.observe(el);
+    });
+  }
   </script>
 </body>
 </html>
