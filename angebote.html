@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <title>Angebote & Ablauf – Evolved Web Designs</title>
+  <meta name="description" content="Transparente Festpreise: Website + KI-Bot ab 1.490&euro;, klarer Ablauf in 4 Schritten, ehrliche Antworten. Webagentur Friedrichshafen &amp; Bodensee." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://evowebdesign.de/konditionen" />
+
+  <meta property="og:title" content="Preise &amp; Ablauf | Evolved Web Designs" />
+  <meta property="og:description" content="Festpreise, klarer Ablauf, keine versteckten Kosten. Website + KI-Bot aus Friedrichshafen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://evowebdesign.de/faq.html" />
+  <meta property="og:locale" content="de_DE" />
+
+  <link rel="icon" href="favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <meta name="theme-color" content="#0066FF" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Was kostet eine Website bei EWD?","acceptedAnswer":{"@type":"Answer","text":"Website + KI-Bot: 1.490&euro; einmalig. Website ohne Bot: 890&euro;. Alle Preise sind Festpreise ohne Abonnement."}},
+    {"@type":"Question","name":"Wie lange dauert die Erstellung einer Website?","acceptedAnswer":{"@type":"Answer","text":"Standard: 2&ndash;4 Wochen mit Zwischenst&auml;nden. Express (+30%): 5 Werktage."}},
+    {"@type":"Question","name":"Welche St&auml;dte am Bodensee betreut EWD?","acceptedAnswer":{"@type":"Answer","text":"Friedrichshafen, Ravensburg, Lindau, Konstanz, &Uuml;berlingen, Meersburg, Tettnang, Markdorf und weitere."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Startseite","item":"https://evowebdesign.de/"},
+    {"@type":"ListItem","position":2,"name":"Preise","item":"https://evowebdesign.de/faq.html"}
+  ]}
+  </script>
+
+  <link rel="preload" as="image" href="logo-nobg.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box }
+    :root {
+      --primary: #0066FF;
+      --primary-dark: #0050CC;
+      --primary-light: #4D94FF;
+      --accent: #00D9FF;
+      --bg: #0D1117;
+      --bg-card: #161B22;
+      --bg-raised: #1C2128;
+      --text: #F0F6FC;
+      --text-secondary: #8B949E;
+      --text-soft: #C9D1D9;
+      --border: rgba(240,246,252,0.08);
+      --border-mid: rgba(240,246,252,0.14);
+      --border-active: rgba(0,102,255,0.35);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+    html { scroll-behavior:smooth }
+    body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; -webkit-font-smoothing:antialiased }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0; background: radial-gradient(ellipse 70% 40% at 50% -5%, rgba(0,102,255,0.1) 0%, transparent 60%), radial-gradient(ellipse 50% 35% at 85% 90%, rgba(0,217,255,0.05) 0%, transparent 55%) }
+
+    @keyframes fadeUp { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
+    @keyframes fadeDown { from { opacity:0; transform:translateY(-16px) } to { opacity:1; transform:translateY(0) } }
+    @media (prefers-reduced-motion:reduce) { * { animation:none!important; transition:none!important } }
+
+    /* ── LAYOUT ── */
+    .wrap { max-width:1100px; margin:0 auto; padding:0 2rem }
+    main, header, footer { position:relative; z-index:1 }
+
+    /* ── HEADER ── */
+    header { position:fixed; top:0; left:0; right:0; z-index:1000; transition:background .3s,box-shadow .3s,border-color .3s }
+    header.top { background:rgba(13,17,23,0.6); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid transparent }
+    header.scrolled { background:rgba(13,17,23,0.96); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid var(--border); box-shadow:0 1px 0 var(--border),0 4px 24px rgba(0,0,0,0.25) }
+    nav { max-width:1200px; margin:0 auto; padding:.85rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; animation:fadeDown .5s ease both }
+    .logo { display:flex; align-items:center; gap:.85rem; text-decoration:none; flex-shrink:0; transition:opacity .2s }
+    .logo:hover { opacity:.8 }
+    .logo-mark { height:44px; width:auto; filter:brightness(1.15) }
+    .logo-name { font-family:'Poppins',sans-serif; font-size:1.05rem; font-weight:900; letter-spacing:-.02em; color:var(--text) }
+    .nav-links { display:flex; align-items:center; gap:1.75rem; list-style:none }
+    .nav-links a { color:var(--text-secondary); text-decoration:none; font-size:.88rem; font-weight:500; transition:color .2s; white-space:nowrap; position:relative }
+    .nav-links a:not(.cta):hover { color:var(--text) }
+    .nav-links a:not(.cta)::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--primary-light); transition:width .25s ease }
+    .nav-links a:not(.cta):hover::after { width:100% }
+    .nav-links a.active { color:var(--text) }
+    .nav-links a.active::after { width:100% }
+    .cta { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); color:#fff!important; padding:.6rem 1.35rem; border-radius:8px; font-weight:700; font-size:.87rem; box-shadow:0 2px 14px rgba(0,102,255,0.28); transition:transform .2s,box-shadow .2s }
+    .cta:hover { transform:translateY(-1px); box-shadow:0 4px 22px rgba(0,102,255,0.45) }
+    .cta::after { display:none!important }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none; background:none }
+    .hamburger span { width:22px; height:1.5px; background:var(--text-secondary); border-radius:2px; transition:transform .3s,opacity .3s }
+    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(4.5px,4.5px) }
+    .hamburger.open span:nth-child(2) { opacity:0 }
+    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(4.5px,-4.5px) }
+
+    /* ── PAGE INTRO ── */
+    .page-intro { padding:7rem 0 3rem; text-align:center; animation:fadeUp 0.7s ease .1s both }
+    .breadcrumb { display:flex; gap:.4rem; list-style:none; font-size:.82rem; color:var(--text-secondary); margin-bottom:1.25rem;  }
+    .breadcrumb a { color:var(--text-secondary); text-decoration:none; transition:color .2s }
+    .breadcrumb a:hover { color:var(--text) }
+    .label { display:inline-block; font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--primary-light); margin-bottom:.75rem }
+    .page-intro h1 { font-family:'Poppins',sans-serif; font-size:clamp(2rem,5vw,2.8rem); font-weight:900; letter-spacing:-.03em; line-height:1.15; margin-bottom:1rem }
+    .accent { background:linear-gradient(135deg,var(--primary-light),var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text }
+    .intro-sub { font-size:1rem; color:var(--text-secondary); max-width:600px; margin:0 auto; line-height:1.75 }
+
+    /* ── SECTIONS ── */
+    .sec { padding:3.5rem 0; border-top:1px solid var(--border) }
+    .sec-heading { font-family:'Poppins',sans-serif; font-size:1.5rem; font-weight:800; letter-spacing:-.025em; margin-bottom:.4rem }
+    .sec-sub { font-size:.9rem; color:var(--text-secondary); margin-bottom:2rem }
+
+    /* ── PRICE CARDS ── */
+    .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin-bottom:2rem }
+    .pc { background:var(--bg-card); padding:2rem 1.75rem; display:flex; flex-direction:column; gap:0 }
+    .pc.best { background:var(--bg-raised); position:relative }
+    .best-tag { display:inline-block; font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; color:var(--primary-light); border:1px solid rgba(0,102,255,0.3); border-radius:999px; padding:.2rem .65rem; margin-bottom:.75rem; align-self:flex-start }
+    .pc-name { font-family:'Poppins',sans-serif; font-size:1rem; font-weight:800; margin-bottom:.3rem }
+    .pc-sub { font-size:.82rem; color:var(--text-secondary); margin-bottom:1.1rem; line-height:1.6 }
+    .pc-price { font-family:'Poppins',sans-serif; font-size:2.2rem; font-weight:900; color:var(--text); line-height:1; margin-bottom:.3rem }
+    .pc-price span { font-size:.85rem; font-weight:500; color:var(--text-secondary) }
+    .pc-note { font-size:.78rem; color:var(--text-secondary); margin-bottom:1.5rem }
+    .pc-feats { display:flex; flex-direction:column; gap:.5rem; margin-bottom:1.75rem; flex:1 }
+    .pc-feat { display:flex; gap:.6rem; font-size:.85rem; color:var(--text-secondary); align-items:flex-start }
+    .pc-feat::before { content:'–'; color:var(--primary-light); flex-shrink:0; font-weight:700 }
+    .pc-btn { display:inline-block; text-align:center; padding:.65rem 1.25rem; border-radius:var(--radius-sm); font-size:.87rem; font-weight:700; text-decoration:none; transition:all .2s }
+    .pc-btn-primary { background:var(--primary); color:#fff; }
+    .pc-btn-primary:hover { background:var(--primary-dark) }
+    .pc-btn-ghost { border:1px solid var(--border-mid); color:var(--text-secondary) }
+    .pc-btn-ghost:hover { border-color:var(--border-active); color:var(--text) }
+
+    /* ── FAQ ACCORDION ── */
+    .faq-list { display:flex; flex-direction:column; gap:0 }
+    .faq-item { border-bottom:1px solid var(--border) }
+    .faq-item:first-child { border-top:1px solid var(--border) }
+    .faq-q { display:flex; justify-content:space-between; align-items:center; gap:1.5rem; padding:1.1rem 0; cursor:pointer; user-select:none }
+    .faq-q h3 { font-size:.93rem; font-weight:600; color:var(--text-soft); line-height:1.5; transition:color .2s }
+    .faq-item.open .faq-q h3 { color:var(--text) }
+    .faq-icon { width:24px; height:24px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-mid); border-radius:50%; color:var(--text-secondary); font-size:1rem; line-height:1; transition:transform .3s,border-color .2s }
+    .faq-item.open .faq-icon { transform:rotate(45deg); border-color:var(--primary-light); color:var(--primary-light) }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease }
+    .faq-item.open .faq-a { max-height:600px }
+    .faq-a-inner { padding:.25rem 0 1.25rem; font-size:.9rem; color:var(--text-secondary); line-height:1.8 }
+    .faq-a-inner strong { color:var(--text-soft) }
+
+    /* ── STEPS ── */
+    .steps { list-style:none; display:flex; flex-direction:column; gap:0 }
+    .step { display:flex; gap:2rem; align-items:flex-start; padding:1.4rem 0; border-bottom:1px solid var(--border) }
+    .step:last-child { border-bottom:none }
+    .step-n { font-family:'Poppins',sans-serif; font-size:2.2rem; font-weight:900; color:rgba(240,246,252,0.18); line-height:1; flex-shrink:0; width:3.5rem; text-align:right }
+    .step strong { display:block; font-size:.97rem; font-weight:700; color:var(--text); margin-bottom:.3rem }
+    .step p { font-size:.88rem; color:var(--text-secondary); line-height:1.7 }
+
+    /* ── CTA BAND ── */
+    .cta-band { padding:3.5rem 0; border-top:1px solid var(--border) }
+    .cta-band h2 { font-family:'Poppins',sans-serif; font-size:clamp(1.5rem,3.5vw,2rem); font-weight:900; letter-spacing:-.025em; margin-bottom:.75rem }
+    .cta-band p { color:var(--text-secondary); font-size:.95rem; max-width:540px; line-height:1.75; margin-bottom:1.75rem }
+    .cta-btns { display:flex; gap:.85rem; flex-wrap:wrap }
+    .btn { display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1.5rem; border-radius:var(--radius-sm); font-size:.9rem; font-weight:700; text-decoration:none; transition:all .2s; cursor:pointer; border:none }
+    .btn-primary { background:var(--primary); color:#fff }
+    .btn-primary:hover { background:var(--primary-dark) }
+    .btn-ghost { border:1px solid var(--border-mid); color:var(--text-secondary); background:none }
+    .btn-ghost:hover { border-color:var(--border-active); color:var(--text) }
+
+    /* ── FOOTER ── */
+    footer { background:var(--bg-card); border-top:1px solid var(--border); padding:3.5rem 0 0 }
+    .footer-inner { max-width:1200px; margin:0 auto; padding:0 1.5rem }
+    .footer-top { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:2.5rem; padding-bottom:2.5rem; border-bottom:1px solid var(--border) }
+    .footer-logo { display:flex; align-items:center; gap:.7rem; text-decoration:none; margin-bottom:.9rem }
+    .footer-logo img { height:32px; width:auto }
+    .footer-logo span { font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:900; color:var(--text); letter-spacing:-.015em }
+    .footer-tagline { font-size:.85rem; color:var(--text-secondary); line-height:1.7; max-width:220px }
+    .footer-socials { display:flex; gap:.5rem; margin-top:1.2rem }
+    .footer-soc-btn { width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.05); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:all .2s; text-decoration:none }
+    .footer-soc-btn:hover { background:var(--primary); border-color:var(--primary); transform:translateY(-2px) }
+    .footer-soc-btn img { width:14px; height:14px }
+    .footer-col h4 { font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.14em; color:var(--text-secondary); margin-bottom:.85rem }
+    .footer-col a { display:block; font-size:.85rem; color:var(--text-secondary); text-decoration:none; margin-bottom:.45rem; transition:color .2s }
+    .footer-col a:hover { color:var(--text) }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.75rem; padding:1.25rem 0 }
+    .footer-copy { font-size:.78rem; color:var(--text-secondary) }
+    .footer-legal { display:flex; gap:1.25rem }
+    .footer-legal a { font-size:.78rem; color:var(--text-secondary); text-decoration:none; transition:color .2s }
+    .footer-legal a:hover { color:var(--text) }
+
+    /* ── WHATSAPP ── */
+    .wa-float { position:fixed; bottom:1.5rem; right:1.5rem; z-index:900 }
+    .wa-btn { width:54px; height:54px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(37,211,102,0.35); text-decoration:none; transition:transform .2s }
+    .wa-btn:hover { transform:scale(1.08) }
+    .wa-btn img { width:28px; height:28px }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:1024px) {
+      .price-grid { grid-template-columns:1fr }
+      .footer-top { grid-template-columns:1fr 1fr }
+      .footer-brand { grid-column:1/-1 }
+    }
+    @media (max-width:768px) {
+      .nav-links { display:none; position:fixed; top:62px; left:0; right:0; flex-direction:column; background:rgba(13,17,23,.98); backdrop-filter:blur(20px); padding:1.75rem 1.5rem; gap:1rem; border-top:1px solid var(--border); box-shadow:0 8px 32px rgba(0,0,0,.4) }
+      .nav-links.open { display:flex }
+      .hamburger { display:flex }
+      .page-intro { padding:6rem 0 2rem }
+      .footer-top { grid-template-columns:1fr; gap:2rem }
+      .footer-brand { grid-column:auto }
+      .footer-bottom { flex-direction:column; align-items:flex-start; gap:.5rem }
+    }
+    @media (max-width:480px) {
+      .cta-btns { flex-direction:column }
+      .cta-btns .btn { width:100%; justify-content:center }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wa-float">
+    <a href="https://wa.me/491717031722?text=Hallo%20EWD!" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <img src="icon-whatsapp.png" alt="WhatsApp" width="28" height="28" />
+    </a>
+  </div>
+
+  <header id="hdr" class="top">
+    <nav aria-label="Hauptnavigation">
+      <a href="https://evowebdesign.de/" class="logo" aria-label="Evolved Web Designs &ndash; Startseite">
+        <img src="logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="44" height="44" />
+        <span class="logo-name">Evolved Web Designs</span>
+      </a>
+      <button class="hamburger" id="menuBtn" aria-label="Menue" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="https://evowebdesign.de/leistungen">Leistungen</a></li>
+        <li><a href="https://evowebdesign.de/projekte">Projekte</a></li>
+        <li><a href="https://evowebdesign.de/ueber-uns">&Uuml;ber uns</a></li>
+        <li><a href="https://evowebdesign.de/konditionen" class="active">Angebote</a></li>
+        <li><a href="https://evowebdesign.de/kontakt" class="cta">Jetzt anfragen</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- INTRO -->
+    <div class="page-intro">
+      <div class="wrap">
+        <ol class="breadcrumb" aria-label="Breadcrumb">
+          <li><a href="https://evowebdesign.de/">Startseite</a></li>
+          <li>&rsaquo;</li>
+          <li>Angebote</li>
+        </ol>
+        <span class="label">Webdesign Friedrichshafen</span>
+        <h1>Angebote und Ablauf.<br /><span class="accent">Transparent und verbindlich.</span></h1>
+        <p class="intro-sub">
+          Transparente Festpreise f&uuml;r Webdesign und KI-Agent am Bodensee. Kein Stundenhonorar, keine &Uuml;berraschungen. Sie wissen vorher genau, was Sie bekommen.
+        </p>
+      </div>
+    </div>
+
+    <!-- PAKETE -->
+    <section class="sec" aria-labelledby="preise-heading">
+      <div class="wrap">
+        <h2 class="sec-heading" id="preise-heading">Webdesign-Pakete f&uuml;r Unternehmen am Bodensee</h2>
+        <p class="sec-sub">Einmaliger Festpreis &middot; kein Abo &middot; was aufgelistet ist, ist enthalten</p>
+
+        <div class="price-grid">
+
+          <div class="pc">
+            <div class="pc-name">Website</div>
+            <div class="pc-sub">F&uuml;r Unternehmen, die schnell und sauber online wollen.</div>
+            <div class="pc-price">890 <span>&euro; einmalig</span></div>
+            <div class="pc-note">kein Abo &middot; Festpreis</div>
+            <div class="pc-feats">
+              <div class="pc-feat">4&ndash;6 Seiten, individuelles Design</div>
+              <div class="pc-feat">Mobile-first, schnelle Ladezeiten</div>
+              <div class="pc-feat">Kontaktformular &amp; WhatsApp-Button</div>
+              <div class="pc-feat">Basis-SEO: Title, Meta, Struktur</div>
+              <div class="pc-feat">Fertig in 2&ndash;4 Wochen</div>
+            </div>
+            <a href="https://evowebdesign.de/kontakt" class="pc-btn pc-btn-ghost">Anfragen &rarr;</a>
+          </div>
+
+          <div class="pc best">
+            <div class="best-tag">Empfohlen</div>
+            <div class="pc-name">Website + KI-Bot</div>
+            <div class="pc-sub">Ihre Website und ein KI-Agent, der 24/7 f&uuml;r Ihre Kunden da ist.</div>
+            <div class="pc-price">1.490 <span>&euro; einmalig</span></div>
+            <div class="pc-note">kein Abo &middot; Festpreis</div>
+            <div class="pc-feats">
+              <div class="pc-feat">5&ndash;7 Seiten, individuelles Design</div>
+              <div class="pc-feat">KI-Assistent: eingebettet &amp; auf Sie eingestellt</div>
+              <div class="pc-feat">Beanwortet Fragen, bucht Termine, leitet weiter</div>
+              <div class="pc-feat">Lokale SEO &amp; Google Business</div>
+              <div class="pc-feat">Mobile-first, schnelle Ladezeiten</div>
+              <div class="pc-feat">Fertig in 3&ndash;4 Wochen mit Zwischenst&auml;nden</div>
+            </div>
+            <a href="https://evowebdesign.de/kontakt" class="pc-btn pc-btn-primary">Jetzt anfragen &rarr;</a>
+          </div>
+
+          <div class="pc">
+            <div class="pc-name">Hosting &amp; Betreuung</div>
+            <div class="pc-sub">Optional nach dem Launch. Kein Stress, kein Ticketsystem.</div>
+            <div class="pc-price">ab 29 <span>&euro;/Monat</span></div>
+            <div class="pc-note">monatlich k&uuml;ndbar</div>
+            <div class="pc-feats">
+              <div class="pc-feat">Updates, Backups, Sicherheitschecks</div>
+              <div class="pc-feat">Kleine &Auml;nderungen auf Anfrage</div>
+              <div class="pc-feat">Direkter Kontakt, kein Ticketsystem</div>
+              <div class="pc-feat">Antwort innerhalb eines Werktages</div>
+            </div>
+            <a href="https://evowebdesign.de/kontakt" class="pc-btn pc-btn-ghost">Anfragen &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABLAUF -->
+    <section class="sec" aria-labelledby="ablauf-heading">
+      <div class="wrap" style="max-width:820px">
+        <h2 class="sec-heading" id="ablauf-heading">So l&auml;uft es ab.</h2>
+        <p class="sec-sub">Von der ersten Nachricht bis live. In 4 Schritten.</p>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-n">01</span>
+            <div>
+              <strong>Kurzes Gespr&auml;ch</strong>
+              <p>Sie erz&auml;hlen, was Sie brauchen, wir stellen ein paar Fragen. 20 Minuten. Kein Druck, kein Verkaufsgespr&auml;ch.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">02</span>
+            <div>
+              <strong>Konkretes Angebot</strong>
+              <p>Mit Festpreis, Zeitrahmen und genau dem was Sie erhalten. Kein Kleingedrucktes, keine Stundenabrechnungen hinterher.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">03</span>
+            <div>
+              <strong>Bau mit Zwischenst&auml;nden</strong>
+              <p>Wir bauen. Sie sehen den Fortschritt. Feedback-Runden bis es stimmt. Keine b&ouml;sen &Uuml;berraschungen.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">04</span>
+            <div>
+              <strong>Live. Fertig.</strong>
+              <p>Website geht online, KI-Agent wird aktiviert. Kurze Einf&uuml;hrung von uns, dann geh&ouml;rt alles Ihnen.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sec" aria-labelledby="faq-heading">
+      <div class="wrap" style="max-width:820px">
+        <h2 class="sec-heading" id="faq-heading">H&auml;ufige Fragen</h2>
+        <p class="sec-sub">Ausf&uuml;hrliche Antworten.</p>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Was kostet eine Website bei EWD?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Wir arbeiten ausschlie&szlig;lich mit Festpreisen &ndash; keine Stundenabrechnungen, keine Nachkalkulation. Unsere zwei Hauptpakete: Das Paket <strong>Website</strong> kostet 890&nbsp;&euro; einmalig und umfasst eine vollst&auml;ndige Website mit 4 bis 6 Seiten &ndash; individuelles Design, mobil-optimiert, Kontaktformular, WhatsApp-Button sowie eine solide SEO-Basis. Das Paket <strong>Website + KI-Agent</strong> kostet 1.490&nbsp;&euro; einmalig und beinhaltet alles aus dem ersten Paket, dazu eine Website mit 5 bis 7 Seiten, einen vollst&auml;ndig auf Ihr Unternehmen eingestellten KI-Agenten sowie lokale SEO-Optimierung inklusive Google Business Einrichtung. Optional buchbar: Hosting &amp; Betreuung ab 29&nbsp;&euro;/Monat, monatlich k&uuml;ndbar. Nach einem kurzen Gespr&auml;ch erhalten Sie von uns ein schriftliches, verbindliches Angebot &ndash; mit dem genauen Preis f&uuml;r Ihr Vorhaben, ohne &Uuml;berraschungen.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Was ist der KI-Agent genau, und brauche ich das?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Der KI-Agent ist ein intelligenter Assistent, der direkt auf Ihrer Website eingebettet ist und automatisch mit Ihren Besuchern kommuniziert &ndash; rund um die Uhr, auch nachts und an Wochenenden. Wir konfigurieren ihn vollst&auml;ndig auf Ihr Unternehmen: Ihre Leistungen, Ihre Preise, Ihre &Ouml;ffnungszeiten und Ihren Ton. Das Ergebnis klingt nach Ihnen &ndash; nicht nach einem generischen Standard-Chatbot. Er kann: Kundenfragen sofort beantworten (Preise, Leistungen, &Ouml;ffnungszeiten), Terminanfragen aufnehmen und vormerken, Interessenten qualifizieren bevor Sie kontaktiert werden, und Anfragen die er nicht beantworten kann direkt mit dem vollst&auml;ndigen Gespr&auml;chsverlauf an Sie weiterleiten.<br /><br />
+                <strong>Brauchen Sie das?</strong> Wenn Anfragen bei Ihnen oft abends oder am Wochenende eingehen &ndash; genau dann wenn Sie nicht erreichbar sind &ndash; dann ja. Wer keine Anfragen &uuml;ber die Website erwartet, kann mit dem reinen Website-Paket starten und den KI-Agenten sp&auml;ter nachr&uuml;sten.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Wie lange dauert die Umsetzung?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                F&uuml;r das Website-Paket rechnen wir mit 2 bis 3 Wochen von der Freigabe bis zum Go-live. Das Paket Website + KI-Agent ben&ouml;tigt 3 bis 4 Wochen, da die Konfiguration und Feinabstimmung des KI-Agenten zus&auml;tzliche Zeit erfordert. Der Ablauf ist klar strukturiert: In der ersten Woche kl&auml;ren wir Struktur, Inhalte und Ihr Feedback. In der zweiten Woche entsteht das Design und die Entwicklung &ndash; Sie erhalten einen Zwischenstand zur Freigabe. In Woche drei und vier folgen Feinschliff, KI-Konfiguration (wenn gebucht) und der Launch. Sie sehen den Fortschritt und haben jederzeit die M&ouml;glichkeit, Feedback einzubringen. Es gibt keine b&ouml;sen &Uuml;berraschungen am Ende. Falls Sie einen bestimmten Termin priorisieren m&ouml;chten: Express-Umsetzung in 5 Werktagen ist gegen Aufpreis m&ouml;glich.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Was brauchen Sie von mir f&uuml;r den Start?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Deutlich weniger als Sie vielleicht erwarten. Wir ben&ouml;tigen von Ihnen: eine kurze Beschreibung Ihrer Leistungen (auch ein Gespr&auml;ch reicht), Ihre Kontaktdaten und Adresse, Bilder Ihres Betriebs oder Teams (falls vorhanden &ndash; kein Muss, wir l&ouml;sen das auch anders), 1 bis 2 Beispiel-Websites, die Ihnen optisch gefallen, und Ihren ungef&auml;hren Zeitrahmen. Texte, Seitenstruktur, SEO-Aufbau und alle technischen Inhalte &uuml;bernehmen wir vollst&auml;ndig. Sie m&uuml;ssen nicht wissen, wie eine Website gebaut wird &ndash; das ist unser Job. Erfahrungsgem&auml;&szlig; betr&auml;gt Ihr aktiver Abstimmungsaufwand 1 bis 2 Stunden &uuml;ber das gesamte Projekt verteilt.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Macht ihr auch SEO &ndash; und was ist dabei realistisch zu erwarten?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Ja. Jede Website, die wir bauen, enth&auml;lt eine saubere SEO-Basis: technisch saubere Struktur, optimierte Titles und Meta-Beschreibungen, interne Verlinkung, schnelle Ladezeiten, Mobile-First-Umsetzung und Google Business Einrichtung bzw. Optimierung. Das ist kein Extra, sondern Standard bei uns.<br /><br />
+                Was ist realistisch zu erwarten? Lokale SEO ist kein Schalter, den man umlegt. Erste Verbesserungen sind nach 4 bis 12 Wochen sp&uuml;rbar &ndash; abh&auml;ngig von Ihrer Region, Branche und bisherigen Online-Pr&auml;senz. Unternehmen ohne bisher optimierte Website profitieren am st&auml;rksten. Laufende SEO-Betreuung mit monatlichen Anpassungen, Content-Erweiterungen und Reporting ist als Zusatzoption buchbar. Platz 1 bei Google garantieren wir nicht &ndash; und wer das verspricht, arbeitet unseri&ouml;s. Was wir garantieren: eine solide, messbare Grundlage, auf der Google Vertrauen aufbaut.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Warum sind Ihre Preise g&uuml;nstiger als bei anderen Agenturen?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Weil wir anders strukturiert sind. Klassische Agenturen haben B&uuml;rofläche, Projektmanager, Designteams, Kundenberater und lange Abstimmungsketten &ndash; all das schl&auml;gt sich im Preis nieder. Bei EWD arbeiten Sie direkt mit den beiden Gr&uuml;ndern Daniel und Flavio. Keine Zwischenebenen, kein interner Koordinationsaufwand. Dazu nutzen wir moderne Werkzeuge und zeitgem&auml;&szlig;e Arbeitsprozesse, die Qualit&auml;t und Tempo verbessern, ohne die Kosten nach oben zu treiben. Das Ergebnis: Sie erhalten die Qualit&auml;t einer professionellen Webagentur &ndash; zum Preis eines fokussierten, direkt arbeitenden Teams. Zum Vergleich: Vergleichbare Projekte kosten bei etablierten Agenturen zwischen 3.500 und 8.000&nbsp;&euro;.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Gibt es versteckte Kosten oder ein Abo?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Nein. Die Projektpakete (Website bzw. Website + KI-Agent) sind eine einmalige Zahlung ohne Abo. Was im Angebot steht, zahlen Sie &ndash; keine Nachkalkulation, kein Stundenhonorar, keine Folgekosten. Hosting und laufende Betreuung sind optionale monatliche Leistungen, die Sie monatlich k&uuml;ndigen k&ouml;nnen. Au&szlig;erdem: Sie zahlen erst, wenn Ihre Website fertiggestellt ist und Ihnen gef&auml;llt. Keine Vorauszahlung, kein finanzielles Risiko f&uuml;r Sie.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Kann ich meine bestehende Domain behalten?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Ja, selbstverst&auml;ndlich. Wenn Sie bereits eine Domain haben &ndash; zum Beispiel ihr-betrieb.de &ndash; &uuml;bernehmen wir diese nahtlos in das neue Projekt. Wir k&uuml;mmern uns um alle technischen Einstellungen (DNS-Konfiguration), sodass Ihre gewohnte Adresse auf die neue Website zeigt. Wenn Sie noch keine Domain haben, helfen wir Ihnen bei der Auswahl und Registrierung einer passenden Adresse.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Was passiert nach dem Launch &ndash; wer k&uuml;mmert sich um die Website?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Nach dem Launch haben Sie zwei M&ouml;glichkeiten. Entweder Sie &uuml;bernehmen die Website vollst&auml;ndig selbst &ndash; wir &uuml;bergeben alles sauber dokumentiert und erkl&auml;ren Ihnen, was Sie wissen m&uuml;ssen. Oder Sie buchen unser optionales Hosting &amp; Betreuungspaket ab 29&nbsp;&euro;/Monat: Darin enthalten sind zuverl&auml;ssiges Hosting mit hoher Verf&uuml;gbarkeit, SSL-Zertifikat, Sicherheitschecks, kleine Textanpassungen auf Anfrage und ein direkter Ansprechpartner per WhatsApp. Kein Ticketsystem, keine Warteschlange. Sie schreiben uns, wir antworten. Pers&ouml;nlich.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Muss ich mich mit Technik auskennen?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Kein bisschen. Wir &uuml;bernehmen alles von A bis Z: Struktur, Design, Texte, SEO und technische Umsetzung. Sie m&uuml;ssen nicht wissen, wie eine Website programmiert wird oder was Begriffe wie &bdquo;Meta-Tag&ldquo; oder &bdquo;SSL&ldquo; bedeuten. Wir erkl&auml;ren Ihnen, was wir tun und was es f&uuml;r Ihr Unternehmen bedeutet &ndash; in verst&auml;ndlicher Sprache, ohne Fachjargon. Was Sie einbringen: Ihr Wissen &uuml;ber Ihr Unternehmen, Ihre Leistungen und Ihre Kunden. Das ist alles, was wir brauchen.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Betreut ihr auch Unternehmen au&szlig;erhalb Friedrichshafens?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Ja. Unser Schwerpunkt liegt in Friedrichshafen und der Bodensee-Region &ndash; Ravensburg, Konstanz, Lindau, &Uuml;berlingen, Meersburg, Tettnang und Umgebung. Pers&ouml;nliche Treffen sind in dieser Region jederzeit m&ouml;glich. F&uuml;r Unternehmen weiter entfernt arbeiten wir per Video-Call und digitalem Austausch &ndash; das funktioniert reibungslos und hat keinen Einfluss auf Qualit&auml;t oder Preis. Mehrere unserer Anfragen kommen bereits aus der gesamten Bodensee-Umgebung.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <h3>Wie unterscheidet sich Ihr KI-Agent von einem normalen Chatbot?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Ein klassischer Chatbot arbeitet mit festen Entscheidungsb&auml;umen &ndash; er kennt nur die Antworten, die vorab einprogrammiert wurden, und scheitert bei jeder unerwarteten Formulierung. Unser KI-Agent basiert auf moderner, sprachbasierter KI: Er versteht den Kontext einer Frage und kann sinnvoll antworten, auch wenn der Kunde anders fragt als erwartet. Der entscheidende Unterschied: Wir richten ihn vollst&auml;ndig auf Ihr Unternehmen ein &ndash; mit Ihren Leistungen, Preisen, &Ouml;ffnungszeiten und Ihrem Ton. Das Ergebnis klingt nach Ihrem Unternehmen, nicht nach einem Standard-System. Und wenn eine Anfrage den Rahmen des KI-Agenten &uuml;bersteigt, leitet er diese direkt mit dem vollst&auml;ndigen Gespr&auml;chsverlauf an Sie weiter &ndash; damit Sie sofort im Bild sind und informiert reagieren k&ouml;nnen.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="wrap">
+        <h2>Bereit? Dann schreiben Sie uns.</h2>
+        <p>
+          Keine Verpflichtung, kein Standardpaket. Wir schauen uns Ihre Situation an und sagen Ihnen ehrlich, ob und wie wir helfen k&ouml;nnen.
+        </p>
+        <div class="cta-btns">
+          <a href="https://evowebdesign.de/kontakt" class="btn btn-primary">Kostenlos anfragen &rarr;</a>
+          <a href="tel:+491717031722" class="btn btn-ghost">+49 171 7031722</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="https://evowebdesign.de/" class="footer-logo">
+            <img src="logo-nobg.png" alt="Evolved Web Designs Logo" width="32" height="32" />
+            <span>Evolved Web Designs</span>
+          </a>
+          <p class="footer-tagline">Webdesign &amp; KI-Bot aus Friedrichshafen. F&uuml;r Unternehmen am Bodensee, die online Ergebnisse wollen.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="icon-instagram.png" alt="" width="14" height="14" />
+            </a>
+            <a href="https://tiktok.com/@evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <img src="icon-tiktok.png" alt="" width="14" height="14" />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Leistungen</h4>
+          <a href="https://evowebdesign.de/leistungen">Website + KI-Bot</a>
+          <a href="https://evowebdesign.de/leistungen">Lokale SEO</a>
+          <a href="https://evowebdesign.de/leistungen">Hosting &amp; Betreuung</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Unternehmen</h4>
+          <a href="https://evowebdesign.de/ueber-uns">&Uuml;ber uns</a>
+          <a href="https://evowebdesign.de/projekte">Projekte</a>
+          <a href="https://evowebdesign.de/konditionen">Angebote</a>
+          <a href="https://evowebdesign.de/kontakt">Kontakt</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <a href="tel:+491717031722">+49 171 7031722</a>
+          <a href="mailto:kontakt@evowebdesign.de">kontakt@evowebdesign.de</a>
+          <a href="https://evowebdesign.de/kontakt">Kostenlos anfragen</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Evolved Web Designs GbR &middot; Friedrichshafen am Bodensee</p>
+        <div class="footer-legal">
+          <a href="https://evowebdesign.de/impressum">Impressum</a>
+          <a href="https://evowebdesign.de/datenschutz">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    // ── Header scroll ──
+    var hdr=document.getElementById('hdr');
+    var menuBtn=document.getElementById('menuBtn');
+    var navEl=document.getElementById('navLinks');
+    window.addEventListener('scroll',function(){hdr.className=window.scrollY>30?'scrolled':'top';},{passive:true});
+    menuBtn.addEventListener('click',function(){
+      var open=navEl.classList.toggle('open');
+      menuBtn.classList.toggle('open',open);
+      menuBtn.setAttribute('aria-expanded',''+open);
+    });
+    navEl.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        navEl.classList.remove('open');
+        menuBtn.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      });
+    });
+
+    // ── FAQ accordion ──
+    document.querySelectorAll('.faq-q').forEach(function(q){
+      q.addEventListener('click',function(){
+        var item=q.closest('.faq-item');
+        var isOpen=item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');});
+        if(!isOpen) item.classList.add('open');
+      });
+    });
+
+    // ── Scroll reveal ──
+    if('IntersectionObserver' in window){
+      var s=document.createElement('style');
+      s.textContent='.rv{opacity:0;transform:translateY(20px)}.rv.vi{opacity:1;transform:none;transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1)}';
+      document.head.appendChild(s);
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(!e.isIntersecting)return;
+          var el=e.target;
+          var idx=Array.from(el.parentElement.children).filter(function(c){return c.classList.contains('rv');}).indexOf(el);
+          setTimeout(function(){el.classList.add('vi');},idx*80);
+          io.unobserve(el);
+        });
+      },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
+      var _els=document.querySelectorAll('.price-grid,.step,.faq-item');
+    _els.forEach(function(el){el.classList.add('rv');});
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      _els.forEach(function(el){io.observe(el);});
+    });});
+    }
+  })();
+  </script>
+
+</body>
+</html>
