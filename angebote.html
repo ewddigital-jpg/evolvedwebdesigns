@@ -116,11 +116,13 @@
 
     /* ── PRICE CARDS ── */
     .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin-bottom:2rem }
-    .pc { background:var(--bg-card); padding:2rem 1.75rem; display:flex; flex-direction:column; gap:0 }
+    .pc { background:var(--bg-card); padding:2rem 1.75rem; display:flex; flex-direction:column; gap:0; position:relative }
     .pc.best { background:var(--bg-raised); position:relative }
-    .best-tag { display:inline-block; font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; color:var(--primary-light); border:1px solid rgba(0,102,255,0.3); border-radius:999px; padding:.2rem .65rem; margin-bottom:.75rem; align-self:flex-start }
+    .pc.best { padding-top:2.75rem }
+    .pc.best::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--primary),var(--accent)); border-radius:var(--radius) var(--radius) 0 0 }
+    .best-tag { position:absolute; top:0; left:50%; transform:translateX(-50%) translateY(-50%); background:linear-gradient(135deg,var(--primary),var(--accent)); color:#fff; font-size:.7rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; border-radius:999px; padding:.3rem .9rem; white-space:nowrap; box-shadow:0 2px 14px rgba(0,102,255,0.45) }
     .pc-name { font-family:'Poppins',sans-serif; font-size:1rem; font-weight:800; margin-bottom:.3rem }
-    .pc-sub { font-size:.82rem; color:var(--text-secondary); margin-bottom:1.1rem; line-height:1.6 }
+    .pc-sub { font-size:.82rem; color:var(--text-secondary); margin-bottom:1.1rem; line-height:1.6; min-height:3rem }
     .pc-price { font-family:'Poppins',sans-serif; font-size:2.2rem; font-weight:900; color:var(--text); line-height:1; margin-bottom:.3rem }
     .pc-price span { font-size:.85rem; font-weight:500; color:var(--text-secondary) }
     .pc-note { font-size:.78rem; color:var(--text-secondary); margin-bottom:1.5rem }
