@@ -132,6 +132,23 @@
     .pc-btn-primary:hover { background:var(--primary-dark) }
     .pc-btn-ghost { border:1px solid var(--border-mid); color:var(--text-secondary) }
     .pc-btn-ghost:hover { border-color:var(--border-active); color:var(--text) }
+    /* ── HOSTING ADD-ON BOX ── */
+    .hosting-box { max-width:720px; margin:2.5rem auto 0; background:var(--bg-raised); border:1px solid var(--border); border-radius:var(--radius); padding:1.75rem 2rem }
+    .hosting-box-top { display:flex; align-items:center; gap:1rem; margin-bottom:1rem; flex-wrap:wrap }
+    .hosting-tag { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); border:1px solid rgba(0,217,255,0.25); border-radius:999px; padding:.2rem .65rem; flex-shrink:0 }
+    .hosting-title { font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:800; color:var(--text) }
+    .hosting-price { font-size:1.5rem; font-weight:900; font-family:'Poppins',sans-serif; color:var(--text) }
+    .hosting-price span { font-size:.82rem; font-weight:500; color:var(--text-secondary) }
+    .hosting-feats { display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:.75rem }
+    .hosting-feat { font-size:.83rem; color:var(--text-secondary); display:flex; gap:.4rem; align-items:center }
+    .hosting-feat::before { content:'–'; color:var(--accent); font-weight:700; flex-shrink:0 }
+
+    /* ── INDIVIDUAL CTA ── */
+    .individual-cta { max-width:520px; margin:2rem auto 0; text-align:center; padding:2rem; border:1px solid var(--border); border-radius:var(--radius); background:var(--bg-card) }
+    .individual-cta h3 { font-size:1.05rem; font-weight:700; color:var(--text); margin:0 0 .5rem }
+    .individual-cta p { font-size:.86rem; color:var(--text-secondary); line-height:1.7; margin:0 0 1.5rem }
+    .btn-gradient { display:inline-block; padding:.75rem 2rem; background:linear-gradient(135deg,var(--primary),var(--accent)); color:#fff; font-weight:700; font-size:.9rem; border-radius:999px; text-decoration:none; letter-spacing:.01em; transition:opacity .2s }
+    .btn-gradient:hover { opacity:.88 }
 
     /* ── FAQ ACCORDION ── */
     .faq-list { display:flex; flex-direction:column; gap:0 }
@@ -319,28 +336,30 @@
         </div>
 
         <!-- HOSTING ADD-ON -->
-        <div style="display:flex;justify-content:center;margin:2.5rem auto 0;">
-          <div style="display:inline-flex;align-items:center;gap:1.25rem;background:var(--bg-raised);border:1px solid var(--border);border-radius:999px;padding:.75rem 1.5rem;flex-wrap:wrap;max-width:100%;">
-            <span style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);white-space:nowrap">Add-on</span>
-            <span style="width:1px;height:16px;background:var(--border);flex-shrink:0;display:inline-block"></span>
+        <div class="hosting-box">
+          <div class="hosting-box-top">
+            <span class="hosting-tag">Add-on</span>
             <div>
-              <span style="font-size:.9rem;font-weight:700;color:var(--text)">Hosting &amp; Betreuung</span>
-              <span style="font-size:.82rem;color:var(--text-secondary);margin-left:.5rem">— 19 €/Monat, monatlich kündbar</span>
+              <div class="hosting-title">Hosting &amp; Betreuung</div>
+              <div style="font-size:.82rem;color:var(--text-secondary);margin-top:.15rem">Optional nach dem Launch. Kein Stress, kein Ticketsystem.</div>
             </div>
-            <span style="width:1px;height:16px;background:var(--border);flex-shrink:0;display:inline-block"></span>
-            <div style="display:flex;gap:1rem;flex-wrap:wrap">
-              <span style="font-size:.78rem;color:var(--text-secondary)">✓ Updates &amp; Backups</span>
-              <span style="font-size:.78rem;color:var(--text-secondary)">✓ Änderungen auf Anfrage</span>
-              <span style="font-size:.78rem;color:var(--text-secondary)">✓ Direkter Kontakt</span>
+            <div style="margin-left:auto">
+              <div class="hosting-price">ab 29 <span>€ / Monat</span></div>
+              <div style="font-size:.75rem;color:var(--text-secondary);text-align:right">monatlich kündbar</div>
             </div>
+          </div>
+          <div class="hosting-feats">
+            <span class="hosting-feat">Updates, Backups und Sicherheitschecks</span>
+            <span class="hosting-feat">Kleine Änderungen auf Anfrage</span>
+            <span class="hosting-feat">Direkter Kontakt statt Ticketsystem</span>
           </div>
         </div>
 
         <!-- INDIVIDUELLE ANFORDERUNGEN -->
-        <div style="max-width:520px;margin:2.5rem auto 0;text-align:center;padding:2rem;border:1px solid var(--border);border-radius:14px;background:var(--bg-card);">
-          <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin:0 0 .5rem">Individuelle Anforderungen?</h3>
-          <p style="font-size:.86rem;color:var(--text-secondary);line-height:1.7;margin:0 0 1.5rem">Nicht jedes Projekt passt in ein Paket. Wenn Sie etwas Spezielles planen, erstellen wir gerne eine individuelle Lösung.</p>
-          <a href="kontakt" style="display:inline-block;padding:.75rem 2rem;background:linear-gradient(135deg,#0066FF,#00D9FF);color:#fff;font-weight:700;font-size:.9rem;border-radius:999px;text-decoration:none;letter-spacing:.01em">Kontakt aufnehmen →</a>
+        <div class="individual-cta">
+          <h3>Individuelle Anforderungen?</h3>
+          <p>Nicht jedes Projekt passt in ein Paket.<br />Wenn Sie etwas Spezielles planen, erstellen wir gerne eine individuelle Lösung.</p>
+          <a href="kontakt" class="btn-gradient">Kontakt aufnehmen →</a>
         </div>
       </div>
     </section>
@@ -666,3 +685,4 @@
 
 </body>
 </html>
+
