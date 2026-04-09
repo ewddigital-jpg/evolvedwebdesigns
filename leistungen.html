@@ -95,6 +95,9 @@
     .nav-cta { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); color:#fff!important; padding:.58rem 1.3rem; border-radius:8px; font-weight:700; font-size:.85rem; box-shadow:0 2px 14px rgba(0,102,255,.28); transition:transform .2s,box-shadow .2s }
     .nav-cta:hover { transform:translateY(-1px); box-shadow:0 4px 22px rgba(0,102,255,.45) }
     .nav-cta::after { display:none!important }
+    .nav-highlight { color:var(--accent)!important; border:1px solid rgba(0,217,255,0.3); padding:.3rem .85rem; border-radius:6px; background:rgba(0,217,255,0.06); font-weight:600 }
+    .nav-highlight:hover { background:rgba(0,217,255,0.13)!important; border-color:rgba(0,217,255,0.55); color:var(--accent)!important }
+    .nav-highlight::after { display:none!important }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none; background:none }
     .hamburger span { width:22px; height:1.5px; background:var(--text-secondary); border-radius:2px; transition:transform .3s,opacity .3s }
     .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(4.5px,4.5px) }
@@ -275,6 +278,7 @@
       </button>
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="https://evowebdesign.de/leistungen" class="active">Leistungen</a></li>
+        <li><a href="https://evowebdesign.de/ki-agent-website" class="nav-highlight">KI-Agent</a></li>
         <li><a href="https://evowebdesign.de/projekte">Projekte</a></li>
         <li><a href="https://evowebdesign.de/ueber-uns">Über uns</a></li>
         <li><a href="https://evowebdesign.de/angebote">Angebote</a></li>
