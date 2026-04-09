@@ -360,5 +360,166 @@
   }
   </script>
 
+
+<!-- EWD KI-Agent Widget -->
+<style>
+  #ewd-chat{position:fixed;bottom:24px;left:24px;z-index:9998;font-family:'Inter',sans-serif}
+  #ewd-toggle{
+    width:60px;height:60px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.15);cursor:pointer;
+    background:#0D1117;box-shadow:0 4px 24px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,0.05);
+    transition:transform .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;
+    position:relative;padding:0;
+  }
+  #ewd-toggle:hover{transform:scale(1.07);box-shadow:0 6px 32px rgba(0,0,0,.7),0 0 0 1px rgba(0,102,255,0.4)}
+  #ewd-toggle img{width:34px;height:34px;object-fit:contain;border-radius:50%}
+  #ewd-badge{
+    position:absolute;top:-3px;right:-3px;width:20px;height:20px;border-radius:50%;
+    background:#ff3b3b;color:#fff;font-size:10px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;
+    border:2px solid #0D1117;
+  }
+  #ewd-box{
+    display:none;position:absolute;bottom:74px;left:0;width:340px;
+    background:#0D1117;border:1px solid rgba(255,255,255,0.1);
+    border-radius:18px;overflow:hidden;
+    box-shadow:0 16px 56px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,0.05);
+  }
+  #ewd-header{
+    background:#161B22;border-bottom:1px solid rgba(255,255,255,0.07);
+    padding:14px 16px;display:flex;align-items:center;gap:11px;
+  }
+  .ewd-hlogo{
+    width:40px;height:40px;border-radius:50%;background:#0D1117;
+    border:1px solid rgba(255,255,255,0.1);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;
+  }
+  .ewd-hlogo img{width:26px;height:26px;object-fit:contain}
+  .ewd-ht{flex:1}
+  .ewd-ht strong{display:block;color:#F0F6FC;font-size:.88rem;font-weight:700}
+  .ewd-on{display:flex;align-items:center;gap:5px;font-size:.72rem;color:#8B949E;margin-top:2px}
+  .ewd-dt{width:7px;height:7px;border-radius:50%;background:#4ade80;flex-shrink:0}
+  #ewd-close{background:none;border:none;color:#8B949E;cursor:pointer;font-size:1rem;padding:6px;line-height:1;border-radius:6px;transition:background .2s}
+  #ewd-close:hover{background:rgba(255,255,255,0.06);color:#F0F6FC}
+  #ewd-msgs{height:290px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.08) transparent}
+  .em{display:flex;gap:8px;align-items:flex-end;max-width:88%}
+  .em.u{align-self:flex-end;flex-direction:row-reverse}
+  .emav{
+    width:28px;height:28px;border-radius:50%;background:#161B22;border:1px solid rgba(255,255,255,0.08);
+    display:flex;align-items:center;justify-content:center;font-size:.72rem;flex-shrink:0;overflow:hidden;
+  }
+  .emav img{width:18px;height:18px;object-fit:contain}
+  .eb{padding:10px 13px;border-radius:14px;font-size:.84rem;line-height:1.6;word-break:break-word}
+  .em.b .eb{background:#161B22;color:#C9D1D9;border:1px solid rgba(255,255,255,0.06);border-radius:4px 14px 14px 14px}
+  .em.u .eb{background:linear-gradient(135deg,#0066FF,#0050CC);color:#fff;border-radius:14px 14px 14px 4px}
+  .etyp span{display:inline-block;width:5px;height:5px;border-radius:50%;background:#8B949E;animation:etb .9s infinite;margin:0 1px}
+  .etyp span:nth-child(2){animation-delay:.2s}.etyp span:nth-child(3){animation-delay:.4s}
+  @keyframes etb{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+  .eqrs{display:flex;flex-wrap:wrap;gap:6px;padding:2px 14px 12px}
+  .eqr{
+    background:transparent;border:1px solid rgba(0,102,255,0.35);color:#4D94FF;
+    padding:5px 12px;border-radius:20px;font-size:.78rem;cursor:pointer;
+    font-family:'Inter',sans-serif;transition:all .2s;
+  }
+  .eqr:hover{background:rgba(0,102,255,0.12);border-color:rgba(0,102,255,0.6)}
+  #ewd-ia{padding:10px 12px;border-top:1px solid rgba(255,255,255,0.06);display:flex;gap:8px;align-items:center;background:#0D1117}
+  #ewd-inp{
+    flex:1;background:#161B22;border:1px solid rgba(255,255,255,0.08);
+    border-radius:10px;padding:9px 12px;color:#F0F6FC;font-size:.84rem;
+    outline:none;font-family:'Inter',sans-serif;resize:none;
+    transition:border-color .2s;
+  }
+  #ewd-inp:focus{border-color:rgba(0,102,255,0.5)}
+  #ewd-inp::placeholder{color:#8B949E}
+  #ewd-snd{
+    width:38px;height:38px;border-radius:10px;border:none;cursor:pointer;
+    background:linear-gradient(135deg,#0066FF,#0050CC);color:#fff;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    transition:transform .15s,box-shadow .15s;font-size:.95rem;
+  }
+  #ewd-snd:hover{transform:scale(1.06);box-shadow:0 4px 14px rgba(0,102,255,.45)}
+</style>
+
+<div id="ewd-chat">
+  <div id="ewd-box">
+    <div id="ewd-header">
+      <div class="ewd-hlogo">
+        <img src="logo-nobg.png" alt="EWD" onerror="this.style.display='none';this.parentElement.innerHTML='&#x1F916;'" />
+      </div>
+      <div class="ewd-ht">
+        <strong>KI-Assistent</strong>
+        <div class="ewd-on"><span class="ewd-dt"></span>Online &middot; antwortet sofort</div>
+      </div>
+      <button id="ewd-close" onclick="ewdT()" title="Schlie&#xDF;en">&#x2715;</button>
+    </div>
+    <div id="ewd-msgs"></div>
+    <div class="eqrs" id="ewd-qrs">
+      <button class="eqr" onclick="ewdS('Was kostet eine Website?')">&#x1F4B0; Preise</button>
+      <button class="eqr" onclick="ewdS('Ich m&#xF6;chte einen Termin buchen')">&#x1F4C5; Termin</button>
+      <button class="eqr" onclick="ewdS('Welche Leistungen bietet ihr an?')">&#x2139;&#xFE0F; Leistungen</button>
+    </div>
+    <div id="ewd-ia">
+      <textarea id="ewd-inp" placeholder="Ihre Frage..." rows="1"
+        onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();ewdS()}"
+        oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,100)+'px'"></textarea>
+      <button id="ewd-snd" onclick="ewdS()">&#x279C;</button>
+    </div>
+  </div>
+
+  <button id="ewd-toggle" onclick="ewdT()" title="Chat &#xF6;ffnen">
+    <img src="logo-nobg.png" alt="EWD" onerror="this.outerHTML='<span style=\'font-size:1.4rem\'>&#x1F916;</span>'" />
+    <div id="ewd-badge">1</div>
+  </button>
+</div>
+
+<script>
+(function(){
+  var API='https://ewd-ki-agent.vercel.app/api/chat',CLIENT='evowebdesign',msgs=[],isOpen=false,busy=false;
+  var LOGO='logo-nobg.png';
+  setTimeout(function(){
+    addB('Hallo! &#x1F44B; Ich bin der KI-Assistent von Evolved Web Designs. Ich beantworte Ihre Fragen und kann direkt einen Termin f&#xFC;r Sie buchen. Wie kann ich Ihnen helfen?');
+  },700);
+  window.ewdT=function(){
+    isOpen=!isOpen;
+    var box=document.getElementById('ewd-box');
+    box.style.display=isOpen?'block':'none';
+    document.getElementById('ewd-badge').style.display='none';
+    if(isOpen) setTimeout(function(){document.getElementById('ewd-inp').focus();},50);
+  };
+  window.ewdS=async function(t){
+    var inp=document.getElementById('ewd-inp'),m=(t||inp.value).trim();
+    if(!m||busy)return;
+    inp.value='';inp.style.height='auto';
+    document.getElementById('ewd-qrs').style.display='none';
+    addU(m);msgs.push({role:'user',content:m});showT();busy=true;
+    try{
+      var r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:msgs,clientId:CLIENT})});
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      var d=await r.json();
+      hideT();busy=false;
+      addB(d.reply||'Entschuldigung, bitte nochmal versuchen.');
+      msgs.push({role:'assistant',content:d.reply});
+    }catch(e){
+      hideT();busy=false;
+      addB('Entschuldigung, ich bin gerade nicht erreichbar. Bitte schreiben Sie uns direkt: <a href="mailto:kontakt@evowebdesign.de" style="color:#4D94FF">kontakt@evowebdesign.de</a>');
+    }
+  };
+  function addU(t){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em u"><div class="eb">'+esc(t)+'</div><div class="emav">Sie</div></div>';el.scrollTop=el.scrollHeight;}
+  function addB(t){
+    var el=document.getElementById('ewd-msgs');
+    var av='<div class="emav"><img src="'+LOGO+'" onerror="this.outerHTML='&#x1F916;'" /></div>';
+    el.innerHTML+='<div class="em b">'+av+'<div class="eb">'+t+'</div></div>';
+    el.scrollTop=el.scrollHeight;
+  }
+  function showT(){
+    var el=document.getElementById('ewd-msgs');
+    var av='<div class="emav"><img src="'+LOGO+'" onerror="this.outerHTML='&#x1F916;'" /></div>';
+    el.innerHTML+='<div class="em b" id="ewd-t">'+av+'<div class="eb etyp"><span></span><span></span><span></span></div></div>';
+    el.scrollTop=el.scrollHeight;
+  }
+  function hideT(){var t=document.getElementById('ewd-t');if(t)t.remove();}
+  function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/
+/g,'<br>');}
+})();
+</script>
 </body>
 </html>
