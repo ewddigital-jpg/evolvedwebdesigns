@@ -415,6 +415,7 @@
 
     /* ── SCARCITY BADGE ── */
     .slots-badge { display:inline-flex; align-items:center; gap:.4rem; margin-top:.85rem; font-size:.8rem; font-weight:700; color:rgba(0,200,255,.9); background:rgba(0,150,255,.08); border:1px solid rgba(0,150,255,.22); border-radius:999px; padding:.3rem .9rem; }
+    @media(max-width:640px){.slots-badge{display:none!important}}
 
     /* ── TESTIMONIAL ── */
     .testi-rating { display:flex; align-items:center; gap:.5rem }
@@ -1031,9 +1032,13 @@
   </div>
   <script>
   setTimeout(function(){
-    if(!sessionStorage.getItem('ub')){
+    if(!sessionStorage.getItem('ub')&&window.innerWidth>640){
       var b=document.getElementById('urgBar');
-      if(b){b.style.display='flex';var wa=document.querySelector('.wa');if(wa)wa.style.bottom='80px';}
+      if(b){
+        b.style.display='flex';
+        var wa=document.querySelector('.wa');if(wa)wa.style.bottom='80px';
+        var ki=document.getElementById('ewd-chat');if(ki)ki.style.bottom='80px';
+      }
     }
   },5000);
   </script>
