@@ -764,8 +764,7 @@
     el.scrollTop=el.scrollHeight;
   }
   function hideT(){var t=document.getElementById('ewd-t');if(t)t.remove();}
-  function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/
-/g,'<br>');}
+  function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');}
 })();
 </script>
 </body>
