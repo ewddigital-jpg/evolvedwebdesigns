@@ -128,14 +128,18 @@
     .footer-legal a:hover{color:var(--text)}
     @media(max-width:1024px){.footer-top{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
     @media(max-width:768px){.footer-top{grid-template-columns:1fr;gap:2rem}.footer-brand{grid-column:auto}.footer-bottom{flex-direction:column;align-items:flex-start;gap:.5rem}}
-  </style>
+  
+    .nav-highlight{color:var(--primary)!important;font-weight:600!important}
+    .nav-links a.active{color:var(--text)!important;font-weight:600}
+    .nav-links a.active::after{width:100%!important}
+    </style>
 </head>
 <body>
 
       <header id="hdr" class="top">
     <nav aria-label="Hauptnavigation">
       <a href="https://evowebdesign.de/" class="logo" aria-label="Evolved Web Designs – Startseite">
-        <img src="logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="44" height="44" />
+        <img src="logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="42" height="42" />
         <span class="logo-name">Evolved Web Designs</span>
       </a>
       <button class="hamburger" id="menuBtn" aria-label="Menue" aria-expanded="false">
@@ -147,7 +151,7 @@
         <li><a href="https://evowebdesign.de/projekte">Projekte</a></li>
         <li><a href="https://evowebdesign.de/ueber-uns">Über uns</a></li>
         <li><a href="https://evowebdesign.de/angebote">Angebote</a></li>
-        <li><a href="https://evowebdesign.de/kontakt" class="cta">Jetzt anfragen</a></li>
+        <li><a href="https://evowebdesign.de/kontakt" class="nav-cta">Jetzt anfragen</a></li>
       </ul>
     </nav>
   </header>
