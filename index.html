@@ -414,8 +414,7 @@
     }
 
     /* ── SCARCITY BADGE ── */
-    .slots-badge { display:inline-flex; align-items:center; gap:.4rem; margin-top:.85rem; font-size:.8rem; font-weight:700; color:rgba(0,200,255,.9); background:rgba(0,150,255,.08); border:1px solid rgba(0,150,255,.22); border-radius:999px; padding:.3rem .9rem; }
-    @media(max-width:640px){.slots-badge{display:none!important}}
+    @media(max-width:640px){}
 
     /* ── TESTIMONIAL ── */
     .testi-rating { display:flex; align-items:center; gap:.5rem }
@@ -637,7 +636,6 @@
         <div style="max-width:560px;margin-bottom:2.5rem">
           <span class="label">Preise</span>
           <h2>Webdesign Friedrichshafen. <span class="accent">Klare Festpreise.</span></h2>
-          <div class="slots-badge">&#9889; Noch 2 freie Projektplätze im April — <a href="#anfrage" style="color:inherit;text-decoration:underline;text-underline-offset:3px">jetzt sichern</a></div>
           <p style="color:var(--text-secondary);margin-top:.65rem;font-size:.95rem;line-height:1.8">Einmalige Zahlung, kein Abo. Was Sie im Angebot sehen, zahlen Sie. Keine Nachkalkulation.</p>
         </div>
 
@@ -1014,33 +1012,6 @@
         if(!e.isIntersecting)return;
         var el=e.target;
         var i=Array.from(el.parentElement.children).filter(function(c){return c.classList.contains('rv');}).indexOf(el);
-        setTimeout(function(){el.classList.add('vi');},i*70);
-        io.unobserve(el);
-      });
-    },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
-    var _els=document.querySelectorAll('.srv,.pc,.step,.ki-feat,.astat,.clink');
-    _els.forEach(function(el){el.classList.add('rv');});
-    requestAnimationFrame(function(){requestAnimationFrame(function(){
-      _els.forEach(function(el){io.observe(el);});
-    });});
-  }
-  </script>
-  <div id="urgBar" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8888;background:rgba(10,14,20,0.97);color:#fff;padding:.7rem 5rem .7rem 1rem;display:none;align-items:center;gap:1rem;font-size:.85rem;backdrop-filter:blur(16px);border-top:2px solid rgba(0,102,255,0.6);box-shadow:0 -4px 24px rgba(0,0,0,0.4)">
-    <button onclick="document.getElementById('urgBar').style.display='none';sessionStorage.setItem('ub','1');var wa=document.querySelector('.wa');if(wa)wa.style.bottom='24px'" style="background:none;border:none;color:rgba(255,255,255,.45);cursor:pointer;font-size:1.1rem;line-height:1;padding:.2rem .4rem;flex-shrink:0" aria-label="Schliessen">&times;</button>
-    <span style="flex:1">&#9889; <strong style="color:#fff">Noch 2 freie Projektplätze im April</strong> <span style="color:rgba(255,255,255,.6)">— danach wieder ausgebucht.</span></span>
-    <a href="#anfrage" style="background:linear-gradient(135deg,#0066FF,#00D9FF);color:#fff;font-weight:800;font-size:.78rem;padding:.38rem .95rem;border-radius:999px;text-decoration:none;white-space:nowrap;flex-shrink:0">Jetzt sichern &rarr;</a>
-  </div>
-  <script>
-  setTimeout(function(){
-    if(!sessionStorage.getItem('ub')&&window.innerWidth>640){
-      var b=document.getElementById('urgBar');
-      if(b){
-        b.style.display='flex';
-        var wa=document.querySelector('.wa');if(wa)wa.style.bottom='80px';
-        var ki=document.getElementById('ewd-chat');if(ki)ki.style.bottom='80px';
-      }
-    }
-  },5000);
   </script>
 
 <!-- EWD KI-Agent Widget -->
