@@ -39,10 +39,7 @@
   </script>
 
   <link rel="preload" as="image" href="logo-nobg.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
-
+      
   <style>
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box }
     :root {
@@ -608,6 +605,72 @@
   })();
   </script>
 
+<!-- EWD Cookie Banner -->
+<style>
+  #ewd-ckb{
+    position:fixed;bottom:0;left:0;right:0;z-index:10000;
+    background:linear-gradient(135deg,#161B22,#0f1520);
+    border-top:1px solid rgba(0,102,255,0.25);
+    padding:18px 28px;
+    display:none;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    box-shadow:0 -6px 32px rgba(0,0,0,0.6);
+    font-family:'Inter',system-ui,sans-serif;
+    animation:ewdCkSlide .35s ease;
+  }
+  @keyframes ewdCkSlide{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
+  #ewd-ckb-text{flex:1;min-width:220px}
+  #ewd-ckb-text strong{display:block;color:#F0F6FC;font-size:.9rem;font-weight:700;margin-bottom:5px}
+  #ewd-ckb-text p{color:#8B949E;font-size:.8rem;line-height:1.6;margin:0}
+  #ewd-ckb-text a{color:#4D94FF;text-decoration:none}
+  #ewd-ckb-text a:hover{text-decoration:underline}
+  .ewd-ckb-btns{display:flex;gap:10px;align-items:center;flex-shrink:0;flex-wrap:wrap}
+  .ewd-ckb-deny{
+    background:transparent;color:#8B949E;border:1px solid rgba(255,255,255,.15);
+    padding:9px 18px;border-radius:8px;cursor:pointer;font-size:.8rem;font-weight:500;
+    font-family:'Inter',system-ui,sans-serif;transition:all .15s;white-space:nowrap;
+  }
+  .ewd-ckb-deny:hover{border-color:rgba(255,255,255,.3);color:#C9D1D9}
+  .ewd-ckb-accept{
+    background:linear-gradient(135deg,#0066FF,#0050CC);color:#fff;border:none;
+    padding:9px 20px;border-radius:8px;cursor:pointer;font-size:.8rem;font-weight:600;
+    font-family:'Inter',system-ui,sans-serif;transition:transform .15s,box-shadow .15s;
+    box-shadow:0 2px 10px rgba(0,102,255,.35);white-space:nowrap;
+  }
+  .ewd-ckb-accept:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,102,255,.5)}
+  @media(max-width:600px){
+    #ewd-ckb{padding:14px 16px;flex-direction:column;align-items:flex-start}
+    .ewd-ckb-btns{width:100%}
+    .ewd-ckb-deny,.ewd-ckb-accept{flex:1;text-align:center;padding:10px}
+  }
+</style>
+<div id="ewd-ckb">
+  <div id="ewd-ckb-text">
+    <strong>🍪 Cookies &amp; Datenschutz</strong>
+    <p>Wir nutzen Google Fonts (externe Schriften) und einen KI-Chatbot. Chat-Nachrichten werden zur Verarbeitung an OpenAI (USA) übertragen. <a href="datenschutz">Datenschutzerklärung</a></p>
+  </div>
+  <div class="ewd-ckb-btns">
+    <button class="ewd-ckb-deny" onclick="ewdCkDeny()">Nur notwendige</button>
+    <button class="ewd-ckb-accept" onclick="ewdCkAccept()">Alle akzeptieren</button>
+  </div>
+</div>
+<script>
+(function(){
+  var k='ewd-consent',v=localStorage.getItem(k);
+  function loadFonts(){
+    if(document.querySelector('[data-ewdf]'))return;
+    var l=document.createElement('link');
+    l.rel='stylesheet';l.setAttribute('data-ewdf','1');
+    l.href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap';
+    document.head.appendChild(l);
+  }
+  if(v==='all'){loadFonts();return;}
+  if(v==='necessary')return;
+  setTimeout(function(){document.getElementById('ewd-ckb').style.display='flex';},900);
+  window.ewdCkAccept=function(){localStorage.setItem(k,'all');loadFonts();document.getElementById('ewd-ckb').style.display='none';};
+  window.ewdCkDeny=function(){localStorage.setItem(k,'necessary');document.getElementById('ewd-ckb').style.display='none';};
+})();
+</script>
+
 <!-- EWD KI-Agent Widget -->
 <style>
   /* ── Animations ── */
@@ -754,16 +817,16 @@
       box.style.flexDirection='column';
       chat.classList.add('ewd-open');
       document.getElementById('ewd-badge').style.display='none';
-      // WA-Bubble ausblenden auf Mobile
-      var wa=document.querySelector('.wa');
-      if(wa&&isMobile()) wa.style.display='none';
+      // WA-Bubble ausblenden (alle Geräte)
+      var wa=document.querySelector('.wa')||document.querySelector('.wa-float');
+      if(wa) wa.style.display='none';
       // Body-Scroll sperren auf Mobile
       if(isMobile()) document.body.style.overflow='hidden';
       setTimeout(function(){document.getElementById('ewd-inp').focus();},100);
     } else {
       box.style.display='none';
       chat.classList.remove('ewd-open');
-      var wa=document.querySelector('.wa');
+      var wa=document.querySelector('.wa')||document.querySelector('.wa-float');
       if(wa) wa.style.display='';
       document.body.style.overflow='';
     }
