@@ -193,6 +193,43 @@
       .hero-stats{flex-direction:column;align-items:center}
       .footer-top{grid-template-columns:1fr}
     }
+  
+    .nav-highlight{color:var(--primary)!important;font-weight:600!important}
+    .nav-links a.active{color:var(--text)!important;font-weight:600}
+    .nav-links a.active::after{width:100%!important}
+  
+  /* ── Scroll Animations ── */
+  .anim{opacity:0;transform:translateY(28px);transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1)}
+  .anim-l{opacity:0;transform:translateX(-32px);transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1)}
+  .anim-r{opacity:0;transform:translateX(32px);transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1)}
+  .anim-s{opacity:0;transform:scale(.96);transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1)}
+  .anim.in,.anim-l.in,.anim-r.in,.anim-s.in{opacity:1;transform:none}
+  .problem-grid .problem-card.anim:nth-child(1){transition-delay:.05s}
+  .problem-grid .problem-card.anim:nth-child(2){transition-delay:.18s}
+  .problem-grid .problem-card.anim:nth-child(3){transition-delay:.31s}
+  .cap-grid .cap-card.anim:nth-child(1){transition-delay:.05s}
+  .cap-grid .cap-card.anim:nth-child(2){transition-delay:.16s}
+  .cap-grid .cap-card.anim:nth-child(3){transition-delay:.27s}
+  .cap-grid .cap-card.anim:nth-child(4){transition-delay:.38s}
+  .industry-grid .industry-card.anim:nth-child(1){transition-delay:.04s}
+  .industry-grid .industry-card.anim:nth-child(2){transition-delay:.1s}
+  .industry-grid .industry-card.anim:nth-child(3){transition-delay:.16s}
+  .industry-grid .industry-card.anim:nth-child(4){transition-delay:.22s}
+  .industry-grid .industry-card.anim:nth-child(5){transition-delay:.28s}
+  .industry-grid .industry-card.anim:nth-child(6){transition-delay:.34s}
+  .industry-grid .industry-card.anim:nth-child(7){transition-delay:.40s}
+  .industry-grid .industry-card.anim:nth-child(8){transition-delay:.46s}
+  .steps-grid .step-item.anim:nth-child(1){transition-delay:.05s}
+  .steps-grid .step-item.anim:nth-child(2){transition-delay:.18s}
+  .steps-grid .step-item.anim:nth-child(3){transition-delay:.31s}
+  .steps-grid .step-item.anim:nth-child(4){transition-delay:.44s}
+  @keyframes hIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  .h-anim{opacity:0;animation:hIn .75s cubic-bezier(.4,0,.2,1) forwards}
+  .h-anim-1{animation-delay:.08s}
+  .h-anim-2{animation-delay:.22s}
+  .h-anim-3{animation-delay:.36s}
+  .h-anim-4{animation-delay:.50s}
+  .h-anim-5{animation-delay:.64s}
   </style>
 </head>
 <body>
@@ -208,7 +245,7 @@
       </button>
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="https://evowebdesign.de/leistungen">Leistungen</a></li>
-        <li><a href="https://evowebdesign.de/ki-agent-website" aria-current="page">KI-Agent</a></li>
+        <li><a href="https://evowebdesign.de/ki-agent-website" class="nav-highlight active">KI-Agent</a></li>
         <li><a href="https://evowebdesign.de/projekte">Projekte</a></li>
         <li><a href="https://evowebdesign.de/ueber-uns">Über uns</a></li>
         <li><a href="https://evowebdesign.de/angebote">Angebote</a></li>
@@ -228,16 +265,16 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <div class="section-tag">KI-Agent für lokale Unternehmen</div>
-        <h1>Beantwortet. Bucht.<br><span class="gradient-text">Qualifiziert. 24/7.</span></h1>
-        <p class="hero-sub">Ihr KI-Assistent antwortet sofort auf Kundenfragen, bucht Termine direkt im Chat und leitet qualifizierte Anfragen an Sie weiter — während Sie Ihr Geschäft führen.</p>
-        <div class="hero-stats">
+        <div class="section-tag h-anim h-anim-1">KI-Agent für lokale Unternehmen</div>
+        <h1 class="h-anim h-anim-2">Beantwortet. Bucht.<br><span class="gradient-text">Qualifiziert. 24/7.</span></h1>
+        <p class="hero-sub h-anim h-anim-3">Ihr KI-Assistent antwortet sofort auf Kundenfragen, bucht Termine direkt im Chat und leitet qualifizierte Anfragen an Sie weiter — während Sie Ihr Geschäft führen.</p>
+        <div class="hero-stats h-anim h-anim-4">
           <div class="hero-stat">⚡ Antwortzeit unter 3 Sek.</div>
           <div class="hero-stat">📅 Terminbuchung im Chat</div>
           <div class="hero-stat">🎯 Vorqualifizierte Anfragen</div>
           <div class="hero-stat">🔒 DSGVO-konform</div>
         </div>
-        <div class="hero-cta">
+        <div class="hero-cta h-anim h-anim-5">
           <a href="https://evowebdesign.de/kontakt" class="btn-primary">Kostenlose Demo buchen</a>
           <a href="#preis" class="btn-secondary">1.490 € Festpreis →</a>
         </div>
@@ -247,24 +284,24 @@
     <!-- PROBLEM -->
     <section class="problem-section">
       <div class="container">
-        <div class="section-tag">Das Problem</div>
-        <h2>70 % der Anfragen kommen,<br>wenn Sie nicht erreichbar sind.</h2>
+        <div class="section-tag anim">Das Problem</div>
+        <h2 class="anim">70 % der Anfragen kommen,<br>wenn Sie nicht erreichbar sind.</h2>
         <div class="problem-grid">
-          <div class="problem-card">
+          <div class="problem-card anim">
             <div class="problem-icon">🌙</div>
             <div>
               <h3>Abends & am Wochenende</h3>
               <p>Interessenten suchen nach Dienstleistern abends und samstags. Kein Anruf, keine Antwort — kein Auftrag.</p>
             </div>
           </div>
-          <div class="problem-card">
+          <div class="problem-card anim">
             <div class="problem-icon">📞</div>
             <div>
               <h3>Unqualifizierte Anfragen</h3>
               <p>Viele Anrufe sind Preisanfragen, die nichts werden. Ihr KI-Agent filtert und qualifiziert vorab.</p>
             </div>
           </div>
-          <div class="problem-card">
+          <div class="problem-card anim">
             <div class="problem-icon">🏃</div>
             <div>
               <h3>Wer nicht antwortet, verliert</h3>
@@ -278,25 +315,25 @@
     <!-- CAPABILITIES -->
     <section class="cap-section">
       <div class="container">
-        <div class="section-tag">Was er kann</div>
-        <h2>Konkrete Ergebnisse,<br>keine KI-Versprechen.</h2>
+        <div class="section-tag anim">Was er kann</div>
+        <h2 class="anim">Konkrete Ergebnisse,<br>keine KI-Versprechen.</h2>
         <div class="cap-grid">
-          <div class="cap-card">
+          <div class="cap-card anim">
             <div class="cap-icon">💬</div>
             <h3>Kundenfragen beantworten</h3>
             <p>Preise, Leistungen, Öffnungszeiten, Ablauf — er kennt Ihr Angebot und antwortet in Ihrer Sprache.</p>
           </div>
-          <div class="cap-card">
+          <div class="cap-card anim">
             <div class="cap-icon">📅</div>
             <h3>Termine buchen</h3>
             <p>Direkt im Chat: Datum, Uhrzeit, Name, E-Mail — der Termin landet automatisch in Ihrem Kalender.</p>
           </div>
-          <div class="cap-card">
+          <div class="cap-card anim">
             <div class="cap-icon">🎯</div>
             <h3>Anfragen vorqualifizieren</h3>
             <p>Er fragt nach Leistung, Budget und Wunschtermin. Zu Ihnen kommen nur ernsthafte Interessenten.</p>
           </div>
-          <div class="cap-card">
+          <div class="cap-card anim">
             <div class="cap-icon">📨</div>
             <h3>Kontaktdaten weiterleiten</h3>
             <p>Jede hinterlassene E-Mail oder Telefonnummer wird sofort an Sie weitergeleitet.</p>
@@ -309,9 +346,9 @@
     <section class="guardrails-section">
       <div class="container">
         <div class="section-tag">Transparenz & Guardrails</div>
-        <h2>Was er kann —<br>und was nicht.</h2>
+        <h2 class="anim">Was er kann —<br>und was nicht.</h2>
         <div class="guardrails-grid">
-          <div class="gr-box gr-can">
+          <div class="gr-box gr-can anim-l">
             <div class="gr-title"><span>✅</span> Das kann er</div>
             <div class="gr-item"><span class="gr-dot">→</span>Leistungen, Preise und Öffnungszeiten erklären</div>
             <div class="gr-item"><span class="gr-dot">→</span>Termine buchen und Kontaktdaten aufnehmen</div>
@@ -319,7 +356,7 @@
             <div class="gr-item"><span class="gr-dot">→</span>An den richtigen Ansprechpartner weiterleiten</div>
             <div class="gr-item"><span class="gr-dot">→</span>Rund um die Uhr verfügbar sein — auch sonn- und feiertags</div>
           </div>
-          <div class="gr-box gr-cannot">
+          <div class="gr-box gr-cannot anim-r">
             <div class="gr-title"><span>🚫</span> Das macht er nicht</div>
             <div class="gr-item"><span class="gr-dot">→</span>Keine Rechts-, Steuer- oder medizinische Beratung</div>
             <div class="gr-item"><span class="gr-dot">→</span>Keine Preisschätzungen — er nennt nur was konfiguriert ist</div>
@@ -327,7 +364,7 @@
             <div class="gr-item"><span class="gr-dot">→</span>Keine verbindlichen Zusagen ohne Ihre Freigabe</div>
             <div class="gr-item"><span class="gr-dot">→</span>Keine Eigeninitiative außerhalb des konfigurierten Rahmens</div>
           </div>
-          <div class="gr-note">
+          <div class="gr-note anim">
             <span style="font-size:1.2rem;flex-shrink:0">🔄</span>
             <div><strong style="color:var(--text);display:block;margin-bottom:.3rem">Bei Unsicherheit leitet er immer weiter.</strong>Wenn der Agent eine Frage nicht sicher beantworten kann, sagt er das klar und verweist auf Ihr Team. Kein Raten, keine Erfindungen. Die Inhalte des Agenten werden von Ihnen freigegeben und können jederzeit aktualisiert werden.</div>
           </div>
@@ -338,17 +375,17 @@
     <!-- INDUSTRIES -->
     <section class="industries-section">
       <div class="container">
-        <div class="section-tag">Für wen</div>
-        <h2>Gemacht für lokale Betriebe<br>mit Anfragevolumen.</h2>
+        <div class="section-tag anim">Für wen</div>
+        <h2 class="anim">Gemacht für lokale Betriebe<br>mit Anfragevolumen.</h2>
         <div class="industry-grid">
-          <div class="industry-card"><span class="ind-icon">🔧</span>Handwerk</div>
-          <div class="industry-card"><span class="ind-icon">🧹</span>Gebäudereinigung</div>
-          <div class="industry-card"><span class="ind-icon">🚿</span>Sanitär & Heizung</div>
-          <div class="industry-card"><span class="ind-icon">⚡</span>Elektrik</div>
-          <div class="industry-card"><span class="ind-icon">🐀</span>Schädlingsbekämpfung</div>
-          <div class="industry-card"><span class="ind-icon">🚚</span>Umzug & Transport</div>
-          <div class="industry-card"><span class="ind-icon">🚗</span>Autoaufbereitung</div>
-          <div class="industry-card"><span class="ind-icon">🏢</span>Lokale B2B-Services</div>
+          <div class="industry-card anim"><span class="ind-icon">🔧</span>Handwerk</div>
+          <div class="industry-card anim"><span class="ind-icon">🧹</span>Gebäudereinigung</div>
+          <div class="industry-card anim"><span class="ind-icon">🚿</span>Sanitär & Heizung</div>
+          <div class="industry-card anim"><span class="ind-icon">⚡</span>Elektrik</div>
+          <div class="industry-card anim"><span class="ind-icon">🐀</span>Schädlingsbekämpfung</div>
+          <div class="industry-card anim"><span class="ind-icon">🚚</span>Umzug & Transport</div>
+          <div class="industry-card anim"><span class="ind-icon">🚗</span>Autoaufbereitung</div>
+          <div class="industry-card anim"><span class="ind-icon">🏢</span>Lokale B2B-Services</div>
         </div>
         <p style="margin-top:1.5rem;font-size:.87rem;color:var(--text-secondary);text-align:center">Ihr Betrieb ist nicht dabei? <a href="https://evowebdesign.de/kontakt" style="color:var(--primary)">Fragen Sie uns — in den meisten Fällen passt es.</a></p>
       </div>
@@ -357,8 +394,8 @@
     <!-- DEMO OFFER -->
     <section class="demo-section">
       <div class="container">
-        <div class="demo-box">
-          <div class="section-tag">Risikofrei testen</div>
+        <div class="demo-box anim-s">
+          <div class="section-tag anim">Risikofrei testen</div>
           <h2>14 Tage kostenlose Demo —<br>auf Ihrer eigenen Website.</h2>
           <p>Wir richten den KI-Agenten auf Ihre Inhalte ein und binden ihn auf Ihrer Website ein. Sie testen ihn live mit echten Kundenfragen. Kein Risiko, kein Vertrag, keine Kosten.</p>
           <div class="demo-features">
@@ -375,25 +412,25 @@
     <!-- PROCESS -->
     <section class="steps-section">
       <div class="container">
-        <div class="section-tag">Ablauf</div>
-        <h2>Von der Anfrage bis live.<br>In 3–4 Wochen.</h2>
+        <div class="section-tag anim">Ablauf</div>
+        <h2 class="anim">Von der Anfrage bis live.<br>In 3–4 Wochen.</h2>
         <div class="steps-grid">
-          <div class="step-item">
+          <div class="step-item anim">
             <div class="step-num">01</div>
             <h3>Kurzes Gespräch</h3>
             <p>20 Minuten. Sie erklären Ihr Angebot, wir stellen die richtigen Fragen. Kein Verkaufsgespräch.</p>
           </div>
-          <div class="step-item">
+          <div class="step-item anim">
             <div class="step-num">02</div>
             <h3>Training & Einrichtung</h3>
             <p>Wir konfigurieren den Agenten auf Ihre Leistungen, Preise und typischen Kundenfragen.</p>
           </div>
-          <div class="step-item">
+          <div class="step-item anim">
             <div class="step-num">03</div>
             <h3>Test & Feinschliff</h3>
             <p>Sie testen den Agenten selbst. Wir passen an bis alles sitzt. Typische Fragen werden durchgespielt.</p>
           </div>
-          <div class="step-item">
+          <div class="step-item anim">
             <div class="step-num">04</div>
             <h3>Live. Fertig. Ihr.</h3>
             <p>Der Agent geht auf Ihrer Website live. Kurze Einführung, dann gehört alles Ihnen.</p>
@@ -406,10 +443,10 @@
     <section class="pricing-section" id="preis">
       <div class="container">
         <div style="text-align:center">
-          <div class="section-tag">Preis</div>
-          <h2>Ein Festpreis. Keine Überraschungen.</h2>
+          <div class="section-tag anim">Preis</div>
+          <h2 class="anim">Ein Festpreis. Keine Überraschungen.</h2>
         </div>
-        <div class="pricing-card">
+        <div class="pricing-card anim-s">
           <div class="pricing-badge">⭐ Bestseller</div>
           <h3 style="font-size:1.1rem;margin-bottom:.25rem">Website + KI-Agent</h3>
           <div class="price-amount"><span class="gradient-text">1.490 €</span></div>
@@ -433,8 +470,8 @@
     <!-- FAQ -->
     <section class="faq-section">
       <div class="container">
-        <div class="section-tag">Häufige Fragen</div>
-        <h2>Alles Wichtige<br>auf einen Blick.</h2>
+        <div class="section-tag anim">Häufige Fragen</div>
+        <h2 class="anim">Alles Wichtige<br>auf einen Blick.</h2>
         <div class="faq-list" id="faqList">
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">Was passiert wenn der Agent eine Frage nicht beantworten kann?<span class="faq-arrow">&#9660;</span></button>
@@ -800,6 +837,14 @@
   function showBooking(apt){var el=document.getElementById('ewd-msgs');var d=new Date(apt.date+'T'+apt.time).toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long'});el.innerHTML+='<div class="em b"><div class="emav">&#x1F4C5;</div><div class="eb" style="background:rgba(0,102,255,.1);border:1px solid rgba(0,102,255,.25);border-radius:4px 16px 16px 16px"><strong style="color:#4D94FF;display:block;margin-bottom:4px">&#x2713; Termin gebucht</strong>'+d+' um '+apt.time+' Uhr<br>'+apt.service+'</div></div>';el.scrollTop=el.scrollHeight;}
   function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');}
 })();
-</script>
+
+  // Scroll animations
+  (function(){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.anim,.anim-l,.anim-r,.anim-s').forEach(function(el){io.observe(el);});
+  })();
+  </script>
 </body>
 </html>
