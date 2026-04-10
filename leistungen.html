@@ -266,6 +266,17 @@
 
     .target-grid{display:flex;flex-wrap:wrap;gap:.65rem;justify-content:center;margin-top:1.5rem}
     .target-item{background:var(--bg-card);border:1px solid var(--border);border-radius:999px;padding:.45rem 1.1rem;font-size:.82rem;color:var(--text-secondary)}
+
+    .srv-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .srv-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem 1.6rem;display:flex;flex-direction:column}
+    .srv-card-num{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--primary-light);margin-bottom:.75rem}
+    .srv-card h3{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:.35rem;line-height:1.25}
+    .srv-card-price{font-size:.82rem;color:var(--text-secondary);margin-bottom:.85rem}
+    .srv-card-price strong{color:var(--text-soft);font-weight:600}
+    .srv-card p{font-size:.86rem;color:var(--text-secondary);line-height:1.7;flex:1;margin-bottom:1.1rem}
+    .srv-card-link{font-size:.82rem;font-weight:700;color:var(--primary-light);text-decoration:none;transition:opacity .2s}
+    .srv-card-link:hover{opacity:.75}
+    @media(max-width:720px){.srv-cards{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -401,6 +412,36 @@
           <div class="target-item">📦 Umzug &amp; Transport</div>
           <div class="target-item">🚗 Autoaufbereitung</div>
           <div class="target-item">🏢 Lokales B2B</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SERVICE CARDS -->
+    <section class="sec" aria-label="Leistungsübersicht" style="padding-top:0">
+      <div class="wrap">
+        <div class="srv-cards">
+          <div class="srv-card">
+            <div class="srv-card-num">01</div>
+            <h3>Webdesign &amp; Website</h3>
+            <div class="srv-card-price">ab <strong>790 €</strong> einmalig &middot; Festpreis</div>
+            <p>Eine schnelle, mobile-first Website für Ihren Betrieb – mit klarer Struktur, die Anfragen bringt. Optional mit KI-Agent für 1.490 €.</p>
+            <a href="https://evowebdesign.de/angebote" class="srv-card-link">Pakete ansehen &rarr;</a>
+          </div>
+          <div class="srv-card">
+            <div class="srv-card-num">02</div>
+            <h3>Lokale SEO</h3>
+            <div class="srv-card-price"><strong>Inklusive</strong> in jedem Paket</div>
+            <p>Google Business Einrichtung, lokale Keywords, saubere Seitenstruktur – damit Sie in Ihrer Region gefunden werden, wenn jemand nach Ihrer Leistung sucht.</p>
+            <a href="#seo" class="srv-card-link">Mehr erfahren &rarr;</a>
+          </div>
+          <div class="srv-card">
+            <div class="srv-card-num">03</div>
+            <h3>Hosting &amp; Betreuung</h3>
+            <div class="srv-card-price">ab <strong>29 €</strong> / Monat &middot; monatlich kündbar</div>
+            <p>Ihre Website läuft zuverlässig. Änderungen per WhatsApp direkt an uns – kein Ticketsystem, kein CMS-Login, kein technischer Aufwand.</p>
+            <a href="#hosting" class="srv-card-link">Mehr erfahren &rarr;</a>
+          </div>
         </div>
       </div>
     </section>
