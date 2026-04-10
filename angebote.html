@@ -608,7 +608,6 @@
   })();
   </script>
 
-
 <!-- EWD KI-Agent Widget -->
 <style>
   #ewd-chat{position:fixed;bottom:24px;left:24px;z-index:9998;font-family:'Inter',sans-serif}
@@ -714,7 +713,7 @@
   </div>
 
   <button id="ewd-toggle" onclick="ewdT()" title="Chat &#xF6;ffnen">
-    <img src="logo-nobg.png" alt="EWD" onerror="this.outerHTML='<span style=\'font-size:1.4rem\'>&#x1F916;</span>'" />
+    <img src="logo-nobg.png" alt="EWD" onerror="this.remove()" />
     <div id="ewd-badge">1</div>
   </button>
 </div>
@@ -754,13 +753,13 @@
   function addU(t){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em u"><div class="eb">'+esc(t)+'</div><div class="emav">Sie</div></div>';el.scrollTop=el.scrollHeight;}
   function addB(t){
     var el=document.getElementById('ewd-msgs');
-    var av='<div class="emav"><img src="'+LOGO+'" onerror="this.outerHTML='&#x1F916;'" /></div>';
+    var av='<div class="emav"><img src="'+LOGO+'" onerror="this.remove()" /></div>';
     el.innerHTML+='<div class="em b">'+av+'<div class="eb">'+t+'</div></div>';
     el.scrollTop=el.scrollHeight;
   }
   function showT(){
     var el=document.getElementById('ewd-msgs');
-    var av='<div class="emav"><img src="'+LOGO+'" onerror="this.outerHTML='&#x1F916;'" /></div>';
+    var av='<div class="emav"><img src="'+LOGO+'" onerror="this.remove()" /></div>';
     el.innerHTML+='<div class="em b" id="ewd-t">'+av+'<div class="eb etyp"><span></span><span></span><span></span></div></div>';
     el.scrollTop=el.scrollHeight;
   }
