@@ -63,6 +63,16 @@
   </script>
 
   <style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/inter-300.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/inter-400.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/inter-500.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/inter-600.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/inter-700.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/poppins-600.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/poppins-700.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/poppins-800.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:900;font-display:swap;src:url('fonts/poppins-900.woff2') format('woff2')}
+
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box }
     :root {
       --primary: #0066FF;
@@ -1089,17 +1099,11 @@
 <script>
 (function(){
   var k='ewd-consent',v=localStorage.getItem(k);
-  function loadFonts(){
-    if(document.querySelector('[data-ewdf]'))return;
-    var l=document.createElement('link');
-    l.rel='stylesheet';l.setAttribute('data-ewdf','1');
-    l.href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap';
-    document.head.appendChild(l);
-  }
-  if(v==='all'){loadFonts();return;}
+  function loadFonts(){}
+  if(v==='all'){return;}
   if(v==='necessary')return;
   setTimeout(function(){document.getElementById('ewd-ckb').style.display='flex';},900);
-  window.ewdCkAccept=function(){localStorage.setItem(k,'all');loadFonts();document.getElementById('ewd-ckb').style.display='none';};
+  window.ewdCkAccept=function(){localStorage.setItem(k,'all');document.getElementById('ewd-ckb').style.display='none';};
   window.ewdCkDeny=function(){localStorage.setItem(k,'necessary');document.getElementById('ewd-ckb').style.display='none';};
 })();
 </script>
