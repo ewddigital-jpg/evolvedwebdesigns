@@ -196,14 +196,16 @@
         .intro-card strong{color:var(--text)}
 
         /* Team-Karten */
-        .team-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:all 0.3s ease;animation:slideIn 0.5s ease both}
-        .team-card:hover{border-color:var(--border-hover);transform:translateX(5px)}
+        .team-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:2rem 1.75rem 1.5rem;transition:all 0.3s ease;animation:slideIn 0.5s ease both;text-align:center;position:relative;overflow:hidden}
+        .team-card::before{content:'';position:absolute;top:0;left:0;right:0;height:90px;background:linear-gradient(135deg,rgba(0,102,255,0.07),rgba(0,217,255,0.04));border-radius:16px 16px 50% 50%;pointer-events:none}
+        .team-card:hover{border-color:var(--border-hover);transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,0.35)}
         .team-avatar{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--primary),var(--primary-dark));font-family:'Poppins',sans-serif;font-weight:800;font-size:0.95rem;color:#fff;margin-bottom:1rem}
-        .team-card h3{font-size:0.95rem;font-weight:600;margin-bottom:0.2rem;line-height:1.5}
-        .team-role{color:var(--accent);font-weight:600;font-size:0.88rem;margin-bottom:0.75rem}
-        .team-card > p{color:var(--text-secondary);font-size:0.95rem;line-height:1.8}
+        .team-card h3{font-size:1.05rem;font-weight:700;margin-bottom:0.3rem;line-height:1.4;position:relative}
+        .team-role{display:inline-block;color:var(--accent);font-weight:600;font-size:0.72rem;margin-bottom:1rem;letter-spacing:0.06em;text-transform:uppercase;background:rgba(0,217,255,0.08);border:1px solid rgba(0,217,255,0.2);border-radius:999px;padding:0.2rem 0.75rem;position:relative}
+        .team-card > p{color:var(--text-secondary);font-size:0.88rem;line-height:1.75;position:relative}
         .skill-list{margin-top:0.85rem;display:grid;gap:0.4rem}
-        .skill{display:flex;gap:0.55rem;align-items:flex-start;padding:0.6rem 0.85rem;border-radius:10px;background:rgba(0,102,255,0.06);border:1px solid rgba(0,102,255,0.16);color:var(--text-secondary);font-size:0.95rem;line-height:1.5}
+        .skill-list{text-align:left}
+        .skill{display:flex;gap:0.55rem;align-items:flex-start;padding:0.55rem 0.85rem;border-radius:10px;background:rgba(0,102,255,0.06);border:1px solid rgba(0,102,255,0.16);color:var(--text-secondary);font-size:0.84rem;line-height:1.5}
         .skill b{color:var(--accent);flex-shrink:0}
 
         /* Lokal-Box (grüne Highlight-Box) */
@@ -212,10 +214,10 @@
         .local-card h3{font-size:0.95rem;font-weight:600;color:var(--success);margin-bottom:0.45rem;line-height:1.5}
         .local-card p{color:var(--text-secondary);font-size:0.95rem;line-height:1.8}
         .local-card strong{color:var(--text)}
-        /* Team photo placeholders */
-        .team-photo{width:100%;aspect-ratio:4/3;border-radius:10px;overflow:hidden;margin-bottom:1rem;background:#1C2128;border:1px dashed rgba(240,246,252,0.15)}
-        .team-photo img{width:100%;height:100%;object-fit:cover;display:block}
-        .team-photo-ph{width:100%;height:100%;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:var(--text-secondary);font-size:.78rem}
+        /* Team photo – Kreis mit Gradient-Border */
+        .team-photo{width:110px;height:110px;border-radius:50%;overflow:hidden;margin:0 auto 1.25rem;position:relative;z-index:1;border:3px solid transparent;background:linear-gradient(var(--bg-card),var(--bg-card)) padding-box,linear-gradient(135deg,#0066FF,#00D9FF) border-box;box-shadow:0 6px 24px rgba(0,102,255,0.22)}
+        .team-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+        .team-photo-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:var(--text-secondary);font-size:.78rem}
 
     /* ─── HEADER v3 override ─── */
     header{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .3s,box-shadow .3s,border-color .3s}
