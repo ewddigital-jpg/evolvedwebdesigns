@@ -172,6 +172,36 @@
     .faq-item{animation:none!important}
     
   </style>
+
+<!-- EWD Standard Header CSS -->
+<style id="hdr-override">
+header#hdr{position:fixed!important;top:0;left:0;right:0;z-index:9000!important;transition:background .3s,border-color .3s,box-shadow .3s}
+header#hdr.top{background:rgba(13,17,23,.6)!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent!important;box-shadow:none!important}
+header#hdr.scrolled{background:rgba(13,17,23,.96)!important;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(240,246,252,.07)!important;box-shadow:0 1px 0 rgba(240,246,252,.07),0 4px 24px rgba(0,0,0,.25)!important}
+header#hdr nav{max-width:1100px!important;margin:0 auto;padding:.9rem 1.25rem!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:1rem}
+header#hdr .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+header#hdr .logo-mark{border-radius:8px}
+header#hdr .logo-name{font-family:'Poppins',sans-serif!important;font-size:1.05rem!important;font-weight:900!important;letter-spacing:-.02em!important;color:#F0F6FC!important;-webkit-text-fill-color:#F0F6FC!important;background:none!important;-webkit-background-clip:unset!important;background-clip:unset!important}
+header#hdr .nav-links{list-style:none!important;display:flex!important;align-items:center!important;gap:1.5rem!important;position:static!important;width:auto!important;height:auto!important;background:none!important;flex-direction:row!important;padding:0!important;top:auto!important;left:auto!important;opacity:1!important;visibility:visible!important}
+header#hdr .nav-links a{color:#A8B4C0!important;text-decoration:none;font-size:.88rem!important;font-weight:500;transition:color .2s;white-space:nowrap;position:relative}
+header#hdr .nav-links a:not(.nav-cta):not(.cta):hover{color:#F0F6FC!important}
+header#hdr .nav-links a:not(.nav-cta):not(.cta)::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:#0066FF;transition:width .2s}
+header#hdr .nav-links a:not(.nav-cta):not(.cta):hover::after{width:100%}
+header#hdr .nav-cta,header#hdr .cta{background:linear-gradient(135deg,#0066FF,#0050CC)!important;color:#fff!important;-webkit-text-fill-color:#fff!important;padding:.6rem 1.35rem!important;border-radius:8px!important;font-weight:700!important;font-size:.87rem!important;box-shadow:0 2px 14px rgba(0,102,255,.28);transition:transform .2s,box-shadow .2s;text-decoration:none}
+header#hdr .nav-cta:hover,header#hdr .cta:hover{transform:translateY(-1px)!important;box-shadow:0 4px 20px rgba(0,102,255,.4)!important}
+header#hdr .nav-cta::after,header#hdr .cta::after{display:none!important}
+header#hdr .nav-highlight{color:#00D9FF!important;font-weight:600!important}
+header#hdr .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none!important;background:none!important;outline:none}
+header#hdr .hamburger span{width:22px;height:1.5px;background:#A8B4C0;border-radius:2px;display:block;transition:transform .3s,opacity .3s}
+header#hdr .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
+header#hdr .hamburger.open span:nth-child(2){opacity:0}
+header#hdr .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
+@media(max-width:768px){
+  header#hdr .nav-links{position:fixed!important;top:65px!important;left:-100%!important;width:100%!important;height:calc(100vh - 65px)!important;background:rgba(13,17,23,.98)!important;flex-direction:column!important;padding:2rem!important;gap:1.5rem!important;transition:left .3s ease!important}
+  header#hdr .nav-links.open{left:0!important}
+  header#hdr .hamburger{display:flex!important}
+}
+</style>
 </head>
 <body>
 
@@ -371,6 +401,31 @@
   }
   </script>
 
+
+<script id="hdr-js">
+/* EWD Standard Header — scroll + hamburger */
+(function(){
+  var hdr=document.getElementById('hdr');
+  if(!hdr)return;
+  function setHdr(){hdr.className=window.scrollY>30?'scrolled':'top';}
+  setHdr();
+  window.addEventListener('scroll',setHdr,{passive:true});
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
+  if(btn&&nav){
+    btn.addEventListener('click',function(){
+      var o=nav.classList.contains('open');
+      nav.classList.toggle('open',!o);
+      btn.classList.toggle('open',!o);
+      btn.setAttribute('aria-expanded',String(!o));
+    });
+    document.addEventListener('click',function(e){
+      if(!hdr.contains(e.target)&&nav.classList.contains('open')){
+        nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+})();
+</script>
 <!-- EWD Cookie Banner -->
 <style>
   #ewd-ckb{
