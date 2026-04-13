@@ -347,6 +347,12 @@
     /* pricing card click animation */
     .pc { transition:border-color .25s, box-shadow .25s, transform .15s; }
     .pc.tapped { transform:scale(.97); box-shadow:0 0 0 2px var(--primary), 0 8px 32px rgba(0,102,255,.35) !important; border-color:var(--primary) !important; }
+
+    /* ── Contact form fields ── */
+    .fg label { font-size:.85rem; color:var(--text-secondary); font-weight:500; display:block; margin-bottom:.3rem }
+    .fg .form-group { display:flex; flex-direction:column }
+    .fg select.inp { cursor:pointer }
+    .inp:focus { border-color:var(--primary) !important; box-shadow:0 0 0 3px rgba(0,102,255,0.12) !important; outline:none }
     /* ── FOOTER ── */
     footer {
       background: var(--bg-card);
@@ -894,27 +900,39 @@
           <div class="form-card">
             <p class="form-title">Direkte Anfrage</p>
             <form class="fg" id="cForm" action="https://formspree.io/f/mbdlnwqw" method="POST">
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-              <div>
-                <label for="fn">Ihr Name</label>
-                <input class="inp" id="fn" name="name" type="text" placeholder="Max Mustermann" required autocomplete="name" />
+              <input type="hidden" name="_subject" value="Neue Anfrage – evowebdesign.de" />
+              <div class="form-group">
+                <label for="fn">Name *</label>
+                <input class="inp" type="text" id="fn" name="name" required placeholder="Ihr vollständiger Name" autocomplete="name" />
               </div>
-              <div>
-                <input class="inp" id="fe" name="email" type="email" placeholder="ihre@email.de" required autocomplete="email" />
+              <div class="form-group">
+                <label for="fe">E-Mail *</label>
+                <input class="inp" type="email" id="fe" name="email" required placeholder="ihre@email.de" autocomplete="email" />
               </div>
-              <div>
-                <label for="ftel">Telefon / WhatsApp</label>
-                <input class="inp" id="ftel" name="telefon" type="tel" placeholder="+49 171 ..." required autocomplete="tel" />
+              <div class="form-group">
+                <label for="ftel">Telefon</label>
+                <input class="inp" type="tel" id="ftel" name="telefon" placeholder="Optional" autocomplete="tel" />
               </div>
-              <div>
-                <label for="fm">Was brauchen Sie?</label>
-                <input class="inp" id="fm" name="nachricht" type="text" placeholder="z.B. neue Website, KI-Bot, SEO ..." />
+              <div class="form-group">
+                <label for="fserv">Gewünschte Leistung</label>
+                <select class="inp" id="fserv" name="leistung">
+                  <option value="">Bitte wählen...</option>
+                  <option value="webdesign">Webdesign / Neue Website</option>
+                  <option value="redesign">Website-Redesign</option>
+                  <option value="seo">SEO-Optimierung</option>
+                  <option value="ki-agent">KI-Agent / Chatbot</option>
+                  <option value="wartung">Wartung &amp; Support</option>
+                  <option value="beratung">Erstberatung</option>
+                </select>
               </div>
-              <button class="btn btn-primary" type="submit" id="sendBtn" style="width:100%;justify-content:center;margin-top:.25rem">
+              <div class="form-group">
+                <label for="fm">Ihre Nachricht *</label>
+                <textarea class="inp" id="fm" name="nachricht" required placeholder="Beschreiben Sie kurz Ihr Vorhaben..." style="min-height:90px;resize:vertical"></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center;margin-top:.25rem">
                 Anfrage senden &rarr;
               </button>
-              <div id="fMsg" role="alert" aria-live="polite" style="display:none;padding:.7rem 1rem;border-radius:var(--radius-sm);font-size:.85rem;font-weight:600;margin-top:.25rem"></div>
-              <p style="font-size:.75rem;color:var(--text-secondary);margin-top:.5rem;text-align:center">Kein Spam &middot; Keine Weitergabe Ihrer Daten &middot; <strong style="color:rgba(240,246,252,.6)">Sie zahlen erst, wenn die Seite live ist und Ihnen gefällt.</strong></p>
+              <p style="font-size:.75rem;color:var(--text-secondary);margin-top:.5rem;text-align:center">Kein Spam &middot; Keine Weitergabe &middot; <strong style="color:rgba(240,246,252,.6)">Sie zahlen erst, wenn die Seite live ist.</strong></p>
               <div class="form-wa-alt">
                 <span>Lieber direkt?</span>
                 <a href="https://wa.me/491717031722?text=Hallo!%20Ich%20interessiere%20mich%20f%C3%BCr%20eine%20neue%20Website." target="_blank" rel="noopener noreferrer" class="wa-alt-btn">
@@ -995,31 +1013,6 @@
   </footer>
 
   <script>
-  (function(){
-    var form=document.getElementById('cForm'),btn=document.getElementById('sendBtn'),msg=document.getElementById('fMsg');
-    if(!form)return;
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      var n=document.getElementById('fn').value.trim(),em=document.getElementById('fe')&&document.getElementById('fe').value.trim(),tel=document.getElementById('ftel').value.trim();
-      if(!n||!tel){show('Bitte Name und Telefonnummer ausfuellen.',false);return;}
-      btn.disabled=true;btn.textContent='Wird gesendet...';
-      fetch('https://formspree.io/f/mbdlnwqw',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
-        .then(function(r){
-          if(r.ok){show('Danke! Wir melden uns innerhalb von 24h.',true);form.reset();btn.textContent='Gesendet \u2713';}
-          else throw 0;
-        }).catch(function(){
-          show('Fehler \u2013 bitte direkt an kontakt@evowebdesign.de schreiben.',false);
-          btn.disabled=false;btn.textContent='Anfrage senden \u2192';
-        });
-    });
-    function show(t,ok){
-      msg.textContent=t;msg.style.display='block';
-      msg.style.background=ok?'rgba(34,197,94,.08)':'rgba(239,68,68,.08)';
-      msg.style.border='1px solid '+(ok?'rgba(34,197,94,.25)':'rgba(239,68,68,.25)');
-      msg.style.color=ok?'#4ade80':'#f87171';
-      msg.style.borderRadius='var(--radius-sm)';
-    }
-  }());
   </script>
 
   <script>
