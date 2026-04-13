@@ -61,7 +61,7 @@
       --bg-card: #161B22;
       --bg-raised: #1C2128;
       --text: #F0F6FC;
-      --text-secondary: #8B949E;
+      --text-secondary: #A8B4C0;
       --text-soft: #C9D1D9;
       --border: rgba(240,246,252,0.08);
       --border-mid: rgba(240,246,252,0.14);
@@ -618,7 +618,7 @@
           io.unobserve(el);
         });
       },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
-      var _els=document.querySelectorAll('.price-grid,.step,.faq-item');
+      var _els=document.querySelectorAll('.price-grid,.step,.faq-item,.sec-heading');
     _els.forEach(function(el){el.classList.add('rv');});
     requestAnimationFrame(function(){requestAnimationFrame(function(){
       _els.forEach(function(el){io.observe(el);});
