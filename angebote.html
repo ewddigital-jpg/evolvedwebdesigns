@@ -286,7 +286,9 @@
     }
     .nav-cta:hover { transform:translateY(-1px); box-shadow:0 4px 22px rgba(0,102,255,.45) }
     .nav-cta::after { display:none !important }
-    .nav-highlight { color:#00D9FF !important; font-weight:600 !important }
+    .nav-highlight { color:var(--accent,#00D9FF) !important; border:1px solid rgba(0,217,255,0.3) !important; padding:.3rem .85rem !important; border-radius:6px !important; background:rgba(0,217,255,0.06) !important; font-weight:600 !important }
+    .nav-highlight:hover { background:rgba(0,217,255,0.13) !important; border-color:rgba(0,217,255,0.55) !important }
+    .nav-highlight::after { display:none !important }
 
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none !important; background:none !important; outline:none }
     .hamburger span { width:22px; height:1.5px; background:var(--text-secondary); border-radius:2px; display:block; transition:transform .3s, opacity .3s }
