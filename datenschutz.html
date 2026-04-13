@@ -389,11 +389,17 @@
 <script>
 (function(){
   var k='ewd-consent',v=localStorage.getItem(k);
-  function loadFonts(){}
-  if(v==='all'){return;}
+  function loadFonts(){
+    if(document.querySelector('[data-ewdf]'))return;
+    var l=document.createElement('link');
+    l.rel='stylesheet';l.setAttribute('data-ewdf','1');
+    l.href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap';
+    document.head.appendChild(l);
+  }
+  if(v==='all'){loadFonts();return;}
   if(v==='necessary')return;
   setTimeout(function(){document.getElementById('ewd-ckb').style.display='flex';},900);
-  window.ewdCkAccept=function(){localStorage.setItem(k,'all');document.getElementById('ewd-ckb').style.display='none';};
+  window.ewdCkAccept=function(){localStorage.setItem(k,'all');loadFonts();document.getElementById('ewd-ckb').style.display='none';};
   window.ewdCkDeny=function(){localStorage.setItem(k,'necessary');document.getElementById('ewd-ckb').style.display='none';};
 })();
 </script>
