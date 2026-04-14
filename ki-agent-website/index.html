@@ -119,17 +119,26 @@
     .cap-card p{font-size:.83rem;color:var(--text-secondary);line-height:1.6}
     /* ── GUARDRAILS ── */
     .guardrails-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
-    .guardrails-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem}
-    .gr-box{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:1.5rem}
-    .gr-box.gr-can{border-color:rgba(74,222,128,.2)}
-    .gr-box.gr-cannot{border-color:rgba(255,80,80,.15)}
-    .gr-title{font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
-    .gr-can .gr-title{color:#4ade80}
-    .gr-cannot .gr-title{color:#ff6b6b}
-    .gr-item{display:flex;gap:.65rem;align-items:center;margin-bottom:.75rem;font-size:.85rem;color:var(--text-secondary);line-height:1.55}
-    .gr-item:last-child{margin-bottom:0}
-    .gr-dot{flex-shrink:0;font-size:.85rem;color:var(--accent);font-weight:700}
-    .gr-note{grid-column:1/-1;background:rgba(0,102,255,.06);border:1px solid rgba(0,102,255,.15);border-radius:12px;padding:1.25rem 1.5rem;font-size:.85rem;color:var(--text-secondary);display:flex;gap:.75rem;align-items:flex-start}
+    .gr-lead{color:var(--text-secondary);font-size:.95rem;margin:.4rem 0 2rem;max-width:520px}
+    .gr-panel{display:grid;grid-template-columns:1fr auto 1fr;background:var(--bg-card);border:1px solid var(--border);border-radius:18px;overflow:hidden;position:relative;margin-top:2rem}
+    .gr-panel::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,rgba(74,222,128,.05) 0%,transparent 45%,rgba(255,107,107,.05) 100%)}
+    .gr-vdiv{width:1px;background:linear-gradient(to bottom,transparent 0%,rgba(240,246,252,.1) 15%,rgba(240,246,252,.1) 85%,transparent 100%);flex-shrink:0}
+    .gr-half{padding:1.75rem;display:flex;flex-direction:column;gap:0}
+    .gr-header{display:flex;align-items:center;gap:.75rem;padding-bottom:1rem;margin-bottom:1.1rem;border-bottom:1px solid var(--border)}
+    .gr-badge{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0}
+    .gr-badge--yes{background:rgba(74,222,128,.12);color:#4ade80;border:1.5px solid rgba(74,222,128,.28)}
+    .gr-badge--no{background:rgba(255,107,107,.1);color:#ff6b6b;border:1.5px solid rgba(255,107,107,.22)}
+    .gr-header span{font-size:.95rem;font-weight:700;color:var(--text)}
+    .gr-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.3rem}
+    .gr-list li{display:flex;align-items:flex-start;gap:.65rem;font-size:.875rem;color:var(--text-secondary);line-height:1.55;padding:.5rem .55rem;border-radius:8px;transition:background .18s}
+    .gr-list li:hover{background:rgba(240,246,252,.05)}
+    .gr-icon{width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:900;flex-shrink:0;margin-top:.19rem}
+    .gr-icon--yes{background:rgba(74,222,128,.14);color:#4ade80;border:1px solid rgba(74,222,128,.25)}
+    .gr-icon--no{background:rgba(255,107,107,.1);color:#ff6b6b;border:1px solid rgba(255,107,107,.2)}
+    .gr-note{margin-top:1.25rem;background:rgba(0,102,255,.06);border:1px solid rgba(0,102,255,.15);border-radius:14px;padding:1.25rem 1.5rem;font-size:.875rem;color:var(--text-secondary);display:flex;gap:.85rem;align-items:flex-start;line-height:1.65}
+    .gr-note strong{color:var(--text);display:block;margin-bottom:.2rem}
+    .gr-note-icon{font-size:1.25rem;flex-shrink:0;margin-top:.05rem}
+    @media(max-width:700px){.gr-panel{grid-template-columns:1fr;grid-template-rows:auto auto auto}.gr-vdiv{width:100%;height:1px;background:linear-gradient(to right,transparent 0%,rgba(240,246,252,.1) 15%,rgba(240,246,252,.1) 85%,transparent 100%)}.gr-half{padding:1.35rem 1.25rem}}
     /* ── INDUSTRIES ── */
     .industries-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
     .industry-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.85rem;margin-top:2rem}
@@ -427,29 +436,48 @@
     <!-- GUARDRAILS -->
     <section class="guardrails-section">
       <div class="container">
-        <div class="section-tag">Transparenz & Guardrails</div>
-        <h2 class="anim">Was er kann —<br>und was nicht.</h2>
-        <div class="guardrails-grid">
-          <div class="gr-box gr-can anim-l">
-            <div class="gr-title"><span>✅</span> Das kann er</div>
-            <div class="gr-item"><span class="gr-dot">→</span>Leistungen, Preise und Öffnungszeiten erklären</div>
-            <div class="gr-item"><span class="gr-dot">→</span>Termine buchen und Kontaktdaten aufnehmen</div>
-            <div class="gr-item"><span class="gr-dot">→</span>Häufige Kundenfragen beantworten</div>
-            <div class="gr-item"><span class="gr-dot">→</span>An den richtigen Ansprechpartner weiterleiten</div>
-            <div class="gr-item"><span class="gr-dot">→</span>Rund um die Uhr verfügbar sein — auch sonn- und feiertags</div>
+        <div class="section-tag anim">Transparenz &amp; Grenzen</div>
+        <h2 class="anim">Klare Regeln.<br>Keine Überraschungen.</h2>
+        <p class="gr-lead anim">Ein guter KI-Agent kennt seine Stärken — und seine Grenzen. Beides ist klar definiert.</p>
+
+        <div class="gr-panel">
+          <!-- ✓ Kann -->
+          <div class="gr-half gr-half--yes anim-l">
+            <div class="gr-header">
+              <div class="gr-badge gr-badge--yes">✓</div>
+              <span>Das kann er</span>
+            </div>
+            <ul class="gr-list">
+              <li><span class="gr-icon gr-icon--yes">✓</span>Leistungen, Preise und Öffnungszeiten erklären</li>
+              <li><span class="gr-icon gr-icon--yes">✓</span>Termine buchen und Kontaktdaten aufnehmen</li>
+              <li><span class="gr-icon gr-icon--yes">✓</span>Häufige Kundenfragen beantworten</li>
+              <li><span class="gr-icon gr-icon--yes">✓</span>An den richtigen Ansprechpartner weiterleiten</li>
+              <li><span class="gr-icon gr-icon--yes">✓</span>Rund um die Uhr verfügbar — auch sonn- und feiertags</li>
+            </ul>
           </div>
-          <div class="gr-box gr-cannot anim-r">
-            <div class="gr-title"><span>🚫</span> Das macht er nicht</div>
-            <div class="gr-item"><span class="gr-dot">→</span>Keine Rechts-, Steuer- oder medizinische Beratung</div>
-            <div class="gr-item"><span class="gr-dot">→</span>Keine Preisschätzungen — er nennt nur was konfiguriert ist</div>
-            <div class="gr-item"><span class="gr-dot">→</span>Keine sensiblen Daten speichern (keine Passwörter, IBAN etc.)</div>
-            <div class="gr-item"><span class="gr-dot">→</span>Keine verbindlichen Zusagen ohne Ihre Freigabe</div>
-            <div class="gr-item"><span class="gr-dot">→</span>Keine Eigeninitiative außerhalb des konfigurierten Rahmens</div>
+
+          <!-- divider -->
+          <div class="gr-vdiv"></div>
+
+          <!-- ✕ Nicht -->
+          <div class="gr-half gr-half--no anim-r">
+            <div class="gr-header">
+              <div class="gr-badge gr-badge--no">✕</div>
+              <span>Das macht er nicht</span>
+            </div>
+            <ul class="gr-list">
+              <li><span class="gr-icon gr-icon--no">✕</span>Keine Rechts-, Steuer- oder medizinische Beratung</li>
+              <li><span class="gr-icon gr-icon--no">✕</span>Keine Preisschätzungen ohne Konfiguration</li>
+              <li><span class="gr-icon gr-icon--no">✕</span>Keine sensiblen Daten speichern (Passwörter, IBAN etc.)</li>
+              <li><span class="gr-icon gr-icon--no">✕</span>Keine verbindlichen Zusagen ohne Ihre Freigabe</li>
+              <li><span class="gr-icon gr-icon--no">✕</span>Keine Eigeninitiative außerhalb des konfigurierten Rahmens</li>
+            </ul>
           </div>
-          <div class="gr-note anim">
-            <span style="font-size:1.2rem;flex-shrink:0">🔄</span>
-            <div><strong style="color:var(--text);display:block;margin-bottom:.3rem">Bei Unsicherheit leitet er immer weiter.</strong>Wenn der Agent eine Frage nicht sicher beantworten kann, sagt er das klar und verweist auf Ihr Team. Kein Raten, keine Erfindungen. Die Inhalte des Agenten werden von Ihnen freigegeben und können jederzeit aktualisiert werden.</div>
-          </div>
+        </div>
+
+        <div class="gr-note anim">
+          <span class="gr-note-icon">🔄</span>
+          <div><strong>Bei Unsicherheit leitet er immer weiter.</strong> Wenn der Agent eine Frage nicht sicher beantworten kann, sagt er das klar und verweist auf Ihr Team. Kein Raten, keine Erfindungen. Die Inhalte werden von Ihnen freigegeben und können jederzeit aktualisiert werden.</div>
         </div>
       </div>
     </section>
