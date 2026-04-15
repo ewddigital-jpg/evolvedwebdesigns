@@ -47,7 +47,7 @@
         .whatsapp-btn:hover{transform:scale(1.1)}
         .whatsapp-btn img{width:32px;height:32px}
         
-        .page-hero{padding:.25rem 2rem 3rem;text-align:center;max-width:800px;margin:0 auto;animation:fadeInUp .7s ease .3s both}
+        .page-hero{padding:1.5rem 2rem 3rem;text-align:center;max-width:800px;margin:0 auto;animation:fadeInUp .7s ease .3s both}
         .page-hero h1{font-family:'Poppins',sans-serif;font-size:clamp(1.8rem,5vw,2.5rem);font-weight:800;margin-bottom:1rem}
         .gradient-text{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
         .page-hero p{color:var(--text-secondary);font-size:1.05rem}
@@ -86,26 +86,9 @@
         .footer-legal a{color:var(--text-secondary);text-decoration:none;margin:0 0.75rem;font-size:0.85rem}
         .footer-legal a:hover{color:var(--primary-light)}
         @media(max-width:992px){.contact-section{grid-template-columns:1fr}}
-        @media(max-width:768px){.nav-links{position:fixed;top:65px;left:-100%;width:100%;height:calc(100vh - 65px);background:rgba(13,17,23,0.98);flex-direction:column;padding:2rem;gap:1.5rem;transition:left 0.3s ease}.page-hero{padding:0 1.5rem 2rem}.contact-section{padding:0 1.5rem 3rem}.form-container{padding:1.5rem}.whatsapp-float{bottom:20px;right:20px}.whatsapp-btn{width:55px;height:55px}}
+        @media(max-width:768px){.nav-links{position:fixed;top:65px;left:-100%;width:100%;height:calc(100vh - 65px);background:rgba(13,17,23,0.98);flex-direction:column;padding:2rem;gap:1.5rem;transition:left 0.3s ease}.page-hero{padding:1.25rem 1.5rem 2rem}.contact-section{padding:0 1.5rem 3rem}.form-container{padding:1.5rem}.whatsapp-float{bottom:20px;right:20px}.whatsapp-btn{width:55px;height:55px}}
     
-    /* ── BREADCRUMB ── */
-    .bc{padding:4.5rem 0 0}
-    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
-    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
-    .bc a:hover{color:var(--text)}
-    .bc li{color:var(--text-secondary)}
-    .bc-sep{opacity:.3;font-size:.75rem}
-    .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4rem}}
     
-    .bc{display:flex;justify-content:center;padding:4.75rem 1.25rem .25rem}
-    .bc ol{display:flex;gap:.4rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
-    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
-    .bc a:hover{color:var(--text)}
-    .bc li{color:var(--text-secondary)}
-    .bc-sep{color:rgba(240,246,252,.18);font-size:.75rem}
-    .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4.25rem}}
 
     /* ─── HEADER v3 override ─── */
     
@@ -186,7 +169,16 @@
     .faq-category{animation:none!important}
     .faq-item{animation:none!important}
     
-  </style>
+      /* ── BREADCRUMB ── */
+    .bc{padding:4.5rem 0 .75rem}
+    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
+    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+    .bc a:hover{color:var(--text)}
+    .bc li{color:var(--text-secondary)}
+    .bc-sep{opacity:.3;font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:4rem}}
+    </style>
 
   <meta property="og:title" content="Kontakt – Evolved Web Designs | Friedrichshafen" />
   <meta property="og:description" content="Jetzt Kontakt aufnehmen: Webdesign, SEO oder KI-Agent anfragen. Antwort innerhalb von 24h." />
@@ -416,15 +408,7 @@
     </nav>
   </header>
 
-    <nav class="bc" aria-label="Breadcrumb">
-    <div class="container">
-      <ol>
-        <li><a href="https://evowebdesign.de/">Startseite</a></li>
-        <li class="bc-sep" aria-hidden="true">›</li>
-        <li class="bc-cur" aria-current="page">Kontakt</li>
-      </ol>
-    </div>
-  </nav>
+    <nav class="bc" aria-label="Breadcrumb"><div class="container"><ol><li><a href="https://evowebdesign.de/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Kontakt</li></ol></div></nav>
 
     <main>
         <div class="page-hero">
