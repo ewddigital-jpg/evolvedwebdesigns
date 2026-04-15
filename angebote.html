@@ -195,6 +195,15 @@
     @media (prefers-reduced-motion:reduce) { * { animation:none!important; transition:none!important } }
 
     /* ── BREADCRUMB ── */
+    .bc{padding:4.5rem 0 0}
+    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
+    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+    .bc a:hover{color:var(--text)}
+    .bc li{color:var(--text-secondary)}
+    .bc-sep{opacity:.3;font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:4rem}}
+    
     .bc{display:flex;justify-content:center;padding:4.75rem 1.25rem .25rem}
     .bc ol{display:flex;gap:.4rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
     .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
@@ -234,10 +243,8 @@
     .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(4.5px,-4.5px) }
 
     /* ── PAGE INTRO ── */
-    .page-intro { padding:.75rem 0 3rem; text-align:center; animation:fadeUp 0.7s ease .1s both }
+    .page-intro { padding: .25rem 0 3rem; text-align:center; animation:fadeUp 0.7s ease .1s both }
     
-    .breadcrumb a { color:var(--text-secondary); text-decoration:none; transition:color .2s }
-    .breadcrumb a:hover { color:var(--text) }
     .label { display:inline-block; font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--primary-light); margin-bottom:.75rem }
     .page-intro h1 { font-family:'Poppins',sans-serif; font-size:clamp(2rem,5vw,2.8rem); font-weight:900; letter-spacing:-.03em; line-height:1.15; margin-bottom:1rem }
     .accent { background:linear-gradient(135deg,var(--primary-light),var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text }
@@ -357,7 +364,7 @@
       .nav-links { display:none; position:fixed; top:62px; left:0; right:0; flex-direction:column; background:rgba(13,17,23,.98); backdrop-filter:blur(20px); padding:1.75rem 1.5rem; gap:1rem; border-top:1px solid var(--border); box-shadow:0 8px 32px rgba(0,0,0,.4) }
       .nav-links.open { display:flex }
       .hamburger { display:flex }
-      .page-intro { padding:.5rem 0 2rem }
+      .page-intro { padding:0 0 2rem }
       .footer-top { grid-template-columns:1fr; gap:2rem }
       .footer-brand { grid-column:auto }
       .footer-bottom { flex-direction:column; align-items:flex-start; gap:.5rem }
@@ -469,12 +476,14 @@
     <div class="page-intro">
       <div class="wrap">
         <nav class="bc" aria-label="Breadcrumb">
+    <div class="container">
       <ol>
         <li><a href="https://evowebdesign.de/">Startseite</a></li>
         <li class="bc-sep" aria-hidden="true">›</li>
         <li class="bc-cur" aria-current="page">Angebote</li>
       </ol>
-    </nav>
+    </div>
+  </nav>
         <span class="label">Webdesign Friedrichshafen</span>
         <h1>Angebote und Ablauf.<br /><span class="accent">Transparent und verbindlich.</span></h1>
         <p class="intro-sub">
