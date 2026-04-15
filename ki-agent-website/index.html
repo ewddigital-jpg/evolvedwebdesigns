@@ -165,6 +165,16 @@
     h1{font-family:'Poppins',system-ui,sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:1.25rem}
     h2{font-family:'Poppins',system-ui,sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:700;line-height:1.25;margin-bottom:.75rem}
     h3{font-family:'Poppins',system-ui,sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:.5rem}
+    /* ── BREADCRUMB ── */
+    .bc{display:flex;justify-content:center;padding:4.75rem 1.25rem .25rem}
+    .bc ol{display:flex;gap:.4rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
+    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+    .bc a:hover{color:var(--text)}
+    .bc li{color:var(--text-secondary)}
+    .bc-sep{color:rgba(240,246,252,.18);font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:4.25rem}}
+
     /* ── NAV ── */
     header{position:fixed;top:0;left:0;right:0;z-index:9000;transition:all .3s}
     header.top{background:rgba(13,17,23,.6);backdrop-filter:blur(16px);border-bottom:1px solid transparent}
@@ -480,6 +490,14 @@
   <main id="main">
 
     <!-- HERO -->
+    <nav class="bc" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://evowebdesign.de/">Startseite</a></li>
+        <li class="bc-sep" aria-hidden="true">›</li>
+        <li class="bc-cur" aria-current="page">KI-Agent</li>
+      </ol>
+    </nav>
+
     <section class="hero">
       <div class="container">
         <div class="section-tag h-anim h-anim-1">KI-Agent für lokale Unternehmen</div>
