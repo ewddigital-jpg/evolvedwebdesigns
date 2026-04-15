@@ -263,7 +263,7 @@
     .btn-ghost:hover { border-color:rgba(240,246,252,.26); background:rgba(240,246,252,.04) }
 
     /* ── PAGE INTRO ── */
-    .page-intro { padding: .25rem 0 3rem;
+    .page-intro{ padding:0 0 3rem;
       border-bottom: 1px solid var(--border);
       text-align: center;
       animation: fadeUp 0.7s ease .1s both;
@@ -402,15 +402,19 @@
     .srv-card-link{font-size:.82rem;font-weight:700;color:var(--primary-light);text-decoration:none;transition:opacity .2s}
     .srv-card-link:hover{opacity:.75}
     @media(max-width:720px){.srv-cards{grid-template-columns:1fr}}
-      /* ── BREADCRUMB ── */
-    .bc{padding:4.5rem 0 .75rem}
+      
+    .bc-sep{opacity:.3;font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:4rem}}
+    /* ── BREADCRUMB ── */
+    .bc{padding:5rem 0 .75rem}
     .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
     .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
     .bc a:hover{color:var(--text)}
     .bc li{color:var(--text-secondary)}
-    .bc-sep{opacity:.3;font-size:.75rem}
+    .bc-sep{opacity:.25;font-size:.75rem}
     .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4rem}}
+    @media(max-width:768px){.bc{padding-top:4.5rem}}
     </style>
 
 
