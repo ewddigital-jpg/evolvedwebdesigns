@@ -160,6 +160,43 @@
     .step-num{font-family:'Poppins',system-ui,sans-serif;font-size:2rem;font-weight:800;line-height:1;margin-bottom:.75rem;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .step-item h3{font-size:.95rem;margin-bottom:.4rem}
     .step-item p{font-size:.83rem;color:var(--text-secondary);line-height:1.6}
+    
+    /* ── PROCESS FLOW ── */
+    .process-section{padding:clamp(3.5rem,7vw,6rem) 0;border-top:1px solid var(--border)}
+    .process-header{text-align:center;margin-bottom:4rem}
+    .process-header h2{margin-bottom:.85rem}
+    .process-sub{color:var(--text-secondary);font-size:.95rem;max-width:580px;margin:0 auto 1.75rem;line-height:1.75}
+    .process-trust{display:flex;justify-content:center;gap:0 2rem;flex-wrap:wrap;row-gap:.6rem}
+    .process-trust span{font-size:.78rem;font-weight:600;color:var(--text-secondary);display:flex;align-items:center;gap:.45rem}
+    .process-trust span::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0}
+    .ps-steps{display:flex;flex-direction:column;gap:5rem}
+    .ps-row{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"content visual";column-gap:4.5rem;row-gap:2rem;align-items:center}
+    .ps-row:nth-child(even){grid-template-areas:"visual content"}
+    .ps-content{grid-area:content}
+    .ps-visual{grid-area:visual}
+    .ps-step-tag{display:flex;align-items:center;gap:.65rem;margin-bottom:1.1rem}
+    .ps-num{font-family:'Poppins',system-ui,sans-serif;font-size:1rem;font-weight:900;letter-spacing:.02em;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .ps-rule{flex:1;max-width:36px;height:1.5px;background:linear-gradient(to right,var(--primary),var(--accent));border-radius:2px;opacity:.45}
+    .ps-content h3{font-size:1.35rem;font-weight:800;line-height:1.28;margin-bottom:.8rem;color:var(--text)}
+    .ps-content p{font-size:.88rem;color:var(--text-secondary);line-height:1.75}
+    .ps-device{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.5),0 4px 16px rgba(0,0,0,.22)}
+    .ps-device-bar{padding:.58rem .9rem;background:rgba(240,246,252,.035);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.7rem;flex-shrink:0}
+    .ps-d-dots{display:flex;gap:.32rem;flex-shrink:0}
+    .ps-d-dots span{width:9px;height:9px;border-radius:50%}
+    .ps-d-dots span:nth-child(1){background:rgba(255,95,86,.6)}
+    .ps-d-dots span:nth-child(2){background:rgba(255,189,46,.5)}
+    .ps-d-dots span:nth-child(3){background:rgba(39,201,63,.5)}
+    .ps-d-label{font-size:.68rem;color:rgba(240,246,252,.28);font-weight:500;flex:1;text-align:center;letter-spacing:.025em}
+    .ps-screen{background:var(--bg)}
+    .ps-screen img{width:100%;height:auto;display:block;max-height:460px;object-fit:contain;object-position:top center}
+    @media(max-width:800px){
+      .ps-row{grid-template-columns:1fr;grid-template-areas:"content" "visual";column-gap:0;row-gap:1.5rem}
+      .ps-row:nth-child(even){grid-template-areas:"content" "visual"}
+      .ps-steps{gap:3rem}
+      .ps-content h3{font-size:1.2rem}
+      .process-header{margin-bottom:2.5rem}
+      .process-trust{gap:0 1.25rem}
+    }
     /* ── PRICING ── */
     .pricing-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
     .pricing-card{background:var(--bg-card);border:2px solid rgba(0,102,255,.35);border-radius:18px;padding:clamp(2rem,4vw,2.5rem);max-width:480px;margin:2rem auto 0;position:relative;box-shadow:0 0 40px rgba(0,102,255,.1)}
@@ -546,6 +583,145 @@
             <p>Der Agent geht auf Ihrer Website live. Kurze Einführung, dann gehört alles Ihnen.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    
+    <!-- PROCESS FLOW -->
+    <section class="process-section" id="ablauf">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="process-header">
+          <div class="section-tag anim">So funktioniert's</div>
+          <h2 class="anim">So wird aus einem Website-Besucher<br>automatisch ein Termin</h2>
+          <p class="process-sub anim">Ihr KI-Agent beantwortet Anfragen sofort, sammelt wichtige Informationen und führt Interessenten automatisch bis zur Terminbestätigung.</p>
+          <div class="process-trust anim">
+            <span>24/7 erreichbar</span>
+            <span>Automatische Lead-Erfassung</span>
+            <span>Terminbuchung ohne manuellen Aufwand</span>
+          </div>
+        </div>
+
+        <!-- Steps -->
+        <div class="ps-steps">
+
+          <!-- 01 -->
+          <div class="ps-row">
+            <div class="ps-content anim-l">
+              <div class="ps-step-tag">
+                <span class="ps-num">Schritt 01</span>
+                <span class="ps-rule"></span>
+              </div>
+              <h3>Sofort erreichbar für neue Anfragen</h3>
+              <p>Der KI-Agent begrüßt Besucher direkt auf Ihrer Website und startet sofort die Unterhaltung — ohne Wartezeit und auch außerhalb Ihrer Geschäftszeiten.</p>
+            </div>
+            <div class="ps-visual anim-r">
+              <div class="ps-device">
+                <div class="ps-device-bar">
+                  <div class="ps-d-dots"><span></span><span></span><span></span></div>
+                  <span class="ps-d-label">KI-Assistent · Evolved Web Designs</span>
+                </div>
+                <div class="ps-screen">
+                  <img src="../first.png" alt="KI-Agent begrüßt Websitebesucher sofort" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 -->
+          <div class="ps-row">
+            <div class="ps-content anim-r">
+              <div class="ps-step-tag">
+                <span class="ps-num">Schritt 02</span>
+                <span class="ps-rule"></span>
+              </div>
+              <h3>Anfragen werden direkt aufgenommen</h3>
+              <p>Interessenten können ihren Wunsch direkt im Chat eingeben. Der KI-Agent versteht die Anfrage und leitet den nächsten Schritt automatisch ein.</p>
+            </div>
+            <div class="ps-visual anim-l">
+              <div class="ps-device">
+                <div class="ps-device-bar">
+                  <div class="ps-d-dots"><span></span><span></span><span></span></div>
+                  <span class="ps-d-label">KI-Assistent · Evolved Web Designs</span>
+                </div>
+                <div class="ps-screen">
+                  <img src="../second.png" alt="Interessent gibt seine Anfrage im Chat ein" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03 -->
+          <div class="ps-row">
+            <div class="ps-content anim-l">
+              <div class="ps-step-tag">
+                <span class="ps-num">Schritt 03</span>
+                <span class="ps-rule"></span>
+              </div>
+              <h3>Wichtige Daten werden automatisch erfasst</h3>
+              <p>Name, E-Mail und weitere relevante Informationen werden strukturiert abgefragt — damit aus einer Anfrage ein echter, qualifizierter Lead wird.</p>
+            </div>
+            <div class="ps-visual anim-r">
+              <div class="ps-device">
+                <div class="ps-device-bar">
+                  <div class="ps-d-dots"><span></span><span></span><span></span></div>
+                  <span class="ps-d-label">KI-Assistent · Evolved Web Designs</span>
+                </div>
+                <div class="ps-screen">
+                  <img src="../third.png" alt="KI-Agent erfasst Kontaktdaten und Anfrage strukturiert" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04 -->
+          <div class="ps-row">
+            <div class="ps-content anim-r">
+              <div class="ps-step-tag">
+                <span class="ps-num">Schritt 04</span>
+                <span class="ps-rule"></span>
+              </div>
+              <h3>Termine werden automatisch bestätigt</h3>
+              <p>Sobald alle Angaben vorliegen, übernimmt der KI-Agent die Buchung und bestätigt den Termin direkt im Chat — vollautomatisch, ohne manuellen Eingriff.</p>
+            </div>
+            <div class="ps-visual anim-l">
+              <div class="ps-device">
+                <div class="ps-device-bar">
+                  <div class="ps-d-dots"><span></span><span></span><span></span></div>
+                  <span class="ps-d-label">KI-Assistent · Evolved Web Designs</span>
+                </div>
+                <div class="ps-screen">
+                  <img src="../fourth.png" alt="KI-Agent bestätigt gebuchten Termin im Chat" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05 -->
+          <div class="ps-row">
+            <div class="ps-content anim-l">
+              <div class="ps-step-tag">
+                <span class="ps-num">Schritt 05</span>
+                <span class="ps-rule"></span>
+              </div>
+              <h3>Professionelle Bestätigung per E-Mail</h3>
+              <p>Nach der Buchung erhält der Interessent automatisch eine klare Bestätigung per E-Mail. Das wirkt seriös, spart Zeit und reduziert Rückfragen.</p>
+            </div>
+            <div class="ps-visual anim-r">
+              <div class="ps-device">
+                <div class="ps-device-bar">
+                  <div class="ps-d-dots"><span></span><span></span><span></span></div>
+                  <span class="ps-d-label">E-Mail-Bestätigung</span>
+                </div>
+                <div class="ps-screen">
+                  <img src="../fifth.png" alt="Automatische Terminbestätigung per E-Mail" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /ps-steps -->
       </div>
     </section>
 
