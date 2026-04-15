@@ -209,24 +209,7 @@
     .skip { position:absolute; left:-9999px }
     .skip:focus { left:1rem; top:1rem; z-index:9999; background:var(--bg-card); color:var(--text); padding:.6rem 1rem; border-radius:8px; border:1px solid var(--border-active) }
 
-    /* ── BREADCRUMB ── */
-    .bc{padding:4.5rem 0 0}
-    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
-    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
-    .bc a:hover{color:var(--text)}
-    .bc li{color:var(--text-secondary)}
-    .bc-sep{opacity:.3;font-size:.75rem}
-    .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4rem}}
     
-    .bc{display:flex;justify-content:center;padding:4.75rem 1.25rem .25rem}
-    .bc ol{display:flex;gap:.4rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
-    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
-    .bc a:hover{color:var(--text)}
-    .bc li{color:var(--text-secondary)}
-    .bc-sep{color:rgba(240,246,252,.18);font-size:.75rem}
-    .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4.25rem}}
 
     /* ── HEADER ── */
     header { position:fixed; top:0; left:0; right:0; z-index:1000; transition:background .3s,box-shadow .3s,border-color .3s }
@@ -419,7 +402,16 @@
     .srv-card-link{font-size:.82rem;font-weight:700;color:var(--primary-light);text-decoration:none;transition:opacity .2s}
     .srv-card-link:hover{opacity:.75}
     @media(max-width:720px){.srv-cards{grid-template-columns:1fr}}
-  </style>
+      /* ── BREADCRUMB ── */
+    .bc{padding:4.5rem 0 .75rem}
+    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
+    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+    .bc a:hover{color:var(--text)}
+    .bc li{color:var(--text-secondary)}
+    .bc-sep{opacity:.3;font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:4rem}}
+    </style>
 
 
 <style id="wa-left">
@@ -522,15 +514,7 @@
     <!-- INTRO -->
     <div class="page-intro">
       <div class="wrap">
-        <nav class="bc" aria-label="Breadcrumb">
-    <div class="container">
-      <ol>
-        <li><a href="https://evowebdesign.de/">Startseite</a></li>
-        <li class="bc-sep" aria-hidden="true">›</li>
-        <li class="bc-cur" aria-current="page">Leistungen</li>
-      </ol>
-    </div>
-  </nav>
+        <nav class="bc" aria-label="Breadcrumb"><div class="container"><ol><li><a href="https://evowebdesign.de/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Leistungen</li></ol></div></nav>
         <span class="label">Was wir anbieten</span>
         <h1>Drei Leistungen.<br /><span class="accent">Klar definiert.</span></h1>
         <p class="intro-sub">
