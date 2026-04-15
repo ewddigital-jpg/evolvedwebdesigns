@@ -814,14 +814,6 @@
   </footer>
 
   <script>
-  // Header scroll
-  var hdr=document.getElementById('hdr');
-  window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>40);},{passive:true});
-  // Mobile nav
-  var menuBtn=document.getElementById('menuBtn');
-  var navLinks=document.getElementById('navLinks');
-  if(menuBtn){menuBtn.addEventListener('click',function(){var open=navLinks.classList.toggle('open');menuBtn.classList.toggle('open',open);menuBtn.setAttribute('aria-expanded',open);});}
-  document.addEventListener('click',function(e){if(navLinks&&navLinks.classList.contains('open')&&!e.target.closest('nav')){navLinks.classList.remove('open');menuBtn&&menuBtn.classList.remove('open');}});
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(function(btn){
     btn.addEventListener('click',function(){
