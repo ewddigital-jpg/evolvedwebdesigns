@@ -482,19 +482,15 @@
     </nav>
   </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a href="https://evowebdesign.de/" itemprop="item"><span itemprop="name">Startseite</span></a>
-                <meta itemprop="position" content="1">
-            </li>
-            <li><span style="color: var(--text-secondary);">›</span></li>
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span class="current" itemprop="name">Projekte</span>
-                <meta itemprop="position" content="2">
-            </li>
-        </ol>
-    </nav>
+    <nav class="bc" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="https://evowebdesign.de/">Startseite</a></li>
+        <li class="bc-sep" aria-hidden="true">›</li>
+        <li class="bc-cur" aria-current="page">Projekte</li>
+      </ol>
+    </div>
+  </nav>
 
     <main>
         <div class="page-hero">
