@@ -46,11 +46,7 @@
         .whatsapp-btn{width:60px;height:60px;background:linear-gradient(135deg,var(--whatsapp),#1DA851);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 25px rgba(37,211,102,0.4);transition:all 0.3s ease;text-decoration:none}
         .whatsapp-btn:hover{transform:scale(1.1)}
         .whatsapp-btn img{width:32px;height:32px}
-        .breadcrumb{max-width:1200px;margin:0 auto;padding:5.5rem 2rem 1rem;animation:fadeInUp .6s ease .2s both}
-        .breadcrumb-list{display:flex;gap:0.5rem;list-style:none;font-size:0.85rem}
-        .breadcrumb-list a{color:var(--text-secondary);text-decoration:none}
-        .breadcrumb-list a:hover{color:var(--primary-light)}
-        .breadcrumb-list .current{color:var(--primary-light)}
+        
         .page-hero{padding:1.5rem 2rem 3rem;text-align:center;max-width:800px;margin:0 auto;animation:fadeInUp .7s ease .3s both}
         .page-hero h1{font-family:'Poppins',sans-serif;font-size:clamp(1.8rem,5vw,2.5rem);font-weight:800;margin-bottom:1rem}
         .gradient-text{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -92,6 +88,16 @@
         @media(max-width:992px){.contact-section{grid-template-columns:1fr}}
         @media(max-width:768px){.nav-links{position:fixed;top:65px;left:-100%;width:100%;height:calc(100vh - 65px);background:rgba(13,17,23,0.98);flex-direction:column;padding:2rem;gap:1.5rem;transition:left 0.3s ease}.breadcrumb{padding:5rem 1.5rem 0.5rem}.page-hero{padding:1rem 1.5rem 2rem}.contact-section{padding:0 1.5rem 3rem}.form-container{padding:1.5rem}.whatsapp-float{bottom:20px;right:20px}.whatsapp-btn{width:55px;height:55px}}
     
+    /* ── BREADCRUMB ── */
+    .bc{display:flex;justify-content:center;padding:4.75rem 1.25rem .25rem}
+    .bc ol{display:flex;gap:.4rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
+    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+    .bc a:hover{color:var(--text)}
+    .bc li{color:var(--text-secondary)}
+    .bc-sep{color:rgba(240,246,252,.18);font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:4.25rem}}
+
     /* ─── HEADER v3 override ─── */
     
     .nav-links{gap:1.75rem!important}
