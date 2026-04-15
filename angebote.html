@@ -194,24 +194,7 @@
     @keyframes fadeDown { from { opacity:0; transform:translateY(-16px) } to { opacity:1; transform:translateY(0) } }
     @media (prefers-reduced-motion:reduce) { * { animation:none!important; transition:none!important } }
 
-    /* ── BREADCRUMB ── */
-    .bc{padding:4.5rem 0 0}
-    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
-    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
-    .bc a:hover{color:var(--text)}
-    .bc li{color:var(--text-secondary)}
-    .bc-sep{opacity:.3;font-size:.75rem}
-    .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4rem}}
     
-    .bc{display:flex;justify-content:center;padding:4.75rem 1.25rem .25rem}
-    .bc ol{display:flex;gap:.4rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
-    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
-    .bc a:hover{color:var(--text)}
-    .bc li{color:var(--text-secondary)}
-    .bc-sep{color:rgba(240,246,252,.18);font-size:.75rem}
-    .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4.25rem}}
 
     /* ── LAYOUT ── */
     .wrap { max-width:1100px; margin:0 auto; padding:0 2rem }
@@ -373,7 +356,16 @@
       .cta-btns { flex-direction:column }
       .cta-btns .btn { width:100%; justify-content:center }
     }
-  </style>
+      /* ── BREADCRUMB ── */
+    .bc{padding:4.5rem 0 .75rem}
+    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
+    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+    .bc a:hover{color:var(--text)}
+    .bc li{color:var(--text-secondary)}
+    .bc-sep{opacity:.3;font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:4rem}}
+    </style>
 
 
 <style id="wa-left">
@@ -475,15 +467,7 @@
     <!-- INTRO -->
     <div class="page-intro">
       <div class="wrap">
-        <nav class="bc" aria-label="Breadcrumb">
-    <div class="container">
-      <ol>
-        <li><a href="https://evowebdesign.de/">Startseite</a></li>
-        <li class="bc-sep" aria-hidden="true">›</li>
-        <li class="bc-cur" aria-current="page">Angebote</li>
-      </ol>
-    </div>
-  </nav>
+        <nav class="bc" aria-label="Breadcrumb"><div class="container"><ol><li><a href="https://evowebdesign.de/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Angebote</li></ol></div></nav>
         <span class="label">Webdesign Friedrichshafen</span>
         <h1>Angebote und Ablauf.<br /><span class="accent">Transparent und verbindlich.</span></h1>
         <p class="intro-sub">
