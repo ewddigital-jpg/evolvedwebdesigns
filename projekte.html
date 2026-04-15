@@ -78,8 +78,7 @@
         
         
 
-        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 5.5rem 2rem 1rem; animation: fadeInUp 0.5s ease 0.2s both; }
-        .page-hero { padding: 1.5rem 2rem 3rem; text-align: center; max-width: 800px; margin: 0 auto; animation: fadeInUp 0.7s ease 0.3s both; }
+        .page-hero{ padding:.25rem 2rem 3rem; text-align: center; max-width: 800px; margin: 0 auto; animation: fadeInUp 0.7s ease 0.3s both; }
         .page-hero h1 { font-family: 'Poppins', sans-serif; font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
         .gradient-text { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .page-hero p { color: var(--text-secondary); font-size: 1.05rem; }
@@ -159,8 +158,7 @@
             .nav-links { position: fixed; top: 65px; left: -100%; width: 100%; height: calc(100vh - 65px); background: rgba(13, 17, 23, 0.98); flex-direction: column; padding: 2rem; gap: 1.5rem; transition: left 0.3s ease; z-index: 999; }
             
             
-            .breadcrumb { padding: 5rem 1.5rem 0.5rem; }
-            .page-hero { padding: 1rem 1.5rem 2rem; }
+            .page-hero{ padding:0 1.5rem 2rem; }
             .projects-section { padding: 0 1.25rem 2rem; }
             .review-section { padding: 1.5rem 1.25rem 0; }
             .cta-wrapper { padding: 2rem 1.25rem 3rem; }
@@ -168,6 +166,15 @@
         }
     
     /* ── BREADCRUMB ── */
+    .bc{padding:4.5rem 0 0}
+    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
+    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+    .bc a:hover{color:var(--text)}
+    .bc li{color:var(--text-secondary)}
+    .bc-sep{opacity:.3;font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:4rem}}
+    
     .bc{display:flex;justify-content:center;padding:4.75rem 1.25rem .25rem}
     .bc ol{display:flex;gap:.4rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
     .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
