@@ -103,14 +103,14 @@
     .btn-secondary{background:transparent;color:var(--text);padding:.85rem 1.75rem;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--border);transition:all .2s;display:inline-block}
     .btn-secondary:hover{border-color:var(--border-hover);color:var(--primary)}
     /* ── PROBLEM ── */
-    .problem-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
+    .problem-section{padding:clamp(2.25rem,4.5vw,3.75rem) 0;border-top:1px solid var(--border)}
     .problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:2rem}
     .problem-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start}
     .problem-icon{font-size:1.5rem;flex-shrink:0;margin-top:.1rem}
     .problem-card h3{font-size:.95rem;margin-bottom:.35rem;color:var(--text)}
     .problem-card p{font-size:.85rem;color:var(--text-secondary);line-height:1.6}
     /* ── CAPABILITIES ── */
-    .cap-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
+    .cap-section{padding:clamp(2.25rem,4.5vw,3.75rem) 0;border-top:1px solid var(--border)}
     .cap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.25rem;margin-top:2rem}
     .cap-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:border-color .2s,transform .2s}
     .cap-card:hover{border-color:var(--border-hover);transform:translateY(-3px)}
@@ -118,7 +118,7 @@
     .cap-card h3{font-size:.95rem;margin-bottom:.4rem}
     .cap-card p{font-size:.83rem;color:var(--text-secondary);line-height:1.6}
     /* ── GUARDRAILS ── */
-    .guardrails-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
+    .guardrails-section{padding:clamp(2.25rem,4.5vw,3.75rem) 0;border-top:1px solid var(--border)}
     .gr-lead{color:var(--text-secondary);font-size:.95rem;margin:.4rem 0 2rem;max-width:520px}
     .gr-panel{display:grid;grid-template-columns:1fr auto 1fr;background:var(--bg-card);border:1px solid var(--border);border-radius:18px;overflow:hidden;position:relative;margin-top:2rem}
     .gr-panel::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,rgba(74,222,128,.05) 0%,transparent 45%,rgba(255,107,107,.05) 100%)}
@@ -140,21 +140,13 @@
     .gr-note-icon{font-size:1.25rem;flex-shrink:0;margin-top:.05rem}
     @media(max-width:700px){.gr-panel{grid-template-columns:1fr;grid-template-rows:auto auto auto}.gr-vdiv{width:100%;height:1px;background:linear-gradient(to right,transparent 0%,rgba(240,246,252,.1) 15%,rgba(240,246,252,.1) 85%,transparent 100%)}.gr-half{padding:1.35rem 1.25rem}}
     /* ── INDUSTRIES ── */
-    .industries-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
+    .industries-section{padding:clamp(2.25rem,4.5vw,3.75rem) 0;border-top:1px solid var(--border)}
     .industry-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.85rem;margin-top:2rem}
     .industry-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.1rem;text-align:center;font-size:.84rem;font-weight:500;color:var(--text-secondary);transition:border-color .2s,color .2s}
     .industry-card:hover{border-color:var(--border-hover);color:var(--text)}
     .industry-card .ind-icon{font-size:1.6rem;margin-bottom:.5rem;display:block}
-    /* ── DEMO OFFER ── */
-    .demo-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
-    .demo-box{background:linear-gradient(135deg,rgba(0,102,255,.08),rgba(0,217,255,.04));border:1px solid rgba(0,102,255,.25);border-radius:18px;padding:clamp(2rem,4vw,3rem);text-align:center}
-    .demo-box h2{margin-bottom:.75rem}
-    .demo-box p{color:var(--text-secondary);font-size:.95rem;max-width:520px;margin:0 auto 1.75rem;line-height:1.7}
-    .demo-features{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem}
-    .demo-feat{font-size:.82rem;color:var(--text-secondary);display:flex;align-items:center;gap:.4rem}
-    .demo-feat::before{content:'✓';color:#4ade80;font-weight:700}
     /* ── STEPS ── */
-    .steps-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
+    .steps-section{padding:clamp(2.25rem,4.5vw,3.75rem) 0;border-top:1px solid var(--border)}
     .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem;counter-reset:steps}
     .step-item{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;position:relative;counter-increment:steps}
     .step-num{font-family:'Poppins',system-ui,sans-serif;font-size:2rem;font-weight:800;line-height:1;margin-bottom:.75rem;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -162,14 +154,14 @@
     .step-item p{font-size:.83rem;color:var(--text-secondary);line-height:1.6}
     
     /* ── PROCESS FLOW ── */
-    .process-section{padding:clamp(3.5rem,7vw,6rem) 0;border-top:1px solid var(--border)}
-    .process-header{text-align:center;margin-bottom:4rem}
+    .process-section{padding:clamp(2.625rem,5.25vw,4.5rem) 0;border-top:1px solid var(--border)}
+    .process-header{text-align:center;margin-bottom:3rem}
     .process-header h2{margin-bottom:.85rem}
     .process-sub{color:var(--text-secondary);font-size:.95rem;max-width:580px;margin:0 auto 1.75rem;line-height:1.75}
     .process-trust{display:flex;justify-content:center;gap:0 2rem;flex-wrap:wrap;row-gap:.6rem}
     .process-trust span{font-size:.78rem;font-weight:600;color:var(--text-secondary);display:flex;align-items:center;gap:.45rem}
     .process-trust span::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0}
-    .ps-steps{display:flex;flex-direction:column;gap:5rem}
+    .ps-steps{display:flex;flex-direction:column;gap:3.75rem}
     .ps-row{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"content visual";column-gap:4.5rem;row-gap:2rem;align-items:center}
     .ps-row:nth-child(even){grid-template-areas:"visual content"}
     .ps-content{grid-area:content}
@@ -192,24 +184,22 @@
     @media(max-width:800px){
       .ps-row{grid-template-columns:1fr;grid-template-areas:"content" "visual";column-gap:0;row-gap:1.5rem}
       .ps-row:nth-child(even){grid-template-areas:"content" "visual"}
-      .ps-steps{gap:3rem}
+      .ps-steps{gap:2.25rem}
       .ps-content h3{font-size:1.2rem}
       .process-header{margin-bottom:2.5rem}
       .process-trust{gap:0 1.25rem}
     }
-    /* ── PRICING ── */
-    .pricing-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
-    .pricing-card{background:var(--bg-card);border:2px solid rgba(0,102,255,.35);border-radius:18px;padding:clamp(2rem,4vw,2.5rem);max-width:480px;margin:2rem auto 0;position:relative;box-shadow:0 0 40px rgba(0,102,255,.1)}
-    .pricing-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-size:.72rem;font-weight:700;padding:.3rem 1.1rem;border-radius:999px;white-space:nowrap;letter-spacing:.05em}
-    .price-amount{font-family:'Poppins',system-ui,sans-serif;font-size:3rem;font-weight:800;line-height:1;margin:.75rem 0 .25rem}
-    .price-note{font-size:.82rem;color:var(--text-secondary);margin-bottom:1.75rem}
-    .price-includes{list-style:none;margin-bottom:1.75rem}
-    .price-includes li{padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--text-secondary);display:flex;gap:.6rem;align-items:center}
-    .price-includes li:last-child{border-bottom:none}
-    .price-includes li::before{content:'✓';color:#4ade80;font-weight:700;flex-shrink:0}
-    .price-hosting{background:rgba(0,102,255,.06);border:1px solid rgba(0,102,255,.12);border-radius:8px;padding:.85rem 1rem;font-size:.82rem;color:var(--text-secondary);margin-bottom:1.5rem}
+    
+    /* ── CTA ── */
+    .cta-section{padding:clamp(2.25rem,4.5vw,3.75rem) 0;border-top:1px solid var(--border)}
+    .cta-box{background:linear-gradient(135deg,rgba(0,102,255,.09) 0%,rgba(0,217,255,.05) 100%);border:1px solid rgba(0,102,255,.28);border-radius:20px;padding:clamp(2rem,4vw,3rem);text-align:center}
+    .cta-box h2{margin-bottom:.85rem}
+    .cta-sub{color:var(--text-secondary);font-size:.93rem;max-width:520px;margin:0 auto 1.75rem;line-height:1.75}
+    .cta-feats{display:flex;justify-content:center;gap:.65rem 1.5rem;flex-wrap:wrap;margin-bottom:1.75rem}
+    .cta-feat{font-size:.82rem;color:var(--text-secondary);display:flex;align-items:center;gap:.4rem}
+    .cta-feat::before{content:'✓';color:#4ade80;font-weight:700}
     /* ── FAQ ── */
-    .faq-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--border)}
+    .faq-section{padding:clamp(2.25rem,4.5vw,3.75rem) 0;border-top:1px solid var(--border)}
     .faq-list{margin-top:1.75rem;display:flex;flex-direction:column;gap:.5rem}
     .faq-item{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .2s}
     .faq-item.open{border-color:var(--border-hover)}
@@ -539,22 +529,6 @@
     </section>
 
     <!-- DEMO OFFER -->
-    <section class="demo-section">
-      <div class="container">
-        <div class="demo-box anim-s">
-          <div class="section-tag anim">Risikofrei testen</div>
-          <h2>14 Tage kostenlose Demo —<br>auf Ihrer eigenen Website.</h2>
-          <p>Wir richten den KI-Agenten auf Ihre Inhalte ein und binden ihn auf Ihrer Website ein. Sie testen ihn live mit echten Kundenfragen. Kein Risiko, kein Vertrag, keine Kosten.</p>
-          <div class="demo-features">
-            <div class="demo-feat">Einrichtung durch uns</div>
-            <div class="demo-feat">Training auf Ihr Angebot</div>
-            <div class="demo-feat">Kein Vertrag</div>
-            <div class="demo-feat">Kündigung jederzeit</div>
-          </div>
-          <a href="https://evowebdesign.de/kontakt" class="btn-primary">Demo jetzt anfragen</a>
-        </div>
-      </div>
-    </section>
 
     <!-- PROCESS -->
     <section class="steps-section">
@@ -725,31 +699,22 @@
       </div>
     </section>
 
-    <!-- PRICING -->
-    <section class="pricing-section" id="preis">
+    
+    <!-- CTA -->
+    <section class="cta-section">
       <div class="container">
-        <div style="text-align:center">
-          <div class="section-tag anim">Preis</div>
-          <h2 class="anim">Ein Festpreis. Keine Überraschungen.</h2>
+        <div class="cta-box anim-s">
+          <div class="section-tag" style="margin-bottom:1.1rem">Risikofrei testen</div>
+          <h2>14 Tage kostenlose Demo —<br>auf Ihrer eigenen Website.</h2>
+          <p class="cta-sub">Wir richten den KI-Agenten auf Ihre Inhalte ein und binden ihn auf Ihrer Website ein. Sie testen ihn live mit echten Kundenfragen. Kein Risiko, kein Vertrag, keine Kosten.</p>
+          <div class="cta-feats">
+            <div class="cta-feat">Einrichtung durch uns</div>
+            <div class="cta-feat">Training auf Ihr Angebot</div>
+            <div class="cta-feat">Kein Vertrag</div>
+            <div class="cta-feat">Kündigung jederzeit</div>
+          </div>
+          <a href="https://evowebdesign.de/kontakt" class="btn-primary" style="display:inline-block;margin-top:.25rem">Demo starten &rarr;</a>
         </div>
-        <div class="pricing-card anim-s">
-          <div class="pricing-badge">⭐ Bestseller</div>
-          <h3 style="font-size:1.1rem;margin-bottom:.25rem">Website + KI-Agent</h3>
-          <div class="price-amount"><span class="gradient-text">1.490 €</span></div>
-          <div class="price-note">einmalig · Festpreis · kein Abo</div>
-          <ul class="price-includes">
-            <li>Konversionsfokussierte Website (bis zu 5 Seiten)</li>
-            <li>KI-Agent auf Ihre Inhalte trainiert</li>
-            <li>Terminbuchung direkt im Chat</li>
-            <li>SEO-Grundoptimierung & Google Business Setup</li>
-            <li>Mobil optimiert, schnell geladen</li>
-            <li>3–4 Wochen bis Live-Gang</li>
-            <li>Kurzer, klarer Vertrag — kein Kleingedrucktes</li>
-          </ul>
-          <div class="price-hosting">+ Hosting &amp; Betreuung ab 29 €/Monat — Hosting, SSL, Updates, Support. Monatlich kündbar.</div>
-          <a href="https://evowebdesign.de/kontakt" class="btn-primary" style="width:100%;text-align:center;display:block">Jetzt anfragen</a>
-        </div>
-        <p style="text-align:center;margin-top:1.25rem;font-size:.83rem;color:var(--text-secondary)">Nur Website ohne KI-Agent? <a href="https://evowebdesign.de/leistungen" style="color:var(--primary)">Website Starter ab 790 €</a></p>
       </div>
     </section>
 
