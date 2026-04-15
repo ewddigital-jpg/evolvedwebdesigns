@@ -407,14 +407,15 @@
     .bc-cur{color:var(--primary)!important;font-weight:600}
     @media(max-width:768px){.bc{padding-top:4rem}}
     /* ── BREADCRUMB ── */
-    .bc{padding:5rem 0 .75rem}
-    .bc ol{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center}
+    .bc{padding:5rem 1.5rem .75rem;max-width:1100px;margin:0 auto;display:block;box-sizing:border-box}
+    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
     .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
     .bc a:hover{color:var(--text)}
     .bc li{color:var(--text-secondary)}
     .bc-sep{opacity:.25;font-size:.75rem}
     .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4.5rem}.bc ol{padding:0 1.25rem}}
+    @media(max-width:768px){.bc{padding-top:4.5rem;padding-left:1.25rem;padding-right:1.25rem}}
+    
     
 /* WhatsApp bubble → left side (KI widget is on right) */
 .wa,.wa-float,.whatsapp-float{left:24px!important;right:auto!important;bottom:24px!important}
@@ -512,11 +513,13 @@
 
   <main id="main">
 
+  <nav class="bc" aria-label="Breadcrumb"><ol><li><a href="https://evowebdesign.de/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Leistungen</li></ol></nav>
+
+
     <!-- INTRO -->
     <div class="page-intro">
       <div class="wrap">
-        <nav class="bc" aria-label="Breadcrumb"><ol><li><a href="https://evowebdesign.de/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Leistungen</li></ol></nav>
-        <span class="label">Was wir anbieten</span>
+                <span class="label">Was wir anbieten</span>
         <h1>Drei Leistungen.<br /><span class="accent">Klar definiert.</span></h1>
         <p class="intro-sub">
           Website mit KI-Agent, lokale SEO und Hosting – aus einer Hand, zu transparenten Festpreisen.
