@@ -416,13 +416,15 @@
     </nav>
   </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol class="breadcrumb-list">
-            <li><a href="https://evowebdesign.de/">Startseite</a></li>
-            <li><span style="color:var(--text-secondary);">›</span></li>
-            <li><span class="current">Kontakt</span></li>
-        </ol>
-    </nav>
+    <nav class="bc" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="https://evowebdesign.de/">Startseite</a></li>
+        <li class="bc-sep" aria-hidden="true">›</li>
+        <li class="bc-cur" aria-current="page">Kontakt</li>
+      </ol>
+    </div>
+  </nav>
 
     <main>
         <div class="page-hero">
