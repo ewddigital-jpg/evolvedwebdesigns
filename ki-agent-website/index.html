@@ -165,24 +165,7 @@
     h1{font-family:'Poppins',system-ui,sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:1.25rem}
     h2{font-family:'Poppins',system-ui,sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:700;line-height:1.25;margin-bottom:.75rem}
     h3{font-family:'Poppins',system-ui,sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:.5rem}
-    /* ── BREADCRUMB ── */
-    .bc{padding:4.5rem 0 0}
-    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
-    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
-    .bc a:hover{color:var(--text)}
-    .bc li{color:var(--text-secondary)}
-    .bc-sep{opacity:.3;font-size:.75rem}
-    .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4rem}}
     
-    .bc{display:flex;justify-content:center;padding:4.75rem 1.25rem .25rem}
-    .bc ol{display:flex;gap:.4rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
-    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
-    .bc a:hover{color:var(--text)}
-    .bc li{color:var(--text-secondary)}
-    .bc-sep{color:rgba(240,246,252,.18);font-size:.75rem}
-    .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4.25rem}}
 
     /* ── NAV ── */
     header{position:fixed;top:0;left:0;right:0;z-index:9000;transition:all .3s}
@@ -399,7 +382,16 @@
   .h-anim-3{animation-delay:.36s}
   .h-anim-4{animation-delay:.50s}
   .h-anim-5{animation-delay:.64s}
-  </style>
+      /* ── BREADCRUMB ── */
+    .bc{padding:4.5rem 0 .75rem}
+    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
+    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+    .bc a:hover{color:var(--text)}
+    .bc li{color:var(--text-secondary)}
+    .bc-sep{opacity:.3;font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:4rem}}
+    </style>
 
 
 <style id="wa-left">
@@ -499,15 +491,7 @@
   <main id="main">
 
     <!-- HERO -->
-    <nav class="bc" aria-label="Breadcrumb">
-    <div class="container">
-      <ol>
-        <li><a href="https://evowebdesign.de/">Startseite</a></li>
-        <li class="bc-sep" aria-hidden="true">›</li>
-        <li class="bc-cur" aria-current="page">KI-Agent</li>
-      </ol>
-    </div>
-  </nav>
+    <nav class="bc" aria-label="Breadcrumb"><div class="container"><ol><li><a href="https://evowebdesign.de/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">KI-Agent</li></ol></div></nav>
 
     <section class="hero">
       <div class="container">
