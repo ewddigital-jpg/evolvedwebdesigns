@@ -251,45 +251,15 @@
     .bc-cur{color:var(--primary)!important;font-weight:600}
     @media(max-width:768px){.bc{padding-top:4rem}}
     /* ── BREADCRUMB ── */
-    .bc{padding:5rem 0 .75rem}
-    .bc ol{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center}
+    .bc{padding:5rem 1.5rem .75rem;max-width:1100px;margin:0 auto;display:block;box-sizing:border-box}
+    .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
     .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
     .bc a:hover{color:var(--text)}
     .bc li{color:var(--text-secondary)}
     .bc-sep{opacity:.25;font-size:.75rem}
     .bc-cur{color:var(--primary)!important;font-weight:600}
-    @media(max-width:768px){.bc{padding-top:4.5rem}.bc ol{padding:0 1.25rem}}
+    @media(max-width:768px){.bc{padding-top:4.5rem;padding-left:1.25rem;padding-right:1.25rem}}
     
-    .logo { display:flex; align-items:center; gap:.8rem; text-decoration:none; flex-shrink:0; transition:opacity .2s }
-    .logo:hover { opacity:.8 }
-    .logo-mark { height:42px; width:auto; filter:brightness(1.1) }
-    .logo-name { font-family:'Poppins',sans-serif !important; font-size:1rem !important; font-weight:900 !important; letter-spacing:-.02em !important; color:var(--text) !important; background:none !important; -webkit-text-fill-color:var(--text) !important }
-
-    @media (min-width:769px) { .nav-links { display:flex !important; align-items:center !important; gap:1.75rem !important; list-style:none !important; flex-direction:row !important; position:static !important; width:auto !important; height:auto !important; padding:0 !important; background:none !important; opacity:1 !important } }
-    .nav-links a { color:var(--text-secondary); text-decoration:none; font-size:.875rem !important; font-weight:500; transition:color .2s; white-space:nowrap; position:relative }
-    .nav-links a:not(.nav-cta):hover { color:var(--text) }
-    .nav-links a:not(.nav-cta)::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:var(--primary-light); transition:width .25s }
-    .nav-links a:not(.nav-cta):hover::after { width:100% }
-    .nav-cta {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
-      color: #fff !important; -webkit-text-fill-color:#fff !important;
-      padding:.58rem 1.3rem !important; border-radius:8px !important;
-      font-weight: 700 !important; font-size:.85rem !important;
-      box-shadow: 0 2px 14px rgba(0,102,255,.28);
-      transition: transform .2s, box-shadow .2s;
-      text-decoration:none !important;
-    }
-    .nav-cta:hover { transform:translateY(-1px); box-shadow:0 4px 22px rgba(0,102,255,.45) }
-    .nav-cta::after { display:none !important }
-    .nav-highlight { color:var(--accent,#00D9FF) !important; border:1px solid rgba(0,217,255,0.3) !important; padding:.3rem .85rem !important; border-radius:6px !important; background:rgba(0,217,255,0.06) !important; font-weight:600 !important }
-    .nav-highlight:hover { background:rgba(0,217,255,0.13) !important; border-color:rgba(0,217,255,0.55) !important }
-    .nav-highlight::after { display:none !important }
-
-    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none !important; background:none !important; outline:none }
-    .hamburger span { width:22px; height:1.5px; background:var(--text-secondary); border-radius:2px; display:block; transition:transform .3s, opacity .3s }
-    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(4.5px,4.5px) }
-    .hamburger.open span:nth-child(2) { opacity:0 }
-    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(4.5px,-4.5px) }
 
     /* disable old .mobile-toggle so it doesn't show */
     .mobile-toggle { display:none !important }
@@ -454,9 +424,11 @@
     </nav>
   </header>
 
-    <nav class="bc" aria-label="Breadcrumb"><ol><li><a href="https://evowebdesign.de/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Projekte</li></ol></nav>
-
+    
     <main>
+
+  <nav class="bc" aria-label="Breadcrumb"><ol><li><a href="https://evowebdesign.de/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Projekte</li></ol></nav>
+
         <div class="page-hero">
             <h1>Unsere <span class="gradient-text">Projekte</span></h1>
             <p>Ein Projekt. Ein zufriedener Kunde. 100% Ergebnis. Das ist unser Versprechen fuer jedes weitere Projekt.</p>
