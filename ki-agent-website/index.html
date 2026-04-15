@@ -337,7 +337,7 @@
       .footer-top{grid-template-columns:1fr 1fr}
       .hamburger{display:flex}
       .nav-links{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(13,17,23,.98);flex-direction:column;padding:1.5rem;gap:1rem;border-bottom:1px solid var(--border)}
-      .nav-links.open{display:flex}
+      .nav-links.open{display:flex;z-index:9500}
     }
     @media(max-width:480px){
       .hero-stats{flex-direction:column;align-items:center}
@@ -444,7 +444,7 @@
         gap:1rem !important; border-top:1px solid var(--border) !important;
         box-shadow:0 8px 32px rgba(0,0,0,.4) !important; width:100% !important; height:auto !important;
       }
-      .nav-links.open { display:flex !important }
+      .nav-links.open { display:flex !important; z-index:9500 !important }
       .hamburger { display:flex !important }
     }
 </style>
@@ -457,7 +457,7 @@
         <img src="../logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="42" height="42" />
         <span class="logo-name">Evolved Web Designs</span>
       </a>
-      <button class="hamburger" id="menuBtn" aria-label="Menue" aria-expanded="false">
+      <button class="hamburger" id="menuBtn" aria-label="Menue" aria-expanded="false" onclick="var n=document.getElementById('navLinks');var o=n.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',String(o));">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks" role="list">
@@ -934,20 +934,13 @@
   function setH(){hdr.className=window.scrollY>30?'scrolled':'top';}
   setH();
   window.addEventListener('scroll',setH,{passive:true});
-  var btn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
-  if(btn&&nav){
-    btn.addEventListener('click',function(){
-      var o=nav.classList.contains('open');
-      nav.classList.toggle('open',!o);
-      btn.classList.toggle('open',!o);
-      btn.setAttribute('aria-expanded',String(!o));
-    });
-    document.addEventListener('click',function(e){
-      if(!hdr.contains(e.target)&&nav.classList.contains('open')){
-        nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');
-      }
-    });
-  }
+  // close nav when clicking outside header
+  document.addEventListener('click',function(e){
+    var nav=document.getElementById('navLinks'),btn=document.getElementById('menuBtn');
+    if(nav&&btn&&!hdr.contains(e.target)&&nav.classList.contains('open')){
+      nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');
+    }
+  });
 })();
 </script>
 <!-- EWD Cookie Banner -->
