@@ -169,11 +169,17 @@
     .faq-category{animation:none!important}
     .faq-item{animation:none!important}
     /* ── BREADCRUMB ── */
-    .bc{padding:5rem 1.5rem .75rem;max-width:1100px;margin:0 auto;display:block;box-sizing:border-box}
+    .bc{padding:1.25rem 1.5rem .75rem;max-width:1100px;margin:0 auto;display:block;box-sizing:border-box}
     .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
     .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
     .bc a:hover{color:var(--text)}
     .bc li{color:var(--text-secondary)}
+    .bc-sep{opacity:.25;font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:1rem}}
+    
+        main{padding-top:70px;position:relative;z-index:1}
+    @media(max-width:768px){main{padding-top:62px}}
     </style>
 
 <!-- EWD Header Standard -->
