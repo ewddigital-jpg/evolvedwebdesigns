@@ -209,6 +209,16 @@
     .skip { position:absolute; left:-9999px }
     .skip:focus { left:1rem; top:1rem; z-index:9999; background:var(--bg-card); color:var(--text); padding:.6rem 1rem; border-radius:8px; border:1px solid var(--border-active) }
 
+    /* ── BREADCRUMB ── */
+    .bc{display:flex;justify-content:center;padding:4.75rem 1.25rem .25rem}
+    .bc ol{display:flex;gap:.4rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
+    .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+    .bc a:hover{color:var(--text)}
+    .bc li{color:var(--text-secondary)}
+    .bc-sep{color:rgba(240,246,252,.18);font-size:.75rem}
+    .bc-cur{color:var(--primary)!important;font-weight:600}
+    @media(max-width:768px){.bc{padding-top:4.25rem}}
+
     /* ── HEADER ── */
     header { position:fixed; top:0; left:0; right:0; z-index:1000; transition:background .3s,box-shadow .3s,border-color .3s }
     header.top     { background:rgba(13,17,23,0.55); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid transparent }
@@ -261,13 +271,12 @@
     .btn-ghost:hover { border-color:rgba(240,246,252,.26); background:rgba(240,246,252,.04) }
 
     /* ── PAGE INTRO ── */
-    .page-intro {
-      padding: 3.5rem 0 3rem;
+    .page-intro { padding: .75rem 0 3rem;
       border-bottom: 1px solid var(--border);
       text-align: center;
       animation: fadeUp 0.7s ease .1s both;
     }
-    .breadcrumb { display:flex; gap:.4rem; list-style:none; font-size:.82rem; margin-bottom:1.5rem;  }
+    
     .breadcrumb a { color:var(--text-secondary); text-decoration:none; transition:color .2s }
     .breadcrumb a:hover { color:var(--text) }
     .breadcrumb li { color:var(--text-secondary) }
@@ -506,11 +515,13 @@
     <!-- INTRO -->
     <div class="page-intro">
       <div class="wrap">
-        <ol class="breadcrumb" aria-label="Breadcrumb">
-          <li><a href="https://evowebdesign.de/">Startseite</a></li>
-          <li>&rsaquo;</li>
-          <li>Leistungen</li>
-        </ol>
+        <nav class="bc" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://evowebdesign.de/">Startseite</a></li>
+        <li class="bc-sep" aria-hidden="true">›</li>
+        <li class="bc-cur" aria-current="page">Leistungen</li>
+      </ol>
+    </nav>
         <span class="label">Was wir anbieten</span>
         <h1>Drei Leistungen.<br /><span class="accent">Klar definiert.</span></h1>
         <p class="intro-sub">
