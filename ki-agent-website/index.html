@@ -406,7 +406,7 @@
     .logo-mark { height:42px; width:auto; filter:brightness(1.1) }
     .logo-name { font-family:'Poppins',sans-serif !important; font-size:1rem !important; font-weight:900 !important; letter-spacing:-.02em !important; color:var(--text) !important; background:none !important; -webkit-text-fill-color:var(--text) !important }
 
-    .nav-links { display:flex !important; align-items:center !important; gap:1.75rem !important; list-style:none !important; flex-direction:row !important; position:static !important; width:auto !important; height:auto !important; padding:0 !important; background:none !important; opacity:1 !important }
+    @media (min-width:769px) { .nav-links { display:flex !important; align-items:center !important; gap:1.75rem !important; list-style:none !important; flex-direction:row !important; position:static !important; width:auto !important; height:auto !important; padding:0 !important; background:none !important; opacity:1 !important } }
     .nav-links a { color:var(--text-secondary); text-decoration:none; font-size:.875rem !important; font-weight:500; transition:color .2s; white-space:nowrap; position:relative }
     .nav-links a:not(.nav-cta):hover { color:var(--text) }
     .nav-links a:not(.nav-cta)::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:var(--primary-light); transition:width .25s }
