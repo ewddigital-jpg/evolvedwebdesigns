@@ -980,7 +980,8 @@
       width:100vw!important;height:100%!important;
       border-radius:0!important;
       display:flex!important;flex-direction:column;
-      animation:ewdFadeIn .2s ease;
+      animation:none!important;
+      overscroll-behavior:none;
     }
     /* Messages füllen den gesamten verfügbaren Platz */
     #ewd-chat.ewd-open #ewd-msgs{
@@ -1043,6 +1044,9 @@
   setTimeout(function(){
     addB('Hallo! &#x1F44B; Ich bin der KI-Assistent von Evolved Web Designs. Ich beantworte Ihre Fragen und kann direkt einen Termin f&#xFC;r Sie buchen. Wie kann ich Ihnen helfen?');
   },700);
+  var ewdBoxEl=document.getElementById('ewd-box');
+  function syncVV(){if(!isOpen||!isMobile())return;var vv=window.visualViewport;if(!vv)return;ewdBoxEl.style.setProperty('top',vv.offsetTop+'px','important');ewdBoxEl.style.setProperty('height',vv.height+'px','important');var m=document.getElementById('ewd-msgs');if(m)m.scrollTop=m.scrollHeight;}
+  if(window.visualViewport){window.visualViewport.addEventListener('resize',syncVV,{passive:true});}
   window.ewdT=function(){
     isOpen=!isOpen;
     var chat=document.getElementById('ewd-chat');
@@ -1056,14 +1060,16 @@
       var wa=document.querySelector('.wa')||document.querySelector('.wa-float');
       if(wa) wa.style.display='none';
       // Body-Scroll sperren auf Mobile
-      if(isMobile()) document.body.style.overflow='hidden';
+      syncVV();
       setTimeout(function(){document.getElementById('ewd-inp').focus();},100);
     } else {
       box.style.display='none';
+      ewdBoxEl.style.removeProperty('top');
+      ewdBoxEl.style.removeProperty('height');
       chat.classList.remove('ewd-open');
       var wa=document.querySelector('.wa')||document.querySelector('.wa-float');
       if(wa) wa.style.display='';
-      document.body.style.overflow='';
+
     }
   };
   // JSONP-Aufruf statt fetch() — umgeht CSP connect-src Einschränkung
