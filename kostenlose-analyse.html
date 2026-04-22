@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -53,6 +53,46 @@
     "@type": "WebPage",
     "url": "https://evowebdesign.de/kostenlose-analyse",
     "isPartOf": {"@id": "https://evowebdesign.de/#org"}
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Kostenlose Website-Analyse",
+    "description": "Persoenliche Video-Analyse Ihrer Website durch Evolved Web Designs. In 5 Minuten zeigen wir, warum Ihre Website keine Anfragen bringt und was Sie dagegen tun koennen.",
+    "provider": {"@id": "https://evowebdesign.de/#org"},
+    "areaServed": {"@type": "AdministrativeArea", "name": "Bodenseekreis"},
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ist die Website-Analyse wirklich kostenlos?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ja, komplett kostenlos. Kein Abo, kein Newsletter-Zwang, kein Telefon-Spam. Wir schicken Ihnen das Video und eine PDF. Alles weitere nur, wenn Sie es moechten."}
+      },
+      {
+        "@type": "Question",
+        "name": "Wie lange dauert die Analyse?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sie fuellenl das Formular in 60 Sekunden aus. Wir liefern die Analyse innerhalb von 48 Stunden."}
+      },
+      {
+        "@type": "Question",
+        "name": "Was, wenn meine Website eigentlich ganz OK ist?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Dann sagen wir Ihnen das ehrlich. Wir erfinden keine Probleme, um Ihnen etwas zu verkaufen."}
+      },
+      {
+        "@type": "Question",
+        "name": "Ich habe schon eine Agentur. Kann ich trotzdem eine Analyse bekommen?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ja, gerade dann. Eine unabhaengige Zweitmeinung schadet nie."}
+      },
+      {
+        "@type": "Question",
+        "name": "Was passiert nach der Analyse?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sie bekommen Video und PDF per E-Mail. Auf Wunsch koennen Sie ein 15-Minuten-Gespraech vereinbaren. Kein Verkaufsdruck."}
+      }
+    ]
   }
 ]
   </script>
@@ -177,7 +217,7 @@
     .hero-ctas { display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap; margin-bottom:1.25rem }
     .hero-trust { font-size:.78rem; color:var(--text-secondary); opacity:.75 }
     .hero-trust span { margin:0 .4rem; opacity:.4 }
-    @media(max-width:600px){ .hero { min-height:auto; padding:3rem 0 2.5rem } .hero-ctas { flex-direction:column; align-items:center } }
+    @media(max-width:600px){ .hero { min-height:auto; padding:1.5rem 0 2.5rem } .hero-ctas { flex-direction:column; align-items:center } }
 
     /* ── SECTIONS ── */
     .sec { padding:3.5rem 0; border-bottom:1px solid var(--border) }
@@ -386,13 +426,13 @@
     <section class="hero" aria-labelledby="hero-h1">
       <div class="hero-inner">
         <span class="label">Kostenlose Website-Analyse</span>
-        <h1 id="hero-h1">Ihre Website verliert jeden Monat Kunden&nbsp;—&nbsp;<span class="accent">Sie merken es nicht.</span></h1>
-        <p class="hero-sub">In einer kostenlosen 5-Minuten-Video-Analyse zeigen wir Ihnen, wo Ihre Anfragen bei der Konkurrenz landen — und was Sie dagegen tun können.</p>
+        <h1 id="hero-h1">Ihre Website verliert jeden Monat Kunden.<br><span class="accent">Sie merken es nicht.</span></h1>
+        <p class="hero-sub">In einer kostenlosen 5-Minuten-Video-Analyse zeigen wir Ihnen, wo Ihre Anfragen bei der Konkurrenz landen. Und was Sie dagegen tun können.</p>
         <div class="hero-ctas">
-          <a href="#analyse-anfordern" class="btn btn-primary">Kostenlose Analyse anfordern &rarr;</a>
-          <button class="btn btn-ghost" onclick="ewdT()">Lieber direkt sprechen?</button>
+          <a href="#analyse-anfordern" class="btn btn-primary">Jetzt kostenlos analysieren lassen &rarr;</a>
+          <button class="btn btn-ghost" onclick="ewdT();setTimeout(function(){ewdS('Ich möchte eine kostenlose Websiteanalyse buchen')},600)">Termin vereinbaren</button>
         </div>
-        <p class="hero-trust">Kein Verkaufsgespräch<span>·</span>Kein PDF-Spam<span>·</span>48h Bearbeitungszeit</p>
+        <p class="hero-trust">Kein Verkaufsgespräch<span>·</span>Unverbindlich<span>·</span>48h Bearbeitungszeit</p>
       </div>
     </section>
 
@@ -451,6 +491,9 @@
             <div class="cost-number">10.000 €/Monat</div>
             <p>Fehlende Online-Terminbuchung = oft über 10.000 € Umsatz pro Monat liegengelassen.</p>
           </div>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem">
+          <a href="#analyse-anfordern" class="btn btn-primary">Jetzt meine Website analysieren lassen &rarr;</a>
         </div>
       </div>
     </section>
@@ -534,7 +577,7 @@
           <span class="label">Transparenz</span>
           <h2 id="why-h2">Warum machen wir das kostenlos?</h2>
         </div>
-        <p class="why-intro">Ehrliche Antwort: Weil wir davon ausgehen, dass manche von Ihnen nach der Analyse mit uns weiterarbeiten wollen. Aber nur dann, wenn Sie wirklich einen Mehrwert sehen. Wir investieren lieber 45 Minuten in eine gute Analyse, als zwei Stunden in ein Verkaufsgespräch mit jemandem, der uns nicht kennt. Und falls Sie die Tipps selbst umsetzen — auch gut. Wirklich.</p>
+        <p class="why-intro">Ehrliche Antwort: Weil wir davon ausgehen, dass manche von Ihnen nach der Analyse mit uns weiterarbeiten wollen. Aber nur dann, wenn Sie wirklich einen Mehrwert sehen. Wir investieren lieber 45 Minuten in eine gute Analyse, als zwei Stunden in ein Verkaufsgespräch mit jemandem, der uns nicht kennt. Und falls Sie die Tipps selbst umsetzen: auch gut. Wirklich.</p>
         <div class="why-cards">
           <div class="why-card rv">
             <div class="why-icon">📍</div>
@@ -679,7 +722,7 @@
           </div>
 
           <div class="form-submit-wrap">
-            <button type="submit" class="btn btn-primary btn-submit">Jetzt kostenlose Analyse anfordern &rarr;</button>
+            <button type="submit" class="btn btn-primary btn-submit">Meine Website jetzt analysieren lassen &rarr;</button>
           </div>
 
           <p class="form-trust">
@@ -690,7 +733,7 @@
 
         <div class="form-alt">
           <p>Lieber direkt sprechen?</p>
-          <button class="btn btn-ghost" onclick="ewdT()">Termin im Kalender buchen</button>
+          <button class="btn btn-ghost" onclick="ewdT();setTimeout(function(){ewdS('Ich möchte eine kostenlose Websiteanalyse buchen')},600)">Termin buchen &rarr;</button>
         </div>
       </div>
     </section>
@@ -700,7 +743,7 @@
       <div class="wrap-narrow">
         <h2 id="nudge-h2" style="margin-bottom:1rem">Sie haben bis hier gelesen.</h2>
         <p>Das heißt: Sie ahnen, dass da was ist. Lassen Sie uns gemeinsam hinschauen — 60 Sekunden Ihres Tages.</p>
-        <a href="#analyse-anfordern" class="btn btn-primary">Kostenlose Analyse anfordern &rarr;</a>
+        <a href="#analyse-anfordern" class="btn btn-primary">Jetzt kostenlos analysieren lassen &rarr;</a>
       </div>
     </section>
 
