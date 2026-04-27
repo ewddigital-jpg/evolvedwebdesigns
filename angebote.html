@@ -257,17 +257,43 @@
     .pc-btn-primary:hover { background:var(--primary-dark) }
     .pc-btn-ghost { border:1px solid var(--border-mid); color:var(--text-secondary) }
     .pc-btn-ghost:hover { border-color:var(--border-active); color:var(--text) }
-    /* ── HOSTING ADD-ON BOX ── */
-    .hosting-box { max-width:720px; margin:2.5rem auto 0; background:var(--bg-raised); border:1px solid var(--border); border-radius:var(--radius); padding:1.75rem 2rem }
-    .hosting-box-top { display:flex; align-items:center; gap:1rem; margin-bottom:1rem; flex-wrap:wrap }
-    .hosting-tag { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); border:1px solid rgba(0,217,255,0.25); border-radius:999px; padding:.2rem .65rem; flex-shrink:0 }
-    .hosting-title { font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:800; color:var(--text) }
-    .hosting-price { font-size:1.5rem; font-weight:900; font-family:'Poppins',sans-serif; color:var(--text) }
-    .hosting-price span { font-size:.82rem; font-weight:500; color:var(--text-secondary) }
-    .hosting-feats { display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:.75rem }
-    .hosting-feat { font-size:.83rem; color:var(--text-secondary); display:flex; gap:.4rem; align-items:center }
-    .hosting-feat::before { content:'–'; color:var(--accent); font-weight:700; flex-shrink:0 }
-    .editor-addon-box .hosting-feat::before { color:var(--primary-light) }
+    /* ── ADD-ONS ── */
+    .addon-section { max-width:720px; margin:2.5rem auto 0 }
+    .addon-intro { font-size:.85rem; color:var(--text-secondary); margin:.3rem 0 1.4rem }
+    .addon-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem }
+    .addon-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem 1.6rem; display:flex; flex-direction:column; gap:.9rem }
+    .addon-tag { display:inline-block; font-size:.65rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; border-radius:999px; padding:.2rem .7rem; border:1px solid; width:fit-content }
+    .addon-tag-cyan { color:var(--accent); border-color:rgba(0,217,255,0.3) }
+    .addon-tag-blue { color:var(--primary-light); border-color:rgba(77,148,255,0.3) }
+    .addon-name { font-family:'Poppins',sans-serif; font-size:1rem; font-weight:800; color:var(--text) }
+    .addon-price { font-family:'Poppins',sans-serif; font-size:2rem; font-weight:900; color:var(--text); line-height:1 }
+    .addon-price span { font-size:.8rem; font-weight:500; color:var(--text-secondary) }
+    .addon-note { font-size:.75rem; color:var(--text-secondary); margin-top:.2rem }
+    .addon-feats { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.45rem; flex:1 }
+    .addon-feats li { font-size:.83rem; color:var(--text-secondary); display:flex; gap:.5rem; align-items:flex-start }
+    .addon-feats li::before { content:'–'; font-weight:700; flex-shrink:0 }
+    .addon-card.ac-hosting .addon-feats li::before { color:var(--accent) }
+    .addon-card.ac-editor .addon-feats li::before { color:var(--primary-light) }
+    /* Bundle */
+    .addon-bundle { margin-top:1rem; background:var(--bg-raised); border:1px solid rgba(0,102,255,0.4); border-radius:var(--radius); padding:1.75rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; box-shadow:0 0 0 1px rgba(0,102,255,0.1),0 8px 32px rgba(0,102,255,0.1) }
+    .addon-bundle-left { flex:1 }
+    .addon-bundle-tag { display:inline-block; font-size:.65rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; color:#fff; background:linear-gradient(135deg,var(--primary),var(--accent)); border-radius:999px; padding:.25rem .75rem; margin-bottom:.65rem }
+    .addon-bundle-name { font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:800; color:var(--text); margin-bottom:.25rem }
+    .addon-bundle-sub { font-size:.82rem; color:var(--text-secondary); margin-bottom:1rem }
+    .addon-feats-row { flex-direction:row; flex-wrap:wrap; gap:.45rem 1.5rem }
+    .addon-feats-row li::before { color:var(--primary-light) }
+    .addon-bundle-right { text-align:right; flex-shrink:0 }
+    .addon-bundle-price { font-family:'Poppins',sans-serif; font-size:2.4rem; font-weight:900; color:var(--text); line-height:1; white-space:nowrap }
+    .addon-bundle-price span { font-size:.82rem; font-weight:500; color:var(--text-secondary) }
+    .addon-bundle-save { font-size:.78rem; color:var(--text-secondary); margin-top:.3rem }
+    .addon-bundle-btn { display:inline-block; margin-top:1rem; padding:.65rem 1.4rem; background:var(--primary); color:#fff; border-radius:var(--radius-sm); font-size:.85rem; font-weight:700; text-decoration:none; transition:background .2s; white-space:nowrap }
+    .addon-bundle-btn:hover { background:var(--primary-dark) }
+    @media(max-width:640px) {
+      .addon-grid { grid-template-columns:1fr }
+      .addon-bundle { flex-direction:column; align-items:flex-start; gap:1.25rem }
+      .addon-bundle-right { text-align:left; width:100% }
+      .addon-bundle-btn { width:100%; text-align:center; display:block }
+    }
 
     /* ── INDIVIDUAL CTA ── */
     .individual-cta { max-width:520px; margin:2rem auto 0; text-align:center; padding:2rem; border:1px solid var(--border); border-radius:var(--radius); background:var(--bg-card) }
@@ -538,66 +564,62 @@
 
         </div>
 
-        <!-- HOSTING ADD-ON -->
-        <div class="hosting-box">
-          <div class="hosting-box-top">
-            <span class="hosting-tag">Add-on</span>
-            <div>
-              <div class="hosting-title">Hosting &amp; Betreuung</div>
-              <div style="font-size:.82rem;color:var(--text-secondary);margin-top:.15rem">Optional nach dem Launch. Kein Stress, kein Ticketsystem.</div>
-            </div>
-            <div style="margin-left:auto">
-              <div class="hosting-price">ab 29 <span>€ / Monat</span></div>
-              <div style="font-size:.75rem;color:var(--text-secondary);text-align:right">monatlich kündbar</div>
-            </div>
-          </div>
-          <div class="hosting-feats">
-            <span class="hosting-feat">Updates, Backups und Sicherheitschecks</span>
-            <span class="hosting-feat">Kleine Änderungen auf Anfrage</span>
-            <span class="hosting-feat">Direkter Kontakt statt Ticketsystem</span>
-          </div>
-        </div>
+        <!-- ADD-ONS -->
+        <div class="addon-section">
+          <p class="addon-intro">Optional nach dem Launch &middot; monatlich kündbar &middot; kein Risiko</p>
 
-        <!-- EWD EDITOR ADD-ON -->
-        <div class="hosting-box editor-addon-box" style="margin-top:1rem;border-color:rgba(0,102,255,0.35);box-shadow:0 0 0 1px rgba(0,102,255,0.1),0 4px 20px rgba(0,102,255,0.07)">
-          <div class="hosting-box-top">
-            <span class="hosting-tag" style="color:var(--primary-light);border-color:rgba(77,148,255,0.35)">Add-on</span>
-            <div>
-              <div class="hosting-title">EWD Editor</div>
-              <div style="font-size:.82rem;color:var(--text-secondary);margin-top:.15rem">Inhalte direkt auf Ihrer Website bearbeiten — kein CMS-Login, kein technisches Wissen nötig.</div>
-            </div>
-            <div style="margin-left:auto">
-              <div class="hosting-price">19 <span>€ / Monat</span></div>
-              <div style="font-size:.75rem;color:var(--text-secondary);text-align:right">monatlich kündbar</div>
-            </div>
-          </div>
-          <div class="hosting-feats">
-            <span class="hosting-feat">Texte anklicken &amp; direkt bearbeiten</span>
-            <span class="hosting-feat">Bilder per Klick austauschen</span>
-            <span class="hosting-feat">Änderungen live in ~60 Sekunden</span>
-            <span class="hosting-feat">Kein Login bei Drittanbietern</span>
-          </div>
-        </div>
+          <div class="addon-grid">
 
-        <!-- BUNDLE ADD-ON -->
-        <div class="hosting-box" style="margin-top:1rem;border-color:rgba(0,102,255,0.5);box-shadow:0 0 0 1px rgba(0,102,255,0.18),0 8px 32px rgba(0,102,255,0.12);background:var(--bg-raised)">
-          <div class="hosting-box-top">
-            <span class="hosting-tag" style="color:#fff;background:linear-gradient(135deg,var(--primary),var(--accent));border:none">Bundle · Beliebt</span>
-            <div>
-              <div class="hosting-title">Hosting + EWD Editor</div>
-              <div style="font-size:.82rem;color:var(--text-secondary);margin-top:.15rem">Beide Add-ons zusammen — günstiger als einzeln.</div>
+            <div class="addon-card ac-hosting">
+              <span class="addon-tag addon-tag-cyan">Add-on</span>
+              <div>
+                <div class="addon-name">Hosting &amp; Betreuung</div>
+                <div class="addon-price">29 <span>€ / Monat</span></div>
+                <div class="addon-note">monatlich kündbar</div>
+              </div>
+              <ul class="addon-feats">
+                <li>Updates, Backups &amp; Sicherheit</li>
+                <li>Kleine Änderungen auf Anfrage</li>
+                <li>Direkter Kontakt statt Ticketsystem</li>
+              </ul>
             </div>
-            <div style="margin-left:auto;text-align:right">
-              <div class="hosting-price">39 <span>€ / Monat</span></div>
-              <div style="font-size:.75rem;color:var(--text-secondary)">statt 48 € · monatlich kündbar</div>
+
+            <div class="addon-card ac-editor">
+              <span class="addon-tag addon-tag-blue">Add-on</span>
+              <div>
+                <div class="addon-name">EWD Editor</div>
+                <div class="addon-price">19 <span>€ / Monat</span></div>
+                <div class="addon-note">monatlich kündbar</div>
+              </div>
+              <ul class="addon-feats">
+                <li>Texte direkt auf der Seite bearbeiten</li>
+                <li>Bilder per Klick austauschen</li>
+                <li>Änderungen live in ~60 Sekunden</li>
+                <li>Kein Login bei Drittanbietern</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="addon-bundle">
+            <div class="addon-bundle-left">
+              <span class="addon-bundle-tag">Bundle · Beliebt</span>
+              <div class="addon-bundle-name">Hosting &amp; Betreuung + EWD Editor</div>
+              <div class="addon-bundle-sub">Beide Add-ons zusammen — günstiger als einzeln gebucht.</div>
+              <ul class="addon-feats addon-feats-row">
+                <li>Hosting &amp; Sicherheit</li>
+                <li>Kleine Anpassungen inklusive</li>
+                <li>Texte &amp; Bilder selbst bearbeiten</li>
+                <li>Live in ~60 Sekunden</li>
+              </ul>
+            </div>
+            <div class="addon-bundle-right">
+              <div class="addon-bundle-price">39 <span>€ / Monat</span></div>
+              <div class="addon-bundle-save">statt 48 € einzeln</div>
+              <a href="https://evowebdesign.de/kontakt" class="addon-bundle-btn">Bundle anfragen &rarr;</a>
             </div>
           </div>
-          <div class="hosting-feats">
-            <span class="hosting-feat">Hosting, Updates &amp; Backups</span>
-            <span class="hosting-feat">Kleine Änderungen auf Anfrage</span>
-            <span class="hosting-feat">Texte &amp; Bilder selbst bearbeiten</span>
-            <span class="hosting-feat">Änderungen live in ~60 Sekunden</span>
-          </div>
+
         </div>
 
         <!-- INDIVIDUELLE ANFORDERUNGEN -->
