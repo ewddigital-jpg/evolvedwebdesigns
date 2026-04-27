@@ -257,11 +257,24 @@
     .pc-btn-primary:hover { background:var(--primary-dark) }
     .pc-btn-ghost { border:1px solid var(--border-mid); color:var(--text-secondary) }
     .pc-btn-ghost:hover { border-color:var(--border-active); color:var(--text) }
+    /* ── TRUST BAR ── */
+    .trust-bar { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:0; margin-top:2rem; background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:var(--radius); padding:.75rem 1.5rem }
+    .trust-item { display:flex; align-items:center; gap:.45rem; font-size:.82rem; color:var(--text-secondary); padding:.3rem 1.25rem; white-space:nowrap }
+    .trust-icon { color:var(--primary-light); font-weight:700 }
+    .trust-div { width:1px; height:.9rem; background:var(--border-mid); flex-shrink:0 }
+    @media(max-width:600px){ .trust-div { display:none } .trust-item { padding:.3rem .75rem } }
+
+    /* ── INCL BAR ── */
+    .incl-bar { margin-top:1.75rem; padding:1rem 1.5rem; background:rgba(0,102,255,.04); border:1px solid rgba(0,102,255,.15); border-radius:var(--radius-sm); display:flex; align-items:center; gap:1rem; flex-wrap:wrap }
+    .incl-label { font-size:.7rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; color:var(--primary-light); white-space:nowrap }
+    .incl-feats { display:flex; flex-wrap:wrap; gap:0; flex:1 }
+    .incl-feat { font-size:.8rem; color:var(--text-secondary); padding:.1rem .9rem; border-right:1px solid var(--border); display:flex; align-items:center; gap:.35rem; white-space:nowrap }
+    .incl-feat:last-child { border-right:none }
+    .incl-feat::before { content:'✓'; color:var(--primary-light); font-size:.72rem; font-weight:700 }
+
     /* ── ADD-ONS ── */
-    .addon-section { max-width:720px; margin:2.5rem auto 0 }
-    .addon-intro { font-size:.85rem; color:var(--text-secondary); margin:.3rem 0 1.4rem }
-    .addon-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem }
-    .addon-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem 1.6rem; display:flex; flex-direction:column; gap:.9rem }
+    .addon-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2rem }
+    .addon-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.6rem 1.75rem; display:flex; flex-direction:column; gap:.9rem }
     .addon-tag { display:inline-block; font-size:.65rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; border-radius:999px; padding:.2rem .7rem; border:1px solid; width:fit-content }
     .addon-tag-cyan { color:var(--accent); border-color:rgba(0,217,255,0.3) }
     .addon-tag-blue { color:var(--primary-light); border-color:rgba(77,148,255,0.3) }
@@ -274,13 +287,12 @@
     .addon-feats li::before { content:'–'; font-weight:700; flex-shrink:0 }
     .addon-card.ac-hosting .addon-feats li::before { color:var(--accent) }
     .addon-card.ac-editor .addon-feats li::before { color:var(--primary-light) }
-    /* Bundle */
-    .addon-bundle { margin-top:1rem; background:var(--bg-raised); border:1px solid rgba(0,102,255,0.4); border-radius:var(--radius); padding:1.75rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; box-shadow:0 0 0 1px rgba(0,102,255,0.1),0 8px 32px rgba(0,102,255,0.1) }
+    .addon-bundle { margin-top:1rem; background:var(--bg-raised); border:1px solid rgba(0,102,255,0.4); border-radius:var(--radius); padding:1.75rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; box-shadow:0 0 0 1px rgba(0,102,255,0.1),0 8px 32px rgba(0,102,255,0.08) }
     .addon-bundle-left { flex:1 }
     .addon-bundle-tag { display:inline-block; font-size:.65rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; color:#fff; background:linear-gradient(135deg,var(--primary),var(--accent)); border-radius:999px; padding:.25rem .75rem; margin-bottom:.65rem }
-    .addon-bundle-name { font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:800; color:var(--text); margin-bottom:.25rem }
+    .addon-bundle-name { font-family:'Poppins',sans-serif; font-size:1.05rem; font-weight:800; color:var(--text); margin-bottom:.25rem }
     .addon-bundle-sub { font-size:.82rem; color:var(--text-secondary); margin-bottom:1rem }
-    .addon-feats-row { flex-direction:row; flex-wrap:wrap; gap:.45rem 1.5rem }
+    .addon-feats-row { flex-direction:row; flex-wrap:wrap; gap:.4rem 1.5rem }
     .addon-feats-row li::before { color:var(--primary-light) }
     .addon-bundle-right { text-align:right; flex-shrink:0 }
     .addon-bundle-price { font-family:'Poppins',sans-serif; font-size:2.4rem; font-weight:900; color:var(--text); line-height:1; white-space:nowrap }
@@ -288,7 +300,18 @@
     .addon-bundle-save { font-size:.78rem; color:var(--text-secondary); margin-top:.3rem }
     .addon-bundle-btn { display:inline-block; margin-top:1rem; padding:.65rem 1.4rem; background:var(--primary); color:#fff; border-radius:var(--radius-sm); font-size:.85rem; font-weight:700; text-decoration:none; transition:background .2s; white-space:nowrap }
     .addon-bundle-btn:hover { background:var(--primary-dark) }
-    @media(max-width:640px) {
+
+    /* ── STEP GRID ── */
+    .step-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin-top:2rem }
+    .step-box { background:var(--bg-card); padding:1.75rem 1.5rem }
+    .step-box-n { font-family:'Poppins',sans-serif; font-size:2.8rem; font-weight:900; color:rgba(240,246,252,.07); line-height:1; margin-bottom:.85rem }
+    .step-box strong { display:block; font-size:.95rem; font-weight:700; color:var(--text); margin-bottom:.5rem }
+    .step-box p { font-size:.83rem; color:var(--text-secondary); line-height:1.75 }
+    .step-box-tag { display:inline-block; font-size:.65rem; font-weight:700; color:var(--primary-light); background:rgba(0,102,255,.08); border-radius:4px; padding:.15rem .5rem; margin-bottom:.6rem }
+
+    @media(max-width:900px){ .step-grid { grid-template-columns:1fr 1fr } }
+    @media(max-width:500px){ .step-grid { grid-template-columns:1fr } }
+    @media(max-width:640px){
       .addon-grid { grid-template-columns:1fr }
       .addon-bundle { flex-direction:column; align-items:flex-start; gap:1.25rem }
       .addon-bundle-right { text-align:left; width:100% }
@@ -318,13 +341,6 @@
     .faq-category { font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.14em; color:var(--primary-light); padding:2rem 0 .65rem; border-bottom:1px solid var(--border-mid) }
     .faq-list > .faq-category:first-child { padding-top:0 }
 
-    /* ── STEPS ── */
-    .steps { list-style:none; display:flex; flex-direction:column; gap:0 }
-    .step { display:flex; gap:2rem; align-items:flex-start; padding:1.4rem 0; border-bottom:1px solid var(--border) }
-    .step:last-child { border-bottom:none }
-    .step-n { font-family:'Poppins',sans-serif; font-size:2.2rem; font-weight:900; color:rgba(240,246,252,0.18); line-height:1; flex-shrink:0; width:3.5rem; text-align:right }
-    .step strong { display:block; font-size:.97rem; font-weight:700; color:var(--text); margin-bottom:.3rem }
-    .step p { font-size:.88rem; color:var(--text-secondary); line-height:1.7 }
 
     /* ── CTA BAND ── */
     .cta-band { padding:3.5rem 0; border-top:1px solid var(--border) }
@@ -490,189 +506,191 @@
 
   <nav class="bc" aria-label="Breadcrumb"><ol><li><a href="https://evowebdesign.de/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Angebote</li></ol></nav>
 
-  <!-- INTRO -->
-    <div class="page-intro">
-      <div class="wrap">
-                <span class="label">Webdesign Friedrichshafen</span>
-        <h1>Angebote und Ablauf.<br /><span class="accent">Transparent und verbindlich.</span></h1>
-        <p class="intro-sub">
-          Transparente Festpreise für Webdesign und KI-Agent am Bodensee. Kein Stundenhonorar, keine Überraschungen. <strong>Sie zahlen erst nach Abnahme.</strong>
-        </p>
+  <!-- HERO -->
+  <div class="page-intro">
+    <div class="wrap">
+      <span class="label">Webdesign Friedrichshafen &middot; Festpreise</span>
+      <h1>Transparente Preise.<br /><span class="accent">Keine Überraschungen.</span></h1>
+      <p class="intro-sub">Für lokale Unternehmen am Bodensee. Kein Stundenhonorar, kein Kleingedrucktes. <strong>Sie zahlen erst nach Abnahme.</strong></p>
+      <div class="trust-bar">
+        <div class="trust-item"><span class="trust-icon">✓</span> Festpreis</div>
+        <div class="trust-div"></div>
+        <div class="trust-item"><span class="trust-icon">✓</span> Zahlung nach Abnahme</div>
+        <div class="trust-div"></div>
+        <div class="trust-item"><span class="trust-icon">✓</span> Fertig in 3–4 Wochen</div>
+        <div class="trust-div"></div>
+        <div class="trust-item"><span class="trust-icon">✓</span> Kein Abo</div>
       </div>
     </div>
+  </div>
 
-    <!-- PAKETE -->
-    <section class="sec" aria-labelledby="preise-heading">
-      <div class="wrap">
-        <h2 class="sec-heading" id="preise-heading">Webdesign-Pakete für Unternehmen am Bodensee</h2>
-        <p class="sec-sub">Einmaliger Festpreis &middot; kein Abo &middot; was aufgelistet ist, ist enthalten</p>
+  <!-- PAKETE -->
+  <section class="sec" aria-labelledby="preise-heading">
+    <div class="wrap">
+      <span class="label">Pakete</span>
+      <h2 class="sec-heading" id="preise-heading">Wählen Sie Ihr Paket.</h2>
+      <p class="sec-sub">Einmaliger Festpreis &middot; kein Abo &middot; was aufgelistet ist, ist enthalten</p>
 
-        <div class="price-grid">
+      <div class="price-grid">
 
-          <div class="pc">
-            <div class="pc-name">Website</div>
-            <div class="pc-sub">Für Unternehmen, die schnell und sauber online wollen.</div>
-            <div class="pc-price">790 <span>€ einmalig</span></div>
-            <div class="pc-note">kein Abo &middot; Festpreis</div>
-            <div class="pc-feats">
-              <div class="pc-feat">bis zu 5 Seiten, individuelles Design</div>
-              <div class="pc-feat">Mobile-first, schnelle Ladezeiten</div>
-              <div class="pc-feat">Kontaktformular &amp; WhatsApp-Button</div>
-              <div class="pc-feat">Lokale SEO-Basis: Title, Meta, Struktur</div>
-              <div class="pc-feat">Google Business Einrichtung inklusive</div>
-              <div class="pc-feat">Fertig in 3–4 Wochen</div>
-              <div class="pc-feat">EWD Editor: Inhalte selbst bearbeiten</div>
-            </div>
-            <a href="https://evowebdesign.de/kontakt" class="pc-btn pc-btn-ghost">Anfragen &rarr;</a>
+        <div class="pc">
+          <div class="pc-name">Website</div>
+          <div class="pc-sub">Für Unternehmen, die schnell und sauber online wollen.</div>
+          <div class="pc-price">790 <span>€ einmalig</span></div>
+          <div class="pc-feats">
+            <div class="pc-feat">bis zu 5 Seiten, individuelles Design</div>
+            <div class="pc-feat">Kontaktformular &amp; WhatsApp-Button</div>
+            <div class="pc-feat">Lokale SEO-Basis: Title, Meta, Struktur</div>
+            <div class="pc-feat">Google Business Einrichtung</div>
+            <div class="pc-feat">Fertig in 3–4 Wochen</div>
           </div>
-
-          <div class="pc best">
-            <div class="best-tag">Empfohlen</div>
-            <div class="pc-name">Website + KI-Bot</div>
-            <div class="pc-sub">Ihre Website und ein KI-Agent, der 24/7 für Ihre Kunden da ist.</div>
-            <div class="pc-price">1.490 <span>€ einmalig</span></div>
-            <div class="pc-note">kein Abo &middot; Festpreis</div>
-            <div class="pc-feats">
-              <div class="pc-feat">5–7 Seiten, individuelles Design</div>
-              <div class="pc-feat">KI-Assistent: eingebettet &amp; auf Sie eingestellt</div>
-              <div class="pc-feat">Beantwortet Fragen, bucht Termine, leitet weiter</div>
-              <div class="pc-feat">Klare Grenzen: nennt nur was vereinbart ist</div>
-              <div class="pc-feat">Lokale SEO &amp; Google Business</div>
-              <div class="pc-feat">Mobile-first, schnelle Ladezeiten</div>
-              <div class="pc-feat">Fertig in 3–4 Wochen mit Zwischenständen</div>
-            </div>
-            <a href="https://evowebdesign.de/kontakt" class="pc-btn pc-btn-primary">Jetzt anfragen &rarr;</a>
-          </div>
-
-          <div class="pc">
-            <div class="pc-name">Premium</div>
-            <div class="pc-sub">Für Betriebe mit höherem Wettbewerb in ihrer Region.</div>
-            <div class="pc-price">1.990 <span>€ einmalig</span></div>
-            <div class="pc-note">kein Abo &middot; Festpreis</div>
-            <div class="pc-feats">
-              <div class="pc-feat">Alles aus Website + KI-Agent</div>
-              <div class="pc-feat">KI-Agent mit Terminbuchungs-Integration</div>
-              <div class="pc-feat">Erweiterte Seiten &amp; Blog</div>
-              <div class="pc-feat">3 Monate laufende SEO-Betreuung</div>
-              <div class="pc-feat">Monatlicher Bericht &amp; Anpassungen</div>
-              <div class="pc-feat">Direkter WhatsApp-Support</div>
-              <div class="pc-feat">EWD Editor: Inhalte selbst bearbeiten</div>
-            </div>
-            <a href="https://evowebdesign.de/kontakt" class="pc-btn pc-btn-ghost">Anfragen &rarr;</a>
-          </div>
-
-
+          <a href="https://evowebdesign.de/kontakt" class="pc-btn pc-btn-ghost">Anfragen &rarr;</a>
         </div>
 
-        <!-- ADD-ONS -->
-        <div class="addon-section">
-          <p class="addon-intro">Optional nach dem Launch &middot; monatlich kündbar &middot; kein Risiko</p>
-
-          <div class="addon-grid">
-
-            <div class="addon-card ac-hosting">
-              <span class="addon-tag addon-tag-cyan">Add-on</span>
-              <div>
-                <div class="addon-name">Hosting &amp; Betreuung</div>
-                <div class="addon-price">29 <span>€ / Monat</span></div>
-                <div class="addon-note">monatlich kündbar</div>
-              </div>
-              <ul class="addon-feats">
-                <li>Updates, Backups &amp; Sicherheit</li>
-                <li>Kleine Änderungen auf Anfrage</li>
-                <li>Direkter Kontakt statt Ticketsystem</li>
-              </ul>
-            </div>
-
-            <div class="addon-card ac-editor">
-              <span class="addon-tag addon-tag-blue">Add-on</span>
-              <div>
-                <div class="addon-name">EWD Editor</div>
-                <div class="addon-price">19 <span>€ / Monat</span></div>
-                <div class="addon-note">monatlich kündbar</div>
-              </div>
-              <ul class="addon-feats">
-                <li>Texte direkt auf der Seite bearbeiten</li>
-                <li>Bilder per Klick austauschen</li>
-                <li>Änderungen live in ~60 Sekunden</li>
-                <li>Kein Login bei Drittanbietern</li>
-              </ul>
-            </div>
-
+        <div class="pc best">
+          <div class="best-tag">Empfohlen</div>
+          <div class="pc-name">Website + KI-Agent</div>
+          <div class="pc-sub">Ihre Website und ein KI-Assistent, der 24/7 für Ihre Kunden da ist.</div>
+          <div class="pc-price">1.490 <span>€ einmalig</span></div>
+          <div class="pc-feats">
+            <div class="pc-feat">5–7 Seiten, individuelles Design</div>
+            <div class="pc-feat">KI-Assistent: auf Ihr Unternehmen eingestellt</div>
+            <div class="pc-feat">Beantwortet Fragen, bucht Termine, leitet weiter</div>
+            <div class="pc-feat">Lokale SEO &amp; Google Business</div>
+            <div class="pc-feat">Fertig in 3–4 Wochen mit Zwischenständen</div>
           </div>
-
-          <div class="addon-bundle">
-            <div class="addon-bundle-left">
-              <span class="addon-bundle-tag">Bundle · Beliebt</span>
-              <div class="addon-bundle-name">Hosting &amp; Betreuung + EWD Editor</div>
-              <div class="addon-bundle-sub">Beide Add-ons zusammen — günstiger als einzeln gebucht.</div>
-              <ul class="addon-feats addon-feats-row">
-                <li>Hosting &amp; Sicherheit</li>
-                <li>Kleine Anpassungen inklusive</li>
-                <li>Texte &amp; Bilder selbst bearbeiten</li>
-                <li>Live in ~60 Sekunden</li>
-              </ul>
-            </div>
-            <div class="addon-bundle-right">
-              <div class="addon-bundle-price">39 <span>€ / Monat</span></div>
-              <div class="addon-bundle-save">statt 48 € einzeln</div>
-              <a href="https://evowebdesign.de/kontakt" class="addon-bundle-btn">Bundle anfragen &rarr;</a>
-            </div>
-          </div>
-
+          <a href="https://evowebdesign.de/kontakt" class="pc-btn pc-btn-primary">Jetzt anfragen &rarr;</a>
         </div>
 
-        <!-- INDIVIDUELLE ANFORDERUNGEN -->
-        <div class="individual-cta">
-          <h3>Individuelle Anforderungen?</h3>
-          <p>Nicht jedes Projekt passt in ein Paket.<br />Wenn Sie etwas Spezielles planen, erstellen wir gerne eine individuelle Lösung.</p>
-          <a href="kontakt" class="btn-gradient">Kontakt aufnehmen →</a>
+        <div class="pc">
+          <div class="pc-name">Premium</div>
+          <div class="pc-sub">Für Betriebe mit höherem Wettbewerb in ihrer Region.</div>
+          <div class="pc-price">1.990 <span>€ einmalig</span></div>
+          <div class="pc-feats">
+            <div class="pc-feat">Alles aus Website + KI-Agent</div>
+            <div class="pc-feat">KI-Agent mit Terminbuchungs-Integration</div>
+            <div class="pc-feat">Erweiterte Seiten &amp; Blog</div>
+            <div class="pc-feat">3 Monate laufende SEO-Betreuung</div>
+            <div class="pc-feat">Direkter WhatsApp-Support</div>
+          </div>
+          <a href="https://evowebdesign.de/kontakt" class="pc-btn pc-btn-ghost">Anfragen &rarr;</a>
+        </div>
+
+      </div>
+
+      <div class="incl-bar">
+        <span class="incl-label">In jedem Paket</span>
+        <div class="incl-feats">
+          <span class="incl-feat">Mobile-first</span>
+          <span class="incl-feat">SSL &amp; Sicherheit</span>
+          <span class="incl-feat">SEO-Basis</span>
+          <span class="incl-feat">Google Business</span>
+          <span class="incl-feat">Kontaktformular</span>
+          <span class="incl-feat">WhatsApp-Button</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- ADD-ONS -->
+  <section class="sec" aria-labelledby="addons-heading">
+    <div class="wrap">
+      <span class="label">Add-ons</span>
+      <h2 class="sec-heading" id="addons-heading">Optional nach dem Launch.</h2>
+      <p class="sec-sub">Monatlich kündbar &middot; jederzeit dazubuchbar &middot; kein Risiko</p>
+
+      <div class="addon-grid">
+        <div class="addon-card ac-hosting">
+          <span class="addon-tag addon-tag-cyan">Hosting</span>
+          <div>
+            <div class="addon-name">Hosting &amp; Betreuung</div>
+            <div class="addon-price">29 <span>€ / Monat</span></div>
+            <div class="addon-note">monatlich kündbar</div>
+          </div>
+          <ul class="addon-feats">
+            <li>Updates, Backups &amp; Sicherheit</li>
+            <li>Kleine Änderungen auf Anfrage</li>
+            <li>Direkter Kontakt statt Ticketsystem</li>
+          </ul>
+        </div>
+
+        <div class="addon-card ac-editor">
+          <span class="addon-tag addon-tag-blue">EWD Editor</span>
+          <div>
+            <div class="addon-name">Inhalte selbst bearbeiten</div>
+            <div class="addon-price">19 <span>€ / Monat</span></div>
+            <div class="addon-note">monatlich kündbar</div>
+          </div>
+          <ul class="addon-feats">
+            <li>Texte direkt auf der Seite bearbeiten</li>
+            <li>Bilder per Klick austauschen</li>
+            <li>Änderungen live in ~60 Sekunden</li>
+            <li>Kein Login bei Drittanbietern</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="addon-bundle">
+        <div class="addon-bundle-left">
+          <span class="addon-bundle-tag">Bundle &middot; Beliebt</span>
+          <div class="addon-bundle-name">Hosting &amp; Betreuung + EWD Editor</div>
+          <div class="addon-bundle-sub">Beide Add-ons zusammen — günstiger als einzeln gebucht.</div>
+          <ul class="addon-feats addon-feats-row">
+            <li>Hosting &amp; Sicherheit</li>
+            <li>Kleine Anpassungen inklusive</li>
+            <li>Texte &amp; Bilder selbst bearbeiten</li>
+            <li>Live in ~60 Sekunden</li>
+          </ul>
+        </div>
+        <div class="addon-bundle-right">
+          <div class="addon-bundle-price">39 <span>€ / Monat</span></div>
+          <div class="addon-bundle-save">statt 48 € einzeln</div>
+          <a href="https://evowebdesign.de/kontakt" class="addon-bundle-btn">Bundle anfragen &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- ABLAUF -->
     <section class="sec" aria-labelledby="ablauf-heading">
-      <div class="wrap" style="max-width:820px">
-        <h2 class="sec-heading" id="ablauf-heading">So läuft es ab.</h2>
-        <p class="sec-sub">Von der ersten Nachricht bis live. In 4 Schritten.</p>
-        <ol class="steps">
-          <li class="step">
-            <span class="step-n">01</span>
-            <div>
-              <strong>Kurzes Gespräch</strong>
-              <p>Sie erzählen, was Sie brauchen, wir stellen ein paar Fragen. 20 Minuten. Kein Druck, kein Verkaufsgespräch.</p>
-            </div>
-          </li>
-          <li class="step">
-            <span class="step-n">02</span>
-            <div>
-              <strong>Konkretes Angebot</strong>
-              <p>Mit Festpreis, Zeitrahmen und genau dem was Sie erhalten. Kein Kleingedrucktes, keine Stundenabrechnungen hinterher.</p>
-            </div>
-          </li>
-          <li class="step">
-            <span class="step-n">03</span>
-            <div>
-              <strong>Bau mit Zwischenständen</strong>
-              <p>Wir bauen. Sie sehen den Fortschritt. Feedback-Runden bis es stimmt. Keine bösen Überraschungen.</p>
-            </div>
-          </li>
-          <li class="step">
-            <span class="step-n">04</span>
-            <div>
-              <strong>Live. Fertig.</strong>
-              <p>Website geht online, KI-Agent wird aktiviert. Kurze Einführung von uns, dann gehört alles Ihnen.</p>
-            </div>
-          </li>
-        </ol>
+      <div class="wrap">
+        <span class="label">Ablauf</span>
+        <h2 class="sec-heading" id="ablauf-heading">Von Anfrage bis live.</h2>
+        <p class="sec-sub">4 Schritte &middot; 3–4 Wochen &middot; kein Aufwand für Sie</p>
+        <div class="step-grid">
+          <div class="step-box">
+            <div class="step-box-n">01</div>
+            <span class="step-box-tag">~20 Minuten</span>
+            <strong>Kurzes Gespräch</strong>
+            <p>Sie erzählen, was Sie brauchen, wir stellen ein paar Fragen. Kein Druck, kein Verkaufsgespräch.</p>
+          </div>
+          <div class="step-box">
+            <div class="step-box-n">02</div>
+            <span class="step-box-tag">Innerhalb 24h</span>
+            <strong>Konkretes Angebot</strong>
+            <p>Festpreis, Zeitrahmen, genaue Leistungen. Kein Kleingedrucktes, keine Stundenabrechnungen.</p>
+          </div>
+          <div class="step-box">
+            <div class="step-box-n">03</div>
+            <span class="step-box-tag">Wochen 1–3</span>
+            <strong>Bau mit Zwischenständen</strong>
+            <p>Wir bauen, Sie sehen den Fortschritt. Feedback-Runden bis es stimmt. Keine bösen Überraschungen.</p>
+          </div>
+          <div class="step-box">
+            <div class="step-box-n">04</div>
+            <span class="step-box-tag">Woche 3–4</span>
+            <strong>Live. Fertig.</strong>
+            <p>Website geht online. Kurze Einführung, Übergabe aller Zugänge – dann gehört alles Ihnen.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="sec" aria-labelledby="faq-heading">
       <div class="wrap" style="max-width:820px">
-        <h2 class="sec-heading" id="faq-heading">Häufige Fragen</h2>
+        <span class="label">FAQ</span>
+        <h2 class="sec-heading" id="faq-heading">Häufige Fragen.</h2>
         <p class="sec-sub">Ehrliche Antworten. Keine Marketing-Floskeln.</p>
         <div class="faq-list">
 
