@@ -258,11 +258,9 @@
     .pc-btn-ghost { border:1px solid var(--border-mid); color:var(--text-secondary) }
     .pc-btn-ghost:hover { border-color:var(--border-active); color:var(--text) }
     /* ── TRUST BAR ── */
-    .trust-bar { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:0; margin-top:2rem; background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:var(--radius); padding:.75rem 1.5rem }
-    .trust-item { display:flex; align-items:center; gap:.45rem; font-size:.82rem; color:var(--text-secondary); padding:.3rem 1.25rem; white-space:nowrap }
+    .trust-bar { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:.25rem 1.75rem; margin-top:1.5rem }
+    .trust-item { display:flex; align-items:center; gap:.45rem; font-size:.82rem; color:var(--text-secondary); white-space:nowrap }
     .trust-icon { color:var(--primary-light); font-weight:700 }
-    .trust-div { width:1px; height:.9rem; background:var(--border-mid); flex-shrink:0 }
-    @media(max-width:600px){ .trust-div { display:none } .trust-item { padding:.3rem .75rem } }
 
     /* ── INCL BAR ── */
     .incl-bar { margin-top:1.75rem; padding:1rem 1.5rem; background:rgba(0,102,255,.04); border:1px solid rgba(0,102,255,.15); border-radius:var(--radius-sm); display:flex; align-items:center; gap:1rem; flex-wrap:wrap }
@@ -300,6 +298,20 @@
     .addon-bundle-save { font-size:.78rem; color:var(--text-secondary); margin-top:.3rem }
     .addon-bundle-btn { display:inline-block; margin-top:1rem; padding:.65rem 1.4rem; background:var(--primary); color:#fff; border-radius:var(--radius-sm); font-size:.85rem; font-weight:700; text-decoration:none; transition:background .2s; white-space:nowrap }
     .addon-bundle-btn:hover { background:var(--primary-dark) }
+
+    /* ── ADDON EXTRAS ── */
+    .addon-extras-label { font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; color:var(--text-secondary); margin-top:2.5rem; margin-bottom:1rem; display:block }
+    .addon-extra-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem }
+    .addon-extra { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem 1.6rem; display:flex; flex-direction:column; gap:.85rem }
+    .addon-extra-tag { display:inline-block; font-size:.63rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; color:var(--text-secondary); background:rgba(255,255,255,.05); border:1px solid var(--border-mid); border-radius:4px; padding:.2rem .55rem; width:fit-content }
+    .addon-extra-name { font-size:.97rem; font-weight:700; color:var(--text); line-height:1.35 }
+    .addon-extra-price { font-family:'Poppins',sans-serif; font-size:1.55rem; font-weight:900; color:var(--text); line-height:1 }
+    .addon-extra-price span { font-size:.78rem; font-weight:500; color:var(--text-secondary) }
+    .addon-extra-note { font-size:.72rem; color:var(--text-secondary); margin-top:.1rem }
+    .addon-extra-feats { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4rem; margin-top:auto }
+    .addon-extra-feats li { font-size:.82rem; color:var(--text-secondary); line-height:1.5; padding-left:1rem; position:relative }
+    .addon-extra-feats li::before { content:'·'; position:absolute; left:0; color:var(--text-secondary) }
+    @media(max-width:760px){ .addon-extra-grid { grid-template-columns:1fr } }
 
     /* ── STEP GRID ── */
     .step-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin-top:2rem }
@@ -514,11 +526,8 @@
       <p class="intro-sub">Für lokale Unternehmen am Bodensee. Kein Stundenhonorar, kein Kleingedrucktes. <strong>Sie zahlen erst nach Abnahme.</strong></p>
       <div class="trust-bar">
         <div class="trust-item"><span class="trust-icon">✓</span> Festpreis</div>
-        <div class="trust-div"></div>
         <div class="trust-item"><span class="trust-icon">✓</span> Zahlung nach Abnahme</div>
-        <div class="trust-div"></div>
         <div class="trust-item"><span class="trust-icon">✓</span> Fertig in 3–4 Wochen</div>
-        <div class="trust-div"></div>
         <div class="trust-item"><span class="trust-icon">✓</span> Kein Abo</div>
       </div>
     </div>
@@ -634,7 +643,7 @@
         <div class="addon-bundle-left">
           <span class="addon-bundle-tag">Bundle &middot; Beliebt</span>
           <div class="addon-bundle-name">Hosting &amp; Betreuung + EWD Editor</div>
-          <div class="addon-bundle-sub">Beide Add-ons zusammen — günstiger als einzeln gebucht.</div>
+          <div class="addon-bundle-sub">Beide Add-ons zusammen, günstiger als einzeln gebucht.</div>
           <ul class="addon-feats addon-feats-row">
             <li>Hosting &amp; Sicherheit</li>
             <li>Kleine Anpassungen inklusive</li>
@@ -647,6 +656,56 @@
           <div class="addon-bundle-save">statt 48 € einzeln</div>
           <a href="https://evowebdesign.de/kontakt" class="addon-bundle-btn">Bundle anfragen &rarr;</a>
         </div>
+      </div>
+
+      <span class="addon-extras-label">Einmalige Extras &middot; je nach Aufwand</span>
+      <div class="addon-extra-grid">
+
+        <div class="addon-extra">
+          <span class="addon-extra-tag">Branding</span>
+          <div class="addon-extra-name">Logo &amp; Texterstellung</div>
+          <div>
+            <div class="addon-extra-price">ab 150 <span>€ einmalig</span></div>
+            <div class="addon-extra-note">je nach Umfang, Festpreis auf Anfrage</div>
+          </div>
+          <ul class="addon-extra-feats">
+            <li>Logo-Design passend zu Ihrer Branche</li>
+            <li>Professionelle Texte für Ihre Seiten</li>
+            <li>Ton auf Ihr Unternehmen abgestimmt</li>
+            <li>Ideal wenn Sie keine eigenen Texte liefern möchten</li>
+          </ul>
+        </div>
+
+        <div class="addon-extra">
+          <span class="addon-extra-tag">Print</span>
+          <div class="addon-extra-name">Flyer &amp; Visitenkarten</div>
+          <div>
+            <div class="addon-extra-price">ab 120 <span>€ einmalig</span></div>
+            <div class="addon-extra-note">je nach Format, Festpreis auf Anfrage</div>
+          </div>
+          <ul class="addon-extra-feats">
+            <li>Professionelles Flyer-Design (A5 oder A4)</li>
+            <li>Visitenkarten-Design, druckfertig als PDF</li>
+            <li>Passend zum Stil Ihrer Website</li>
+            <li>Sofort beim Druckdienstleister bestellbar</li>
+          </ul>
+        </div>
+
+        <div class="addon-extra">
+          <span class="addon-extra-tag">Strategie</span>
+          <div class="addon-extra-name">Marktanalyse &amp; Farbkonzept</div>
+          <div>
+            <div class="addon-extra-price">ab 350 <span>€ einmalig</span></div>
+            <div class="addon-extra-note">je nach Wettbewerbsdichte, Festpreis auf Anfrage</div>
+          </div>
+          <ul class="addon-extra-feats">
+            <li>Wettbewerbsanalyse in Ihrer Region und Branche</li>
+            <li>Stärken und Schwächen der Konkurrenz klar dokumentiert</li>
+            <li>Individuelles Farbkonzept mit klarer Begründung</li>
+            <li>Als Dokument nutzbar, nicht nur für die Website</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
@@ -680,7 +739,7 @@
             <div class="step-box-n">04</div>
             <span class="step-box-tag">Woche 3–4</span>
             <strong>Live. Fertig.</strong>
-            <p>Website geht online. Kurze Einführung, Übergabe aller Zugänge – dann gehört alles Ihnen.</p>
+            <p>Website geht online. Kurze Einführung, Übergabe aller Zugänge, dann gehört alles Ihnen.</p>
           </div>
         </div>
       </div>
@@ -692,74 +751,104 @@
         <span class="label">FAQ</span>
         <h2 class="sec-heading" id="faq-heading">Häufige Fragen.</h2>
         <p class="sec-sub">Ehrliche Antworten. Keine Marketing-Floskeln.</p>
-        <div class="faq-list">
+                <div class="faq-list">
 
           <div class="faq-category">Preise &amp; Kosten</div>
 
           <div class="faq-item">
             <div class="faq-q"><h3>Was kostet eine Website bei EWD?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Wir arbeiten ausschließlich mit Festpreisen. Das Paket <strong>Website</strong> kostet 790 € einmalig (bis zu 5 Seiten, individuelles Design, SEO-Basis). <strong>Website + KI-Agent</strong> kostet 1.490 € einmalig – alles aus dem ersten Paket plus KI-Assistent und lokale SEO. Optional: Hosting &amp; Betreuung ab 29 €/Monat, monatlich kündbar.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Wir arbeiten ausschließllich mit Festpreisen. Das Paket <strong>Website</strong> kostet 790 € einmalig (bis zu 5 Seiten, individuelles Design, SEO-Basis). <strong>Website + KI-Agent</strong> kostet 1.490 € einmalig, alles aus dem ersten Paket plus KI-Assistent und lokale SEO. Optional: Hosting &amp; Betreuung ab 29 €/Monat, monatlich kündbar.</div></div>
           </div>
 
           <div class="faq-item">
             <div class="faq-q"><h3>Warum sind Ihre Preise günstiger als bei anderen Agenturen?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Bei EWD arbeiten Sie direkt mit den beiden Gründern – keine Zwischenebenen, kein Koordinationsaufwand. Sie erhalten die Qualität einer professionellen Webagentur zum Preis eines fokussierten Teams. Zum Vergleich: Vergleichbare Projekte kosten bei etablierten Agenturen zwischen 3.500 und 8.000 €.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Bei EWD arbeiten Sie direkt mit den beiden Gründern. Keine Zwischenebenen, kein Koordinationsaufwand. Sie erhalten die Qualität einer professionellen Webagentur zum Preis eines fokussierten Teams. Zum Vergleich: Vergleichbare Projekte kosten bei etablierten Agenturen zwischen 3.500 und 8.000 €.</div></div>
           </div>
 
           <div class="faq-item">
             <div class="faq-q"><h3>Gibt es versteckte Kosten oder ein Abo?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Nein. Die Projektpakete sind eine einmalige Zahlung – was im Angebot steht, zahlen Sie. Hosting und Betreuung sind optional und monatlich kündbar. Und: Sie zahlen erst, wenn Ihre Website fertig ist und Ihnen gefällt. Keine Vorauszahlung, kein finanzielles Risiko.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Nein. Die Projektpakete sind eine einmalige Zahlung, was im Angebot steht, zahlen Sie. Hosting und Betreuung sind optional und monatlich kündbar. Sie zahlen erst, wenn Ihre Website fertig ist und Ihnen gefällt. Keine Vorauszahlung, kein finanzielles Risiko.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q"><h3>Wie läuft die Zahlung ab?</h3><span class="faq-icon">+</span></div>
+            <div class="faq-a"><div class="faq-a-inner">Sie zahlen per Banküberweißung, und zwar erst nach Abnahme. Wir stellen Ihnen Ihre fertige Website live vor, Sie geben das OK, dann erst geht die Rechnung raus. Keine Vorauszahlung, kein Risiko für Sie. Bei größeren Projekten können wir auf Wunsch auch eine Teilzahlung vereinbaren.</div></div>
           </div>
 
           <div class="faq-category">Leistungen &amp; KI</div>
 
           <div class="faq-item">
-            <div class="faq-q"><h3>Was ist der KI-Agent genau – und brauche ich das?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Der KI-Agent ist ein intelligenter Assistent, direkt auf Ihrer Website eingebettet – rund um die Uhr, auch nachts und an Wochenenden. Wir konfigurieren ihn vollständig auf Ihr Unternehmen: Leistungen, Preise, Öffnungszeiten, Ihr Ton.<br /><br /><strong>Brauchen Sie das?</strong> Wenn Anfragen oft abends oder am Wochenende eingehen, dann ja. Sie können auch mit dem Website-Paket starten und den KI-Agenten später nachrüsten.</div></div>
+            <div class="faq-q"><h3>Was ist der KI-Agent genau, und brauche ich das?</h3><span class="faq-icon">+</span></div>
+            <div class="faq-a"><div class="faq-a-inner">Der KI-Agent ist ein intelligenter Assistent, direkt auf Ihrer Website eingebettet, rund um die Uhr, auch nachts und an Wochenenden. Wir konfigurieren ihn vollständig auf Ihr Unternehmen: Leistungen, Preise, Öffnungszeiten, Ihr Ton.<br /><br /><strong>Brauchen Sie das?</strong> Wenn Anfragen oft abends oder am Wochenende eingehen, dann ja. Sie können auch mit dem Website-Paket starten und den KI-Agenten später nachrüsten.</div></div>
           </div>
 
           <div class="faq-item">
             <div class="faq-q"><h3>Wie unterscheidet sich Ihr KI-Agent von einem normalen Chatbot?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Ein klassischer Chatbot kennt nur vorab einprogrammierte Antworten. Unser KI-Agent versteht den Kontext einer Frage und antwortet sinnvoll – auch wenn der Kunde anders fragt als erwartet. Wir richten ihn vollständig auf Ihr Unternehmen ein: Das Ergebnis klingt nach Ihnen, nicht nach einem Standard-System.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Ein klassischer Chatbot kennt nur vorab einprogrammierte Antworten. Unser KI-Agent versteht den Kontext einer Frage und antwortet sinnvoll, auch wenn der Kunde anders fragt als erwartet. Wir richten ihn vollständig auf Ihr Unternehmen ein. Das Ergebnis klingt nach Ihnen, nicht nach einem Standard-System.</div></div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-q"><h3>Macht ihr auch SEO – was ist realistisch zu erwarten?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Ja. Jede Website enthält eine saubere SEO-Basis: optimierte Titles, Meta-Beschreibungen, schnelle Ladezeiten, Mobile-First und Google Business Einrichtung. Kein Extra – Standard bei uns.<br /><br />Erste Verbesserungen sind nach 4–12 Wochen spürbar. Platz 1 bei Google garantieren wir nicht – wer das verspricht, arbeitet unseriös. Was wir garantieren: eine solide, messbare Grundlage.</div></div>
+            <div class="faq-q"><h3>Macht ihr auch SEO, was ist realistisch zu erwarten?</h3><span class="faq-icon">+</span></div>
+            <div class="faq-a"><div class="faq-a-inner">Ja. Jede Website enthält eine saubere SEO-Basis: optimierte Titles, Meta-Beschreibungen, schnelle Ladezeiten, Mobile-First und Google Business Einrichtung. Kein Extra, Standard bei uns.<br /><br />Erste Verbesserungen sind nach 4 bis 12 Wochen spürbar. Platz 1 bei Google garantieren wir nicht, wer das verspricht, arbeitet unseriös. Was wir garantieren: eine solide, messbare Grundlage.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q"><h3>Helft ihr auch bei Logo und Texterstellung?</h3><span class="faq-icon">+</span></div>
+            <div class="faq-a"><div class="faq-a-inner">Ja, das bieten wir als einmaliges Extra an. Logo-Design ab 150 € je nach Aufwand, professionelle Texte für Ihre Seiten ebenfalls auf Anfrage. So klingt alles aus einem Guss. Wenn Sie bereits Texte haben, bringen Sie diese einfach mit, wir optimieren sie dann für SEO und Lesbarkeit.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q"><h3>Erstellt ihr auch Flyer und Visitenkarten?</h3><span class="faq-icon">+</span></div>
+            <div class="faq-a"><div class="faq-a-inner">Ja. Wir gestalten Flyer (A5 oder A4) und Visitenkarten passend zum Design Ihrer Website. Sie erhalten druckfertige PDF-Dateien, die Sie direkt bei einem Druckdienstleister Ihrer Wahl bestellen können. Preis ab 120 € je nach Format und Umfang.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q"><h3>Was umfasst die Marktanalyse und das Farbkonzept?</h3><span class="faq-icon">+</span></div>
+            <div class="faq-a"><div class="faq-a-inner">Wir analysieren Ihre Mitbewerber in der Region: Welche Stärken und Schwächen haben sie, wie positionieren sie sich, was können Sie besser machen. Dazu erarbeiten wir ein individuelles Farbkonzept mit Begründung, passend zu Ihrer Branche und Zielgruppe. Das Ergebnis erhalten Sie als übersichtliches Dokument. Preis ab 350 €, Festpreis nach Absprache.</div></div>
           </div>
 
           <div class="faq-category">Ablauf &amp; Start</div>
 
           <div class="faq-item">
             <div class="faq-q"><h3>Wie lange dauert die Umsetzung?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Website-Paket: 3–4 Wochen. Website + KI-Agent: 3–4 Wochen. Ablauf: Woche 1 – Struktur und Inhalte. Woche 2 – Design mit Zwischenstand zur Freigabe. Woche 3–4 – Feinschliff und Launch.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Alle Pakete: 3 bis 4 Wochen. Woche 1: Struktur und Inhalte. Woche 2: Design mit Zwischenstand zur Freigabe. Woche 3 bis 4: Feinschliff und Launch. Sie sehen den Fortschritt in Echtzeit, nichts erscheint fertig ohne Ihre Freigabe.</div></div>
           </div>
 
           <div class="faq-item">
             <div class="faq-q"><h3>Was brauchen Sie von mir für den Start?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Deutlich weniger als Sie erwarten. Sie liefern uns Texte oder Stichpunkte zu Ihren Leistungen – wir übernehmen den Rest: Struktur, Formulierung, SEO-Optimierung und die gesamte Technik. Ihr Aufwand: ca. 1–2 Stunden übers gesamte Projekt.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Deutlich weniger als Sie erwarten. Sie liefern uns Stichpunkte zu Ihren Leistungen, wir übernehmen den Rest: Struktur, Formulierung, SEO-Optimierung und die gesamte Technik. Ihr Aufwand: ca. 1 bis 2 Stunden übers gesamte Projekt.</div></div>
           </div>
-
 
           <div class="faq-item">
             <div class="faq-q"><h3>Wer schreibt die Texte für meine Website?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Sie liefern uns Ihre Texte oder kurze Stichpunkte zu Ihren Leistungen, Preisen und Ihrem Betrieb. Wir übernehmen den Rest: strukturieren, erweitern und machen die Inhalte marketingwirksam – abgestimmt auf Ihre Branche und Ihre Zielkunden am Bodensee. Das Ergebnis klingt nach Ihnen, nicht nach einer Vorlage.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Sie liefern uns kurze Stichpunkte zu Ihren Leistungen, Preisen und Ihrem Betrieb. Wir übernehmen den Rest: strukturieren, erweitern und machen die Inhalte marketingwirksam, abgestimmt auf Ihre Branche und Ihre Zielkunden am Bodensee. Das Ergebnis klingt nach Ihnen, nicht nach einer Vorlage.</div></div>
           </div>
 
           <div class="faq-item">
             <div class="faq-q"><h3>Kann ich die Website später selbst ändern?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Ja — auf zwei Wegen:<br /><br /><strong>Option 1: Über uns.</strong> Kleine Änderungen (Text, Bild, Öffnungszeiten) einfach per WhatsApp — im Hosting-Retainer (29 €/Monat) inklusive.<br /><br /><strong>Option 2: Selbst bearbeiten mit dem EWD Editor (19 €/Monat).</strong> Unser eigenes CMS: URL aufrufen, Passwort eingeben, Texte und Bilder direkt auf der Seite bearbeiten, speichern — live in 60 Sekunden. Kein Login bei Drittanbietern, kein Dashboard, kein technisches Wissen nötig.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Ja, auf zwei Wegen.<br /><br /><strong>Option 1: Über uns.</strong> Kleine Änderungen per WhatsApp, im Hosting-Retainer (29 €/Monat) inklusive.<br /><br /><strong>Option 2: Selbst bearbeiten mit dem EWD Editor (19 €/Monat).</strong> Seite aufrufen, Passwort eingeben, Texte und Bilder direkt auf der Seite bearbeiten, speichern, live in 60 Sekunden. Kein Dashboard, kein technisches Wissen nötig.</div></div>
           </div>
+
           <div class="faq-item">
             <div class="faq-q"><h3>Muss ich mich mit Technik auskennen?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Kein bisschen. Wir übernehmen alles von A bis Z. Was Sie einbringen: Ihr Wissen über Ihr Unternehmen und Ihre Kunden. Wir erklären alles in verständlicher Sprache – ohne Fachjargon.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Kein bisschen. Wir übernehmen alles von A bis Z. Was Sie einbringen: Ihr Wissen über Ihr Unternehmen und Ihre Kunden. Wir erklären alles in verständlicher Sprache, ohne Fachjargon.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q"><h3>Was ist, wenn mir das Ergebnis nicht gefällt?</h3><span class="faq-icon">+</span></div>
+            <div class="faq-a"><div class="faq-a-inner">Dann bauen wir es um, bis es stimmt. Wir arbeiten mit Zwischen-Freigaben, sodass es gar nicht erst zu einer bösen Überraschung am Ende kommt. Sie zahlen erst nach Ihrer Abnahme. Kein finanzielles Risiko für Sie.</div></div>
           </div>
 
           <div class="faq-category">Nach dem Launch</div>
 
           <div class="faq-item">
             <div class="faq-q"><h3>Was passiert nach dem Launch?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Entweder Sie übernehmen die Website selbst – wir übergeben alles sauber dokumentiert. Oder Sie buchen Hosting &amp; Betreuung ab 29 €/Monat: Hosting, SSL, Sicherheitschecks, kleine Textanpassungen und direkter Ansprechpartner per WhatsApp. Kein Ticketsystem, persönlich.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Entweder Sie übernehmen die Website selbst, wir übergeben alles sauber. Oder Sie buchen Hosting &amp; Betreuung ab 29 €/Monat: Hosting, SSL, Sicherheitschecks, kleine Textanpassungen und direkter Ansprechpartner per WhatsApp. Kein Ticketsystem, persönlich.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q"><h3>Kann ich Add-ons auch nachträglich dazubuchen?</h3><span class="faq-icon">+</span></div>
+            <div class="faq-a"><div class="faq-a-inner">Ja, jederzeit. Hosting, EWD Editor, Flyer, Logo, Marktanalyse, alles buchbar auch Monate nach dem Launch. Einfach per WhatsApp oder über das Kontaktformular melden.</div></div>
           </div>
 
           <div class="faq-item">
@@ -768,8 +857,13 @@
           </div>
 
           <div class="faq-item">
+            <div class="faq-q"><h3>Was ist, wenn ich nach dem Launch eine neue oder erweiterte Website brauche?</h3><span class="faq-icon">+</span></div>
+            <div class="faq-a"><div class="faq-a-inner">Kein Problem. Als Bestandskunde erhalten Sie ein Angebot zu vergünstigten Konditionen. Wir kennen Ihr Unternehmen bereits, das spart Zeit und Aufwand auf beiden Seiten.</div></div>
+          </div>
+
+          <div class="faq-item">
             <div class="faq-q"><h3>Betreut ihr auch Unternehmen außerhalb Friedrichshafens?</h3><span class="faq-icon">+</span></div>
-            <div class="faq-a"><div class="faq-a-inner">Ja. Schwerpunkt: Bodensee-Region – Ravensburg, Konstanz, Lindau, Überlingen, Meersburg, Tettnang. Für Unternehmen weiter entfernt arbeiten wir per Video-Call – reibungslos, ohne Einfluss auf Qualität oder Preis.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">Ja. Schwerpunkt: Bodensee-Region, Ravensburg, Konstanz, Lindau, Überlingen, Meersburg, Tettnang. Für Unternehmen weiter entfernt arbeiten wir per Video-Call, reibungslos, ohne Einfluss auf Qualität oder Preis.</div></div>
           </div>
 
         </div>
