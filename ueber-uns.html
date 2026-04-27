@@ -501,7 +501,7 @@
 
     <div class="whatsapp-float">
         <a href="https://wa.me/491717031722?text=Hallo%20EWD%20Team!%20Ich%20interessiere%20mich%20f%C3%BCr%20Webdesign." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
-            <img loading="lazy" src="src="icon-whatsapp.png" alt="WhatsApp" width="32" height="32">
+            <img loading="lazy" src="icon-whatsapp.png" alt="WhatsApp" width="32" height="32">
         </a>
     </div>
 
@@ -629,7 +629,7 @@
             <div class="card-grid cols-2">
                 <div class="team-card">
                     <div class="team-photo">
-                      <img loading="lazy" src="src="flavio.png" alt="Flavio Ioco"
+                      <img loading="lazy" src="flavio.png" alt="Flavio Ioco"
                            onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'team-photo-ph\'>&#128247;&ensp;Foto folgt</div>'" />
                     </div>
                     <h3>Flavio Ioco</h3>
@@ -643,7 +643,7 @@
                 </div>
                 <div class="team-card">
                     <div class="team-photo">
-                      <img loading="lazy" src="src="daniel.png" alt="Daniel Holman"
+                      <img loading="lazy" src="daniel.png" alt="Daniel Holman"
                            onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'team-photo-ph\'>&#128247;&ensp;Foto folgt</div>'" />
                     </div>
                     <h3>Daniel Holman</h3>
@@ -696,10 +696,10 @@
           <p class="footer-tagline">Webdesign &amp; KI-Bot aus Friedrichshafen. Für Unternehmen am Bodensee, die online Ergebnisse wollen.</p>
           <div class="footer-socials">
             <a href="https://instagram.com/evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img loading="lazy" src="src="icon-instagram.png" alt="" width="14" height="14" />
+              <img loading="lazy" src="icon-instagram.png" alt="" width="14" height="14" />
             </a>
             <a href="https://tiktok.com/@evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-              <img loading="lazy" src="src="icon-tiktok.png" alt="" width="14" height="14" />
+              <img loading="lazy" src="icon-tiktok.png" alt="" width="14" height="14" />
             </a>
           </div>
         </div>
@@ -1055,8 +1055,8 @@
     document.head.appendChild(s);
   };
   function addU(t){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em u"><div class="eb">'+esc(t)+'</div><div class="emav">Sie</div></div>';el.scrollTop=el.scrollHeight;}
-  function addB(t){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em b"><div class="emav"><img loading="lazy" src="src="'+LOGO+'" onerror="this.remove()" /></div><div class="eb">'+t+'</div></div>';el.scrollTop=el.scrollHeight;}
-  function showT(){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em b" id="ewd-t"><div class="emav"><img loading="lazy" src="src="'+LOGO+'" onerror="this.remove()" /></div><div class="eb etyp"><span></span><span></span><span></span></div></div>';el.scrollTop=el.scrollHeight;}
+  function addB(t){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em b"><div class="emav"><img loading="lazy" src="'+LOGO+'" onerror="this.remove()" /></div><div class="eb">'+t+'</div></div>';el.scrollTop=el.scrollHeight;}
+  function showT(){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em b" id="ewd-t"><div class="emav"><img loading="lazy" src="'+LOGO+'" onerror="this.remove()" /></div><div class="eb etyp"><span></span><span></span><span></span></div></div>';el.scrollTop=el.scrollHeight;}
   function hideT(){var t=document.getElementById('ewd-t');if(t)t.remove();}
   function showBooking(apt){var el=document.getElementById('ewd-msgs');var d=new Date(apt.date+'T'+apt.time).toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long'});el.innerHTML+='<div class="em b"><div class="emav">&#x1F4C5;</div><div class="eb" style="background:rgba(0,102,255,.1);border:1px solid rgba(0,102,255,.25);border-radius:4px 16px 16px 16px"><strong style="color:#4D94FF;display:block;margin-bottom:4px">&#x2713; Termin gebucht</strong>'+d+' um '+apt.time+' Uhr<br>'+apt.service+'</div></div>';el.scrollTop=el.scrollHeight;}
   function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');}

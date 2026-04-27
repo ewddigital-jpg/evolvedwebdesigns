@@ -500,7 +500,7 @@
 
   <div class="wa">
     <a href="https://wa.me/491717031722?text=Hallo%20EWD!%20Ich%20interessiere%20mich%20fuer%20eine%20neue%20Website." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-      <img loading="lazy" src="src="icon-whatsapp.png" alt="WhatsApp" width="28" height="28" />
+      <img loading="lazy" src="icon-whatsapp.png" alt="WhatsApp" width="28" height="28" />
     </a>
   </div>
 
@@ -689,10 +689,10 @@
           <p class="footer-tagline">Webdesign &amp; KI-Bot aus Friedrichshafen. Für Unternehmen am Bodensee, die online Ergebnisse wollen.</p>
           <div class="footer-socials">
             <a href="https://instagram.com/evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img loading="lazy" src="src="icon-instagram.png" alt="" width="14" height="14" />
+              <img loading="lazy" src="icon-instagram.png" alt="" width="14" height="14" />
             </a>
             <a href="https://tiktok.com/@evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-              <img loading="lazy" src="src="icon-tiktok.png" alt="" width="14" height="14" />
+              <img loading="lazy" src="icon-tiktok.png" alt="" width="14" height="14" />
             </a>
           </div>
         </div>
@@ -1046,8 +1046,8 @@
     document.head.appendChild(s);
   };
   function addU(t){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em u"><div class="eb">'+esc(t)+'</div><div class="emav">Sie</div></div>';el.scrollTop=el.scrollHeight;}
-  function addB(t){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em b"><div class="emav"><img loading="lazy" src="src="'+LOGO+'" onerror="this.remove()" /></div><div class="eb">'+t+'</div></div>';el.scrollTop=el.scrollHeight;}
-  function showT(){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em b" id="ewd-t"><div class="emav"><img loading="lazy" src="src="'+LOGO+'" onerror="this.remove()" /></div><div class="eb etyp"><span></span><span></span><span></span></div></div>';el.scrollTop=el.scrollHeight;}
+  function addB(t){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em b"><div class="emav"><img loading="lazy" src="'+LOGO+'" onerror="this.remove()" /></div><div class="eb">'+t+'</div></div>';el.scrollTop=el.scrollHeight;}
+  function showT(){var el=document.getElementById('ewd-msgs');el.innerHTML+='<div class="em b" id="ewd-t"><div class="emav"><img loading="lazy" src="'+LOGO+'" onerror="this.remove()" /></div><div class="eb etyp"><span></span><span></span><span></span></div></div>';el.scrollTop=el.scrollHeight;}
   function hideT(){var t=document.getElementById('ewd-t');if(t)t.remove();}
   function showBooking(apt){var el=document.getElementById('ewd-msgs');var d=new Date(apt.date+'T'+apt.time).toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long'});el.innerHTML+='<div class="em b"><div class="emav">&#x1F4C5;</div><div class="eb" style="background:rgba(0,102,255,.1);border:1px solid rgba(0,102,255,.25);border-radius:4px 16px 16px 16px"><strong style="color:#4D94FF;display:block;margin-bottom:4px">&#x2713; Termin gebucht</strong>'+d+' um '+apt.time+' Uhr<br>'+apt.service+'</div></div>';el.scrollTop=el.scrollHeight;}
   function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');}
