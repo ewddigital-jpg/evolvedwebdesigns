@@ -288,9 +288,9 @@
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
-      display: flex; flex-direction:column; align-items:center; justify-content:center;
+      display: flex; flex-direction:column; align-items:center; justify-content:flex-start;
       text-align: center;
-      padding: 5rem 1.5rem 4rem;
+      padding: 4rem 1.5rem 5rem;
       position: relative; overflow:hidden;
     }
     .hero h1 {
@@ -333,21 +333,26 @@
     .hstat span { font-size:.78rem; color:var(--text-secondary); display:block; margin-top:.15rem }
 
     /* ── SERVICES ── */
-    .srv-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin-top:2.5rem }
+    .srv-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem; margin-top:2.5rem }
     .srv {
       background: var(--bg-card);
-      padding: 2rem 1.75rem;
-      transition: background .25s;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
-    .srv:hover { background:var(--bg-raised) }
-    .srv-num { font-family:'Poppins',sans-serif; font-size:.72rem; font-weight:800; color:var(--primary-light); letter-spacing:.1em; margin-bottom:1rem }
+    .srv:hover { border-color:var(--border-mid); transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.22) }
+    .srv-num { font-family:'Poppins',sans-serif; font-size:.65rem; font-weight:800; color:var(--primary-light); letter-spacing:.12em; text-transform:uppercase; margin-bottom:.9rem }
     .srv h3 { margin-bottom:.55rem }
-    .srv p { color:var(--text-secondary); font-size:.88rem; line-height:1.75 }
-    .srv-tag { display:inline-block; margin-top:.9rem; font-size:.78rem; font-weight:700; color:var(--primary-light); text-decoration:none; transition:color .2s }
+    .srv p { color:var(--text-secondary); font-size:.87rem; line-height:1.75; flex:1 }
+    .srv-tag { display:inline-flex; align-items:center; gap:.35rem; margin-top:1.1rem; font-size:.8rem; font-weight:700; color:var(--primary-light); text-decoration:none; transition:color .2s }
     .srv-tag:hover { color:var(--accent) }
-    .srv-featured { background:linear-gradient(160deg,var(--bg-card) 0%,rgba(0,102,255,.05) 100%) }
-    .srv-badge { display:inline-block; font-size:.62rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; background:rgba(0,217,255,.1); border:1px solid rgba(0,217,255,.2); color:var(--accent); padding:.14rem .55rem; border-radius:4px; margin-bottom:.65rem }
+    .srv-featured { background:linear-gradient(160deg,var(--bg-card) 0%,rgba(0,102,255,.07) 100%); border-color:rgba(0,102,255,.28) }
+    .srv-featured:hover { border-color:rgba(0,102,255,.5); box-shadow:0 8px 28px rgba(0,102,255,.13) }
+    .srv-badge { display:inline-flex; align-items:center; font-size:.62rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; background:rgba(0,102,255,.12); border:1px solid rgba(0,102,255,.22); color:var(--primary-light); padding:.2rem .7rem; border-radius:999px; margin-bottom:.8rem }
 
     /* ── KI SECTION ── */
     .ki-two-col { display:grid; grid-template-columns:1fr 1fr; gap:3.5rem; align-items:start }
