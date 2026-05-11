@@ -375,13 +375,12 @@
   .steps-grid .step-item.anim:nth-child(2){transition-delay:.18s}
   .steps-grid .step-item.anim:nth-child(3){transition-delay:.31s}
   .steps-grid .step-item.anim:nth-child(4){transition-delay:.44s}
-  @keyframes hIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-  .h-anim{opacity:0;animation:hIn .75s cubic-bezier(.4,0,.2,1) forwards}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  .h-anim{opacity:0;animation:fadeUp .7s ease forwards}
   .h-anim-1{animation-delay:.08s}
-  .h-anim-2{animation-delay:.22s}
-  .h-anim-3{animation-delay:.36s}
-  .h-anim-4{animation-delay:.50s}
-  .h-anim-5{animation-delay:.64s}
+  .h-anim-2{animation-delay:.2s}
+  .h-anim-3{animation-delay:.32s}
+  .h-anim-4{animation-delay:.44s}
     /* ── BREADCRUMB ── */
     .bc{padding:1.25rem 1.5rem .75rem;max-width:1100px;margin:0 auto;display:block;box-sizing:border-box}
     .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
