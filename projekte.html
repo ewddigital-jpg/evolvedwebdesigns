@@ -48,8 +48,8 @@
         }
         body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 70% 40% at 50% -5%,rgba(0,102,255,0.12) 0%,transparent 60%)}
 
-        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeDown { from { opacity: 0; transform: translateY(-24px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes scaleIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
         @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
         @keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
@@ -69,14 +69,14 @@
         
         
 
-        .page-hero{padding:.75rem 2rem 3rem; text-align: center; max-width: 800px; margin: 0 auto; animation: fadeInUp 0.7s ease 0.3s both; }
+        .page-hero{padding:.75rem 2rem 3rem; text-align: center; max-width: 800px; margin: 0 auto; animation: fadeUp 0.7s ease 0.3s both; }
         .page-hero h1 { font-family: 'Poppins', sans-serif; font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
         .gradient-text { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .page-hero p { color: var(--text-secondary); font-size: 1.05rem; }
 
         .projects-section { max-width: 1000px; margin: 0 auto; padding: 0 2rem 2rem; }
 
-        .project-card { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; margin-bottom: 1rem; opacity: 0; animation: fadeInUp 0.7s ease 0.4s both; transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease; }
+        .project-card { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.7s ease 0.4s both; transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease; }
         .project-card:hover { border-color: var(--border-hover); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); }
         .project-image { background: var(--bg-lighter); border-radius: 12px; overflow: hidden; aspect-ratio: 16/10; animation: slideInLeft 0.7s ease 0.5s both; }
         .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
@@ -96,12 +96,12 @@
         .btn-secondary:hover { border-color: var(--primary); color: var(--primary-light); transform: translateY(-2px); }
 
         .cta-wrap { padding: 0 1.5rem 2rem; }
-        .cta-band { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 3rem 2.5rem; text-align: center; max-width: 760px; margin: 3rem auto 0; opacity: 0; animation: fadeInUp 0.7s ease 0.8s both; }
+        .cta-band { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 3rem 2.5rem; text-align: center; max-width: 760px; margin: 3rem auto 0; opacity: 0; animation: fadeUp 0.7s ease 0.8s both; }
         .cta-band h2 { font-family: 'Poppins', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: .75rem; }
         .cta-band p { color: var(--text-secondary); font-size: .95rem; line-height: 1.75; margin-bottom: 1.75rem; }
         .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-        .review-section { max-width: 1000px; margin: 0 auto; padding: 2rem 2rem 0; opacity: 0; animation: fadeInUp 0.7s ease 0.6s both; }
+        .review-section { max-width: 1000px; margin: 0 auto; padding: 2rem 2rem 0; opacity: 0; animation: fadeUp 0.7s ease 0.6s both; }
         .review-section-label { text-align: center; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; }
         .review-section-heading { text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; }
 
