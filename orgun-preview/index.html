@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orgun Salon Ravensburg – Friseur & Barber | Bestmeister Baden-Württemberg</title>
+  <meta name="description" content="Orgun Salon Ravensburg – Friseurmeister Umut Örgün, Bestmeister Baden-Württembergs. Haarschnitte, Colorationen, Bart, Dauerwelle, Brautfrisuren. Jetzt Termin buchen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { 300:'#e8c87a', 400:'#d4a843', 500:'#b8902a', 600:'#9a7520' },
+            salon:{ 900:'#0d0d0d', 800:'#141414', 700:'#1c1c1c', 600:'#242424', 500:'#2e2e2e', 400:'#3a3a3a' }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond','Georgia','serif'],
+            sans:  ['Inter','system-ui','sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #0d0d0d; }
+
+    .hero-bg {
+      background-image:
+        linear-gradient(to bottom, rgba(8,8,8,0.7) 0%, rgba(10,10,10,0.45) 50%, rgba(13,13,13,0.9) 100%),
+        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&auto=format&fit=crop&q=85');
+      background-size: cover;
+      background-position: center 30%;
+      background-attachment: fixed;
+    }
+
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity 0.7s ease,transform 0.7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    #main-nav { transition: background 0.4s ease, padding 0.3s ease; }
+    #main-nav.scrolled { background:rgba(13,13,13,0.97)!important; border-bottom:1px solid rgba(212,168,67,0.15); }
+
+    .lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .lift:hover { transform:translateY(-5px); }
+
+    .gold-line { height:1px; background: linear-gradient(90deg, transparent, #d4a843, transparent); }
+
+    #mobile-menu { transition:max-height 0.3s ease,opacity 0.3s ease; max-height:0; opacity:0; overflow:hidden; }
+    #mobile-menu.open { max-height:400px; opacity:1; }
+
+    .price-row { border-bottom:1px solid rgba(255,255,255,0.06); }
+    .price-row:last-child { border-bottom:none; }
+  </style>
+</head>
+<body class="font-sans text-gray-200 antialiased">
+
+  <!-- NAV -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-transparent px-5 py-5">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="#" class="font-serif text-2xl font-semibold text-white tracking-[0.12em] uppercase">Orgun</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#services"  class="text-gray-400 hover:text-white text-xs font-medium tracking-widest uppercase transition">Services</a>
+        <a href="#preise"    class="text-gray-400 hover:text-white text-xs font-medium tracking-widest uppercase transition">Preise</a>
+        <a href="#team"      class="text-gray-400 hover:text-white text-xs font-medium tracking-widest uppercase transition">Team</a>
+        <a href="#kontakt"   class="text-gray-400 hover:text-white text-xs font-medium tracking-widest uppercase transition">Kontakt</a>
+      </div>
+      <a href="https://orgunsalon.de" target="_blank"
+         class="hidden md:inline-flex items-center gap-2 border border-gold-400/50 hover:border-gold-400 hover:bg-gold-400/10 text-gold-300 px-5 py-2 text-xs font-medium tracking-widest uppercase transition rounded-full">
+        Termin buchen
+      </a>
+      <button id="burger" class="md:hidden text-gray-300 p-1">
+        <svg id="b-open"  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="b-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu">
+      <div class="max-w-6xl mx-auto mt-3 bg-salon-800 border border-white/10 rounded-2xl px-6 py-5 flex flex-col gap-4">
+        <a href="#services"  class="text-gray-300 text-xs tracking-widest uppercase mobile-link">Services</a>
+        <a href="#preise"    class="text-gray-300 text-xs tracking-widest uppercase mobile-link">Preise</a>
+        <a href="#team"      class="text-gray-300 text-xs tracking-widest uppercase mobile-link">Team</a>
+        <a href="#kontakt"   class="text-gray-300 text-xs tracking-widest uppercase mobile-link">Kontakt</a>
+        <a href="https://orgunsalon.de" class="border border-gold-400/50 text-gold-300 px-4 py-3 rounded-xl text-xs tracking-widest uppercase text-center mobile-link">Termin buchen</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-end pb-24 relative">
+    <div class="max-w-5xl mx-auto px-6 w-full">
+      <div class="reveal mb-6">
+        <span class="inline-flex items-center gap-2 border border-gold-400/30 text-gold-300 text-xs font-medium px-4 py-1.5 rounded-full tracking-widest uppercase">
+          ★ Bestmeister Baden-Württemberg
+        </span>
+      </div>
+      <h1 class="font-serif text-5xl sm:text-6xl lg:text-8xl text-white font-semibold leading-[1.04] mb-5 reveal">
+        It's not just<br>a haircut.
+      </h1>
+      <p class="text-gray-400 text-lg max-w-lg mb-10 leading-relaxed reveal font-light">
+        Höchste Präzision, individuelle Beratung und ein einzigartiges Friseuerlebnis
+        in luxuriösem Ambiente — in Ravensburg.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 reveal">
+        <a href="https://orgunsalon.de" target="_blank"
+           class="inline-flex items-center justify-center gap-2 bg-gold-400 hover:bg-gold-300 text-salon-900 text-sm font-semibold px-8 py-4 rounded-full transition-all tracking-wide">
+          Termin buchen
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="#preise"
+           class="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 text-white text-sm font-medium px-8 py-4 rounded-full transition-all">
+          Preise ansehen
+        </a>
+      </div>
+    </div>
+
+    <!-- Award badge -->
+    <div class="absolute top-28 right-8 md:right-16 hidden md:block reveal">
+      <div class="border border-gold-400/25 rounded-2xl px-5 py-4 text-center bg-black/30 backdrop-blur">
+        <div class="text-gold-400 text-2xl mb-1">★</div>
+        <div class="text-white text-xs font-medium tracking-wide">Bestmeister</div>
+        <div class="text-gray-400 text-xs">Baden-Württemberg</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TRUST BAR -->
+  <section class="bg-salon-800 border-y border-white/5 py-8">
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="reveal">
+        <div class="text-gold-400 font-serif text-xl font-semibold">Bestmeister</div>
+        <div class="text-gray-500 text-xs mt-1 tracking-wide">Baden-Württemberg</div>
+      </div>
+      <div class="reveal">
+        <div class="text-gold-400 font-serif text-xl font-semibold">3. Platz</div>
+        <div class="text-gray-500 text-xs mt-1 tracking-wide">DMH German Craft Skills</div>
+      </div>
+      <div class="reveal">
+        <div class="text-gold-400 font-serif text-xl font-semibold">6 Jahre</div>
+        <div class="text-gray-500 text-xs mt-1 tracking-wide">Friseurmeister-Erfahrung</div>
+      </div>
+      <div class="reveal">
+        <div class="text-gold-400 font-serif text-xl font-semibold">Ravensburg</div>
+        <div class="text-gray-500 text-xs mt-1 tracking-wide">Tettnanger Str. 59/1</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services" class="py-28 bg-salon-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <span class="text-gold-400 text-xs tracking-widest uppercase">Was wir für Sie tun</span>
+        <h2 class="font-serif text-4xl md:text-5xl font-semibold text-white mt-3">Unsere Services</h2>
+        <div class="gold-line w-24 mx-auto mt-5"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="lift bg-salon-800 rounded-2xl p-7 border border-white/5 reveal">
+          <div class="text-gold-400 text-3xl mb-4 font-serif">✂</div>
+          <h3 class="text-white font-serif text-lg font-semibold mb-2">Damen & Herren Haarschnitte</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Präzise geschnitten, individuell beraten — von klassisch bis modern, jeder Schnitt ein Unikat.</p>
+        </div>
+        <div class="lift bg-salon-700 rounded-2xl p-7 border border-gold-400/20 reveal">
+          <div class="text-gold-400 text-3xl mb-4 font-serif">⚡</div>
+          <h3 class="text-white font-serif text-lg font-semibold mb-2">Farbveränderungen</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Balayage, Blondierungen, Colorationen — abgestimmt auf Ihren Typ, Ihr Haar, Ihren Stil.</p>
+        </div>
+        <div class="lift bg-salon-800 rounded-2xl p-7 border border-white/5 reveal">
+          <div class="text-gold-400 text-3xl mb-4 font-serif">◈</div>
+          <h3 class="text-white font-serif text-lg font-semibold mb-2">Bartrasuren</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Klassische Nassrasur, Bartdesign und Pflege — für den Mann, der Wert auf Details legt.</p>
+        </div>
+        <div class="lift bg-salon-800 rounded-2xl p-7 border border-white/5 reveal">
+          <div class="text-gold-400 text-3xl mb-4 font-serif">◉</div>
+          <h3 class="text-white font-serif text-lg font-semibold mb-2">Dauerwelle</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Moderne Dauerwelltechniken für natürliche Locken, Volumen und langanhaltende Textur.</p>
+        </div>
+        <div class="lift bg-salon-800 rounded-2xl p-7 border border-white/5 reveal">
+          <div class="text-gold-400 text-3xl mb-4 font-serif">♛</div>
+          <h3 class="text-white font-serif text-lg font-semibold mb-2">Hochstecken & Brautfrisuren</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Für den schönsten Tag — aufwändige Hochsteckfrisuren und Brautpakete inkl. Probeaufsteckung.</p>
+        </div>
+        <div class="lift bg-salon-800 rounded-2xl p-7 border border-white/5 reveal">
+          <div class="text-gold-400 text-3xl mb-4 font-serif">∞</div>
+          <h3 class="text-white font-serif text-lg font-semibold mb-2">Extensions</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Mehr Länge, mehr Volumen — professionelle Extensions mit kostenlosem Beratungsgespräch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PREISLISTE -->
+  <section id="preise" class="py-28 bg-salon-800">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-14 reveal">
+        <span class="text-gold-400 text-xs tracking-widest uppercase">Transparenz von Anfang an</span>
+        <h2 class="font-serif text-4xl md:text-5xl font-semibold text-white mt-3">Preisliste</h2>
+        <div class="gold-line w-24 mx-auto mt-5"></div>
+        <p class="text-gray-500 text-sm mt-4">Alle Preise inkl. MwSt. · Beratung immer kostenlos.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Damen -->
+        <div class="bg-salon-700 rounded-2xl p-8 border border-white/5 reveal">
+          <h3 class="font-serif text-2xl font-semibold text-white mb-6 pb-4 border-b border-white/10">Damen</h3>
+          <div class="space-y-0">
+            <div class="price-row flex justify-between items-center py-3">
+              <span class="text-gray-300 text-sm">Haarschnitt (waschen, schneiden, föhnen)</span>
+              <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">ab 55 €</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3">
+              <span class="text-gray-300 text-sm">Haarschnitt kurz</span>
+              <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">ab 45 €</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3">
+              <span class="text-gray-300 text-sm">Balayage / Blondierung</span>
+              <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">ab 130 €</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3">
+              <span class="text-gray-300 text-sm">Coloration / Ansatzfarbe</span>
+              <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">ab 85 €</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3">
+              <span class="text-gray-300 text-sm">Tönung</span>
+              <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">ab 65 €</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3">
+              <span class="text-gray-300 text-sm">Dauerwelle</span>
+              <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">ab 95 €</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3">
+              <span class="text-gray-300 text-sm">Hochsteckfrisur</span>
+              <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">ab 80 €</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3">
+              <span class="text-gray-300 text-sm">Brautfrisur (inkl. Probeaufsteckung)</span>
+              <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">ab 180 €</span>
+            </div>
+            <div class="flex justify-between items-center py-3">
+              <span class="text-gray-300 text-sm">Kinderhaarschnitt (bis 12 J.)</span>
+              <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">25 €</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Herren -->
+        <div class="reveal">
+          <div class="bg-salon-700 rounded-2xl p-8 border border-gold-400/15 mb-6">
+            <h3 class="font-serif text-2xl font-semibold text-white mb-6 pb-4 border-b border-white/10">Herren</h3>
+            <div class="space-y-0">
+              <div class="price-row flex justify-between items-center py-3">
+                <span class="text-gray-300 text-sm">Herrenschnitt</span>
+                <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">35 €</span>
+              </div>
+              <div class="price-row flex justify-between items-center py-3">
+                <span class="text-gray-300 text-sm">Herrenschnitt inkl. Waschen & Föhnen</span>
+                <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">40 €</span>
+              </div>
+              <div class="price-row flex justify-between items-center py-3">
+                <span class="text-gray-300 text-sm">Herrenschnitt + Bartpflege</span>
+                <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">50 €</span>
+              </div>
+              <div class="price-row flex justify-between items-center py-3">
+                <span class="text-gray-300 text-sm">Bartrasur (klassisch)</span>
+                <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">25 €</span>
+              </div>
+              <div class="price-row flex justify-between items-center py-3">
+                <span class="text-gray-300 text-sm">Bartdesign & Styling</span>
+                <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">30 €</span>
+              </div>
+              <div class="flex justify-between items-center py-3">
+                <span class="text-gray-300 text-sm">Fade / Undercut</span>
+                <span class="text-gold-400 font-semibold text-sm ml-4 flex-shrink-0">35 €</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Extensions Note -->
+          <div class="bg-salon-700/50 rounded-2xl p-6 border border-gold-400/10">
+            <div class="text-gold-400 text-xs tracking-widest uppercase mb-2">Extensions & Specials</div>
+            <p class="text-gray-400 text-sm leading-relaxed">Extensions, Brautpakete und besondere Leistungen auf individuelle Anfrage. Beratung immer kostenlos und unverbindlich.</p>
+            <a href="#kontakt" class="inline-flex items-center gap-1.5 text-gold-400 hover:text-gold-300 text-sm font-medium mt-3 transition">
+              Beratung anfragen
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-600 text-xs text-center mt-8">* Preise sind Richtwerte. Der endgültige Preis wird nach individueller Beratung und Haaranalyse festgelegt.</p>
+    </div>
+  </section>
+
+
+  <!-- TEAM -->
+  <section id="team" class="py-28 bg-salon-900">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-14 reveal">
+        <span class="text-gold-400 text-xs tracking-widest uppercase">Lernen Sie uns kennen</span>
+        <h2 class="font-serif text-4xl md:text-5xl font-semibold text-white mt-3">Unser Team</h2>
+        <div class="gold-line w-24 mx-auto mt-5"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-salon-800 rounded-3xl p-9 border border-white/5 reveal">
+          <div class="w-14 h-14 bg-gold-400/10 border border-gold-400/30 rounded-full flex items-center justify-center mb-5">
+            <span class="font-serif text-gold-400 text-xl font-semibold">UÖ</span>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-white mb-1">Umut Örgün</h3>
+          <div class="text-gold-400 text-xs tracking-widest uppercase mb-4">Inhaber · Friseurmeister</div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">Mit 6 Jahren Erfahrung und Spezialisierung auf perfekte Fades, Bartrasuren und Dauerwellen — ausgezeichnet als Bestmeister Baden-Württembergs und 3. Platz bei den DMH German Craft Skills.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="border border-gold-400/30 text-gold-400 text-xs px-3 py-1 rounded-full">Bestmeister BW</span>
+            <span class="border border-white/10 text-gray-400 text-xs px-3 py-1 rounded-full">DMH Top 3</span>
+            <span class="border border-white/10 text-gray-400 text-xs px-3 py-1 rounded-full">Fades & Bart</span>
+          </div>
+        </div>
+        <div class="bg-salon-800 rounded-3xl p-9 border border-white/5 reveal">
+          <div class="w-14 h-14 bg-gold-400/10 border border-gold-400/30 rounded-full flex items-center justify-center mb-5">
+            <span class="font-serif text-gold-400 text-xl font-semibold">ZÖ</span>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-white mb-1">Ziynet Örgün</h3>
+          <div class="text-gold-400 text-xs tracking-widest uppercase mb-4">Friseurmeisterin</div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">Mit 29 Jahren Erfahrung und Expertise in Farbveränderungen, modernen Damenhaarschnitten und kunstvollen Hochsteckfrisuren — eine der erfahrensten Friseurmeisterinnen der Region.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="border border-gold-400/30 text-gold-400 text-xs px-3 py-1 rounded-full">29 Jahre Erfahrung</span>
+            <span class="border border-white/10 text-gray-400 text-xs px-3 py-1 rounded-full">Color-Spezialistin</span>
+            <span class="border border-white/10 text-gray-400 text-xs px-3 py-1 rounded-full">Brautfrisuren</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA BANNER -->
+  <section class="py-20 bg-gradient-to-br from-salon-800 to-salon-900 border-y border-gold-400/10">
+    <div class="max-w-2xl mx-auto text-center px-6 reveal">
+      <h2 class="font-serif text-4xl md:text-5xl font-semibold text-white mb-5">Bereit für Ihren Termin?</h2>
+      <p class="text-gray-400 mb-9 leading-relaxed">Buchen Sie jetzt online — einfach, schnell, jederzeit.</p>
+      <a href="https://orgunsalon.de" target="_blank"
+         class="inline-flex items-center gap-3 bg-gold-400 hover:bg-gold-300 text-salon-900 text-sm font-bold px-10 py-4 rounded-full transition-all tracking-wide shadow-2xl shadow-gold-400/20">
+        Jetzt Termin buchen
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="py-24 bg-salon-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <span class="text-gold-400 text-xs tracking-widest uppercase">Wo Sie uns finden</span>
+          <h2 class="font-serif text-3xl font-semibold text-white mt-3 mb-8">Kontakt & Anfahrt</h2>
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-salon-700 border border-gold-400/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <div class="text-gray-500 text-xs uppercase tracking-wide mb-1">Adresse</div>
+                <div class="text-gray-200 font-medium">Tettnanger Str. 59/1<br>88214 Ravensburg</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-salon-700 border border-gold-400/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <div class="text-gray-500 text-xs uppercase tracking-wide mb-1">E-Mail</div>
+                <a href="mailto:info@orgunsalon.de" class="text-gray-200 font-medium hover:text-gold-400 transition">info@orgunsalon.de</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-salon-700 border border-gold-400/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <div>
+                <div class="text-gray-500 text-xs uppercase tracking-wide mb-1">Social</div>
+                <a href="https://instagram.com/orgunsalon" target="_blank" class="text-gray-200 font-medium hover:text-gold-400 transition">@orgunsalon</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-salon-800 rounded-3xl p-8 border border-white/5 reveal">
+          <div class="text-gold-400 text-xs tracking-widest uppercase mb-5">Online buchen</div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">Buchen Sie Ihren Termin direkt online — schnell, einfach, 24/7 verfügbar.</p>
+          <a href="https://orgunsalon.de" target="_blank"
+             class="block w-full text-center bg-gold-400 hover:bg-gold-300 text-salon-900 font-bold py-4 rounded-xl transition text-sm tracking-wide mb-4">
+            Jetzt Termin buchen
+          </a>
+          <p class="text-gray-600 text-xs text-center">Oder schreiben Sie uns: info@orgunsalon.de</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-salon-800 border-t border-white/5 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-gray-600 text-xs">
+      <span class="font-serif text-gray-500">© 2025 Orgun Salon · Ravensburg</span>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-gray-400 transition">Impressum</a>
+        <a href="#" class="hover:text-gray-400 transition">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 70), { passive: true });
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobile-menu');
+    const bO = document.getElementById('b-open'), bC = document.getElementById('b-close');
+    let open = false;
+    burger.addEventListener('click', () => {
+      open = !open; menu.classList.toggle('open', open);
+      bO.classList.toggle('hidden', open); bC.classList.toggle('hidden', !open);
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+      open = false; menu.classList.remove('open'); bO.classList.remove('hidden'); bC.classList.add('hidden');
+    }));
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
