@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kleinigkeit – Gebäudepflege der feinen Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 18px; scroll-behavior: auto; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0c1118;
+  color: #e8e4dd;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Custom cursor */
+#cur-dot {
+  width: 6px; height: 6px;
+  background: #c9a26a;
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+#cur-ring {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(201,162,106,0.5);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+body:hover #cur-ring { opacity: 1; }
+a, button { cursor: none; }
+
+/* Nav */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 22px 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background 0.4s, padding 0.4s;
+}
+nav.scrolled {
+  background: rgba(12,17,24,0.92);
+  backdrop-filter: blur(12px);
+  padding: 14px 60px;
+  border-bottom: 1px solid rgba(201,162,106,0.12);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.nav-logo span { color: #c9a26a; }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(232,228,221,0.7);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: #c9a26a; }
+.nav-cta {
+  background: transparent;
+  border: 1px solid #c9a26a;
+  color: #c9a26a;
+  padding: 9px 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+.nav-cta:hover { background: #c9a26a; color: #0c1118; }
+
+/* Hero */
+#hero {
+  height: 100vh; min-height: 640px;
+  position: relative;
+  display: flex; align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #0c1118 0%, #121b26 40%, #0f1c14 100%);
+}
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,162,106,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 80% at 20% 80%, rgba(30,80,50,0.12) 0%, transparent 60%);
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(201,162,106,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,162,106,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 60px;
+  width: 100%;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(201,162,106,0.1);
+  border: 1px solid rgba(201,162,106,0.25);
+  padding: 7px 18px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #c9a26a;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+.hero-badge-dot {
+  width: 6px; height: 6px;
+  background: #c9a26a;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+.hero-title em {
+  font-style: italic;
+  color: #c9a26a;
+  display: block;
+}
+.title-line { overflow: hidden; display: block; }
+
+.hero-sub {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(232,228,221,0.65);
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 48px;
+}
+.hero-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.btn-primary {
+  background: #c9a26a;
+  color: #0c1118;
+  padding: 15px 36px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+  display: inline-block;
+}
+.btn-primary:hover { background: #e0b87a; transform: translateY(-2px); }
+.btn-ghost {
+  color: rgba(232,228,221,0.7);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232,228,221,0.3);
+  padding-bottom: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+.btn-ghost:hover { color: #c9a26a; border-color: #c9a26a; }
+
+/* Gold marquee strip */
+.marquee-strip {
+  background: #c9a26a;
+  padding: 14px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-block;
+  animation: marquee 28s linear infinite;
+}
+.marquee-track span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #0c1118;
+  margin: 0 40px;
+}
+.marquee-track span::before {
+  content: '✦';
+  margin-right: 40px;
+  opacity: 0.5;
+}
+@keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* Section base */
+section { padding: 100px 60px; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+.section-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c9a26a;
+  margin-bottom: 16px;
+  display: block;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.section-title em { font-style: italic; color: #c9a26a; }
+.section-sub {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(232,228,221,0.6);
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+/* Services */
+#services { background: #0c1118; }
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 60px;
+  border: 1px solid rgba(201,162,106,0.12);
+}
+.service-row {
+  display: flex; align-items: center;
+  padding: 28px 36px;
+  border-bottom: 1px solid rgba(201,162,106,0.1);
+  border-right: 1px solid rgba(201,162,106,0.1);
+  gap: 24px;
+  transition: background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.service-row:nth-child(even) { border-right: none; }
+.service-row:nth-last-child(-n+2) { border-bottom: none; }
+.service-row::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 0;
+  background: rgba(201,162,106,0.06);
+  transition: width 0.4s ease;
+}
+.service-row:hover::before { width: 100%; }
+.service-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #c9a26a;
+  opacity: 0.6;
+  min-width: 28px;
+}
+.service-info { flex: 1; position: relative; z-index: 1; }
+.service-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e8e4dd;
+  margin-bottom: 4px;
+}
+.service-desc {
+  font-size: 0.8rem;
+  color: rgba(232,228,221,0.45);
+  font-weight: 300;
+}
+.service-arrow {
+  color: #c9a26a;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s, transform 0.3s;
+  position: relative; z-index: 1;
+}
+.service-row:hover .service-arrow { opacity: 1; transform: translateX(0); }
+
+/* Numbers */
+#numbers {
+  background: linear-gradient(135deg, #0f1c14 0%, #121b26 100%);
+  border-top: 1px solid rgba(201,162,106,0.1);
+  border-bottom: 1px solid rgba(201,162,106,0.1);
+}
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  text-align: center;
+}
+.number-item {
+  padding: 60px 40px;
+  border-right: 1px solid rgba(201,162,106,0.1);
+}
+.number-item:last-child { border-right: none; }
+.number-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: #c9a26a;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.number-val sup {
+  font-size: 0.4em;
+  vertical-align: super;
+}
+.number-label {
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(232,228,221,0.5);
+}
+
+/* Award */
+#award { background: #0c1118; }
+.award-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.award-badge-wrap { display: flex; justify-content: center; }
+.award-badge {
+  width: 280px; height: 280px;
+  border: 1px solid rgba(201,162,106,0.25);
+  border-radius: 50%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+  background: radial-gradient(circle at center, rgba(201,162,106,0.07) 0%, transparent 70%);
+}
+.award-badge::before {
+  content: '';
+  position: absolute; inset: -8px;
+  border: 1px solid rgba(201,162,106,0.1);
+  border-radius: 50%;
+}
+.award-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #c9a26a;
+  line-height: 1;
+}
+.award-num sup { font-size: 0.35em; vertical-align: super; }
+.award-title {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(232,228,221,0.8);
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.award-year {
+  font-size: 0.7rem;
+  color: rgba(201,162,106,0.6);
+  margin-top: 8px;
+  letter-spacing: 0.1em;
+}
+.award-text .section-sub { margin-bottom: 32px; }
+.award-name {
+  font-size: 0.85rem;
+  color: rgba(232,228,221,0.55);
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* About */
+#about { background: #111820; }
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-visual {
+  position: relative;
+  height: 420px;
+}
+.about-card {
+  position: absolute;
+  background: rgba(201,162,106,0.07);
+  border: 1px solid rgba(201,162,106,0.15);
+  padding: 28px 32px;
+}
+.about-card-main {
+  inset: 0;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  background: linear-gradient(160deg, #141f2c 0%, #0f1c14 100%);
+}
+.about-card-main p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(232,228,221,0.8);
+  line-height: 1.5;
+}
+.about-card-main p em { color: #c9a26a; font-style: normal; }
+.about-card-float {
+  bottom: -24px; right: -24px;
+  background: rgba(12,17,24,0.95);
+  border: 1px solid rgba(201,162,106,0.2);
+  width: 180px;
+}
+.about-card-float .val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #c9a26a;
+}
+.about-card-float .lbl {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(232,228,221,0.45);
+  margin-top: 4px;
+}
+.about-list { list-style: none; margin-top: 32px; }
+.about-list li {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(201,162,106,0.08);
+  font-size: 0.88rem;
+  color: rgba(232,228,221,0.65);
+  line-height: 1.6;
+}
+.about-list li::before {
+  content: '✦';
+  color: #c9a26a;
+  font-size: 0.6rem;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* CTA section */
+#cta-section {
+  background: linear-gradient(135deg, #c9a26a 0%, #b88a52 100%);
+  padding: 90px 60px;
+  text-align: center;
+}
+#cta-section .section-title {
+  color: #0c1118;
+  margin-bottom: 16px;
+}
+#cta-section .section-sub {
+  color: rgba(12,17,24,0.65);
+  margin: 0 auto 40px;
+}
+.btn-dark {
+  background: #0c1118;
+  color: #c9a26a;
+  padding: 16px 44px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn-dark:hover { background: #1a2535; transform: translateY(-2px); }
+
+/* Contact strip */
+#contact-strip {
+  background: #0c1118;
+  padding: 56px 60px;
+  border-top: 1px solid rgba(201,162,106,0.1);
+}
+.contact-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 40px; flex-wrap: wrap;
+}
+.contact-detail { display: flex; flex-direction: column; gap: 4px; }
+.contact-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(232,228,221,0.35);
+}
+.contact-val {
+  font-size: 1rem;
+  color: #e8e4dd;
+  font-weight: 400;
+}
+.contact-val a { color: #c9a26a; text-decoration: none; }
+
+/* Footer */
+footer {
+  background: #080c11;
+  padding: 28px 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-copy {
+  font-size: 0.75rem;
+  color: rgba(232,228,221,0.25);
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(232,228,221,0.35);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.footer-logo span { color: rgba(201,162,106,0.5); }
+
+/* Preview badge */
+.preview-badge {
+  position: fixed;
+  bottom: 20px; right: 20px;
+  z-index: 9997;
+  background: rgba(12,17,24,0.88);
+  border: 1px solid rgba(201,162,106,0.3);
+  color: rgba(232,228,221,0.7);
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+.preview-badge span { color: #c9a26a; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  nav { padding: 18px 24px; }
+  nav.scrolled { padding: 12px 24px; }
+  .nav-links { display: none; }
+  section { padding: 70px 24px; }
+  .hero-inner { padding: 0 24px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-row { border-right: none !important; }
+  .service-row:nth-last-child(-n+2) { border-bottom: 1px solid rgba(201,162,106,0.1) !important; }
+  .service-row:last-child { border-bottom: none !important; }
+  .numbers-grid { grid-template-columns: 1fr; }
+  .number-item { border-right: none; border-bottom: 1px solid rgba(201,162,106,0.1); padding: 40px 24px; }
+  .number-item:last-child { border-bottom: none; }
+  .award-inner, .about-inner { grid-template-columns: 1fr; gap: 48px; }
+  .about-visual { height: 300px; }
+  .about-card-float { width: 140px; bottom: -16px; right: -16px; }
+  #contact-strip, footer { padding: 40px 24px; }
+  .contact-inner { flex-direction: column; align-items: flex-start; }
+  footer { flex-direction: column; gap: 12px; text-align: center; }
+  #cta-section { padding: 70px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+
+<!-- Preview badge -->
+<div class="preview-badge">Vorschau &middot; <span>Evolved Web Designs</span></div>
+
+<!-- Nav -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Klein<span>igkeit</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Leistungen</a></li>
+    <li><a href="#award">Auszeichnung</a></li>
+    <li><a href="#about">Über uns</a></li>
+    <li><a href="#contact-strip">Kontakt</a></li>
+  </ul>
+  <a href="mailto:info@kleinigkeit.com" class="nav-cta">Angebot anfragen</a>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      Ravensburg &amp; Umgebung seit 2010
+    </div>
+    <h1 class="hero-title">
+      <span class="title-line">Gebäudepflege,</span>
+      <span class="title-line"><em>die beeindruckt.</em></span>
+    </h1>
+    <p class="hero-sub">
+      Professionelle Reinigung für Büros, Praxen, Baustellen und
+      Privathaushalte. Diskret, gründlich, zuverlässig.
+    </p>
+    <div class="hero-actions">
+      <a href="mailto:info@kleinigkeit.com" class="btn-primary">Angebot anfragen</a>
+      <a href="#services" class="btn-ghost">Leistungen entdecken</a>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Baustellenreinigung</span>
+    <span>Glasreinigung</span>
+    <span>Unterhaltsreinigung</span>
+    <span>Hausmeisterservice</span>
+    <span>Winterdienst</span>
+    <span>Haushaltsreinigung</span>
+    <span>1. Kammersieger</span>
+    <span>Ravensburg</span>
+    <span>Baustellenreinigung</span>
+    <span>Glasreinigung</span>
+    <span>Unterhaltsreinigung</span>
+    <span>Hausmeisterservice</span>
+    <span>Winterdienst</span>
+    <span>Haushaltsreinigung</span>
+    <span>1. Kammersieger</span>
+    <span>Ravensburg</span>
+  </div>
+</div>
+
+<!-- Services -->
+<section id="services">
+  <div class="container">
+    <span class="section-label reveal-up">Was wir tun</span>
+    <h2 class="section-title reveal-up">Unsere <em>Leistungen</em></h2>
+    <p class="section-sub reveal-up">
+      Von der einmaligen Grundreinigung bis zur dauerhaften Unterhaltsreinigung:
+      wir übernehmen, was Sie entlastet.
+    </p>
+    <div class="services-grid">
+      <div class="service-row reveal-row">
+        <span class="service-num">01</span>
+        <div class="service-info">
+          <div class="service-name">Baustellenreinigung</div>
+          <div class="service-desc">Gründliche Endreinigung nach Bau- und Renovierungsarbeiten</div>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+      <div class="service-row reveal-row">
+        <span class="service-num">02</span>
+        <div class="service-info">
+          <div class="service-name">Glasreinigung</div>
+          <div class="service-desc">Streifenfreie Reinigung von Fenstern, Fassaden und Schaufenstern</div>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+      <div class="service-row reveal-row">
+        <span class="service-num">03</span>
+        <div class="service-info">
+          <div class="service-name">Unterhaltsreinigung</div>
+          <div class="service-desc">Regelmäßige Reinigung für Büros, Praxen und Gewerbeflächen</div>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+      <div class="service-row reveal-row">
+        <span class="service-num">04</span>
+        <div class="service-info">
+          <div class="service-name">Hausmeisterservice</div>
+          <div class="service-desc">Zuverlässige Betreuung und Pflege Ihrer Immobilie</div>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+      <div class="service-row reveal-row">
+        <span class="service-num">05</span>
+        <div class="service-info">
+          <div class="service-name">Winterdienst</div>
+          <div class="service-desc">Räum- und Streudienst für sichere Wege und Zufahrten</div>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+      <div class="service-row reveal-row">
+        <span class="service-num">06</span>
+        <div class="service-info">
+          <div class="service-name">Haushaltsreinigung</div>
+          <div class="service-desc">Professionelle Reinigung für Privathaushalte auf Anfrage</div>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Numbers -->
+<section id="numbers">
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="number-item">
+        <div class="number-val"><span data-count="15">0</span><sup>+</sup></div>
+        <div class="number-label">Jahre Erfahrung</div>
+      </div>
+      <div class="number-item">
+        <div class="number-val"><span data-count="6">0</span></div>
+        <div class="number-label">Leistungsbereiche</div>
+      </div>
+      <div class="number-item">
+        <div class="number-val"><span data-count="1">0</span><sup>.</sup></div>
+        <div class="number-label">Kammersieger im Handwerk</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Award -->
+<section id="award">
+  <div class="container">
+    <div class="award-inner">
+      <div class="award-badge-wrap reveal-up">
+        <div class="award-badge">
+          <div class="award-num"><span>1</span><sup>.</sup></div>
+          <div class="award-title">Kammersieger<br>Ausbildungsberuf<br>Gebäudereiniger</div>
+          <div class="award-year">Leistungswettbewerb 2015</div>
+        </div>
+      </div>
+      <div class="award-text">
+        <span class="section-label reveal-up">Auszeichnung</span>
+        <h2 class="section-title reveal-up">Handwerk auf <em>höchstem Niveau</em></h2>
+        <p class="section-sub reveal-up">
+          Unser Mitarbeiter Victor Hecht wurde zum 1. Kammersieger im
+          Leistungswettbewerb des deutschen Handwerks gekürt.
+          Diese Auszeichnung steht für Präzision, Fachwissen und
+          den Anspruch, den wir bei jeder Reinigung anlegen.
+        </p>
+        <p class="award-name reveal-up">— Victor Hecht, Gebäudereiniger</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-visual reveal-up">
+        <div class="about-card about-card-main">
+          <p>
+            Sauberkeit ist keine <em>Kleinigkeit</em> —
+            sie ist das Fundament, auf dem Vertrauen entsteht.
+          </p>
+        </div>
+        <div class="about-card about-card-float">
+          <div class="val">2010</div>
+          <div class="lbl">Gegründet</div>
+        </div>
+      </div>
+      <div>
+        <span class="section-label reveal-up">Über uns</span>
+        <h2 class="section-title reveal-up">Gepflegte Räume,<br><em>entspannte Kunden</em></h2>
+        <p class="section-sub reveal-up">
+          Kleinigkeit GmbH &amp; Co. KG steht seit über 15 Jahren für
+          professionelle Gebäudepflege in Ravensburg und Umgebung.
+          Wir arbeiten für Privatpersonen, Unternehmen und
+          Gebäudeverwalter.
+        </p>
+        <ul class="about-list">
+          <li class="reveal-up">Regelmäßige und einmalige Aufträge möglich</li>
+          <li class="reveal-up">Geschultes und zuverlässiges Team</li>
+          <li class="reveal-up">Diskrete und termingerechte Ausführung</li>
+          <li class="reveal-up">Transparente Angebote ohne versteckte Kosten</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-section">
+  <div class="container">
+    <span class="section-label reveal-up" style="color:rgba(12,17,24,0.5);">Jetzt starten</span>
+    <h2 class="section-title reveal-up" style="color:#0c1118;">Bereit für ein <em style="color:#0c1118;border-bottom:2px solid rgba(12,17,24,0.3);">sauberes Ergebnis</em>?</h2>
+    <p class="section-sub reveal-up" style="color:rgba(12,17,24,0.65);margin:0 auto 40px;">
+      Kontaktieren Sie uns für ein unverbindliches Angebot.
+      Wir melden uns innerhalb von 24 Stunden.
+    </p>
+    <a href="mailto:info@kleinigkeit.com" class="btn-dark reveal-up">Angebot anfragen</a>
+  </div>
+</section>
+
+<!-- Contact strip -->
+<div id="contact-strip">
+  <div class="contact-inner">
+    <div class="contact-detail">
+      <span class="contact-label">Adresse</span>
+      <span class="contact-val">Jahnstraße 94, 88214 Ravensburg</span>
+    </div>
+    <div class="contact-detail">
+      <span class="contact-label">Telefon</span>
+      <span class="contact-val"><a href="tel:+4975136617600">0751 366176-00</a></span>
+    </div>
+    <div class="contact-detail">
+      <span class="contact-label">E-Mail</span>
+      <span class="contact-val"><a href="mailto:info@kleinigkeit.com">info@kleinigkeit.com</a></span>
+    </div>
+    <a href="mailto:info@kleinigkeit.com" class="btn-primary" style="white-space:nowrap;">Nachricht schreiben</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <span class="footer-copy">&copy; 2025 Kleinigkeit GmbH &amp; Co. KG · Alle Rechte vorbehalten</span>
+  <a href="#" class="footer-logo">Klein<span>igkeit</span></a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+// Lenis smooth scroll
+const lenis = new Lenis({ lerp: 0.08, smoothWheel: true });
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add(t => lenis.raf(t * 1000));
+gsap.ticker.lagSmoothing(0);
+
+// Custom cursor
+const dot = document.getElementById('cur-dot');
+const ring = document.getElementById('cur-ring');
+document.addEventListener('mousemove', e => {
+  gsap.to(dot,  { x: e.clientX, y: e.clientY, duration: 0.1, ease: 'none' });
+  gsap.to(ring, { x: e.clientX, y: e.clientY, duration: 0.4, ease: 'power2.out' });
+});
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => gsap.to(ring, { width: 54, height: 54, duration: 0.3 }));
+  el.addEventListener('mouseleave', () => gsap.to(ring, { width: 36, height: 36, duration: 0.3 }));
+});
+
+// Nav scroll state
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Hero title reveal
+gsap.registerPlugin(ScrollTrigger);
+const titleLines = document.querySelectorAll('.title-line');
+titleLines.forEach((line, i) => {
+  gsap.from(line, {
+    y: '110%', opacity: 0, duration: 1.0,
+    ease: 'power3.out', delay: 0.2 + i * 0.15
+  });
+});
+gsap.from('.hero-badge',   { opacity: 0, y: 20, duration: 0.8, delay: 0.1 });
+gsap.from('.hero-sub',     { opacity: 0, y: 20, duration: 0.8, delay: 0.55 });
+gsap.from('.hero-actions', { opacity: 0, y: 20, duration: 0.8, delay: 0.75 });
+
+// Reveal animations
+document.querySelectorAll('.reveal-up').forEach(el => {
+  gsap.from(el, {
+    scrollTrigger: { trigger: el, start: 'top 88%', once: true },
+    y: 40, opacity: 0, duration: 0.8, ease: 'power2.out'
+  });
+});
+
+document.querySelectorAll('.reveal-row').forEach((el, i) => {
+  gsap.from(el, {
+    scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+    x: -30, opacity: 0, duration: 0.7,
+    ease: 'power2.out',
+    delay: (i % 2) * 0.12
+  });
+});
+
+// Counter animation
+document.querySelectorAll('[data-count]').forEach(el => {
+  const target = parseInt(el.dataset.count);
+  ScrollTrigger.create({
+    trigger: el, start: 'top 82%', once: true,
+    onEnter: () => gsap.to({ val: 0 }, {
+      val: target, duration: 1.8, ease: 'power2.out',
+      onUpdate: function() { el.textContent = Math.round(this.targets()[0].val); }
+    })
+  });
+});
+
+// Award badge entrance
+gsap.from('.award-badge', {
+  scrollTrigger: { trigger: '#award', start: 'top 75%', once: true },
+  scale: 0.8, opacity: 0, duration: 1.0, ease: 'back.out(1.4)'
+});
+
+// About card
+gsap.from('.about-card-main', {
+  scrollTrigger: { trigger: '#about', start: 'top 70%', once: true },
+  y: 50, opacity: 0, duration: 1.0, ease: 'power2.out'
+});
+gsap.from('.about-card-float', {
+  scrollTrigger: { trigger: '#about', start: 'top 65%', once: true },
+  scale: 0.85, opacity: 0, duration: 0.8, ease: 'back.out(1.2)', delay: 0.3
+});
+</script>
+</body>
+</html>
