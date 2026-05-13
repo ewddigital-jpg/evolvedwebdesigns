@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naturalis Gartengestaltung – Lindau | Garten- & Landschaftsbau Bodensee</title>
+  <meta name="description" content="Naturalis Gartengestaltung GbR Lindau – Meisterbetrieb für Gartengestaltung, Landschaftsbau, Terrassen und Bepflanzung am Bodensee. Jetzt kostenlos anfragen.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.naturalis-gartengestaltung.de/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage:  { 50:'#f4f7f4', 100:'#e6ede6', 300:'#9ab89a', 600:'#4a7c59', 700:'#3a6347', 800:'#2d4a3e', 900:'#1e3028' },
+            stone: { 50:'#faf9f7', 100:'#f2ede6', 200:'#e5ddd1', 400:'#b8a898', 600:'#8a7a6a' }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans:  ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Naturalis Gartengestaltung GbR",
+    "description": "Meisterbetrieb für Gartengestaltung, Landschaftsbau und Terrassenbau am Bodensee.",
+    "email": "kontakt@naturalis-gartengestaltung.de",
+    "url": "https://www.naturalis-gartengestaltung.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Oberrengersweiler 99",
+      "addressLocality": "Lindau (Bodensee)",
+      "postalCode": "88131",
+      "addressRegion": "Bayern",
+      "addressCountry": "DE"
+    },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "4" },
+    "areaServed": "Bodenseeregion"
+  }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .hero-bg {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(10,18,12,0.55) 0%,
+          rgba(15,25,18,0.35) 50%,
+          rgba(30,48,40,0.72) 100%),
+        url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1920&auto=format&fit=crop&q=85');
+      background-size: cover;
+      background-position: center 35%;
+      background-attachment: fixed;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    #main-nav { transition: background 0.4s ease, padding 0.3s ease, box-shadow 0.3s ease; }
+    #main-nav.scrolled {
+      background: rgba(30, 48, 40, 0.97) !important;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+      padding-top: 14px !important;
+      padding-bottom: 14px !important;
+    }
+
+    .lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .lift:hover { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(0,0,0,0.10); }
+
+    .g-line {
+      height: 2px;
+      background: linear-gradient(90deg, #9ab89a, #3a6347, #1e3028);
+      border-radius: 2px;
+    }
+
+    .star { color: #c8a84b; }
+
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; max-height:0; opacity:0; overflow:hidden; }
+    #mobile-menu.open { max-height:360px; opacity:1; }
+
+    .img-card {
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="font-sans bg-white text-gray-800 antialiased">
+
+  <!-- ═══ NAV ═══ -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-transparent px-5 py-5">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-full border-2 border-green-300/60 flex items-center justify-center">
+          <span class="text-white font-serif font-bold text-sm tracking-wide">N</span>
+        </div>
+        <div class="leading-tight">
+          <div class="text-white font-serif font-semibold text-base tracking-wide">Naturalis</div>
+          <div class="text-green-200/70 text-xs tracking-widest uppercase">Gartengestaltung</div>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#leistungen" class="text-white/75 hover:text-white text-sm font-medium transition tracking-wide">Leistungen</a>
+        <a href="#philosophie" class="text-white/75 hover:text-white text-sm font-medium transition tracking-wide">Philosophie</a>
+        <a href="#kontakt"    class="text-white/75 hover:text-white text-sm font-medium transition tracking-wide">Kontakt</a>
+      </div>
+
+      <a href="#kontakt"
+         class="hidden md:inline-flex items-center gap-2 border border-white/40 hover:bg-white hover:text-sage-900 text-white px-5 py-2 rounded-full text-sm font-medium transition-all">
+        Anfrage stellen
+      </a>
+
+      <button id="burger" class="md:hidden text-white p-1">
+        <svg id="b-open"  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="b-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu">
+      <div class="max-w-6xl mx-auto mt-3 bg-sage-900/95 backdrop-blur rounded-2xl px-6 py-5 flex flex-col gap-4">
+        <a href="#leistungen" class="text-white font-medium mobile-link">Leistungen</a>
+        <a href="#philosophie" class="text-white font-medium mobile-link">Philosophie</a>
+        <a href="#kontakt"    class="text-white font-medium mobile-link">Kontakt</a>
+        <a href="#kontakt" class="bg-sage-700 text-white px-4 py-3 rounded-xl font-semibold text-center mobile-link">Jetzt anfragen</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero-bg min-h-screen flex items-end pb-24 relative">
+    <div class="max-w-5xl mx-auto px-6 w-full">
+      <div class="reveal">
+        <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 text-xs font-medium px-4 py-1.5 rounded-full mb-7 tracking-widest uppercase">
+          Meisterbetrieb · Lindau (Bodensee)
+        </span>
+      </div>
+      <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl text-white font-bold leading-[1.08] mb-6 reveal">
+        Gärten, die<br>
+        <em class="not-italic text-green-300">Bestand haben.</em>
+      </h1>
+      <p class="text-lg text-gray-200 max-w-xl mb-10 leading-relaxed reveal">
+        Gartengestaltung und Landschaftsbau aus Leidenschaft —
+        handwerklich präzise, nachhaltig gedacht, individuell geplant.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 items-start reveal">
+        <a href="#kontakt"
+           class="inline-flex items-center gap-2 bg-sage-700 hover:bg-sage-600 text-white text-base font-semibold px-8 py-4 rounded-full transition-all shadow-xl shadow-sage-900/30">
+          Kostenloses Erstgespräch
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="#leistungen"
+           class="inline-flex items-center gap-2 text-white/70 hover:text-white text-base font-medium transition-all pt-3 sm:pt-0 sm:py-4">
+          Leistungen ansehen
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Stars badge -->
+    <div class="absolute top-28 right-8 md:right-16 hidden md:block reveal">
+      <div class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl px-5 py-4 text-center">
+        <div class="text-2xl font-serif font-bold text-white">5,0</div>
+        <div class="flex justify-center gap-0.5 my-1">
+          <span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span>
+        </div>
+        <div class="text-white/60 text-xs">4 Google-Bewertungen</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TRUST BAR ═══ -->
+  <section class="bg-sage-900 py-9">
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="reveal">
+        <div class="text-green-300 font-serif text-2xl font-bold">5,0 ★</div>
+        <div class="text-gray-400 text-xs mt-1">Google-Bewertung</div>
+      </div>
+      <div class="reveal">
+        <div class="text-green-300 font-serif text-2xl font-bold">Meister</div>
+        <div class="text-gray-400 text-xs mt-1">Meisterbetrieb</div>
+      </div>
+      <div class="reveal">
+        <div class="text-green-300 font-serif text-2xl font-bold">GbR</div>
+        <div class="text-gray-400 text-xs mt-1">Reischmann & Ehmann</div>
+      </div>
+      <div class="reveal">
+        <div class="text-green-300 font-serif text-2xl font-bold">Bodensee</div>
+        <div class="text-gray-400 text-xs mt-1">Lindau & Region</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ LEISTUNGEN ═══ -->
+  <section id="leistungen" class="py-28 bg-stone-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <span class="text-sage-600 text-xs font-semibold uppercase tracking-widest">Was wir gestalten</span>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mt-3">Unsere Leistungen</h2>
+        <div class="g-line w-16 mx-auto mt-5"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Gartengestaltung -->
+        <div class="lift bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 reveal">
+          <div class="h-52 img-card" style="background-image:url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&auto=format&fit=crop&q=80')"></div>
+          <div class="p-8">
+            <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Gartengestaltung</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-5">Vom ersten Entwurf bis zur Fertigstellung — wir gestalten Gärten, die zu Ihnen passen und dauerhaft Freude machen.</p>
+            <ul class="space-y-2.5">
+              <li class="flex items-center gap-2.5 text-sm text-gray-600"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full flex-shrink-0"></span>Planung & Konzeptentwicklung</li>
+              <li class="flex items-center gap-2.5 text-sm text-gray-600"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full flex-shrink-0"></span>Bepflanzung & Naturgartendesign</li>
+              <li class="flex items-center gap-2.5 text-sm text-gray-600"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full flex-shrink-0"></span>Rasen & Bodengestaltung</li>
+              <li class="flex items-center gap-2.5 text-sm text-gray-600"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full flex-shrink-0"></span>Neugestaltung & Umgestaltung</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Landschaftsbau — Featured -->
+        <div class="lift bg-sage-900 rounded-3xl overflow-hidden shadow-2xl reveal">
+          <div class="h-52 img-card" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80')"></div>
+          <div class="p-8">
+            <h3 class="font-serif text-xl font-bold text-white mb-3">Landschaftsbau</h3>
+            <p class="text-gray-300 text-sm leading-relaxed mb-5">Handwerklich präzise ausgeführt — Pflasterarbeiten, Mauern, Wege und Stufen, die Jahrzehnte halten.</p>
+            <ul class="space-y-2.5">
+              <li class="flex items-center gap-2.5 text-sm text-gray-300"><span class="w-1.5 h-1.5 bg-green-400 rounded-full flex-shrink-0"></span>Terrassen & Plattenbeläge</li>
+              <li class="flex items-center gap-2.5 text-sm text-gray-300"><span class="w-1.5 h-1.5 bg-green-400 rounded-full flex-shrink-0"></span>Pflasterflächen & Einfahrten</li>
+              <li class="flex items-center gap-2.5 text-sm text-gray-300"><span class="w-1.5 h-1.5 bg-green-400 rounded-full flex-shrink-0"></span>Trockenmauern & Naturstein</li>
+              <li class="flex items-center gap-2.5 text-sm text-gray-300"><span class="w-1.5 h-1.5 bg-green-400 rounded-full flex-shrink-0"></span>Stufenanlagen & Böschungen</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pflege -->
+        <div class="lift bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 reveal">
+          <div class="h-52 img-card" style="background-image:url('https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=800&auto=format&fit=crop&q=80')"></div>
+          <div class="p-8">
+            <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Gartenpflege</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-5">Damit Ihr Garten das ganze Jahr über so bleibt, wie er sein soll — regelmäßig, zuverlässig, mit Sachverstand.</p>
+            <ul class="space-y-2.5">
+              <li class="flex items-center gap-2.5 text-sm text-gray-600"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full flex-shrink-0"></span>Laufende Gartenpflege</li>
+              <li class="flex items-center gap-2.5 text-sm text-gray-600"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full flex-shrink-0"></span>Gehölzschnitt & Baumpflege</li>
+              <li class="flex items-center gap-2.5 text-sm text-gray-600"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full flex-shrink-0"></span>Saisonale Bepflanzung</li>
+              <li class="flex items-center gap-2.5 text-sm text-gray-600"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full flex-shrink-0"></span>Pflege-Jahresvertrag</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ PHILOSOPHIE ═══ -->
+  <section id="philosophie" class="py-28 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+
+        <div class="reveal">
+          <span class="text-sage-600 text-xs font-semibold uppercase tracking-widest">Unser Ansatz</span>
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-6 leading-tight">
+            Die Natur ist für uns<br>Vorbild und Gegenüber.
+          </h2>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Wir gestalten keine Gärten von der Stange. Jeder Garten entsteht im Dialog —
+            mit Ihnen, mit dem Ort, mit dem was dort schon wächst.
+          </p>
+          <p class="text-gray-500 leading-relaxed mb-8">
+            Als Meisterbetrieb stehen Hanna Reischmann und Jonas Ehmann persönlich
+            für jedes Projekt ein — von der ersten Skizze bis zum letzten Stein.
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="flex -space-x-2">
+              <div class="w-10 h-10 bg-sage-600 rounded-full flex items-center justify-center border-2 border-white">
+                <span class="text-white font-serif font-bold text-sm">H</span>
+              </div>
+              <div class="w-10 h-10 bg-sage-800 rounded-full flex items-center justify-center border-2 border-white">
+                <span class="text-white font-serif font-bold text-sm">J</span>
+              </div>
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-gray-800">Hanna Reischmann & Jonas Ehmann</div>
+              <div class="text-xs text-gray-400">Inhaber · Meisterbetrieb</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Bewertungen -->
+        <div class="reveal">
+          <div class="bg-stone-50 rounded-3xl p-8 border border-stone-100">
+            <div class="flex items-center gap-3 mb-6">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              <span class="font-semibold text-gray-700 text-sm">Google Bewertungen</span>
+            </div>
+
+            <div class="flex items-end gap-3 mb-4">
+              <span class="font-serif text-6xl font-bold text-gray-900">5,0</span>
+              <div class="pb-2">
+                <div class="flex gap-0.5">
+                  <span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span>
+                </div>
+                <div class="text-gray-400 text-xs mt-0.5">4 Bewertungen</div>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-white rounded-2xl p-4 border border-stone-100">
+                <div class="flex gap-0.5 mb-2"><span class="star text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span></div>
+                <p class="text-gray-600 text-sm leading-relaxed italic">"Hervorragende Arbeit, sehr professionell und zuverlässig. Der Garten sieht wunderschön aus."</p>
+                <div class="text-gray-400 text-xs mt-2">Google-Bewertung</div>
+              </div>
+              <div class="bg-white rounded-2xl p-4 border border-stone-100">
+                <div class="flex gap-0.5 mb-2"><span class="star text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span></div>
+                <p class="text-gray-600 text-sm leading-relaxed italic">"Top Beratung, faire Preise und ein Ergebnis, das unsere Erwartungen übertroffen hat."</p>
+                <div class="text-gray-400 text-xs mt-2">Google-Bewertung</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CTA BANNER ═══ -->
+  <section class="relative py-24 bg-sage-900 overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image:url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&auto=format&fit=crop&q=60');background-size:cover;background-position:center;"></div>
+    <div class="relative max-w-3xl mx-auto text-center px-6 reveal">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
+        Ihr Garten wartet.<br>Wir auch.
+      </h2>
+      <p class="text-gray-300 text-lg mb-10 leading-relaxed">
+        Kostenloses Erstgespräch — wir hören zu, schauen uns Ihr Grundstück an
+        und zeigen Ihnen, was möglich ist.
+      </p>
+      <a href="#kontakt"
+         class="inline-flex items-center gap-3 bg-white text-sage-900 hover:bg-stone-100 text-lg font-bold px-10 py-4 rounded-full transition-all shadow-xl">
+        Jetzt kostenloses Erstgespräch anfragen
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ═══ KONTAKT ═══ -->
+  <section id="kontakt" class="py-28 bg-stone-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+
+        <div class="reveal">
+          <span class="text-sage-600 text-xs font-semibold uppercase tracking-widest">Schreiben Sie uns</span>
+          <h2 class="font-serif text-4xl font-bold text-gray-900 mt-3 mb-5">Kostenloses Erstgespräch</h2>
+          <p class="text-gray-500 leading-relaxed mb-10">
+            Erzählen Sie uns von Ihrem Garten — was ist geplant, was ist der Anlass?
+            Wir melden uns innerhalb von 48 Stunden.
+          </p>
+
+          <div class="space-y-5">
+            <a href="mailto:kontakt@naturalis-gartengestaltung.de" class="flex items-center gap-4 group">
+              <div class="w-11 h-11 bg-sage-100 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-sage-700 transition">
+                <svg class="w-5 h-5 text-sage-700 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs font-medium text-gray-400 uppercase tracking-wide">E-Mail</div>
+                <div class="text-gray-800 font-semibold group-hover:text-sage-700 transition text-sm">kontakt@naturalis-gartengestaltung.de</div>
+              </div>
+            </a>
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 bg-sage-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-sage-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs font-medium text-gray-400 uppercase tracking-wide">Adresse</div>
+                <div class="text-gray-800 font-semibold">Oberrengersweiler 99, 88131 Lindau</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-9 shadow-sm border border-stone-100 reveal">
+          <form id="contact-form" class="space-y-5">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Ihr Name *</label>
+              <input type="text" id="f-name" placeholder="Vor- und Nachname" required
+                     class="w-full px-4 py-3 rounded-xl border border-stone-200 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-sage-600 focus:border-transparent transition text-sm">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Telefon oder E-Mail *</label>
+              <input type="text" id="f-contact" placeholder="Wie erreichen wir Sie?" required
+                     class="w-full px-4 py-3 rounded-xl border border-stone-200 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-sage-600 focus:border-transparent transition text-sm">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Ihr Anliegen *</label>
+              <textarea id="f-msg" rows="4" placeholder="Neugestaltung, Terrasse, laufende Pflege…" required
+                        class="w-full px-4 py-3 rounded-xl border border-stone-200 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-sage-600 focus:border-transparent transition text-sm resize-none"></textarea>
+            </div>
+            <button type="submit"
+                    class="w-full bg-sage-800 hover:bg-sage-700 text-white font-bold py-4 px-6 rounded-xl transition-all text-sm tracking-wide">
+              Anfrage senden
+            </button>
+            <p class="text-xs text-gray-400 text-center">Kostenlos. Unverbindlich. Wir melden uns innerhalb von 48 h.</p>
+          </form>
+          <div id="form-success" class="hidden text-center py-8">
+            <div class="w-14 h-14 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-sage-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-serif font-bold text-gray-900 text-lg mb-2">Danke für Ihre Anfrage!</h3>
+            <p class="text-gray-500 text-sm">Wir melden uns bald bei Ihnen.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="bg-sage-900 pt-14 pb-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-10 mb-10">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-full border border-green-400/40 flex items-center justify-center">
+              <span class="text-white font-serif font-bold">N</span>
+            </div>
+            <div>
+              <div class="text-white font-serif font-semibold">Naturalis</div>
+              <div class="text-green-300/60 text-xs tracking-widest uppercase">Gartengestaltung</div>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Meisterbetrieb für Gartengestaltung und Landschaftsbau in Lindau (Bodensee) und Umgebung.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm tracking-wide">Leistungen</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li>Gartengestaltung & Planung</li>
+            <li>Landschaftsbau</li>
+            <li>Terrassen & Pflasterarbeiten</li>
+            <li>Gartenpflege</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm tracking-wide">Kontakt</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="mailto:kontakt@naturalis-gartengestaltung.de" class="hover:text-green-300 transition break-all">kontakt@naturalis-gartengestaltung.de</a></li>
+            <li>Oberrengersweiler 99</li>
+            <li>88131 Lindau (Bodensee)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-gray-500 text-xs">
+        <span>© 2025 Naturalis Gartengestaltung GbR · Lindau</span>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-gray-300 transition">Impressum</a>
+          <a href="#" class="hover:text-gray-300 transition">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 70), { passive: true });
+
+    const burger = document.getElementById('burger');
+    const menu   = document.getElementById('mobile-menu');
+    const bOpen  = document.getElementById('b-open');
+    const bClose = document.getElementById('b-close');
+    let open = false;
+    burger.addEventListener('click', () => {
+      open = !open;
+      menu.classList.toggle('open', open);
+      bOpen.classList.toggle('hidden', open);
+      bClose.classList.toggle('hidden', !open);
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+      open = false; menu.classList.remove('open'); bOpen.classList.remove('hidden'); bClose.classList.add('hidden');
+    }));
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name    = document.getElementById('f-name').value;
+      const contact = document.getElementById('f-contact').value;
+      const msg     = document.getElementById('f-msg').value;
+      const body    = encodeURIComponent(`Name: ${name}\nKontakt: ${contact}\n\nNachricht:\n${msg}`);
+      window.location.href = `mailto:kontakt@naturalis-gartengestaltung.de?subject=Anfrage%20über%20Website&body=${body}`;
+      document.getElementById('contact-form').classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
