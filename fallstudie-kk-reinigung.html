@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallstudie: KK Gebäudereinigung Friedrichshafen | Webdesign – EWD</title>
+    <meta name="description" content="Wie wir kkreinigung.com von einer kaum lesbaren Platzhalterseite zu einer professionellen, mobilfreundlichen und SEO-optimierten Website umgebaut haben. Vorher/Nachher inklusive.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://evowebdesign.de/fallstudie-kk-reinigung">
+    <meta property="og:title" content="Fallstudie: KK Reinigung Friedrichshafen | EWD">
+    <meta property="og:description" content="Von unsichtbar zu professionell: Redesign, Mobile-Optimierung und SEO/GEO für kkreinigung.com.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://evowebdesign.de/case-kk-after-desktop.png">
+    <meta property="og:url" content="https://evowebdesign.de/fallstudie-kk-reinigung">
+    <meta property="og:locale" content="de_DE">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#0066FF">
+
+    <style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/inter-300.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/inter-400.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/inter-500.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/inter-600.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/inter-700.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/poppins-600.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/poppins-700.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/poppins-800.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:900;font-display:swap;src:url('fonts/poppins-900.woff2') format('woff2')}
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #0066FF;
+            --primary-dark: #0052CC;
+            --primary-light: #4D94FF;
+            --accent: #00D9FF;
+            --bg-body: #0D1117;
+            --bg-card: #161B22;
+            --bg-lighter: #21262D;
+            --text: #F0F6FC;
+            --text-secondary: #A8B4C0;
+            --border: rgba(240, 246, 252, 0.1);
+            --border-hover: rgba(0, 102, 255, 0.4);
+            --green: #2ea043;
+            --red: #f85149;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-body);
+            color: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 70% 40% at 50% -5%,rgba(0,102,255,0.12) 0%,transparent 60%)}
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ── HEADER (v1) ── */
+        header { position:fixed; top:0; left:0; right:0; z-index:1000; transition:background .3s,box-shadow .3s,border-color .3s }
+        header.top     { background:rgba(13,17,23,0.55); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid transparent }
+        header.scrolled{ background:rgba(13,17,23,0.97); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid var(--border); box-shadow:0 1px 0 var(--border),0 4px 24px rgba(0,0,0,.28) }
+        .logo { display:flex; align-items:center; gap:.8rem; text-decoration:none; flex-shrink:0; transition:opacity .2s }
+        .logo:hover { opacity:.8 }
+        .logo-mark { height:42px; width:auto; filter:brightness(1.1) }
+        .logo-name { font-family:'Poppins',sans-serif; font-size:1rem; font-weight:900; letter-spacing:-.02em; color:var(--text) }
+        .nav-links { display:flex; align-items:center; gap:1.75rem; list-style:none }
+        .nav-links a { color:var(--text-secondary); text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; white-space:nowrap; position:relative }
+        .nav-links a:not(.nav-cta):hover { color:var(--text) }
+        .nav-links a:not(.nav-cta)::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:var(--primary-light); transition:width .25s }
+        .nav-links a:not(.nav-cta):hover::after { width:100% }
+        .nav-links a.active { color:var(--text) }
+        .nav-links a.active::after { width:100% }
+        .nav-cta { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); color:#fff!important; padding:.58rem 1.3rem; border-radius:8px; font-weight:700; font-size:.85rem; box-shadow:0 2px 14px rgba(0,102,255,.28); transition:transform .2s,box-shadow .2s }
+        .nav-cta:hover { transform:translateY(-1px); box-shadow:0 4px 22px rgba(0,102,255,.45) }
+        .nav-cta::after { display:none!important }
+        .nav-highlight { color:var(--accent)!important; border:1px solid rgba(0,217,255,0.3); padding:.3rem .85rem; border-radius:6px; background:rgba(0,217,255,0.06); font-weight:600 }
+        .nav-highlight:hover { background:rgba(0,217,255,0.13)!important; border-color:rgba(0,217,255,0.55); color:var(--accent)!important }
+        .nav-highlight::after { display:none!important }
+        .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none; background:none }
+        .hamburger span { width:22px; height:1.5px; background:var(--text-secondary); border-radius:2px; transition:transform .3s,opacity .3s }
+        .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(4.5px,4.5px) }
+        .hamburger.open span:nth-child(2) { opacity:0 }
+        .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(4.5px,-4.5px) }
+        nav { max-width: 1200px; margin: 0 auto; padding: .85rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+        @media (max-width:768px) {
+          nav { padding:.8rem 1.25rem }
+          .nav-links { display:none; position:fixed; top:62px; left:0; right:0; flex-direction:column; background:rgba(13,17,23,.98); backdrop-filter:blur(20px); padding:1.75rem 1.5rem; gap:1rem; border-top:1px solid var(--border); box-shadow:0 8px 32px rgba(0,0,0,.4) }
+          .nav-links.open { display:flex; z-index:9500 }
+          .hamburger { display:flex }
+        }
+
+        main{padding-top:70px;position:relative;z-index:1}
+        @media(max-width:768px){main{padding-top:62px}}
+
+        /* ── BREADCRUMB ── */
+        .bc{padding:1.25rem 1.5rem .25rem;max-width:1100px;margin:0 auto;display:block;box-sizing:border-box}
+        .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0;flex-wrap:wrap}
+        .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+        .bc a:hover{color:var(--text)}
+        .bc li{color:var(--text-secondary)}
+        .bc-sep{opacity:.25;font-size:.75rem}
+        .bc-cur{color:var(--primary)!important;font-weight:600}
+
+        .gradient-text { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .wrap { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+
+        /* ── CASE HERO ── */
+        .case-hero { text-align: center; padding: 1.5rem 0 3rem; animation: fadeUp .7s ease .08s both; }
+        .back-link { font-size:.82rem; color:var(--text-secondary); text-decoration:none; display:inline-flex; align-items:center; gap:.35rem; margin-bottom:1.5rem; transition:color .2s }
+        .back-link:hover { color:var(--text) }
+        .eyebrow { display:inline-block; font-size:.72rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); background:rgba(0,217,255,0.08); border:1px solid rgba(0,217,255,0.25); padding:.3rem .85rem; border-radius:999px; margin-bottom:1.25rem }
+        .case-hero h1 { font-family:'Poppins',sans-serif; font-size:clamp(2rem,5.5vw,3.25rem); font-weight:800; line-height:1.1; letter-spacing:-.025em; margin-bottom:1.25rem }
+        .case-hero h1 em { font-style:italic; color:var(--primary-light) }
+        .case-hero > p { color:var(--text-secondary); font-size:1.08rem; max-width:56ch; margin:0 auto 2rem; line-height:1.75 }
+        .case-tags { display:flex; flex-wrap:wrap; gap:.55rem; justify-content:center }
+        .case-tag { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:.32rem .85rem; border-radius:999px; border:1px solid var(--border); color:var(--text-secondary); background:var(--bg-card) }
+
+        /* ── META BAR ── */
+        .case-meta { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:16px; overflow:hidden; max-width:1000px; margin:0 auto 1rem }
+        .case-meta-item { background:var(--bg-card); padding:1.4rem 1.75rem }
+        .case-meta-label { font-size:.7rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; color:var(--text-secondary); margin-bottom:.4rem }
+        .case-meta-value { font-size:.98rem; font-weight:700; color:var(--text) }
+        .case-meta-value a { color:var(--accent); text-decoration:none }
+
+        /* ── SECTIONS ── */
+        .case-section { padding: 3rem 0; }
+        .case-section-label { display:block; font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.14em; color:var(--primary-light); margin-bottom:.85rem }
+        .case-section h2 { font-family:'Poppins',sans-serif; font-size:clamp(1.5rem,3vw,2.1rem); font-weight:700; margin-bottom:.9rem; letter-spacing:-.02em }
+        .case-section > .wrap > p { color:var(--text-secondary); line-height:1.8; max-width:62ch }
+
+        /* ── BEFORE/AFTER DESKTOP ── */
+        .ba-screens { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:2.5rem }
+        .ba-screen-card { border-radius:16px; overflow:hidden; border:1px solid var(--border); background:var(--bg-lighter) }
+        .ba-screen-label { padding:.7rem 1.25rem; font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; border-bottom:1px solid var(--border) }
+        .ba-screen-label.before { color:var(--red) }
+        .ba-screen-label.after  { color:var(--green) }
+        .ba-screen-card img { width:100%; display:block; height:280px; object-fit:cover; object-position:top center }
+
+        /* ── MOBILE COMPARE ── */
+        .mobile-compare { display:flex; justify-content:center; gap:2rem; margin-top:3rem; flex-wrap:wrap }
+        .mobile-card { width:200px; border-radius:16px; overflow:hidden; border:1px solid var(--border); background:var(--bg-lighter) }
+        .mobile-card img { width:100%; display:block }
+        .mobile-card-label { padding:.6rem 1rem; font-size:.7rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; text-align:center; border-top:1px solid var(--border) }
+        .mobile-card-label.before { color:var(--red) }
+        .mobile-card-label.after  { color:var(--green) }
+
+        /* ── DELIVERABLES ── */
+        .deliverables { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:2.5rem }
+        .deliverable { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:1.25rem 1.5rem; display:flex; gap:1rem; align-items:flex-start; transition:border-color .3s,transform .3s }
+        .deliverable:hover { border-color:var(--border-hover); transform:translateY(-3px) }
+        .deliverable-icon { width:2.2rem; height:2.2rem; border-radius:9px; background:rgba(0,102,255,.12); border:1px solid rgba(0,102,255,.2); display:flex; align-items:center; justify-content:center; font-size:1.05rem; flex-shrink:0; margin-top:.1rem }
+        .deliverable h3 { font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:700; margin-bottom:.3rem; color:var(--text) }
+        .deliverable p { font-size:.84rem; color:var(--text-secondary); line-height:1.6 }
+
+        /* ── STATS ── */
+        .case-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:14px; overflow:hidden; margin-top:2.5rem }
+        .case-stat { background:var(--bg-card); padding:1.75rem 1.5rem; text-align:center }
+        .case-stat-num { font-family:'Poppins',sans-serif; font-size:2.1rem; font-weight:800; color:var(--primary-light); letter-spacing:-.03em; margin-bottom:.25rem }
+        .case-stat-label { font-size:.78rem; color:var(--text-secondary); line-height:1.45 }
+
+        /* ── RESULTS ── */
+        .results-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:2.5rem }
+        .result-pair { border-radius:14px; overflow:hidden; border:1px solid var(--border); background:var(--bg-card) }
+        .result-pair-imgs { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--border) }
+        .result-pair-img-wrap { position:relative }
+        .result-pair-img-wrap img { width:100%; height:170px; object-fit:cover; object-position:center; display:block }
+        .result-pair-badge { position:absolute; top:8px; left:8px; font-size:.6rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; padding:.25rem .6rem; border-radius:999px }
+        .result-pair-badge.before { background:rgba(248,81,73,.9); color:#fff }
+        .result-pair-badge.after  { background:rgba(46,160,67,.9); color:#fff }
+        .result-pair-caption { padding:.75rem 1rem; font-size:.8rem; color:var(--text-secondary); text-align:center }
+
+        /* ── REVIEW (reused from projekte) ── */
+        .review-band { max-width:520px; margin:3rem auto 0 }
+        .google-review-card { background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.4) }
+        .google-review-header { background:#1a7a4a; padding:.7rem 1.2rem; display:flex; align-items:center; gap:.65rem }
+        .google-icon { width:24px; height:24px; background:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:.8rem; font-weight:800; color:#1a7a4a; flex-shrink:0 }
+        .google-review-header span { color:white; font-size:.88rem; font-weight:600 }
+        .google-review-body { padding:1.2rem 1.4rem; background:#fff }
+        .reviewer-row { display:flex; align-items:center; gap:.75rem; margin-bottom:.65rem }
+        .reviewer-avatar { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,#0066FF,#00D9FF); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; color:white; flex-shrink:0 }
+        .reviewer-name { font-weight:700; font-size:.9rem; color:#1a1a1a }
+        .reviewer-meta { font-size:.78rem; color:#888 }
+        .stars-row { display:flex; align-items:center; gap:.5rem; margin-bottom:.75rem }
+        .stars { color:#f5a623; font-size:1.05rem; letter-spacing:1px }
+        .review-time { font-size:.78rem; color:#999 }
+        .review-text { font-size:.88rem; color:#333; line-height:1.65 }
+        .review-text .highlight { color:var(--primary); font-weight:600 }
+
+        /* ── CTA ── */
+        .cta-wrap { padding: 1rem 1.5rem 3rem; }
+        .cta-band { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:3rem 2.5rem; text-align:center; max-width:760px; margin:3rem auto 0 }
+        .cta-band h2 { font-family:'Poppins',sans-serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:700; margin-bottom:.75rem }
+        .cta-band p { color:var(--text-secondary); font-size:.95rem; line-height:1.75; margin-bottom:1.75rem; max-width:52ch; margin-left:auto; margin-right:auto }
+        .cta-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap }
+        .btn { display:inline-flex; align-items:center; gap:.5rem; padding:.85rem 1.7rem; border-radius:8px; font-weight:600; text-decoration:none; transition:all .3s ease; font-size:.95rem }
+        .btn-primary { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); color:#fff; box-shadow:0 4px 15px rgba(0,102,255,.3) }
+        .btn-primary:hover { transform:translateY(-3px); box-shadow:0 8px 25px rgba(0,102,255,.45) }
+        .btn-secondary { background:transparent; color:var(--text); border:2px solid var(--border) }
+        .btn-secondary:hover { border-color:var(--primary); color:var(--primary-light); transform:translateY(-2px) }
+
+        /* ── FOOTER ── */
+        footer { background:var(--bg-card); border-top:1px solid var(--border); padding:3.5rem 0 0; position:relative; z-index:1 }
+        .footer-inner { max-width:1200px; margin:0 auto; padding:0 1.5rem }
+        .footer-top { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:2.5rem; padding-bottom:2.5rem; border-bottom:1px solid var(--border) }
+        .footer-logo { display:flex; align-items:center; gap:.7rem; text-decoration:none; margin-bottom:.9rem }
+        .footer-logo img { height:32px; width:auto }
+        .footer-logo span { font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:900; color:var(--text); letter-spacing:-.015em }
+        .footer-tagline { font-size:.85rem; color:var(--text-secondary); line-height:1.7; max-width:220px }
+        .footer-socials { display:flex; gap:.5rem; margin-top:1.2rem }
+        .footer-soc-btn { width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.05); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:all .2s; text-decoration:none }
+        .footer-soc-btn:hover { background:var(--primary); border-color:var(--primary); transform:translateY(-2px) }
+        .footer-soc-btn img { width:14px; height:14px }
+        .footer-col h4 { font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.14em; color:var(--text-secondary); margin-bottom:.85rem }
+        .footer-col a { display:block; font-size:.85rem; color:var(--text-secondary); text-decoration:none; margin-bottom:.45rem; transition:color .2s }
+        .footer-col a:hover { color:var(--text) }
+        .footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.75rem; padding:1.25rem 0 }
+        .footer-copy { font-size:.78rem; color:var(--text-secondary) }
+        .footer-legal { display:flex; gap:1.25rem }
+        .footer-legal a { font-size:.78rem; color:var(--text-secondary); text-decoration:none; transition:color .2s }
+        .footer-legal a:hover { color:var(--text) }
+
+        @media (max-width:1024px) { .footer-top { grid-template-columns:1fr 1fr } .footer-brand { grid-column:1/-1 } }
+        @media (max-width:768px) {
+            .wrap { padding:0 1.25rem }
+            .ba-screens { grid-template-columns:1fr }
+            .deliverables { grid-template-columns:1fr }
+            .results-grid { grid-template-columns:1fr }
+            .case-meta { grid-template-columns:1fr }
+            .case-meta-item { border-bottom:1px solid var(--border) }
+            .case-stats { grid-template-columns:1fr 1fr }
+            .footer-top { grid-template-columns:1fr; gap:2rem }
+            .footer-bottom { flex-direction:column; align-items:flex-start; gap:.5rem }
+        }
+        @media (max-width:480px) {
+            .mobile-card { width:160px }
+            .case-stats { grid-template-columns:1fr }
+            .cta-btns { flex-direction:column; align-items:center }
+            .cta-btns .btn { width:100%; justify-content:center }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Fallstudie: KK Gebäudereinigung Friedrichshafen – Website-Redesign",
+  "description": "Wie Evolved Web Designs kkreinigung.com von einer kaum lesbaren Platzhalterseite zu einer professionellen, mobilfreundlichen und SEO-optimierten Website umgebaut hat.",
+  "image": "https://evowebdesign.de/case-kk-after-desktop.png",
+  "author": { "@type": "Organization", "name": "Evolved Web Designs GbR", "url": "https://evowebdesign.de" },
+  "publisher": { "@type": "Organization", "name": "Evolved Web Designs GbR", "logo": { "@type": "ImageObject", "url": "https://evowebdesign.de/logo-nobg.png" } },
+  "datePublished": "2026-06-07",
+  "mainEntityOfPage": "https://evowebdesign.de/fallstudie-kk-reinigung"
+}
+</script>
+</head>
+<body>
+
+  <header id="hdr" class="top">
+    <nav aria-label="Hauptnavigation">
+      <a href="https://evowebdesign.de/" class="logo" aria-label="Evolved Web Designs – Startseite">
+        <img src="logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="42" height="42" />
+        <span class="logo-name">Evolved Web Designs</span>
+      </a>
+      <button class="hamburger" id="menuBtn" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="https://evowebdesign.de/leistungen">Leistungen</a></li>
+        <li><a href="https://evowebdesign.de/ki-agent-website" class="nav-highlight">KI-Agent</a></li>
+        <li><a href="https://evowebdesign.de/projekte" class="active">Projekte</a></li>
+        <li><a href="https://evowebdesign.de/ueber-uns">Über uns</a></li>
+        <li><a href="https://evowebdesign.de/angebote">Angebote</a></li>
+        <li><a href="https://evowebdesign.de/kontakt" class="nav-cta">Jetzt anfragen</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+  <nav class="bc" aria-label="Breadcrumb"><ol><li><a href="https://evowebdesign.de/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li><a href="https://evowebdesign.de/projekte">Projekte</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">KK Reinigung</li></ol></nav>
+
+  <div class="wrap">
+    <div class="case-hero">
+      <a href="https://evowebdesign.de/projekte" class="back-link">← Alle Projekte</a>
+      <span class="eyebrow">Fallstudie · Webdesign · 2026</span>
+      <h1>Von unsichtbar<br>zu <em>professionell.</em></h1>
+      <p>Wie wir kkreinigung.com von einer kaum lesbaren Platzhalterseite zu einer professionellen, mobilfreundlichen und KI-sichtbaren Website umgebaut haben.</p>
+      <div class="case-tags">
+        <span class="case-tag">Website-Redesign</span>
+        <span class="case-tag">Mobile-Optimierung</span>
+        <span class="case-tag">SEO</span>
+        <span class="case-tag">GEO / AI-Sichtbarkeit</span>
+        <span class="case-tag">Vorher/Nachher</span>
+      </div>
+    </div>
+
+    <div class="case-meta">
+      <div class="case-meta-item">
+        <div class="case-meta-label">Kunde</div>
+        <div class="case-meta-value">K.K. Reinigung, Friedrichshafen</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="case-meta-label">Branche</div>
+        <div class="case-meta-value">Gewerbliche Gebäudereinigung</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="case-meta-label">Live-URL</div>
+        <div class="case-meta-value"><a href="https://kkreinigung.com" target="_blank" rel="noopener">kkreinigung.com →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="case-section">
+    <div class="wrap">
+      <span class="case-section-label">Vorher / Nachher</span>
+      <h2>Desktop-Vergleich</h2>
+      <p>Die alte Seite hatte kaum lesbaren Text auf weißem Hintergrund ohne Struktur, Inhalt oder klare Handlungsaufforderung. Die neue Version kommuniziert sofort Vertrauen und Kompetenz.</p>
+      <div class="ba-screens">
+        <div class="ba-screen-card">
+          <div class="ba-screen-label before">✕ Vorher — Februar 2026</div>
+          <img src="case-kk-before-desktop.png" alt="kkreinigung.com alte Version Desktop" width="1280" height="280" loading="lazy">
+        </div>
+        <div class="ba-screen-card">
+          <div class="ba-screen-label after">✓ Nachher — Juni 2026</div>
+          <img src="case-kk-after-desktop.png" alt="kkreinigung.com neue Version Desktop" width="1280" height="280" loading="lazy">
+        </div>
+      </div>
+
+      <div class="mobile-compare">
+        <div class="mobile-card">
+          <img src="case-kk-before-mobile.png" alt="Alte Mobile-Version" width="390" height="500" loading="lazy">
+          <div class="mobile-card-label before">✕ Vorher</div>
+        </div>
+        <div class="mobile-card">
+          <img src="case-kk-after-mobile.png" alt="Neue Mobile-Version" width="390" height="500" loading="lazy">
+          <div class="mobile-card-label after">✓ Nachher</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap">
+      <span class="case-section-label">Leistungsumfang</span>
+      <h2>Was wir umgesetzt haben</h2>
+      <p>Ein vollständiges Redesign mit Fokus auf Conversion, Mobile-Erlebnis und Sichtbarkeit in klassischen sowie KI-basierten Suchmaschinen.</p>
+
+      <div class="deliverables">
+        <div class="deliverable">
+          <div class="deliverable-icon">🎨</div>
+          <div>
+            <h3>Komplettes Hero-Redesign</h3>
+            <p>Unzuverlässiges Stock-Bild entfernt, auf sauberes Einspaltenlayout umgebaut. Klare H1, CTA-Buttons und Trust-Badges direkt sichtbar.</p>
+          </div>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-icon">📱</div>
+          <div>
+            <h3>Mobile-Fixes</h3>
+            <p>Burger-Menü in die rechte Ecke, WhatsApp und KI-Bot auf gleiche Höhe gebracht, Trust-Bar-Overflow behoben.</p>
+          </div>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-icon">🤖</div>
+          <div>
+            <h3>GEO / KI-Sichtbarkeit</h3>
+            <p>robots.txt für GPTBot, ClaudeBot und PerplexityBot explizit geöffnet. Neue llms.txt mit strukturierten Entitätsdaten für ChatGPT, Perplexity und Claude.</p>
+          </div>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-icon">🔍</div>
+          <div>
+            <h3>SEO-Bereinigung</h3>
+            <p>Titel-Tags vereinheitlicht, saubere Meta-Descriptions, korrekte Heading-Struktur und lokale Keywords für Friedrichshafen eingearbeitet.</p>
+          </div>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-icon">📸</div>
+          <div>
+            <h3>Selbst gehostete Referenzbilder</h3>
+            <p>Echte Vorher/Nachher-Fotos aus der Praxis optimiert (800px, ~85 KB/Bild) und selbst gehostet. Keine externen URLs, kein Cookie-Consent nötig.</p>
+          </div>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-icon">⚡</div>
+          <div>
+            <h3>Performance</h3>
+            <p>CSS-Cache-Busting, tote Animationen entfernt, Lazy-Loading auf allen neuen Bildern. Ladezeit unter 2 Sekunden.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-stats">
+        <div class="case-stat">
+          <div class="case-stat-num">&lt;2s</div>
+          <div class="case-stat-label">Ladezeit<br>auf Mobile &amp; Desktop</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-num">5</div>
+          <div class="case-stat-label">KI-Crawler explizit<br>zugelassen (robots.txt)</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-num">100%</div>
+          <div class="case-stat-label">Selbst gehostete Bilder<br>keine externen Abhängigkeiten</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap">
+      <span class="case-section-label">Echte Referenzbilder</span>
+      <h2>Reinigungsergebnisse</h2>
+      <p>Echte Vorher/Nachher-Fotos aus der täglichen Arbeit von K.K. Reinigung. Direkt in die Website eingebaut, selbst gehostet, kein Stock-Material.</p>
+
+      <div class="results-grid">
+        <div class="result-pair">
+          <div class="result-pair-imgs">
+            <div class="result-pair-img-wrap">
+              <img src="case-kk-reinigung-1.jpg" alt="Sanitärbereich vor der Reinigung" width="800" height="1067" loading="lazy">
+              <span class="result-pair-badge before">Vorher</span>
+            </div>
+            <div class="result-pair-img-wrap">
+              <img src="case-kk-reinigung-2.jpg" alt="Sanitärbereich nach der Reinigung" width="800" height="1067" loading="lazy">
+              <span class="result-pair-badge after">Nachher</span>
+            </div>
+          </div>
+          <div class="result-pair-caption">Sanitärbereich, Einsatz 1</div>
+        </div>
+        <div class="result-pair">
+          <div class="result-pair-imgs">
+            <div class="result-pair-img-wrap">
+              <img src="case-kk-reinigung-3.jpg" alt="Sanitärbereich vor der Reinigung" width="800" height="1067" loading="lazy">
+              <span class="result-pair-badge before">Vorher</span>
+            </div>
+            <div class="result-pair-img-wrap">
+              <img src="case-kk-reinigung-4.jpg" alt="Sanitärbereich nach der Reinigung" width="800" height="1067" loading="lazy">
+              <span class="result-pair-badge after">Nachher</span>
+            </div>
+          </div>
+          <div class="result-pair-caption">Sanitärbereich, Einsatz 2</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" style="padding-bottom:1rem">
+    <div class="wrap">
+      <span class="case-section-label">Kundenfeedback</span>
+      <h2>Was der Kunde sagt</h2>
+      <div class="review-band">
+        <div class="google-review-card">
+          <div class="google-review-header">
+            <div class="google-icon">G</div>
+            <span>Google Rezension</span>
+          </div>
+          <div class="google-review-body">
+            <div class="reviewer-row">
+              <div class="reviewer-avatar">K</div>
+              <div>
+                <div class="reviewer-name">KK Gebäudereinigung</div>
+                <div class="reviewer-meta">Lokaler Unternehmer · Friedrichshafen</div>
+              </div>
+            </div>
+            <div class="stars-row">
+              <span class="stars">★★★★★</span>
+              <span class="review-time">vor 2 Wochen</span>
+            </div>
+            <div class="review-text">
+              „<span class="highlight">Sehr gute Arbeit.</span> Die Webseite sieht <span class="highlight">modern</span> aus und wurde <span class="highlight">schnell umgesetzt.</span> Kommunikation war top und auf meine Wünsche wurde eingegangen. <span class="highlight">Gerne wieder.</span> 5 Sterne auf Google."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-wrap">
+    <div class="cta-band">
+      <h2>Soll Ihre Website auch <span class="gradient-text">so aussehen?</span></h2>
+      <p>Wir zeigen Ihnen kostenlos, was an Ihrer aktuellen Website nicht funktioniert und wie wir es besser machen. Unverbindlich, konkret, am selben Tag.</p>
+      <div class="cta-btns">
+        <a href="https://evowebdesign.de/kontakt" class="btn btn-primary">Kostenlose Analyse →</a>
+        <a href="https://evowebdesign.de/projekte" class="btn btn-secondary">Alle Projekte</a>
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="https://evowebdesign.de/" class="footer-logo">
+            <img src="logo-nobg.png" alt="Evolved Web Designs Logo" width="32" height="32" />
+            <span>Evolved Web Designs</span>
+          </a>
+          <p class="footer-tagline">Websites, die Anfragen bringen – mit optionalem KI-Agent. Für Unternehmen am Bodensee.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img loading="lazy" src="icon-instagram.png" alt="EWD auf Instagram" width="14" height="14" />
+            </a>
+            <a href="https://tiktok.com/@evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <img loading="lazy" src="icon-tiktok.png" alt="EWD auf TikTok" width="14" height="14" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Leistungen</h4>
+          <a href="https://evowebdesign.de/leistungen">Website + KI-Agent</a>
+          <a href="https://evowebdesign.de/leistungen">Lokale SEO</a>
+          <a href="https://evowebdesign.de/leistungen">Hosting &amp; Betreuung</a>
+          <a href="https://evowebdesign.de/kostenlose-analyse">Kostenlose Analyse</a>
+        </div>
+        <div class="footer-col">
+          <h4>Unternehmen</h4>
+          <a href="https://evowebdesign.de/ueber-uns">Über uns</a>
+          <a href="https://evowebdesign.de/projekte">Projekte</a>
+          <a href="https://evowebdesign.de/angebote">Angebote</a>
+          <a href="https://evowebdesign.de/kontakt">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <a href="tel:+491717031722">+49 171 7031722</a>
+          <a href="mailto:kontakt@evowebdesign.de">kontakt@evowebdesign.de</a>
+          <a href="https://evowebdesign.de/kontakt">Kostenlos anfragen</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Evolved Web Designs GbR &middot; Friedrichshafen am Bodensee</p>
+        <div class="footer-legal">
+          <a href="https://evowebdesign.de/impressum">Impressum</a>
+          <a href="https://evowebdesign.de/datenschutz">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    var hdr=document.getElementById('hdr');
+    function setH(){hdr.className=window.scrollY>30?'scrolled':'top';}
+    setH();
+    window.addEventListener('scroll',setH,{passive:true});
+    var btn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
+    if(btn&&nav){
+      btn.addEventListener('click',function(){
+        var o=nav.classList.contains('open');
+        nav.classList.toggle('open',!o);
+        btn.classList.toggle('open',!o);
+        btn.setAttribute('aria-expanded',String(!o));
+      });
+      nav.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click',function(){
+          nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');
+        });
+      });
+      document.addEventListener('click',function(e){
+        if(!hdr.contains(e.target)&&nav.classList.contains('open')){
+          nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');
+        }
+      });
+    }
+    if('IntersectionObserver' in window){
+      var s=document.createElement('style');
+      s.textContent='.rv{opacity:0;transform:translateY(20px)}.rv.vi{opacity:1;transform:none;transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1)}';
+      document.head.appendChild(s);
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(!e.isIntersecting)return;
+          e.target.classList.add('vi');io.unobserve(e.target);
+        });
+      },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
+      var _els=document.querySelectorAll('.ba-screen-card,.mobile-card,.deliverable,.case-stat,.result-pair,.google-review-card');
+      _els.forEach(function(el){el.classList.add('rv');});
+      requestAnimationFrame(function(){requestAnimationFrame(function(){_els.forEach(function(el){io.observe(el);});});});
+    }
+  })();
+  </script>
+
+<!-- EWD Cookie Banner -->
+<style>
+  #ewd-ckb{position:fixed;bottom:0;left:0;right:0;z-index:10000;background:linear-gradient(135deg,#161B22,#0f1520);border-top:1px solid rgba(0,102,255,0.25);padding:18px 28px;display:none;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;box-shadow:0 -6px 32px rgba(0,0,0,0.6);font-family:'Inter',system-ui,sans-serif;animation:ewdCkSlide .35s ease}
+  @keyframes ewdCkSlide{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
+  #ewd-ckb-text{flex:1;min-width:220px}
+  #ewd-ckb-text strong{display:block;color:#F0F6FC;font-size:.9rem;font-weight:700;margin-bottom:5px}
+  #ewd-ckb-text p{color:#8B949E;font-size:.8rem;line-height:1.6;margin:0}
+  #ewd-ckb-text a{color:#4D94FF;text-decoration:none}
+  #ewd-ckb-text a:hover{text-decoration:underline}
+  .ewd-ckb-btns{display:flex;gap:10px;align-items:center;flex-shrink:0;flex-wrap:wrap}
+  .ewd-ckb-deny{background:transparent;color:#8B949E;border:1px solid rgba(255,255,255,.15);padding:9px 18px;border-radius:8px;cursor:pointer;font-size:.8rem;font-weight:500;font-family:'Inter',system-ui,sans-serif;transition:all .15s;white-space:nowrap}
+  .ewd-ckb-deny:hover{border-color:rgba(255,255,255,.3);color:#C9D1D9}
+  .ewd-ckb-accept{background:linear-gradient(135deg,#0066FF,#0050CC);color:#fff;border:none;padding:9px 20px;border-radius:8px;cursor:pointer;font-size:.8rem;font-weight:600;font-family:'Inter',system-ui,sans-serif;transition:transform .15s,box-shadow .15s;box-shadow:0 2px 10px rgba(0,102,255,.35);white-space:nowrap}
+  .ewd-ckb-accept:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,102,255,.5)}
+  @media(max-width:600px){#ewd-ckb{padding:14px 16px;flex-direction:column;align-items:flex-start}.ewd-ckb-btns{width:100%}.ewd-ckb-deny,.ewd-ckb-accept{flex:1;text-align:center;padding:10px}}
+</style>
+<div id="ewd-ckb">
+  <div id="ewd-ckb-text">
+    <strong>🍪 Cookies &amp; Datenschutz</strong>
+    <p>Wir nutzen Google Fonts (externe Schriften) und einen KI-Agenten für Kundenanfragen. Chat-Nachrichten werden zur Verarbeitung an OpenAI (USA) übertragen. <a href="datenschutz">Datenschutzerklärung</a></p>
+  </div>
+  <div class="ewd-ckb-btns">
+    <button class="ewd-ckb-deny" onclick="ewdCkDeny()">Nur notwendige</button>
+    <button class="ewd-ckb-accept" onclick="ewdCkAccept()">Alle akzeptieren</button>
+  </div>
+</div>
+<script>
+(function(){
+  var k='ewd-consent',v=localStorage.getItem(k);
+  function loadFonts(){
+    if(document.querySelector('[data-ewdf]'))return;
+    var l=document.createElement('link');
+    l.rel='stylesheet';l.setAttribute('data-ewdf','1');
+    l.href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap';
+    document.head.appendChild(l);
+  }
+  if(v==='all'){loadFonts();return;}
+  if(v==='necessary')return;
+  setTimeout(function(){document.getElementById('ewd-ckb').style.display='flex';},900);
+  window.ewdCkAccept=function(){localStorage.setItem(k,'all');loadFonts();document.getElementById('ewd-ckb').style.display='none';};
+  window.ewdCkDeny=function(){localStorage.setItem(k,'necessary');document.getElementById('ewd-ckb').style.display='none';};
+})();
+</script>
+</body>
+</html>
