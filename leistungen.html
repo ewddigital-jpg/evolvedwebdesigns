@@ -407,6 +407,26 @@
     .svc-ico{ width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:1.3rem; color:var(--primary-light); background:linear-gradient(135deg, rgba(0,102,255,.16), rgba(0,217,255,.08)); border:1px solid var(--border-mid); transition:transform .3s ease }
     .svc-card:hover .svc-ico{ transform:scale(1.06) }
     .svc-ico svg{ width:28px; height:28px }
+    .svc-illu{ width:124px; height:124px; margin:0 0 1.1rem; display:block }
+    .svc-illu svg{ width:100%; height:100%; display:block; overflow:visible }
+    .ill-bg{ fill:var(--bg-raised) }
+    .ill-bg2{ fill:var(--bg-card) }
+    .ill-st{ fill:none; stroke:var(--border-mid); stroke-width:2 }
+    .ill-pri{ fill:var(--primary) }
+    .ill-pl{ fill:var(--primary-light) }
+    .ill-ac{ fill:var(--accent) }
+    .ill-line{ fill:none; stroke:var(--primary-light); stroke-width:2; stroke-linecap:round; stroke-linejoin:round }
+    .ill-line-ac{ fill:none; stroke:var(--accent); stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round }
+    .ill-float,.ill-blink,.ill-tw,.ill-tw2{ transform-box:fill-box; transform-origin:center }
+    @media (prefers-reduced-motion:no-preference){
+      .ill-float{ animation:illFloat 3.8s ease-in-out infinite }
+      .ill-blink{ animation:illBlink 3.4s ease-in-out infinite }
+      .ill-tw{ animation:illTw 2.6s ease-in-out infinite }
+      .ill-tw2{ animation:illTw 2.6s ease-in-out 1s infinite }
+    }
+    @keyframes illFloat{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-4px) } }
+    @keyframes illBlink{ 0%,90%,100%{ transform:scaleY(1) } 95%{ transform:scaleY(.12) } }
+    @keyframes illTw{ 0%,100%{ opacity:.3; transform:scale(.7) } 50%{ opacity:1; transform:scale(1) } }
     .svc-card h3{ font-family:'Poppins',sans-serif; font-size:1.18rem; font-weight:800; color:var(--text); line-height:1.25; margin-bottom:.6rem }
     .svc-card > p{ font-size:.9rem; color:var(--text-secondary); line-height:1.7; margin-bottom:1.1rem }
     .svc-list{ list-style:none; padding:0; margin:0 0 1.6rem; display:flex; flex-direction:column; gap:.55rem }
@@ -631,8 +651,27 @@
       <div class="wrap">
         <div class="svc-cards">
           <article class="svc-card">
-            <div class="svc-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="8" y1="10" x2="8" y2="10"/><line x1="12" y1="10" x2="12" y2="10"/><line x1="16" y1="10" x2="16" y2="10"/></svg>
+            <div class="svc-illu" aria-hidden="true">
+              <svg viewBox="0 0 200 200">
+                <rect x="20" y="40" width="122" height="98" rx="12" class="ill-bg2"/>
+                <rect x="20" y="40" width="122" height="98" rx="12" class="ill-st"/>
+                <circle cx="36" cy="54" r="3.2" class="ill-ac"/>
+                <circle cx="48" cy="54" r="3.2" class="ill-pl"/>
+                <circle cx="60" cy="54" r="3.2" class="ill-pl" fill-opacity=".4"/>
+                <line x1="20" y1="66" x2="142" y2="66" class="ill-st"/>
+                <rect x="34" y="80" width="62" height="7" rx="3.5" class="ill-pl" fill-opacity=".85"/>
+                <rect x="34" y="94" width="88" height="7" rx="3.5" class="ill-pl" fill-opacity=".5"/>
+                <rect x="34" y="108" width="46" height="7" rx="3.5" class="ill-pl" fill-opacity=".35"/>
+                <g class="ill-float">
+                  <path d="M104 150 L94 172 L116 156 Z" class="ill-pri"/>
+                  <rect x="92" y="102" width="86" height="58" rx="17" class="ill-pri"/>
+                  <line x1="135" y1="102" x2="135" y2="93" class="ill-line-ac"/>
+                  <circle cx="135" cy="90" r="3.4" class="ill-ac"/>
+                  <circle cx="120" cy="127" r="5" class="ill-ac ill-blink"/>
+                  <circle cx="150" cy="127" r="5" class="ill-ac ill-blink"/>
+                  <path d="M119 141 q16 11 32 0" class="ill-line-ac"/>
+                </g>
+              </svg>
             </div>
             <h3>Website + KI-Bot</h3>
             <p>Moderne, schnelle Website kombiniert mit einem intelligenten Chatbot.</p>
@@ -644,8 +683,24 @@
             <a href="https://evowebdesign.de/website-ki-bot" class="svc-cta">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </article>
           <article class="svc-card">
-            <div class="svc-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="21" y1="21" x2="16" y2="16"/><path d="M10.5 7l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></svg>
+            <div class="svc-illu" aria-hidden="true">
+              <svg viewBox="0 0 200 200">
+                <circle cx="92" cy="84" r="54" class="ill-bg2"/>
+                <circle cx="92" cy="84" r="54" class="ill-line"/>
+                <ellipse cx="92" cy="84" rx="24" ry="54" class="ill-line" stroke-opacity=".55"/>
+                <line x1="38" y1="84" x2="146" y2="84" class="ill-line" stroke-opacity=".55"/>
+                <path d="M50 60 q42 16 84 0" class="ill-line" stroke-opacity=".4"/>
+                <path d="M50 108 q42 -16 84 0" class="ill-line" stroke-opacity=".4"/>
+                <path d="M150 40 l3.2 8.4 l8.4 3.2 l-8.4 3.2 l-3.2 8.4 l-3.2 -8.4 l-8.4 -3.2 l8.4 -3.2 z" class="ill-ac ill-tw"/>
+                <path d="M132 26 l2.2 5.6 l5.6 2.2 l-5.6 2.2 l-2.2 5.6 l-2.2 -5.6 l-5.6 -2.2 l5.6 -2.2 z" class="ill-ac ill-tw2"/>
+                <g class="ill-float">
+                  <rect x="72" y="120" width="106" height="36" rx="18" class="ill-bg"/>
+                  <rect x="72" y="120" width="106" height="36" rx="18" class="ill-line-ac"/>
+                  <circle cx="92" cy="138" r="8" class="ill-line-ac"/>
+                  <line x1="98" y1="144" x2="105" y2="151" class="ill-line-ac"/>
+                  <rect x="112" y="134" width="52" height="8" rx="4" class="ill-pl" fill-opacity=".55"/>
+                </g>
+              </svg>
             </div>
             <h3>GEO / AI Search Optimierung</h3>
             <p>Sichtbarkeit in KI-Suchsystemen wie ChatGPT, Perplexity und Google AI Overviews.</p>
@@ -657,8 +712,26 @@
             <a href="https://evowebdesign.de/geo-optimierung" class="svc-cta">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </article>
           <article class="svc-card">
-            <div class="svc-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="svc-illu" aria-hidden="true">
+              <svg viewBox="0 0 200 200">
+                <rect x="26" y="38" width="148" height="110" rx="14" class="ill-bg2"/>
+                <rect x="26" y="38" width="148" height="110" rx="14" class="ill-st"/>
+                <path d="M26 102 H68 L90 80 H146" class="ill-line" stroke-opacity=".3"/>
+                <path d="M122 148 V110 L152 84" class="ill-line" stroke-opacity=".28"/>
+                <rect x="40" y="54" width="30" height="22" rx="5" class="ill-pl" fill-opacity=".16"/>
+                <g class="ill-float">
+                  <path d="M100 52 C83 52 70 65 70 83 C70 108 100 134 100 134 C100 134 130 108 130 83 C130 65 117 52 100 52 Z" class="ill-pri"/>
+                  <circle cx="100" cy="83" r="12" class="ill-bg2"/>
+                  <circle cx="100" cy="83" r="5" class="ill-ac"/>
+                </g>
+                <g class="ill-ac">
+                  <path d="M0,-7 L1.6,-2.2 L6.7,-2.2 L2.6,1 L4,6 L0,3 L-4,6 L-2.6,1 L-6.7,-2.2 L-1.6,-2.2 Z" transform="translate(62 170)"/>
+                  <path d="M0,-7 L1.6,-2.2 L6.7,-2.2 L2.6,1 L4,6 L0,3 L-4,6 L-2.6,1 L-6.7,-2.2 L-1.6,-2.2 Z" transform="translate(81 170)"/>
+                  <path d="M0,-7 L1.6,-2.2 L6.7,-2.2 L2.6,1 L4,6 L0,3 L-4,6 L-2.6,1 L-6.7,-2.2 L-1.6,-2.2 Z" transform="translate(100 170)"/>
+                  <path d="M0,-7 L1.6,-2.2 L6.7,-2.2 L2.6,1 L4,6 L0,3 L-4,6 L-2.6,1 L-6.7,-2.2 L-1.6,-2.2 Z" transform="translate(119 170)"/>
+                  <path d="M0,-7 L1.6,-2.2 L6.7,-2.2 L2.6,1 L4,6 L0,3 L-4,6 L-2.6,1 L-6.7,-2.2 L-1.6,-2.2 Z" transform="translate(138 170)" fill-opacity=".4"/>
+                </g>
+              </svg>
             </div>
             <h3>Google Business Profil Optimierung</h3>
             <p>Professionelle Einrichtung und Optimierung Ihres Google Unternehmensprofils.</p>
