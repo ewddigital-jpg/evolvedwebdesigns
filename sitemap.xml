@@ -8,13 +8,25 @@
   </url>
   <url>
     <loc>https://evowebdesign.de/leistungen</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://evowebdesign.de/ki-agent-website</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://evowebdesign.de/website-ki-bot</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://evowebdesign.de/geo-optimierung</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://evowebdesign.de/google-business-optimierung</loc>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

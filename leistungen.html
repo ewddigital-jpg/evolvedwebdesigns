@@ -8,13 +8,13 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <title>Leistungen – Website, SEO &amp; KI-Agent | EWD</title>
-  <meta name="description" content="Website, lokale SEO und Hosting für Unternehmen am Bodensee. Festpreise ab 990 €, persönlicher Kontakt, fertig in 3–4 Wochen." />
+  <title>Leistungen – Website + KI-Bot, GEO &amp; Google Business | EWD</title>
+  <meta name="description" content="Website mit KI-Bot, GEO / AI Search Optimierung und Google Business Profil Optimierung für Unternehmen am Bodensee. Mehr Anfragen ohne Mehraufwand." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://evowebdesign.de/leistungen" />
 
-  <meta property="og:title" content="Leistungen – Website + KI-Agent, SEO &amp; Hosting | EWD" />
-  <meta property="og:description" content="Webdesign + KI-Agent aus Friedrichshafen. Festpreise, kein Abo, fertig in 2–4 Wochen." />
+  <meta property="og:title" content="Leistungen – Website + KI-Bot, GEO &amp; Google Business | EWD" />
+  <meta property="og:description" content="Website + KI-Bot, GEO / AI Search Optimierung und Google Business Profil aus Friedrichshafen. Mehr Anfragen ohne Mehraufwand." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://evowebdesign.de/logo-nobg.png" />
   <meta property="og:image:width" content="400" />
@@ -40,7 +40,7 @@
     "@id": "https://evowebdesign.de/#org",
     "name": "Evolved Web Designs GbR",
     "alternateName": "EWD",
-    "description": "Webdesign-Agentur in Friedrichshafen. Websites für lokale Unternehmen am Bodensee – professionell, fair kalkuliert, mit optionalem KI-Agenten für mehr Anfragen.",
+    "description": "Webdesign-Agentur in Friedrichshafen. Websites für lokale Unternehmen am Bodensee – professionell, fair kalkuliert, mit optionalem KI-Bot für mehr Anfragen.",
     "url": "https://evowebdesign.de",
     "logo": "https://evowebdesign.de/logo-nobg.png",
     "image": "https://evowebdesign.de/logo-nobg.png",
@@ -107,34 +107,31 @@
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Webdesign & KI-Agent Leistungen",
+      "name": "Leistungen von Evolved Web Designs",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Website Starter"
-          },
-          "price": "990",
-          "priceCurrency": "EUR"
+            "name": "Website + KI-Bot",
+            "description": "Moderne, schnelle Website kombiniert mit einem intelligenten Chatbot, der Kundenfragen automatisch beantwortet – auch außerhalb der Öffnungszeiten."
+          }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Website + KI-Agent"
-          },
-          "price": "1490",
-          "priceCurrency": "EUR"
+            "name": "GEO / AI Search Optimierung",
+            "description": "Sichtbarkeit in KI-Suchsystemen wie ChatGPT, Perplexity und Google AI Overviews – zukunftssichere Optimierung für mehr Reichweite ohne bezahlte Werbung."
+          }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Betreuung & Pflege"
-          },
-          "price": "79",
-          "priceCurrency": "EUR"
+            "name": "Google Business Profil Optimierung",
+            "description": "Professionelle Einrichtung und Optimierung des Google Unternehmensprofils für besseres lokales Ranking, mehr Bewertungen und mehr Kunden."
+          }
         }
       ]
     },
@@ -402,6 +399,25 @@
     .srv-card-link{font-size:.82rem;font-weight:700;color:var(--primary-light);text-decoration:none;transition:opacity .2s}
     .srv-card-link:hover{opacity:.75}
     @media(max-width:720px){.srv-cards{grid-template-columns:1fr}}
+
+    /* ── LEISTUNGEN STANDARD (3 Karten) ── */
+    .svc-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem }
+    .svc-card{ position:relative; background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:2rem 1.75rem; display:flex; flex-direction:column; transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease }
+    .svc-card:hover{ transform:translateY(-8px); border-color:var(--border-active); box-shadow:0 18px 40px rgba(0,0,0,.28), 0 0 0 1px rgba(0,102,255,.22), 0 0 32px rgba(0,102,255,.22) }
+    .svc-ico{ width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:1.3rem; color:var(--primary-light); background:linear-gradient(135deg, rgba(0,102,255,.16), rgba(0,217,255,.08)); border:1px solid var(--border-mid); transition:transform .3s ease }
+    .svc-card:hover .svc-ico{ transform:scale(1.06) }
+    .svc-ico svg{ width:28px; height:28px }
+    .svc-card h3{ font-family:'Poppins',sans-serif; font-size:1.18rem; font-weight:800; color:var(--text); line-height:1.25; margin-bottom:.6rem }
+    .svc-card > p{ font-size:.9rem; color:var(--text-secondary); line-height:1.7; margin-bottom:1.1rem }
+    .svc-list{ list-style:none; padding:0; margin:0 0 1.6rem; display:flex; flex-direction:column; gap:.55rem }
+    .svc-list li{ position:relative; padding-left:1.6rem; font-size:.85rem; color:var(--text-soft); line-height:1.55 }
+    .svc-list li::before{ content:''; position:absolute; left:0; top:.15rem; width:1.05rem; height:1.05rem; border-radius:50%; background:rgba(0,102,255,.16) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234D94FF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/.62rem no-repeat }
+    .svc-cta{ margin-top:auto; align-self:flex-start; display:inline-flex; align-items:center; gap:.45rem; padding:.72rem 1.4rem; border-radius:10px; font-family:'Inter',sans-serif; font-weight:700; font-size:.85rem; text-decoration:none; color:#fff; background:linear-gradient(135deg, var(--primary), var(--primary-dark)); box-shadow:0 2px 14px rgba(0,102,255,.28); transition:transform .2s, box-shadow .2s }
+    .svc-cta:hover{ transform:translateY(-2px); box-shadow:0 8px 26px rgba(0,102,255,.5) }
+    .svc-cta svg{ width:15px; height:15px; transition:transform .2s }
+    .svc-card:hover .svc-cta svg{ transform:translateX(3px) }
+    @media (max-width:900px){ .svc-cards{ grid-template-columns:1fr } }
+
     /* ── BREADCRUMB ── */
     .bc{padding:1.25rem 1.5rem .75rem;max-width:1100px;margin:0 auto;display:block;box-sizing:border-box}
     .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0}
@@ -495,7 +511,7 @@
       </button>
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="https://evowebdesign.de/leistungen">Leistungen</a></li>
-        <li><a href="https://evowebdesign.de/ki-agent-website" class="nav-highlight">KI-Agent</a></li>
+        <li><a href="https://evowebdesign.de/website-ki-bot" class="nav-highlight">KI-Bot</a></li>
         <li><a href="https://evowebdesign.de/projekte">Projekte</a></li>
         <li><a href="https://evowebdesign.de/ueber-uns">Über uns</a></li>
         <li><a href="https://evowebdesign.de/angebote">Angebote</a></li>
@@ -514,27 +530,27 @@
       <div class="wrap">
         <h1>Drei Leistungen.<br /><span class="accent">Klar definiert.</span></h1>
         <p class="intro-sub">
-          Website mit KI-Agent, lokale SEO und Hosting – aus einer Hand, zu transparenten Festpreisen.
+          Website mit KI-Bot, GEO / AI Search Optimierung und Google Business Profil – aus einer Hand, für mehr Anfragen ohne Mehraufwand.
         </p>
       </div>
     </div>
 
-    <!-- FEATURED: Website + KI-Agent -->
+    <!-- FEATURED: Website + KI-Bot -->
     <div class="featured">
       <div class="wrap">
         <div class="featured-inner">
           <div class="featured-left">
             <span class="label">Unser Hauptangebot</span>
-            <h2>Website + KI-Agent</h2>
+            <h2>Website + KI-Bot</h2>
             <div class="featured-price">
               <strong>1.490&nbsp;€</strong>
               <span>einmalig &middot; kein Abo</span>
             </div>
             <p>
-              Eine sauber programmierte Website für Ihr Unternehmen am Bodensee. Dazu ein <strong>KI-Agent</strong>, der Kundenfragen beantwortet und Termine vormerkt, solange Sie Ihr eigentliches Geschäft führen.
+              Eine sauber programmierte Website für Ihr Unternehmen am Bodensee. Dazu ein <strong>KI-Bot</strong>, der Kundenfragen beantwortet und Termine vormerkt, solange Sie Ihr eigentliches Geschäft führen.
             </p>
             <p>
-              Der KI-Agent wird vollständig auf Ihr Unternehmen eingestellt: Ihre Preise, Ihre Leistungen, Ihre Sprache. Klingt nach Ihnen – nicht nach einem anonymen System.
+              Der KI-Bot wird vollständig auf Ihr Unternehmen eingestellt: Ihre Preise, Ihre Leistungen, Ihre Sprache. Klingt nach Ihnen – nicht nach einem anonymen System.
             </p>
             <a href="https://evowebdesign.de/kostenlose-analyse" class="btn btn-primary" style="margin-top:.5rem">Kostenlose Analyse anfragen &rarr;</a>
           </div>
@@ -551,22 +567,22 @@
               <div class="feat-item">
                 <span class="feat-check">&#10003;</span>
                 <div class="feat-item-text">
-                  <strong>KI-Agent, eingebettet und auf Sie eingestellt</strong>
+                  <strong>KI-Bot, eingebettet und auf Sie eingestellt</strong>
                   <span>Beantwortet Fragen, bucht Termine, leitet Anfragen weiter. 24/7, automatisch.</span>
                 </div>
               </div>
               <div class="feat-item">
                 <span class="feat-check">&#10003;</span>
                 <div class="feat-item-text">
-                  <strong>Lokale SEO</strong>
-                  <span>Damit Sie in Friedrichshafen und am Bodensee gefunden werden.</span>
+                  <strong>GEO / AI Search Grundoptimierung</strong>
+                  <span>Sichtbar in KI-Suchsystemen wie ChatGPT, Perplexity &amp; Google AI Overviews.</span>
                 </div>
               </div>
               <div class="feat-item">
                 <span class="feat-check">&#10003;</span>
                 <div class="feat-item-text">
-                  <strong>Google Business Optimierung</strong>
-                  <span>Einrichtung und Optimierung Ihres Eintrags.</span>
+                  <strong>Google Business Profil Optimierung</strong>
+                  <span>Einrichtung und Optimierung Ihres Eintrags für lokale Sichtbarkeit.</span>
                 </div>
               </div>
               <div class="feat-item">
@@ -613,28 +629,46 @@
     <!-- SERVICE CARDS -->
     <section class="sec" aria-label="Leistungsübersicht" style="padding-top:2rem">
       <div class="wrap">
-        <div class="srv-cards">
-          <div class="srv-card">
-            <div class="srv-card-num">01</div>
-            <h3>Webdesign &amp; Website</h3>
-            <div class="srv-card-price">ab <strong>990 €</strong> einmalig &middot; Festpreis</div>
-            <p>Eine schnelle, mobile-first Website für Ihren Betrieb – mit klarer Struktur, die Anfragen bringt. Optional mit KI-Agent für 1.490 €.</p>
-            <a href="https://evowebdesign.de/angebote" class="srv-card-link">Pakete ansehen &rarr;</a>
-          </div>
-          <div class="srv-card">
-            <div class="srv-card-num">02</div>
-            <h3>Lokale SEO</h3>
-            <div class="srv-card-price"><strong>Inklusive</strong> in jedem Paket</div>
-            <p>Google Business Einrichtung, lokale Keywords, saubere Seitenstruktur – damit Sie in Ihrer Region gefunden werden, wenn jemand nach Ihrer Leistung sucht.</p>
-            <a href="#seo" class="srv-card-link">Details ansehen &rarr;</a>
-          </div>
-          <div class="srv-card">
-            <div class="srv-card-num">03</div>
-            <h3>Hosting &amp; Betreuung</h3>
-            <div class="srv-card-price">ab <strong>79 €</strong> / Monat &middot; monatlich kündbar</div>
-            <p>Ihre Website läuft zuverlässig. Änderungen per WhatsApp direkt an uns – kein Ticketsystem, kein CMS-Login, kein technischer Aufwand.</p>
-            <a href="#hosting" class="srv-card-link">Details ansehen &rarr;</a>
-          </div>
+        <div class="svc-cards">
+          <article class="svc-card">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="8" y1="10" x2="8" y2="10"/><line x1="12" y1="10" x2="12" y2="10"/><line x1="16" y1="10" x2="16" y2="10"/></svg>
+            </div>
+            <h3>Website + KI-Bot</h3>
+            <p>Moderne, schnelle Website kombiniert mit einem intelligenten Chatbot.</p>
+            <ul class="svc-list">
+              <li>Beantwortet Kundenfragen automatisch – auch außerhalb der Öffnungszeiten</li>
+              <li>Mehr Anfragen, weniger Aufwand</li>
+              <li>Voll auf Ihr Unternehmen eingestellt</li>
+            </ul>
+            <a href="https://evowebdesign.de/website-ki-bot" class="svc-cta">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </article>
+          <article class="svc-card">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="21" y1="21" x2="16" y2="16"/><path d="M10.5 7l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></svg>
+            </div>
+            <h3>GEO / AI Search Optimierung</h3>
+            <p>Sichtbarkeit in KI-Suchsystemen wie ChatGPT, Perplexity und Google AI Overviews.</p>
+            <ul class="svc-list">
+              <li>Zukunftssichere Optimierung für die neue Art zu suchen</li>
+              <li>Mehr Reichweite ohne bezahlte Werbung</li>
+              <li>Empfehlungen direkt in KI-Antworten</li>
+            </ul>
+            <a href="https://evowebdesign.de/geo-optimierung" class="svc-cta">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </article>
+          <article class="svc-card">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Google Business Profil Optimierung</h3>
+            <p>Professionelle Einrichtung und Optimierung Ihres Google Unternehmensprofils.</p>
+            <ul class="svc-list">
+              <li>Besseres Ranking in lokalen Suchergebnissen und Google Maps</li>
+              <li>Mehr Bewertungen, mehr Vertrauen</li>
+              <li>Mehr Kunden aus Ihrer Region</li>
+            </ul>
+            <a href="https://evowebdesign.de/google-business-optimierung" class="svc-cta">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </article>
         </div>
       </div>
     </section>
@@ -643,86 +677,81 @@
     <section class="services" aria-label="Alle Leistungen">
       <div class="wrap">
 
-        <!-- Website -->
-        <div class="service-block">
+        <!-- Website + KI-Bot -->
+        <div id="website-ki-bot" class="service-block">
           <div class="service-meta">
             <div class="service-num">01</div>
-            <h2>Webdesign &amp;<br />Entwicklung</h2>
-            <p style="margin-top:.5rem">Moderne, schnelle Websites für Unternehmen am Bodensee. Die wirklich Anfragen bringen.</p>
+            <h2>Website +<br />KI-Bot</h2>
+            <p style="margin-top:.5rem">Moderne, schnelle Website kombiniert mit einem intelligenten Chatbot.</p>
           </div>
           <div class="service-body">
             <p>
-              Wir bauen keine Templates. Jede Website entsteht mit Blick auf Ihre Kunden, Ihr Angebot und Ihren Standort. <strong>Mobile-first</strong>, weil über 70 Prozent Ihrer Besucher vom Handy kommen. Schnell, weil Google und Kunden abspringen wenn eine Seite zu lange lädt.
+              Wir bauen keine Templates. Jede Website entsteht <strong>mobile-first</strong> mit Blick auf Ihre Kunden, Ihr Angebot und Ihren Standort. Dazu ein KI-Bot, der Besucher empfängt und häufige Fragen sofort beantwortet.
             </p>
             <p>
-              Jede Seite hat eine klare Aufgabe: Vertrauen aufbauen, Leistung erklären, zur Anfrage führen. <strong>Kein Design um des Designs willen.</strong>
+              Der Bot beantwortet Kundenfragen <strong>automatisch, auch außerhalb der Öffnungszeiten</strong> – das bedeutet mehr Anfragen bei weniger Aufwand für Sie.
             </p>
             <div class="feat-grid">
-              <div class="fg-item">Individuelles Design nach Ihrem Auftritt</div>
-              <div class="fg-item">Mobile-first, getestet auf allen Geräten</div>
-              <div class="fg-item">Schnelle Ladezeiten, kein schwerer Baukastencode</div>
-              <div class="fg-item">Klare Nutzerführung für mehr Anfragen</div>
-              <div class="fg-item">Kontaktformular &amp; WhatsApp-Button</div>
-              <div class="fg-item">Fertig in 3–4 Wochen, mit Festpreis</div>
+              <div class="fg-item">Individuelles, mobile-first Design</div>
+              <div class="fg-item">Schnelle Ladezeiten, sauberer Code</div>
+              <div class="fg-item">KI-Bot beantwortet Fragen rund um die Uhr</div>
+              <div class="fg-item">Sammelt Kontaktdaten &amp; leitet Anfragen weiter</div>
+              <div class="fg-item">Voll auf Ihr Unternehmen eingestellt</div>
+              <div class="fg-item">Mehr Anfragen, weniger Aufwand</div>
             </div>
-            <a href="https://evowebdesign.de/kostenlose-analyse" class="btn btn-ghost">Kostenlose Analyse anfragen &rarr;</a>
+            <a href="https://evowebdesign.de/website-ki-bot" class="btn btn-ghost">Mehr erfahren &rarr;</a>
           </div>
         </div>
 
-        <!-- SEO -->
-        <div id="seo" class="service-block">
+        <!-- GEO / AI Search -->
+        <div id="geo" class="service-block">
           <div class="service-meta">
             <div class="service-num">02</div>
-            <h2>Lokale SEO</h2>
-            <p style="margin-top:.5rem">Damit Sie erscheinen, wenn jemand in Ihrer Region nach Ihrer Leistung sucht.</p>
+            <h2>GEO / AI Search<br />Optimierung</h2>
+            <p style="margin-top:.5rem">Sichtbarkeit in KI-Suchsystemen wie ChatGPT, Perplexity und Google AI Overviews.</p>
           </div>
           <div class="service-body">
             <p>
-              Lokale SEO bedeutet: Wer in Friedrichshafen, Ravensburg oder Überlingen nach einem Handwerker oder Dienstleister sucht, findet Sie.
-              Das ist kein Hexenwerk, aber es braucht <strong>saubere Grundlage</strong>: richtige Titles,
-              strukturierte Daten, schnelle Seite, Google Business.
+              Immer mehr Menschen suchen nicht mehr bei Google, sondern fragen <strong>ChatGPT, Perplexity oder Google AI Overviews</strong>. GEO (Generative Engine Optimization) sorgt dafür, dass Ihr Unternehmen in diesen KI-Antworten auftaucht.
             </p>
             <p>
-              Wir versprechen keine Platz-1-Garantie. Das tut niemand Seriöses.
-              Wir liefern saubere technische Umsetzung, lokal relevante Inhalte
-              und die Grundlage, auf der Google Vertrauen aufbaut. Solide, messbar, langfristig.
+              Eine <strong>zukunftssichere Optimierung für die neue Art zu suchen</strong> – für mehr Reichweite ohne bezahlte Werbung.
             </p>
             <div class="feat-grid">
-              <div class="fg-item">On-Page SEO: Titles, Metas, Struktur</div>
-              <div class="fg-item">Technisches SEO: Ladezeit, Mobilität, SSL</div>
-              <div class="fg-item">Lokale Signale &amp; Standort-relevante Inhalte</div>
-              <div class="fg-item">Google Business Einrichtung &amp; Optimierung</div>
-              <div class="fg-item">Interne Verlinkung &amp; Seitenstruktur</div>
-              <div class="fg-item">Keyword-Recherche für Ihre Region</div>
+              <div class="fg-item">Sichtbarkeit in ChatGPT &amp; Perplexity</div>
+              <div class="fg-item">Optimierung für Google AI Overviews</div>
+              <div class="fg-item">Strukturierte, KI-lesbare Inhalte</div>
+              <div class="fg-item">Aufbau von Entitäten &amp; Erwähnungen</div>
+              <div class="fg-item">Zukunftssicher für die neue Suche</div>
+              <div class="fg-item">Mehr Reichweite ohne Werbebudget</div>
             </div>
-            <a href="https://evowebdesign.de/kostenlose-analyse" class="btn btn-ghost">Kostenlose Analyse anfragen &rarr;</a>
+            <a href="https://evowebdesign.de/geo-optimierung" class="btn btn-ghost">Mehr erfahren &rarr;</a>
           </div>
         </div>
 
-        <!-- Hosting -->
-        <div id="hosting" class="service-block">
+        <!-- Google Business -->
+        <div id="google-business" class="service-block">
           <div class="service-meta">
             <div class="service-num">03</div>
-            <h2>Hosting &amp;<br />Betreuung</h2>
-            <p style="margin-top:.5rem">Ihre Website läuft zuverlässig. Und wenn Sie etwas brauchen, sind wir da.</p>
+            <h2>Google Business<br />Profil Optimierung</h2>
+            <p style="margin-top:.5rem">Professionelle Einrichtung und Optimierung Ihres Google Unternehmensprofils.</p>
           </div>
           <div class="service-body">
             <p>
-              Kein Control-Panel, kein Ticketsystem. Sie schreiben uns auf WhatsApp. Wir antworten. Punkt.
+              Das Google Unternehmensprofil entscheidet, ob Sie in der lokalen Suche und in Google Maps gefunden werden. Wir richten es <strong>professionell ein und optimieren es</strong> – von Kategorien über Fotos bis zu Bewertungen.
             </p>
             <p>
-              Unsere Websites brauchen kaum Wartung, weil wir auf sauberen, leichtgewichtigen Code setzen. Kein WordPress-Updatechaos, keine Plugin-Konflikte. <strong>Wenn trotzdem etwas ist, kümmern wir uns.</strong>
+              Das Ergebnis: <strong>besseres Ranking in lokalen Suchergebnissen</strong>, mehr Bewertungen, mehr Vertrauen und mehr Kunden aus Ihrer Region.
             </p>
             <div class="feat-grid">
-              <div class="fg-item">SSL-Zertifikat &amp; HTTPS inklusive</div>
-              <div class="fg-item">Zuverlässiges Hosting, hohe Verfügbarkeit</div>
-              <div class="fg-item">Schnelle Ladezeiten durch optimierten Code</div>
-              <div class="fg-item">Anpassungen auf Anfrage per WhatsApp</div>
-              <div class="fg-item">Keine WordPress-Abhängigkeiten</div>
-              <div class="fg-item">Domain über IONOS – deutsches Rechenzentrum</div>
-              <div class="fg-item">Persönlicher Ansprechpartner, immer</div>
+              <div class="fg-item">Vollständige Profil-Einrichtung</div>
+              <div class="fg-item">Optimierte Kategorien &amp; Leistungen</div>
+              <div class="fg-item">Besseres Ranking in Google Maps</div>
+              <div class="fg-item">Strategie für mehr Bewertungen</div>
+              <div class="fg-item">Fotos, Beiträge &amp; Aktualität</div>
+              <div class="fg-item">Mehr Vertrauen, mehr Kunden</div>
             </div>
-            <a href="https://evowebdesign.de/kostenlose-analyse" class="btn btn-ghost">Kostenlose Analyse anfragen &rarr;</a>
+            <a href="https://evowebdesign.de/google-business-optimierung" class="btn btn-ghost">Mehr erfahren &rarr;</a>
           </div>
         </div>
 
@@ -762,7 +791,7 @@
             <span class="step-n">04</span>
             <div>
               <strong>Live. Fertig.</strong>
-              <p>Website geht online, KI-Agent wird aktiviert. Kurze Einführung von uns, dann gehört alles Ihnen.</p>
+              <p>Website geht online, KI-Bot wird aktiviert. Kurze Einführung von uns, dann gehört alles Ihnen.</p>
             </div>
           </li>
         </ol>
@@ -799,11 +828,11 @@
       </div>
     </section>
 
-    <!-- KI-Agent Problem Section -->
+    <!-- KI-Bot Problem Section -->
     <section class="ki-problem-section" style="background:#0D1117;padding:4rem 0;">
   <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;">
-    <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#fff;margin-bottom:1rem;">KI-Agent: Mehr Anfragen, weniger unnötige Telefonate</h2>
-    <p style="color:#8B949E;font-size:1.05rem;max-width:700px;margin-bottom:2rem;">Viele Betriebe werden täglich wegen derselben Fragen angerufen: Preise, Leistungen, Öffnungszeiten, Ablauf. Unser KI-Agent beantwortet solche Fragen direkt auf Ihrer Website, sammelt Kontaktdaten und leitet qualifizierte Anfragen an Sie weiter. So sparen Sie Zeit – und verlieren weniger Interessenten.</p>
+    <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#fff;margin-bottom:1rem;">KI-Bot: Mehr Anfragen, weniger unnötige Telefonate</h2>
+    <p style="color:#8B949E;font-size:1.05rem;max-width:700px;margin-bottom:2rem;">Viele Betriebe werden täglich wegen derselben Fragen angerufen: Preise, Leistungen, Öffnungszeiten, Ablauf. Unser KI-Bot beantwortet solche Fragen direkt auf Ihrer Website, sammelt Kontaktdaten und leitet qualifizierte Anfragen an Sie weiter. So sparen Sie Zeit – und verlieren weniger Interessenten.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-bottom:2.5rem;">
       <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
         <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">Häufige Fragen automatisch beantwortet</p>
@@ -811,7 +840,7 @@
       </div>
       <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
         <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">Kontaktdaten sammeln und weiterleiten</p>
-        <p style="color:#8B949E;font-size:0.9rem;">Der KI-Agent erfasst Name, Telefonnummer und Anliegen und leitet qualifizierte Anfragen direkt an Sie weiter.</p>
+        <p style="color:#8B949E;font-size:0.9rem;">Der KI-Bot erfasst Name, Telefonnummer und Anliegen und leitet qualifizierte Anfragen direkt an Sie weiter.</p>
       </div>
       <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
         <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">24/7 – auch außerhalb der Öffnungszeiten</p>
@@ -823,7 +852,7 @@
       </div>
       <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
         <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">Klingt nach Ihnen, nicht nach einem System</p>
-        <p style="color:#8B949E;font-size:0.9rem;">Wir richten den KI-Agenten mit Ihrer Sprache, Ihren Angeboten und Ihrem Ton ein – individuell für Ihr Unternehmen.</p>
+        <p style="color:#8B949E;font-size:0.9rem;">Wir richten den KI-Bot mit Ihrer Sprache, Ihren Angeboten und Ihrem Ton ein – individuell für Ihr Unternehmen.</p>
       </div>
       <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
         <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">Ideal für lokale Dienstleister &amp; Handwerksbetriebe</p>
@@ -854,7 +883,7 @@
             <img src="logo-nobg.png" alt="Evolved Web Designs Logo" width="32" height="32" />
             <span>Evolved Web Designs</span>
           </a>
-          <p class="footer-tagline">Websites, die Anfragen bringen – mit optionalem KI-Agent. Für Unternehmen am Bodensee.</p>
+          <p class="footer-tagline">Websites, die Anfragen bringen – mit optionalem KI-Bot. Für Unternehmen am Bodensee.</p>
           <div class="footer-socials">
             <a href="https://instagram.com/evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <img loading="lazy" src="icon-instagram.png" alt="EWD auf Instagram" width="14" height="14" />
@@ -866,9 +895,9 @@
         </div>
         <div class="footer-col">
           <h4>Leistungen</h4>
-          <a href="https://evowebdesign.de/leistungen">Website + KI-Agent</a>
-          <a href="https://evowebdesign.de/leistungen">Lokale SEO</a>
-          <a href="https://evowebdesign.de/leistungen">Hosting &amp; Betreuung</a>
+          <a href="https://evowebdesign.de/website-ki-bot">Website + KI-Bot</a>
+          <a href="https://evowebdesign.de/geo-optimierung">GEO / AI Search Optimierung</a>
+          <a href="https://evowebdesign.de/google-business-optimierung">Google Business Profil</a>
           <a href="https://evowebdesign.de/kostenlose-analyse">Kostenlose Analyse</a>
         </div>
         <div class="footer-col">
@@ -1000,7 +1029,7 @@
 <div id="ewd-ckb">
   <div id="ewd-ckb-text">
     <strong>🍪 Cookies &amp; Datenschutz</strong>
-    <p>Wir nutzen Google Fonts (externe Schriften) und einen KI-Agenten für Kundenanfragen. Chat-Nachrichten werden zur Verarbeitung an OpenAI (USA) übertragen. <a href="datenschutz">Datenschutzerklärung</a></p>
+    <p>Wir nutzen Google Fonts (externe Schriften) und einen KI-Bot für Kundenanfragen. Chat-Nachrichten werden zur Verarbeitung an OpenAI (USA) übertragen. <a href="datenschutz">Datenschutzerklärung</a></p>
   </div>
   <div class="ewd-ckb-btns">
     <button class="ewd-ckb-deny" onclick="ewdCkDeny()">Nur notwendige</button>
@@ -1025,7 +1054,7 @@
 })();
 </script>
 
-<!-- EWD KI-Agent Widget -->
+<!-- EWD KI-Bot Widget -->
 <style>
   /* ── Animations ── */
   @keyframes ewd-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
@@ -1128,7 +1157,7 @@
 <div id="ewd-chat">
   <div id="ewd-box">
     <div id="ewd-header">
-      <div class="ewd-hlogo"><img src="logo-nobg.png" alt="Evolved Web Designs KI-Agent" width="36" height="36" onerror="this.style.display='none';this.parentElement.innerHTML='&#x1F916;'" /></div>
+      <div class="ewd-hlogo"><img src="logo-nobg.png" alt="Evolved Web Designs KI-Bot" width="36" height="36" onerror="this.style.display='none';this.parentElement.innerHTML='&#x1F916;'" /></div>
       <div class="ewd-ht">
         <strong>KI-Assistent &middot; EWD</strong>
         <div class="ewd-on"><span class="ewd-dt"></span>&nbsp;Online &mdash; antwortet sofort</div>
