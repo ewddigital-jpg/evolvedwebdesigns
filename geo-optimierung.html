@@ -216,6 +216,15 @@
     .edu-card.rv,.edu-banner.rv{opacity:0;transform:translateY(22px)}
     .edu-card.rv.vi,.edu-banner.rv.vi{opacity:1;transform:none;transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
     @media (max-width:820px){ .edu-grid{grid-template-columns:1fr} .edu-banner{flex-direction:column;text-align:center} }
+    /* ── GEO price box ── */
+    .geo-price{ margin-top:1.75rem; background:linear-gradient(135deg, rgba(0,102,255,.10), rgba(0,217,255,.04)); border:1px solid var(--border-active); border-radius:16px; padding:1.5rem 1.75rem; display:flex; flex-wrap:wrap; align-items:center; gap:.5rem 1.75rem }
+    .geo-price-main{ display:flex; align-items:baseline; gap:.5rem }
+    .geo-price-num{ font-family:'Poppins',sans-serif; font-size:2.7rem; font-weight:900; line-height:1; letter-spacing:-.02em; background:linear-gradient(135deg,var(--primary-light),var(--accent)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent }
+    .geo-price-per{ font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:700; color:var(--text-soft) }
+    .geo-price-meta{ display:flex; flex-direction:column; gap:.15rem; font-size:.86rem; color:var(--text-secondary) }
+    .geo-price-link{ margin-left:auto; font-weight:700; font-size:.92rem; color:var(--accent); text-decoration:none; white-space:nowrap; transition:opacity .2s }
+    .geo-price-link:hover{ opacity:.8 }
+    @media(max-width:600px){ .geo-price{ flex-direction:column; align-items:flex-start } .geo-price-link{ margin-left:0 } }
   </style>
 </head>
 <body>
@@ -281,23 +290,6 @@
             <p>Empfehlungen direkt in KI-Antworten erreichen neue Interessenten – ganz ohne bezahltes Werbebudget.</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="detail" aria-label="Details">
-      <div class="wrap-narrow">
-        <span class="label">Was Sie bekommen</span>
-        <h2>Gefunden werden, wo gesucht wird.</h2>
-        <p style="margin-top:1rem">Die Suche verändert sich: Statt zehn blauer Links liefern <strong>ChatGPT, Perplexity und Google AI Overviews</strong> eine direkte Antwort. GEO (Generative Engine Optimization) stellt sicher, dass Ihr Unternehmen in diesen Antworten genannt und empfohlen wird – mit strukturierten, KI-lesbaren Inhalten und dem gezielten Aufbau von Erwähnungen.</p>
-        <div class="feat-grid">
-          <div class="fg-item">Sichtbarkeit in ChatGPT &amp; Perplexity</div>
-          <div class="fg-item">Optimierung für Google AI Overviews</div>
-          <div class="fg-item">Strukturierte, KI-lesbare Inhalte</div>
-          <div class="fg-item">Aufbau von Entitäten &amp; Erwähnungen</div>
-          <div class="fg-item">Zukunftssicher für die neue Suche</div>
-          <div class="fg-item">Mehr Reichweite ohne Werbebudget</div>
-        </div>
-        <p>GEO / AI Search Optimierung gibt es für <strong>199 € / Monat</strong>, monatlich kündbar. Noch günstiger im Paket <strong>Wachstum</strong> (zusammen mit der laufenden Google-Business-Betreuung): <strong>279 € / Monat statt 298 €</strong>.</p>
       </div>
     </section>
 
@@ -390,6 +382,33 @@
             <h3>Ihr Vorsprung in der Region</h3>
             <p>Die meisten Webdesigner am Bodensee haben AI-Suche noch nicht auf dem Radar. Wer jetzt strukturiert aufbaut, Bewertungen sammelt und KI-lesbare Inhalte hat, wird empfohlen – während andere unsichtbar bleiben. Genau diesen Vorsprung sichern wir Ihnen.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail" aria-label="Details">
+      <div class="wrap-narrow">
+        <span class="label">Was Sie bekommen</span>
+        <h2>Gefunden werden, wo gesucht wird.</h2>
+        <p style="margin-top:1rem">Statt zehn blauer Links liefern jetzt <strong>ChatGPT, Perplexity und Google AI Overviews</strong> eine direkte Antwort. GEO (Generative Engine Optimization) stellt sicher, dass Ihr Unternehmen in diesen Antworten genannt und empfohlen wird – mit strukturierten, KI-lesbaren Inhalten und dem gezielten Aufbau von Erwähnungen.</p>
+        <div class="feat-grid">
+          <div class="fg-item">Sichtbarkeit in ChatGPT &amp; Perplexity</div>
+          <div class="fg-item">Optimierung für Google AI Overviews</div>
+          <div class="fg-item">Strukturierte, KI-lesbare Inhalte</div>
+          <div class="fg-item">Aufbau von Entitäten &amp; Erwähnungen</div>
+          <div class="fg-item">Zukunftssicher für die neue Suche</div>
+          <div class="fg-item">Mehr Reichweite ohne Werbebudget</div>
+        </div>
+        <div class="geo-price">
+          <div class="geo-price-main">
+            <span class="geo-price-num">149&nbsp;€</span>
+            <span class="geo-price-per">/ Monat</span>
+          </div>
+          <div class="geo-price-meta">
+            <span>monatlich kündbar</span>
+            <span>setzt bestehende Website voraus</span>
+          </div>
+          <a href="https://evowebdesign.de/angebote#paket-ki-suche" class="geo-price-link">Im Paket-Überblick ansehen &rarr;</a>
         </div>
       </div>
     </section>
