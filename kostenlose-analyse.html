@@ -422,7 +422,7 @@
         <img src="logo-nobg.png" alt="Evolved Web Designs Logo" class="logo-mark" width="42" height="42" />
         <span class="logo-name">Evolved Web Designs</span>
       </a>
-      <button class="hamburger" id="menuBtn" aria-label="Menü" aria-expanded="false">
+      <button class="hamburger" id="menuBtn" aria-label="Menü" aria-expanded="false" onclick="var n=document.getElementById('navLinks');var o=n.classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',String(o));">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks" role="list">
@@ -431,7 +431,7 @@
         <li><a href="https://evowebdesign.de/projekte">Projekte</a></li>
         <li><a href="https://evowebdesign.de/ueber-uns">Über uns</a></li>
         <li><a href="https://evowebdesign.de/angebote">Angebote</a></li>
-        <li><a href="https://evowebdesign.de/kontakt" class="nav-cta">Jetzt anfragen</a></li>
+        <li><a href="https://evowebdesign.de/kostenlose-analyse" class="nav-cta">Kostenlose Analyse</a></li>
       </ul>
     </nav>
   </header>
@@ -823,11 +823,7 @@
     function setH(){hdr.className=window.scrollY>30?'scrolled':'top';}
     setH();
     window.addEventListener('scroll',setH,{passive:true});
-    menuBtn.addEventListener('click',function(){
-      var open=navEl.classList.toggle('open');
-      menuBtn.classList.toggle('open',open);
-      menuBtn.setAttribute('aria-expanded',''+open);
-    });
+
     document.addEventListener('click',function(e){
       if(!hdr.contains(e.target)&&navEl.classList.contains('open')){
         navEl.classList.remove('open');menuBtn.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');
@@ -860,15 +856,7 @@
   }
 
   document.querySelectorAll('.faq-q').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var expanded=this.getAttribute('aria-expanded')==='true';
-      var bodyId=this.getAttribute('aria-controls');
-      var body=document.getElementById(bodyId);
-      document.querySelectorAll('.faq-q').forEach(function(b){
-        b.setAttribute('aria-expanded','false');
-        var bBody=document.getElementById(b.getAttribute('aria-controls'));
-        if(bBody)bBody.classList.remove('open');
-      });
+
       if(!expanded){
         this.setAttribute('aria-expanded','true');
         if(body)body.classList.add('open');

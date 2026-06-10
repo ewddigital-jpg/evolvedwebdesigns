@@ -446,7 +446,52 @@
     .bc-sep{opacity:.25;font-size:.75rem}
     .bc-cur{color:var(--primary)!important;font-weight:600}
     @media(max-width:768px){.bc{padding-top:1rem}}
-    
+
+    /* ── LEISTUNGEN ROWS (Redesign 2026) ── */
+    .lstg{ padding:4rem 0; border-bottom:1px solid var(--border) }
+    .lstg:last-of-type{ border-bottom:none }
+    .lstg-row{ display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; max-width:1100px; margin:0 auto; padding:0 1.5rem }
+    .lstg-row.rev .lstg-visual{ order:-1 }
+    .lstg-eyebrow{ display:flex; align-items:center; gap:.6rem; margin-bottom:.85rem }
+    .lstg-eyebrow .n{ font-family:'Poppins',sans-serif; font-size:1.05rem; font-weight:900; letter-spacing:-.02em; background:linear-gradient(135deg,var(--primary-light),var(--accent)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent }
+    .lstg-eyebrow .t{ font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.16em; color:var(--primary-light) }
+    .lstg-row h2{ font-size:clamp(1.6rem,3.2vw,2.15rem); margin-bottom:.7rem }
+    .lstg-what{ font-size:1.05rem; color:var(--text-soft); line-height:1.75; margin-bottom:1.5rem }
+    .lstg-what b{ color:var(--text); font-weight:700 }
+    .lstg-benefits{ list-style:none; padding:0; margin:0 0 1.6rem; display:flex; flex-direction:column; gap:.8rem }
+    .lstg-benefits li{ position:relative; padding-left:2rem; font-size:1rem; color:var(--text-secondary); line-height:1.55 }
+    .lstg-benefits li svg{ position:absolute; left:0; top:.1rem; width:1.3rem; height:1.3rem; padding:.2rem; border-radius:50%; background:rgba(0,217,255,.12); color:var(--accent); box-sizing:border-box }
+    .lstg-stats{ display:flex; gap:1.5rem; flex-wrap:wrap; margin-bottom:1.75rem }
+    .lstg-stat{ display:flex; flex-direction:column; min-width:90px; padding:.85rem 1.15rem; background:var(--bg-card); border:1px solid var(--border); border-radius:12px }
+    .lstg-stat .num{ font-family:'Poppins',sans-serif; font-size:1.65rem; font-weight:900; letter-spacing:-.02em; line-height:1; background:linear-gradient(135deg,var(--primary-light),var(--accent)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent }
+    .lstg-stat .lbl{ font-size:.8rem; color:var(--text-secondary); margin-top:.4rem; line-height:1.35 }
+    .lstg-visual{ display:flex; align-items:center; justify-content:center; padding:2.5rem; border:1px solid var(--border-mid); border-radius:22px; position:relative; overflow:hidden; background:radial-gradient(ellipse 80% 70% at 50% 25%, rgba(0,102,255,.14), transparent 70%), var(--bg-card) }
+    .lstg-visual::after{ content:''; position:absolute; inset:0; background:radial-gradient(circle at 78% 82%, rgba(0,217,255,.1), transparent 55%); pointer-events:none }
+    .lstg-illu{ width:100%; max-width:330px; position:relative; z-index:1 }
+    .lstg-illu svg{ width:100%; height:auto; display:block; overflow:visible }
+    .lstg-cta{ display:inline-flex; align-items:center; gap:.45rem; font-family:'Inter',sans-serif; font-weight:700; font-size:.92rem; color:var(--accent); text-decoration:none; transition:gap .2s,opacity .2s }
+    .lstg-cta svg{ width:16px; height:16px; transition:transform .2s }
+    .lstg-cta:hover{ opacity:.82 } .lstg-cta:hover svg{ transform:translateX(4px) }
+
+    /* Add-on (EWD Editor) */
+    .lstg-addon{ max-width:1100px; margin:0 auto; padding:2.5rem 1.5rem 0 }
+    .addon-card{ display:grid; grid-template-columns:auto 1fr auto; gap:2rem; align-items:center; background:linear-gradient(135deg, rgba(0,102,255,.08), rgba(0,217,255,.04)), var(--bg-card); border:1px solid var(--border-mid); border-radius:20px; padding:2rem 2.25rem }
+    .addon-ico{ width:64px; height:64px; flex-shrink:0; color:var(--primary-light) }
+    .addon-ico svg{ width:100%; height:100% }
+    .addon-card h3{ font-size:1.25rem; margin-bottom:.4rem }
+    .addon-card p{ font-size:.98rem; color:var(--text-secondary); line-height:1.65; max-width:560px }
+    .addon-price{ text-align:center; flex-shrink:0 }
+    .addon-price .num{ font-family:'Poppins',sans-serif; font-size:2rem; font-weight:900; line-height:1; background:linear-gradient(135deg,var(--primary-light),var(--accent)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent }
+    .addon-price .lbl{ font-size:.78rem; color:var(--text-secondary); margin-top:.35rem }
+
+    @media (max-width:900px){
+      .lstg-row{ grid-template-columns:1fr; gap:2.25rem }
+      .lstg-row.rev .lstg-visual{ order:0 }
+      .lstg-visual{ padding:2rem; max-width:420px; margin:0 auto; width:100% }
+      .addon-card{ grid-template-columns:1fr; text-align:center; gap:1.1rem; justify-items:center }
+      .addon-card p{ max-width:none }
+    }
+
     </style>
 
 <!-- EWD Header Standard -->
@@ -547,111 +592,35 @@
   <!-- INTRO -->
     <div class="page-intro">
       <div class="wrap">
-        <h1>Drei Leistungen.<br /><span class="accent">Klar definiert.</span></h1>
+        <h1>Drei Leistungen.<br /><span class="accent">Klar erklärt.</span></h1>
         <p class="intro-sub">
-          Website mit KI-Assistent, GEO / AI Search Optimierung und Google Business Profil – aus einer Hand, für mehr Anfragen ohne Mehraufwand.
+          Website mit KI-Assistent, Sichtbarkeit in KI-Suchsystemen und ein starkes Google-Profil – verständlich erklärt, aus einer Hand. Für mehr Anfragen, ohne Mehraufwand für Sie.
         </p>
       </div>
     </div>
 
-    <!-- FEATURED: Website + KI-Assistent -->
-    <div class="featured">
-      <div class="wrap">
-        <div class="featured-inner">
-          <div class="featured-left">
-            <span class="label">Unser Hauptangebot</span>
-            <h2>Website + KI-Assistent</h2>
-            <div class="featured-price">
-              <strong>1.490&nbsp;€</strong>
-              <span>einmalig &middot; kein Abo</span>
-            </div>
-            <p>
-              Eine sauber programmierte Website für Ihr Unternehmen am Bodensee. Dazu ein <strong>KI-Assistent</strong>, der Kundenfragen beantwortet und Termine vormerkt, solange Sie Ihr eigentliches Geschäft führen.
-            </p>
-            <p>
-              Der KI-Assistent wird vollständig auf Ihr Unternehmen eingestellt: Ihre Preise, Ihre Leistungen, Ihre Sprache. Klingt nach Ihnen – nicht nach einem anonymen System.
-            </p>
-            <a href="https://evowebdesign.de/kostenlose-analyse" class="btn btn-primary" style="margin-top:.5rem">Kostenlose Analyse anfragen &rarr;</a>
+    <!-- LEISTUNG 01: Website + KI-Assistent -->
+    <section class="lstg" aria-label="Website mit KI-Assistent">
+      <div class="lstg-row rv" id="website-ki-bot">
+        <div class="lstg-content">
+          <div class="lstg-eyebrow"><span class="n">01</span><span class="t">Website + KI-Assistent</span></div>
+          <h2>Eine Website, die für Sie arbeitet</h2>
+          <p class="lstg-what">Eine moderne, schnelle Website – <b>plus ein digitaler Assistent</b>, der rund um die Uhr Kundenfragen beantwortet und Anfragen für Sie sammelt. Wie ein Mitarbeiter am Empfang, der nie Feierabend macht.</p>
+          <ul class="lstg-benefits">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Beantwortet Fragen zu Preisen, Leistungen &amp; Öffnungszeiten – automatisch</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sammelt Kontaktdaten und leitet Anfragen direkt an Sie weiter</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Voll auf Ihr Unternehmen, Ihre Sprache und Ihren Ton eingestellt</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sauberer Code, mobil-first und schnelle Ladezeiten</li>
+          </ul>
+          <div class="lstg-stats">
+            <div class="lstg-stat"><span class="num">24/7</span><span class="lbl">Assistent antwortet</span></div>
+            <div class="lstg-stat"><span class="num">2–4 Wo.</span><span class="lbl">bis Ihre Seite live ist</span></div>
+            <div class="lstg-stat"><span class="num">5–7</span><span class="lbl">Seiten inklusive</span></div>
           </div>
-
-          <div class="featured-right">
-            <div class="feat-list">
-              <div class="feat-item">
-                <span class="feat-check">&#10003;</span>
-                <div class="feat-item-text">
-                  <strong>Vollständige Website (5–7 Seiten)</strong>
-                  <span>Mobil-first, schnell geladen, sauber strukturiert.</span>
-                </div>
-              </div>
-              <div class="feat-item">
-                <span class="feat-check">&#10003;</span>
-                <div class="feat-item-text">
-                  <strong>KI-Assistent, eingebettet und auf Sie eingestellt</strong>
-                  <span>Beantwortet Fragen, bucht Termine, leitet Anfragen weiter. 24/7, automatisch.</span>
-                </div>
-              </div>
-              <div class="feat-item">
-                <span class="feat-check">&#10003;</span>
-                <div class="feat-item-text">
-                  <strong>GEO / AI Search Grundoptimierung</strong>
-                  <span>Sichtbar in KI-Suchsystemen wie ChatGPT, Perplexity &amp; Google AI Overviews.</span>
-                </div>
-              </div>
-              <div class="feat-item">
-                <span class="feat-check">&#10003;</span>
-                <div class="feat-item-text">
-                  <strong>Google Business Profil Optimierung</strong>
-                  <span>Einrichtung und Optimierung Ihres Eintrags für lokale Sichtbarkeit.</span>
-                </div>
-              </div>
-              <div class="feat-item">
-                <span class="feat-check">&#10003;</span>
-                <div class="feat-item-text">
-                  <strong>Conversion-Optimierung</strong>
-                  <span>Klare Struktur, CTAs und Nutzerführung für mehr Anfragen.</span>
-                </div>
-              </div>
-              <div class="feat-item">
-                <span class="feat-check">&#10003;</span>
-                <div class="feat-item-text">
-                  <strong>Fertig in 3–4 Wochen</strong>
-                  <span>Mit klarem Zeitplan und Zwischenständen.</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <a href="https://evowebdesign.de/website-ki-bot" class="lstg-cta">Mehr zum KI-Assistenten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
-      </div>
-    </div>
-
-
-    <!-- ZIELKUNDEN -->
-    <section class="sec" aria-label="Für wen">
-      <div class="wrap-narrow" style="text-align:center">
-        <span class="label">Für wen</span>
-        <h2>Gemacht für lokale Dienstleister.</h2>
-        <p style="color:var(--text-secondary);max-width:520px;margin:0 auto">Wir arbeiten ausschließlich mit lokalen Betrieben – Handwerk, Service und B2B am Bodensee und Umgebung.</p>
-        <div class="target-grid">
-          <div class="target-item">🔨 Handwerk</div>
-          <div class="target-item">🧹 Gebäudereinigung</div>
-          <div class="target-item">🔧 Sanitär &amp; Heizung</div>
-          <div class="target-item">⚡ Elektrik</div>
-          <div class="target-item">🐛 Schädlingsbekämpfung</div>
-          <div class="target-item">📦 Umzug &amp; Transport</div>
-          <div class="target-item">🚗 Autoaufbereitung</div>
-          <div class="target-item">🏢 Lokales B2B</div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- SERVICE CARDS -->
-    <section class="sec" aria-label="Leistungsübersicht" style="padding-top:2rem">
-      <div class="wrap">
-        <div class="svc-cards">
-          <article class="svc-card">
-            <div class="svc-illu" aria-hidden="true">
-              <svg viewBox="0 0 200 200">
+        <div class="lstg-visual">
+          <div class="lstg-illu" aria-hidden="true"><svg viewBox="0 0 200 200">
                 <rect x="20" y="40" width="122" height="98" rx="12" class="ill-bg2"/>
                 <rect x="20" y="40" width="122" height="98" rx="12" class="ill-st"/>
                 <circle cx="36" cy="54" r="3.2" class="ill-ac"/>
@@ -670,20 +639,33 @@
                   <circle cx="150" cy="127" r="5" class="ill-ac ill-blink"/>
                   <path d="M119 141 q16 11 32 0" class="ill-line-ac"/>
                 </g>
-              </svg>
-            </div>
-            <h3>Website + KI-Assistent</h3>
-            <p>Moderne, schnelle Website kombiniert mit einem intelligenten Chatbot.</p>
-            <ul class="svc-list">
-              <li>Beantwortet Kundenfragen automatisch – auch außerhalb der Öffnungszeiten</li>
-              <li>Mehr Anfragen, weniger Aufwand</li>
-              <li>Voll auf Ihr Unternehmen eingestellt</li>
-            </ul>
-            <a href="https://evowebdesign.de/website-ki-bot" class="svc-cta">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </article>
-          <article class="svc-card">
-            <div class="svc-illu" aria-hidden="true">
-              <svg viewBox="0 0 200 200">
+              </svg></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEISTUNG 02: GEO / AI Search -->
+    <section class="lstg" aria-label="GEO / AI Search Optimierung">
+      <div class="lstg-row rev rv" id="geo">
+        <div class="lstg-content">
+          <div class="lstg-eyebrow"><span class="n">02</span><span class="t">GEO / AI Search Optimierung</span></div>
+          <h2>Gefunden werden, wo heute gesucht wird</h2>
+          <p class="lstg-what">Immer mehr Menschen fragen <b>ChatGPT, Perplexity oder Google AI</b> statt klassisch zu googeln. Wir sorgen dafür, dass diese KI-Systeme Ihr Unternehmen kennen – und Sie aktiv empfehlen.</p>
+          <ul class="lstg-benefits">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sichtbar in ChatGPT, Perplexity &amp; Google AI Overviews</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Strukturierte, KI-lesbare Inhalte über Ihr Unternehmen</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Aufbau von Erwähnungen, die KI-Systemen vertrauen</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Zukunftssichere Reichweite – ganz ohne Werbebudget</li>
+          </ul>
+          <div class="lstg-stats">
+            <div class="lstg-stat"><span class="num">3</span><span class="lbl">KI-Systeme abgedeckt</span></div>
+            <div class="lstg-stat"><span class="num">0 €</span><span class="lbl">laufendes Werbebudget</span></div>
+            <div class="lstg-stat"><span class="num">24/7</span><span class="lbl">empfohlen</span></div>
+          </div>
+          <a href="https://evowebdesign.de/geo-optimierung" class="lstg-cta">Mehr zu GEO / AI Search <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <div class="lstg-visual">
+          <div class="lstg-illu" aria-hidden="true"><svg viewBox="0 0 200 200">
                 <circle cx="92" cy="84" r="54" class="ill-bg2"/>
                 <circle cx="92" cy="84" r="54" class="ill-line"/>
                 <ellipse cx="92" cy="84" rx="24" ry="54" class="ill-line" stroke-opacity=".55"/>
@@ -699,20 +681,33 @@
                   <line x1="98" y1="144" x2="105" y2="151" class="ill-line-ac"/>
                   <rect x="112" y="134" width="52" height="8" rx="4" class="ill-pl" fill-opacity=".55"/>
                 </g>
-              </svg>
-            </div>
-            <h3>GEO / AI Search Optimierung</h3>
-            <p>Sichtbarkeit in KI-Suchsystemen wie ChatGPT, Perplexity und Google AI Overviews.</p>
-            <ul class="svc-list">
-              <li>Zukunftssichere Optimierung für die neue Art zu suchen</li>
-              <li>Mehr Reichweite ohne bezahlte Werbung</li>
-              <li>Empfehlungen direkt in KI-Antworten</li>
-            </ul>
-            <a href="https://evowebdesign.de/geo-optimierung" class="svc-cta">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </article>
-          <article class="svc-card">
-            <div class="svc-illu" aria-hidden="true">
-              <svg viewBox="0 0 200 200">
+              </svg></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEISTUNG 03: Google Business Profil -->
+    <section class="lstg" aria-label="Google Business Profil Optimierung">
+      <div class="lstg-row rv" id="google-business">
+        <div class="lstg-content">
+          <div class="lstg-eyebrow"><span class="n">03</span><span class="t">Google Business Profil</span></div>
+          <h2>Top sichtbar in Ihrer Region</h2>
+          <p class="lstg-what">Ihr Eintrag bei <b>Google Maps und in der lokalen Suche</b>. Wir richten ihn so ein, dass Sie gefunden werden, wenn jemand in Ihrer Nähe nach Ihrer Leistung sucht – mit mehr Bewertungen und mehr Vertrauen.</p>
+          <ul class="lstg-benefits">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Vollständige, optimierte Einrichtung Ihres Profils</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Besseres Ranking in Google Maps &amp; lokaler Suche</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Strategie für mehr echte Bewertungen</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Mehr Anrufe und Anfragen aus Ihrer Region</li>
+          </ul>
+          <div class="lstg-stats">
+            <div class="lstg-stat"><span class="num">Top&nbsp;3</span><span class="lbl">lokale Platzierung als Ziel</span></div>
+            <div class="lstg-stat"><span class="num">5,0&nbsp;★</span><span class="lbl">Bewertungs-Strategie</span></div>
+            <div class="lstg-stat"><span class="num">Maps</span><span class="lbl">sichtbar &amp; aktuell</span></div>
+          </div>
+          <a href="https://evowebdesign.de/google-business-optimierung" class="lstg-cta">Mehr zum Google-Profil <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <div class="lstg-visual">
+          <div class="lstg-illu" aria-hidden="true"><svg viewBox="0 0 200 200">
                 <rect x="26" y="38" width="148" height="110" rx="14" class="ill-bg2"/>
                 <rect x="26" y="38" width="148" height="110" rx="14" class="ill-st"/>
                 <path d="M26 102 H68 L90 80 H146" class="ill-line" stroke-opacity=".3"/>
@@ -730,103 +725,43 @@
                   <path d="M0,-7 L1.6,-2.2 L6.7,-2.2 L2.6,1 L4,6 L0,3 L-4,6 L-2.6,1 L-6.7,-2.2 L-1.6,-2.2 Z" transform="translate(119 170)"/>
                   <path d="M0,-7 L1.6,-2.2 L6.7,-2.2 L2.6,1 L4,6 L0,3 L-4,6 L-2.6,1 L-6.7,-2.2 L-1.6,-2.2 Z" transform="translate(138 170)" fill-opacity=".4"/>
                 </g>
-              </svg>
-            </div>
-            <h3>Google Business Profil Optimierung</h3>
-            <p>Professionelle Einrichtung und Optimierung Ihres Google Unternehmensprofils.</p>
-            <ul class="svc-list">
-              <li>Besseres Ranking in lokalen Suchergebnissen und Google Maps</li>
-              <li>Mehr Bewertungen, mehr Vertrauen</li>
-              <li>Mehr Kunden aus Ihrer Region</li>
-            </ul>
-            <a href="https://evowebdesign.de/google-business-optimierung" class="svc-cta">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </article>
+              </svg></div>
         </div>
       </div>
     </section>
 
-    <!-- LEISTUNGEN DETAIL -->
-    <section class="services" aria-label="Alle Leistungen">
-      <div class="wrap">
-
-        <!-- Website + KI-Assistent -->
-        <div id="website-ki-bot" class="service-block">
-          <div class="service-meta">
-            <div class="service-num">01</div>
-            <h2>Website +<br />KI-Assistent</h2>
-            <p style="margin-top:.5rem">Moderne, schnelle Website kombiniert mit einem intelligenten Chatbot.</p>
-          </div>
-          <div class="service-body">
-            <p>
-              Wir bauen keine Templates. Jede Website entsteht <strong>mobile-first</strong> mit Blick auf Ihre Kunden, Ihr Angebot und Ihren Standort. Dazu ein KI-Assistent, der Besucher empfängt und häufige Fragen sofort beantwortet.
-            </p>
-            <p>
-              Der Bot beantwortet Kundenfragen <strong>automatisch, auch außerhalb der Öffnungszeiten</strong> – das bedeutet mehr Anfragen bei weniger Aufwand für Sie.
-            </p>
-            <div class="feat-grid">
-              <div class="fg-item">Individuelles, mobile-first Design</div>
-              <div class="fg-item">Schnelle Ladezeiten, sauberer Code</div>
-              <div class="fg-item">KI-Assistent beantwortet Fragen rund um die Uhr</div>
-              <div class="fg-item">Sammelt Kontaktdaten &amp; leitet Anfragen weiter</div>
-              <div class="fg-item">Voll auf Ihr Unternehmen eingestellt</div>
-              <div class="fg-item">Mehr Anfragen, weniger Aufwand</div>
-            </div>
-            <a href="https://evowebdesign.de/website-ki-bot" class="btn btn-ghost">Mehr erfahren &rarr;</a>
-          </div>
+    <!-- ADD-ON: EWD Editor -->
+    <div class="lstg-addon">
+      <div class="addon-card rv">
+        <div class="addon-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div>
+        <div>
+          <span class="label" style="margin-bottom:.5rem">Optionales Add-on</span>
+          <h3>EWD Editor – Ihr eigenes CMS</h3>
+          <p>Texte und Bilder selbst ändern, ohne technisches Wissen: Seite aufrufen, anklicken, bearbeiten, speichern – live in 60 Sekunden. Kein Drittanbieter, monatlich kündbar.</p>
         </div>
-
-        <!-- GEO / AI Search -->
-        <div id="geo" class="service-block">
-          <div class="service-meta">
-            <div class="service-num">02</div>
-            <h2>GEO / AI Search<br />Optimierung</h2>
-            <p style="margin-top:.5rem">Sichtbarkeit in KI-Suchsystemen wie ChatGPT, Perplexity und Google AI Overviews.</p>
-          </div>
-          <div class="service-body">
-            <p>
-              Immer mehr Menschen suchen nicht mehr bei Google, sondern fragen <strong>ChatGPT, Perplexity oder Google AI Overviews</strong>. GEO (Generative Engine Optimization) sorgt dafür, dass Ihr Unternehmen in diesen KI-Antworten auftaucht.
-            </p>
-            <p>
-              Eine <strong>zukunftssichere Optimierung für die neue Art zu suchen</strong> – für mehr Reichweite ohne bezahlte Werbung.
-            </p>
-            <div class="feat-grid">
-              <div class="fg-item">Sichtbarkeit in ChatGPT &amp; Perplexity</div>
-              <div class="fg-item">Optimierung für Google AI Overviews</div>
-              <div class="fg-item">Strukturierte, KI-lesbare Inhalte</div>
-              <div class="fg-item">Aufbau von Entitäten &amp; Erwähnungen</div>
-              <div class="fg-item">Zukunftssicher für die neue Suche</div>
-              <div class="fg-item">Mehr Reichweite ohne Werbebudget</div>
-            </div>
-            <a href="https://evowebdesign.de/geo-optimierung" class="btn btn-ghost">Mehr erfahren &rarr;</a>
-          </div>
+        <div class="addon-price">
+          <div class="num">19 €</div>
+          <div class="lbl">pro Monat<br>monatlich kündbar</div>
         </div>
+      </div>
+    </div>
 
-        <!-- Google Business -->
-        <div id="google-business" class="service-block">
-          <div class="service-meta">
-            <div class="service-num">03</div>
-            <h2>Google Business<br />Profil Optimierung</h2>
-            <p style="margin-top:.5rem">Professionelle Einrichtung und Optimierung Ihres Google Unternehmensprofils.</p>
-          </div>
-          <div class="service-body">
-            <p>
-              Das Google Unternehmensprofil entscheidet, ob Sie in der lokalen Suche und in Google Maps gefunden werden. Wir richten es <strong>professionell ein und optimieren es</strong> – von Kategorien über Fotos bis zu Bewertungen.
-            </p>
-            <p>
-              Das Ergebnis: <strong>besseres Ranking in lokalen Suchergebnissen</strong>, mehr Bewertungen, mehr Vertrauen und mehr Kunden aus Ihrer Region.
-            </p>
-            <div class="feat-grid">
-              <div class="fg-item">Vollständige Profil-Einrichtung</div>
-              <div class="fg-item">Optimierte Kategorien &amp; Leistungen</div>
-              <div class="fg-item">Besseres Ranking in Google Maps</div>
-              <div class="fg-item">Strategie für mehr Bewertungen</div>
-              <div class="fg-item">Fotos, Beiträge &amp; Aktualität</div>
-              <div class="fg-item">Mehr Vertrauen, mehr Kunden</div>
-            </div>
-            <a href="https://evowebdesign.de/google-business-optimierung" class="btn btn-ghost">Mehr erfahren &rarr;</a>
-          </div>
+    <!-- ZIELKUNDEN -->
+    <section class="sec" aria-label="Für wen" style="padding:4rem 0;border-top:1px solid var(--border)">
+      <div class="wrap-narrow" style="text-align:center">
+        <span class="label">Für wen</span>
+        <h2>Gemacht für lokale Dienstleister.</h2>
+        <p style="color:var(--text-secondary);max-width:540px;margin:.6rem auto 0;font-size:1rem">Wir arbeiten ausschließlich mit lokalen Betrieben – Handwerk, Service und B2B am Bodensee und in der Region.</p>
+        <div class="target-grid">
+          <div class="target-item">Handwerk</div>
+          <div class="target-item">Gebäudereinigung</div>
+          <div class="target-item">Sanitär &amp; Heizung</div>
+          <div class="target-item">Elektrik</div>
+          <div class="target-item">Schädlingsbekämpfung</div>
+          <div class="target-item">Umzug &amp; Transport</div>
+          <div class="target-item">Autoaufbereitung</div>
+          <div class="target-item">Lokales B2B</div>
         </div>
-
       </div>
     </section>
 
@@ -838,28 +773,28 @@
           <h2>So läuft es ab.</h2>
         </div>
         <ol class="steps">
-          <li class="step">
+          <li class="step rv">
             <span class="step-n">01</span>
             <div>
               <strong>Kurzes Gespräch</strong>
               <p>Sie erzählen, was Sie brauchen. 20 Minuten, kein Verkaufsgespräch. Wir stellen die richtigen Fragen.</p>
             </div>
           </li>
-          <li class="step">
+          <li class="step rv">
             <span class="step-n">02</span>
             <div>
               <strong>Konkretes Angebot</strong>
               <p>Festpreis, Zeitrahmen, genaue Leistung. Schriftlich. Kein Kleingedrucktes.</p>
             </div>
           </li>
-          <li class="step">
+          <li class="step rv">
             <span class="step-n">03</span>
             <div>
               <strong>Bau mit Zwischenständen</strong>
               <p>Wir bauen, Sie sehen den Fortschritt. Keine bösen Überraschungen am Ende.</p>
             </div>
           </li>
-          <li class="step">
+          <li class="step rv">
             <span class="step-n">04</span>
             <div>
               <strong>Live. Fertig.</strong>
@@ -870,82 +805,17 @@
       </div>
     </div>
 
-
-    <!-- EWD EDITOR -->
-    <section class="sec" id="editor" aria-labelledby="editor-heading">
-      <div class="wrap">
-        <div class="featured-inner">
-          <div class="featured-left">
-            <span class="label">Add-on · 19 €/Monat</span>
-            <h2 id="editor-heading">EWD Editor.<br /><span class="accent">Ihr eigenes CMS.</span></h2>
-            <p>Kein Drittanbieter, kein technisches Wissen nötig. Mit dem EWD Editor bearbeiten Sie Texte und Bilder <strong>direkt auf Ihrer Website</strong>: einfach URL aufrufen, Passwort eingeben, fertig. Monatlich kündbar.</p>
-            <ul style="list-style:none;padding:0;margin-top:1.25rem;display:flex;flex-direction:column;gap:.6rem">
-              <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;color:var(--text-secondary)"><span style="color:var(--primary-light);font-weight:700">–</span> Texte anklicken &amp; direkt bearbeiten</li>
-              <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;color:var(--text-secondary)"><span style="color:var(--primary-light);font-weight:700">–</span> Bilder per Klick austauschen</li>
-              <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;color:var(--text-secondary)"><span style="color:var(--primary-light);font-weight:700">–</span> Sektionen per Drag &amp; Drop verschieben</li>
-              <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;color:var(--text-secondary)"><span style="color:var(--primary-light);font-weight:700">–</span> Speichern → live in 60 Sekunden</li>
-              <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;color:var(--text-secondary)"><span style="color:var(--primary-light);font-weight:700">–</span> Kein Login bei Drittanbietern &middot; kein Abo</li>
-            </ul>
-            <a href="https://evowebdesign.de/kostenlose-analyse" class="btn btn-primary" style="margin-top:1.5rem">Kostenlose Analyse anfragen &rarr;</a>
-          </div>
-          <div class="featured-right">
-            <div class="feat-list">
-              <div class="feat-item"><span class="feat-check">&#10003;</span><div class="feat-item-text"><strong>19 €/Monat, monatlich kündbar</strong><span>Als Add-on zu jedem unserer Pakete buchbar. Einrichten übernehmen wir.</span></div></div>
-              <div class="feat-item"><span class="feat-check">&#10003;</span><div class="feat-item-text"><strong>Kein technisches Wissen nötig</strong><span>Einfach URL aufrufen, Passwort eingeben, fertig.</span></div></div>
-              <div class="feat-item"><span class="feat-check">&#10003;</span><div class="feat-item-text"><strong>Eigene Lösung</strong><span>Entwickelt von EWD, speziell für statische Websites gebaut.</span></div></div>
-              <div class="feat-item"><span class="feat-check">&#10003;</span><div class="feat-item-text"><strong>Änderungen live in 60 Sek.</strong><span>Kein CMS-Dashboard, keine Wartezeit, keine Abhängigkeit.</span></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- KI-Assistent Problem Section -->
-    <section class="ki-problem-section" style="background:#0D1117;padding:4rem 0;">
-  <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;">
-    <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#fff;margin-bottom:1rem;">KI-Assistent: Mehr Anfragen, weniger unnötige Telefonate</h2>
-    <p style="color:#8B949E;font-size:1.05rem;max-width:700px;margin-bottom:2rem;">Viele Betriebe werden täglich wegen derselben Fragen angerufen: Preise, Leistungen, Öffnungszeiten, Ablauf. Unser KI-Assistent beantwortet solche Fragen direkt auf Ihrer Website, sammelt Kontaktdaten und leitet qualifizierte Anfragen an Sie weiter. So sparen Sie Zeit – und verlieren weniger Interessenten.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-bottom:2.5rem;">
-      <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
-        <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">Häufige Fragen automatisch beantwortet</p>
-        <p style="color:#8B949E;font-size:0.9rem;">Preise, Leistungen, Öffnungszeiten – Besucher bekommen sofort Antworten, ohne dass Sie den Hörer abnehmen müssen.</p>
-      </div>
-      <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
-        <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">Kontaktdaten sammeln und weiterleiten</p>
-        <p style="color:#8B949E;font-size:0.9rem;">Der KI-Assistent erfasst Name, Telefonnummer und Anliegen und leitet qualifizierte Anfragen direkt an Sie weiter.</p>
-      </div>
-      <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
-        <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">24/7 – auch außerhalb der Öffnungszeiten</p>
-        <p style="color:#8B949E;font-size:0.9rem;">Interessenten erhalten auch abends und am Wochenende Antworten – keine verpassten Anfragen mehr nach Feierabend.</p>
-      </div>
-      <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
-        <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">Entlastet Telefon, E-Mail und WhatsApp</p>
-        <p style="color:#8B949E;font-size:0.9rem;">Weniger Unterbrechungen durch Standardanfragen – mehr Zeit für Kunden, die wirklich eine Beratung brauchen.</p>
-      </div>
-      <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
-        <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">Klingt nach Ihnen, nicht nach einem System</p>
-        <p style="color:#8B949E;font-size:0.9rem;">Wir richten den KI-Assistent mit Ihrer Sprache, Ihren Angeboten und Ihrem Ton ein – individuell für Ihr Unternehmen.</p>
-      </div>
-      <div style="background:#161B22;border:1px solid #21262d;border-radius:12px;padding:1.25rem 1.5rem;">
-        <p style="color:#fff;font-weight:600;margin-bottom:0.4rem;">Ideal für lokale Dienstleister &amp; Handwerksbetriebe</p>
-        <p style="color:#8B949E;font-size:0.9rem;">Praxen, Studios, Handwerker, Berater – überall dort, wo Anfragen über die Website kommen könnten, aber bisher nicht kommen.</p>
-      </div>
-    </div>
-    <a href="/kostenlose-analyse" style="display:inline-block;background:linear-gradient(135deg,#0066FF,#00D9FF);color:#fff;font-weight:600;padding:0.9rem 2rem;border-radius:8px;text-decoration:none;font-size:1rem;">Anfrage-Agent unverbindlich besprechen</a>
-  </div>
-</section>
-
     <!-- CTA -->
     <div class="cta-band">
       <h2>Noch unsicher? Starten Sie mit einer kostenlosen Analyse.</h2>
       <p>Wir schauen uns Ihre aktuelle Website an und zeigen Ihnen, was funktioniert und was Sie Kunden kostet. Kostenlos, persönlich, ohne Haken.</p>
       <div class="cta-btns">
         <a href="https://evowebdesign.de/kostenlose-analyse" class="btn btn-primary">Kostenlose Website-Analyse starten &rarr;</a>
-        <a href="https://evowebdesign.de/angebote" class="btn btn-ghost">Anfrage-Potenzial prüfen lassen</a>
+        <a href="https://evowebdesign.de/angebote" class="btn btn-ghost">Pakete &amp; Preise ansehen</a>
       </div>
     </div>
 
-  </main>
+    </main>
 
   <footer>
     <div class="footer-inner">
@@ -1001,11 +871,6 @@
   var menuBtn=document.getElementById('menuBtn');
   var navEl=document.getElementById('navLinks');
   window.addEventListener('scroll',function(){hdr.className=window.scrollY>30?'scrolled':'top';},{passive:true});
-  menuBtn.addEventListener('click',function(){
-    var open=navEl.classList.toggle('open');
-    menuBtn.classList.toggle('open',open);
-    menuBtn.setAttribute('aria-expanded',''+open);
-  });
   navEl.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click',function(){
       navEl.classList.remove('open');
@@ -1026,7 +891,7 @@
         io.unobserve(el);
       });
     },{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
-    var _els=document.querySelectorAll('.service-block,.featured,.step');
+    var _els=document.querySelectorAll('.lstg-row,.addon-card,.target-item,.step');
     _els.forEach(function(el){el.classList.add('rv');});
     requestAnimationFrame(function(){requestAnimationFrame(function(){
       _els.forEach(function(el){io.observe(el);});
@@ -1046,12 +911,6 @@
   window.addEventListener('scroll',setH,{passive:true});
   var btn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
   if(btn&&nav){
-    btn.addEventListener('click',function(){
-      var o=nav.classList.contains('open');
-      nav.classList.toggle('open',!o);
-      btn.classList.toggle('open',!o);
-      btn.setAttribute('aria-expanded',String(!o));
-    });
     document.addEventListener('click',function(e){
       if(!hdr.contains(e.target)&&nav.classList.contains('open')){
         nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');
