@@ -1,11 +1,11 @@
-# robots.txt für evowebdesign.de
+# robots.txt für evowebdesign.ch
 # Optimiert für Google, Bing und andere Suchmaschinen
 
 User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://evowebdesign.de/sitemap.xml
+Sitemap: https://evowebdesign.ch/sitemap.xml
 
 # Verbiete bestimmte Ordner (falls vorhanden)
 Disallow: /admin/
