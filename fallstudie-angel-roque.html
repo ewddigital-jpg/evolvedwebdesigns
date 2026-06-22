@@ -174,11 +174,14 @@
         .result-pair-caption { padding:.75rem 1rem; font-size:.8rem; color:var(--text-secondary); text-align:center }
 
         /* ── SHOWCASE (Angel Roque) ── */
-        .case-shot { border-radius:16px; overflow:hidden; border:1px solid var(--border); background:var(--bg-lighter); margin-top:2.5rem; display:block; box-shadow:0 18px 50px rgba(0,0,0,.35) }
+        .case-shot { border-radius:16px; overflow:hidden; border:1px solid var(--border); background:var(--bg-lighter); margin-top:2.5rem; display:block; box-shadow:0 18px 50px rgba(0,0,0,.35); text-decoration:none; color:inherit; transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease }
+        a.case-shot:hover { transform:translateY(-4px); box-shadow:0 24px 64px rgba(0,0,0,.5); border-color:var(--border-hover) }
+        a.case-shot:hover .case-shot-cap { color:var(--text) }
         .case-shot img { width:100%; height:auto; display:block }
         .case-duo { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:2.5rem }
         .case-duo .case-shot { margin-top:0 }
-        .case-shot-cap { padding:.7rem 1.1rem; font-size:.78rem; color:var(--text-secondary); border-top:1px solid var(--border); text-align:center }
+        .case-shot-cap { padding:.7rem 1.1rem; font-size:.78rem; color:var(--text-secondary); border-top:1px solid var(--border); text-align:center; transition:color .3s ease }
+        .case-shot-cap .live { color:var(--accent); font-weight:700; white-space:nowrap }
         @media (max-width:768px) { .case-duo { grid-template-columns:1fr } }
         .placeholder-note { font-size:.78rem; color:var(--text-secondary); text-align:center; margin-top:.9rem; font-style:italic; opacity:.85 }
 
@@ -336,9 +339,10 @@
       <span class="case-section-label">Unsere Lösung</span>
       <h2>Eine Website im Look eines Filmplakats</h2>
       <p>Wir haben Angel eine Online-Präsenz gebaut, die seine Ausstrahlung transportiert: kompromisslos, kraftvoll und cineastisch – in der Farbwelt der dominikanischen Flagge. Die Seite erzählt seine Geschichte, zeigt Bilanz und Titel und macht ihn für Sponsoren in Sekunden greifbar.</p>
-      <div class="case-shot">
+      <a class="case-shot" href="https://angel-roque.com" target="_blank" rel="noopener" aria-label="Startseite von angel-roque.com in neuem Tab öffnen">
         <img src="case-angel-hero.jpg?v=2" alt="Angel Roque Website – cineastischer Hero-Bereich mit Siegespose" width="1600" height="900" loading="lazy">
-      </div>
+        <div class="case-shot-cap">Startseite · <span class="live">Live ansehen ↗</span></div>
+      </a>
     </div>
   </section>
 
@@ -430,20 +434,20 @@
       <h2>Ausgewählte Sektionen</h2>
       <p>Jeder Bereich der Website folgt dem cineastischen Look und führt den Besucher gezielt weiter – von der animierten Vita über die Profibilanz bis zu den Kampfmomenten im Ring.</p>
 
-      <div class="case-shot">
+      <a class="case-shot" href="https://angel-roque.com/vita" target="_blank" rel="noopener" aria-label="Vita-Seite von angel-roque.com in neuem Tab öffnen">
         <img src="case-angel-vita.jpg" alt="Vita-Seite der Angel Roque Website – cineastisches Scroll-Storytelling mit gepinnten Szenen" width="1600" height="900" loading="lazy">
-        <div class="case-shot-cap">Vita · cineastisches Scroll-Storytelling von der Dominikanischen Republik in die Schweiz</div>
-      </div>
+        <div class="case-shot-cap">Vita · cineastisches Scroll-Storytelling von der Dominikanischen Republik in die Schweiz · <span class="live">Live ansehen ↗</span></div>
+      </a>
 
       <div class="case-duo">
-        <div class="case-shot">
+        <a class="case-shot" href="https://angel-roque.com/kaempfe" target="_blank" rel="noopener" aria-label="Kämpfe-Seite von angel-roque.com in neuem Tab öffnen">
           <img src="case-angel-kaempfe.jpg" alt="Kämpfe-Seite der Angel Roque Website – WBC-Francophone-Champion und Profibilanz 11-0-1" width="1300" height="731" loading="lazy">
-          <div class="case-shot-cap">Kämpfe · WBC-Francophone-Champion &amp; Profibilanz</div>
-        </div>
-        <div class="case-shot">
+          <div class="case-shot-cap">Kämpfe · WBC-Francophone-Champion &amp; Profibilanz · <span class="live">Live ↗</span></div>
+        </a>
+        <a class="case-shot" href="https://angel-roque.com/medien" target="_blank" rel="noopener" aria-label="Medien-Seite von angel-roque.com in neuem Tab öffnen">
           <img src="case-angel-medien.jpg" alt="Medien-Seite der Angel Roque Website – dramatischer Kampfmoment mit Schlag-Impact" width="1300" height="731" loading="lazy">
-          <div class="case-shot-cap">Medien · Fight-Highlights &amp; Pressestimmen</div>
-        </div>
+          <div class="case-shot-cap">Medien · Fight-Highlights &amp; Pressestimmen · <span class="live">Live ↗</span></div>
+        </a>
       </div>
     </div>
   </section>
