@@ -333,21 +333,6 @@
     .hero-btns { display:flex; gap:.8rem; flex-wrap:wrap; justify-content:center; animation:fadeUp .8s ease .45s both; margin-bottom:.9rem }
     .hero-note { font-size:.8rem; color:var(--text-secondary); animation:fadeUp .7s ease .55s both; margin-bottom:3rem }
 
-    .hero-stats {
-      display: flex; gap:0; flex-wrap:wrap; justify-content:center;
-      border-top: 1px solid var(--border);
-      width: 100%; max-width:760px;
-      animation: fadeUp .7s ease .65s both;
-    }
-    .hstat {
-      flex: 1 1 160px;
-      padding: 1.4rem 1rem;
-      text-align: center;
-      border-right: 1px solid var(--border);
-    }
-    .hstat:last-child { border-right:none }
-    .hstat strong { display:block; font-family:'Poppins',sans-serif; font-size:1.6rem; font-weight:900; color:var(--text); letter-spacing:-.02em }
-    .hstat span { font-size:.78rem; color:var(--text-secondary); display:block; margin-top:.15rem }
 
     /* ── SERVICES ── */
     .srv-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem; margin-top:2.5rem }
@@ -570,9 +555,6 @@
       .hamburger { display:flex }
       .hero { padding:3rem 1.25rem 3rem }
       .hero h1 { font-size:clamp(2.2rem,9vw,3.2rem) }
-      .hstat { flex-basis:50%; border-right:1px solid var(--border) }
-      .hstat:nth-child(2n) { border-right:none }
-      .hstat:nth-child(n+3) { border-top:1px solid var(--border) }
       .srv-grid { grid-template-columns:1fr }
       .price-grid { grid-template-columns:1fr }
       .sec { padding:1.25rem 0 }
@@ -585,8 +567,6 @@
       .hero-btns { flex-direction:column; width:100% }
       .hero-btns .btn { width:100%; justify-content:center }
       .cta-btns { flex-direction:column; align-items:center }
-      .hstat { flex-basis:100%; border-right:none; border-top:1px solid var(--border) }
-      .hstat:first-child { border-top:none }
     }
 
     /* ── SCARCITY BADGE ── */
@@ -694,25 +674,6 @@
       </div>
 
       <p class="hero-note">Kein Kleingedrucktes. Zahlung nach Abnahme. Antwort innerhalb von 24h.</p>
-
-      <div class="hero-stats">
-        <div class="hstat">
-          <strong>CHF&nbsp;990</strong>
-          <span>ab diesem Preis</span>
-        </div>
-        <div class="hstat">
-          <strong>2–4 Wo.</strong>
-          <span>bis Ihre Seite live ist</span>
-        </div>
-        <div class="hstat">
-          <strong>24/7</strong>
-          <span>KI-Assistent antwortet</span>
-        </div>
-        <div class="hstat">
-          <strong>Festpreis</strong>
-          <span>kein Stundenhonorar</span>
-        </div>
-      </div>
     </section>
 
     <!-- TESTIMONIAL -->
