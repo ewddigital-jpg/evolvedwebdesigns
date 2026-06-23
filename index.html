@@ -208,7 +208,7 @@
       --radius-sm: 10px;
     }
 
-    html { scroll-behavior: smooth }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
@@ -307,7 +307,7 @@
     .hero {
       display: flex; flex-direction:column; align-items:center; justify-content:flex-start;
       text-align: center;
-      padding: 4rem 1.5rem 3rem;
+      padding: 4rem 1.5rem 1.5rem;
       position: relative; overflow:hidden;
     }
     .hero h1 {
@@ -330,8 +330,8 @@
       animation: fadeUp .8s ease .3s both;
     }
     .hero-desc strong { color:var(--text-soft); font-weight:600 }
-    .hero-btns { display:flex; gap:.8rem; flex-wrap:wrap; justify-content:center; animation:fadeUp .8s ease .45s both; margin-bottom:.9rem }
-    .hero-note { font-size:.8rem; color:var(--text-secondary); animation:fadeUp .7s ease .55s both; margin-bottom:3rem }
+    .hero-btns { display:flex; gap:.8rem; flex-wrap:wrap; justify-content:center; animation:fadeUp .8s ease .45s both }
+    .testi-sec { padding-top:1rem }
 
 
     /* ── SERVICES ── */
@@ -553,7 +553,7 @@
       }
       .nav-links.open { display:flex }
       .hamburger { display:flex }
-      .hero { padding:3rem 1.25rem 3rem }
+      .hero { padding:3rem 1.25rem 1.25rem }
       .hero h1 { font-size:clamp(2.2rem,9vw,3.2rem) }
       .srv-grid { grid-template-columns:1fr }
       .price-grid { grid-template-columns:1fr }
@@ -667,11 +667,9 @@
       </p>
 
       <div class="hero-btns">
-        <a href="https://evowebdesign.ch/kostenlose-analyse" class="btn btn-primary">Kostenlose Website-Analyse starten &rarr;</a>
-        <a href="https://evowebdesign.ch/angebote" class="btn btn-ghost">KI-Assistent unverbindlich besprechen</a>
+        <a href="https://evowebdesign.ch/kontakt" class="btn btn-primary">Kostenloses Erstgespräch sichern &rarr;</a>
+        <a href="#preise" class="btn btn-ghost">Preise ansehen</a>
       </div>
-
-      <p class="hero-note">Kein Kleingedrucktes. Zahlung nach Abnahme. Antwort innerhalb von 24h.</p>
     </section>
 
     <!-- TESTIMONIAL -->
