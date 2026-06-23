@@ -576,22 +576,28 @@
     .testi-rating { display:flex; align-items:center; gap:.5rem }
     .testi-stars { color:#FBBF24; font-size:1rem; letter-spacing:.05em }
     .testi-score { font-size:.82rem; color:var(--text-secondary) }
-    .testi-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem }
-    .testi-card { display:flex; flex-direction:column; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.6rem; position:relative; transition:border-color .25s,transform .25s }
-    .testi-card:hover { border-color:var(--border-active); transform:translateY(-3px) }
-    .testi-top { display:flex; align-items:center; gap:.85rem; margin-bottom:1rem }
-    .testi-avatar { width:46px; height:46px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--accent)); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.1rem; color:#fff; flex-shrink:0 }
-    .testi-id { display:flex; flex-direction:column; min-width:0 }
-    .testi-name { font-size:.92rem; color:var(--text); font-weight:700; line-height:1.2 }
-    .testi-role { font-size:.74rem; color:var(--text-secondary); line-height:1.3; margin-top:.15rem }
-    .testi-top .testi-stars { margin-left:auto; font-size:.92rem; flex-shrink:0 }
-    .testi-quote { font-size:.92rem; color:var(--text-soft); line-height:1.78; margin-bottom:1.1rem; flex:1 }
-    .testi-foot { display:flex; align-items:center; justify-content:space-between; gap:.75rem; flex-wrap:wrap; padding-top:.95rem; border-top:1px solid var(--border) }
-    .testi-verified { display:flex; align-items:center; gap:.45rem; font-size:.72rem; color:var(--text-secondary) }
-    .testi-g { width:20px; height:20px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:.78rem; color:#4285F4; flex-shrink:0; box-shadow:0 1px 4px rgba(0,0,0,.25) }
-    .testi-foot a { color:var(--primary-light); text-decoration:none; font-size:.78rem; font-weight:600; white-space:nowrap }
-    .testi-foot a:hover { text-decoration:underline }
-    @media(max-width:780px){ .testi-grid{ grid-template-columns:1fr } }
+    /* Proof-Karte: Projekt + Bewertung in einer Einheit */
+    .proof-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem }
+    .proof-card { display:flex; flex-direction:column; background:var(--bg-card); border:1px solid var(--border); border-radius:18px; overflow:hidden; text-decoration:none; transition:transform .28s ease, border-color .28s ease, box-shadow .28s ease }
+    .proof-card:hover { transform:translateY(-4px); border-color:var(--border-active); box-shadow:0 18px 40px rgba(0,0,0,.32) }
+    .proof-shot { position:relative; line-height:0 }
+    .proof-shot img { width:100%; height:190px; object-fit:cover; object-position:top center; display:block; border-bottom:1px solid var(--border) }
+    .proof-tag { position:absolute; top:.8rem; left:.8rem; font-size:.66rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#fff; background:rgba(10,12,18,.7); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.14); padding:.32rem .7rem; border-radius:999px }
+    .proof-body { display:flex; flex-direction:column; flex:1; padding:1.5rem 1.5rem 1.35rem }
+    .proof-stars { color:#FBBF24; font-size:1rem; letter-spacing:.08em; margin-bottom:.7rem }
+    .proof-quote { font-size:.96rem; color:var(--text-soft); line-height:1.75; margin:0 0 1.25rem; flex:1 }
+    .proof-quote strong { color:var(--text); font-weight:700 }
+    .proof-person { display:flex; align-items:center; gap:.8rem; padding-top:1.1rem; border-top:1px solid var(--border) }
+    .proof-avatar { width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--accent)); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.05rem; color:#fff; flex-shrink:0 }
+    .proof-id { display:flex; flex-direction:column; min-width:0; flex:1 }
+    .proof-name { font-size:.9rem; color:var(--text); font-weight:700; line-height:1.2 }
+    .proof-role { font-size:.74rem; color:var(--text-secondary); line-height:1.3; margin-top:.15rem }
+    .proof-g { width:26px; height:26px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:.95rem; color:#4285F4; flex-shrink:0; box-shadow:0 1px 5px rgba(0,0,0,.28) }
+    .proof-link { display:inline-block; margin-top:1.15rem; color:var(--accent); font-weight:700; font-size:.9rem; transition:transform .2s ease }
+    .proof-card:hover .proof-link { transform:translateX(4px) }
+    .proof-note { display:flex; align-items:center; justify-content:center; gap:.5rem; margin-top:1.4rem; font-size:.8rem; color:var(--text-secondary) }
+    .proof-g-sm { width:18px; height:18px; border-radius:50%; background:#fff; display:inline-flex; align-items:center; justify-content:center; font-weight:900; font-size:.7rem; color:#4285F4; box-shadow:0 1px 4px rgba(0,0,0,.25) }
+    @media(max-width:780px){ .proof-grid{ grid-template-columns:1fr } }
 
     /* ── FORM WHATSAPP ALT ── */
     .form-wa-alt { display:flex; align-items:center; justify-content:center; gap:.6rem; margin-top:.35rem; font-size:.78rem; color:var(--text-secondary) }
@@ -611,14 +617,6 @@
     .target-grid{display:flex;flex-wrap:wrap;gap:.65rem;justify-content:center;margin-top:1.5rem}
     .target-item{background:var(--bg-card);border:1px solid var(--border);border-radius:999px;padding:.45rem 1.1rem;font-size:.82rem;color:var(--text-secondary)}
 
-    /* ── REFERENZ-KARTE (Proof) ── */
-    .ref-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:1.25rem }
-    .ref-card{ display:flex; flex-direction:column; background:var(--bg-card); border:1px solid var(--border); border-radius:16px; overflow:hidden; text-decoration:none; transition:transform .25s,border-color .25s,box-shadow .25s }
-    .ref-card:hover{ transform:translateY(-3px); border-color:var(--border-active); box-shadow:0 14px 34px rgba(0,0,0,.28) }
-    .ref-card img{ width:100%; height:200px; object-fit:cover; object-position:top center; border-bottom:1px solid var(--border); display:block }
-    .ref-card .ref-body{ padding:1.35rem }
-    .ref-card .rc-arrow{ color:var(--accent); font-weight:700; font-size:.92rem }
-    @media(max-width:780px){ .ref-grid{ grid-template-columns:1fr } }
   </style>
 
 <style id="wa-left">
@@ -687,60 +685,49 @@
           </div>
         </div>
 
-        <div class="testi-grid">
-          <div class="testi-card">
-            <div class="testi-top">
-              <div class="testi-avatar">A</div>
-              <div class="testi-id">
-                <span class="testi-name">Angel Roque</span>
-                <span class="testi-role">Profiboxer &middot; WBC Francophone Champion</span>
+        <div class="proof-grid">
+          <a href="https://evowebdesign.ch/fallstudie-angel-roque" class="proof-card">
+            <div class="proof-shot">
+              <img src="angel-roque_screenshot.jpg" alt="Website von Angel Roque – Profiboxer" loading="lazy" />
+              <span class="proof-tag">Live-Projekt</span>
+            </div>
+            <div class="proof-body">
+              <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="proof-quote">&bdquo;Das Webdesign ist <strong>modern, professionell</strong> und genau nach meinen Vorstellungen umgesetzt. Das Ergebnis hat <strong>meine Erwartungen sogar übertroffen</strong> &ndash; ich kann die Zusammenarbeit <strong>uneingeschränkt weiterempfehlen.</strong>&ldquo;</p>
+              <div class="proof-person">
+                <div class="proof-avatar">A</div>
+                <div class="proof-id">
+                  <span class="proof-name">Angel Roque</span>
+                  <span class="proof-role">Profiboxer &middot; WBC&nbsp;Francophone&nbsp;Champion</span>
+                </div>
+                <span class="proof-g" title="Verifizierte Google-Rezension">G</span>
               </div>
-              <span class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            </div>
-            <p class="testi-quote">&bdquo;Ich bin sehr zufrieden. Das Webdesign ist <strong>modern, professionell</strong> und genau nach meinen Vorstellungen umgesetzt. Die Kommunikation war <strong>freundlich, super schnell und sehr zuverlässig</strong> &ndash; das Ergebnis hat <strong>meine Erwartungen sogar übertroffen.</strong> Besonders beeindruckt haben mich die Kreativität, die Liebe zum Detail und die technische Umsetzung. Ich kann die Zusammenarbeit <strong>uneingeschränkt weiterempfehlen.</strong>&ldquo;</p>
-            <div class="testi-foot">
-              <span class="testi-verified"><span class="testi-g">G</span> Verifizierte Google-Rezension</span>
-              <a href="https://angel-roque.com" target="_blank" rel="noopener">Projekt ansehen &rarr;</a>
-            </div>
-          </div>
-
-          <div class="testi-card">
-            <div class="testi-top">
-              <div class="testi-avatar">K</div>
-              <div class="testi-id">
-                <span class="testi-name">KK Gebäudereinigung</span>
-                <span class="testi-role">Lokaler Dienstleister &middot; Friedrichshafen</span>
-              </div>
-              <span class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            </div>
-            <p class="testi-quote">&bdquo;Sehr gute Arbeit. Die Webseite sieht <strong>modern</strong> aus und wurde <strong>schnell umgesetzt.</strong> Kommunikation war top und auf meine Wünsche wurde eingegangen. <strong>Gerne wieder.</strong>&ldquo;</p>
-            <div class="testi-foot">
-              <span class="testi-verified"><span class="testi-g">G</span> Verifizierte Google-Rezension</span>
-              <a href="https://kkreinigung.com" target="_blank" rel="noopener">Projekt ansehen &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="ref-grid">
-          <a href="https://evowebdesign.ch/fallstudie-angel-roque" class="ref-card">
-            <img src="angel-roque_screenshot.jpg" alt="Website von Angel Roque – Profiboxer" loading="lazy" />
-            <div class="ref-body">
-              <span class="label">Referenz · Live-Projekt</span>
-              <h3 style="font-family:'Poppins',sans-serif;font-size:1.15rem;font-weight:800;color:var(--text);margin-bottom:.4rem;line-height:1.25">Angel Roque, Profiboxer</h3>
-              <p style="color:var(--text-secondary);font-size:.92rem;line-height:1.65;margin-bottom:.7rem">Cinematische Personal-Brand-Website mit Scrollytelling für einen WBC-Champion &ndash; modern, schnell und einzigartig umgesetzt.</p>
-              <span class="rc-arrow">Fallstudie ansehen &rarr;</span>
+              <span class="proof-link">Fallstudie ansehen &rarr;</span>
             </div>
           </a>
-          <a href="https://evowebdesign.ch/fallstudie-kk-reinigung" class="ref-card">
-            <img src="kk-website_screenshot.png" alt="Website von KK Gebäudereinigung" loading="lazy" />
-            <div class="ref-body">
-              <span class="label">Referenz · Live-Projekt</span>
-              <h3 style="font-family:'Poppins',sans-serif;font-size:1.15rem;font-weight:800;color:var(--text);margin-bottom:.4rem;line-height:1.25">KK Gebäudereinigung, Friedrichshafen</h3>
-              <p style="color:var(--text-secondary);font-size:.92rem;line-height:1.65;margin-bottom:.7rem">Moderne Website mit klarer Anfrageführung &ndash; in wenigen Wochen live. Ergebnis: ein rundum zufriedener Kunde und 5,0&nbsp;★ auf Google.</p>
-              <span class="rc-arrow">Fallstudie ansehen &rarr;</span>
+
+          <a href="https://evowebdesign.ch/fallstudie-kk-reinigung" class="proof-card">
+            <div class="proof-shot">
+              <img src="kk-website_screenshot.png" alt="Website von KK Gebäudereinigung" loading="lazy" />
+              <span class="proof-tag">Live-Projekt</span>
+            </div>
+            <div class="proof-body">
+              <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="proof-quote">&bdquo;Sehr gute Arbeit. Die Webseite sieht <strong>modern</strong> aus und wurde <strong>schnell umgesetzt.</strong> Kommunikation war top und auf meine Wünsche wurde eingegangen. <strong>Gerne wieder.</strong>&ldquo;</p>
+              <div class="proof-person">
+                <div class="proof-avatar">K</div>
+                <div class="proof-id">
+                  <span class="proof-name">KK Gebäudereinigung</span>
+                  <span class="proof-role">Lokaler Dienstleister &middot; Friedrichshafen</span>
+                </div>
+                <span class="proof-g" title="Verifizierte Google-Rezension">G</span>
+              </div>
+              <span class="proof-link">Fallstudie ansehen &rarr;</span>
             </div>
           </a>
         </div>
+
+        <p class="proof-note"><span class="proof-g-sm">G</span> Verifizierte Google-Rezensionen &middot; 5,0 von 5 Sternen</p>
       </div>
     </section>
 
