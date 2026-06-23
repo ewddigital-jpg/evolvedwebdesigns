@@ -7,18 +7,18 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <title>Eine Website, die auch nachts Anfragen beantwortet</title>
-  <meta name="description" content="Moderne Website mit KI-Assistent, der Kundenanfragen automatisch beantwortet, auch nachts und am Wochenende. Mehr Anfragen bei weniger Aufwand." />
+  <title>Ratgeber für mehr Anfragen über Ihre Website</title>
+  <meta name="description" content="Praktische Tipps für lokale Betriebe: Was eine Website kostet, warum sie keine Anfragen bringt und wie Sie online und in der KI-Suche gefunden werden." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://evowebdesign.ch/website-ki-bot" />
-  <link rel="alternate" hreflang="de-CH" href="https://evowebdesign.ch/website-ki-bot" />
-  <link rel="alternate" hreflang="x-default" href="https://evowebdesign.ch/website-ki-bot" />
+  <link rel="canonical" href="https://evowebdesign.ch/ratgeber" />
+  <link rel="alternate" hreflang="de-CH" href="https://evowebdesign.ch/ratgeber" />
+  <link rel="alternate" hreflang="x-default" href="https://evowebdesign.ch/ratgeber" />
 
-  <meta property="og:title" content="Eine Website, die auch nachts Anfragen beantwortet" />
-  <meta property="og:description" content="Moderne Website mit KI-Assistent, der Anfragen automatisch beantwortet. Mehr Anfragen bei weniger Aufwand." />
+  <meta property="og:title" content="Ratgeber für mehr Anfragen über Ihre Website" />
+  <meta property="og:description" content="Praktische Tipps für lokale Betriebe: Website-Kosten, mehr Anfragen und Sichtbarkeit bei Google und in der KI-Suche." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://evowebdesign.ch/logo-nobg.png" />
-  <meta property="og:url" content="https://evowebdesign.ch/website-ki-bot" />
+  <meta property="og:url" content="https://evowebdesign.ch/ratgeber" />
   <meta property="og:locale" content="de_CH" />
 
   <link rel="icon" href="favicon.ico" sizes="48x48" />
@@ -29,13 +29,25 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Website + KI-Assistent",
-    "serviceType": "Webdesign mit KI-Chatbot",
-    "provider": { "@type": "Organization", "name": "EWD – Evolved Web Design", "legalName": "Evolved Web Design", "url": "https://evowebdesign.ch" },
-    "areaServed": "Thurgau, Frauenfeld, Kreuzlingen, Weinfelden, Romanshorn",
-    "description": "Moderne, schnelle Website kombiniert mit einem intelligenten Chatbot, der Kundenfragen automatisch beantwortet – auch außerhalb der Öffnungszeiten.",
-    "url": "https://evowebdesign.ch/website-ki-bot"
+    "@type": "Blog",
+    "name": "EWD Ratgeber",
+    "description": "Ratgeber für lokale Betriebe rund um Website, Sichtbarkeit bei Google und in der KI-Suche.",
+    "url": "https://evowebdesign.ch/ratgeber",
+    "publisher": { "@type": "Organization", "name": "EWD – Evolved Web Design", "url": "https://evowebdesign.ch", "logo": "https://evowebdesign.ch/logo-nobg.png" },
+    "blogPost": [
+      { "@type": "BlogPosting", "headline": "Was kostet eine professionelle Website in der Schweiz?", "url": "https://evowebdesign.ch/ratgeber-website-kosten-schweiz", "datePublished": "2026-06-23" },
+      { "@type": "BlogPosting", "headline": "7 Gründe, warum Ihre Website keine Anfragen bringt", "url": "https://evowebdesign.ch/ratgeber-website-keine-anfragen", "datePublished": "2026-06-23" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://evowebdesign.ch/" },
+      { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://evowebdesign.ch/ratgeber" }
+    ]
   }
   </script>
 
@@ -68,7 +80,6 @@
     .skip{position:absolute;left:-9999px}
     .skip:focus{left:1rem;top:1rem;z-index:9999;background:var(--bg-card);color:var(--text);padding:.6rem 1rem;border-radius:8px;border:1px solid var(--border-active)}
 
-    /* HEADER */
     header{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .3s,box-shadow .3s,border-color .3s}
     header.top{background:rgba(13,17,23,0.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent}
     header.scrolled{background:rgba(13,17,23,0.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);box-shadow:0 1px 0 var(--border),0 4px 24px rgba(0,0,0,.28)}
@@ -94,16 +105,14 @@
     .hamburger.open span:nth-child(2){opacity:0}
     .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
 
-    /* WHATSAPP */
     .wa{position:fixed;bottom:24px;left:24px;z-index:9999;animation:floatY 3.5s ease-in-out infinite}
     .wa a{width:56px;height:56px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.38);transition:transform .2s;text-decoration:none}
     .wa a:hover{transform:scale(1.1)}
     .wa img{width:28px;height:28px}
 
-    /* LAYOUT */
     main{padding-top:70px;position:relative;z-index:1}
     .wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
-    .wrap-narrow{max-width:780px;margin:0 auto;padding:0 1.5rem}
+    .wrap-narrow{max-width:760px;margin:0 auto;padding:0 1.5rem}
     h1{font-family:'Poppins',sans-serif;font-size:clamp(2rem,4.5vw,3rem);font-weight:900;line-height:1.1;letter-spacing:-.03em}
     h2{font-family:'Poppins',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;line-height:1.18;letter-spacing:-.02em}
     h3{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;line-height:1.3}
@@ -115,7 +124,6 @@
     .btn-ghost{background:transparent;color:var(--text-soft);border:1px solid var(--border-mid)}
     .btn-ghost:hover{border-color:rgba(240,246,252,.26);background:rgba(240,246,252,.04)}
 
-    /* BREADCRUMB */
     .bc{padding:1.25rem 1.5rem .75rem;max-width:1100px;margin:0 auto;display:block;box-sizing:border-box}
     .bc ol{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center;padding:0;margin:0;flex-wrap:wrap}
     .bc a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
@@ -124,37 +132,14 @@
     .bc-sep{opacity:.25;font-size:.75rem}
     .bc-cur{color:var(--primary)!important;font-weight:600}
 
-    /* PAGE INTRO / HERO */
     .page-intro{padding:1rem 0 3rem;border-bottom:1px solid var(--border);text-align:center;animation:fadeUp .7s ease .1s both}
     .intro-sub{font-size:1.05rem;color:var(--text-secondary);max-width:640px;margin:.75rem auto 0;line-height:1.75}
-    .hero-cta{margin-top:1.75rem;display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
 
-    /* SVC CARDS (Standard) */
-    .svc-section{padding:3.25rem 0;border-bottom:1px solid var(--border)}
-    .svc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-    .svc-card{position:relative;background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:2rem 1.75rem;display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
-    .svc-card:hover{transform:translateY(-8px);border-color:var(--border-active);box-shadow:0 18px 40px rgba(0,0,0,.28),0 0 0 1px var(--svc-glow),0 0 32px var(--svc-glow)}
-    .svc-ico{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem;color:var(--primary-light);background:linear-gradient(135deg,rgba(0,102,255,.16),rgba(0,217,255,.08));border:1px solid var(--border-mid);transition:transform .3s ease}
-    .svc-card:hover .svc-ico{transform:scale(1.06)}
-    .svc-ico svg{width:28px;height:28px}
-    .svc-card h3{font-family:'Poppins',sans-serif;font-size:1.12rem;font-weight:800;color:var(--text);line-height:1.25;margin-bottom:.55rem}
-    .svc-card > p{font-size:.9rem;color:var(--text-secondary);line-height:1.7}
-
-    /* DETAIL */
-    .detail{padding:3.25rem 0;border-bottom:1px solid var(--border)}
-    .detail .wrap-narrow > p{font-size:1rem;color:var(--text-secondary);line-height:1.85;margin-bottom:1.25rem}
-    .detail strong{color:var(--text-soft);font-weight:600}
-    .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.45rem;margin:1.5rem 0}
-    .fg-item{display:flex;gap:.6rem;align-items:flex-start;font-size:.88rem;color:var(--text-soft);line-height:1.5;padding:.6rem .75rem;background:var(--bg-card);border-radius:8px;border:1px solid var(--border)}
-    .fg-item::before{content:'\2713';color:var(--primary-light);font-weight:700;font-size:.78rem;flex-shrink:0;margin-top:.1rem}
-
-    /* CTA BAND */
     .cta-band{padding:3.5rem 0;text-align:center}
     .cta-band h2{margin-bottom:.65rem}
     .cta-band p{color:var(--text-secondary);max-width:500px;margin:0 auto 1.75rem;font-size:.95rem;line-height:1.8}
     .cta-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
 
-    /* FOOTER */
     footer{background:var(--bg-card);border-top:1px solid var(--border);padding:3.5rem 0 0}
     .footer-inner{max-width:1200px;margin:0 auto;padding:0 1.5rem}
     .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border)}
@@ -175,47 +160,36 @@
     .footer-legal a{font-size:.78rem;color:var(--text-secondary);text-decoration:none;transition:color .2s}
     .footer-legal a:hover{color:var(--text)}
 
-    @media (max-width:900px){.svc-cards{grid-template-columns:1fr}}
+    /* RATGEBER HUB */
+    .art-section{padding:3rem 0 3.5rem}
+    .art-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .art-card{display:flex;flex-direction:column;background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:1.85rem;text-decoration:none;transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+    .art-card:hover{transform:translateY(-4px);border-color:var(--border-active);box-shadow:0 18px 40px rgba(0,0,0,.3)}
+    .art-cat{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--primary-light);margin-bottom:.8rem}
+    .art-card h2{font-family:'Poppins',sans-serif;font-size:1.22rem;font-weight:800;color:var(--text);margin-bottom:.6rem;line-height:1.3}
+    .art-card p{font-size:.92rem;color:var(--text-secondary);line-height:1.7;flex:1;margin-bottom:1.1rem}
+    .art-meta{font-size:.76rem;color:var(--text-secondary)}
+    .art-readmore{color:var(--accent);font-weight:700;font-size:.88rem;margin-top:1rem;display:inline-block;transition:transform .2s ease}
+    .art-card:hover .art-readmore{transform:translateX(4px)}
+
     @media (max-width:1024px){.footer-top{grid-template-columns:1fr 1fr}}
+    @media (max-width:780px){.art-grid{grid-template-columns:1fr}}
     @media (max-width:768px){
       nav{padding:.8rem 1.25rem}
       .nav-links{display:none;position:fixed;top:62px;left:0;right:0;flex-direction:column;background:rgba(13,17,23,.98);backdrop-filter:blur(20px);padding:1.75rem 1.5rem;gap:1rem;border-top:1px solid var(--border);box-shadow:0 8px 32px rgba(0,0,0,.4)}
       .nav-links.open{display:flex}
       .hamburger{display:flex}
-      .feat-grid{grid-template-columns:1fr}
       .footer-top{grid-template-columns:1fr;gap:2rem}
       .footer-bottom{flex-direction:column;align-items:flex-start;gap:.5rem}
     }
-    @media (max-width:480px){.cta-btns,.hero-cta{flex-direction:column;align-items:center}}
-    @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-    .ki-two-col { display:grid; grid-template-columns:1fr 1fr; gap:3.5rem; align-items:start }
-    .ki-features { display:flex; flex-direction:column; gap:.75rem }
-    .ki-feat { display:flex; gap:1rem; align-items:flex-start; padding:1.25rem; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; transition:border-color .2s }
-    .ki-feat:hover { border-color:rgba(0,102,255,.35) }
-    .ki-feat-icon { width:36px; height:36px; border-radius:8px; background:linear-gradient(135deg,var(--primary),var(--accent)); flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#fff }
-    .ki-feat-text strong { display:block; font-size:.9rem; font-weight:700; color:var(--text); margin-bottom:.2rem }
-    .ki-feat-text span { font-size:.82rem; color:var(--text-secondary); line-height:1.55 }
-    .chat-card { background:var(--bg-card); border:1px solid rgba(0,102,255,.18); border-radius:var(--radius); overflow:hidden }
-    .chat-bar { display:flex; align-items:center; gap:.55rem; padding:.85rem 1.25rem; border-bottom:1px solid var(--border); font-size:.7rem; font-weight:700; color:var(--text-secondary); text-transform:uppercase; letter-spacing:.08em }
-    .live-dot { width:6px; height:6px; border-radius:50%; background:#22c55e; animation:blink 2s ease-in-out infinite; flex-shrink:0 }
-    .chat-body { padding:1.25rem; display:flex; flex-direction:column; gap:.75rem }
-    .msg { display:flex; gap:.55rem; align-items:flex-end }
-    .msg.out { flex-direction:row-reverse }
-    .avatar { width:26px; height:26px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:.78rem }
-    .avatar.u { background:rgba(255,255,255,.07) }
-    .avatar.b { background:linear-gradient(135deg,var(--primary),var(--accent)) }
-    .bubble { border-radius:12px 12px 12px 3px; padding:.6rem .9rem; font-size:.83rem; color:var(--text-soft); line-height:1.5; max-width:82%; background:rgba(255,255,255,.05); border:1px solid var(--border) }
-    .msg.out .bubble { border-radius:12px 12px 3px 12px; background:rgba(0,102,255,.1); border-color:rgba(0,102,255,.22); margin-left:auto }
-    .chat-sep { text-align:center; font-size:.65rem; color:var(--text-secondary); padding:.1rem 0 }
-    .chat-note { padding:.75rem 1.25rem; border-top:1px solid var(--border); font-size:.76rem; color:var(--text-secondary); line-height:1.5 }
-    @media (max-width:768px){ .ki-two-col { grid-template-columns:1fr } }
+    @media (max-width:480px){.cta-btns{flex-direction:column;align-items:center}}
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Zum Inhalt springen</a>
 
   <div class="wa">
-    <a href="https://wa.me/41783175991?text=Hallo%20EWD!%20Ich%20interessiere%20mich%20fuer%20eine%20Website%20mit%20KI-Assistent." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <a href="https://wa.me/41783175991?text=Hallo%20EWD!%20Ich%20habe%20eine%20Frage%20zu%20meiner%20Website." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
       <img loading="lazy" src="icon-whatsapp.png" alt="WhatsApp" width="28" height="28" />
     </a>
   </div>
@@ -242,150 +216,43 @@
   </header>
 
   <main id="main">
-    <nav class="bc" aria-label="Breadcrumb"><ol><li><a href="https://evowebdesign.ch/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li><a href="https://evowebdesign.ch/leistungen">Leistungen</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Website + KI-Assistent</li></ol></nav>
+    <nav class="bc" aria-label="Breadcrumb"><ol><li><a href="https://evowebdesign.ch/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Ratgeber</li></ol></nav>
 
     <div class="page-intro">
       <div class="wrap">
-        <span class="label">Leistung</span>
-        <h1>Website + <span class="accent">KI-Assistent</span></h1>
-        <p class="intro-sub">Moderne, schnelle Website kombiniert mit einem intelligenten Chatbot, der Kundenfragen automatisch beantwortet – auch außerhalb der Öffnungszeiten. Mehr Anfragen, weniger Aufwand.</p>
-        <div class="hero-cta">
-          <a href="https://evowebdesign.ch/kostenlose-analyse" class="btn btn-primary">Kostenlose Analyse anfragen &rarr;</a>
-          <a href="https://evowebdesign.ch/angebote" class="btn btn-ghost">Pakete &amp; Preise</a>
-        </div>
+        <span class="label">Ratgeber</span>
+        <h1>Mehr Anfragen über <span class="accent">Ihre Website.</span></h1>
+        <p class="intro-sub">Praktische Tipps für lokale Betriebe – verständlich erklärt, ohne Fachchinesisch. Was eine Website wirklich kostet, warum sie keine Anfragen bringt und wie Sie online und in der KI-Suche gefunden werden.</p>
       </div>
     </div>
 
-    <section class="svc-section" aria-label="Vorteile">
+    <section class="art-section" aria-label="Artikel">
       <div class="wrap">
-        <div class="svc-cards">
-          <article class="svc-card">
-            <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="8" y1="10" x2="8" y2="10"/><line x1="12" y1="10" x2="12" y2="10"/><line x1="16" y1="10" x2="16" y2="10"/></svg></div>
-            <h3>Moderne, schnelle Website</h3>
-            <p>Individuelles, mobile-first Design mit sauberem Code und kurzen Ladezeiten – kombiniert mit einem intelligenten Chatbot.</p>
-          </article>
-          <article class="svc-card">
-            <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-            <h3>Antworten rund um die Uhr</h3>
-            <p>Der Bot beantwortet Kundenfragen automatisch, auch außerhalb der Öffnungszeiten – kein Interessent geht nach Feierabend verloren.</p>
-          </article>
-          <article class="svc-card">
-            <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-            <h3>Mehr Anfragen, weniger Aufwand</h3>
-            <p>Routinefragen werden automatisch beantwortet, qualifizierte Anfragen landen direkt bei Ihnen. Sie sparen Zeit und gewinnen Kunden.</p>
-          </article>
+        <div class="art-grid">
+          <a href="https://evowebdesign.ch/ratgeber-website-kosten-schweiz" class="art-card">
+            <span class="art-cat">Kosten &amp; Pakete</span>
+            <h2>Was kostet eine professionelle Website in der Schweiz?</h2>
+            <p>Vom Baukasten bis zur Agentur: Womit Sie rechnen müssen, welche laufenden Kosten dazukommen und wie Sie versteckte Kosten vermeiden.</p>
+            <span class="art-meta">Lesezeit ca. 6 Min.</span>
+            <span class="art-readmore">Artikel lesen &rarr;</span>
+          </a>
+          <a href="https://evowebdesign.ch/ratgeber-website-keine-anfragen" class="art-card">
+            <span class="art-cat">Mehr Anfragen</span>
+            <h2>7 Gründe, warum Ihre Website keine Anfragen bringt</h2>
+            <p>Ihre Seite ist online, aber das Telefon bleibt still? Diese sieben Fehler kosten Sie Kunden – und so beheben Sie jeden einzelnen.</p>
+            <span class="art-meta">Lesezeit ca. 7 Min.</span>
+            <span class="art-readmore">Artikel lesen &rarr;</span>
+          </a>
         </div>
-      </div>
-    </section>
-
-    <section class="sec" aria-label="KI-Assistent">
-      <div class="wrap">
-        <div style="max-width:660px;margin-bottom:3rem">
-          <span class="label">Live-Demo</span>
-          <h2>Der KI-Assistent: <span class="accent">Ihr digitaler Anfrage-Assistent</span></h2>
-          <p style="color:var(--text-secondary);margin-top:.75rem;font-size:.95rem;line-height:1.85">
-            Kennen Sie das? Immer dieselben Fragen am Telefon, keine Zeit, jeden Interessenten sofort zu antworten, und Anfragen die nach Feierabend verloren gehen. Der KI-Assistent auf Ihrer Website löst genau das.
-          </p>
-        </div>
-        <div class="ki-two-col">
-          <div class="ki-features">
-            <div class="ki-feat">
-              <div class="ki-feat-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              </div>
-              <div class="ki-feat-text">
-                <strong>Beantwortet häufige Fragen rund um die Uhr</strong>
-                <span>Preise, Leistungen, Öffnungszeiten. Der KI-Assistent antwortet automatisch, auch nachts und am Wochenende.</span>
-              </div>
-            </div>
-            <div class="ki-feat">
-              <div class="ki-feat-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              </div>
-              <div class="ki-feat-text">
-                <strong>Sammelt Kontaktdaten qualifizierter Interessenten</strong>
-                <span>Kein Interessent geht mehr verloren. Der Assistent führt den Besucher zur Anfrage.</span>
-              </div>
-            </div>
-            <div class="ki-feat">
-              <div class="ki-feat-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              </div>
-              <div class="ki-feat-text">
-                <strong>Leitet Anfragen per E-Mail oder WhatsApp weiter</strong>
-                <span>Sie erhalten alle Infos gesammelt, ohne Telefonkette und ohne Informationsverlust.</span>
-              </div>
-            </div>
-            <div class="ki-feat">
-              <div class="ki-feat-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-              </div>
-              <div class="ki-feat-text">
-                <strong>Entlastet Telefon, WhatsApp und E-Mail spürbar</strong>
-                <span>Routinefragen werden automatisch beantwortet. Sie konzentrieren sich auf das Wesentliche.</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="chat-card">
-              <div class="chat-bar">
-                <span class="live-dot"></span>
-                Live-Beispiel: So klingt Ihr KI-Assistent
-              </div>
-              <div class="chat-body">
-                <div class="msg">
-                  <div class="avatar u">&#128100;</div>
-                  <div class="bubble">Guten Abend! Was kostet bei Ihnen eine Grundreinigung für 80&nbsp;qm?</div>
-                </div>
-                <div class="chat-sep">KI-Assistent antwortet sofort</div>
-                <div class="msg out">
-                  <div class="avatar b">&#129302;</div>
-                  <div class="bubble">Guten Abend! Für ca. 80&nbsp;qm liegt eine Grundreinigung bei CHF&nbsp;180&ndash;240. Darf ich direkt einen Termin für Sie vormerken?</div>
-                </div>
-                <div class="msg">
-                  <div class="avatar u">&#128100;</div>
-                  <div class="bubble">Ja bitte, Samstag Vormittag.</div>
-                </div>
-                <div class="msg out">
-                  <div class="avatar b">&#129302;</div>
-                  <div class="bubble">Samstag 14.&nbsp;Juni um 9&nbsp;Uhr ist noch frei. Ich trage das ein und Sie erhalten eine Bestätigung per E-Mail.</div>
-                </div>
-              </div>
-              <div class="chat-note">
-                Der KI-Assistent wird mit Ihren echten Preisen, Leistungen und Ihrem Ton konfiguriert.
-              </div>
-            </div>
-            <div style="margin-top:1.25rem;text-align:center">
-              <a href="https://evowebdesign.ch/angebote#paket-website" class="btn btn-ghost" style="font-size:.88rem">Pakete &amp; Preise ansehen &rarr;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail" aria-label="Details">
-      <div class="wrap-narrow">
-        <span class="label">Was Sie bekommen</span>
-        <h2>Eine Website, die mitdenkt.</h2>
-        <p style="margin-top:1rem">Wir bauen keine Templates. Jede Website entsteht <strong>mobile-first</strong> mit Blick auf Ihre Kunden, Ihr Angebot und Ihren Standort. Dazu konfigurieren wir einen KI-Assistent mit Ihren echten Preisen, Leistungen und Ihrer Sprache – er klingt nach Ihnen, nicht nach einem anonymen System.</p>
-        <div class="feat-grid">
-          <div class="fg-item">Individuelles, mobile-first Design</div>
-          <div class="fg-item">Schnelle Ladezeiten, sauberer Code</div>
-          <div class="fg-item">KI-Assistent beantwortet Fragen 24/7</div>
-          <div class="fg-item">Sammelt Kontaktdaten &amp; leitet weiter</div>
-          <div class="fg-item">Voll auf Ihr Unternehmen eingestellt</div>
-          <div class="fg-item">Kontaktformular &amp; WhatsApp-Button</div>
-        </div>
-        <p>Komplettpaket <strong>Website + KI-Assistent ab CHF 990</strong> einmalig plus CHF 49 / Monat für Hosting, Wartung &amp; den KI-Assistenten (monatlich kündbar). Den genauen Umfang klären wir in einem kurzen, unverbindlichen Gespräch.</p>
       </div>
     </section>
 
     <div class="cta-band">
       <div class="wrap">
-        <h2>Bereit für mehr Anfragen?</h2>
-        <p>Wir schauen uns Ihre aktuelle Situation an und zeigen, was eine Website mit KI-Assistent für Sie leisten kann. Kostenlos und unverbindlich.</p>
+        <h2>Lieber direkt fragen?</h2>
+        <p>In einem kurzen, kostenlosen Erstgespräch schauen wir uns Ihre Situation an und sagen Ihnen ehrlich, was sich für Sie lohnt.</p>
         <div class="cta-btns">
-          <a href="https://evowebdesign.ch/kostenlose-analyse" class="btn btn-primary">Kostenlose Analyse starten &rarr;</a>
+          <a href="https://evowebdesign.ch/kontakt" class="btn btn-primary">Kostenloses Erstgespräch sichern &rarr;</a>
           <a href="https://evowebdesign.ch/leistungen" class="btn btn-ghost">Alle Leistungen ansehen</a>
         </div>
       </div>
@@ -418,7 +285,6 @@
           <a href="https://evowebdesign.ch/ueber-uns">Über uns</a>
           <a href="https://evowebdesign.ch/projekte">Projekte</a>
           <a href="https://evowebdesign.ch/ratgeber">Ratgeber</a>
-          <a href="https://evowebdesign.ch/angebote">Angebote</a>
           <a href="https://evowebdesign.ch/kontakt">Kontakt</a>
         </div>
         <div class="footer-col">
