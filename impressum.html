@@ -214,6 +214,7 @@
       .hamburger { display:flex !important }
     }
 </style>
+  <link rel="stylesheet" href="assets/css/tokens.css">
 </head>
 <body>
   <!-- TODO (DE->CH Migration, manuell durch Daniel): Rechtstexte NICHT automatisch erzeugt.
@@ -282,7 +283,7 @@
             <img src="logo-nobg.png" alt="Evolved Web Design Logo" width="32" height="32" />
             <span>Evolved Web Design</span>
           </a>
-          <p class="footer-tagline">Websites, die Anfragen bringen – mit optionalem KI-Assistent. Für Unternehmen am Bodensee.</p>
+          <p class="footer-tagline">Websites, die Anfragen bringen – mit optionalem KI-Assistent. Für Unternehmen im Thurgau &amp; am Bodensee.</p>
           <div class="footer-socials">
             <a href="https://instagram.com/evolvedwebdesigns" class="footer-soc-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <img loading="lazy" src="icon-instagram.png" alt="EWD auf Instagram" width="14" height="14" />
@@ -312,7 +313,7 @@
 
         <div class="footer-col">
           <h4>Kontakt</h4>
-          <a href="tel:+491717031722">+49 171 7031722</a>
+          <a href="tel:+41783175991">+41 78 317 59 91</a>
           <a href="mailto:kontakt@evowebdesign.ch">kontakt@evowebdesign.ch</a>
           <a href="https://evowebdesign.ch/kontakt">Kostenlos anfragen</a>
         </div>
@@ -406,7 +407,7 @@
 <div id="ewd-ckb">
   <div id="ewd-ckb-text">
     <strong>🍪 Cookies &amp; Datenschutz</strong>
-    <p>Wir nutzen Google Fonts (externe Schriften) und einen KI-Assistent für Kundenanfragen. Chat-Nachrichten werden zur Verarbeitung an OpenAI (USA) übertragen. <a href="datenschutz">Datenschutzerklärung</a></p>
+    <p>Wir nutzen einen KI-Assistenten für Kundenanfragen. Chat-Nachrichten werden zur Verarbeitung an OpenAI (USA) übertragen. <a href="datenschutz">Datenschutzerklärung</a></p>
   </div>
   <div class="ewd-ckb-btns">
     <button class="ewd-ckb-deny" onclick="ewdCkDeny()">Nur notwendige</button>
@@ -416,13 +417,7 @@
 <script>
 (function(){
   var k='ewd-consent',v=localStorage.getItem(k);
-  function loadFonts(){
-    if(document.querySelector('[data-ewdf]'))return;
-    var l=document.createElement('link');
-    l.rel='stylesheet';l.setAttribute('data-ewdf','1');
-    l.href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap';
-    document.head.appendChild(l);
-  }
+  function loadFonts(){}
   if(v==='all'){loadFonts();return;}
   if(v==='necessary')return;
   setTimeout(function(){document.getElementById('ewd-ckb').style.display='flex';},900);

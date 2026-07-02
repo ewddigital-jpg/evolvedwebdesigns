@@ -1,0 +1,41 @@
+/* ==========================================================================
+   EWD Design Tokens — Single Source of Truth (Reconciliation Layer)
+   --------------------------------------------------------------------------
+   Wird NACH den inline <style>-Blöcken geladen und normalisiert die beiden
+   historisch gewachsenen Token-Systeme auf identische Werte. Dadurch sind
+   Marke, Flächen, Text, Rahmen und Radien seitenübergreifend garantiert gleich.
+   Semantisch mehrdeutige Tokens (--green als WhatsApp vs. Success, --svc-glow,
+   --success, --red, --google-green) werden bewusst NICHT überschrieben.
+   ========================================================================== */
+:root{
+  /* Marke */
+  --primary:#0066FF;
+  --primary-light:#4D94FF;
+  --primary-dark:#0050CC;      /* war teils #0052CC → vereinheitlicht */
+  --accent:#00D9FF;
+
+  /* Flächen */
+  --bg:#0D1117;
+  --bg-body:#0D1117;
+  --bg-card:#161B22;
+  --bg-raised:#1C2128;
+  --bg-lighter:#1C2128;        /* war teils #21262D → auf eine erhöhte Fläche */
+
+  /* Text */
+  --text:#F0F6FC;
+  --text-secondary:#A8B4C0;    /* war teils #8B949E → vereinheitlicht */
+  --text-soft:#C9D1D9;
+
+  /* Rahmen */
+  --border:rgba(240,246,252,0.08);      /* war teils 0.1 → vereinheitlicht */
+  --border-mid:rgba(240,246,252,0.14);
+  --border-active:rgba(0,102,255,0.45); /* war teils 0.35 → vereinheitlicht */
+  --border-hover:rgba(0,102,255,0.45);  /* war teils 0.4 → = border-active */
+
+  /* Radien */
+  --radius:14px;               /* war teils 12px → vereinheitlicht */
+  --radius-sm:10px;            /* war teils 8px  → vereinheitlicht */
+
+  /* Akzent */
+  --whatsapp:#25D366;
+}
