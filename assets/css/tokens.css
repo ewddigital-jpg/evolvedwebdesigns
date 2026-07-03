@@ -39,3 +39,21 @@
   /* Akzent */
   --whatsapp:#25D366;
 }
+
+/* ==========================================================================
+   Breadcrumb-Komponente vereinheitlicht
+   --------------------------------------------------------------------------
+   Erzwingt auf allen Marketing-Seiten (.bc) identische Breite/Position,
+   bündig zur 1100px-Content-Spalte. Vorher drifteten manche Seiten auf
+   max-width:1200px (Breadcrumb stand links über den Content hinaus) und die
+   generische nav{padding:.85rem!important}-Regel überschrieb den Abstand
+   uneinheitlich. Hohe Spezifität (nav.bc) + !important schlägt beides.
+   Legal-Seiten nutzen nav.breadcrumb (eigene 800px-Spalte) → hier nicht betroffen.
+   ========================================================================== */
+nav.bc{
+  max-width:1100px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding:1.25rem 1.5rem .75rem!important;
+  box-sizing:border-box;
+}
