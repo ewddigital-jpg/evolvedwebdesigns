@@ -39,11 +39,12 @@
         
         
         
-        .breadcrumb{max-width:800px;margin:0 auto;padding:5.5rem 2rem 1rem}
-        .breadcrumb-list{display:flex;gap:0.5rem;list-style:none;font-size:0.85rem}
-        .breadcrumb-list a{color:var(--text-secondary);text-decoration:none;transition:color 0.3s ease}
-        .breadcrumb-list a:hover{color:var(--primary-light)}
-        .breadcrumb-list .current{color:var(--primary-light)}
+        nav.breadcrumb{max-width:800px;margin:0 auto;padding:5.5rem 2rem 1rem!important;box-sizing:border-box}
+        .breadcrumb-list{display:flex;gap:.35rem;list-style:none;font-size:.8rem;align-items:center}
+        .breadcrumb-list a{color:var(--text-secondary);text-decoration:none;transition:color .2s}
+        .breadcrumb-list a:hover{color:var(--text)}
+        .breadcrumb-list .current{color:var(--primary)!important;font-weight:600}
+        .breadcrumb-list li span[style]{opacity:.25}
         main{max-width:800px;margin:0 auto;padding:1rem 2rem 4rem}
         .page-header{margin-bottom:2.5rem}
         h1{font-family:'Poppins',sans-serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:0.5rem}
@@ -67,7 +68,7 @@
         .footer-legal{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
         .footer-legal a{color:var(--text-secondary);text-decoration:none;margin:0 0.75rem;font-size:0.85rem}
         .footer-legal a:hover{color:var(--primary-light)}
-        @media(max-width:768px){.nav-links{position:fixed;top:65px;left:-100%;width:100%;height:calc(100vh - 65px);background:rgba(13,17,23,0.98);flex-direction:column;padding:2rem;gap:1.5rem;transition:left 0.3s ease}.breadcrumb{padding:5rem 1.5rem 0.5rem}main{padding:1rem 1.5rem 3rem}.content-card{padding:1.5rem}}
+        @media(max-width:768px){.nav-links{position:fixed;top:65px;left:-100%;width:100%;height:calc(100vh - 65px);background:rgba(13,17,23,0.98);flex-direction:column;padding:2rem;gap:1.5rem;transition:left 0.3s ease}nav.breadcrumb{padding:5rem 1.5rem .5rem!important}main{padding:1rem 1.5rem 3rem}.content-card{padding:1.5rem}}
     
     /* ─── HEADER v3 override ─── */
     header{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .3s,box-shadow .3s,border-color .3s}
@@ -246,7 +247,7 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol class="breadcrumb-list">
             <li><a href="https://evowebdesign.ch/">Startseite</a></li>
-            <li><span style="color:var(--text-secondary);">›</span></li>
+            <li><span style="opacity:.25;font-size:.75rem" aria-hidden="true">›</span></li>
             <li><span class="current">Impressum</span></li>
         </ol>
     </nav>
