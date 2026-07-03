@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anastasiia Wellness · Massage & Körperbehandlung in Frauenfeld</title>
+<meta name="description" content="Professionelle Massage und Körperbehandlungen in Frauenfeld. Ruhiger, privater Raum an der Thundorferstrasse 25. 5,0 Sterne aus 38 Google-Bewertungen. Termin online buchen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+:root{
+  --bg:#F4EEE4;
+  --surface:#ECE3D4;
+  --surface-2:#E4D8C4;
+  --ink:#252019;
+  --ink-soft:#4A4238;
+  --muted:#8A7F6E;
+  --olive:#4C5340;
+  --olive-light:#6E7658;
+  --clay:#BC7A50;
+  --clay-deep:#A2653F;
+  --line:#D8CCB8;
+  --cta:#4C5340;
+  --cta-hover:#3A4030;
+  --cta-text:#F7F2E8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* grain overlay */
+body::before{
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+h1,h2,h3,.display{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.08;letter-spacing:.005em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.eyebrow{font-family:'Manrope';font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--clay-deep);font-weight:600}
+
+/* preview ribbon */
+.ribbon{
+  background:var(--olive);color:var(--cta-text);text-align:center;
+  font-size:13px;letter-spacing:.04em;padding:9px 16px;font-weight:500;
+}
+.ribbon b{font-weight:700}
+.ribbon a{color:#EBD9C4;text-decoration:underline;text-underline-offset:2px}
+
+/* header */
+header{position:sticky;top:0;z-index:100;background:rgba(244,238,228,.82);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+header.scrolled{border-color:var(--line);box-shadow:0 6px 30px -20px rgba(37,32,25,.4)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font-family:'Cormorant Garamond';font-size:25px;font-weight:600;letter-spacing:.01em;display:flex;align-items:center;gap:11px}
+.brand .mark{width:30px;height:30px;flex:none}
+.brand small{display:block;font-family:'Manrope';font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:-3px}
+.menu{display:flex;gap:38px;align-items:center}
+.menu a{font-size:15px;font-weight:500;color:var(--ink-soft);position:relative}
+.menu a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--clay);transition:width .3s}
+.menu a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--cta);color:var(--cta-text);font-weight:600;font-size:15px;padding:13px 24px;border-radius:2px;letter-spacing:.02em;transition:background .25s,transform .25s;min-height:44px}
+.btn:hover{background:var(--cta-hover);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.btn.clay{background:var(--clay)}
+.btn.clay:hover{background:var(--clay-deep)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:26px;height:2px;background:var(--ink);transition:.3s}
+
+/* hero */
+.hero{position:relative;padding:82px 0 96px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-1}
+.hero-bg .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
+.hero-bg .b1{width:520px;height:520px;background:#D9C39E;top:-140px;right:-120px}
+.hero-bg .b2{width:440px;height:440px;background:#B7C0A2;bottom:-160px;left:-120px;opacity:.4}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(46px,6.4vw,86px);color:var(--ink)}
+.hero h1 em{font-style:italic;color:var(--clay-deep)}
+.hero .lead{font-size:20px;color:var(--ink-soft);max-width:34ch;margin:26px 0 34px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.rating-inline{display:flex;align-items:center;gap:12px;margin-top:34px}
+.stars{color:var(--clay);letter-spacing:2px;font-size:17px}
+.rating-inline b{font-weight:700}
+.rating-inline span{color:var(--muted);font-size:14.5px}
+
+/* hero visual card */
+.hero-card{position:relative;aspect-ratio:4/5;border-radius:3px;overflow:hidden;background:
+  linear-gradient(160deg,#5A6149 0%,#3E442F 60%,#2E3323 100%);
+  box-shadow:0 40px 80px -40px rgba(46,51,35,.7);display:flex;align-items:flex-end;padding:30px}
+.hero-card .leaf{position:absolute;inset:0;opacity:.16}
+.hero-card .quote{position:relative;color:#F3ECDD;font-family:'Cormorant Garamond';font-size:27px;font-style:italic;line-height:1.3}
+.hero-card .ph-note{position:absolute;top:16px;left:16px;font-family:'Manrope';font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(243,236,221,.5);border:1px dashed rgba(243,236,221,.35);padding:4px 8px;border-radius:2px}
+
+/* trust bar */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-grid div{padding:30px 24px;text-align:center;border-right:1px solid var(--line)}
+.trust-grid div:last-child{border-right:0}
+.trust-grid .num{font-family:'Cormorant Garamond';font-size:40px;color:var(--olive);line-height:1}
+.trust-grid .lbl{font-size:13.5px;color:var(--muted);letter-spacing:.05em;margin-top:7px;text-transform:uppercase;font-weight:600}
+
+/* sections */
+section{padding:104px 0}
+.sec-head{max-width:640px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 60px;text-align:center}
+.sec-head h2{font-size:clamp(38px,4.6vw,60px);margin-top:16px;color:var(--ink)}
+.sec-head p{color:var(--ink-soft);font-size:19px;margin-top:18px}
+
+/* about */
+.about{background:var(--surface);position:relative}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.about-visual{aspect-ratio:1/1.15;border-radius:3px;background:linear-gradient(150deg,#E8DBC5,#D3C09E);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.about-visual .mono{font-family:'Cormorant Garamond';font-size:150px;color:rgba(76,83,64,.22);font-style:italic}
+.about-visual .ph-note{position:absolute;bottom:16px;left:16px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(74,66,56,.55);border:1px dashed rgba(74,66,56,.4);padding:4px 8px;border-radius:2px}
+.about p{margin-bottom:20px;color:var(--ink-soft)}
+.about .sig{font-family:'Cormorant Garamond';font-style:italic;font-size:30px;color:var(--olive);margin-top:8px}
+.langs{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.langs span{border:1px solid var(--line);background:var(--bg);padding:7px 16px;border-radius:100px;font-size:14px;font-weight:600;color:var(--ink-soft)}
+
+/* services */
+.serv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:36px 34px;transition:transform .35s,box-shadow .35s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--clay);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -34px rgba(46,51,35,.5)}
+.card:hover::before{transform:scaleX(1)}
+.card .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:14px}
+.card h3{font-size:29px;color:var(--ink);flex:1}
+.card .price{font-family:'Cormorant Garamond';font-size:30px;color:var(--clay-deep);white-space:nowrap;font-weight:600}
+.card .dur{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px}
+.card p{font-size:16px;color:var(--ink-soft);line-height:1.65}
+
+/* process */
+.process{background:var(--olive);color:#EDE6D8}
+.process .eyebrow{color:#D9A97E}
+.process .sec-head h2{color:#F5EFE3}
+.process .sec-head p{color:#C9C3B2}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.step .n{font-family:'Cormorant Garamond';font-size:52px;color:var(--clay);line-height:1}
+.step h3{font-size:24px;color:#F5EFE3;margin:14px 0 10px}
+.step p{font-size:15.5px;color:#C4BEAD;line-height:1.6}
+.step{border-top:1px solid rgba(237,230,216,.2);padding-top:22px}
+
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.qcard{background:var(--surface);border:1px solid var(--line);padding:34px;border-radius:3px}
+.qcard .stars{margin-bottom:16px;display:block}
+.qcard p{font-family:'Cormorant Garamond';font-style:italic;font-size:22px;line-height:1.4;color:var(--ink);margin-bottom:20px}
+.qcard .who{font-size:14px;color:var(--muted);font-weight:600;letter-spacing:.03em}
+
+/* contact */
+.contact{background:var(--surface-2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.info-row{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.info-row .k{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;width:120px;flex:none;padding-top:3px}
+.info-row .v{font-size:17px;color:var(--ink);font-weight:500}
+.info-row .v a:hover{color:var(--clay-deep)}
+.contact-cta{background:var(--olive);color:#F1EADC;padding:48px 44px;border-radius:3px}
+.contact-cta h3{font-size:38px;color:#F7F2E8;margin-bottom:14px}
+.contact-cta p{color:#CFC8B7;margin-bottom:28px;font-size:17px}
+
+/* footer */
+footer{background:var(--ink);color:#B8AF9E;padding:56px 0 34px}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;padding-bottom:34px;border-bottom:1px solid rgba(184,175,158,.2)}
+.foot-brand{font-family:'Cormorant Garamond';font-size:26px;color:#F1EADC}
+footer a:hover{color:#EBD9C4}
+.foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:24px;font-size:13.5px;color:#8A8171}
+.credit{color:#8A8171}
+.credit a{color:#C9A57E;text-decoration:underline;text-underline-offset:2px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+@media (max-width:900px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .hero-card{max-width:380px;margin:0 auto}
+  .serv-grid,.quotes,.steps{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .trust-grid div:nth-child(2){border-right:0}
+  .trust-grid div:nth-child(1),.trust-grid div:nth-child(2){border-bottom:1px solid var(--line)}
+  .menu{display:none}
+  .burger{display:flex}
+  .menu.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:var(--bg);padding:24px 32px;gap:22px;border-bottom:1px solid var(--line);box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
+  .wrap{padding:0 22px}
+  body{font-size:16px}
+  section{padding:74px 0}
+  .hero{padding:54px 0 66px}
+}
+@media (max-width:520px){
+  .trust-grid{grid-template-columns:1fr}
+  .trust-grid div{border-right:0!important;border-bottom:1px solid var(--line)}
+  .steps{gap:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- PREVIEW-BANNER (nur für Vorschau — im Live-Betrieb entfernen) -->
+<div class="ribbon">
+  Unverbindliche Design&#8209;Vorschau f&uuml;r <b>Anastasiia Wellness</b> &nbsp;&middot;&nbsp; gestaltet von <a href="https://evowebdesign.ch" target="_blank" rel="noopener">evowebdesign.ch</a>
+</div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 3C20 14 12 20 5 20c7 0 15 6 15 17 0-11 8-17 15-17-7 0-15-6-15-17Z" fill="#BC7A50"/>
+        <circle cx="20" cy="20" r="4.4" fill="#4C5340"/>
+      </svg>
+      <span>Anastasiia Wellness<small>Massage &middot; Frauenfeld</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#behandlungen">Behandlungen</a>
+      <a href="#ueber">&Uuml;ber mich</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="https://massage-termin-buchen-anastasiia.setmore.com/" target="_blank" rel="noopener" class="btn">Termin buchen</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Men&uuml;">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="hero-bg"><span class="blob b1"></span><span class="blob b2"></span></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow reveal">Massage &amp; K&ouml;rperbehandlung in Frauenfeld</p>
+      <h1 class="reveal d1">Zeit, in der<br>Sie <em>ganz bei sich</em><br>ankommen.</h1>
+      <p class="lead reveal d2">Professionelle Massagen in einem ruhigen, privaten Raum an der Thundorferstrasse. Individuell auf Ihre Verspannungen abgestimmt, ohne Hektik, ohne Wartezimmer.</p>
+      <div class="hero-cta reveal d3">
+        <a href="https://massage-termin-buchen-anastasiia.setmore.com/" target="_blank" rel="noopener" class="btn clay">Termin online buchen</a>
+        <a href="#behandlungen" class="btn ghost">Behandlungen ansehen</a>
+      </div>
+      <div class="rating-inline reveal d3">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span><b>5,0</b> aus 38 Google&#8209;Bewertungen</span>
+      </div>
+    </div>
+    <div class="hero-card reveal d2">
+      <span class="ph-note">Platz f&uuml;r echtes Studio&#8209;Foto</span>
+      <svg class="leaf" viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g stroke="#EFE7D6" stroke-width="1.1" fill="none" opacity=".9">
+          <path d="M100 250C100 170 60 150 30 150c40 0 70-26 70-90 0 64 30 90 70 90-30 0-70 20-70 100Z"/>
+          <path d="M100 60v170M70 120c10 6 20 10 30 12M130 120c-10 6-20 10-30 12M74 165c10 6 18 9 26 11M126 165c-10 6-18 9-26 11"/>
+        </g>
+      </svg>
+      <p class="quote">&bdquo;Sie nimmt sich Zeit und sp&uuml;rt genau, wo es hakt.&ldquo;</p>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap"><div class="trust-grid">
+    <div class="reveal"><div class="num">5,0</div><div class="lbl">Google&#8209;Bewertung</div></div>
+    <div class="reveal d1"><div class="num">38</div><div class="lbl">Bewertungen</div></div>
+    <div class="reveal d2"><div class="num">6</div><div class="lbl">Behandlungen</div></div>
+    <div class="reveal d3"><div class="num">1:1</div><div class="lbl">Privater Raum</div></div>
+  </div></div>
+</div>
+
+<section class="about" id="ueber">
+  <div class="wrap about-grid">
+    <div class="about-visual reveal">
+      <span class="mono">A</span>
+      <span class="ph-note">Platz f&uuml;r echtes Portr&auml;t&#8209;Foto</span>
+    </div>
+    <div>
+      <p class="eyebrow reveal">&Uuml;ber mich</p>
+      <h2 class="display reveal d1" style="font-size:clamp(34px,4.4vw,54px);margin:16px 0 26px;">Massage ist f&uuml;r mich Handwerk und Zuwendung zugleich.</h2>
+      <p class="reveal d1">Seit vielen Jahren begleite ich Menschen dabei, Verspannungen zu l&ouml;sen und wieder zur Ruhe zu kommen. Jede Behandlung beginnt mit einem kurzen Gespr&auml;ch, damit ich genau dort ansetze, wo Ihr K&ouml;rper es braucht.</p>
+      <p class="reveal d2">Sie kommen in einen ruhigen, privaten Raum an der Thundorferstrasse 25 in Frauenfeld. Kein Grossbetrieb, kein Zeitdruck, nur Sie und eine Behandlung, die ganz auf Sie abgestimmt ist.</p>
+      <div class="langs reveal d2">
+        <span>English</span><span>Italiano</span><span>&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</span>
+      </div>
+      <p class="sig reveal d3">Anastasiia</p>
+    </div>
+  </div>
+</section>
+
+<section id="behandlungen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Behandlungen</p>
+      <h2>Sechs Wege zu mehr Leichtigkeit.</h2>
+      <p>Alle Behandlungen finden in Ruhe und mit voller Aufmerksamkeit statt. W&auml;hlen Sie, was Ihr K&ouml;rper heute braucht.</p>
+    </div>
+    <div class="serv-grid">
+
+      <div class="card reveal">
+        <div class="top"><h3>Schr&ouml;pf&#8209; &amp; Vakuumtherapie</h3><span class="price">130.&#8211;</span></div>
+        <div class="dur">2 Stunden</div>
+        <p>Tiefenwirksame Behandlung mit warmen Buchweizenkissen und manueller Massage. L&ouml;st hartn&auml;ckige Verspannungen und regt die Durchblutung an.</p>
+      </div>
+
+      <div class="card reveal d1">
+        <div class="top"><h3>Von Kopf bis Fuss</h3><span class="price">180.&#8211;</span></div>
+        <div class="dur">3 Stunden</div>
+        <p>Die grosse Auszeit: Ganzk&ouml;rpermassage kombiniert mit Hand&#8209;, Kopf&#8209; und Fussbehandlung. Drei Stunden nur f&uuml;r Sie.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="top"><h3>Erwachen Programm</h3><span class="price">130.&#8211;</span></div>
+        <div class="dur">2 Stunden</div>
+        <p>Ein sanftes K&ouml;rperpeeling, eine Ganzk&ouml;rpermassage mit &auml;therischen &Ouml;len und eine wohltuende Fussbehandlung f&uuml;r frische Energie.</p>
+      </div>
+
+      <div class="card reveal d1">
+        <div class="top"><h3>Back &amp; Face Lifting</h3><span class="price">130.&#8211;</span></div>
+        <div class="dur">2 Stunden</div>
+        <p>R&uuml;ckenmassage kombiniert mit einer myofaszialen Gesichtsmassage, die Z&uuml;ge entspannt und die Haut sichtbar frischer wirken l&auml;sst.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="top"><h3>R&uuml;ckengesundheit</h3><span class="price">130.&#8211;</span></div>
+        <div class="dur">2 Stunden</div>
+        <p>Gezielte R&uuml;ckenmassage mit warmen Buchweizenkissen und manuellen Techniken. Ideal bei sitzender Arbeit und Nackenbeschwerden.</p>
+      </div>
+
+      <div class="card reveal d1">
+        <div class="top"><h3>Anti&#8209;Cellulite Programm</h3><span class="price">130.&#8211;</span></div>
+        <div class="dur">2 Stunden</div>
+        <p>Lymphdrainage, klassische Honigmassage und ein pflegender K&ouml;rperwickel, kombiniert zu einer strafffenden Rundum&#8209;Behandlung.</p>
+      </div>
+
+    </div>
+    <p style="text-align:center;margin-top:40px;color:var(--muted);font-size:15px" class="reveal">Preise in CHF &middot; Termine nach Vereinbarung, So bis Fr</p>
+  </div>
+</section>
+
+<section class="process" id="ablauf">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">Ihr Besuch</p>
+      <h2>So l&auml;uft Ihr Termin ab.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">01</div><h3>Online buchen</h3><p>W&auml;hlen Sie Behandlung und Wunschtermin bequem online. Sie erhalten sofort eine Best&auml;tigung.</p></div>
+      <div class="step reveal d1"><div class="n">02</div><h3>Ankommen</h3><p>Ein kurzes Gespr&auml;ch kl&auml;rt, worauf ich heute besonders achten soll und was Sie sich w&uuml;nschen.</p></div>
+      <div class="step reveal d2"><div class="n">03</div><h3>Loslassen</h3><p>Ihre Behandlung in einem ruhigen, warmen Raum. Ganz ohne Hektik, ganz in Ihrem Tempo.</p></div>
+      <div class="step reveal d3"><div class="n">04</div><h3>Nachklang</h3><p>Sie gehen entspannter, beweglicher und geerdet nach Hause. Folgetermin auf Wunsch direkt vereinbart.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">Stimmen</p>
+      <h2>Was G&auml;ste erz&auml;hlen.</h2>
+      <p>5,0 Sterne aus 38 Bewertungen auf Google.</p>
+    </div>
+    <!-- PLATZHALTER: echte Google-Rezensionen von Anastasiia hier eintragen -->
+    <div class="quotes">
+      <div class="qcard reveal"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>&bdquo;Ich bin so entspannt herausgekommen wie schon lange nicht mehr.&ldquo;</p><span class="who">Google&#8209;Rezension</span></div>
+      <div class="qcard reveal d1"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>&bdquo;Sie findet jede Verspannung und nimmt sich wirklich Zeit.&ldquo;</p><span class="who">Google&#8209;Rezension</span></div>
+      <div class="qcard reveal d2"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>&bdquo;Ruhiger Raum, absolute Wohlf&uuml;hl&#8209;Atmosph&auml;re. Sehr zu empfehlen.&ldquo;</p><span class="who">Google&#8209;Rezension</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow reveal">Kontakt &amp; Anfahrt</p>
+      <h2 class="display reveal d1" style="font-size:clamp(34px,4.4vw,54px);margin:16px 0 30px;color:var(--ink)">Ich freue mich auf Ihren Besuch.</h2>
+      <div class="reveal d1">
+        <div class="info-row"><div class="k">Adresse</div><div class="v">Thundorferstrasse 25<br>8500 Frauenfeld</div></div>
+        <div class="info-row"><div class="k">Telefon</div><div class="v"><a href="tel:+41767097972">076 709 79 72</a></div></div>
+        <div class="info-row"><div class="k">E&#8209;Mail</div><div class="v"><a href="mailto:100sapori@gmail.com">100sapori@gmail.com</a></div></div>
+        <div class="info-row"><div class="k">&Ouml;ffnungszeiten</div><div class="v">So 10&ndash;17 Uhr &middot; Mo&ndash;Fr 10&ndash;20 Uhr<br>Sa geschlossen</div></div>
+      </div>
+    </div>
+    <div class="contact-cta reveal d2">
+      <h3>Termin buchen</h3>
+      <p>W&auml;hlen Sie Ihre Behandlung und einen freien Termin, ganz einfach online, rund um die Uhr.</p>
+      <a href="https://massage-termin-buchen-anastasiia.setmore.com/" target="_blank" rel="noopener" class="btn clay" style="font-size:16px;padding:15px 30px">Jetzt online buchen &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Anastasiia Wellness</div>
+        <p style="max-width:34ch;margin-top:12px;font-size:15px">Massage und K&ouml;rperbehandlungen in ruhiger, privater Atmosph&auml;re. Thundorferstrasse 25, 8500 Frauenfeld.</p>
+      </div>
+      <div style="display:flex;gap:56px;flex-wrap:wrap">
+        <div>
+          <p style="color:#F1EADC;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px">Menu</p>
+          <p style="line-height:2.1;font-size:15px"><a href="#behandlungen">Behandlungen</a><br><a href="#ueber">&Uuml;ber mich</a><br><a href="#ablauf">Ablauf</a><br><a href="#kontakt">Kontakt</a></p>
+        </div>
+        <div>
+          <p style="color:#F1EADC;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px">Direkt</p>
+          <p style="line-height:2.1;font-size:15px"><a href="https://massage-termin-buchen-anastasiia.setmore.com/" target="_blank" rel="noopener">Termin buchen</a><br><a href="tel:+41767097972">076 709 79 72</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Anastasiia Wellness &middot; Frauenfeld</span>
+      <span class="credit">Design&#8209;Vorschau erstellt von <a href="https://evowebdesign.ch" target="_blank" rel="noopener">evowebdesign.ch</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// header shadow on scroll
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
+// mobile menu
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+// scroll reveal (with fallback if unsupported)
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.14,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+</script>
+</body>
+</html>
