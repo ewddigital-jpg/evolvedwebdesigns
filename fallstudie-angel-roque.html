@@ -623,5 +623,18 @@
   window.ewdCkDeny=function(){localStorage.setItem(k,'necessary');document.getElementById('ewd-ckb').style.display='none';};
 })();
 </script>
+<!-- WhatsApp Float -->
+<style>
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.wa{position:fixed;bottom:24px;left:24px;z-index:9999;animation:floatY 3.5s ease-in-out infinite}
+.wa a{width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.38);transition:transform .2s;text-decoration:none}
+.wa a:hover{transform:scale(1.1)}
+.wa img{width:28px;height:28px}
+</style>
+<div class="wa">
+  <a href="https://wa.me/41783175991?text=Hallo%20EWD!%20Ich%20interessiere%20mich%20fuer%20eine%20neue%20Website." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <img loading="lazy" src="icon-whatsapp.png" alt="WhatsApp" width="28" height="28" />
+  </a>
+</div>
 </body>
 </html>
