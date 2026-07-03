@@ -88,9 +88,16 @@
 
         .project-card { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; margin-bottom: 1rem; transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease; }
         .project-card:hover { border-color: var(--border-hover); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); }
-        .project-image { background: var(--bg-lighter); border-radius: 12px; overflow: hidden; aspect-ratio: 16/10; }
-        .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .project-card:hover .project-image img { transform: scale(1.04); }
+        .project-image { background:#0d1117; border-radius:14px; overflow:hidden; border:1px solid var(--border); box-shadow:0 18px 50px rgba(0,0,0,.45); align-self:stretch; }
+        .browser-bar { display:flex; align-items:center; gap:.6rem; padding:.5rem .85rem; background:#1c2128; border-bottom:1px solid var(--border); }
+        .browser-dots { width:11px; height:11px; border-radius:50%; background:#ff5f57; box-shadow:18px 0 0 #febc2e, 36px 0 0 #28c840; flex-shrink:0; margin-right:40px; }
+        .browser-url { flex:1; background:#0d1117; border:1px solid var(--border); border-radius:6px; padding:.28rem .7rem; font-size:.72rem; color:var(--text-secondary); text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+        .browser-screen { aspect-ratio:16/10; overflow:hidden; }
+        .browser-screen img { width:100%; height:100%; object-fit:cover; object-position:top center; display:block; transition:transform 0.5s ease; }
+        .project-card:hover .browser-screen img { transform: scale(1.04); }
+        .project-stats { display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1.2rem; }
+        .project-stat { display:inline-flex; align-items:center; gap:.35rem; background:rgba(0,102,255,.08); border:1px solid var(--border); border-radius:8px; padding:.35rem .7rem; font-size:.78rem; color:var(--text); font-weight:600; }
+        .project-stat b { color:var(--primary-light); font-weight:800; }
         .project-content { }
         .project-tag { display: inline-block; background: rgba(0, 102, 255, 0.1); color: var(--primary-light); padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.85rem; }
         .project-content h2 { font-family: 'Poppins', sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.6rem; }
@@ -485,13 +492,19 @@
         <section class="projects-section">
             <article class="project-card">
                 <div class="project-image">
-                    <img src="angel-roque_screenshot.jpg" alt="Angel Roque – Personal-Brand-Website für den Profiboxer" width="600" height="375" loading="lazy">
+                    <div class="browser-bar"><span class="browser-dots"></span><span class="browser-url">angel-roque.com</span></div>
+                    <div class="browser-screen"><img src="angel-roque_screenshot.jpg" alt="Angel Roque – Personal-Brand-Website für den Profiboxer" width="600" height="375" loading="lazy"></div>
                 </div>
                 <div class="project-content">
                     <span style="display:inline-block;background:rgba(0,217,255,0.1);border:1px solid rgba(0,217,255,0.3);border-radius:999px;padding:.2rem .65rem;font-size:.72rem;font-weight:800;color:#00D9FF;margin-bottom:.75rem;letter-spacing:.04em;text-transform:uppercase">Neuestes Projekt · Personal Brand</span>
                     <span class="project-tag">Webdesign & Personal Branding</span>
                     <h2>Angel Roque</h2>
                     <p>Cineastische Personal-Brand-Website für den ungeschlagenen Profiboxer und WBC-Francophone-Champion. Ein digitales Aushängeschild für Fans, Medien und Sponsoren – im Look eines Filmplakats.</p>
+                    <div class="project-stats">
+                        <span class="project-stat"><b>5</b>&nbsp;Seiten</span>
+                        <span class="project-stat">GSAP-Scrollytelling</span>
+                        <span class="project-stat"><b>100%</b>&nbsp;responsiv</span>
+                    </div>
                     <ul class="project-features">
                         <li>Cineastisches „Filmplakat"-Design</li>
                         <li>Multi-Page: Kämpfe, Vita, Medien & Sponsoring</li>
@@ -506,13 +519,19 @@
             </article>
             <article class="project-card">
                 <div class="project-image">
-                    <img src="kk-website_screenshot.png" alt="KK Gebäudereinigung Website Friedrichshafen" width="600" height="375" loading="lazy">
+                    <div class="browser-bar"><span class="browser-dots"></span><span class="browser-url">kkreinigung.com</span></div>
+                    <div class="browser-screen"><img src="kk-website_screenshot.png" alt="KK Gebäudereinigung Website Friedrichshafen" width="600" height="375" loading="lazy"></div>
                 </div>
                 <div class="project-content">
                     <span style="display:inline-block;background:rgba(0,217,255,0.1);border:1px solid rgba(0,217,255,0.3);border-radius:999px;padding:.2rem .65rem;font-size:.72rem;font-weight:800;color:#00D9FF;margin-bottom:.75rem;letter-spacing:.04em;text-transform:uppercase">Unser erstes abgeschlossenes Projekt</span>
                     <span class="project-tag">Webdesign & lokale SEO</span>
                     <h2>KK Gebäudereinigung</h2>
                     <p>Professionelle Website für ein Reinigungsunternehmen in Friedrichshafen. Modernes Design mit lokaler SEO-Optimierung für mehr Sichtbarkeit in der Region.</p>
+                    <div class="project-stats">
+                        <span class="project-stat"><b>5,0★</b>&nbsp;Google</span>
+                        <span class="project-stat"><b>&lt;2s</b>&nbsp;Ladezeit</span>
+                        <span class="project-stat">Lokale&nbsp;SEO</span>
+                    </div>
                     <ul class="project-features">
                         <li>Responsives Design für alle Endgeräte</li>
                         <li>Lokale SEO für „Gebäudereinigung Friedrichshafen"</li>
