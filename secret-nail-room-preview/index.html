@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<!-- v1 · Bricolage Grotesque · Midnight & Gold -->
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secret Nail Room · Nagelstudio in Romanshorn — Maniküre, Pediküre &amp; Nageldesign</title>
+<meta name="description" content="Secret Nail Room — Nagelstudio in Romanshorn. Maniküre, Pediküre, Shellac, Acryl- &amp; Gel-Modellage. 4,8 von 5 Sternen aus 78 Bewertungen. Mo–Sa geöffnet, Termin online oder telefonisch.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://evowebdesign.ch/secret-nail-room-preview/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Secret Nail Room · Nagelstudio in Romanshorn">
+<meta property="og:description" content="Maniküre, Pediküre &amp; Nageldesign in Romanshorn — 4,8 ★ aus 78 Bewertungen. Mo–Sa geöffnet.">
+<meta property="og:locale" content="de_CH">
+<meta name="theme-color" content="#14131E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+:root{
+  --paper:#F6F1E9;
+  --paper-2:#ECE4D8;
+  --ink:#201D28;
+  --ink-soft:#655F6E;
+  --ink-mute:#928B98;
+  --gold:#C6A15B;
+  --gold-deep:#A9863F;
+  --gold-lt:#DABD7C;
+  --gold-glow:rgba(198,161,91,.42);
+  --blush:#D3ADA6;
+  --blush-soft:#E8D3CC;
+  --nude:#E7D8CE;
+  --line:#E5DBCC;
+  --midnight:#14131E;
+  --midnight-2:#0E0D16;
+  --line-dark:rgba(246,241,233,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{
+  font-family:'Bricolage Grotesque','Arial Black',system-ui,sans-serif;
+  font-weight:800;
+  line-height:1.04;
+  letter-spacing:-.02em;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 34px}
+
+.eyebrow{
+  font-family:'Manrope';font-size:12px;font-weight:700;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);
+  display:inline-flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--gold-deep);display:inline-block}
+.eyebrow.on-dark{color:var(--gold-lt)}
+.eyebrow.on-dark::before{background:var(--gold-lt)}
+
+.emblem{width:34px;height:34px;flex:none}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:'Manrope';font-weight:700;font-size:15px;
+  padding:15px 30px;border-radius:100px;letter-spacing:.01em;
+  min-height:52px;cursor:pointer;border:1.5px solid transparent;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,border-color .3s,box-shadow .3s;
+}
+.btn .arw{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-gold{background:var(--gold);color:#211a08;box-shadow:0 14px 34px -16px var(--gold-glow)}
+.btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 18px 40px -16px var(--gold-glow)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:#000;transform:translateY(-2px)}
+.btn-outline-light{background:transparent;color:var(--paper);border-color:rgba(246,241,233,.34)}
+.btn-outline-light:hover{border-color:var(--paper);background:rgba(246,241,233,.06)}
+.btn-outline-dark{background:transparent;color:var(--ink);border-color:rgba(32,29,40,.26)}
+.btn-outline-dark:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* preview ribbon */
+.ribbon{
+  background:var(--midnight-2);color:var(--nude);text-align:center;
+  font-size:13.5px;letter-spacing:.01em;padding:10px 18px;font-weight:500;
+}
+.ribbon b{color:#fff;font-weight:700}
+.ribbon a{color:var(--gold-lt);text-decoration:underline;text-underline-offset:2px;font-weight:700}
+
+/* header */
+header{
+  position:sticky;top:0;z-index:100;
+  background:transparent;transition:background .35s,box-shadow .35s,border-color .35s;
+  border-bottom:1px solid transparent;
+}
+header.scrolled{background:rgba(14,13,22,.92);backdrop-filter:blur(14px);border-color:var(--line-dark);box-shadow:0 16px 44px -30px rgba(0,0,0,.8)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px}
+.brand{display:flex;align-items:center;gap:13px;color:var(--paper)}
+.brand .bt{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:21px;letter-spacing:-.01em;line-height:1;color:var(--paper)}
+.brand small{display:block;font-family:'Manrope';font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:rgba(231,216,206,.6);margin-top:5px}
+.menu{display:flex;gap:32px;align-items:center}
+.menu a{font-family:'Manrope';font-size:15px;font-weight:600;color:rgba(246,241,233,.82);position:relative;transition:color .2s}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;background:var(--gold-lt);transition:width .3s}
+.menu a:not(.btn):hover{color:var(--paper)}
+.menu a:not(.btn):hover::after{width:100%}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px}
+.burger span{width:26px;height:2px;background:var(--paper);border-radius:2px;transition:.3s}
+
+/* photo placeholder */
+.ph{
+  position:relative;background:
+    repeating-linear-gradient(135deg,rgba(198,161,91,.05) 0 2px,transparent 2px 22px),
+    linear-gradient(160deg,var(--blush-soft),var(--nude));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  color:var(--gold-deep);text-align:center;overflow:hidden;
+}
+.ph.dark{background:
+    repeating-linear-gradient(135deg,rgba(246,241,233,.03) 0 2px,transparent 2px 22px),
+    linear-gradient(160deg,#26242F,#191823);color:var(--gold-lt)}
+.ph::after{content:"";position:absolute;inset:14px;border:1px solid currentColor;opacity:.3;pointer-events:none;border-radius:3px}
+.ph svg{opacity:.82}
+.ph .ph-t{font-family:'Manrope';font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.ph .ph-s{font-family:'Manrope';font-weight:500;font-size:12px;letter-spacing:.02em;opacity:.72;max-width:24ch;text-transform:none;line-height:1.5}
+
+/* HERO */
+.hero{position:relative;background:var(--midnight-2);color:var(--nude);overflow:hidden;margin-top:-82px;padding:150px 0 96px}
+.hero::before{content:"";position:absolute;top:-16%;left:-8%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(198,161,91,.22),transparent 66%);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-28%;right:-6%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(211,173,166,.14),transparent 68%);pointer-events:none}
+.hero-inner{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center;position:relative}
+.hero h1{font-size:clamp(42px,6.4vw,88px);color:var(--paper);letter-spacing:-.03em}
+.hero h1 .accent{color:var(--gold-lt)}
+.hero .lead{font-size:19.5px;line-height:1.7;color:rgba(231,216,206,.82);max-width:48ch;margin:30px 0 38px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-rating{display:flex;align-items:center;gap:12px;margin-top:34px;font-size:14.5px;color:rgba(231,216,206,.72)}
+.stars{display:inline-flex;gap:3px;color:var(--gold-lt)}
+
+.hero-figure{position:relative;justify-self:end;width:100%;max-width:430px}
+.hero-figure .frame{
+  position:relative;aspect-ratio:3/4;border-radius:4px;overflow:hidden;
+  border:1px solid rgba(231,216,206,.14);
+  box-shadow:0 50px 90px -40px rgba(0,0,0,.85), 0 0 0 1px rgba(198,161,91,.16);
+}
+.hero-figure .cap{
+  position:absolute;left:-18px;bottom:34px;background:var(--gold);color:#211a08;
+  font-family:'Manrope';font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  padding:11px 18px;box-shadow:0 16px 34px -14px var(--gold-glow)}
+
+/* markers strip */
+.markers{background:var(--ink)}
+.markers-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.markers-grid > div{padding:26px 22px;border-right:1px solid var(--line-dark);display:flex;gap:14px;align-items:center}
+.markers-grid > div:last-child{border-right:0}
+.markers-grid svg{flex:none;color:var(--gold-lt)}
+.markers-grid .m-t{font-family:'Manrope';font-weight:700;font-size:16px;color:var(--paper);line-height:1.2}
+.markers-grid .m-s{font-size:12.5px;color:rgba(231,216,206,.6);margin-top:3px}
+
+/* sections */
+.section{padding:114px 0}
+.section-paper{background:var(--paper)}
+.section-paper-2{background:var(--paper-2)}
+.section-noir{background:var(--midnight-2);color:var(--nude)}
+.head{max-width:720px;margin-bottom:60px}
+.head.center{margin-left:auto;margin-right:auto;text-align:center}
+.head h2{font-size:clamp(36px,5.2vw,64px);margin-top:20px;color:var(--ink)}
+.head p{font-size:19px;color:var(--ink-soft);margin-top:22px}
+.section-noir .head h2{color:var(--paper)}
+.section-noir .head p{color:rgba(231,216,206,.78)}
+
+/* about / studio */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:66px;align-items:center}
+.about-body h2{font-size:clamp(32px,4.6vw,54px);color:var(--ink);margin:22px 0 26px}
+.about-body p{color:var(--ink-soft);margin-bottom:20px;max-width:56ch}
+.about-body .lede{color:var(--ink);font-size:22px;font-weight:600;font-family:'Manrope';line-height:1.5}
+.sig{font-family:'Manrope';font-weight:700;font-size:17px;color:var(--gold-deep);margin-top:28px;letter-spacing:.01em}
+.about-fig{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;box-shadow:0 44px 80px -46px rgba(32,29,40,.5);border:1px solid var(--line)}
+.about-fig .ph{position:absolute;inset:0}
+
+/* price menu */
+.pricecols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.pricegroup h3{font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:800;font-family:'Manrope';margin-bottom:8px;padding-bottom:18px;border-bottom:2px solid var(--gold)}
+.priceitem{
+  display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;
+  padding:22px 6px;border-bottom:1px solid var(--line);position:relative;
+  transition:padding-left .35s cubic-bezier(.2,.7,.2,1);
+}
+.priceitem:hover{padding-left:16px}
+.priceitem::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform .35s}
+.priceitem:hover::before{transform:scaleY(1)}
+.priceitem .pi-name{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;color:var(--ink);letter-spacing:-.01em}
+.priceitem .pi-desc{font-size:14.5px;color:var(--ink-soft);margin-top:4px;line-height:1.5;font-family:'Manrope'}
+.priceitem .pi-price{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;color:var(--gold-deep);white-space:nowrap}
+.priceitem .pi-price small{font-size:12px;font-weight:700;color:var(--ink-mute);letter-spacing:.06em}
+.menu-note{margin-top:40px;color:var(--ink-mute);font-size:15px;max-width:64ch}
+
+/* differenzierer (dark) */
+.diff-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:66px;align-items:center}
+.diff-body h2{font-size:clamp(32px,4.6vw,54px);color:var(--paper);margin:22px 0 26px}
+.diff-body p{color:rgba(231,216,206,.8);margin-bottom:22px;max-width:54ch}
+.diff-list{list-style:none;margin-top:30px;display:grid;gap:2px}
+.diff-list li{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line-dark);align-items:flex-start}
+.diff-list li:last-child{border-bottom:1px solid var(--line-dark)}
+.diff-list .dt{font-family:'Manrope';font-weight:700;font-size:17px;color:var(--paper);margin-bottom:3px}
+.diff-list .ds{font-size:15px;color:rgba(231,216,206,.68);line-height:1.55}
+.diff-list svg{flex:none;color:var(--gold-lt);margin-top:4px}
+.diff-art{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;border:1px solid var(--line-dark)}
+.diff-art .ph{position:absolute;inset:0}
+
+/* rating band */
+.ratingband{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:44px 48px;box-shadow:0 40px 80px -56px rgba(32,29,40,.5)}
+.ratingband .big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(64px,10vw,104px);color:var(--gold-deep);line-height:.9;letter-spacing:-.03em}
+.ratingband .big small{display:block;font-family:'Manrope';font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin-top:12px}
+.ratingband .bars{display:grid;gap:9px}
+.barrow{display:grid;grid-template-columns:54px 1fr 40px;gap:14px;align-items:center;font-size:13px;color:var(--ink-soft);font-weight:600}
+.barrow .track{height:9px;background:var(--paper-2);border-radius:100px;overflow:hidden}
+.barrow .fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:100px}
+
+/* testimonials */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
+.rev{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:34px 30px;display:flex;flex-direction:column}
+.rev.stat{background:var(--midnight);border-color:var(--line-dark);align-items:flex-start;justify-content:center}
+.rev .stars{color:var(--gold-deep);margin-bottom:16px;gap:2px}
+.rev blockquote{font-family:'Manrope';font-weight:500;font-size:18px;line-height:1.55;color:var(--ink);margin-bottom:20px}
+.rev .who{margin-top:auto;display:flex;align-items:center;gap:12px}
+.rev .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(150deg,var(--blush),var(--gold));display:flex;align-items:center;justify-content:center;color:#211a08;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:16px;flex:none}
+.rev .nm{font-weight:700;font-size:15px;color:var(--ink)}
+.rev .src{font-size:12.5px;color:var(--ink-mute)}
+.rev.stat .snum{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:60px;color:var(--gold-lt);line-height:1;letter-spacing:-.02em}
+.rev.stat .stxt{color:rgba(231,216,206,.82);font-size:16px;margin-top:14px;line-height:1.5}
+.rev.stat .ssub{color:rgba(231,216,206,.5);font-size:13px;margin-top:16px}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);padding:6px 0}
+.faq summary{
+  list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;
+  font-family:'Bricolage Grotesque';font-weight:700;font-size:20px;color:var(--ink);letter-spacing:-.01em;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:18px;font-size:28px;color:var(--gold-deep);font-weight:400;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding:0 44px 26px 0;color:var(--ink-soft);font-size:16.5px}
+.faq .ans a{color:var(--gold-deep);font-weight:700;border-bottom:1px solid rgba(198,161,91,.4)}
+
+/* booking / kontakt */
+.book-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+.info-row{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line-dark)}
+.info-row .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-lt);font-weight:700;width:130px;flex:none;padding-top:4px}
+.info-row .v{font-size:17px;color:var(--paper);font-weight:500;line-height:1.55}
+.info-row .v a{border-bottom:1px solid transparent;transition:border-color .2s}
+.info-row .v a:hover{border-color:var(--gold-lt)}
+.book-card{background:var(--paper);border-radius:10px;padding:40px 38px;box-shadow:0 44px 90px -50px rgba(0,0,0,.6)}
+.book-card h3{font-size:clamp(26px,3vw,32px);color:var(--ink);margin-bottom:8px;letter-spacing:-.01em;font-weight:800}
+.book-card > p{color:var(--ink-soft);margin-bottom:26px;font-size:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;font-family:'Manrope';font-size:16px;color:var(--ink);
+  background:var(--paper-2);border:1px solid var(--line);border-radius:8px;
+  padding:13px 15px;transition:border-color .2s,box-shadow .2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,161,91,.16)}
+.field textarea{resize:vertical;min-height:92px}
+.book-card .btn-gold{width:100%;justify-content:center;margin-top:6px}
+.form-note{font-size:12.5px;color:var(--ink-mute);margin-top:14px;text-align:center;line-height:1.5}
+.form-ok{display:none;background:rgba(198,161,91,.1);border:1px solid var(--gold);border-radius:8px;padding:18px 20px;color:var(--gold-deep);font-size:15px;font-weight:600;margin-top:6px;line-height:1.5}
+
+/* footer */
+footer{background:var(--midnight-2);color:rgba(231,216,206,.66);padding:64px 0 34px}
+.foot-grid{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap;padding-bottom:38px;border-bottom:1px solid var(--line-dark)}
+.foot-brand{display:flex;align-items:center;gap:12px}
+.foot-brand .bt{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:21px;letter-spacing:-.01em;color:var(--paper)}
+.foot-grid p{font-size:15px;line-height:1.75}
+.foot-col h4{color:var(--nude);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:15px;font-family:'Manrope'}
+.foot-col a{display:block;padding:5px 0;font-size:15px}
+footer a:hover{color:var(--gold-lt)}
+.foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:26px;font-size:13.5px;color:rgba(231,216,206,.45)}
+.foot-bottom a{color:var(--gold-lt);text-decoration:underline;text-underline-offset:2px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (max-width:960px){
+  .hero-inner,.about-grid,.diff-grid,.book-grid,.pricecols{grid-template-columns:1fr;gap:48px}
+  .hero-figure{justify-self:center;max-width:380px}
+  .about-grid .about-fig{max-width:420px}
+  .diff-art{max-width:440px}
+  .revs{grid-template-columns:1fr}
+  .markers-grid{grid-template-columns:1fr 1fr}
+  .markers-grid > div:nth-child(2){border-right:0}
+  .markers-grid > div:nth-child(-n+2){border-bottom:1px solid var(--line-dark)}
+  .ratingband{grid-template-columns:1fr;gap:30px;text-align:center;padding:38px 30px}
+  .ratingband .big{margin:0 auto}
+  .barrow{grid-template-columns:54px 1fr 40px}
+  .menu{display:none}
+  .menu.open{display:flex;position:absolute;top:82px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:20px;background:var(--midnight-2);padding:26px 34px;border-bottom:1px solid var(--line-dark);box-shadow:0 24px 40px -20px rgba(0,0,0,.6)}
+  .menu.open .btn{width:100%;justify-content:center}
+  .burger{display:flex}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 22px}
+  .section{padding:76px 0}
+  .hero{padding-top:124px;padding-bottom:70px}
+  .head{margin-bottom:42px}
+  .markers-grid{grid-template-columns:1fr}
+  .markers-grid > div{border-right:0!important;border-bottom:1px solid var(--line-dark)}
+  .priceitem{grid-template-columns:1fr;gap:6px}
+  .priceitem .pi-price{text-align:left}
+  .priceitem:hover{padding-left:6px}
+  .info-row{flex-direction:column;gap:4px}
+  .info-row .k{width:auto}
+  .hero-figure .cap{left:0}
+  .book-card{padding:32px 24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- PREVIEW-BANNER (nur für die Vorschau — im Live-Betrieb entfernen) -->
+<div class="ribbon">
+  Unverbindliche Design-Vorschau für <b>Secret Nail Room</b> &nbsp;·&nbsp; gestaltet von <a href="https://evowebdesign.ch" target="_blank" rel="noopener">evowebdesign.ch</a>
+</div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Secret Nail Room Startseite">
+      <svg class="emblem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="17" cy="17" r="15" stroke="#DABD7C" stroke-width="1.3"/>
+        <path d="M17 6C12.5 9.5 11.5 20 14.3 28.6c.9 2 4.5 2 5.4 0C22.5 20 21.5 9.5 17 6Z" fill="rgba(218,189,124,.16)" stroke="#DABD7C" stroke-width="1.3"/>
+        <path d="M12.7 12.6C14.6 10.9 19.4 10.9 21.3 12.6" stroke="#DABD7C" stroke-width="1.3" stroke-linecap="round"/>
+        <circle cx="17" cy="17" r="1.7" fill="#F6F1E9"/>
+      </svg>
+      <span class="bt">Secret Nail Room<small>Nagelstudio · Romanshorn</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#studio">Studio</a>
+      <a href="#preise">Leistungen &amp; Preise</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#faq">Fragen</a>
+      <a href="#termin" class="btn btn-gold">Termin buchen</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow on-dark reveal">Nagelstudio · Romanshorn</p>
+      <h1 class="reveal d1">Schöne Nägel<br>sind in Romanshorn<br>kein <span class="accent">Geheimnis.</span></h1>
+      <p class="lead reveal d2">Secret Nail Room ist die Adresse für Maniküre, Pediküre und Nageldesign im Herzen von Romanshorn. Seit der Eröffnung kommen unsere Gäste wieder — und haben uns dafür <strong style="color:var(--paper)">4,8 von 5 Sternen aus 78 Bewertungen</strong> gegeben.</p>
+      <div class="hero-cta reveal d3">
+        <a href="#termin" class="btn btn-gold">Termin buchen <span class="arw">→</span></a>
+        <a href="#preise" class="btn btn-outline-light">Leistungen &amp; Preise</a>
+      </div>
+      <div class="hero-rating reveal d3">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span><b style="color:var(--paper)">4,8</b> aus 78 verifizierten Bewertungen</span>
+      </div>
+    </div>
+
+    <div class="hero-figure reveal d2">
+      <div class="frame">
+        <div class="ph" style="aspect-ratio:3/4">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+          <div class="ph-t">Foto aus dem Studio</div>
+          <div class="ph-s">Hier kommt euer bestes Arbeitsfoto hin — ein fertiges Set oder ein Blick ins Studio.</div>
+        </div>
+      </div>
+      <span class="cap">Secret Nail Room · Romanshorn</span>
+    </div>
+  </div>
+</section>
+
+<div class="markers">
+  <div class="wrap"><div class="markers-grid">
+    <div class="reveal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div><div class="m-t">EKZ Hubzelg</div><div class="m-s">Bahnhofstrasse 54a, Romanshorn</div></div>
+    </div>
+    <div class="reveal d1">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.9 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg>
+      <div><div class="m-t">4,8 ★ · 78 Bewertungen</div><div class="m-s">Verifiziert über Salonkee</div></div>
+    </div>
+    <div class="reveal d2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <div><div class="m-t">Mo–Sa geöffnet</div><div class="m-s">Mo–Fr 09–19 · Sa 08–18 Uhr</div></div>
+    </div>
+    <div class="reveal d3">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9"/></svg>
+      <div><div class="m-t">Ohne lange Wartezeit</div><div class="m-s">Termin online oder telefonisch</div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- STUDIO -->
+<section class="section section-paper" id="studio">
+  <div class="wrap about-grid">
+    <div class="about-fig reveal">
+      <div class="ph">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+        <div class="ph-t">Foto vom Studio / Team</div>
+        <div class="ph-s">Ein Bild aus dem Studio oder vom Team wirkt hier am stärksten.</div>
+      </div>
+    </div>
+    <div class="about-body">
+      <p class="eyebrow reveal">Das Studio</p>
+      <h2 class="reveal d1">Ein kleines Studio, dem die Stadt vertraut.</h2>
+      <p class="lede reveal d1">„Ich gehe seit der Eröffnung zu Secret Nails — für mich sind sie die Besten.“</p>
+      <p class="reveal d2">Secret Nail Room liegt zentral im Einkaufszentrum Hubzelg in Romanshorn. Seit der Eröffnung dreht sich hier alles um ein sauberes, langlebiges Ergebnis und einen Service, bei dem sich jeder Gast willkommen fühlt — von der klassischen Maniküre bis zur kunstvollen Modellage.</p>
+      <p class="reveal d2">Dass das ankommt, zeigen 78 Bewertungen mit einem Schnitt von 4,8 Sternen: „top Nägel“, „netter Service“, „keine Wartezeit“ und immer wieder — die beste Adresse für Hände und Füsse in Romanshorn.</p>
+      <p class="sig reveal d3">— Secret Nail Room, Romanshorn</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN & PREISE -->
+<section class="section section-paper-2" id="preise">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Leistungen &amp; Preise</p>
+      <h2>Klare Preise, gepflegte Hände und Füsse.</h2>
+      <p>Von der schnellen Auffrischung bis zum kompletten neuen Set — hier siehst du auf einen Blick, was dich erwartet.</p>
+    </div>
+
+    <div class="pricecols reveal">
+      <div class="pricegroup">
+        <h3>Hände &amp; Nägel</h3>
+        <div class="priceitem">
+          <div><div class="pi-name">Maniküre</div><div class="pi-desc">Gepflegte Nägel und saubere Nagelhaut — die klassische Basis.</div></div>
+          <div class="pi-price">35 <small>CHF</small></div>
+        </div>
+        <div class="priceitem">
+          <div><div class="pi-name">Maniküre mit Shellac</div><div class="pi-desc">Maniküre plus langhaltender Shellac-Farblack in deiner Wunschfarbe.</div></div>
+          <div class="pi-price">55 <small>CHF</small></div>
+        </div>
+        <div class="priceitem">
+          <div><div class="pi-name">Nur Shellac</div><div class="pi-desc">Frische Shellac-Farbe auffrischen — schnell und langlebig.</div></div>
+          <div class="pi-price">45 <small>CHF</small></div>
+        </div>
+        <div class="priceitem">
+          <div><div class="pi-name">Acryl- &amp; Gel-Modellage</div><div class="pi-desc">Neues Set oder Auffüllen in deiner Wunschform und -länge.</div></div>
+          <div class="pi-price"><small>auf Anfrage</small></div>
+        </div>
+      </div>
+
+      <div class="pricegroup">
+        <h3>Füsse &amp; mehr</h3>
+        <div class="priceitem">
+          <div><div class="pi-name">Pediküre</div><div class="pi-desc">Wohltuende Fusspflege für ein gepflegtes, sauberes Ergebnis.</div></div>
+          <div class="pi-price">60 <small>CHF</small></div>
+        </div>
+        <div class="priceitem">
+          <div><div class="pi-name">Pediküre mit Shellac</div><div class="pi-desc">Fusspflege mit langhaltendem Shellac in deiner Wunschfarbe.</div></div>
+          <div class="pi-price">75 <small>CHF</small></div>
+        </div>
+        <div class="priceitem">
+          <div><div class="pi-name">Pediküre mit Acryl</div><div class="pi-desc">Stabile Verstärkung für strapazierte oder brüchige Fussnägel.</div></div>
+          <div class="pi-price">110 <small>CHF</small></div>
+        </div>
+        <div class="priceitem">
+          <div><div class="pi-name">Wimpern · Augenbrauen · Make-up</div><div class="pi-desc">Zusätzliche Beautybehandlungen rund um den Blick.</div></div>
+          <div class="pi-price"><small>auf Anfrage</small></div>
+        </div>
+      </div>
+    </div>
+    <p class="menu-note reveal">Alle Preise in CHF, Richtwerte je nach Länge und Aufwand. Nicht sicher, was zu dir passt? Ruf kurz an unter <a href="tel:+41779914588" style="color:var(--gold-deep);font-weight:700;border-bottom:1px solid rgba(198,161,91,.35)">077&nbsp;991&nbsp;45&nbsp;88</a> — wir beraten dich gern.</p>
+  </div>
+</section>
+
+<!-- WARUM / DIFFERENZIERER -->
+<section class="section section-noir" id="warum">
+  <div class="wrap diff-grid">
+    <div class="diff-body">
+      <p class="eyebrow on-dark reveal">Warum Secret Nail Room</p>
+      <h2 class="reveal d1">Kleine Details, die Stammgäste machen.</h2>
+      <p class="reveal d1">Was 78 Gäste immer wieder hervorheben, ist kein Zufall, sondern die Art, wie hier gearbeitet wird — sorgfältig, freundlich und ohne Hektik.</p>
+      <ul class="diff-list reveal d2">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="dt">Top Nägel, jedes Mal</div><div class="ds">Ein sauber gearbeitetes Ergebnis, das lange schön bleibt — von der Maniküre bis zur Modellage.</div></div>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="dt">Kaum Wartezeit</div><div class="ds">Termine, die eingehalten werden. Gäste loben, dass es pünktlich losgeht und flott vorangeht.</div></div>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="dt">Freundlicher, bemühter Service</div><div class="ds">Ein Team, das sich Zeit nimmt und auf deine Wünsche eingeht — dafür kommen viele wieder.</div></div>
+        </li>
+      </ul>
+    </div>
+    <div class="diff-art reveal d1">
+      <div class="ph dark">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+        <div class="ph-t">Foto: Nagelkunst / Arbeitsplatz</div>
+        <div class="ph-s">Ein Nahaufnahme-Foto eines fertigen Sets zeigt euer Niveau sofort.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEWERTUNGEN -->
+<section class="section section-paper" id="bewertungen">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="eyebrow" style="justify-content:center">Was Gäste sagen</p>
+      <h2>4,8 Sterne. 78 Mal bestätigt.</h2>
+    </div>
+
+    <div class="ratingband reveal">
+      <div class="big">4,8<small>aus 78 Bewertungen</small></div>
+      <div class="bars">
+        <div class="barrow"><span>5 Sterne</span><span class="track"><span class="fill" style="width:88%"></span></span><span>69</span></div>
+        <div class="barrow"><span>4 Sterne</span><span class="track"><span class="fill" style="width:7%"></span></span><span>5</span></div>
+        <div class="barrow"><span>3 Sterne</span><span class="track"><span class="fill" style="width:2%"></span></span><span>1</span></div>
+        <div class="barrow"><span>2 Sterne</span><span class="track"><span class="fill" style="width:3%"></span></span><span>2</span></div>
+        <div class="barrow"><span>1 Stern</span><span class="track"><span class="fill" style="width:2%"></span></span><span>1</span></div>
+      </div>
+    </div>
+
+    <div class="revs">
+      <div class="rev reveal">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>„Ich gehe seit der Eröffnung zu Secret Nails — für mich sind sie die Besten. Habe immer top Nägel, netter Service, sehr bemüht. Die beste Adresse für Hände und Füsse in Romanshorn.“</blockquote>
+        <div class="who"><span class="av">F</span><div><div class="nm">Fabienne</div><div class="src">Verifizierte Bewertung · Salonkee</div></div></div>
+      </div>
+      <div class="rev reveal d1">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>„Bin sehr zufrieden. Keine Wartezeit. Sehr freundlich.“</blockquote>
+        <div class="who"><span class="av">B</span><div><div class="nm">Bianca</div><div class="src">Verifizierte Bewertung · Salonkee</div></div></div>
+      </div>
+      <div class="rev stat reveal d2">
+        <div class="snum">69&nbsp;×</div>
+        <div class="stxt">von 78 Gästen haben die volle Punktzahl vergeben — 5 von 5 Sternen.</div>
+        <div class="ssub">Verifizierte Bewertungen auf Salonkee</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-paper-2" id="faq">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="eyebrow" style="justify-content:center">Häufige Fragen</p>
+      <h2>Gut zu wissen.</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Wie bekomme ich einen Termin bei Secret Nail Room?</summary>
+        <div class="ans">Am einfachsten telefonisch unter <a href="tel:+41779914588">077&nbsp;991&nbsp;45&nbsp;88</a>, über das Terminformular weiter unten oder online über die Buchungsseite. Wir melden uns mit einem passenden Termin zurück.</div>
+      </details>
+      <details>
+        <summary>Wann habt ihr geöffnet?</summary>
+        <div class="ans">Montag bis Freitag von 09:00 bis 19:00 Uhr und Samstag von 08:00 bis 18:00 Uhr. Sonntags ist das Studio geschlossen.</div>
+      </details>
+      <details>
+        <summary>Was kostet eine Behandlung?</summary>
+        <div class="ans">Eine Maniküre beginnt bei 35 CHF, mit Shellac bei 55 CHF, eine Pediküre bei 60 CHF. Acryl- und Gel-Modellage sowie Wimpern, Augenbrauen und Make-up nennen wir dir gern auf Anfrage. Alle Preise findest du oben unter „Leistungen &amp; Preise“.</div>
+      </details>
+      <details>
+        <summary>Wo befindet sich das Studio?</summary>
+        <div class="ans">Im Einkaufszentrum Hubzelg an der Bahnhofstrasse 54a, 8590 Romanshorn — zentral und gut erreichbar. Den genauen Standort findest du unten im Kontaktbereich.</div>
+      </details>
+      <details>
+        <summary>Bietet ihr auch Fusspflege und Modellage an?</summary>
+        <div class="ans">Ja. Neben Maniküre und Pediküre arbeiten wir mit Acryl- und Gelsystemen für neue Sets und Auffüllen, machen Nageldesign und bieten zusätzlich Wimpern, Augenbrauen und Make-up an.</div>
+      </details>
+      <details>
+        <summary>Muss ich lange auf einen Termin warten?</summary>
+        <div class="ans">In der Regel nicht — Gäste heben in ihren Bewertungen regelmässig hervor, dass es kaum Wartezeit gibt und Termine pünktlich beginnen. Am besten kurz anfragen, dann finden wir schnell einen passenden Slot.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- TERMIN / KONTAKT -->
+<section class="section section-noir" id="termin">
+  <div class="wrap book-grid">
+    <div>
+      <p class="eyebrow on-dark reveal">Termin &amp; Kontakt</p>
+      <h2 class="display reveal d1" style="font-size:clamp(34px,4.6vw,56px);color:var(--paper);margin:20px 0 30px">Sichern wir dir deinen Termin.</h2>
+      <div class="reveal d1">
+        <div class="info-row"><div class="k">Adresse</div><div class="v">EKZ Hubzelg · Bahnhofstrasse 54a<br>8590 Romanshorn</div></div>
+        <div class="info-row"><div class="k">Telefon</div><div class="v"><a href="tel:+41779914588">077 991 45 88</a></div></div>
+        <div class="info-row"><div class="k">Instagram</div><div class="v"><a href="https://www.instagram.com/secretnailroom.rh" target="_blank" rel="noopener">@secretnailroom.rh</a></div></div>
+        <div class="info-row"><div class="k">Öffnungszeiten</div><div class="v">Mo–Fr 09:00–19:00 · Sa 08:00–18:00<br>Sonntag geschlossen</div></div>
+        <div class="info-row"><div class="k">Anfahrt</div><div class="v"><a href="https://www.google.com/maps/search/?api=1&query=Secret+Nail+Room+Bahnhofstrasse+54a+8590+Romanshorn" target="_blank" rel="noopener">Auf Google Maps ansehen →</a></div></div>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <div class="book-card">
+        <h3>Terminanfrage</h3>
+        <p>Sag uns, was du dir wünschst — wir melden uns mit einem passenden Termin bei dir.</p>
+        <form id="bookform" novalidate>
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Dein Name" required>
+          </div>
+          <div class="field">
+            <label for="f-contact">Telefon oder Instagram</label>
+            <input type="text" id="f-contact" name="contact" placeholder="Wie erreichen wir dich?" required>
+          </div>
+          <div class="field">
+            <label for="f-service">Wunschbehandlung</label>
+            <select id="f-service" name="service">
+              <option>Maniküre</option>
+              <option>Maniküre mit Shellac</option>
+              <option>Nur Shellac</option>
+              <option>Acryl- &amp; Gel-Modellage</option>
+              <option>Pediküre</option>
+              <option>Pediküre mit Shellac</option>
+              <option>Pediküre mit Acryl</option>
+              <option>Wimpern / Augenbrauen / Make-up</option>
+              <option>Noch unsicher — bitte beraten</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Nachricht (optional)</label>
+            <textarea id="f-msg" name="message" placeholder="Wunschtermin, Ideen, Fragen …"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">Terminanfrage senden <span class="arw">→</span></button>
+          <p class="form-note">Vorschau — in der Live-Version wird dieses Formular direkt mit eurem Buchungskalender verbunden.</p>
+        </form>
+        <div class="form-ok" id="formok">Danke! In der Live-Version geht deine Anfrage jetzt direkt an das Studio. (Dies ist eine Design-Vorschau.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div style="max-width:34ch">
+        <div class="foot-brand">
+          <svg class="emblem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="17" cy="17" r="15" stroke="#DABD7C" stroke-width="1.3"/>
+            <path d="M17 6C12.5 9.5 11.5 20 14.3 28.6c.9 2 4.5 2 5.4 0C22.5 20 21.5 9.5 17 6Z" fill="rgba(218,189,124,.16)" stroke="#DABD7C" stroke-width="1.3"/>
+            <path d="M12.7 12.6C14.6 10.9 19.4 10.9 21.3 12.6" stroke="#DABD7C" stroke-width="1.3" stroke-linecap="round"/>
+            <circle cx="17" cy="17" r="1.7" fill="#F6F1E9"/>
+          </svg>
+          <span class="bt">Secret Nail Room</span>
+        </div>
+        <p style="margin-top:14px">Nagelstudio im Einkaufszentrum Hubzelg in Romanshorn. Maniküre, Pediküre, Shellac, Acryl- &amp; Gel-Modellage — mit 4,8 Sternen aus 78 Bewertungen.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Studio</h4>
+        <a href="#studio">Das Studio</a>
+        <a href="#preise">Leistungen &amp; Preise</a>
+        <a href="#bewertungen">Bewertungen</a>
+        <a href="#faq">Häufige Fragen</a>
+      </div>
+      <div class="foot-col">
+        <h4>Direkt</h4>
+        <a href="tel:+41779914588">077 991 45 88</a>
+        <a href="https://www.instagram.com/secretnailroom.rh" target="_blank" rel="noopener">@secretnailroom.rh</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Secret+Nail+Room+Bahnhofstrasse+54a+8590+Romanshorn" target="_blank" rel="noopener">Anfahrt &amp; Karte</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Secret Nail Room · Bahnhofstrasse 54a, 8590 Romanshorn</span>
+      <span>Design-Vorschau erstellt von <a href="https://evowebdesign.ch" target="_blank" rel="noopener">evowebdesign.ch</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"NailSalon",
+  "name":"Secret Nail Room",
+  "description":"Nagelstudio in Romanshorn. Maniküre, Pediküre, Shellac, Acryl- und Gel-Modellage, Nageldesign sowie Wimpern, Augenbrauen und Make-up.",
+  "url":"https://evowebdesign.ch/secret-nail-room-preview/",
+  "telephone":"+41779914588",
+  "priceRange":"$$",
+  "currenciesAccepted":"CHF",
+  "image":"https://evowebdesign.ch/secret-nail-room-preview/",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Bahnhofstrasse 54a",
+    "postalCode":"8590",
+    "addressLocality":"Romanshorn",
+    "addressRegion":"TG",
+    "addressCountry":"CH"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":47.5663,"longitude":9.3789},
+  "areaServed":["Romanshorn","Amriswil","Arbon","Uttwil","Egnach","Salmsach","Thurgau","Bodensee"],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"18:00"}
+  ],
+  "sameAs":["https://www.instagram.com/secretnailroom.rh","https://salonkee.ch/salon/secret-nail-room"],
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Maniküre"},"price":"35","priceCurrency":"CHF"},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Maniküre mit Shellac"},"price":"55","priceCurrency":"CHF"},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Nur Shellac"},"price":"45","priceCurrency":"CHF"},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Pediküre"},"price":"60","priceCurrency":"CHF"},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Pediküre mit Shellac"},"price":"75","priceCurrency":"CHF"},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Pediküre mit Acryl"},"price":"110","priceCurrency":"CHF"},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Acryl- & Gel-Modellage"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Wimpern, Augenbrauen & Make-up"}}
+  ],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"78","bestRating":"5"},
+  "review":[
+    {"@type":"Review","author":{"@type":"Person","name":"Fabienne"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Ich gehe seit der Eröffnung zu Secret Nails — für mich sind sie die Besten. Immer top Nägel, netter Service. Die beste Adresse für Hände und Füsse in Romanshorn."},
+    {"@type":"Review","author":{"@type":"Person","name":"Bianca"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Bin sehr zufrieden. Keine Wartezeit. Sehr freundlich."}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Wie bekomme ich einen Termin bei Secret Nail Room?","acceptedAnswer":{"@type":"Answer","text":"Am einfachsten telefonisch unter 077 991 45 88, über das Terminformular auf der Seite oder online über die Buchungsseite. Das Studio meldet sich mit einem passenden Termin zurück."}},
+    {"@type":"Question","name":"Wann hat Secret Nail Room geöffnet?","acceptedAnswer":{"@type":"Answer","text":"Montag bis Freitag von 09:00 bis 19:00 Uhr und Samstag von 08:00 bis 18:00 Uhr. Sonntags geschlossen."}},
+    {"@type":"Question","name":"Was kostet eine Behandlung bei Secret Nail Room?","acceptedAnswer":{"@type":"Answer","text":"Eine Maniküre beginnt bei 35 CHF, mit Shellac bei 55 CHF, eine Pediküre bei 60 CHF, Pediküre mit Shellac 75 CHF, Pediküre mit Acryl 110 CHF. Acryl- und Gel-Modellage sowie Wimpern, Augenbrauen und Make-up auf Anfrage."}},
+    {"@type":"Question","name":"Wo befindet sich Secret Nail Room?","acceptedAnswer":{"@type":"Answer","text":"Im Einkaufszentrum Hubzelg an der Bahnhofstrasse 54a, 8590 Romanshorn im Kanton Thurgau."}},
+    {"@type":"Question","name":"Welche Behandlungen bietet Secret Nail Room an?","acceptedAnswer":{"@type":"Answer","text":"Maniküre und Pediküre, Shellac, Acryl- und Gelsysteme für Modellage und Auffüllen, Nageldesign sowie Wimpern, Augenbrauen und Make-up."}},
+    {"@type":"Question","name":"Muss ich lange auf einen Termin warten?","acceptedAnswer":{"@type":"Answer","text":"In der Regel nicht. Gäste heben in ihren Bewertungen regelmässig hervor, dass es kaum Wartezeit gibt und Termine pünktlich beginnen."}}
+  ]
+}
+</script>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false);}));
+const form=document.getElementById('bookform'),ok=document.getElementById('formok');
+if(form){form.addEventListener('submit',(e)=>{e.preventDefault();form.style.display='none';ok.style.display='block';});}
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+</script>
+</body>
+</html>
