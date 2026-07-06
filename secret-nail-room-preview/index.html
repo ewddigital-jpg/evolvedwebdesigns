@@ -274,6 +274,39 @@ header.scrolled{background:rgba(14,13,22,.92);backdrop-filter:blur(14px);border-
 .field-2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
 .slot-note{font-size:12.5px;color:var(--ink-mute);margin:-2px 0 16px;letter-spacing:.01em}
 .book-card .btn-gold{width:100%;justify-content:center;margin-top:6px}
+
+/* calendar booking */
+.cal-lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:9px}
+.cal-wrap{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:15px 15px 17px;margin-bottom:16px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cal-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;color:var(--ink);text-transform:capitalize}
+.cal-nav{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--paper-2);color:var(--ink);font-size:19px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s,color .2s}
+.cal-nav:hover:not(:disabled){background:var(--gold);border-color:var(--gold);color:#211a08}
+.cal-nav:disabled{opacity:.3;cursor:not-allowed}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cal-dow span{text-align:center;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);padding:2px 0 8px}
+.cal-day{position:relative;aspect-ratio:1;border:1px solid transparent;border-radius:9px;background:var(--paper-2);color:var(--ink);font-family:'Manrope';font-weight:600;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .18s,color .18s,border-color .18s,transform .18s}
+.cal-day.is-empty{background:transparent;border:0;cursor:default}
+.cal-day.is-free:hover{border-color:var(--gold);transform:translateY(-1px)}
+.cal-day.is-free::after{content:"";position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.cal-day.is-off{color:var(--ink-mute);opacity:.4;cursor:not-allowed;background:transparent;border-color:transparent}
+.cal-day.is-selected{background:var(--gold);border-color:var(--gold);color:#211a08;font-weight:800}
+.cal-day.is-selected::after{background:#211a08}
+.slots-wrap{margin-bottom:16px}
+.slots-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:11px;flex-wrap:wrap}
+.slots-head .sl-lbl{font-size:13.5px;font-weight:700;color:var(--ink)}
+.slot-legend{display:inline-flex;align-items:center;gap:12px;font-size:11.5px;color:var(--ink-mute)}
+.slot-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+.slot-legend .lg-free{background:var(--paper);border:1px solid var(--gold)}
+.slot-legend .lg-booked{background:var(--paper-2);border:1px solid var(--line)}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.slot{padding:11px 4px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);font-family:'Manrope';font-weight:600;font-size:14px;cursor:pointer;text-align:center;transition:background .18s,color .18s,border-color .18s}
+.slot:hover:not(.is-booked){border-color:var(--gold);color:var(--gold-deep)}
+.slot.is-selected{background:var(--gold);border-color:var(--gold);color:#211a08;font-weight:800}
+.slot.is-booked{background:var(--paper-2);color:var(--ink-mute);cursor:not-allowed;text-decoration:line-through;opacity:.65}
+.slots-empty{font-size:14px;color:var(--gold-deep);font-weight:600;padding:6px 0}
+.book-err{display:none;font-size:13px;font-weight:600;color:#b23a3a;margin-bottom:12px}
+.book-err.show{display:block}
 .form-note{font-size:12.5px;color:var(--ink-mute);margin-top:14px;text-align:center;line-height:1.5}
 .form-ok{display:none;background:rgba(198,161,91,.1);border:1px solid var(--gold);border-radius:8px;padding:18px 20px;color:var(--gold-deep);font-size:15px;font-weight:600;margin-top:6px;line-height:1.5}
 
@@ -323,6 +356,8 @@ footer a:hover{color:var(--gold-lt)}
   .priceitem .pi-price{text-align:left}
   .priceitem:hover{padding-left:6px}
   .field-2{grid-template-columns:1fr}
+  .slots{grid-template-columns:repeat(3,1fr)}
+  .cal-day{font-size:14px}
   .info-row{flex-direction:column;gap:4px}
   .info-row .k{width:auto}
   .hero-figure .cap{left:0}
@@ -632,19 +667,28 @@ footer a:hover{color:var(--gold-lt)}
               <option>Noch unsicher — bitte beraten</option>
             </select>
           </div>
-          <div class="field-2">
-            <div class="field">
-              <label for="f-date">Datum</label>
-              <input type="date" id="f-date" name="date" required>
+          <span class="cal-lbl">Tag wählen</span>
+          <div class="cal-wrap">
+            <div class="cal-head">
+              <button type="button" class="cal-nav" id="cal-prev" aria-label="Vorheriger Monat">‹</button>
+              <div class="cal-title" id="cal-title">Monat</div>
+              <button type="button" class="cal-nav" id="cal-next" aria-label="Nächster Monat">›</button>
             </div>
-            <div class="field">
-              <label for="f-time">Uhrzeit</label>
-              <select id="f-time" name="time" required>
-                <option value="">Erst Datum wählen</option>
-              </select>
+            <div class="cal-grid cal-dow" aria-hidden="true">
+              <span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span>
             </div>
+            <div class="cal-grid" id="cal-days"></div>
           </div>
-          <p class="slot-note" id="slotnote">Mo–Fr 09:00–19:00 · Sa 08:00–18:00 · Sonntag geschlossen</p>
+          <div class="slots-wrap" id="slots-wrap" hidden>
+            <div class="slots-head">
+              <span class="sl-lbl" id="slots-label">Freie Zeiten</span>
+              <span class="slot-legend"><span><i class="lg-free"></i>frei</span><span><i class="lg-booked"></i>belegt</span></span>
+            </div>
+            <div class="slots" id="slots"></div>
+          </div>
+          <p class="book-err" id="book-err">Bitte wähle im Kalender einen Tag und eine freie Uhrzeit.</p>
+          <input type="hidden" id="f-date" name="date">
+          <input type="hidden" id="f-time" name="time">
           <div class="field-2">
             <div class="field">
               <label for="f-name">Name</label>
@@ -771,43 +815,73 @@ burger.addEventListener('click',()=>{
   burger.setAttribute('aria-expanded',open);
 });
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false);}));
-/* Online-Buchung: Datum + dynamische Slots nach Oeffnungszeiten */
-const fDate=document.getElementById('f-date'),fTime=document.getElementById('f-time'),slotNote=document.getElementById('slotnote');
-if(fDate){
+/* Online-Buchung: Kalenderansicht mit belegten Zeiten (Demo) */
+const fDate=document.getElementById('f-date'),fTime=document.getElementById('f-time');
+const calDays=document.getElementById('cal-days'),calTitle=document.getElementById('cal-title'),
+      calPrev=document.getElementById('cal-prev'),calNext=document.getElementById('cal-next'),
+      slotsWrap=document.getElementById('slots-wrap'),slotsEl=document.getElementById('slots'),
+      slotsLabel=document.getElementById('slots-label'),bookErr=document.getElementById('book-err');
+if(calDays){
   const pad=n=>String(n).padStart(2,'0');
-  const today=new Date();
-  fDate.min=`${today.getFullYear()}-${pad(today.getMonth()+1)}-${pad(today.getDate())}`;
-  const buildSlots=(open,close)=>{
-    const out=[];
-    for(let m=open*60;m<close*60;m+=30){out.push(`${pad(Math.floor(m/60))}:${pad(m%60)}`);}
-    return out;
-  };
-  fDate.addEventListener('change',()=>{
-    fTime.innerHTML='';
-    if(!fDate.value){fTime.innerHTML='<option value="">Erst Datum wählen</option>';return;}
-    const d=new Date(fDate.value+'T00:00'),day=d.getDay(); // 0=So,6=Sa
-    if(day===0){
-      fTime.innerHTML='<option value="">— geschlossen —</option>';
-      slotNote.textContent='Sonntags ist das Studio geschlossen. Bitte wähle Mo–Sa.';
-      slotNote.style.color='var(--gold-deep)';
-      return;
+  const MONTHS=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+  const today=new Date();today.setHours(0,0,0,0);
+  const view=new Date(today.getFullYear(),today.getMonth(),1);
+  let selDate=null;
+  const key=d=>d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate();
+  // seeded RNG -> "belegte" Slots sind pro Tag stabil (wirkt wie echte Buchungen)
+  const rng=s=>{s=s%2147483647;if(s<=0)s+=2147483646;return()=>{s=s*16807%2147483647;return(s-1)/2147483646;};};
+  function slotsFor(d){
+    const day=d.getDay();if(day===0)return[];
+    const open=day===6?8:9,close=day===6?18:19,r=rng(key(d)),arr=[];
+    for(let m=open*60;m<close*60;m+=30){arr.push({t:`${pad(Math.floor(m/60))}:${pad(m%60)}`,booked:r()<0.42});}
+    if(arr.filter(s=>!s.booked).length<2)arr.slice(0,2).forEach(s=>s.booked=false);
+    return arr;
+  }
+  function renderSlots(d){
+    const list=slotsFor(d);slotsEl.innerHTML='';fTime.value='';
+    list.forEach(s=>{
+      const b=document.createElement('button');
+      b.type='button';b.className='slot'+(s.booked?' is-booked':'');b.textContent=s.t;
+      if(s.booked){b.disabled=true;b.title='Belegt';}
+      else b.addEventListener('click',()=>{
+        fTime.value=s.t;bookErr.classList.remove('show');
+        slotsEl.querySelectorAll('.slot').forEach(x=>x.classList.remove('is-selected'));
+        b.classList.add('is-selected');
+      });
+      slotsEl.appendChild(b);
+    });
+    slotsLabel.textContent='Freie Zeiten am '+d.toLocaleDateString('de-CH',{weekday:'long',day:'numeric',month:'long'});
+    slotsWrap.hidden=false;
+  }
+  function render(){
+    calTitle.textContent=MONTHS[view.getMonth()]+' '+view.getFullYear();
+    calDays.innerHTML='';
+    const start=(new Date(view.getFullYear(),view.getMonth(),1).getDay()+6)%7; // Mo=0
+    const dim=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+    for(let i=0;i<start;i++){const e=document.createElement('div');e.className='cal-day is-empty';calDays.appendChild(e);}
+    for(let n=1;n<=dim;n++){
+      const d=new Date(view.getFullYear(),view.getMonth(),n),b=document.createElement('button');
+      b.type='button';b.textContent=n;
+      if(d<today||d.getDay()===0){b.className='cal-day is-off';b.disabled=true;if(d.getDay()===0)b.title='Sonntag geschlossen';}
+      else{b.className='cal-day is-free';b.addEventListener('click',()=>{selDate=d;fDate.value=`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;render();renderSlots(d);});}
+      if(selDate&&key(selDate)===key(d))b.classList.add('is-selected');
+      calDays.appendChild(b);
     }
-    slotNote.textContent='Mo–Fr 09:00–19:00 · Sa 08:00–18:00 · Sonntag geschlossen';
-    slotNote.style.color='var(--ink-mute)';
-    const slots=day===6?buildSlots(8,18):buildSlots(9,19);
-    fTime.appendChild(new Option('Uhrzeit wählen',''));
-    slots.forEach(t=>fTime.appendChild(new Option(t+' Uhr',t)));
-  });
+    calPrev.disabled=(view.getFullYear()===today.getFullYear()&&view.getMonth()===today.getMonth());
+  }
+  calPrev.addEventListener('click',()=>{view.setMonth(view.getMonth()-1);render();});
+  calNext.addEventListener('click',()=>{view.setMonth(view.getMonth()+1);render();});
+  render();
 }
 const form=document.getElementById('bookform'),ok=document.getElementById('formok');
 if(form){form.addEventListener('submit',(e)=>{
   e.preventDefault();
+  if(!fDate.value||!fTime.value){bookErr.classList.add('show');slotsWrap.scrollIntoView({block:'center',behavior:'smooth'});return;}
   if(!form.checkValidity()){form.reportValidity();return;}
   const svc=(document.getElementById('f-service').value||'').split(' · ')[0];
-  const dv=fDate&&fDate.value?new Date(fDate.value+'T00:00').toLocaleDateString('de-CH',{weekday:'long',day:'2-digit',month:'long'}):'';
-  const tv=fTime&&fTime.value?', '+fTime.value+' Uhr':'';
+  const dv=new Date(fDate.value+'T00:00').toLocaleDateString('de-CH',{weekday:'long',day:'numeric',month:'long'});
   const sum=document.getElementById('ok-summary');
-  if(sum)sum.textContent=`${svc} am ${dv}${tv}`;
+  if(sum)sum.textContent=`${svc} am ${dv}, ${fTime.value} Uhr`;
   form.style.display='none';ok.style.display='block';
 });}
 if('IntersectionObserver' in window){
