@@ -538,6 +538,10 @@
     .about-hero-text .lead strong{color:var(--text)}
     .about-hero .hero-chips{justify-content:flex-start;margin:0 0 1.5rem}
     .about-cta-row{display:flex;gap:.85rem;flex-wrap:wrap}
+    /* Einheitliche Einblend-Animation (gleiche Bewegung wie die Scroll-Reveals) */
+    .about-hero-text{animation:fadeUp .6s cubic-bezier(.4,0,.2,1) .05s both}
+    .about-hero-media{animation:fadeUp .6s cubic-bezier(.4,0,.2,1) .18s both}
+    @media(prefers-reduced-motion:reduce){.about-hero-text,.about-hero-media{animation:none}}
 
     /* Portrait-Bühne: freigestellt auf Brand-Glow */
     .portrait-stage{position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:360px}
