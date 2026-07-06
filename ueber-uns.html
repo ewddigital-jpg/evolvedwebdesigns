@@ -8,16 +8,16 @@
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <title>Der persönliche Partner für Ihre neue Website</title>
-    <meta name="description" content="Ich bin Daniel und mache lokale Betriebe im Thurgau online sichtbar. Direkter Ansprechpartner, faire Festpreise, Antwort in 24 Stunden.">
+    <title>Über mich – Daniel, Ihr persönlicher Webdesigner im Thurgau</title>
+    <meta name="description" content="Ich bin Daniel Holman, Gründer von Evolved Web Design aus Frauenfeld. Ich baue Websites für lokale Unternehmen im Thurgau und am Bodensee – persönlich betreut, faire Festpreise, Antwort in 24 Stunden.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://evowebdesign.ch/ueber-uns">
     <link rel="alternate" hreflang="de-CH" href="https://evowebdesign.ch/ueber-uns">
     <link rel="alternate" hreflang="x-default" href="https://evowebdesign.ch/ueber-uns">
     <meta name="author" content="Evolved Web Design">
 
-    <meta property="og:title" content="Der persönliche Partner für Ihre neue Website">
-    <meta property="og:description" content="Persönlich, direkt und auf Augenhöhe. Webdesign und KI für Betriebe im Thurgau, die online mehr Kunden gewinnen wollen.">
+    <meta property="og:title" content="Über mich – Daniel, Ihr persönlicher Webdesigner im Thurgau">
+    <meta property="og:description" content="Ich bin Daniel Holman, Gründer von Evolved Web Design aus Frauenfeld. Websites für lokale Unternehmen im Thurgau und am Bodensee – persönlich betreut, faire Festpreise.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://evowebdesign.ch/ueber-uns" />
   <meta property="og:image" content="https://evowebdesign.ch/logo-nobg.png" />
@@ -156,10 +156,37 @@
   },
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "Person",
+    "@id": "https://evowebdesign.ch/#daniel",
+    "name": "Daniel Holman",
+    "jobTitle": "Gründer & Webdesigner",
+    "description": "Daniel Holman ist Gründer von Evolved Web Design in Frauenfeld. Als alleiniger Ansprechpartner baut er Websites für lokale Unternehmen im Thurgau und am Bodensee – mit Fokus auf Conversion, lokale SEO und einen optionalen KI-Assistenten.",
+    "image": "https://evowebdesign.ch/daniel-portrait.webp",
     "url": "https://evowebdesign.ch/ueber-uns",
+    "worksFor": {
+      "@id": "https://evowebdesign.ch/#org"
+    },
+    "knowsAbout": [
+      "Webdesign",
+      "Conversion-Optimierung",
+      "lokale SEO",
+      "KI-Suchoptimierung"
+    ],
+    "sameAs": [
+      "https://www.instagram.com/evowebdesign.de/",
+      "https://www.tiktok.com/@evowebdesign.de"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": "https://evowebdesign.ch/ueber-uns",
+    "name": "Über mich – Daniel Holman, Evolved Web Design",
     "isPartOf": {
       "@id": "https://evowebdesign.ch/#org"
+    },
+    "mainEntity": {
+      "@id": "https://evowebdesign.ch/#daniel"
     }
   }
 ]
@@ -501,11 +528,83 @@
     }
 </style>
   <link rel="stylesheet" href="assets/css/tokens.css">
+
+  <!-- ── ABOUT v2 (Foto-Hero + Trust) ── -->
+  <style id="about-v2">
+    /* Hero: Text + Portrait */
+    .about-hero{max-width:1120px;margin:0 auto;padding:1.25rem 1.5rem .5rem;display:grid;grid-template-columns:1.08fr .92fr;gap:2.75rem;align-items:center}
+    .about-hero-text h1{font-family:'Poppins',sans-serif;font-size:clamp(2rem,4.6vw,3rem);font-weight:800;line-height:1.08;letter-spacing:-.02em;margin-bottom:1.1rem}
+    .about-hero-text .lead{color:var(--text-secondary);font-size:1.06rem;line-height:1.75;margin-bottom:1.3rem}
+    .about-hero-text .lead strong{color:var(--text)}
+    .about-hero .hero-chips{justify-content:flex-start;margin:0 0 1.5rem}
+    .about-cta-row{display:flex;gap:.85rem;flex-wrap:wrap}
+
+    /* Portrait-Bühne: freigestellt auf Brand-Glow */
+    .portrait-stage{position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:360px}
+    .portrait-stage::before{content:'';position:absolute;left:50%;top:48%;width:112%;height:112%;transform:translate(-50%,-50%);
+      background:radial-gradient(ellipse 46% 52% at 50% 44%,rgba(0,102,255,.30),rgba(0,217,255,.10) 45%,transparent 70%);
+      filter:blur(6px);z-index:0;pointer-events:none}
+    .portrait-stage::after{content:'';position:absolute;left:50%;bottom:6%;width:66%;height:26px;transform:translateX(-50%);
+      background:radial-gradient(ellipse at center,rgba(0,0,0,.55),transparent 72%);filter:blur(8px);z-index:0;pointer-events:none}
+    .portrait-stage img{position:relative;z-index:1;width:100%;max-width:400px;height:auto;
+      filter:drop-shadow(0 26px 46px rgba(0,0,0,.55));animation:float 6s ease-in-out infinite}
+    .portrait-badge{position:absolute;right:2%;bottom:16%;z-index:2;background:rgba(13,17,23,.82);backdrop-filter:blur(10px);
+      border:1px solid var(--border-hover);border-radius:14px;padding:.7rem .95rem;display:flex;align-items:center;gap:.6rem;
+      box-shadow:0 10px 30px rgba(0,0,0,.45)}
+    .portrait-badge .pb-dot{width:9px;height:9px;border-radius:50%;background:var(--success);box-shadow:0 0 8px var(--success);flex-shrink:0}
+    .portrait-badge b{font-size:.82rem;color:var(--text);font-weight:700;display:block;line-height:1.25}
+    .portrait-badge span{font-size:.72rem;color:var(--text-secondary)}
+
+    /* Namenszeile unter dem Hero-Text */
+    .about-sign{display:flex;align-items:center;gap:.7rem;margin-bottom:1.15rem}
+    .about-sign .as-line{width:34px;height:1px;background:var(--border-hover)}
+    .about-sign span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+
+    /* "So arbeite ich" – Foto (hell) + Text */
+    .work-split{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:2.25rem;align-items:center}
+    .photo-card{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--border);
+      box-shadow:0 24px 60px rgba(0,0,0,.45);line-height:0}
+    .photo-card img{display:block;width:100%;height:auto}
+    .photo-card::after{content:'';position:absolute;inset:0;border-radius:20px;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);pointer-events:none}
+    .work-copy h2{font-family:'Poppins',sans-serif;font-size:clamp(1.4rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.9rem}
+    .work-copy p{color:var(--text-secondary);font-size:1rem;line-height:1.8;margin-bottom:1.1rem}
+    .work-copy p strong{color:var(--text)}
+
+    /* Versprechen-Checkliste */
+    .promise-box{max-width:1100px;margin:0 auto;background:linear-gradient(135deg,rgba(16,185,129,.10),rgba(0,217,255,.05));
+      border:1px solid rgba(16,185,129,.32);border-radius:18px;padding:1.75rem 1.75rem 1.5rem}
+    .promise-box h2{font-family:'Poppins',sans-serif;font-size:1.35rem;font-weight:800;margin-bottom:1.15rem;display:flex;align-items:center;gap:.6rem}
+    .promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+    .promise-item{display:flex;gap:.7rem;align-items:flex-start;background:rgba(13,17,23,.35);border:1px solid var(--border);
+      border-radius:12px;padding:.85rem 1rem}
+    .promise-item svg{flex-shrink:0;color:var(--success);margin-top:2px}
+    .promise-item b{color:var(--text);font-weight:700;font-size:.92rem;display:block;line-height:1.4;margin-bottom:.15rem}
+    .promise-item p{color:var(--text-secondary);font-size:.86rem;line-height:1.6;margin:0}
+
+    .check-list{display:grid;gap:.55rem;margin-top:.4rem}
+    .check-list .ci{display:flex;gap:.6rem;align-items:flex-start;color:var(--text-secondary);font-size:.94rem;line-height:1.55}
+    .check-list .ci svg{flex-shrink:0;color:var(--accent);margin-top:3px}
+    .check-list .ci b{color:var(--text)}
+
+    @media(max-width:860px){
+      .about-hero{grid-template-columns:1fr;gap:1.25rem;text-align:center;padding-top:.5rem}
+      .about-hero .hero-chips{justify-content:center}
+      .about-cta-row{justify-content:center}
+      .about-sign{justify-content:center}
+      .about-hero-media{order:-1}
+      .portrait-stage{min-height:300px}
+      .portrait-stage img{max-width:290px}
+      .work-split{grid-template-columns:1fr;gap:1.5rem}
+      .work-copy{text-align:left}
+      .promise-grid{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
 
     <div class="whatsapp-float">
-        <a href="https://wa.me/41783175991?text=Hallo%20EWD%20Team!%20Ich%20interessiere%20mich%20f%C3%BCr%20Webdesign." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
+        <a href="https://wa.me/41783175991?text=Hallo%20Daniel!%20Ich%20interessiere%20mich%20f%C3%BCr%20Webdesign." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
             <img loading="lazy" src="icon-whatsapp.webp" alt="WhatsApp" width="32" height="32">
         </a>
     </div>
@@ -524,7 +623,7 @@
         <li><a href="https://evowebdesign.ch/website-ki-bot" class="nav-highlight">KI-Assistent</a></li>
         <li><a href="https://evowebdesign.ch/projekte">Projekte</a></li>
         <li><a href="https://evowebdesign.ch/ratgeber">Ratgeber</a></li>
-        <li><a href="https://evowebdesign.ch/ueber-uns">Über uns</a></li>
+        <li><a href="https://evowebdesign.ch/ueber-uns">Über mich</a></li>
         <li><a href="https://evowebdesign.ch/angebote">Angebote</a></li>
         <li><a href="https://evowebdesign.ch/kontakt" class="nav-cta">Kontakt aufnehmen</a></li>
       </ul>
@@ -534,18 +633,33 @@
 
   <main>
 
-  <nav class="bc" aria-label="Breadcrumb"><ol><li><a href="https://evowebdesign.ch/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Über uns</li></ol></nav>
+  <nav class="bc" aria-label="Breadcrumb"><ol><li><a href="https://evowebdesign.ch/">Startseite</a></li><li class="bc-sep" aria-hidden="true">›</li><li class="bc-cur" aria-current="page">Über mich</li></ol></nav>
 
-  <div class="page-hero">
-        <h1>Persönlich &amp; lokal. <span class="gradient-text">Ein klares Ziel.</span></h1>
-        <p>Ich bin Daniel. Aufgewachsen in der Region, gegründet Ende 2025. Ich baue Websites, die wirklich Anfragen bringen – mit modernem KI-Assistent und schlankem Code. Kein grosses Büro, kein aufgeblähtes Team. Direkter Kontakt und schnelle Ergebnisse.</p>
-        <div class="hero-chips">
-            <span class="chip"><b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></b> Schnell online</span>
-            <span class="chip"><b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></b> Conversion-Fokus</span>
-            <span class="chip"><b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></b> SEO-Basis</span>
-            <span class="chip"><b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></b> Lokal (Thurgau)</span>
+  <section class="about-hero">
+        <div class="about-hero-text">
+            <h1>Hallo, ich bin Daniel. <span class="gradient-text">Schön, dass Sie hier sind.</span></h1>
+            <p class="lead">Ich bin <strong>Daniel Holman</strong>, Gründer von Evolved Web Design aus Frauenfeld. Ich baue Websites für lokale Unternehmen im Thurgau und am Bodensee – mit Fokus auf klare Struktur, schnelle Ladezeiten und Sichtbarkeit bei Google. Jedes Projekt begleite ich persönlich, von der ersten Idee bis zum Launch.</p>
+            <div class="hero-chips">
+                <span class="chip"><b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></b> Antwort in 24 h</span>
+                <span class="chip"><b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></b> Fairer Festpreis</span>
+                <span class="chip"><b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></b> Persönliche Betreuung</span>
+                <span class="chip"><b><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></b> Aus dem Thurgau</span>
+            </div>
+            <div class="about-cta-row">
+                <a href="https://evowebdesign.ch/kontakt" class="btn btn-primary">Lernen Sie mich kennen →</a>
+                <a href="tel:+41783175991" class="btn btn-secondary"><span style="display:inline-flex;align-items:center;gap:.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Direkt anrufen</span></a>
+            </div>
         </div>
-    </div>
+        <div class="about-hero-media">
+            <div class="portrait-stage">
+                <img src="daniel-portrait.webp" alt="Daniel Holman, Gründer von Evolved Web Design aus Frauenfeld" width="400" height="562" fetchpriority="high">
+                <div class="portrait-badge">
+                    <span class="pb-dot" aria-hidden="true"></span>
+                    <div><b>Daniel Holman</b><span>Gründer &amp; Webdesigner</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
   
 
@@ -554,20 +668,20 @@
         <div class="faq-category">
             <div class="faq-category-title"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="15" y2="15"/></svg></span> Über Evolved Web Design</div>
             <div class="intro-card">
-                <p><strong>Evolved Web Design (EWD)</strong> ist eine Webdesign Agentur aus Frauenfeld. Wir arbeiten vor allem mit lokalen Unternehmen im Thurgau und am Bodensee, die online sichtbar werden wollen – professionell begleitet, ohne Umwege.</p>
-                <p>Viele Websites „existieren", aber liefern kaum Ergebnisse: unklare Struktur, langsame Ladezeiten, schwache Inhalte, keine lokale SEO. Genau da setzen wir an: <strong>Struktur + Geschwindigkeit + Sichtbarkeit</strong>.</p>
-                <p>Unser Ziel ist simpel: Ihre Website soll innerhalb von Sekunden überzeugen – und Besucher zu Kunden machen.</p>
+                <p>Hinter <strong>Evolved Web Design (EWD)</strong> stehe ich persönlich: Daniel, aufgewachsen in der Region und Gründer seit Ende 2025. Ich arbeite mit lokalen Unternehmen im Thurgau und am Bodensee, die online sichtbar werden und mehr Anfragen erhalten möchten – Schritt für Schritt und ohne Umwege.</p>
+                <p>Viele Websites „existieren", liefern aber kaum Ergebnisse: unklare Struktur, langsame Ladezeiten, schwache Texte, keine lokale SEO. Genau da setze ich an – mit <strong>Struktur, Geschwindigkeit und Sichtbarkeit</strong>.</p>
+                <p>Mein Ziel ist simpel: Ihre Website soll in Sekunden überzeugen und aus Besuchern echte Anfragen machen. Nicht mehr, nicht weniger.</p>
             </div>
         </div>
 
         <!-- ── WERTE ── -->
         <div class="faq-category">
-            <div class="faq-category-title"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12c.5.5 1 1.4 1 2h6c0-.6.5-1.5 1-2a7 7 0 0 0-4-12z"/></svg></span> Was uns antreibt</div>
+            <div class="faq-category-title"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12c.5.5 1 1.4 1 2h6c0-.6.5-1.5 1-2a7 7 0 0 0-4-12z"/></svg></span> Was mich antreibt</div>
             <div class="card-grid cols-3">
                 <div class="info-card">
                     <div class="info-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
                     <h3>Schnell</h3>
-                    <p>Kurze Ladezeiten, schnelle Umsetzung und klare Kommunikation. Kein wochenlanges „Wir melden uns".</p>
+                    <p>Kurze Ladezeiten, zügige Umsetzung und klare Antworten. Kein wochenlanges „Ich melde mich dann mal".</p>
                 </div>
                 <div class="info-card">
                     <div class="info-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6z"/></svg></div>
@@ -587,23 +701,23 @@
             <div class="faq-category-title"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span> Ehrliche Zahlen</div>
             <div class="card-grid cols-3">
                 <div class="proof-tile">
-                    <div class="big">1 Projekt</div>
-                    <p>Unser erstes abgeschlossenes Projekt.</p>
+                    <div class="big">Persönlich</div>
+                    <p>Ich begleite jedes Projekt selbst – vom ersten Gespräch bis nach dem Launch. Sie wissen immer, mit wem Sie es zu tun haben.</p>
                 </div>
                 <div class="proof-tile">
-                    <div class="big">100% Zufrieden</div>
-                    <p>KK Gebaeudereinigung – 100% zufriedener Kunde.</p>
+                    <div class="big">100 %</div>
+                    <p>Festpreis, den Sie vorab kennen. Keine versteckten Kosten, kein Abo-Zwang, keine Überraschungen.</p>
                 </div>
                 <div class="proof-tile">
-                    <div class="big">24h</div>
-                    <p>Durchschnittliche Antwortzeit.</p>
+                    <div class="big">24 h</div>
+                    <p>Ihre Anfrage beantworte ich innert 24 Stunden – meistens deutlich schneller.</p>
                 </div>
             </div>
         </div>
 
         <!-- ── ABLAUF ── -->
         <div class="faq-category">
-            <div class="faq-category-title"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span> So bringen wir Ihre Website live</div>
+            <div class="faq-category-title"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span> So bringe ich Ihre Website live</div>
             <div class="card-grid cols-4">
                 <div class="info-card">
                     <div class="info-card-icon" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1rem">1</div>
@@ -628,27 +742,39 @@
             </div>
         </div>
 
-        <!-- ── TEAM ── -->
+        <!-- ── SO ARBEITE ICH (Laptop-Foto) ── -->
         <div class="faq-category">
-            <div class="faq-category-title"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> Der Kopf hinter EWD</div>
-            <div class="card-grid cols-1">
-                <div class="team-card">
-                    <div class="team-photo">
-                      <img loading="lazy" src="daniel.webp" alt="Daniel Holman" width="140" height="140"
-                           onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'team-photo-ph\'>&#128247;&ensp;Foto folgt</div>'" />
-                    </div>
-                    <h3>Daniel Holman</h3>
-                    <p class="team-role">Inhaber – Webdesign, SEO &amp; Entwicklung</p>
-                    <p>Von der Struktur über das Design bis zur technischen Umsetzung: Ich baue Ihre Website schnell, sauber und auf Google ausgerichtet – mit einem direkten Ansprechpartner statt Ticketsystem.</p>
-                    <div class="skill-list">
-                        <div class="skill"><b>✓</b> Conversion-orientierte Seitenstruktur &amp; Copy</div>
-                        <div class="skill"><b>✓</b> Onpage-SEO (Struktur, Meta, interne Verlinkung)</div>
-                        <div class="skill"><b>✓</b> Performance &amp; saubere technische Umsetzung</div>
+            <div class="faq-category-title"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> So arbeite ich</div>
+            <div class="work-split">
+                <div class="photo-card">
+                    <img loading="lazy" src="daniel-laptop.webp" alt="Daniel Holman arbeitet an einer Website am Laptop" width="900" height="1003">
+                </div>
+                <div class="work-copy">
+                    <h2>Alles aus einer Hand – persönlich betreut</h2>
+                    <p>Ich plane die Struktur, schreibe die Texte, gestalte das Design und bringe Ihre Website live. Weil alles bei mir zusammenläuft, bleibt Ihr Projekt aus einem Guss – und Sie haben immer jemanden, der es wirklich kennt.</p>
+                    <p>Das bedeutet für Sie: <strong>kurze Wege, ehrliche Antworten und verlässliche Termine.</strong> Moderne Werkzeuge und KI setze ich dabei gezielt ein – nicht als Trick, sondern um Ihnen bessere Qualität in kürzerer Zeit zu einem fairen Preis zu liefern.</p>
+                    <div class="check-list">
+                        <div class="ci"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Conversion-orientierte Struktur &amp; <b>Texte, die verkaufen</b></span></div>
+                        <div class="ci"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Onpage-SEO: <b>Struktur, Meta, interne Verlinkung</b></span></div>
+                        <div class="ci"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Schnelle Ladezeiten &amp; <b>sauberer, schlanker Code</b></span></div>
+                        <div class="ci"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Optionaler <b>KI-Assistent</b> für Anfragen rund um die Uhr</span></div>
                     </div>
                 </div>
             </div>
-            <div class="intro-card" style="margin-top:0.75rem">
-                <p>Was EWD ausmacht: keine alten Prozesse, die verteidigt werden müssen. Ich nutze KI von Anfang an – nicht als Trick, sondern als echtes Werkzeug. Das Ergebnis: bessere Qualität, kürzere Laufzeiten, faire Preise.</p>
+        </div>
+
+        <!-- ── MEIN VERSPRECHEN ── -->
+        <div class="faq-category">
+            <div class="promise-box">
+                <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9z"/></svg> Mein Versprechen an Sie</h2>
+                <div class="promise-grid">
+                    <div class="promise-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Fairer Festpreis, vorab</b><p>Sie wissen von Anfang an, was Ihre Website kostet. Keine versteckten Posten.</p></div></div>
+                    <div class="promise-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Kein Abo-Zwang</b><p>Ihre Website gehört Ihnen. Betreuung ist möglich, aber nie Pflicht.</p></div></div>
+                    <div class="promise-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Antwort in 24 Stunden</b><p>Sie warten nie tagelang auf eine Rückmeldung. Ich bin erreichbar.</p></div></div>
+                    <div class="promise-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Schweizer Datenschutz</b><p>Sauber nach revDSG umgesetzt – Ihre Daten und die Ihrer Kunden bleiben geschützt.</p></div></div>
+                    <div class="promise-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Erst zufrieden, dann live</b><p>Ihre Seite geht erst online, wenn Sie wirklich glücklich damit sind.</p></div></div>
+                    <div class="promise-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Persönliche Betreuung</b><p>Ihr Projekt liegt von Anfang bis Ende in denselben Händen – jemand, der es wirklich kennt.</p></div></div>
+                </div>
             </div>
         </div>
 
@@ -657,15 +783,15 @@
             <div class="faq-category-title"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> Regional im Thurgau &amp; am Bodensee</div>
             <div class="local-card">
                 <h3>Frauenfeld, Thurgau &amp; Bodensee-Region</h3>
-                <p>Wir arbeiten vor allem mit Unternehmen in <strong>Frauenfeld</strong> und im Thurgau – z. B. Kreuzlingen, Weinfelden, Romanshorn und Umgebung. Das hilft nicht nur bei der Kommunikation, sondern auch bei <strong>Local SEO</strong>: Standort-Signale, regional relevante Inhalte und Suchintention.</p>
+                <p>Ich arbeite vor allem mit Unternehmen in <strong>Frauenfeld</strong> und im Thurgau – z. B. Kreuzlingen, Weinfelden, Romanshorn und Umgebung. Die Nähe hilft nicht nur bei der Kommunikation, sondern auch bei <strong>Local SEO</strong>: Standort-Signale, regional relevante Inhalte und die passende Suchintention.</p>
             </div>
         </div>
 
         <!-- ── CTA ── -->
         <div class="faq-category">
         <div class="cta-box">
-            <h2>Kostenlose Erstberatung – mit klaren To-dos</h2>
-            <p>In 15 Minuten schauen wir: Was bremst Ihre Website? Design, Struktur, Sichtbarkeit. Wenn wir helfen können, bekommen Sie ein <strong style="color:var(--text)">Festpreis-Angebot</strong>. Wenn nicht, gehen Sie trotzdem mit konkreten nächsten Schritten raus.</p>
+            <h2>Kostenloses Erstgespräch – mit klaren To-dos</h2>
+            <p>In 15 Minuten schauen wir gemeinsam: Was bremst Ihre Website? Design, Struktur, Sichtbarkeit. Wenn ich helfen kann, bekommen Sie ein <strong style="color:var(--text)">Festpreis-Angebot</strong>. Wenn nicht, gehen Sie trotzdem mit konkreten nächsten Schritten raus.</p>
             <div class="cta-buttons">
                 <a href="https://evowebdesign.ch/kontakt" class="btn btn-primary">Kostenlose Beratung anfragen →</a>
                 <a href="tel:+41783175991" class="btn btn-secondary"><span style="display:inline-flex;align-items:center;gap:.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +41 78 317 59 91</span></a>
@@ -705,7 +831,7 @@
 
         <div class="footer-col">
           <h4>Unternehmen</h4>
-          <a href="https://evowebdesign.ch/ueber-uns">Über uns</a>
+          <a href="https://evowebdesign.ch/ueber-uns">Über mich</a>
           <a href="https://evowebdesign.ch/projekte">Projekte</a>
           <a href="https://evowebdesign.ch/ratgeber">Ratgeber</a>
           <a href="https://evowebdesign.ch/angebote">Angebote</a>
