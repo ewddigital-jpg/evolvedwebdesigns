@@ -271,6 +271,8 @@ header.scrolled{background:rgba(14,13,22,.92);backdrop-filter:blur(14px);border-
 }
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,161,91,.16)}
 .field textarea{resize:vertical;min-height:92px}
+.field-2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.slot-note{font-size:12.5px;color:var(--ink-mute);margin:-2px 0 16px;letter-spacing:.01em}
 .book-card .btn-gold{width:100%;justify-content:center;margin-top:6px}
 .form-note{font-size:12.5px;color:var(--ink-mute);margin-top:14px;text-align:center;line-height:1.5}
 .form-ok{display:none;background:rgba(198,161,91,.1);border:1px solid var(--gold);border-radius:8px;padding:18px 20px;color:var(--gold-deep);font-size:15px;font-weight:600;margin-top:6px;line-height:1.5}
@@ -320,6 +322,7 @@ footer a:hover{color:var(--gold-lt)}
   .priceitem{grid-template-columns:1fr;gap:6px}
   .priceitem .pi-price{text-align:left}
   .priceitem:hover{padding-left:6px}
+  .field-2{grid-template-columns:1fr}
   .info-row{flex-direction:column;gap:4px}
   .info-row .k{width:auto}
   .hero-figure .cap{left:0}
@@ -612,39 +615,54 @@ footer a:hover{color:var(--gold-lt)}
     </div>
     <div class="reveal d2">
       <div class="book-card">
-        <h3>Terminanfrage</h3>
-        <p>Sag uns, was du dir wünschst — wir melden uns mit einem passenden Termin bei dir.</p>
+        <h3>Online-Termin buchen</h3>
+        <p>Behandlung, Tag und Uhrzeit wählen — den Rest bestätigen wir dir.</p>
         <form id="bookform" novalidate>
           <div class="field">
-            <label for="f-name">Name</label>
-            <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Dein Name" required>
-          </div>
-          <div class="field">
-            <label for="f-contact">Telefon oder Instagram</label>
-            <input type="text" id="f-contact" name="contact" placeholder="Wie erreichen wir dich?" required>
-          </div>
-          <div class="field">
-            <label for="f-service">Wunschbehandlung</label>
+            <label for="f-service">Behandlung</label>
             <select id="f-service" name="service">
-              <option>Maniküre</option>
-              <option>Maniküre mit Shellac</option>
-              <option>Nur Shellac</option>
-              <option>Acryl- &amp; Gel-Modellage</option>
-              <option>Pediküre</option>
-              <option>Pediküre mit Shellac</option>
-              <option>Pediküre mit Acryl</option>
-              <option>Wimpern / Augenbrauen / Make-up</option>
+              <option>Maniküre · 35 CHF</option>
+              <option>Maniküre mit Shellac · 55 CHF</option>
+              <option>Nur Shellac · 45 CHF</option>
+              <option>Acryl- &amp; Gel-Modellage · auf Anfrage</option>
+              <option>Pediküre · 60 CHF</option>
+              <option>Pediküre mit Shellac · 75 CHF</option>
+              <option>Pediküre mit Acryl · 110 CHF</option>
+              <option>Wimpern / Augenbrauen / Make-up · auf Anfrage</option>
               <option>Noch unsicher — bitte beraten</option>
             </select>
           </div>
+          <div class="field-2">
+            <div class="field">
+              <label for="f-date">Datum</label>
+              <input type="date" id="f-date" name="date" required>
+            </div>
+            <div class="field">
+              <label for="f-time">Uhrzeit</label>
+              <select id="f-time" name="time" required>
+                <option value="">Erst Datum wählen</option>
+              </select>
+            </div>
+          </div>
+          <p class="slot-note" id="slotnote">Mo–Fr 09:00–19:00 · Sa 08:00–18:00 · Sonntag geschlossen</p>
+          <div class="field-2">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Dein Name" required>
+            </div>
+            <div class="field">
+              <label for="f-contact">Telefon / Instagram</label>
+              <input type="text" id="f-contact" name="contact" placeholder="Wie erreichen wir dich?" required>
+            </div>
+          </div>
           <div class="field">
             <label for="f-msg">Nachricht (optional)</label>
-            <textarea id="f-msg" name="message" placeholder="Wunschtermin, Ideen, Fragen …"></textarea>
+            <textarea id="f-msg" name="message" placeholder="Wünsche, Fragen …"></textarea>
           </div>
-          <button type="submit" class="btn btn-gold">Terminanfrage senden <span class="arw">→</span></button>
-          <p class="form-note">Vorschau — in der Live-Version wird dieses Formular direkt mit eurem Buchungskalender verbunden.</p>
+          <button type="submit" class="btn btn-gold">Termin buchen <span class="arw">→</span></button>
+          <p class="form-note">Vorschau — in der Live-Version werden gebuchte Termine direkt in euren Kalender übernommen und automatisch bestätigt.</p>
         </form>
-        <div class="form-ok" id="formok">Danke! In der Live-Version geht deine Anfrage jetzt direkt an das Studio. (Dies ist eine Design-Vorschau.)</div>
+        <div class="form-ok" id="formok">Danke! Deine Anfrage für <b id="ok-summary"></b> ist notiert. In der Live-Version wäre dein Termin damit gebucht und bestätigt. (Dies ist eine Design-Vorschau.)</div>
       </div>
     </div>
   </div>
@@ -753,8 +771,45 @@ burger.addEventListener('click',()=>{
   burger.setAttribute('aria-expanded',open);
 });
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false);}));
+/* Online-Buchung: Datum + dynamische Slots nach Oeffnungszeiten */
+const fDate=document.getElementById('f-date'),fTime=document.getElementById('f-time'),slotNote=document.getElementById('slotnote');
+if(fDate){
+  const pad=n=>String(n).padStart(2,'0');
+  const today=new Date();
+  fDate.min=`${today.getFullYear()}-${pad(today.getMonth()+1)}-${pad(today.getDate())}`;
+  const buildSlots=(open,close)=>{
+    const out=[];
+    for(let m=open*60;m<close*60;m+=30){out.push(`${pad(Math.floor(m/60))}:${pad(m%60)}`);}
+    return out;
+  };
+  fDate.addEventListener('change',()=>{
+    fTime.innerHTML='';
+    if(!fDate.value){fTime.innerHTML='<option value="">Erst Datum wählen</option>';return;}
+    const d=new Date(fDate.value+'T00:00'),day=d.getDay(); // 0=So,6=Sa
+    if(day===0){
+      fTime.innerHTML='<option value="">— geschlossen —</option>';
+      slotNote.textContent='Sonntags ist das Studio geschlossen. Bitte wähle Mo–Sa.';
+      slotNote.style.color='var(--gold-deep)';
+      return;
+    }
+    slotNote.textContent='Mo–Fr 09:00–19:00 · Sa 08:00–18:00 · Sonntag geschlossen';
+    slotNote.style.color='var(--ink-mute)';
+    const slots=day===6?buildSlots(8,18):buildSlots(9,19);
+    fTime.appendChild(new Option('Uhrzeit wählen',''));
+    slots.forEach(t=>fTime.appendChild(new Option(t+' Uhr',t)));
+  });
+}
 const form=document.getElementById('bookform'),ok=document.getElementById('formok');
-if(form){form.addEventListener('submit',(e)=>{e.preventDefault();form.style.display='none';ok.style.display='block';});}
+if(form){form.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  if(!form.checkValidity()){form.reportValidity();return;}
+  const svc=(document.getElementById('f-service').value||'').split(' · ')[0];
+  const dv=fDate&&fDate.value?new Date(fDate.value+'T00:00').toLocaleDateString('de-CH',{weekday:'long',day:'2-digit',month:'long'}):'';
+  const tv=fTime&&fTime.value?', '+fTime.value+' Uhr':'';
+  const sum=document.getElementById('ok-summary');
+  if(sum)sum.textContent=`${svc} am ${dv}${tv}`;
+  form.style.display='none';ok.style.display='block';
+});}
 if('IntersectionObserver' in window){
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
