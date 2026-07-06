@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VeryNails · Nageldesign in Arbon — French &amp; Russian Manicure</title>
+<meta name="description" content="VeryNails — Nageldesign-Studio von Weronika in Arbon am Bodensee. French Manicure, Russian Manicure, Nagelmodellage und Pediküre. Präzision, saubere Nagelhaut, langlebige Ergebnisse. Termine nach Vereinbarung.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://evowebdesign.ch/verynails-preview/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VeryNails · Nageldesign in Arbon">
+<meta property="og:description" content="Perfekter French &amp; Russian Manicure in Arbon. Präzision, saubere Nagelhaut & langlebige Ergebnisse — von Weronika, VeryNails.">
+<meta property="og:locale" content="de_CH">
+<meta name="theme-color" content="#1B1416">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,900;1,6..96,500;1,6..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+:root{
+  --paper:#F7F2EE;
+  --paper-2:#EFE6DF;
+  --ink:#221A1D;
+  --ink-soft:#6A575D;
+  --ink-mute:#8B7A80;
+  --wine:#6B2942;
+  --wine-deep:#511E31;
+  --wine-glow:rgba(107,41,66,.4);
+  --rose:#C08795;
+  --rose-soft:#E7CDD2;
+  --nude:#EAD9CE;
+  --line:#E4D7CF;
+  --noir:#1B1416;
+  --noir-2:#150F11;
+  --line-dark:rgba(247,242,238,.13);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{
+  font-family:'Bodoni Moda','Didot','Georgia',serif;
+  font-weight:900;
+  line-height:1.03;
+  letter-spacing:-.005em;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 34px}
+
+.eyebrow{
+  font-family:'Hanken Grotesk';font-size:12px;font-weight:700;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--wine);
+  display:inline-flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--wine);display:inline-block}
+.eyebrow.on-dark{color:var(--rose)}
+.eyebrow.on-dark::before{background:var(--rose)}
+
+/* nail emblem */
+.emblem{width:30px;height:38px;flex:none}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:'Hanken Grotesk';font-weight:700;font-size:15px;
+  padding:15px 30px;border-radius:100px;letter-spacing:.01em;
+  min-height:52px;cursor:pointer;border:1.5px solid transparent;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,border-color .3s,box-shadow .3s;
+}
+.btn .arw{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-wine{background:var(--wine);color:#fff;box-shadow:0 14px 34px -16px var(--wine-glow)}
+.btn-wine:hover{background:var(--wine-deep);transform:translateY(-2px);box-shadow:0 18px 40px -16px var(--wine-glow)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:#000;transform:translateY(-2px)}
+.btn-outline-light{background:transparent;color:var(--paper);border-color:rgba(247,242,238,.34)}
+.btn-outline-light:hover{border-color:var(--paper);background:rgba(247,242,238,.06)}
+.btn-outline-dark{background:transparent;color:var(--ink);border-color:rgba(34,26,29,.26)}
+.btn-outline-dark:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* preview ribbon */
+.ribbon{
+  background:var(--noir-2);color:var(--nude);text-align:center;
+  font-size:13.5px;letter-spacing:.01em;padding:10px 18px;font-weight:500;
+}
+.ribbon b{color:#fff;font-weight:700}
+.ribbon a{color:var(--rose);text-decoration:underline;text-underline-offset:2px;font-weight:700}
+
+/* header */
+header{
+  position:sticky;top:0;z-index:100;
+  background:transparent;transition:background .35s,box-shadow .35s,border-color .35s;
+  border-bottom:1px solid transparent;
+}
+header.scrolled{background:rgba(21,15,17,.92);backdrop-filter:blur(14px);border-color:var(--line-dark);box-shadow:0 16px 44px -30px rgba(0,0,0,.8)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px}
+.brand{display:flex;align-items:center;gap:13px;color:var(--paper)}
+.brand .bt{font-family:'Bodoni Moda';font-weight:700;font-size:24px;letter-spacing:.005em;line-height:1;color:var(--paper)}
+.brand small{display:block;font-family:'Hanken Grotesk';font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:rgba(234,217,206,.6);margin-top:5px}
+.menu{display:flex;gap:32px;align-items:center}
+.menu a{font-family:'Hanken Grotesk';font-size:15px;font-weight:600;color:rgba(247,242,238,.82);position:relative;transition:color .2s}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;background:var(--rose);transition:width .3s}
+.menu a:not(.btn):hover{color:var(--paper)}
+.menu a:not(.btn):hover::after{width:100%}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px}
+.burger span{width:26px;height:2px;background:var(--paper);border-radius:2px;transition:.3s}
+
+/* photo placeholder */
+.ph{
+  position:relative;background:
+    repeating-linear-gradient(135deg,rgba(107,41,66,.045) 0 2px,transparent 2px 22px),
+    linear-gradient(160deg,var(--rose-soft),var(--nude));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  color:var(--wine);text-align:center;overflow:hidden;
+}
+.ph.dark{background:
+    repeating-linear-gradient(135deg,rgba(247,242,238,.03) 0 2px,transparent 2px 22px),
+    linear-gradient(160deg,#2A2024,#1E171A);color:var(--rose)}
+.ph::after{content:"";position:absolute;inset:14px;border:1px solid currentColor;opacity:.32;pointer-events:none;border-radius:3px}
+.ph svg{opacity:.8}
+.ph .ph-t{font-family:'Hanken Grotesk';font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.ph .ph-s{font-family:'Hanken Grotesk';font-weight:500;font-size:12px;letter-spacing:.02em;opacity:.7;max-width:24ch;text-transform:none;line-height:1.5}
+
+/* HERO */
+.hero{position:relative;background:var(--noir-2);color:var(--nude);overflow:hidden;margin-top:-82px;padding:150px 0 96px}
+.hero::before{content:"";position:absolute;top:-16%;left:-8%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(107,41,66,.34),transparent 66%);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-28%;right:-6%;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(192,135,149,.14),transparent 68%);pointer-events:none}
+.hero-inner{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center;position:relative}
+.hero h1{font-size:clamp(48px,7.6vw,108px);color:var(--paper);letter-spacing:-.02em;font-weight:900}
+.hero h1 .accent{font-style:italic;color:var(--rose);font-weight:700}
+.hero .lead{font-size:19.5px;line-height:1.7;color:rgba(234,217,206,.82);max-width:46ch;margin:30px 0 38px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-rating{display:flex;align-items:center;gap:12px;margin-top:34px;font-size:14.5px;color:rgba(234,217,206,.72)}
+.stars{display:inline-flex;gap:3px;color:var(--rose)}
+
+.hero-figure{position:relative;justify-self:end;width:100%;max-width:430px}
+.hero-figure .frame{
+  position:relative;aspect-ratio:3/4;border-radius:4px;overflow:hidden;
+  border:1px solid rgba(234,217,206,.14);
+  box-shadow:0 50px 90px -40px rgba(0,0,0,.85), 0 0 0 1px rgba(107,41,66,.14);
+}
+.hero-figure .cap{
+  position:absolute;left:-18px;bottom:34px;background:var(--wine);color:#fff;
+  font-family:'Hanken Grotesk';font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  padding:11px 18px;box-shadow:0 16px 34px -14px var(--wine-glow)}
+
+/* markers strip */
+.markers{background:var(--ink)}
+.markers-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.markers-grid > div{padding:26px 22px;border-right:1px solid var(--line-dark);display:flex;gap:14px;align-items:center}
+.markers-grid > div:last-child{border-right:0}
+.markers-grid svg{flex:none;color:var(--rose)}
+.markers-grid .m-t{font-family:'Bodoni Moda';font-weight:700;font-size:17px;color:var(--paper);line-height:1.15}
+.markers-grid .m-s{font-size:12.5px;color:rgba(234,217,206,.6);margin-top:3px}
+
+/* sections */
+.section{padding:114px 0}
+.section-paper{background:var(--paper)}
+.section-paper-2{background:var(--paper-2)}
+.section-noir{background:var(--noir-2);color:var(--nude)}
+.head{max-width:700px;margin-bottom:60px}
+.head.center{margin-left:auto;margin-right:auto;text-align:center}
+.head h2{font-size:clamp(38px,5.2vw,68px);margin-top:20px;color:var(--ink)}
+.head p{font-size:19px;color:var(--ink-soft);margin-top:22px}
+.section-noir .head h2{color:var(--paper)}
+.section-noir .head p{color:rgba(234,217,206,.78)}
+
+/* about / weronika */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:66px;align-items:center}
+.about-body h2{font-size:clamp(32px,4.6vw,58px);color:var(--ink);margin:22px 0 26px}
+.about-body p{color:var(--ink-soft);margin-bottom:20px;max-width:56ch}
+.about-body .lede{color:var(--ink);font-size:21px;font-weight:500;font-family:'Bodoni Moda';font-style:italic;line-height:1.4}
+.sig{font-family:'Bodoni Moda';font-style:italic;font-weight:700;font-size:26px;color:var(--wine);margin-top:28px}
+.about-fig{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;box-shadow:0 44px 80px -46px rgba(34,26,29,.5);border:1px solid var(--line)}
+.about-fig .ph{position:absolute;inset:0}
+
+/* treatments menu */
+.menu-list{border-top:1px solid var(--line)}
+.treat{
+  display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:baseline;
+  padding:30px 8px;border-bottom:1px solid var(--line);position:relative;
+  transition:padding-left .35s cubic-bezier(.2,.7,.2,1);
+}
+.treat:hover{padding-left:22px}
+.treat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--wine);transform:scaleY(0);transform-origin:top;transition:transform .35s}
+.treat:hover::before{transform:scaleY(1)}
+.treat .t-idx{font-family:'Bodoni Moda';font-weight:700;font-size:15px;color:var(--rose);letter-spacing:.04em}
+.treat .t-main{min-width:0}
+.treat h3{font-size:clamp(24px,2.5vw,32px);color:var(--ink);margin-bottom:8px;font-weight:700}
+.treat .t-desc{font-size:16px;color:var(--ink-soft);line-height:1.6;max-width:64ch}
+.treat .t-meta{text-align:right;white-space:nowrap;flex:none}
+.treat .t-dur{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--wine);background:rgba(107,41,66,.08);padding:6px 14px;border-radius:100px;text-transform:uppercase}
+.menu-note{margin-top:34px;color:var(--ink-mute);font-size:15px}
+
+/* hygiene / differenzierer */
+.diff-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:66px;align-items:center}
+.diff-body h2{font-size:clamp(32px,4.6vw,56px);color:var(--paper);margin:22px 0 26px}
+.diff-body p{color:rgba(234,217,206,.8);margin-bottom:22px;max-width:54ch}
+.diff-list{list-style:none;margin-top:30px;display:grid;gap:2px}
+.diff-list li{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line-dark);align-items:flex-start}
+.diff-list li:last-child{border-bottom:1px solid var(--line-dark)}
+.diff-list .dt{font-family:'Bodoni Moda';font-weight:700;font-size:18px;color:var(--paper);margin-bottom:2px}
+.diff-list .ds{font-size:15px;color:rgba(234,217,206,.68);line-height:1.55}
+.diff-list svg{flex:none;color:var(--rose);margin-top:4px}
+.diff-art{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;border:1px solid var(--line-dark)}
+.diff-art .ph{position:absolute;inset:0}
+
+/* regelwerk */
+.rules-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 40px;margin-top:8px}
+.rule{display:flex;gap:20px;padding:26px 0;border-top:1px solid var(--line)}
+.rule .rn{font-family:'Bodoni Moda';font-weight:900;font-size:34px;color:var(--rose);line-height:1;flex:none;width:46px}
+.rule h3{font-size:19px;color:var(--ink);margin-bottom:6px;font-weight:700}
+.rule p{font-size:15.5px;color:var(--ink-soft);line-height:1.6}
+.rules-note{margin-top:40px;font-size:15px;color:var(--ink-mute);max-width:60ch}
+
+/* testimonials */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.rev{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:34px 30px;display:flex;flex-direction:column}
+.rev .stars{color:var(--wine);margin-bottom:16px;gap:2px}
+.rev blockquote{font-family:'Bodoni Moda';font-style:italic;font-weight:500;font-size:20px;line-height:1.45;color:var(--ink);margin-bottom:20px}
+.rev .who{margin-top:auto;display:flex;align-items:center;gap:12px}
+.rev .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(150deg,var(--rose),var(--wine));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Bodoni Moda';font-weight:700;font-size:17px;flex:none}
+.rev .nm{font-weight:700;font-size:15px;color:var(--ink)}
+.rev .src{font-size:12.5px;color:var(--ink-mute)}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);padding:6px 0}
+.faq summary{
+  list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;
+  font-family:'Bodoni Moda';font-weight:700;font-size:21px;color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:19px;font-size:28px;color:var(--wine);font-weight:400;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding:0 44px 26px 0;color:var(--ink-soft);font-size:16.5px}
+.faq .ans a{color:var(--wine);font-weight:700;border-bottom:1px solid rgba(107,41,66,.4)}
+
+/* booking / kontakt */
+.book-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+.info-row{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line-dark)}
+.info-row .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);font-weight:700;width:130px;flex:none;padding-top:4px}
+.info-row .v{font-size:17px;color:var(--paper);font-weight:500;line-height:1.55}
+.info-row .v a{border-bottom:1px solid transparent;transition:border-color .2s}
+.info-row .v a:hover{border-color:var(--rose)}
+.book-card{background:var(--paper);border-radius:10px;padding:40px 38px;box-shadow:0 44px 90px -50px rgba(0,0,0,.6)}
+.book-card h3{font-size:clamp(26px,3vw,34px);color:var(--ink);margin-bottom:8px;letter-spacing:-.01em;font-weight:900}
+.book-card > p{color:var(--ink-soft);margin-bottom:26px;font-size:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;font-family:'Hanken Grotesk';font-size:16px;color:var(--ink);
+  background:var(--paper-2);border:1px solid var(--line);border-radius:8px;
+  padding:13px 15px;transition:border-color .2s,box-shadow .2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 3px rgba(107,41,66,.12)}
+.field textarea{resize:vertical;min-height:92px}
+.book-card .btn-wine{width:100%;justify-content:center;margin-top:6px}
+.form-note{font-size:12.5px;color:var(--ink-mute);margin-top:14px;text-align:center;line-height:1.5}
+.form-ok{display:none;background:rgba(107,41,66,.08);border:1px solid var(--rose-soft);border-radius:8px;padding:18px 20px;color:var(--wine);font-size:15px;font-weight:600;margin-top:6px;line-height:1.5}
+
+/* footer */
+footer{background:var(--noir-2);color:rgba(234,217,206,.66);padding:64px 0 34px}
+.foot-grid{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap;padding-bottom:38px;border-bottom:1px solid var(--line-dark)}
+.foot-brand{display:flex;align-items:center;gap:12px}
+.foot-brand .bt{font-family:'Bodoni Moda';font-weight:700;font-size:24px;color:var(--paper)}
+.foot-grid p{font-size:15px;line-height:1.75}
+.foot-col h4{color:var(--nude);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:15px;font-family:'Hanken Grotesk'}
+.foot-col a{display:block;padding:5px 0;font-size:15px}
+footer a:hover{color:var(--rose)}
+.foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:26px;font-size:13.5px;color:rgba(234,217,206,.45)}
+.foot-bottom a{color:var(--rose);text-decoration:underline;text-underline-offset:2px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (max-width:960px){
+  .hero-inner,.about-grid,.diff-grid,.book-grid{grid-template-columns:1fr;gap:48px}
+  .hero-figure{justify-self:center;max-width:380px}
+  .about-grid .about-fig{max-width:420px}
+  .about-grid{direction:ltr}
+  .diff-art{max-width:440px}
+  .revs{grid-template-columns:1fr}
+  .rules-grid{grid-template-columns:1fr}
+  .markers-grid{grid-template-columns:1fr 1fr}
+  .markers-grid > div:nth-child(2){border-right:0}
+  .markers-grid > div:nth-child(-n+2){border-bottom:1px solid var(--line-dark)}
+  .menu{display:none}
+  .menu.open{display:flex;position:absolute;top:82px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:20px;background:var(--noir-2);padding:26px 34px;border-bottom:1px solid var(--line-dark);box-shadow:0 24px 40px -20px rgba(0,0,0,.6)}
+  .menu.open .btn{width:100%;justify-content:center}
+  .burger{display:flex}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 22px}
+  .section{padding:76px 0}
+  .hero{padding-top:124px;padding-bottom:70px}
+  .head{margin-bottom:42px}
+  .markers-grid{grid-template-columns:1fr}
+  .markers-grid > div{border-right:0!important;border-bottom:1px solid var(--line-dark)}
+  .treat{grid-template-columns:1fr;gap:12px}
+  .treat .t-idx{display:none}
+  .treat .t-meta{text-align:left}
+  .treat:hover{padding-left:8px}
+  .info-row{flex-direction:column;gap:4px}
+  .info-row .k{width:auto}
+  .hero-figure .cap{left:0}
+  .book-card{padding:32px 24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- PREVIEW-BANNER (nur für die Vorschau — im Live-Betrieb entfernen) -->
+<div class="ribbon">
+  Unverbindliche Design-Vorschau für <b>VeryNails</b> &nbsp;·&nbsp; gestaltet von <a href="https://evowebdesign.ch" target="_blank" rel="noopener">evowebdesign.ch</a>
+</div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="VeryNails Startseite">
+      <svg class="emblem" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M16 2C9.5 7 8 22 12 35c1.4 3 6.6 3 8 0 4-13 2.5-28-4-33Z" fill="rgba(234,217,206,.14)" stroke="#C08795" stroke-width="1.5"/>
+        <path d="M9.4 12.5C12 10 20 10 22.6 12.5" stroke="#C08795" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M9.4 12.5C12 10 20 10 22.6 12.5C21 8 11 8 9.4 12.5Z" fill="#F7F2EE"/>
+      </svg>
+      <span class="bt">VeryNails<small>Nageldesign · Arbon</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#weronika">Weronika</a>
+      <a href="#qualitaet">Qualität</a>
+      <a href="#regelwerk">Regelwerk</a>
+      <a href="#termin" class="btn btn-wine">Termin anfragen</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow on-dark reveal">French &amp; Russian Manicure · Arbon</p>
+      <h1 class="reveal d1">Nägel,<br>die <span class="accent">Präzision</span><br>verraten.</h1>
+      <p class="lead reveal d2">VeryNails ist das Nageldesign-Studio von Weronika in Arbon. Perfekter French &amp; Russian Manicure, saubere Nagelhaut und langlebige Ergebnisse — jeder Nagel mit ruhiger Hand und einem Blick fürs Detail gearbeitet.</p>
+      <div class="hero-cta reveal d3">
+        <a href="#termin" class="btn btn-wine">Termin anfragen <span class="arw">→</span></a>
+        <a href="#leistungen" class="btn btn-outline-light">Leistungen ansehen</a>
+      </div>
+      <div class="hero-rating reveal d3">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span><b style="color:var(--paper)">5,0</b> aus 24 Google-Bewertungen</span>
+      </div>
+    </div>
+
+    <div class="hero-figure reveal d2">
+      <div class="frame">
+        <div class="ph" style="aspect-ratio:3/4">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+          <div class="ph-t">Foto von Weronika</div>
+          <div class="ph-s">Hier kommt dein bestes Arbeitsfoto hin — French-Set oder ein Blick ins Studio.</div>
+        </div>
+      </div>
+      <span class="cap">VeryNails · Arbon</span>
+    </div>
+  </div>
+</section>
+
+<div class="markers">
+  <div class="wrap"><div class="markers-grid">
+    <div class="reveal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div><div class="m-t">Kapellgasse 2</div><div class="m-s">9320 Arbon</div></div>
+    </div>
+    <div class="reveal d1">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.9 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg>
+      <div><div class="m-t">5,0 ★ · 24 Bewertungen</div><div class="m-s">Google-Bewertung</div></div>
+    </div>
+    <div class="reveal d2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <div><div class="m-t">Persönlich bei Weronika</div><div class="m-s">Ein Termin, volle Aufmerksamkeit</div></div>
+    </div>
+    <div class="reveal d3">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9"/><path d="M21 5l-9 9"/></svg>
+      <div><div class="m-t">Hygiene-Standard</div><div class="m-s">Desinfiziert &amp; sterilisiert</div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- WERONIKA -->
+<section class="section section-paper" id="weronika">
+  <div class="wrap about-grid">
+    <div class="about-fig reveal">
+      <div class="ph">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+        <div class="ph-t">Foto von Weronika</div>
+        <div class="ph-s">Ein Porträt am Arbeitsplatz wirkt hier am stärksten.</div>
+      </div>
+    </div>
+    <div class="about-body">
+      <p class="eyebrow reveal">Die Nageldesignerin</p>
+      <h2 class="reveal d1">Für Weronika ist das nicht einfach Nagelpflege.</h2>
+      <p class="lede reveal d1">„Das ist nicht nur Pediküre. Es ist mein Weg. Meine Leidenschaft. Mein Herz.“</p>
+      <p class="reveal d2">Bei VeryNails arbeitet Weronika allein — und genau das ist der Unterschied. Kein Fliessband, keine Eile. Jeder Termin gehört einer einzigen Kundin, mit voller Aufmerksamkeit von der ersten bis zur letzten Minute.</p>
+      <p class="reveal d2">Ihr Anspruch ist Präzision: exakt gearbeitete French-Linien, sauber gepflegte Nagelhaut nach russischer Technik und ein Ergebnis, das nicht nach ein paar Tagen nachgibt, sondern lange schön bleibt.</p>
+      <p class="sig reveal d3">— Weronika, VeryNails</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section class="section section-paper-2" id="leistungen">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Leistungen</p>
+      <h2>Was Weronika für deine Nägel tut.</h2>
+      <p>Von der klassischen French-Linie bis zur präzisen russischen Maniküre — sag, worauf du Lust hast, den Rest übernimmt sie.</p>
+    </div>
+
+    <div class="menu-list reveal">
+      <div class="treat">
+        <div class="t-idx">01</div>
+        <div class="t-main">
+          <h3>French Manicure</h3>
+          <p class="t-desc">Die klassische, zeitlose French-Linie — sauber gezogen und exakt gesetzt. Dezent, gepflegt und für jeden Anlass richtig.</p>
+        </div>
+        <div class="t-meta"><span class="t-dur">Preis auf Anfrage</span></div>
+      </div>
+
+      <div class="treat">
+        <div class="t-idx">02</div>
+        <div class="t-main">
+          <h3>Russian Manicure</h3>
+          <p class="t-desc">Präzise Trockenmaniküre mit besonders sauber gearbeiteter Nagelhaut. Ein makelloser Rand und ein Finish, das länger schön bleibt.</p>
+        </div>
+        <div class="t-meta"><span class="t-dur">Preis auf Anfrage</span></div>
+      </div>
+
+      <div class="treat">
+        <div class="t-idx">03</div>
+        <div class="t-main">
+          <h3>Nageldesign &amp; Modellage</h3>
+          <p class="t-desc">Stabile, natürlich wirkende Nägel in deiner Wunschform und -länge — neu modelliert oder als regelmässiges Auffüllen.</p>
+        </div>
+        <div class="t-meta"><span class="t-dur">Preis auf Anfrage</span></div>
+      </div>
+
+      <div class="treat">
+        <div class="t-idx">04</div>
+        <div class="t-main">
+          <h3>Minimalistische Designs</h3>
+          <p class="t-desc">Reduziert, edel, kein Zuviel. Feine Akzente und ruhige Nuancen für alle, die es dezent und trotzdem besonders mögen.</p>
+        </div>
+        <div class="t-meta"><span class="t-dur">Preis auf Anfrage</span></div>
+      </div>
+
+      <div class="treat">
+        <div class="t-idx">05</div>
+        <div class="t-main">
+          <h3>Nagelhaut- &amp; Hautpflege</h3>
+          <p class="t-desc">Gepflegte Nagelränder und weiche Haut rund um den Nagel — die Basis, auf der jedes gute Ergebnis erst richtig wirkt.</p>
+        </div>
+        <div class="t-meta"><span class="t-dur">Preis auf Anfrage</span></div>
+      </div>
+
+      <div class="treat">
+        <div class="t-idx">06</div>
+        <div class="t-main">
+          <h3>Nagel-Rekonstruktion</h3>
+          <p class="t-desc">Ein gebrochener oder eingerissener Nagel wird fachgerecht wieder aufgebaut — damit dein Set gleichmässig und makellos bleibt.</p>
+        </div>
+        <div class="t-meta"><span class="t-dur">Preis auf Anfrage</span></div>
+      </div>
+
+      <div class="treat">
+        <div class="t-idx">07</div>
+        <div class="t-main">
+          <h3>Pediküre</h3>
+          <p class="t-desc">Wohltuende Fusspflege mit gepflegtem, langlebigem Ergebnis — mit derselben Sorgfalt wie an den Händen.</p>
+        </div>
+        <div class="t-meta"><span class="t-dur">Preis auf Anfrage</span></div>
+      </div>
+    </div>
+    <p class="menu-note reveal">Nicht sicher, was zu dir passt? Weronika berät dich gern. Preise nennt sie dir direkt — telefonisch oder über Instagram: <a href="tel:+41762147101" style="color:var(--wine);font-weight:700;border-bottom:1px solid rgba(107,41,66,.35)">076&nbsp;214&nbsp;71&nbsp;01</a>.</p>
+  </div>
+</section>
+
+<!-- QUALITÄT / HYGIENE -->
+<section class="section section-noir" id="qualitaet">
+  <div class="wrap diff-grid">
+    <div class="diff-body">
+      <p class="eyebrow on-dark reveal">Qualität &amp; Hygiene</p>
+      <h2 class="reveal d1">Sauberkeit ist bei VeryNails kein Extra.</h2>
+      <p class="reveal d1">Der Unterschied zwischen einem gewöhnlichen Studio und einer echten Profi liegt in Details, die man nicht sofort sieht — aber spürt. Bei VeryNails gehört ein kompromissloser Hygiene-Standard fest zur Arbeit.</p>
+      <ul class="diff-list reveal d2">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="dt">Desinfiziert und sterilisiert</div><div class="ds">Werkzeuge werden nicht nur abgewischt, sondern konsequent desinfiziert und sterilisiert — ein Unterschied, der zählt.</div></div>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="dt">Ultraschall-Reinigung</div><div class="ds">Instrumente werden im Ultraschallreiniger gründlich von Rückständen befreit, bevor sie sterilisiert werden.</div></div>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="dt">Ein Set nur für dich</div><div class="ds">Saubere, aufbereitete Werkzeuge für jede Kundin — nichts kommt ungeprüft an deine Hände oder Füsse.</div></div>
+        </li>
+      </ul>
+    </div>
+    <div class="diff-art reveal d1">
+      <div class="ph dark">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+        <div class="ph-t">Foto vom Arbeitsplatz</div>
+        <div class="ph-s">Sterilisator, Ultraschallreiniger oder dein sauberer Arbeitsplatz — zeigt Profi-Niveau auf den ersten Blick.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGELWERK -->
+<section class="section section-paper" id="regelwerk">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Das Regelwerk</p>
+      <h2>Ein paar Regeln, die allen den Termin schöner machen.</h2>
+      <p>Damit sich jede Kundin auf einen ruhigen, pünktlichen und sauberen Termin verlassen kann.</p>
+    </div>
+    <div class="rules-grid reveal">
+      <div class="rule">
+        <div class="rn">1</div>
+        <div><h3>Termine sind verbindlich</h3><p>Ein reservierter Termin gehört ganz dir. Bitte erscheine pünktlich, damit die volle Zeit für dein Set bleibt.</p></div>
+      </div>
+      <div class="rule">
+        <div class="rn">2</div>
+        <div><h3>Absagen rechtzeitig</h3><p>Verhindert? Kein Problem — bitte sag mindestens 24 Stunden vorher Bescheid, damit der Platz neu vergeben werden kann.</p></div>
+      </div>
+      <div class="rule">
+        <div class="rn">3</div>
+        <div><h3>Bei Verspätung</h3><p>Ab etwa 15 Minuten Verspätung kann die Behandlung verkürzt werden — aus Fairness gegenüber der nächsten Kundin.</p></div>
+      </div>
+      <div class="rule">
+        <div class="rn">4</div>
+        <div><h3>Ruhe &amp; Hygiene</h3><p>Für einen entspannten, sauberen Ablauf bitte ohne Begleitung zum Termin kommen. So gehört die Zeit ganz dir.</p></div>
+      </div>
+    </div>
+    <p class="rules-note reveal">Diese Regeln sorgen dafür, dass jeder Termin bei VeryNails so abläuft, wie du es dir wünschst: pünktlich, ruhig und mit voller Aufmerksamkeit.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-paper-2">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="eyebrow" style="justify-content:center">Was Kundinnen sagen</p>
+      <h2>5,0 Sterne. 24 Mal.</h2>
+    </div>
+    <div class="revs">
+      <div class="rev reveal">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>„Weronika liebt ihren Job — geschicktes Händchen und einfach sehr professionell.“</blockquote>
+        <div class="who"><span class="av">Z</span><div><div class="nm">Zuzana Valterová</div><div class="src">Google-Bewertung</div></div></div>
+      </div>
+      <div class="rev reveal d1">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>„Hochprofessionell. Sauberkeit, hygienische Bedingungen und hohe Fachkompetenz.“</blockquote>
+        <div class="who"><span class="av">C</span><div><div class="nm">Clara Locher</div><div class="src">Google-Bewertung</div></div></div>
+      </div>
+      <div class="rev reveal d2">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>„Jedes Mal begeistert — sehr präzise und mit viel Liebe zum Detail gearbeitet.“</blockquote>
+        <div class="who"><span class="av">G</span><div><div class="nm">Gabriela Carvalho Da Silva</div><div class="src">Google-Bewertung</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-paper">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="eyebrow" style="justify-content:center">Häufige Fragen</p>
+      <h2>Gut zu wissen.</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Wie vereinbare ich einen Termin bei VeryNails?</summary>
+        <div class="ans">Am einfachsten über das Terminanfrage-Formular weiter unten, telefonisch unter <a href="tel:+41762147101">076&nbsp;214&nbsp;71&nbsp;01</a> oder per Direktnachricht auf <a href="https://www.instagram.com/verynails_wniew" target="_blank" rel="noopener">Instagram</a>. Weronika meldet sich mit einem passenden Termin zurück.</div>
+      </details>
+      <details>
+        <summary>Was ist der Unterschied zwischen French und Russian Manicure?</summary>
+        <div class="ans">Die French Manicure ist der klassische Look mit sauber gezogener heller Spitze. Die Russian Manicure ist eine präzise Trockentechnik, bei der die Nagelhaut besonders sauber gearbeitet wird — das Ergebnis wirkt makellos und bleibt länger schön. Beides gehört zu Weronikas Spezialitäten.</div>
+      </details>
+      <details>
+        <summary>Wo befindet sich VeryNails?</summary>
+        <div class="ans">An der Kapellgasse 2, 9320 Arbon am Bodensee (Thurgau). Den genauen Standort findest du unten im Kontaktbereich.</div>
+      </details>
+      <details>
+        <summary>Wie hoch ist der Hygiene-Standard?</summary>
+        <div class="ans">Sehr hoch. Werkzeuge werden im Ultraschallreiniger gereinigt sowie konsequent desinfiziert und sterilisiert. Sauberkeit und hygienische Bedingungen werden von Kundinnen regelmässig ausdrücklich gelobt.</div>
+      </details>
+      <details>
+        <summary>Was kosten die Behandlungen?</summary>
+        <div class="ans">Die Preise richten sich nach Behandlung, Länge und Aufwand. Frag einfach kurz an — Weronika nennt dir den Preis gern direkt und unverbindlich.</div>
+      </details>
+      <details>
+        <summary>Gibt es Regeln für Termine und Absagen?</summary>
+        <div class="ans">Ja. Termine sind verbindlich, Absagen bitte mindestens 24 Stunden vorher. Alle Punkte findest du oben im Abschnitt „Regelwerk“.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- TERMIN / KONTAKT -->
+<section class="section section-noir" id="termin">
+  <div class="wrap book-grid">
+    <div>
+      <p class="eyebrow on-dark reveal">Termin &amp; Kontakt</p>
+      <h2 class="display reveal d1" style="font-size:clamp(34px,4.6vw,58px);color:var(--paper);margin:20px 0 30px">Sichern wir dir deinen Termin.</h2>
+      <div class="reveal d1">
+        <div class="info-row"><div class="k">Adresse</div><div class="v">Kapellgasse 2<br>9320 Arbon</div></div>
+        <div class="info-row"><div class="k">Telefon</div><div class="v"><a href="tel:+41762147101">076 214 71 01</a></div></div>
+        <div class="info-row"><div class="k">Instagram</div><div class="v"><a href="https://www.instagram.com/verynails_wniew" target="_blank" rel="noopener">@verynails_wniew</a></div></div>
+        <div class="info-row"><div class="k">Termine</div><div class="v">Nach Vereinbarung</div></div>
+        <div class="info-row"><div class="k">Anfahrt</div><div class="v"><a href="https://www.google.com/maps/search/?api=1&query=VeryNails+Kapellgasse+2+9320+Arbon" target="_blank" rel="noopener">Auf Google Maps ansehen →</a></div></div>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <div class="book-card">
+        <h3>Terminanfrage</h3>
+        <p>Sag Weronika, was du dir wünschst — sie meldet sich mit einem passenden Termin bei dir.</p>
+        <form id="bookform" novalidate>
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Dein Name" required>
+          </div>
+          <div class="field">
+            <label for="f-contact">Telefon oder Instagram</label>
+            <input type="text" id="f-contact" name="contact" placeholder="Wie erreicht dich Weronika?" required>
+          </div>
+          <div class="field">
+            <label for="f-service">Wunschbehandlung</label>
+            <select id="f-service" name="service">
+              <option>French Manicure</option>
+              <option>Russian Manicure</option>
+              <option>Nageldesign &amp; Modellage</option>
+              <option>Minimalistisches Design</option>
+              <option>Nagelhaut- &amp; Hautpflege</option>
+              <option>Nagel-Rekonstruktion</option>
+              <option>Pediküre</option>
+              <option>Noch unsicher — bitte beraten</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Nachricht (optional)</label>
+            <textarea id="f-msg" name="message" placeholder="Wunschtermin, Ideen, Fragen …"></textarea>
+          </div>
+          <button type="submit" class="btn btn-wine">Terminanfrage senden <span class="arw">→</span></button>
+          <p class="form-note">Vorschau — in der Live-Version wird dieses Formular direkt mit deinem Buchungskalender verbunden.</p>
+        </form>
+        <div class="form-ok" id="formok">Danke! In der Live-Version geht deine Anfrage jetzt direkt an Weronika. (Dies ist eine Design-Vorschau.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div style="max-width:34ch">
+        <div class="foot-brand">
+          <svg class="emblem" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16 2C9.5 7 8 22 12 35c1.4 3 6.6 3 8 0 4-13 2.5-28-4-33Z" fill="rgba(234,217,206,.14)" stroke="#C08795" stroke-width="1.5"/>
+            <path d="M9.4 12.5C12 10 20 10 22.6 12.5" stroke="#C08795" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M9.4 12.5C12 10 20 10 22.6 12.5C21 8 11 8 9.4 12.5Z" fill="#F7F2EE"/>
+          </svg>
+          <span class="bt">VeryNails</span>
+        </div>
+        <p style="margin-top:14px">Nageldesign von Weronika in Arbon am Bodensee. French &amp; Russian Manicure, Modellage und Pediküre — mit Präzision und einem kompromisslosen Hygiene-Standard.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Studio</h4>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#weronika">Über Weronika</a>
+        <a href="#qualitaet">Qualität &amp; Hygiene</a>
+        <a href="#regelwerk">Regelwerk</a>
+      </div>
+      <div class="foot-col">
+        <h4>Direkt</h4>
+        <a href="tel:+41762147101">076 214 71 01</a>
+        <a href="https://www.instagram.com/verynails_wniew" target="_blank" rel="noopener">@verynails_wniew</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=VeryNails+Kapellgasse+2+9320+Arbon" target="_blank" rel="noopener">Anfahrt &amp; Karte</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 VeryNails · Kapellgasse 2, 9320 Arbon</span>
+      <span>Design-Vorschau erstellt von <a href="https://evowebdesign.ch" target="_blank" rel="noopener">evowebdesign.ch</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"NailSalon",
+  "name":"VeryNails",
+  "description":"Nageldesign-Studio von Weronika in Arbon am Bodensee. French Manicure, Russian Manicure, Nagelmodellage, Nageldesign und Pediküre mit hohem Hygiene-Standard.",
+  "url":"https://evowebdesign.ch/verynails-preview/",
+  "telephone":"+41762147101",
+  "priceRange":"$$",
+  "currenciesAccepted":"CHF",
+  "image":"https://evowebdesign.ch/verynails-preview/",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Kapellgasse 2",
+    "postalCode":"9320",
+    "addressLocality":"Arbon",
+    "addressRegion":"TG",
+    "addressCountry":"CH"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":47.5148,"longitude":9.4336},
+  "areaServed":["Arbon","Roggwil","Horn","Steinach","Rorschach","Amriswil","Thurgau","Bodensee"],
+  "founder":{"@type":"Person","name":"Weronika","jobTitle":"Nageldesignerin"},
+  "sameAs":["https://www.instagram.com/verynails_wniew"],
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"French Manicure"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Russian Manicure"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Nageldesign & Modellage"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Minimalistische Designs"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Nagelhaut- & Hautpflege"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Nagel-Rekonstruktion"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Pediküre"}}
+  ],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"24","bestRating":"5"},
+  "review":[
+    {"@type":"Review","author":{"@type":"Person","name":"Zuzana Valterová"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Weronika liebt ihren Job — geschicktes Händchen und sehr professionell."},
+    {"@type":"Review","author":{"@type":"Person","name":"Clara Locher"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Hochprofessionell. Sauberkeit, hygienische Bedingungen und hohe Fachkompetenz."},
+    {"@type":"Review","author":{"@type":"Person","name":"Gabriela Carvalho Da Silva"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Jedes Mal begeistert — sehr präzise und mit viel Liebe zum Detail."}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Wie vereinbare ich einen Termin bei VeryNails?","acceptedAnswer":{"@type":"Answer","text":"Über das Terminanfrage-Formular auf der Seite, telefonisch unter 076 214 71 01 oder per Direktnachricht auf Instagram @verynails_wniew. Weronika meldet sich mit einem passenden Termin zurück."}},
+    {"@type":"Question","name":"Was ist der Unterschied zwischen French und Russian Manicure?","acceptedAnswer":{"@type":"Answer","text":"Die French Manicure ist der klassische Look mit sauber gezogener heller Spitze. Die Russian Manicure ist eine präzise Trockentechnik, bei der die Nagelhaut besonders sauber gearbeitet wird — das Ergebnis wirkt makellos und bleibt länger schön."}},
+    {"@type":"Question","name":"Wo befindet sich VeryNails?","acceptedAnswer":{"@type":"Answer","text":"An der Kapellgasse 2, 9320 Arbon am Bodensee im Kanton Thurgau."}},
+    {"@type":"Question","name":"Wie hoch ist der Hygiene-Standard bei VeryNails?","acceptedAnswer":{"@type":"Answer","text":"Sehr hoch. Werkzeuge werden im Ultraschallreiniger gereinigt sowie konsequent desinfiziert und sterilisiert. Sauberkeit und hygienische Bedingungen werden von Kundinnen regelmässig gelobt."}},
+    {"@type":"Question","name":"Was kosten die Behandlungen bei VeryNails?","acceptedAnswer":{"@type":"Answer","text":"Die Preise richten sich nach Behandlung, Länge und Aufwand und werden auf Anfrage gern direkt und unverbindlich genannt."}},
+    {"@type":"Question","name":"Gibt es Regeln für Termine und Absagen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Termine sind verbindlich, Absagen bitte mindestens 24 Stunden vorher. Bei mehr als 15 Minuten Verspätung kann die Behandlung verkürzt werden."}}
+  ]
+}
+</script>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false);}));
+const form=document.getElementById('bookform'),ok=document.getElementById('formok');
+if(form){form.addEventListener('submit',(e)=>{e.preventDefault();form.style.display='none';ok.style.display='block';});}
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+</script>
+</body>
+</html>
