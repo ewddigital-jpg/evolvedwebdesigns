@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<!-- v1 · Archivo Black · Stübi Gartenbau (Design-Vorschau, unverbindlich) -->
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stübi Gartenbau · Garten- & Landschaftsbau in Weinfelden TG</title>
+<meta name="description" content="Stübi Gartenbau GmbH in Weinfelden — Landschaftsgestaltung, Gartenunterhalt sowie Sitzplätze & Wege im Thurgau. Eingespielter Betrieb, seit 2014. Jetzt Offerte anfragen.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://evowebdesign.ch/stuebi-gartenbau-preview/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stübi Gartenbau · Weinfelden TG">
+<meta property="og:description" content="Landschaftsgestaltung, Gartenunterhalt und Sitzplätze aus einer Hand — eingespielter Betrieb in Weinfelden, seit 2014.">
+<meta property="og:locale" content="de_CH">
+<meta name="theme-color" content="#0F1F1A">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+:root{
+  --paper:#ECEDE6;
+  --paper-2:#E1E2D9;
+  --sand:#D6CDB2;
+  --ink:#1B211C;
+  --ink-soft:#4E574C;
+  --ink-mute:#868C7B;
+  --spruce:#234139;
+  --spruce-deep:#0F1F1A;
+  --fern:#6F9151;
+  --ochre:#C0872B;
+  --ochre-deep:#9C6C1C;
+  --stone:#A6A08B;
+  --line:#DAD9CC;
+  --line-dark:rgba(236,237,230,.14);
+  --noir:#111512;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{
+  font-family:'Archivo Black','Arial Black',system-ui,sans-serif;
+  font-weight:400;
+  line-height:1.05;
+  letter-spacing:-.02em;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+
+/* ── PREVIEW RIBBON ── */
+.ribbon{
+  background:var(--spruce-deep);color:var(--paper);
+  font-size:12.5px;font-weight:600;letter-spacing:.02em;
+  text-align:center;padding:9px 16px;
+}
+.ribbon a{color:var(--sand);text-decoration:underline;text-underline-offset:2px}
+
+/* ── EYEBROW ── */
+.eyebrow{
+  font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--ochre-deep);display:inline-flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--ochre);display:inline-block}
+.eyebrow.on-dark{color:var(--sand)}
+.eyebrow.on-dark::before{background:var(--fern)}
+
+/* ── BUTTONS ── */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;justify-content:center;
+  font-family:'Hanken Grotesk';font-weight:700;font-size:16px;
+  padding:16px 28px;border-radius:2px;transition:transform .18s ease,background .18s ease,color .18s ease,box-shadow .18s ease;
+  min-height:52px;cursor:pointer;border:none;
+}
+.btn .arw{transition:transform .2s ease}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-ochre{background:var(--ochre);color:#221a08}
+.btn-ochre:hover{background:var(--ochre-deep);color:#fff;transform:translateY(-2px);box-shadow:0 12px 26px rgba(192,135,43,.30)}
+.btn-spruce{background:var(--spruce);color:var(--paper)}
+.btn-spruce:hover{background:var(--spruce-deep);transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1.5px solid rgba(236,237,230,.5);color:var(--paper)}
+.btn-outline:hover{background:rgba(236,237,230,.1);border-color:var(--paper)}
+
+/* ── HEADER ── */
+#hdr{position:sticky;top:0;z-index:50;background:rgba(236,237,230,.86);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s ease,box-shadow .3s ease,background .3s ease}
+#hdr.scrolled{border-color:var(--line);box-shadow:0 4px 22px rgba(27,33,28,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .emblem{width:36px;height:36px;flex-shrink:0}
+.brand .bt{font-family:'Archivo Black';font-size:18px;letter-spacing:-.01em;line-height:1;color:var(--ink)}
+.brand .bt small{display:block;font-family:'Hanken Grotesk';font-weight:600;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);margin-top:4px}
+.menu{display:flex;align-items:center;gap:30px}
+.menu a{font-weight:600;font-size:15.5px;color:var(--ink-soft);transition:color .16s ease}
+.menu a:hover{color:var(--spruce)}
+.menu a.btn{color:#221a08}
+.menu a.btn:hover{color:#fff}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{width:26px;height:2.5px;background:var(--ink);border-radius:2px;transition:.25s}
+
+/* ── HERO ── */
+.hero{position:relative;background:var(--spruce-deep);color:var(--paper);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(120% 80% at 85% 15%,rgba(111,145,81,.30),transparent 55%),
+  radial-gradient(90% 70% at 12% 95%,rgba(192,135,43,.18),transparent 55%);}
+.hero::after{content:"";position:absolute;inset:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 59h60M0 44h60M0 29h60M0 14h60' stroke='%23ffffff' stroke-opacity='.03' stroke-width='1'/%3E%3C/svg%3E");}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:96px 0 104px}
+.hero h1{font-size:clamp(44px,6vw,78px);margin:22px 0 24px}
+.hero h1 .accent{color:var(--sand)}
+.hero .lead{font-size:19px;line-height:1.65;color:rgba(236,237,230,.82);max-width:540px;margin-bottom:34px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.hero-trust{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-size:14.5px;color:rgba(236,237,230,.72)}
+.hero-trust .dot{width:5px;height:5px;border-radius:50%;background:var(--fern)}
+.hero-trust b{color:var(--paper);font-weight:700}
+
+/* placeholder photo frame */
+.frame{position:relative;border:1px solid var(--line-dark);border-radius:4px;padding:14px;background:rgba(236,237,230,.04)}
+.ph{position:relative;border-radius:3px;background:
+  repeating-linear-gradient(135deg,rgba(236,237,230,.05) 0 14px,rgba(236,237,230,.02) 14px 28px);
+  border:1px dashed rgba(236,237,230,.22);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  color:rgba(236,237,230,.7);padding:34px 26px;gap:10px;min-height:320px}
+.ph svg{opacity:.6}
+.ph-t{font-family:'Archivo Black';font-size:15px;letter-spacing:.01em;color:rgba(236,237,230,.85)}
+.ph-s{font-size:13.5px;line-height:1.5;max-width:250px;color:rgba(236,237,230,.55)}
+.hero-figure .cap{display:block;margin-top:14px;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(236,237,230,.5);text-align:center}
+
+/* ── MARKERS ── */
+.markers{background:var(--noir);color:var(--paper);padding:26px 0}
+.markers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.markers-grid>div{display:flex;align-items:center;gap:14px}
+.markers-grid svg{color:var(--sand);flex-shrink:0}
+.m-t{font-weight:700;font-size:15.5px;color:var(--paper)}
+.m-s{font-size:13px;color:rgba(236,237,230,.6)}
+
+/* ── SECTIONS ── */
+.section{padding:104px 0}
+.section-paper{background:var(--paper)}
+.section-sand{background:var(--paper-2)}
+.sec-head{max-width:660px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(32px,4vw,52px);margin:18px 0 0}
+.sec-head p{margin-top:20px;color:var(--ink-soft);font-size:18px}
+
+/* leistungen */
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.serv{background:#fff;border:1px solid var(--line);border-radius:4px;padding:36px 32px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.serv:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(27,33,28,.09);border-color:var(--sand)}
+.serv.feat{background:var(--spruce);color:var(--paper);border-color:var(--spruce)}
+.serv .ic{width:52px;height:52px;border-radius:3px;background:var(--paper-2);display:flex;align-items:center;justify-content:center;margin-bottom:22px;color:var(--spruce)}
+.serv.feat .ic{background:rgba(236,237,230,.12);color:var(--sand)}
+.serv h3{font-size:20px;margin-bottom:14px}
+.serv.feat h3{color:var(--paper)}
+.serv p{font-size:15.5px;color:var(--ink-soft);margin-bottom:18px}
+.serv.feat p{color:rgba(236,237,230,.78)}
+.serv ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.serv li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--ink-soft)}
+.serv.feat li{color:rgba(236,237,230,.85)}
+.serv li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ochre);margin-top:8px;flex-shrink:0}
+.serv.feat li::before{background:var(--sand)}
+
+/* handwerk / inhaber */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.about-fig .ph{background:
+  repeating-linear-gradient(135deg,rgba(35,65,57,.06) 0 14px,rgba(35,65,57,.02) 14px 28px);
+  border:1px dashed var(--stone);color:var(--ink-soft);min-height:400px}
+.about-fig .ph svg{color:var(--spruce);opacity:.5}
+.about-fig .ph-t{color:var(--ink)}
+.about-fig .ph-s{color:var(--ink-mute)}
+.about-body h2{font-size:clamp(30px,3.6vw,46px);margin:18px 0 22px}
+.about-body p{color:var(--ink-soft);margin-bottom:18px;font-size:17px}
+.about-body .lede{font-family:'Archivo Black';font-size:22px;line-height:1.35;color:var(--spruce);letter-spacing:-.01em;margin-bottom:24px}
+.about-body .sig{font-weight:700;color:var(--ink);margin-top:8px}
+
+/* aussenraum feature */
+.feature{background:var(--noir);color:var(--paper);position:relative;overflow:hidden}
+.feature::before{content:"";position:absolute;inset:0;opacity:.5;
+  background:radial-gradient(80% 90% at 88% 10%,rgba(111,145,81,.26),transparent 60%);}
+.feature-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.feature .ph{min-height:380px}
+.feature h2{font-size:clamp(30px,3.8vw,50px);margin:18px 0 22px;color:var(--paper)}
+.feature p{color:rgba(236,237,230,.8);font-size:17.5px;margin-bottom:18px}
+.quote-card{margin-top:30px;border-left:3px solid var(--ochre);padding:6px 0 6px 22px}
+.quote-card p{font-family:'Archivo Black';font-size:19px;line-height:1.4;color:var(--paper);letter-spacing:-.01em;margin-bottom:10px}
+.quote-card span{font-size:14px;color:rgba(236,237,230,.6)}
+
+/* stimmen */
+.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:4px;padding:34px 32px}
+.rev .stars{color:var(--ochre);font-size:16px;letter-spacing:2px;margin-bottom:14px}
+.rev p{font-size:18px;line-height:1.6;color:var(--ink);margin-bottom:18px}
+.rev .who{display:flex;align-items:center;gap:12px}
+.rev .av{width:40px;height:40px;border-radius:50%;background:var(--spruce);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:'Archivo Black';font-size:16px;flex-shrink:0}
+.rev .who b{display:block;font-size:15px;color:var(--ink)}
+.rev .who small{font-size:13px;color:var(--ink-mute)}
+.rev-note{margin-top:26px;font-size:13.5px;color:var(--ink-mute);text-align:center}
+
+/* kontakt */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-body h2{font-size:clamp(30px,3.6vw,46px);margin:18px 0 20px}
+.contact-body>p{color:var(--ink-soft);font-size:17.5px;margin-bottom:32px}
+.callbar{display:flex;align-items:center;gap:16px;background:var(--spruce);color:var(--paper);padding:22px 26px;border-radius:4px;margin-bottom:16px}
+.callbar svg{color:var(--sand);flex-shrink:0}
+.callbar .k{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(236,237,230,.65)}
+.callbar .v{font-family:'Archivo Black';font-size:26px;letter-spacing:-.01em}
+.info-row{display:flex;align-items:center;gap:16px;padding:16px 4px;border-bottom:1px solid var(--line)}
+.info-row svg{color:var(--spruce);flex-shrink:0}
+.info-row .k{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute)}
+.info-row .v{font-weight:600;color:var(--ink)}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:36px}
+.form-card h3{font-size:20px;margin-bottom:6px}
+.form-card>p{font-size:14.5px;color:var(--ink-mute);margin-bottom:24px}
+.fld{margin-bottom:16px}
+.fld label{display:block;font-size:14px;font-weight:600;color:var(--ink-soft);margin-bottom:7px}
+.fld input,.fld textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:3px;font-family:inherit;font-size:15.5px;color:var(--ink);background:var(--paper);transition:border-color .18s ease,box-shadow .18s ease}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--spruce);box-shadow:0 0 0 3px rgba(35,65,57,.12)}
+.fld textarea{resize:vertical;min-height:110px}
+.form-note{font-size:12.5px;color:var(--ink-mute);text-align:center;margin-top:14px}
+.form-ok{display:none;text-align:center;padding:40px 20px}
+.form-ok .ok-ic{width:56px;height:56px;border-radius:50%;background:var(--paper-2);color:var(--spruce);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.form-ok h3{font-size:20px;margin-bottom:8px}
+.form-ok p{color:var(--ink-soft);font-size:15px}
+
+/* footer */
+footer{background:var(--spruce-deep);color:var(--paper);padding:60px 0 26px}
+.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:38px;border-bottom:1px solid var(--line-dark)}
+.foot-brand .bt{font-family:'Archivo Black';font-size:20px}
+.foot-brand p{color:rgba(236,237,230,.66);font-size:15px;margin-top:14px;max-width:340px}
+.foot-col h4{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);margin-bottom:16px}
+.foot-col a,.foot-col span{display:block;color:rgba(236,237,230,.72);font-size:15px;margin-bottom:10px;transition:color .16s ease}
+.foot-col a:hover{color:var(--paper)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding-top:22px;font-size:13px;color:rgba(236,237,230,.55)}
+.foot-bottom a{color:var(--sand);text-decoration:underline;text-underline-offset:2px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+/* responsive */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px;padding:64px 0 72px}
+  .hero-figure{max-width:440px}
+  .markers-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .serv-grid{grid-template-columns:1fr}
+  .about-grid,.feature-grid,.contact-grid{grid-template-columns:1fr;gap:38px}
+  .rev-grid{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr;gap:28px}
+  .menu{position:fixed;inset:74px 0 auto 0;background:var(--paper);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 24px;border-bottom:1px solid var(--line);box-shadow:0 20px 40px rgba(27,33,28,.12);transform:translateY(-140%);transition:transform .32s ease;height:auto}
+  .menu.open{transform:translateY(0)}
+  .menu a{padding:15px 4px;border-bottom:1px solid var(--line);font-size:17px}
+  .menu a.btn{margin-top:14px;border-bottom:none}
+  .burger{display:flex}
+}
+@media(max-width:520px){
+  .wrap{padding:0 20px}
+  .markers-grid{grid-template-columns:1fr}
+  .hero h1{font-size:40px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- PREVIEW-BANNER (nur für die Vorschau — im Live-Betrieb entfernen) -->
+<div class="ribbon">
+  Unverbindliche Design-Vorschau für <b>Stübi Gartenbau GmbH</b> &nbsp;·&nbsp; gestaltet von <a href="https://evowebdesign.ch" target="_blank" rel="noopener">evowebdesign.ch</a>
+</div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Stübi Gartenbau Startseite">
+      <svg class="emblem" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="18" cy="18" r="16" fill="none" stroke="#234139" stroke-width="2"/>
+        <path d="M4 25c4-3 7-3 11 0s7 3 11 0 5-3 6-2" stroke="#6F9151" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M18 6c-3 2.5-4.4 6-2.4 10 .9 1.7 4.8 1.7 5.6 0 1.9-4 .8-7.5-3.2-10Z" fill="#6F9151"/>
+        <path d="M18 8c0 3.5 0 7 0 10" stroke="#ECEDE6" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <span class="bt">Stübi<small>Gartenbau · Weinfelden</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#betrieb">Betrieb</a>
+      <a href="#aussenraum">Aussenraum</a>
+      <a href="#stimmen">Stimmen</a>
+      <a href="#kontakt" class="btn btn-ochre">Offerte anfragen</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow on-dark reveal">Garten- &amp; Landschaftsbau · Weinfelden TG</p>
+      <h1 class="reveal d1">Gärten mit<br><span class="accent">Handschrift.</span></h1>
+      <p class="lead reveal d2">Stübi Gartenbau ist Ihr Landschaftsgestalter in Weinfelden. Von der regelmässigen Pflege über neue Gartenanlagen bis zu Sitzplätzen und Wegen — geplant, gebaut und gepflegt von einem eingespielten Betrieb, seit 2014.</p>
+      <div class="hero-cta reveal d3">
+        <a href="tel:+41792367581" class="btn btn-ochre">Offerte anfragen <span class="arw">→</span></a>
+        <a href="#leistungen" class="btn btn-outline">Leistungen ansehen</a>
+      </div>
+      <div class="hero-trust reveal d3">
+        <span><b>Seit 2014</b> im Thurgau</span>
+        <span class="dot"></span>
+        <span>Eingetragene GmbH</span>
+        <span class="dot"></span>
+        <span>Aus Weinfelden</span>
+      </div>
+    </div>
+
+    <div class="hero-figure reveal d2">
+      <div class="frame">
+        <div class="ph" style="aspect-ratio:4/5">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+          <div class="ph-t">Ihr bestes Projektfoto</div>
+          <div class="ph-s">Hier wirkt ein echtes Bild eines fertigen Gartens oder Sitzplatzes von Stübi am stärksten.</div>
+        </div>
+      </div>
+      <span class="cap">Stübi Gartenbau · Weinfelden</span>
+    </div>
+  </div>
+</section>
+
+<div class="markers">
+  <div class="wrap"><div class="markers-grid">
+    <div class="reveal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div><div class="m-t">Amriswilerstrasse 94</div><div class="m-s">8570 Weinfelden TG</div></div>
+    </div>
+    <div class="reveal d1">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+      <div><div class="m-t">Seit 2014</div><div class="m-s">Eingetragene GmbH</div></div>
+    </div>
+    <div class="reveal d2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c4-4 7-4 10 0M4 22V9l8-5 8 5v13"/><path d="M9 22v-6h6v6"/></svg>
+      <div><div class="m-t">Landschaftsgestaltung</div><div class="m-s">Gestalten &amp; pflegen</div></div>
+    </div>
+    <div class="reveal d3">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <div><div class="m-t">Direkt vom Betrieb</div><div class="m-s">Kurze, klare Wege</div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- LEISTUNGEN -->
+<section class="section section-paper" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Was wir für Sie machen</p>
+      <h2>Der ganze Garten,<br>aus einer Hand.</h2>
+      <p>Von der laufenden Pflege bis zur kompletten Neuanlage — für alles einen Ansprechpartner, der die Arbeit selbst kennt und sauber ausführt.</p>
+    </div>
+
+    <div class="serv-grid">
+      <div class="serv reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V11M12 11c0-3 2-5 5-5 0 3-2 5-5 5ZM12 11C12 8 10 6 7 6c0 3 2 5 5 5Z"/><path d="M5 22h14"/></svg></div>
+        <h3>Gartenunterhalt &amp; Pflege</h3>
+        <p>Damit Ihr Garten das ganze Jahr gepflegt bleibt — zuverlässig und mit Blick fürs Detail.</p>
+        <ul>
+          <li>Rasen, Hecken &amp; Sträucher schneiden</li>
+          <li>Bepflanzung &amp; Beetpflege</li>
+          <li>Baum- und Gehölzschnitt</li>
+          <li>Unterhalt auch als Saison-Abo</li>
+        </ul>
+      </div>
+
+      <div class="serv feat reveal d1">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12c0-4 2.5-6.5 6.5-6.5C18.5 9.5 16 12 12 12ZM12 12C12 8.5 9.5 6 5.5 6 5.5 10 8 12 12 12Z"/><path d="M4 22h16"/></svg></div>
+        <h3>Gartengestaltung &amp; Neuanlagen</h3>
+        <p>Unsere Spezialität als Landschaftsgestalter: neue Gärten planen und anlegen — vom ersten Entwurf bis zur fertigen Anlage.</p>
+        <ul>
+          <li>Planung &amp; Gestaltung von Gartenanlagen</li>
+          <li>Rasen- &amp; Bodenaufbau</li>
+          <li>Bepflanzungskonzepte</li>
+          <li>Umgestaltung bestehender Gärten</li>
+        </ul>
+      </div>
+
+      <div class="serv reveal d2">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18M3 13h18M3 18h18"/><path d="M8 3v5M14 8v5M9 13v5M16 13v5"/></svg></div>
+        <h3>Sitzplätze, Wege &amp; Beläge</h3>
+        <p>Sitzplätze, Zugänge und Wege, sauber gesetzt und dauerhaft angelegt — der Aussenraum, den man täglich nutzt.</p>
+        <ul>
+          <li>Sitzplätze &amp; Plattenbeläge</li>
+          <li>Wege &amp; Pflasterflächen</li>
+          <li>Natursteinarbeiten</li>
+          <li>Randabschlüsse &amp; Treppen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BETRIEB / INHABER -->
+<section class="section section-sand" id="betrieb">
+  <div class="wrap about-grid">
+    <div class="about-fig reveal">
+      <div class="ph">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+        <div class="ph-t">Foto vom Betrieb bei der Arbeit</div>
+        <div class="ph-s">Ein Bild vom Team im fertigen Garten schafft sofort Vertrauen.</div>
+      </div>
+    </div>
+    <div class="about-body">
+      <p class="eyebrow reveal">Der Betrieb</p>
+      <h2 class="reveal d1">Sie reden mit Leuten, die selbst mit anpacken.</h2>
+      <p class="lede reveal d1">Kein Callcenter, keine anonyme Kette — bei Stübi Gartenbau haben Sie feste Ansprechpersonen vom ersten Gespräch bis zum letzten Handgriff.</p>
+      <p class="reveal d2">Seit 2014 ist der Betrieb als GmbH in Weinfelden eingetragen und im ganzen Thurgau unterwegs. Vom laufenden Gartenunterhalt über neue Anlagen bis zu Sitzplätzen und Wegen läuft alles aus einer Hand — persönlich, verbindlich und sauber ausgeführt.</p>
+      <p class="reveal d2">Genau das schätzen Kundinnen und Kunden: klare Absprachen, ordentliche Baustellen und ein Ergebnis, das hält, was besprochen wurde.</p>
+      <p class="sig reveal d3">— Marcel Stübi, Stübi Gartenbau</p>
+    </div>
+  </div>
+</section>
+
+<!-- AUSSENRAUM FEATURE -->
+<section class="section feature" id="aussenraum">
+  <div class="wrap feature-grid">
+    <div class="reveal">
+      <div class="frame">
+        <div class="ph">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18M3 13h18M3 18h18"/><path d="M8 3v5M14 8v5M9 13v5M16 13v5"/></svg>
+          <div class="ph-t">Ihr fertiger Sitzplatz</div>
+          <div class="ph-s">Ein Vorher-/Nachher-Bild eines Sitzplatzes oder Wegs kommt hier besonders gut zur Geltung.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow on-dark reveal">Aussenräume zum Nutzen</p>
+      <h2 class="reveal d1">Der Platz, an dem<br>Sie gerne sitzen.</h2>
+      <p class="reveal d2">Ein guter Sitzplatz ist Handwerk, das man täglich spürt — sauber gesetzte Beläge, ein stimmiger Übergang zum Garten und eine Ausführung, die über Jahre trägt. Ob Sitzplatz, Zugang oder Weg: hier zeigt sich, was ein Landschaftsgestalter wirklich kann.</p>
+      <div class="quote-card reveal d2">
+        <p>„Super Arbeit gemacht. Einfache Kommunikation. Kundenwünsche werden umgesetzt.“</p>
+        <span>— Markus Schmid · Google-Bewertung</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STIMMEN -->
+<section class="section section-paper" id="stimmen">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-inline:auto;text-align:center">
+      <p class="eyebrow" style="justify-content:center">Kundenstimmen</p>
+      <h2>Was Kunden sagen.</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev reveal">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>„Super Arbeit gemacht. Einfache Kommunikation. Kundenwünsche werden umgesetzt.“</p>
+        <div class="who">
+          <span class="av">M</span>
+          <div><b>Markus Schmid</b><small>Google-Bewertung</small></div>
+        </div>
+      </div>
+      <div class="rev reveal d1">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>„Super Arbeit … immer wieder gerne.“</p>
+        <div class="who">
+          <span class="av">J</span>
+          <div><b>Jrene Fiechter</b><small>Google-Bewertung</small></div>
+        </div>
+      </div>
+    </div>
+    <p class="rev-note reveal">Echte Google-Bewertungen. In der Live-Version werden hier laufend Ihre aktuellen Rezensionen eingebunden.</p>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section section-sand" id="kontakt">
+  <div class="wrap contact-grid">
+    <div class="contact-body reveal">
+      <p class="eyebrow">Kontakt</p>
+      <h2>Offerte anfragen.</h2>
+      <p>Erzählen Sie kurz, worum es geht — Gartenpflege, eine Umgestaltung oder ein neuer Sitzplatz. Am schnellsten geht ein kurzer Anruf, dann schauen wir das bei Ihnen vor Ort an.</p>
+
+      <a href="tel:+41792367581" class="callbar">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        <div>
+          <div class="k">Direkt anrufen</div>
+          <div class="v">079 236 75 81</div>
+        </div>
+      </a>
+
+      <div class="info-row">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><div class="k">Adresse</div><div class="v">Amriswilerstrasse 94, 8570 Weinfelden</div></div>
+      </div>
+      <div class="info-row">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+        <div><div class="k">Einzugsgebiet</div><div class="v">Weinfelden, Bürglen, Amriswil, Bischofszell &amp; Umgebung</div></div>
+      </div>
+    </div>
+
+    <div class="form-card reveal d1">
+      <form id="bookform">
+        <h3>Anfrage senden</h3>
+        <p>Wir melden uns zeitnah bei Ihnen zurück.</p>
+        <div class="fld">
+          <label for="f-name">Ihr Name</label>
+          <input id="f-name" type="text" placeholder="Vor- und Nachname" required>
+        </div>
+        <div class="fld">
+          <label for="f-contact">Telefon oder E-Mail</label>
+          <input id="f-contact" type="text" placeholder="Wie erreichen wir Sie?" required>
+        </div>
+        <div class="fld">
+          <label for="f-msg">Ihr Anliegen</label>
+          <textarea id="f-msg" placeholder="Gartenpflege, Umgestaltung, Sitzplatz …" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-spruce" style="width:100%">Anfrage senden</button>
+        <p class="form-note">Design-Vorschau — in der Live-Version geht diese Anfrage direkt an Sie (per E-Mail oder als SMS/WhatsApp aufs Handy).</p>
+      </form>
+      <div class="form-ok" id="formok">
+        <div class="ok-ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></div>
+        <h3>Danke für Ihre Anfrage!</h3>
+        <p>Dies ist eine Design-Vorschau. In der Live-Version landet Ihre Anfrage jetzt direkt bei Stübi Gartenbau.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="bt">Stübi Gartenbau GmbH</span>
+        <p>Landschaftsgestaltung, Gartenunterhalt sowie Sitzplätze &amp; Wege in Weinfelden und im ganzen Thurgau — eingespielter Betrieb, seit 2014.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Leistungen</h4>
+        <a href="#leistungen">Gartenunterhalt &amp; Pflege</a>
+        <a href="#leistungen">Gartengestaltung &amp; Neuanlagen</a>
+        <a href="#aussenraum">Sitzplätze, Wege &amp; Beläge</a>
+        <a href="#kontakt">Offerte anfragen</a>
+      </div>
+      <div class="foot-col">
+        <h4>Direkt</h4>
+        <a href="tel:+41792367581">079 236 75 81</a>
+        <span>Amriswilerstrasse 94, 8570 Weinfelden</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=St%C3%BCbi+Gartenbau+GmbH+Amriswilerstrasse+94+Weinfelden" target="_blank" rel="noopener">Anfahrt &amp; Karte</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Stübi Gartenbau GmbH · Amriswilerstrasse 94, 8570 Weinfelden</span>
+      <span>Design-Vorschau erstellt von <a href="https://evowebdesign.ch" target="_blank" rel="noopener">evowebdesign.ch</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LandscapingBusiness",
+  "name":"Stübi Gartenbau GmbH",
+  "alternateName":"Stübi Gartenbau",
+  "description":"Landschaftsgestaltung, Gartenunterhalt sowie Sitzplätze und Wege in Weinfelden im Kanton Thurgau. Eingetragene GmbH, seit 2014.",
+  "url":"https://evowebdesign.ch/stuebi-gartenbau-preview/",
+  "telephone":"+41792367581",
+  "currenciesAccepted":"CHF",
+  "foundingDate":"2014",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Amriswilerstrasse 94",
+    "postalCode":"8570",
+    "addressLocality":"Weinfelden",
+    "addressRegion":"TG",
+    "addressCountry":"CH"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":47.5639,"longitude":9.1227},
+  "areaServed":["Weinfelden","Bürglen","Amriswil","Märstetten","Bischofszell","Thurgau"],
+  "founder":{"@type":"Person","name":"Marcel Stübi"},
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Gartenunterhalt & Gartenpflege"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Gartengestaltung & Neuanlagen"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Sitzplätze, Wege & Beläge"}}
+  ],
+  "review":[
+    {"@type":"Review","author":{"@type":"Person","name":"Markus Schmid"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Super Arbeit gemacht. Einfache Kommunikation. Kundenwünsche werden umgesetzt."},
+    {"@type":"Review","author":{"@type":"Person","name":"Jrene Fiechter"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Super Arbeit … immer wieder gerne."}
+  ]
+}
+</script>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false);}));
+const form=document.getElementById('bookform'),ok=document.getElementById('formok');
+if(form){form.addEventListener('submit',(e)=>{e.preventDefault();form.style.display='none';ok.style.display='block';});}
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+</script>
+</body>
+</html>
