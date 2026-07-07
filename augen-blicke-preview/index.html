@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<!-- augen-blicke by marlène · Bricolage Grotesque · Cocoa & Rosé -->
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>augen-blicke by marlène · Wimpern &amp; Permanent Make-up in Amriswil</title>
+<meta name="description" content="augen-blicke by marlène in Amriswil — Wimpernverlängerung, Wimpern-Lifting, Permanent Make-up und BioMicroneedling. Präzise Handarbeit rund um deinen Blick, von Marlene Eugster-Huber. 5,0 von 5 Sternen bei Google.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://evowebdesign.ch/augen-blicke-preview/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="augen-blicke by marlène · Wimpern &amp; Permanent Make-up in Amriswil">
+<meta property="og:description" content="Wimpernverlängerung, Lifting, Permanent Make-up &amp; BioMicroneedling in Amriswil — präzise Handarbeit rund um deinen Blick. 5,0 ★ bei Google.">
+<meta property="og:locale" content="de_CH">
+<meta name="theme-color" content="#1E1613">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+:root{
+  --paper:#F4ECE2;
+  --paper-2:#EADFD2;
+  --ink:#271E1A;
+  --ink-soft:#6E6157;
+  --ink-mute:#9E9184;
+  --gold:#A9736A;        /* sage / eucalyptus signature */
+  --gold-deep:#8A554D;
+  --gold-lt:#C79B92;
+  --gold-glow:rgba(169,115,106,.4);
+  --blush:#B98A79;       /* clay */
+  --blush-soft:#E7D2C6;
+  --nude:#EADCCB;
+  --line:#E6D8C8;
+  --midnight:#2A201B;    /* deep eucalyptus-ink */
+  --midnight-2:#1E1613;
+  --line-dark:rgba(244,236,226,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{
+  font-family:'Bricolage Grotesque',system-ui,sans-serif;
+  font-weight:800;
+  line-height:1.05;
+  letter-spacing:-.02em;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 34px}
+
+.eyebrow{
+  font-family:'Manrope';font-size:12px;font-weight:700;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);
+  display:inline-flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--gold-deep);display:inline-block}
+.eyebrow.on-dark{color:var(--gold-lt)}
+.eyebrow.on-dark::before{background:var(--gold-lt)}
+
+.emblem{width:34px;height:34px;flex:none}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:'Manrope';font-weight:700;font-size:15px;
+  padding:15px 30px;border-radius:100px;letter-spacing:.01em;
+  min-height:52px;cursor:pointer;border:1.5px solid transparent;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,border-color .3s,box-shadow .3s;
+}
+.btn .arw{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-gold{background:var(--gold);color:var(--paper);box-shadow:0 14px 34px -16px var(--gold-glow)}
+.btn-gold:hover{background:var(--gold-deep);transform:translateY(-2px);box-shadow:0 18px 40px -16px var(--gold-glow)}
+.btn-outline-light{background:transparent;color:var(--paper);border-color:rgba(244,236,226,.34)}
+.btn-outline-light:hover{border-color:var(--paper);background:rgba(244,236,226,.06)}
+.btn-outline-dark{background:transparent;color:var(--ink);border-color:rgba(42,36,30,.26)}
+.btn-outline-dark:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* preview ribbon */
+.ribbon{
+  background:var(--midnight-2);color:var(--nude);text-align:center;
+  font-size:13.5px;letter-spacing:.01em;padding:10px 18px;font-weight:500;
+}
+.ribbon b{color:#fff;font-weight:700}
+.ribbon a{color:var(--gold-lt);text-decoration:underline;text-underline-offset:2px;font-weight:700}
+
+/* header */
+header{
+  position:sticky;top:0;z-index:100;
+  background:transparent;transition:background .35s,box-shadow .35s,border-color .35s;
+  border-bottom:1px solid transparent;
+}
+header.scrolled{background:rgba(22,32,28,.92);backdrop-filter:blur(14px);border-color:var(--line-dark);box-shadow:0 16px 44px -30px rgba(0,0,0,.7)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px}
+.brand{display:flex;align-items:center;gap:13px;color:var(--paper)}
+.brand .bt{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em;line-height:1;color:var(--paper)}
+.brand small{display:block;font-family:'Manrope';font-size:9px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:rgba(233,220,203,.62);margin-top:5px}
+.menu{display:flex;gap:32px;align-items:center}
+.menu a{font-family:'Manrope';font-size:15px;font-weight:600;color:rgba(244,236,226,.82);position:relative;transition:color .2s}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;background:var(--gold-lt);transition:width .3s}
+.menu a:not(.btn):hover{color:var(--paper)}
+.menu a:not(.btn):hover::after{width:100%}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px}
+.burger span{width:26px;height:2px;background:var(--paper);border-radius:2px;transition:.3s}
+
+/* photo placeholder */
+.ph{
+  position:relative;background:
+    repeating-linear-gradient(135deg,rgba(169,115,106,.05) 0 2px,transparent 2px 22px),
+    linear-gradient(160deg,var(--blush-soft),var(--nude));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  color:var(--gold-deep);text-align:center;overflow:hidden;
+}
+.ph.dark{background:
+    repeating-linear-gradient(135deg,rgba(244,236,226,.03) 0 2px,transparent 2px 22px),
+    linear-gradient(160deg,#3A2A22,#241813);color:var(--gold-lt)}
+.ph::after{content:"";position:absolute;inset:14px;border:1px solid currentColor;opacity:.3;pointer-events:none;border-radius:3px}
+.ph svg{opacity:.82}
+.ph .ph-t{font-family:'Manrope';font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.ph .ph-s{font-family:'Manrope';font-weight:500;font-size:12px;letter-spacing:.02em;opacity:.72;max-width:24ch;text-transform:none;line-height:1.5}
+
+/* HERO */
+.hero{position:relative;background:var(--midnight-2);color:var(--nude);overflow:hidden;margin-top:-82px;padding:150px 0 96px}
+.hero::before{content:"";position:absolute;top:-16%;left:-8%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(169,115,106,.28),transparent 66%);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-28%;right:-6%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(199,155,146,.16),transparent 68%);pointer-events:none}
+.hero-inner{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center;position:relative}
+.hero h1{font-size:clamp(42px,6.2vw,86px);color:var(--paper);letter-spacing:-.02em}
+.hero h1 .accent{color:var(--gold-lt)}
+.hero .lead{font-size:19.5px;line-height:1.7;color:rgba(233,220,203,.84);max-width:50ch;margin:30px 0 38px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-rating{display:flex;align-items:center;gap:12px;margin-top:34px;font-size:14.5px;color:rgba(233,220,203,.72)}
+.stars{display:inline-flex;gap:3px;color:var(--gold-lt)}
+
+.hero-figure{position:relative;justify-self:end;width:100%;max-width:430px}
+.hero-figure .frame{
+  position:relative;aspect-ratio:3/4;border-radius:4px;overflow:hidden;
+  border:1px solid rgba(233,220,203,.14);
+  box-shadow:0 50px 90px -40px rgba(0,0,0,.8), 0 0 0 1px rgba(169,115,106,.18);
+}
+.hero-figure .cap{
+  position:absolute;left:-18px;bottom:34px;background:var(--gold);color:var(--paper);
+  font-family:'Manrope';font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  padding:11px 18px;box-shadow:0 16px 34px -14px var(--gold-glow)}
+
+/* markers strip */
+.markers{background:var(--ink)}
+.markers-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.markers-grid > div{padding:26px 22px;border-right:1px solid var(--line-dark);display:flex;gap:14px;align-items:center}
+.markers-grid > div:last-child{border-right:0}
+.markers-grid svg{flex:none;color:var(--gold-lt)}
+.markers-grid .m-t{font-family:'Manrope';font-weight:700;font-size:16px;color:var(--paper);line-height:1.2}
+.markers-grid .m-s{font-size:12.5px;color:rgba(233,220,203,.6);margin-top:3px}
+
+/* sections */
+.section{padding:114px 0}
+.section-paper{background:var(--paper)}
+.section-paper-2{background:var(--paper-2)}
+.section-noir{background:var(--midnight-2);color:var(--nude)}
+.head{max-width:720px;margin-bottom:60px}
+.head.center{margin-left:auto;margin-right:auto;text-align:center}
+.head h2{font-size:clamp(36px,5vw,62px);margin-top:20px;color:var(--ink)}
+.head p{font-size:19px;color:var(--ink-soft);margin-top:22px}
+.section-noir .head h2{color:var(--paper)}
+.section-noir .head p{color:rgba(233,220,203,.78)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:66px;align-items:center}
+.about-body h2{font-size:clamp(32px,4.4vw,52px);color:var(--ink);margin:22px 0 26px}
+.about-body p{color:var(--ink-soft);margin-bottom:20px;max-width:56ch}
+.about-body .lede{color:var(--ink);font-size:22px;font-weight:600;font-family:'Manrope';font-style:italic;line-height:1.5}
+.sig{font-family:'Manrope';font-weight:700;font-size:17px;color:var(--gold-deep);margin-top:28px;letter-spacing:.01em}
+.about-fig{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;box-shadow:0 44px 80px -46px rgba(42,36,30,.45);border:1px solid var(--line)}
+.about-fig .ph{position:absolute;inset:0}
+
+/* treatments */
+.pricecols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.pricegroup h3{font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:800;font-family:'Manrope';margin-bottom:8px;padding-bottom:18px;border-bottom:2px solid var(--gold)}
+.priceitem{
+  display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;
+  padding:24px 6px;border-bottom:1px solid var(--line);position:relative;
+  transition:padding-left .35s cubic-bezier(.2,.7,.2,1);
+}
+.priceitem:hover{padding-left:16px}
+.priceitem::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform .35s}
+.priceitem:hover::before{transform:scaleY(1)}
+.priceitem .pi-name{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:21px;color:var(--ink);letter-spacing:-.01em}
+.priceitem .pi-desc{font-size:14.5px;color:var(--ink-soft);margin-top:6px;line-height:1.55;font-family:'Manrope'}
+.priceitem .pi-price{font-family:'Manrope';font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);white-space:nowrap}
+.menu-note{margin-top:40px;color:var(--ink-mute);font-size:15px;max-width:64ch}
+
+/* method (dark) */
+.diff-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:66px;align-items:center}
+.diff-body h2{font-size:clamp(32px,4.4vw,52px);color:var(--paper);margin:22px 0 26px}
+.diff-body p{color:rgba(233,220,203,.8);margin-bottom:22px;max-width:54ch}
+.diff-list{list-style:none;margin-top:30px;display:grid;gap:2px}
+.diff-list li{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line-dark);align-items:flex-start}
+.diff-list li:last-child{border-bottom:1px solid var(--line-dark)}
+.diff-list .dt{font-family:'Manrope';font-weight:700;font-size:17px;color:var(--paper);margin-bottom:3px}
+.diff-list .ds{font-size:15px;color:rgba(233,220,203,.68);line-height:1.55}
+.diff-list svg{flex:none;color:var(--gold-lt);margin-top:4px}
+.diff-art{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;border:1px solid var(--line-dark)}
+.diff-art .ph{position:absolute;inset:0}
+
+/* rating band */
+.ratingband{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:44px 48px;box-shadow:0 40px 80px -56px rgba(42,36,30,.4)}
+.ratingband .big{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(64px,10vw,104px);color:var(--gold-deep);line-height:.9;letter-spacing:-.02em}
+.ratingband .big small{display:block;font-family:'Manrope';font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin-top:12px}
+.ratingband .bars{display:grid;gap:9px}
+.barrow{display:grid;grid-template-columns:54px 1fr 40px;gap:14px;align-items:center;font-size:13px;color:var(--ink-soft);font-weight:600}
+.barrow .track{height:9px;background:var(--paper-2);border-radius:100px;overflow:hidden}
+.barrow .fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:100px}
+
+/* testimonials */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
+.rev{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:34px 30px;display:flex;flex-direction:column}
+.rev.stat{background:var(--midnight);border-color:var(--line-dark);align-items:flex-start;justify-content:center}
+.rev .stars{color:var(--gold-deep);margin-bottom:16px;gap:2px}
+.rev blockquote{font-family:'Manrope';font-weight:500;font-size:18px;line-height:1.55;color:var(--ink);margin-bottom:20px}
+.rev .who{margin-top:auto;display:flex;align-items:center;gap:12px}
+.rev .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(150deg,var(--blush),var(--gold));display:flex;align-items:center;justify-content:center;color:var(--paper);font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;flex:none}
+.rev .nm{font-weight:700;font-size:15px;color:var(--ink)}
+.rev .src{font-size:12.5px;color:var(--ink-mute)}
+.rev.stat .snum{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:56px;color:var(--gold-lt);line-height:1;letter-spacing:-.02em}
+.rev.stat .stxt{color:rgba(233,220,203,.82);font-size:16px;margin-top:14px;line-height:1.5}
+.rev.stat .ssub{color:rgba(233,220,203,.5);font-size:13px;margin-top:16px}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);padding:6px 0}
+.faq summary{
+  list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;color:var(--ink);letter-spacing:-.01em;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:20px;font-size:28px;color:var(--gold-deep);font-weight:400;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding:0 44px 26px 0;color:var(--ink-soft);font-size:16.5px}
+.faq .ans a{color:var(--gold-deep);font-weight:700;border-bottom:1px solid rgba(169,115,106,.4)}
+
+/* booking / kontakt */
+.book-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+.info-row{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line-dark)}
+.info-row .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-lt);font-weight:700;width:140px;flex:none;padding-top:4px}
+.info-row .v{font-size:17px;color:var(--paper);font-weight:500;line-height:1.55}
+.info-row .v a{border-bottom:1px solid transparent;transition:border-color .2s}
+.info-row .v a:hover{border-color:var(--gold-lt)}
+.book-card{background:var(--paper);border-radius:10px;padding:40px 38px;box-shadow:0 44px 90px -50px rgba(0,0,0,.5)}
+.book-card h3{font-size:clamp(26px,3vw,32px);color:var(--ink);margin-bottom:8px;letter-spacing:-.01em;font-weight:700}
+.book-card > p{color:var(--ink-soft);margin-bottom:26px;font-size:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;font-family:'Manrope';font-size:16px;color:var(--ink);
+  background:var(--paper-2);border:1px solid var(--line);border-radius:8px;
+  padding:13px 15px;transition:border-color .2s,box-shadow .2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(169,115,106,.16)}
+.field textarea{resize:vertical;min-height:92px}
+.field-2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.book-card .btn-gold{width:100%;justify-content:center;margin-top:6px}
+
+/* calendar booking */
+.cal-lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:9px}
+.cal-wrap{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:15px 15px 17px;margin-bottom:16px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cal-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;color:var(--ink);text-transform:capitalize}
+.cal-nav{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--paper-2);color:var(--ink);font-size:19px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s,color .2s}
+.cal-nav:hover:not(:disabled){background:var(--gold);border-color:var(--gold);color:var(--paper)}
+.cal-nav:disabled{opacity:.3;cursor:not-allowed}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cal-dow span{text-align:center;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);padding:2px 0 8px}
+.cal-day{position:relative;aspect-ratio:1;border:1px solid transparent;border-radius:9px;background:var(--paper-2);color:var(--ink);font-family:'Manrope';font-weight:600;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .18s,color .18s,border-color .18s,transform .18s}
+.cal-day.is-empty{background:transparent;border:0;cursor:default}
+.cal-day.is-free:hover{border-color:var(--gold);transform:translateY(-1px)}
+.cal-day.is-free::after{content:"";position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.cal-day.is-off{color:var(--ink-mute);opacity:.4;cursor:not-allowed;background:transparent;border-color:transparent}
+.cal-day.is-selected{background:var(--gold);border-color:var(--gold);color:var(--paper);font-weight:800}
+.cal-day.is-selected::after{background:var(--paper)}
+.slots-wrap{margin-bottom:16px}
+.slots-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:11px;flex-wrap:wrap}
+.slots-head .sl-lbl{font-size:13.5px;font-weight:700;color:var(--ink)}
+.slot-legend{display:inline-flex;align-items:center;gap:12px;font-size:11.5px;color:var(--ink-mute)}
+.slot-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+.slot-legend .lg-free{background:var(--paper);border:1px solid var(--gold)}
+.slot-legend .lg-booked{background:var(--paper-2);border:1px solid var(--line)}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.slot{padding:11px 4px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);font-family:'Manrope';font-weight:600;font-size:14px;cursor:pointer;text-align:center;transition:background .18s,color .18s,border-color .18s}
+.slot:hover:not(.is-booked){border-color:var(--gold);color:var(--gold-deep)}
+.slot.is-selected{background:var(--gold);border-color:var(--gold);color:var(--paper);font-weight:800}
+.slot.is-booked{background:var(--paper-2);color:var(--ink-mute);cursor:not-allowed;text-decoration:line-through;opacity:.65}
+.book-err{display:none;font-size:13px;font-weight:600;color:#b23a3a;margin-bottom:12px}
+.book-err.show{display:block}
+.form-note{font-size:12.5px;color:var(--ink-mute);margin-top:14px;text-align:center;line-height:1.5}
+.form-ok{display:none;background:rgba(169,115,106,.1);border:1px solid var(--gold);border-radius:8px;padding:18px 20px;color:var(--gold-deep);font-size:15px;font-weight:600;margin-top:6px;line-height:1.5}
+
+/* footer */
+footer{background:var(--midnight-2);color:rgba(233,220,203,.66);padding:64px 0 34px}
+.foot-grid{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap;padding-bottom:38px;border-bottom:1px solid var(--line-dark)}
+.foot-brand{display:flex;align-items:center;gap:12px}
+.foot-brand .bt{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em;color:var(--paper)}
+.foot-grid p{font-size:15px;line-height:1.75}
+.foot-col h4{color:var(--nude);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:15px;font-family:'Manrope'}
+.foot-col a{display:block;padding:5px 0;font-size:15px}
+footer a:hover{color:var(--gold-lt)}
+.foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:26px;font-size:13.5px;color:rgba(233,220,203,.45)}
+.foot-bottom a{color:var(--gold-lt);text-decoration:underline;text-underline-offset:2px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (max-width:960px){
+  .hero-inner,.about-grid,.diff-grid,.book-grid,.pricecols{grid-template-columns:1fr;gap:48px}
+  .hero-figure{justify-self:center;max-width:380px}
+  .about-grid .about-fig{max-width:420px}
+  .diff-art{max-width:440px}
+  .revs{grid-template-columns:1fr}
+  .markers-grid{grid-template-columns:1fr 1fr}
+  .markers-grid > div:nth-child(2){border-right:0}
+  .markers-grid > div:nth-child(-n+2){border-bottom:1px solid var(--line-dark)}
+  .ratingband{grid-template-columns:1fr;gap:30px;text-align:center;padding:38px 30px}
+  .ratingband .big{margin:0 auto}
+  .menu{display:none}
+  .menu.open{display:flex;position:absolute;top:82px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:20px;background:var(--midnight-2);padding:26px 34px;border-bottom:1px solid var(--line-dark);box-shadow:0 24px 40px -20px rgba(0,0,0,.6)}
+  .menu.open .btn{width:100%;justify-content:center}
+  .burger{display:flex}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 22px}
+  .section{padding:76px 0}
+  .hero{padding-top:124px;padding-bottom:70px}
+  .head{margin-bottom:42px}
+  .markers-grid{grid-template-columns:1fr}
+  .markers-grid > div{border-right:0!important;border-bottom:1px solid var(--line-dark)}
+  .priceitem{grid-template-columns:1fr;gap:4px}
+  .priceitem .pi-price{text-align:left}
+  .priceitem:hover{padding-left:6px}
+  .field-2{grid-template-columns:1fr}
+  .slots{grid-template-columns:repeat(3,1fr)}
+  .cal-day{font-size:14px}
+  .info-row{flex-direction:column;gap:4px}
+  .info-row .k{width:auto}
+  .hero-figure .cap{left:0}
+  .book-card{padding:32px 24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- PREVIEW-BANNER (nur für die Vorschau — im Live-Betrieb entfernen) -->
+<div class="ribbon">
+  Unverbindliche Design-Vorschau für <b>augen-blicke by marlène</b> &nbsp;·&nbsp; gestaltet von <a href="https://evowebdesign.ch" target="_blank" rel="noopener">evowebdesign.ch</a>
+</div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="augen-blicke by marlène Startseite">
+      <svg class="emblem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 17c3.5-5 9-7.6 13-7.6S26.5 12 30 17c-3.5 5-9 7.6-13 7.6S7.5 22 4 17Z" fill="rgba(169,115,106,.12)" stroke="#C79B92" stroke-width="1.3"/>
+        <circle cx="17" cy="17" r="3.4" fill="rgba(169,115,106,.28)" stroke="#C79B92" stroke-width="1.3"/>
+        <path d="M17 9.4V6M24 11.2l1.9-2.6M10 11.2 8.1 8.6" stroke="#C79B92" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+      <span class="bt">augen-blicke<small>by marlène · Amriswil</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#studio">Das Studio</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#technik">Warum augen-blicke</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#termin" class="btn btn-gold">Termin anfragen</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow on-dark reveal">Wimpern &amp; Permanent Make-up · Amriswil</p>
+      <h1 class="reveal d1">Dein schönster<br><span class="accent">Augen&#8209;Blick.</span></h1>
+      <p class="lead reveal d2">Bei augen-blicke by marlène dreht sich alles um deinen Blick. Wimpernverlängerung, Lifting und Permanent Make-up in präziser Handarbeit, damit du morgens fertig aufwachst und dich einfach schön fühlst. Bei Google sagen <strong style="color:var(--paper)">5,0 von 5 Sternen</strong>: hier bist du in besten Händen.</p>
+      <div class="hero-cta reveal d3">
+        <a href="#termin" class="btn btn-gold">Termin anfragen <span class="arw">→</span></a>
+        <a href="#leistungen" class="btn btn-outline-light">Leistungen ansehen</a>
+      </div>
+      <div class="hero-rating reveal d3">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span><b style="color:var(--paper)">5,0</b> aus 11 Google-Bewertungen</span>
+      </div>
+    </div>
+
+    <div class="hero-figure reveal d2">
+      <div class="frame">
+        <div class="ph" style="aspect-ratio:3/4">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.6"/></svg>
+          <div class="ph-t">Foto von Marlene / Studio</div>
+          <div class="ph-s">Ein Porträt von Marlene oder eine ihrer schönsten Wimpern-Arbeiten wirkt hier am stärksten.</div>
+        </div>
+      </div>
+      <span class="cap">Marlene Eugster-Huber · Amriswil</span>
+    </div>
+  </div>
+</section>
+
+<div class="markers">
+  <div class="wrap"><div class="markers-grid">
+    <div class="reveal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div><div class="m-t">Mühlenstrasse 21</div><div class="m-s">8580 Amriswil</div></div>
+    </div>
+    <div class="reveal d1">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.9 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg>
+      <div><div class="m-t">5,0 ★ · 11 Bewertungen</div><div class="m-s">Durchgehend bei Google</div></div>
+    </div>
+    <div class="reveal d2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="3"/></svg>
+      <div><div class="m-t">Wimpern &amp; Permanent Make-up</div><div class="m-s">Instant Change Professional</div></div>
+    </div>
+    <div class="reveal d3">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <div><div class="m-t">Nach Vereinbarung</div><div class="m-s">Termine flexibel planbar</div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- STUDIO / ÜBER MARLENE -->
+<section class="section section-paper" id="studio">
+  <div class="wrap about-grid">
+    <div class="about-fig reveal">
+      <div class="ph">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.6"/></svg>
+        <div class="ph-t">Foto von Marlene</div>
+        <div class="ph-s">Ein persönliches Porträt schafft hier sofort Vertrauen.</div>
+      </div>
+    </div>
+    <div class="about-body">
+      <p class="eyebrow reveal">Deine Stylistin</p>
+      <h2 class="reveal d1">Präzise Handarbeit, die deinen Blick zum Strahlen bringt.</h2>
+      <p class="lede reveal d1">„Danke Marlène für deine grossartige Arbeit.“</p>
+      <p class="reveal d2">Hinter augen-blicke steht Marlene Eugster-Huber. Seit Jahren gestaltet sie in Amriswil Wimpern und Augenbrauen, die natürlich wirken und trotzdem sofort auffallen. Als Instant Change Professional weiss sie, dass der Blick das Erste ist, was man an einem Menschen sieht — und genau dort setzt sie an, mit Ruhe, einem Auge fürs Detail und Produkten, auf die Verlass ist.</p>
+      <p class="reveal d2">Ihre Kundinnen kommen für Wimpernverlängerung, Lifting und Permanent Make-up und bleiben, weil sie sich gesehen fühlen. Wer mag, bekommt bei Marlene sogar eine persönliche Nummerologie-Beratung — ein kleines Extra, das zeigt, wie sehr es ihr um den ganzen Menschen geht und nicht nur um schöne Wimpern.</p>
+      <p class="sig reveal d3">— Marlene Eugster-Huber · augen-blicke</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section class="section section-paper-2" id="leistungen">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Leistungen</p>
+      <h2>Rund um deinen Blick.</h2>
+      <p>Ob volle Wimpern, geschwungenes Lifting oder feines Permanent Make-up — jede Behandlung beginnt mit einem kurzen Gespräch und wird auf deine Augenform und deinen Typ abgestimmt.</p>
+    </div>
+
+    <div class="pricecols reveal">
+      <div class="pricegroup">
+        <h3>Wimpern &amp; Blick</h3>
+        <div class="priceitem">
+          <div><div class="pi-name">Wimpernverlängerung</div><div class="pi-desc">Feine Extensions, einzeln von Hand gesetzt, für einen offenen, wachen Blick. Von natürlich bis ausdrucksstark im 2D- und 3D-Volumen.</div></div>
+          <div class="pi-price">auf Anfrage</div>
+        </div>
+        <div class="priceitem">
+          <div><div class="pi-name">Auffüllen / Refill</div><div class="pi-desc">Damit deine Wimpern dauerhaft voll bleiben — alle paar Wochen sanft nachgesetzt und aufgefrischt.</div></div>
+          <div class="pi-price">auf Anfrage</div>
+        </div>
+        <div class="priceitem">
+          <div><div class="pi-name">Wimpern-Lifting &amp; Färben</div><div class="pi-desc">Deine eigenen Wimpern, geschwungen und getönt. Wach aussehen ganz ohne Extensions, über Wochen.</div></div>
+          <div class="pi-price">auf Anfrage</div>
+        </div>
+      </div>
+
+      <div class="pricegroup">
+        <h3>Permanent Make-up &amp; Haut</h3>
+        <div class="priceitem">
+          <div><div class="pi-name">Permanent Make-up</div><div class="pi-desc">Augenbrauen und Wimpernkranz, fein pigmentiert. Morgens fertig aufwachen, ganz ohne täglich nachzuziehen.</div></div>
+          <div class="pi-price">auf Anfrage</div>
+        </div>
+        <div class="priceitem">
+          <div><div class="pi-name">BioMicroneedling</div><div class="pi-desc">Sanfte Behandlung für ein feineres, gleichmässigeres Hautbild — besonders bei Pigmentflecken. Sichtbar schon nach wenigen Terminen.</div></div>
+          <div class="pi-price">auf Anfrage</div>
+        </div>
+        <div class="priceitem">
+          <div><div class="pi-name">Persönliche Beratung</div><div class="pi-desc">Wir schauen gemeinsam, was zu deinen Augen, deinem Typ und deinem Alltag passt — ehrlich und in Ruhe.</div></div>
+          <div class="pi-price">kostenlos</div>
+        </div>
+      </div>
+    </div>
+    <p class="menu-note reveal">Ausserdem im Studio: <strong style="color:var(--ink)">EMSculping</strong> und eine persönliche <strong style="color:var(--ink)">Nummerologie-Beratung</strong>. Dauer und Preise richten sich nach deiner Wunschbehandlung — melde dich einfach kurz unter <a href="tel:+41786664713" style="color:var(--gold-deep);font-weight:700;border-bottom:1px solid rgba(169,115,106,.35)">078&nbsp;666&nbsp;47&nbsp;13</a>, Marlene berät dich gern.</p>
+  </div>
+</section>
+
+<!-- WARUM / TECHNIK -->
+<section class="section section-noir" id="technik">
+  <div class="wrap diff-grid">
+    <div class="diff-body">
+      <p class="eyebrow on-dark reveal">Warum augen-blicke</p>
+      <h2 class="reveal d1">Natürlich schön, präzise gemacht.</h2>
+      <p class="reveal d1">Ein guter Blick sieht nicht gemacht aus — er sieht nach dir aus. Deshalb arbeitet Marlene Wimper für Wimper von Hand, mit hochwertigen Produkten und viel Sinn fürs Detail.</p>
+      <ul class="diff-list reveal d2">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="dt">Handarbeit &amp; Präzision</div><div class="ds">Jede Wimper einzeln gesetzt, abgestimmt auf deine Augenform — nichts von der Stange.</div></div>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="dt">Natürlicher Effekt</div><div class="ds">Von dezent bis ausdrucksstark, aber immer so, dass es zu dir und deinem Alltag passt.</div></div>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="dt">Instant Change</div><div class="ds">Du gehst raus und fühlst dich sofort frisch, gepflegt und bereit für den Tag.</div></div>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="dt">Zeit für dich</div><div class="ds">Kein Fliessband. Eine Behandlung, bei der du wirklich abschalten kannst.</div></div>
+        </li>
+      </ul>
+    </div>
+    <div class="diff-art reveal d1">
+      <div class="ph dark">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.6"/></svg>
+        <div class="ph-t">Foto: Wimpern-Detail</div>
+        <div class="ph-s">Ein Nahaufnahme- oder Vorher-Nachher-Bild zeigt sofort die Qualität der Arbeit.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEWERTUNGEN -->
+<section class="section section-paper" id="bewertungen">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="eyebrow" style="justify-content:center">Was Kundinnen sagen</p>
+      <h2>5,0 Sterne. Für jeden Blick.</h2>
+    </div>
+
+    <div class="ratingband reveal">
+      <div class="big">5,0<small>aus 11 Bewertungen</small></div>
+      <div class="bars">
+        <div class="barrow"><span>5 Sterne</span><span class="track"><span class="fill" style="width:100%"></span></span><span>11</span></div>
+        <div class="barrow"><span>4 Sterne</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
+        <div class="barrow"><span>3 Sterne</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
+        <div class="barrow"><span>2 Sterne</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
+        <div class="barrow"><span>1 Stern</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
+      </div>
+    </div>
+
+    <div class="revs">
+      <div class="rev reveal">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>„Danke Marlène für deine grossartige Arbeit.“</blockquote>
+        <div class="who"><span class="av">G</span><div><div class="nm">Google-Bewertung</div><div class="src">5,0 ★ bei Google</div></div></div>
+      </div>
+      <div class="rev reveal d1" style="border-style:dashed">
+        <div class="stars" aria-hidden="true" style="color:var(--gold-lt)">★★★★★</div>
+        <blockquote style="color:var(--ink-soft);font-style:italic">Hier kommt eine echte Stimme einer deiner Kundinnen hin — zum Beispiel aus Google oder Facebook. Wir setzen sie in der Live-Version mit Namen ein.</blockquote>
+        <div class="who"><span class="av" style="background:var(--paper-2);color:var(--ink-mute)">+</span><div><div class="nm">Platz für echte Bewertung</div><div class="src">von dir auswählbar</div></div></div>
+      </div>
+      <div class="rev stat reveal d2">
+        <div class="snum">11 × 5★</div>
+        <div class="stxt">Bewertungen bei Google mit der vollen Punktzahl — 5 von 5 Sternen.</div>
+        <div class="ssub">Dazu 4,7 ★ aus 18 Bewertungen bei Facebook</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-paper-2" id="faq">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="eyebrow" style="justify-content:center">Häufige Fragen</p>
+      <h2>Gut zu wissen.</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Was ist der Unterschied zwischen Wimpernverlängerung und Lifting?</summary>
+        <div class="ans">Bei der Wimpernverlängerung werden feine Extensions einzeln auf deine eigenen Wimpern gesetzt — für mehr Länge und Volumen. Beim Wimpern-Lifting werden deine eigenen Wimpern sanft geschwungen und getönt, ganz ohne Extensions. Marlene berät dich, was besser zu dir passt.</div>
+      </details>
+      <details>
+        <summary>Wie lange halten die Wimpern und muss ich auffüllen?</summary>
+        <div class="ans">Weil deine Naturwimpern nachwachsen, empfiehlt sich alle paar Wochen ein Auffüll-Termin (Refill), damit der Blick durchgehend voll bleibt. Wie oft genau, hängt von deinen eigenen Wimpern und deinem Alltag ab.</div>
+      </details>
+      <details>
+        <summary>Was ist Permanent Make-up und wie lange hält es?</summary>
+        <div class="ans">Beim Permanent Make-up werden Augenbrauen oder Wimpernkranz fein pigmentiert, sodass du morgens ohne Nachziehen fertig aussiehst. Das Ergebnis hält je nach Haut und Pflege einige Zeit und wird bei Bedarf aufgefrischt. Alle Details bespricht Marlene vorab persönlich mit dir.</div>
+      </details>
+      <details>
+        <summary>Wie bekomme ich einen Termin?</summary>
+        <div class="ans">Am einfachsten telefonisch unter <a href="tel:+41786664713">078&nbsp;666&nbsp;47&nbsp;13</a>, über das Terminformular weiter unten oder per Direktnachricht auf <a href="https://www.instagram.com/augenblicke_by_marlene" target="_blank" rel="noopener">Instagram</a>. Termine gibt es nach Vereinbarung.</div>
+      </details>
+      <details>
+        <summary>Was kostet eine Behandlung?</summary>
+        <div class="ans">Dauer und Preis richten sich nach deiner Wunschbehandlung. Melde dich einfach kurz — Marlene bespricht mit dir in Ruhe, was zu dir passt, und nennt dir den Preis transparent. Die persönliche Erstberatung ist kostenlos.</div>
+      </details>
+      <details>
+        <summary>Wo befindet sich das Studio?</summary>
+        <div class="ans">An der Mühlenstrasse 21 in 8580 Amriswil im Thurgau. Den genauen Standort findest du unten im Kontaktbereich.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- TERMIN / KONTAKT -->
+<section class="section section-noir" id="termin">
+  <div class="wrap book-grid">
+    <div>
+      <p class="eyebrow on-dark reveal">Termin &amp; Kontakt</p>
+      <h2 class="display reveal d1" style="font-size:clamp(34px,4.4vw,54px);color:var(--paper);margin:20px 0 30px">Vereinbaren wir deinen Termin.</h2>
+      <div class="reveal d1">
+        <div class="info-row"><div class="k">Adresse</div><div class="v">Mühlenstrasse 21<br>8580 Amriswil</div></div>
+        <div class="info-row"><div class="k">Telefon</div><div class="v"><a href="tel:+41786664713">078 666 47 13</a></div></div>
+        <div class="info-row"><div class="k">Instagram</div><div class="v"><a href="https://www.instagram.com/augenblicke_by_marlene" target="_blank" rel="noopener">@augenblicke_by_marlene</a></div></div>
+        <div class="info-row"><div class="k">Facebook</div><div class="v">augen-blicke by marlène</div></div>
+        <div class="info-row"><div class="k">Termine</div><div class="v">Nach Vereinbarung</div></div>
+        <div class="info-row"><div class="k">Anfahrt</div><div class="v"><a href="https://www.google.com/maps/search/?api=1&query=augen-blicke+by+marl%C3%A8ne+M%C3%BChlenstrasse+21+8580+Amriswil" target="_blank" rel="noopener">Auf Google Maps ansehen →</a></div></div>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <div class="book-card">
+        <h3>Online-Termin anfragen</h3>
+        <p>Behandlung, Tag und Uhrzeit wählen — Marlene bestätigt dir deinen Termin.</p>
+        <form id="bookform" novalidate>
+          <div class="field">
+            <label for="f-service">Behandlung</label>
+            <select id="f-service" name="service">
+              <option>Wimpernverlängerung (Neuset)</option>
+              <option>Auffüllen / Refill</option>
+              <option>Wimpern-Lifting &amp; Färben</option>
+              <option>Permanent Make-up</option>
+              <option>BioMicroneedling</option>
+              <option>Persönliche Beratung</option>
+              <option>Noch unsicher — bitte beraten</option>
+            </select>
+          </div>
+          <span class="cal-lbl">Tag wählen</span>
+          <div class="cal-wrap">
+            <div class="cal-head">
+              <button type="button" class="cal-nav" id="cal-prev" aria-label="Vorheriger Monat">‹</button>
+              <div class="cal-title" id="cal-title">Monat</div>
+              <button type="button" class="cal-nav" id="cal-next" aria-label="Nächster Monat">›</button>
+            </div>
+            <div class="cal-grid cal-dow" aria-hidden="true">
+              <span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span>
+            </div>
+            <div class="cal-grid" id="cal-days"></div>
+          </div>
+          <div class="slots-wrap" id="slots-wrap" hidden>
+            <div class="slots-head">
+              <span class="sl-lbl" id="slots-label">Freie Zeiten</span>
+              <span class="slot-legend"><span><i class="lg-free"></i>frei</span><span><i class="lg-booked"></i>belegt</span></span>
+            </div>
+            <div class="slots" id="slots"></div>
+          </div>
+          <p class="book-err" id="book-err">Bitte wähle im Kalender einen Tag und eine freie Uhrzeit.</p>
+          <input type="hidden" id="f-date" name="date">
+          <input type="hidden" id="f-time" name="time">
+          <div class="field-2">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Dein Name" required>
+            </div>
+            <div class="field">
+              <label for="f-contact">Telefon / Instagram</label>
+              <input type="text" id="f-contact" name="contact" placeholder="Wie erreicht dich Marlene?" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-msg">Nachricht (optional)</label>
+            <textarea id="f-msg" name="message" placeholder="Wünsche, Fragen …"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">Termin anfragen <span class="arw">→</span></button>
+          <p class="form-note">Vorschau — in der Live-Version wird deine Anfrage direkt an Marlene übermittelt und bestätigt.</p>
+        </form>
+        <div class="form-ok" id="formok">Danke! Deine Anfrage für <b id="ok-summary"></b> ist notiert. In der Live-Version wäre dein Termin damit angefragt und wird von Marlene bestätigt. (Dies ist eine Design-Vorschau.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div style="max-width:34ch">
+        <div class="foot-brand">
+          <svg class="emblem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 17c3.5-5 9-7.6 13-7.6S26.5 12 30 17c-3.5 5-9 7.6-13 7.6S7.5 22 4 17Z" fill="rgba(169,115,106,.12)" stroke="#C79B92" stroke-width="1.3"/>
+            <circle cx="17" cy="17" r="3.4" fill="rgba(169,115,106,.28)" stroke="#C79B92" stroke-width="1.3"/>
+            <path d="M17 9.4V6M24 11.2l1.9-2.6M10 11.2 8.1 8.6" stroke="#C79B92" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          <span class="bt">augen-blicke</span>
+        </div>
+        <p style="margin-top:14px">Wimpern &amp; Permanent Make-up in Amriswil. Wimpernverlängerung, Lifting, Permanent Make-up und BioMicroneedling — präzise Handarbeit rund um deinen Blick, von Marlene Eugster-Huber.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Studio</h4>
+        <a href="#studio">Über Marlene</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#technik">Warum augen-blicke</a>
+        <a href="#bewertungen">Bewertungen</a>
+      </div>
+      <div class="foot-col">
+        <h4>Direkt</h4>
+        <a href="tel:+41786664713">078 666 47 13</a>
+        <a href="https://www.instagram.com/augenblicke_by_marlene" target="_blank" rel="noopener">@augenblicke_by_marlene</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=augen-blicke+by+marl%C3%A8ne+M%C3%BChlenstrasse+21+8580+Amriswil" target="_blank" rel="noopener">Anfahrt &amp; Karte</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 augen-blicke by marlène · Mühlenstrasse 21, 8580 Amriswil</span>
+      <span>Design-Vorschau erstellt von <a href="https://evowebdesign.ch" target="_blank" rel="noopener">evowebdesign.ch</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BeautySalon",
+  "name":"augen-blicke by marlène",
+  "description":"Wimpern- und Permanent-Make-up-Studio in Amriswil. Wimpernverlängerung, Wimpern-Lifting, Permanent Make-up und BioMicroneedling — präzise Handarbeit rund um den Blick, von Marlene Eugster-Huber.",
+  "url":"https://evowebdesign.ch/augen-blicke-preview/",
+  "telephone":"+41786664713",
+  "priceRange":"$$",
+  "currenciesAccepted":"CHF",
+  "image":"https://evowebdesign.ch/augen-blicke-preview/",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Mühlenstrasse 21",
+    "postalCode":"8580",
+    "addressLocality":"Amriswil",
+    "addressRegion":"TG",
+    "addressCountry":"CH"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":47.5470,"longitude":9.3050},
+  "areaServed":["Amriswil","Romanshorn","Arbon","Bürglen","Sulgen","Bischofszell","Weinfelden","Bodensee"],
+  "sameAs":["https://www.instagram.com/augenblicke_by_marlene"],
+  "founder":{"@type":"Person","name":"Marlene Eugster-Huber","jobTitle":"Wimpern-Stylistin und Inhaberin"},
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Wimpernverlängerung"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Auffüllen / Refill"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Wimpern-Lifting & Färben"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Permanent Make-up"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"BioMicroneedling"}}
+  ],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"11","bestRating":"5"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Was ist der Unterschied zwischen Wimpernverlängerung und Wimpern-Lifting?","acceptedAnswer":{"@type":"Answer","text":"Bei der Wimpernverlängerung werden feine Extensions einzeln auf die eigenen Wimpern gesetzt, für mehr Länge und Volumen. Beim Wimpern-Lifting werden die eigenen Wimpern sanft geschwungen und getönt, ganz ohne Extensions."}},
+    {"@type":"Question","name":"Wie lange halten die Wimpern und muss ich auffüllen?","acceptedAnswer":{"@type":"Answer","text":"Weil die Naturwimpern nachwachsen, empfiehlt sich alle paar Wochen ein Auffüll-Termin (Refill), damit der Blick durchgehend voll bleibt. Wie oft, hängt von den eigenen Wimpern und dem Alltag ab."}},
+    {"@type":"Question","name":"Was ist Permanent Make-up und wie lange hält es?","acceptedAnswer":{"@type":"Answer","text":"Beim Permanent Make-up werden Augenbrauen oder Wimpernkranz fein pigmentiert, sodass man morgens ohne Nachziehen fertig aussieht. Das Ergebnis hält je nach Haut und Pflege einige Zeit und wird bei Bedarf aufgefrischt."}},
+    {"@type":"Question","name":"Wie bekomme ich einen Termin bei augen-blicke by marlène?","acceptedAnswer":{"@type":"Answer","text":"Telefonisch unter 078 666 47 13, über das Terminformular auf der Seite oder per Direktnachricht auf Instagram @augenblicke_by_marlene. Termine gibt es nach Vereinbarung."}},
+    {"@type":"Question","name":"Was kostet eine Behandlung?","acceptedAnswer":{"@type":"Answer","text":"Dauer und Preis richten sich nach der Wunschbehandlung und werden im Gespräch transparent besprochen. Die persönliche Erstberatung ist kostenlos."}},
+    {"@type":"Question","name":"Wo befindet sich das Studio?","acceptedAnswer":{"@type":"Answer","text":"An der Mühlenstrasse 21 in 8580 Amriswil im Thurgau."}}
+  ]
+}
+</script>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false);}));
+/* Online-Buchung: Kalenderansicht mit belegten Zeiten (Demo) */
+const fDate=document.getElementById('f-date'),fTime=document.getElementById('f-time');
+const calDays=document.getElementById('cal-days'),calTitle=document.getElementById('cal-title'),
+      calPrev=document.getElementById('cal-prev'),calNext=document.getElementById('cal-next'),
+      slotsWrap=document.getElementById('slots-wrap'),slotsEl=document.getElementById('slots'),
+      slotsLabel=document.getElementById('slots-label'),bookErr=document.getElementById('book-err');
+if(calDays){
+  const pad=n=>String(n).padStart(2,'0');
+  const MONTHS=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+  const today=new Date();today.setHours(0,0,0,0);
+  const view=new Date(today.getFullYear(),today.getMonth(),1);
+  let selDate=null;
+  const key=d=>d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate();
+  // seeded RNG -> "belegte" Slots sind pro Tag stabil (wirkt wie echte Buchungen)
+  const rng=s=>{s=s%2147483647;if(s<=0)s+=2147483646;return()=>{s=s*16807%2147483647;return(s-1)/2147483646;};};
+  function slotsFor(d){
+    const day=d.getDay();if(day===0)return[];
+    const open=9,close=day===6?14:19,r=rng(key(d)),arr=[];
+    for(let m=open*60;m<close*60;m+=45){arr.push({t:`${pad(Math.floor(m/60))}:${pad(m%60)}`,booked:r()<0.42});}
+    if(arr.filter(s=>!s.booked).length<2)arr.slice(0,2).forEach(s=>s.booked=false);
+    return arr;
+  }
+  function renderSlots(d){
+    const list=slotsFor(d);slotsEl.innerHTML='';fTime.value='';
+    list.forEach(s=>{
+      const b=document.createElement('button');
+      b.type='button';b.className='slot'+(s.booked?' is-booked':'');b.textContent=s.t;
+      if(s.booked){b.disabled=true;b.title='Belegt';}
+      else b.addEventListener('click',()=>{
+        fTime.value=s.t;bookErr.classList.remove('show');
+        slotsEl.querySelectorAll('.slot').forEach(x=>x.classList.remove('is-selected'));
+        b.classList.add('is-selected');
+      });
+      slotsEl.appendChild(b);
+    });
+    slotsLabel.textContent='Freie Zeiten am '+d.toLocaleDateString('de-CH',{weekday:'long',day:'numeric',month:'long'});
+    slotsWrap.hidden=false;
+  }
+  function render(){
+    calTitle.textContent=MONTHS[view.getMonth()]+' '+view.getFullYear();
+    calDays.innerHTML='';
+    const start=(new Date(view.getFullYear(),view.getMonth(),1).getDay()+6)%7; // Mo=0
+    const dim=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+    for(let i=0;i<start;i++){const e=document.createElement('div');e.className='cal-day is-empty';calDays.appendChild(e);}
+    for(let n=1;n<=dim;n++){
+      const d=new Date(view.getFullYear(),view.getMonth(),n),b=document.createElement('button');
+      b.type='button';b.textContent=n;
+      if(d<today||d.getDay()===0){b.className='cal-day is-off';b.disabled=true;if(d.getDay()===0)b.title='Sonntag geschlossen';}
+      else{b.className='cal-day is-free';b.addEventListener('click',()=>{selDate=d;fDate.value=`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;render();renderSlots(d);});}
+      if(selDate&&key(selDate)===key(d))b.classList.add('is-selected');
+      calDays.appendChild(b);
+    }
+    calPrev.disabled=(view.getFullYear()===today.getFullYear()&&view.getMonth()===today.getMonth());
+  }
+  calPrev.addEventListener('click',()=>{view.setMonth(view.getMonth()-1);render();});
+  calNext.addEventListener('click',()=>{view.setMonth(view.getMonth()+1);render();});
+  render();
+}
+const form=document.getElementById('bookform'),ok=document.getElementById('formok');
+if(form){form.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  if(!fDate.value||!fTime.value){bookErr.classList.add('show');slotsWrap.scrollIntoView({block:'center',behavior:'smooth'});return;}
+  if(!form.checkValidity()){form.reportValidity();return;}
+  const svc=(document.getElementById('f-service').value||'').split(' · ')[0];
+  const dv=new Date(fDate.value+'T00:00').toLocaleDateString('de-CH',{weekday:'long',day:'numeric',month:'long'});
+  const sum=document.getElementById('ok-summary');
+  if(sum)sum.textContent=`${svc} am ${dv}, ${fTime.value} Uhr`;
+  form.style.display='none';ok.style.display='block';
+});}
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+</script>
+</body>
+</html>
