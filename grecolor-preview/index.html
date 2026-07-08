@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grecolor — Autospritzwerk Frauenfeld | Autolackierung & Karosserie by Toni</title>
+<meta name="description" content="Grecolor Autospritzwerk in Frauenfeld — Autolackierung, Unfall- & Karosserieschaden, Felgenaufbereitung und Smart Repair. 5,0★ bei 41 Bewertungen. Makellose Arbeit von Toni. Jetzt Kostenvoranschlag anfragen.">
+<link rel="canonical" href="https://evowebdesign.ch/grecolor-preview/">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#08090B">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Grecolor — Autospritzwerk Frauenfeld">
+<meta property="og:description" content="Autolackierung, Karosserie & Smart Repair in Frauenfeld. 5,0★ bei 41 Bewertungen. Makellose Arbeit von Toni.">
+<meta property="og:locale" content="de_CH">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --black:#07080A;
+  --panel:#0D1015;
+  --panel-2:#12161D;
+  --line:rgba(255,255,255,.09);
+  --blue:#17A9E8;
+  --blue-bright:#5CD1FF;
+  --blue-deep:#0B7CB8;
+  --ink:#EAF2F7;
+  --muted:#8B97A5;
+  --muted-2:#5C6673;
+  --r:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:var(--ink);
+  font-family:'Hanken Grotesk',system-ui,sans-serif;
+  font-size:18px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{font-family:'Archivo',sans-serif;font-weight:900;line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+.ital{font-style:italic}
+.mono{font-family:'JetBrains Mono',monospace;font-weight:500;text-transform:uppercase;letter-spacing:.18em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.blue{color:var(--blue)}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+section{position:relative}
+
+/* ---------- Preview ribbon ---------- */
+.previewbar{
+  background:linear-gradient(90deg,var(--blue-deep),var(--blue));
+  color:#04222F;text-align:center;font-family:'JetBrains Mono',monospace;
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:8px 14px;
+}
+.previewbar a{text-decoration:underline;text-underline-offset:2px}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(7,8,10,.72);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Archivo';font-weight:900;font-style:italic;font-size:20px;letter-spacing:-.01em}
+.brand .dot{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+  background:radial-gradient(circle at 30% 25%,var(--blue-bright),var(--blue) 45%,var(--blue-deep));
+  box-shadow:0 0 20px rgba(23,169,232,.5);flex:none}
+.brand .dot svg{width:20px;height:20px}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:14px;font-weight:600}
+.nav ul a{color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--ink)}
+.cta{display:inline-flex;align-items:center;gap:9px;background:var(--blue);color:#03222F;
+  font-weight:700;padding:12px 20px;border-radius:100px;font-size:14px;
+  transition:transform .2s,box-shadow .2s;box-shadow:0 6px 24px -6px rgba(23,169,232,.6)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px -6px rgba(23,169,232,.8)}
+.cta svg{width:16px;height:16px}
+.nav .menutoggle{display:none}
+
+/* ---------- Hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;padding:60px 0 70px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;
+  background:
+   radial-gradient(1100px 600px at 78% 8%,rgba(23,169,232,.22),transparent 60%),
+   radial-gradient(700px 500px at 8% 100%,rgba(11,124,184,.16),transparent 60%);
+}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(900px 700px at 70% 30%,#000,transparent 75%);
+}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--blue);font-size:12.5px;margin-bottom:26px}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--blue)}
+.hero h1{font-size:clamp(48px,7.6vw,104px)}
+.hero h1 .line2{color:transparent;-webkit-text-stroke:1.4px var(--blue);text-stroke:1.4px var(--blue)}
+.hero p.lead{color:var(--muted);font-size:19px;max-width:44ch;margin:26px 0 34px}
+.herobtns{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn-ghost{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);
+  padding:13px 22px;border-radius:100px;font-weight:600;font-size:14px;color:var(--ink);transition:border-color .2s,background .2s}
+.btn-ghost:hover{border-color:var(--blue);background:rgba(23,169,232,.08)}
+.btn-lg{padding:16px 26px;font-size:15px}
+.ratingpill{display:inline-flex;align-items:center;gap:12px;margin-top:34px;
+  background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:100px;padding:9px 9px 9px 18px}
+.ratingpill .stars{color:var(--blue);letter-spacing:2px;font-size:15px}
+.ratingpill b{font-family:'Archivo';font-style:italic;font-size:19px}
+.ratingpill .g{background:var(--blue);color:#03222F;border-radius:100px;padding:5px 12px;font-size:12px;font-weight:700;font-family:'JetBrains Mono',monospace}
+
+/* hero visual */
+.herovis{position:relative}
+.herovis .frame{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 0 1px rgba(23,169,232,.1);
+  aspect-ratio:1290/1691}
+.herovis .frame img{width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(1.05)}
+.herovis .frame::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(7,8,10,.55) 100%),linear-gradient(90deg,rgba(7,8,10,.5),transparent 30%)}
+.sheen{position:absolute;top:0;left:-60%;width:55%;height:100%;z-index:3;
+  background:linear-gradient(105deg,transparent,rgba(255,255,255,.28),transparent);
+  transform:skewX(-18deg);animation:sweep 5.5s ease-in-out infinite;pointer-events:none}
+@keyframes sweep{0%,62%{left:-70%}82%,100%{left:130%}}
+.herovis .tag{position:absolute;left:16px;bottom:16px;z-index:4;
+  background:rgba(7,8,10,.72);backdrop-filter:blur(6px);border:1px solid var(--line);
+  border-radius:12px;padding:10px 14px}
+.herovis .tag .mono{font-size:10.5px;color:var(--blue)}
+.herovis .tag div:last-child{font-weight:700;font-size:14px}
+.herovis .badge{position:absolute;right:-14px;top:-14px;z-index:5;
+  width:96px;height:96px;border-radius:50%;display:grid;place-content:center;text-align:center;
+  background:conic-gradient(from 220deg,var(--blue),var(--blue-bright),var(--blue));
+  color:#03222F;font-family:'Archivo';font-style:italic;box-shadow:0 10px 30px -6px rgba(23,169,232,.7);
+  transform:rotate(-8deg)}
+.herovis .badge b{font-size:26px;line-height:1}
+.herovis .badge span{font-size:9px;font-family:'JetBrains Mono',monospace;font-weight:700;letter-spacing:.1em}
+
+/* ---------- Marquee ---------- */
+.marquee{border-block:1px solid var(--line);background:var(--panel);overflow:hidden;padding:16px 0}
+.marquee .track{display:flex;gap:52px;white-space:nowrap;width:max-content;animation:scroll 26s linear infinite}
+.marquee span{font-family:'Archivo';font-weight:800;font-style:italic;font-size:20px;color:var(--muted-2);
+  display:inline-flex;align-items:center;gap:52px;text-transform:uppercase;letter-spacing:.02em}
+.marquee span::after{content:"◆";color:var(--blue);font-size:11px;font-style:normal}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- Section shell ---------- */
+.sec{padding:110px 0}
+.sec-head{max-width:640px;margin-bottom:56px}
+.sec-head .mono{color:var(--blue);font-size:12px;display:block;margin-bottom:16px}
+.sec-head h2{font-size:clamp(34px,4.6vw,58px)}
+.sec-head p{color:var(--muted);margin-top:18px;font-size:18px}
+
+/* ---------- Leistungen ---------- */
+.grid-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.serv{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:30px 26px 34px;overflow:hidden;transition:transform .25s,border-color .25s,background .25s}
+.serv:hover{transform:translateY(-6px);border-color:rgba(23,169,232,.5);background:var(--panel-2)}
+.serv::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--blue);transition:width .35s}
+.serv:hover::before{width:100%}
+.serv .num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted-2);font-weight:700}
+.serv .ic{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;margin:20px 0 20px;
+  background:rgba(23,169,232,.1);border:1px solid rgba(23,169,232,.25);color:var(--blue)}
+.serv .ic svg{width:26px;height:26px}
+.serv h3{font-size:21px;text-transform:none;letter-spacing:-.01em;font-weight:800}
+.serv p{color:var(--muted);font-size:15.5px;margin-top:10px}
+
+/* ---------- Split / Qualität ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split .photo{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 40px 80px -34px rgba(0,0,0,.9)}
+.split .photo img{width:100%;aspect-ratio:4/4.6;object-fit:cover}
+.split .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,transparent 55%,rgba(23,169,232,.14))}
+.checklist{list-style:none;margin-top:30px;display:grid;gap:16px}
+.checklist li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px}
+.checklist svg{width:22px;height:22px;color:var(--blue);flex:none;margin-top:2px}
+.checklist b{font-weight:700}
+.checklist span{color:var(--muted)}
+
+/* ---------- Before/After ---------- */
+.ba-wrap{position:relative;max-width:940px;margin:0 auto;border-radius:20px;overflow:hidden;
+  border:1px solid var(--line);aspect-ratio:16/9;user-select:none;touch-action:none;
+  background:
+    repeating-linear-gradient(45deg,#0c1319 0 22px,#0e161d 22px 44px)}
+.ba-side{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:8px}
+.ba-after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba-before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0);
+  background:repeating-linear-gradient(45deg,#141a20 0 22px,#171f27 22px 44px)}
+.ba-side .lbl{font-family:'Archivo';font-style:italic;font-weight:900;font-size:44px;color:rgba(255,255,255,.14)}
+.ba-side .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--muted-2)}
+.ba-after .lbl{color:rgba(23,169,232,.3)}
+.ba-note{position:absolute;left:14px;bottom:12px;z-index:6;font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.08em;color:var(--muted-2);background:rgba(7,8,10,.6);padding:5px 9px;border-radius:7px}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:var(--blue);z-index:5;
+  box-shadow:0 0 22px rgba(23,169,232,.8);cursor:ew-resize;transform:translateX(-50%)}
+.ba-handle::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:46px;height:46px;border-radius:50%;background:var(--blue);color:#03222F;
+  box-shadow:0 6px 20px rgba(0,0,0,.5)}
+.ba-handle .ar{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  color:#03222F;font-size:16px;font-weight:900;letter-spacing:-2px}
+
+/* ---------- Rating band ---------- */
+.rband{display:grid;grid-template-columns:auto 1fr;gap:46px;align-items:center;
+  background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:40px}
+.rband .big{text-align:center}
+.rband .big .n{font-family:'Archivo';font-style:italic;font-weight:900;font-size:72px;line-height:.9;color:var(--blue)}
+.rband .big .stars{color:var(--blue);letter-spacing:3px;font-size:18px}
+.rband .big .c{color:var(--muted);font-size:13px;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.bars{display:grid;gap:9px}
+.bar{display:grid;grid-template-columns:52px 1fr 42px;gap:12px;align-items:center;font-size:13px;color:var(--muted)}
+.bar .t{height:8px;border-radius:100px;background:rgba(255,255,255,.06);overflow:hidden}
+.bar .t i{display:block;height:100%;background:linear-gradient(90deg,var(--blue-deep),var(--blue));border-radius:100px}
+
+/* ---------- Testimonials ---------- */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.tcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:16px}
+.tcard .stars{color:var(--blue);letter-spacing:1px;font-size:14px}
+.tcard p{font-size:16px;color:#D3DCE4}
+.tcard .who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.tcard .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-deep));
+  display:grid;place-items:center;font-family:'Archivo';font-weight:900;color:#03222F;font-size:16px}
+.tcard .who b{font-weight:700;font-size:14.5px}
+.tcard .who span{color:var(--muted-2);font-size:12px;font-family:'JetBrains Mono',monospace}
+
+/* ---------- Über Toni ---------- */
+.toni{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:60px;position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1.35fr .65fr;gap:48px;align-items:center}
+.toni::before{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;
+  background:radial-gradient(circle,rgba(23,169,232,.16),transparent 70%)}
+.toni .mono{color:var(--blue);font-size:12px}
+.toni h2{font-size:clamp(30px,4vw,50px);margin:16px 0 22px;max-width:16ch}
+.toni p{color:var(--muted);max-width:60ch;font-size:17.5px}
+.toni .logobox{position:relative;z-index:2;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  background:#000;box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
+.toni .logobox img{width:100%;display:block}
+@media(max-width:900px){.toni .logobox{max-width:340px;margin:0 auto}}
+.toni p + p{margin-top:16px}
+.toni .sign{margin-top:30px;font-family:'Archivo';font-style:italic;font-weight:900;font-size:26px}
+.toni .sign span{color:var(--blue)}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:840px;margin:0 auto}
+.qa{border-bottom:1px solid var(--line)}
+.qa button{width:100%;background:none;border:none;color:var(--ink);cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:26px 4px;text-align:left;font-family:'Hanken Grotesk';font-size:19px;font-weight:600}
+.qa .ico{flex:none;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);display:grid;place-items:center;
+  color:var(--blue);font-size:20px;transition:transform .3s,background .3s}
+.qa.open .ico{transform:rotate(45deg);background:rgba(23,169,232,.12)}
+.qa .ans{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.qa .ans p{color:var(--muted);padding:0 4px 26px;font-size:16.5px}
+
+/* ---------- Kontakt ---------- */
+.contact{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+.cinfo{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:42px}
+.cinfo h2{font-size:clamp(30px,4vw,46px)}
+.crow{display:flex;gap:16px;align-items:flex-start;margin-top:26px}
+.crow .ic{width:46px;height:46px;border-radius:12px;flex:none;display:grid;place-items:center;
+  background:rgba(23,169,232,.1);border:1px solid rgba(23,169,232,.25);color:var(--blue)}
+.crow .ic svg{width:22px;height:22px}
+.crow .mono{font-size:11px;color:var(--muted-2);display:block;margin-bottom:3px}
+.crow a,.crow div>span:last-child{font-size:17px;font-weight:600}
+.phonebig{font-family:'Archivo';font-style:italic;font-weight:900;font-size:26px !important;color:var(--blue)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:42px}
+.field{margin-bottom:18px}
+.field label{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.field input,.field textarea,.field select{width:100%;background:var(--black);border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;color:var(--ink);font-family:inherit;font-size:16px;transition:border-color .2s}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--blue)}
+.field textarea{min-height:120px;resize:vertical}
+form button{width:100%;background:var(--blue);color:#03222F;border:none;border-radius:100px;
+  padding:16px;font-family:'Hanken Grotesk';font-weight:700;font-size:16px;cursor:pointer;transition:transform .2s}
+form button:hover{transform:translateY(-2px)}
+.formnote{margin-top:14px;color:var(--muted-2);font-size:12.5px;text-align:center;font-family:'JetBrains Mono',monospace}
+.thanks{display:none;text-align:center;padding:20px 0}
+.thanks.show{display:block}
+.thanks .ok{width:60px;height:60px;border-radius:50%;background:rgba(23,169,232,.12);color:var(--blue);
+  display:grid;place-items:center;margin:0 auto 18px}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--line);background:var(--panel);padding:64px 0 30px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.fbrand{display:flex;align-items:center;gap:12px;font-family:'Archivo';font-weight:900;font-style:italic;font-size:22px;margin-bottom:16px}
+.fbrand .dot{width:36px;height:36px;border-radius:9px;flex:none;display:grid;place-items:center;
+  background:radial-gradient(circle at 30% 25%,var(--blue-bright),var(--blue) 45%,var(--blue-deep))}
+.fbrand .dot svg{width:21px;height:21px}
+footer p{color:var(--muted);font-size:15px;max-width:34ch}
+.fcol h4{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--muted-2);text-transform:uppercase;margin-bottom:18px}
+.fcol a,.fcol span{display:block;color:var(--muted);font-size:15px;margin-bottom:11px;transition:color .2s}
+.fcol a:hover{color:var(--blue)}
+.fbot{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  color:var(--muted-2);font-size:13px}
+.fbot .credit a{color:var(--blue);font-weight:600}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  body{font-size:16px}
+  .nav ul,.nav .cta{display:none}
+  .nav .menutoggle{display:grid}
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .herovis{order:-1;max-width:420px}
+  .grid-serv{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr;gap:34px}
+  .split .photo{order:-1}
+  .rband{grid-template-columns:1fr;gap:28px}
+  .tgrid{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr;gap:30px}
+  .toni{padding:40px 28px}
+  .sec{padding:80px 0}
+}
+@media(max-width:560px){
+  .grid-serv{grid-template-columns:1fr}
+  .ratingpill{flex-wrap:wrap}
+  .herovis .badge{width:78px;height:78px}
+}
+.menutoggle{background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;color:var(--ink);place-items:center}
+#mobnav{display:none;position:fixed;inset:0;z-index:70;background:rgba(7,8,10,.97);backdrop-filter:blur(10px);
+  flex-direction:column;align-items:center;justify-content:center;gap:26px}
+#mobnav.show{display:flex}
+#mobnav a{font-family:'Archivo';font-style:italic;font-weight:800;font-size:30px;text-transform:uppercase}
+#mobnav .close{position:absolute;top:24px;right:24px;font-size:34px;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="previewbar">
+  ⚡ Unverbindliche Design-Vorschau für Grecolor — erstellt von <a href="https://evowebdesign.ch">evowebdesign.ch</a>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#04222F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l3 3-7 7-3-3z"/><path d="M17 7l2-2-3-3-2 2"/><path d="M7 11l-4 8 8-4"/></svg></span>
+      GRECOLOR
+    </a>
+    <ul>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#qualitaet">Qualität</a></li>
+      <li><a href="#bewertungen">Bewertungen</a></li>
+      <li><a href="#toni">Über Toni</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a href="tel:+41783038992" class="cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#03222F" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      078 303 89 92
+    </a>
+    <button class="menutoggle" aria-label="Menü" onclick="document.getElementById('mobnav').classList.add('show')">
+      <svg viewBox="0 0 24 24" width="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav id="mobnav">
+  <a href="#" class="close" onclick="document.getElementById('mobnav').classList.remove('show');return false;">✕</a>
+  <a href="#leistungen" onclick="closeMob()">Leistungen</a>
+  <a href="#qualitaet" onclick="closeMob()">Qualität</a>
+  <a href="#bewertungen" onclick="closeMob()">Bewertungen</a>
+  <a href="#toni" onclick="closeMob()">Über Toni</a>
+  <a href="#kontakt" onclick="closeMob()">Kontakt</a>
+  <a href="tel:+41783038992" class="blue" onclick="closeMob()">078 303 89 92</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow mono">Autospritzwerk · Frauenfeld</span>
+      <h1>Makellos<br>lackiert.<br><span class="line2 ital">Wie ab Werk.</span></h1>
+      <p class="lead">Autolackierung, Karosserie- und Unfallschaden, Felgen und Smart Repair — bei Grecolor sieht man vom Schaden am Ende nichts mehr. Präzise Farbanpassung, saubere Arbeit, fairer Preis.</p>
+      <div class="herobtns">
+        <a href="#kontakt" class="cta btn-lg">Kostenvoranschlag anfragen
+          <svg viewBox="0 0 24 24" fill="none" stroke="#03222F" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:+41783038992" class="btn-ghost btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Direkt anrufen</a>
+      </div>
+      <div class="ratingpill">
+        <span class="stars">★★★★★</span>
+        <b>5,0</b>
+        <span class="g">41 BEWERTUNGEN</span>
+      </div>
+    </div>
+
+    <div class="herovis reveal">
+      <div class="frame">
+        <div class="sheen"></div>
+        <img src="img/bmw.jpg" alt="Fahrzeug in der Lackierkabine bei Grecolor in Frauenfeld" width="1290" height="1691">
+        <div class="tag">
+          <div class="mono">In der Kabine</div>
+          <div>Frisch lackiert &amp; poliert</div>
+        </div>
+      </div>
+      <div class="badge"><div><b>5,0</b><br><span>★ GOOGLE</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Autolackierung</span><span>Unfallschaden</span><span>Karosserie</span><span>Felgenaufbereitung</span><span>Smart Repair</span><span>Politur</span>
+    <span>Autolackierung</span><span>Unfallschaden</span><span>Karosserie</span><span>Felgenaufbereitung</span><span>Smart Repair</span><span>Politur</span>
+  </div>
+</div>
+
+<!-- ================= LEISTUNGEN ================= -->
+<section class="sec" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="mono">01 — Leistungen</span>
+      <h2>Alles rund um<br>Lack &amp; Karosserie</h2>
+      <p>Von der einzelnen Schramme bis zur kompletten Neulackierung — bei Grecolor kommt Ihr Fahrzeug wieder makellos raus.</p>
+    </div>
+    <div class="grid-serv">
+      <div class="serv reveal">
+        <span class="num">/ 01</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-3 6-6 3 3-6 6z"/><path d="M14 7l3-3 3 3-3 3z"/><path d="M6 18l-1 1"/></svg></div>
+        <h3>Autolackierung</h3>
+        <p>Teil- und Ganzlackierung mit exakter Farbanpassung an den Originalton. Kein Farbunterschied, kein Übergang.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 02</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 6.7 3"/><path d="M21 3v6h-6"/><path d="M12 8v4l3 2"/></svg></div>
+        <h3>Unfall- &amp; Karosserieschaden</h3>
+        <p>Beulen, Dellen und Unfallschäden werden fachgerecht instand gesetzt — inklusive Austausch beschädigter Teile.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 03</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Felgenaufbereitung</h3>
+        <p>Randstein-Kratzer und tiefe Schäden an den Felgen verschwinden restlos — als wären sie neu ab Werk.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 04</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.5L21 11l-6.6 2.5L12 20l-2.4-6.5L3 11l6.6-2.5z"/></svg></div>
+        <h3>Smart Repair</h3>
+        <p>Kleine Kratzer, Steinschläge und Parkschäden schnell und günstig beheben — ohne das ganze Teil neu zu lackieren.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 05</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8"/><path d="M2 16h20"/><path d="M8 6V4h8v2"/></svg></div>
+        <h3>Teile &amp; Türen ersetzen</h3>
+        <p>Beschädigte Türen oder Anbauteile werden ersetzt, eingepasst und perfekt in Wagenfarbe lackiert.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 06</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 2"/><path d="M16 4l1.5 1.5"/></svg></div>
+        <h3>Politur &amp; Aufbereitung</h3>
+        <p>Matter Lack, Swirls und Gebrauchsspuren raus — für Hochglanz, der wieder wie beim ersten Tag strahlt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUALITÄT / SPLIT ================= -->
+<section class="sec" id="qualitaet" style="padding-top:0">
+  <div class="wrap split">
+    <div class="photo reveal">
+      <img src="img/bmw.jpg" alt="Perfekt lackiertes Fahrzeug bei Grecolor Frauenfeld" width="1290" height="1691">
+    </div>
+    <div class="reveal">
+      <span class="mono blue" style="font-size:12px">02 — Der Unterschied</span>
+      <h2 style="font-size:clamp(30px,4.2vw,52px);margin:16px 0 20px">Man sieht<br>vom Schaden<br><span class="blue ital">nichts mehr.</span></h2>
+      <p style="color:var(--muted);font-size:17.5px">Der Anspruch bei Grecolor ist einfach: nach der Arbeit soll niemand erkennen, dass am Fahrzeug je etwas war. Kein Farbschimmer, keine Kante, kein Nebel.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Exakte Farbanpassung.</b> <span>Der Farbton wird präzise auf Ihr Fahrzeug abgemischt — auch bei Metallic und Perleffekt.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Saubere, schnelle Abwicklung.</b> <span>Unkompliziert, transparent und ohne böse Überraschungen — das bestätigen 41 Bewertungen.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Fairer Preis.</b> <span>Ehrliche Kostenvoranschläge und ein Preis-Leistungs-Verhältnis, das die Kundschaft immer wieder erwähnt.</span></div></li>
+      </ul>
+      <a href="#kontakt" class="cta btn-lg" style="margin-top:30px">Fahrzeug bewerten lassen
+        <svg viewBox="0 0 24 24" fill="none" stroke="#03222F" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEFORE / AFTER ================= -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-inline:auto">
+      <span class="mono">03 — Vorher / Nachher</span>
+      <h2>Ziehen Sie den Regler</h2>
+      <p style="margin-inline:auto">So könnte Grecolor die eigenen Arbeiten zeigen — Schieberegler zwischen Schaden und Ergebnis.</p>
+    </div>
+    <div class="ba-wrap reveal" id="ba">
+      <div class="ba-side ba-before">
+        <div class="lbl">VORHER</div>
+        <div class="tag">Schaden / Kratzer</div>
+      </div>
+      <div class="ba-side ba-after">
+        <div class="lbl">NACHHER</div>
+        <div class="tag">Makellos lackiert</div>
+      </div>
+      <div class="ba-note">Platzhalter — echte Vorher/Nachher-Fotos von Grecolor einsetzen</div>
+      <div class="ba-handle" id="baHandle"><span class="ar">‹›</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEWERTUNGEN ================= -->
+<section class="sec" id="bewertungen" style="background:linear-gradient(180deg,transparent,rgba(23,169,232,.03),transparent)">
+  <div class="wrap">
+    <div class="rband reveal">
+      <div class="big">
+        <div class="n">5,0</div>
+        <div class="stars">★★★★★</div>
+        <div class="c">41 GOOGLE-BEWERTUNGEN</div>
+      </div>
+      <div class="bars">
+        <div class="bar"><span>5 ★</span><div class="t"><i style="width:100%"></i></div><span>100%</span></div>
+        <div class="bar"><span>4 ★</span><div class="t"><i style="width:0"></i></div><span>0%</span></div>
+        <div class="bar"><span>3 ★</span><div class="t"><i style="width:0"></i></div><span>0%</span></div>
+        <div class="bar"><span>2 ★</span><div class="t"><i style="width:0"></i></div><span>0%</span></div>
+        <div class="bar"><span>1 ★</span><div class="t"><i style="width:0"></i></div><span>0%</span></div>
+      </div>
+    </div>
+
+    <div class="tgrid">
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p>„Empfehlenswert. Der Schaden wurde perfekt behoben, man sieht absolut nichts mehr — wie neu! Super freundlicher Kontakt, schnelle Arbeit und fairer Preis. Würde ich jederzeit wieder hingehen!“</p>
+        <div class="who"><span class="av">O</span><div><b>Oriana Guedes</b><br><span>Google · vor 2 Monaten</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p>„Rundum zufrieden! Die Seitentüre meines Autos wurde fachgerecht ersetzt, eingesetzt und perfekt lackiert. Alles lief völlig unkompliziert und reibungslos ab.“</p>
+        <div class="who"><span class="av">J</span><div><b>Joel Odermatt</b><br><span>Google · vor 3 Monaten</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p>„Perfekte Arbeit! Zwei Felgen waren durch einen Randstein richtig zerkratzt. Sogar die tiefen Kratzer waren einfach ‚ausradiert‘ — als wären die Felgen neu. Preis-Leistung unschlagbar.“</p>
+        <div class="who"><span class="av">D</span><div><b>Danara Eskandari</b><br><span>Google · vor 2 Monaten</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÜBER TONI ================= -->
+<section class="sec" id="toni" style="padding-top:0">
+  <div class="wrap">
+    <div class="toni reveal">
+      <div>
+        <span class="mono">04 — Über Grecolor</span>
+        <h2>Ein Autospritzwerk mit einer klaren Handschrift.</h2>
+        <p>Grecolor ist das Autospritzwerk von Toni in Frauenfeld. Ein junger Betrieb, der von Anfang an auf eine Sache setzt: Arbeit, die man nicht sieht — weil sie perfekt ist. Vom leichten Kratzer bis zum Unfallschaden wird jedes Fahrzeug so behandelt, als wäre es das eigene.</p>
+        <p>Dass dieser Anspruch ankommt, zeigen 41 Bewertungen mit glatten fünf Sternen. Ehrliche Beratung, faire Preise und ein Ergebnis, das überzeugt — an der Zürcherstrasse 373 in Frauenfeld.</p>
+        <div class="sign">— Toni, <span>Grecolor</span></div>
+      </div>
+      <div class="logobox">
+        <img src="img/logo.jpg" alt="Grecolor Logo — Autospritzwerk Frauenfeld by Toni" width="900" height="900">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-inline:auto">
+      <span class="mono">05 — Häufige Fragen</span>
+      <h2>Gut zu wissen</h2>
+    </div>
+    <div class="faq">
+      <div class="qa reveal"><button>Kostet ein Kostenvoranschlag etwas?<span class="ico">+</span></button><div class="ans"><p>Nein. Fahren Sie mit Ihrem Fahrzeug vorbei oder rufen Sie an — Sie erhalten einen unverbindlichen Kostenvoranschlag, bevor irgendetwas gemacht wird.</p></div></div>
+      <div class="qa reveal"><button>Wickelt Grecolor auch Versicherungs- und Unfallschäden ab?<span class="ico">+</span></button><div class="ans"><p>Ja. Unfall- und Karosserieschäden werden fachgerecht instand gesetzt. Sprechen Sie uns direkt auf Ihren Fall an, dann klären wir das gemeinsam.</p></div></div>
+      <div class="qa reveal"><button>Muss immer das ganze Teil neu lackiert werden?<span class="ico">+</span></button><div class="ans"><p>Nicht unbedingt. Bei kleinen Kratzern, Steinschlägen oder Parkschäden ist oft ein günstiges Smart Repair möglich — schneller und preiswerter als eine komplette Lackierung.</p></div></div>
+      <div class="qa reveal"><button>Wie sind die Öffnungszeiten?<span class="ico">+</span></button><div class="ans"><p>Termine nach Vereinbarung. Am besten kurz anrufen unter 078 303 89 92 oder eine Anfrage über das Formular senden — dann finden wir einen passenden Termin.</p></div></div>
+      <div class="qa reveal"><button>Wo befindet sich Grecolor?<span class="ico">+</span></button><div class="ans"><p>An der Zürcherstrasse 373 in 8500 Frauenfeld — gut erreichbar und mit Parkmöglichkeit direkt vor Ort.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<section class="sec" id="kontakt" style="padding-top:0">
+  <div class="wrap contact">
+    <div class="cinfo reveal">
+      <span class="mono blue" style="font-size:12px">06 — Kontakt</span>
+      <h2 style="margin-top:14px">Ihr Fahrzeug<br>verdient das<br><span class="blue ital">beste Ergebnis.</span></h2>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><span class="mono">Telefon</span><a href="tel:+41783038992" class="phonebig">078 303 89 92</a></div>
+      </div>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+        <div><span class="mono">E-Mail</span><a href="mailto:info@grecolor.ch">info@grecolor.ch</a></div>
+      </div>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><span class="mono">Adresse</span><span>Zürcherstrasse 373, 8500 Frauenfeld</span></div>
+      </div>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div><span class="mono">Zeiten</span><span>Termine nach Vereinbarung</span></div>
+      </div>
+    </div>
+
+    <form onsubmit="return sendForm(event)">
+      <div id="formfields">
+        <div class="field"><label>Name</label><input type="text" name="name" required placeholder="Ihr Name"></div>
+        <div class="field"><label>Telefon oder E-Mail</label><input type="text" name="kontakt" required placeholder="Damit Toni sich melden kann"></div>
+        <div class="field"><label>Was braucht Ihr Fahrzeug?</label>
+          <select name="leistung">
+            <option>Autolackierung</option>
+            <option>Unfall- / Karosserieschaden</option>
+            <option>Felgenaufbereitung</option>
+            <option>Smart Repair (Kratzer / Steinschlag)</option>
+            <option>Teil / Türe ersetzen</option>
+            <option>Politur / Aufbereitung</option>
+            <option>Etwas anderes</option>
+          </select>
+        </div>
+        <div class="field"><label>Kurz beschreiben</label><textarea name="msg" placeholder="Fahrzeug, Schaden, Wunschtermin …"></textarea></div>
+        <button type="submit">Anfrage senden</button>
+        <div class="formnote">Vorschau-Formular · in der Live-Version landet die Anfrage direkt bei Toni</div>
+      </div>
+      <div class="thanks" id="thanks">
+        <div class="ok"><svg viewBox="0 0 24 24" width="28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3 style="text-transform:none;font-size:24px">Danke — Anfrage notiert!</h3>
+        <p style="color:var(--muted);margin-top:10px">In der fertigen Version bekommt Toni Ihre Anfrage sofort. Für die Vorschau ist hier Schluss.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#04222F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l3 3-7 7-3-3z"/><path d="M17 7l2-2-3-3-2 2"/><path d="M7 11l-4 8 8-4"/></svg></span>
+          GRECOLOR
+        </div>
+        <p>Autospritzwerk Frauenfeld — Autolackierung, Karosserie &amp; Smart Repair by Toni. Makellose Arbeit, fairer Preis.</p>
+      </div>
+      <div class="fcol">
+        <h4>Leistungen</h4>
+        <a href="#leistungen">Autolackierung</a>
+        <a href="#leistungen">Unfall &amp; Karosserie</a>
+        <a href="#leistungen">Felgenaufbereitung</a>
+        <a href="#leistungen">Smart Repair</a>
+      </div>
+      <div class="fcol">
+        <h4>Kontakt</h4>
+        <a href="tel:+41783038992">078 303 89 92</a>
+        <a href="mailto:info@grecolor.ch">info@grecolor.ch</a>
+        <span>Zürcherstrasse 373</span>
+        <span>8500 Frauenfeld</span>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Grecolor · Autospritzwerk Frauenfeld</span>
+      <span class="credit">Design-Vorschau erstellt von <a href="https://evowebdesign.ch">evowebdesign.ch</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function closeMob(){document.getElementById('mobnav').classList.remove('show');}
+function sendForm(e){e.preventDefault();document.getElementById('formfields').style.display='none';document.getElementById('thanks').classList.add('show');return false;}
+
+/* FAQ */
+document.querySelectorAll('.qa button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const qa=b.parentElement,ans=qa.querySelector('.ans'),open=qa.classList.contains('open');
+    document.querySelectorAll('.qa').forEach(x=>{x.classList.remove('open');x.querySelector('.ans').style.maxHeight=null;});
+    if(!open){qa.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+  });
+});
+
+/* Reveal on scroll */
+const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* Before/After slider */
+(function(){
+  const wrap=document.getElementById('ba'),handle=document.getElementById('baHandle');
+  if(!wrap)return;let drag=false;
+  function set(x){const r=wrap.getBoundingClientRect();let p=(x-r.left)/r.width*100;p=Math.max(2,Math.min(98,p));wrap.style.setProperty('--pos',p+'%');}
+  const down=()=>drag=true,up=()=>drag=false;
+  handle.addEventListener('mousedown',down);window.addEventListener('mouseup',up);
+  window.addEventListener('mousemove',e=>{if(drag)set(e.clientX);});
+  handle.addEventListener('touchstart',down,{passive:true});window.addEventListener('touchend',up);
+  window.addEventListener('touchmove',e=>{if(drag)set(e.touches[0].clientX);},{passive:true});
+  wrap.addEventListener('click',e=>{if(e.target!==handle&&!handle.contains(e.target))set(e.clientX);});
+  wrap.style.setProperty('--pos','50%');
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoBodyShop",
+  "name":"Grecolor — Autospritzwerk Frauenfeld",
+  "description":"Autospritzwerk in Frauenfeld für Autolackierung, Unfall- und Karosserieschaden, Felgenaufbereitung und Smart Repair.",
+  "image":"https://evowebdesign.ch/grecolor-preview/img/bmw.jpg",
+  "url":"https://evowebdesign.ch/grecolor-preview/",
+  "telephone":"+41783038992",
+  "email":"info@grecolor.ch",
+  "founder":{"@type":"Person","name":"Toni"},
+  "priceRange":"$$",
+  "address":{"@type":"PostalAddress","streetAddress":"Zürcherstrasse 373","postalCode":"8500","addressLocality":"Frauenfeld","addressRegion":"TG","addressCountry":"CH"},
+  "geo":{"@type":"GeoCoordinates","latitude":47.570268,"longitude":8.9193405},
+  "areaServed":{"@type":"City","name":"Frauenfeld"},
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"41","bestRating":"5"},
+  "review":[
+    {"@type":"Review","author":{"@type":"Person","name":"Oriana Guedes"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Der Schaden wurde perfekt behoben, man sieht absolut nichts mehr wie neu. Schnelle Arbeit und fairer Preis."},
+    {"@type":"Review","author":{"@type":"Person","name":"Joel Odermatt"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Die Seitentüre wurde fachgerecht ersetzt und perfekt lackiert. Alles unkompliziert und reibungslos."},
+    {"@type":"Review","author":{"@type":"Person","name":"Danara Eskandari"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Zwei zerkratzte Felgen waren wie neu. Preis-Leistung unschlagbar."}
+  ],
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Autolackierung"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Unfall- und Karosserieschaden"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Felgenaufbereitung"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Smart Repair"}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Kostet ein Kostenvoranschlag etwas?","acceptedAnswer":{"@type":"Answer","text":"Nein. Sie erhalten einen unverbindlichen Kostenvoranschlag, bevor etwas gemacht wird."}},
+    {"@type":"Question","name":"Wickelt Grecolor auch Versicherungs- und Unfallschäden ab?","acceptedAnswer":{"@type":"Answer","text":"Ja, Unfall- und Karosserieschäden werden fachgerecht instand gesetzt."}},
+    {"@type":"Question","name":"Muss immer das ganze Teil neu lackiert werden?","acceptedAnswer":{"@type":"Answer","text":"Nicht unbedingt. Bei kleinen Schäden ist oft ein günstiges Smart Repair möglich."}},
+    {"@type":"Question","name":"Wie sind die Öffnungszeiten?","acceptedAnswer":{"@type":"Answer","text":"Termine nach Vereinbarung, am besten telefonisch unter 078 303 89 92."}},
+    {"@type":"Question","name":"Wo befindet sich Grecolor?","acceptedAnswer":{"@type":"Answer","text":"An der Zürcherstrasse 373 in 8500 Frauenfeld."}}
+  ]
+}
+</script>
+</body>
+</html>
