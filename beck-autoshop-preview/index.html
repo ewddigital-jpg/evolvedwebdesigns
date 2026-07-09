@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beck Auto-Shop &amp; Garage — Autowerkstatt Matzingen | Roger Beck seit 1998</title>
+<meta name="description" content="Beck Auto-Shop &amp; Garage in Matzingen bei Frauenfeld. Reparatur, Karosserie, Reifen, Autoradio-Einbau und Scheibentönung. 5,0★ bei 33 Bewertungen. Bei Roger ist Ihr Auto in guten Händen. Jetzt Termin anfragen.">
+<link rel="canonical" href="https://evowebdesign.ch/beck-autoshop-preview/">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#1A1C20">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Beck Auto-Shop & Garage — Autowerkstatt Matzingen">
+<meta property="og:description" content="Reparatur, Karosserie, Reifen, Autoradio & Scheibentönung in Matzingen. 5,0★ bei 33 Bewertungen. Bei Roger in guten Händen. Seit 1998.">
+<meta property="og:locale" content="de_CH">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#16181C;
+  --asphalt:#1B1D22;
+  --asphalt-2:#232630;
+  --asphalt-3:#2C3038;
+  --bone:#F5F1EA;
+  --bone-2:#EBE5DA;
+  --bone-3:#E0D9CB;
+  --amber:#EE6A1B;
+  --amber-bright:#FF8A3A;
+  --amber-deep:#C4520F;
+  --steel:#767B85;
+  --steel-2:#9AA0AA;
+  --line-d:rgba(255,255,255,.10);
+  --line-l:rgba(20,22,26,.12);
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:18px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;line-height:.98;letter-spacing:-.02em}
+.mono{font-family:'Space Mono',monospace;text-transform:uppercase;letter-spacing:.14em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.amber{color:var(--amber)}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+section{position:relative}
+.tape{height:12px;width:100%;background:
+  repeating-linear-gradient(-45deg,var(--amber) 0 20px,var(--ink) 20px 40px)}
+.tape.thin{height:8px}
+
+/* ---------- Preview ribbon ---------- */
+.previewbar{
+  background:var(--ink);color:var(--bone);text-align:center;
+  font-family:'Space Mono',monospace;font-size:12px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;padding:9px 14px}
+.previewbar a{color:var(--amber-bright);text-decoration:underline;text-underline-offset:2px}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(27,29,34,.86);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line-d)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--bone);font-family:'Bricolage Grotesque';font-weight:800;font-size:22px;letter-spacing:-.01em}
+.brand .mk{width:38px;height:38px;border-radius:9px;flex:none;display:grid;place-items:center;
+  background:var(--amber);color:var(--ink);font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;
+  box-shadow:0 6px 18px -6px rgba(238,106,27,.7)}
+.brand small{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:9.5px;letter-spacing:.18em;color:var(--steel-2);margin-top:2px}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:15px;font-weight:500}
+.nav ul a{color:var(--steel-2);transition:color .2s}
+.nav ul a:hover{color:var(--bone)}
+.cta{display:inline-flex;align-items:center;gap:9px;background:var(--amber);color:var(--ink);
+  font-weight:700;padding:12px 20px;border-radius:100px;font-size:14.5px;
+  transition:transform .2s,box-shadow .2s;box-shadow:0 6px 22px -8px rgba(238,106,27,.8)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px -8px rgba(238,106,27,.9)}
+.cta svg{width:16px;height:16px}
+.nav .menutoggle{display:none}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--asphalt);color:var(--bone);padding:66px 0 78px;overflow:hidden;position:relative}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;opacity:.6;
+  background:
+   radial-gradient(900px 520px at 82% 0%,rgba(238,106,27,.16),transparent 62%),
+   radial-gradient(700px 500px at 0% 100%,rgba(255,255,255,.04),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+  background-image:linear-gradient(var(--line-d) 1px,transparent 1px),linear-gradient(90deg,var(--line-d) 1px,transparent 1px);
+  background-size:58px 58px;
+  mask-image:radial-gradient(820px 620px at 74% 34%,#000,transparent 76%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;gap:52px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:11px;color:var(--amber-bright);font-size:12px;margin-bottom:24px}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--amber)}
+.hero h1{font-size:clamp(44px,6.6vw,88px);letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--amber-bright)}
+.hero p.lead{color:#C9CDD4;font-size:19px;max-width:46ch;margin:26px 0 34px}
+.herobtns{display:flex;flex-wrap:wrap;gap:13px;align-items:center}
+.btn-ghost{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line-d);
+  padding:13px 22px;border-radius:100px;font-weight:600;font-size:14.5px;color:var(--bone);
+  transition:border-color .2s,background .2s}
+.btn-ghost:hover{border-color:var(--amber);background:rgba(238,106,27,.1)}
+.btn-lg{padding:15px 26px;font-size:15px}
+.ratingpill{display:inline-flex;align-items:center;gap:12px;margin-top:32px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line-d);border-radius:100px;padding:8px 8px 8px 18px}
+.ratingpill .stars{color:var(--amber);letter-spacing:2px;font-size:15px}
+.ratingpill b{font-family:'Bricolage Grotesque';font-size:19px}
+.ratingpill .g{background:var(--amber);color:var(--ink);border-radius:100px;padding:5px 12px;font-size:11px;font-weight:700;font-family:'Space Mono',monospace}
+
+/* hero servicekarte */
+.ticket{position:relative;background:var(--bone);color:var(--ink);border-radius:18px;overflow:hidden;
+  box-shadow:0 40px 80px -34px rgba(0,0,0,.7);border:1px solid rgba(0,0,0,.08)}
+.ticket .thead{background:var(--ink);color:var(--bone);padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+.ticket .thead .mono{font-size:10.5px;color:var(--steel-2)}
+.ticket .thead b{font-family:'Bricolage Grotesque';font-size:19px;display:block;color:var(--bone);letter-spacing:-.01em}
+.ticket .stamp{width:60px;height:60px;border-radius:50%;flex:none;display:grid;place-content:center;text-align:center;
+  border:2px solid var(--amber);color:var(--amber);transform:rotate(-9deg);font-family:'Space Mono',monospace}
+.ticket .stamp b{font-family:'Bricolage Grotesque';font-size:17px;line-height:1;color:var(--amber)}
+.ticket .stamp span{font-size:7.5px;letter-spacing:.1em}
+.ticket .trow{display:flex;justify-content:space-between;gap:16px;padding:15px 24px;border-bottom:1px dashed var(--line-l);align-items:center}
+.ticket .trow:last-of-type{border-bottom:none}
+.ticket .trow .k{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+.ticket .trow .v{font-weight:700;font-size:15.5px;text-align:right}
+.ticket .trow .v.amb{color:var(--amber-deep)}
+.ticket .tfoot{background:var(--bone-2);padding:16px 24px;display:flex;flex-wrap:wrap;gap:8px}
+.ticket .chip{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;
+  background:var(--ink);color:var(--bone);padding:5px 11px;border-radius:100px}
+.ticket .barcode{height:34px;margin:0 24px 20px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 9px,var(--ink) 9px 12px,transparent 12px 14px);opacity:.85}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--ink);overflow:hidden;padding:15px 0}
+.marquee .track{display:flex;gap:46px;white-space:nowrap;width:max-content;animation:scroll 28s linear infinite}
+.marquee span{font-family:'Bricolage Grotesque';font-weight:800;font-size:19px;color:var(--bone);
+  display:inline-flex;align-items:center;gap:46px;text-transform:uppercase;letter-spacing:.01em}
+.marquee span::after{content:"";width:8px;height:8px;background:var(--amber);border-radius:2px;transform:rotate(45deg)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- Section shell ---------- */
+.sec{padding:104px 0}
+.sec-head{max-width:660px;margin-bottom:52px}
+.sec-head .mono{color:var(--amber-deep);font-size:12px;display:block;margin-bottom:15px}
+.sec-head h2{font-size:clamp(34px,4.6vw,58px)}
+.sec-head p{color:var(--steel);margin-top:16px;font-size:18px}
+
+/* ---------- Heritage stats ---------- */
+.stats{background:var(--ink);color:var(--bone)}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:0}
+.stat{padding:54px 34px;border-left:1px solid var(--line-d);position:relative}
+.stat:first-child{border-left:none}
+.stat .n{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(46px,6vw,72px);line-height:.9;color:var(--amber)}
+.stat .t{font-weight:600;font-size:17px;margin-top:12px}
+.stat .d{color:var(--steel-2);font-size:14.5px;margin-top:6px}
+
+/* ---------- Leistungen ---------- */
+.grid-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.serv{position:relative;background:#fff;border:1px solid var(--line-l);border-radius:var(--r);
+  padding:30px 26px 32px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.serv:hover{transform:translateY(-6px);box-shadow:0 26px 50px -28px rgba(20,22,26,.4)}
+.serv::before{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:var(--amber);transition:width .35s}
+.serv:hover::before{width:100%}
+.serv .num{font-family:'Space Mono',monospace;font-size:12px;color:var(--steel);font-weight:700}
+.serv .ic{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;margin:18px 0;
+  background:var(--bone-2);color:var(--amber-deep);border:1px solid var(--line-l)}
+.serv .ic svg{width:26px;height:26px}
+.serv h3{font-size:22px;font-weight:700;letter-spacing:-.01em}
+.serv p{color:var(--steel);font-size:15.5px;margin-top:9px}
+
+/* ---------- Split / Warum ---------- */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.panel-dark{position:relative;background:var(--asphalt);color:var(--bone);border-radius:20px;padding:46px 44px;overflow:hidden}
+.panel-dark::before{content:"";position:absolute;right:-70px;top:-70px;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,rgba(238,106,27,.18),transparent 70%)}
+.panel-dark .tape{position:absolute;top:0;left:0}
+.panel-dark .inner{position:relative;z-index:2;padding-top:14px}
+.quotemark{font-family:'Bricolage Grotesque';font-size:70px;color:var(--amber);line-height:.6}
+.panel-dark blockquote{font-family:'Bricolage Grotesque';font-weight:700;font-size:clamp(22px,2.6vw,30px);letter-spacing:-.01em;margin:6px 0 20px}
+.panel-dark cite{font-style:normal;color:var(--steel-2);font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.08em}
+.checklist{list-style:none;display:grid;gap:16px}
+.checklist li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px}
+.checklist .ck{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;background:var(--amber);color:var(--ink)}
+.checklist .ck svg{width:16px;height:16px}
+.checklist b{font-weight:700}
+.checklist span{color:var(--steel)}
+
+/* ---------- Reviews ---------- */
+.reviews{background:var(--bone-2)}
+.rband{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;
+  background:#fff;border:1px solid var(--line-l);border-radius:20px;padding:38px 40px;margin-bottom:34px}
+.rband .big{text-align:center;padding-right:40px;border-right:1px solid var(--line-l)}
+.rband .big .n{font-family:'Bricolage Grotesque';font-weight:800;font-size:70px;line-height:.9;color:var(--amber)}
+.rband .big .stars{color:var(--amber);letter-spacing:3px;font-size:18px}
+.rband .big .c{color:var(--steel);font-size:12px;margin-top:6px;font-family:'Space Mono',monospace}
+.rband .say{font-family:'Bricolage Grotesque';font-weight:700;font-size:clamp(20px,2.4vw,28px);letter-spacing:-.01em}
+.rband .say span{color:var(--amber-deep)}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tcard{background:#fff;border:1px solid var(--line-l);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:15px}
+.tcard .stars{color:var(--amber);letter-spacing:1px;font-size:14px}
+.tcard p{font-size:16px;color:#33363C}
+.tcard .who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.tcard .av{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--amber);
+  display:grid;place-items:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:17px}
+.tcard .who b{font-weight:700;font-size:14.5px}
+.tcard .who span{color:var(--steel);font-size:11.5px;font-family:'Space Mono',monospace}
+
+/* ---------- Über Roger ---------- */
+.about{background:var(--asphalt);color:var(--bone)}
+.about .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:52px;align-items:center}
+.about .mono{color:var(--amber-bright);font-size:12px}
+.about h2{font-size:clamp(30px,4vw,50px);margin:15px 0 22px;max-width:18ch}
+.about p{color:#C9CDD4;max-width:60ch;font-size:17.5px}
+.about p+p{margin-top:15px}
+.about .sign{margin-top:28px;font-family:'Bricolage Grotesque';font-weight:800;font-size:26px}
+.about .sign span{color:var(--amber)}
+.emblem{position:relative;aspect-ratio:1;border-radius:20px;border:1px solid var(--line-d);
+  background:radial-gradient(circle at 50% 35%,rgba(238,106,27,.16),transparent 60%),var(--asphalt-2);
+  display:grid;place-content:center;text-align:center;padding:30px;overflow:hidden}
+.emblem .ring{width:190px;height:190px;border-radius:50%;border:2px dashed rgba(238,106,27,.5);display:grid;place-content:center;margin:0 auto}
+.emblem .yr{font-family:'Bricolage Grotesque';font-weight:800;font-size:56px;color:var(--amber);line-height:.9}
+.emblem .lb{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--steel-2);margin-top:8px}
+.emblem .tape{position:absolute;bottom:0;left:0}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:860px;margin:0 auto}
+.qa{border-bottom:1px solid var(--line-l)}
+.qa button{width:100%;background:none;border:none;color:var(--ink);cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:26px 4px;text-align:left;font-family:'Space Grotesk';font-size:19px;font-weight:600}
+.qa .ico{flex:none;width:30px;height:30px;border-radius:8px;border:1px solid var(--line-l);display:grid;place-items:center;
+  color:var(--amber-deep);font-size:20px;transition:transform .3s,background .3s,color .3s}
+.qa.open .ico{transform:rotate(45deg);background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.qa .ans{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.qa .ans p{color:var(--steel);padding:0 4px 26px;font-size:16.5px}
+
+/* ---------- Kontakt ---------- */
+.contact{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+.cinfo{background:var(--asphalt);color:var(--bone);border-radius:22px;padding:44px;position:relative;overflow:hidden}
+.cinfo .tape{position:absolute;top:0;left:0}
+.cinfo h2{font-size:clamp(28px,4vw,44px);margin-top:14px}
+.cinfo h2 span{color:var(--amber)}
+.crow{display:flex;gap:15px;align-items:flex-start;margin-top:24px}
+.crow .ic{width:46px;height:46px;border-radius:12px;flex:none;display:grid;place-items:center;
+  background:rgba(238,106,27,.14);border:1px solid rgba(238,106,27,.3);color:var(--amber-bright)}
+.crow .ic svg{width:22px;height:22px}
+.crow .mono{font-size:10.5px;color:var(--steel-2);display:block;margin-bottom:3px}
+.crow a,.crow div>span:last-child{font-size:16.5px;font-weight:600}
+.phonebig{font-family:'Bricolage Grotesque';font-weight:800;font-size:26px !important;color:var(--amber) !important}
+.hours{margin-top:8px}
+.hours .hr{display:flex;justify-content:space-between;font-size:14.5px;padding:5px 0;border-bottom:1px dashed var(--line-d);color:#C9CDD4}
+.hours .hr b{color:var(--bone);font-weight:600}
+form{background:#fff;border:1px solid var(--line-l);border-radius:22px;padding:44px}
+.field{margin-bottom:17px}
+.field label{display:block;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--steel);margin-bottom:8px}
+.field input,.field textarea,.field select{width:100%;background:var(--bone);border:1px solid var(--line-l);border-radius:12px;
+  padding:14px 16px;color:var(--ink);font-family:inherit;font-size:16px;transition:border-color .2s}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--amber)}
+.field textarea{min-height:118px;resize:vertical}
+form button{width:100%;background:var(--amber);color:var(--ink);border:none;border-radius:100px;
+  padding:16px;font-family:'Space Grotesk';font-weight:700;font-size:16px;cursor:pointer;transition:transform .2s}
+form button:hover{transform:translateY(-2px)}
+.formnote{margin-top:13px;color:var(--steel);font-size:12.5px;text-align:center;font-family:'Space Mono',monospace}
+.thanks{display:none;text-align:center;padding:20px 0}
+.thanks.show{display:block}
+.thanks .ok{width:60px;height:60px;border-radius:50%;background:var(--bone-2);color:var(--amber-deep);
+  display:grid;place-items:center;margin:0 auto 18px}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:var(--bone);padding:60px 0 28px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:42px}
+.fbrand{display:flex;align-items:center;gap:11px;font-family:'Bricolage Grotesque';font-weight:800;font-size:22px;margin-bottom:15px}
+.fbrand .mk{width:36px;height:36px;border-radius:9px;flex:none;display:grid;place-items:center;background:var(--amber);color:var(--ink);font-size:19px}
+footer p.tag{color:var(--steel-2);font-size:15px;max-width:34ch}
+.fcol h4{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--steel);text-transform:uppercase;margin-bottom:17px}
+.fcol a,.fcol span{display:block;color:var(--steel-2);font-size:15px;margin-bottom:10px;transition:color .2s}
+.fcol a:hover{color:var(--amber-bright)}
+.fbot{border-top:1px solid var(--line-d);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  color:var(--steel);font-size:13px}
+.fbot .credit a{color:var(--amber-bright);font-weight:600}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  body{font-size:16px}
+  .nav ul,.nav .cta{display:none}
+  .nav .menutoggle{display:grid}
+  .hero .wrap{grid-template-columns:1fr;gap:42px}
+  .ticket{max-width:460px}
+  .grid-serv{grid-template-columns:1fr 1fr}
+  .stats .wrap{grid-template-columns:1fr}
+  .stat{border-left:none;border-top:1px solid var(--line-d);padding:38px 24px}
+  .stat:first-child{border-top:none}
+  .split{grid-template-columns:1fr;gap:34px}
+  .rband{grid-template-columns:1fr;gap:24px;text-align:center}
+  .rband .big{border-right:none;border-bottom:1px solid var(--line-l);padding:0 0 24px}
+  .tgrid{grid-template-columns:1fr}
+  .about .wrap{grid-template-columns:1fr;gap:34px}
+  .emblem{max-width:340px;margin:0 auto}
+  .contact{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr;gap:30px}
+  .sec{padding:78px 0}
+}
+@media(max-width:560px){
+  .grid-serv{grid-template-columns:1fr}
+  .ratingpill{flex-wrap:wrap}
+}
+.menutoggle{background:none;border:1px solid var(--line-d);border-radius:10px;width:44px;height:44px;color:var(--bone);place-items:center}
+#mobnav{display:none;position:fixed;inset:0;z-index:70;background:rgba(22,24,28,.98);backdrop-filter:blur(10px);
+  flex-direction:column;align-items:center;justify-content:center;gap:24px}
+#mobnav.show{display:flex}
+#mobnav a{font-family:'Bricolage Grotesque';font-weight:800;font-size:30px;text-transform:uppercase;color:var(--bone)}
+#mobnav .close{position:absolute;top:24px;right:24px;font-size:34px;color:var(--steel-2)}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="previewbar">
+  Unverbindliche Design-Vorschau für Beck Auto-Shop &amp; Garage · erstellt von <a href="https://evowebdesign.ch">evowebdesign.ch</a>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <span class="mk">B</span>
+      <span>BECK<small>AUTO-SHOP · GARAGE</small></span>
+    </a>
+    <ul>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#warum">Warum Beck</a></li>
+      <li><a href="#bewertungen">Bewertungen</a></li>
+      <li><a href="#roger">Über Roger</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a href="tel:+41527201758" class="cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      052 720 17 58
+    </a>
+    <button class="menutoggle" aria-label="Menü" onclick="document.getElementById('mobnav').classList.add('show')">
+      <svg viewBox="0 0 24 24" width="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav id="mobnav">
+  <a href="#" class="close" onclick="document.getElementById('mobnav').classList.remove('show');return false;">✕</a>
+  <a href="#leistungen" onclick="closeMob()">Leistungen</a>
+  <a href="#warum" onclick="closeMob()">Warum Beck</a>
+  <a href="#bewertungen" onclick="closeMob()">Bewertungen</a>
+  <a href="#roger" onclick="closeMob()">Über Roger</a>
+  <a href="#kontakt" onclick="closeMob()">Kontakt</a>
+  <a href="tel:+41527201758" class="amber" onclick="closeMob()">052 720 17 58</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow mono">Autowerkstatt · Matzingen · seit 1998</span>
+      <h1>Ihr Auto ist<br>bei Roger in<br><em>guten Händen.</em></h1>
+      <p class="lead">Reparatur, Karosserie, Reifen, Autoradio-Einbau und Scheibentönung. Alles aus einer Hand in Matzingen. Ehrlich beraten, sauber gearbeitet, fair im Preis.</p>
+      <div class="herobtns">
+        <a href="tel:+41527201758" class="cta btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Direkt anrufen</a>
+        <a href="#kontakt" class="btn-ghost btn-lg">Termin anfragen
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="ratingpill">
+        <span class="stars">★★★★★</span>
+        <b>5,0</b>
+        <span class="g">33 BEWERTUNGEN</span>
+      </div>
+    </div>
+
+    <div class="ticket reveal" aria-hidden="true">
+      <div class="thead">
+        <div>
+          <span class="mono">Servicekarte</span>
+          <b>Beck Auto-Shop &amp; Garage</b>
+        </div>
+        <div class="stamp"><div><b>5,0</b><span>GOOGLE</span></div></div>
+      </div>
+      <div class="trow"><span class="k">Betrieb</span><span class="v">Autowerkstatt &amp; Garage</span></div>
+      <div class="trow"><span class="k">Standort</span><span class="v">Matzingen · Frauenfeld</span></div>
+      <div class="trow"><span class="k">Inhaber</span><span class="v">Roger Beck</span></div>
+      <div class="trow"><span class="k">Im Betrieb seit</span><span class="v amb">1998</span></div>
+      <div class="trow"><span class="k">Bewertung</span><span class="v amb">5,0 ★ · 33 Berichte</span></div>
+      <div class="tfoot">
+        <span class="chip">Reparatur</span><span class="chip">Karosserie</span><span class="chip">Reifen</span><span class="chip">Autoradio</span><span class="chip">Scheibentönung</span>
+      </div>
+      <div class="barcode"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Reparatur &amp; Service</span><span>Karosserie</span><span>Unfallschaden</span><span>Reifen &amp; Pneu</span><span>Autoradio-Einbau</span><span>Scheibentönung</span>
+    <span>Reparatur &amp; Service</span><span>Karosserie</span><span>Unfallschaden</span><span>Reifen &amp; Pneu</span><span>Autoradio-Einbau</span><span>Scheibentönung</span>
+  </div>
+</div>
+
+<!-- ================= STATS ================= -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="n">1998</div><div class="t">Seit über 25 Jahren</div><div class="d">Am selben Standort in Matzingen im Einsatz.</div></div>
+    <div class="stat reveal"><div class="n">5,0</div><div class="t">Bei 33 Google-Bewertungen</div><div class="d">Glatte fünf Sterne, ohne eine einzige Ausnahme.</div></div>
+    <div class="stat reveal"><div class="n">1</div><div class="t">Alles aus einer Hand</div><div class="d">Von der Reparatur bis zur Scheibentönung, ein Ansprechpartner.</div></div>
+  </div>
+</section>
+
+<!-- ================= LEISTUNGEN ================= -->
+<section class="sec" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="mono">01 — Leistungen</span>
+      <h2>Alles rund<br>ums Auto</h2>
+      <p>Ob Service, Schaden oder Ausstattung: Bei Beck kommt Ihr Fahrzeug für alles an einen Ort, statt es von Werkstatt zu Werkstatt zu fahren.</p>
+    </div>
+    <div class="grid-serv">
+      <div class="serv reveal">
+        <span class="num">/ 01</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.3L3 18l3 3 6.4-6.3a4 4 0 0 0 5.3-5.4l-2.6 2.6-2.1-2.1z"/></svg></div>
+        <h3>Reparatur &amp; Service</h3>
+        <p>Wartung, Service und Reparaturen aller Art, zuverlässig und zu einem fairen Preis erledigt.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 02</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l2-6-4-3H7L3 11z"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="16.5" cy="17.5" r="1.6"/><path d="M9 8V5h6v3"/></svg></div>
+        <h3>Karosserie &amp; Unfall</h3>
+        <p>Beulen, Dellen und Unfallschäden werden fachgerecht instand gesetzt und wieder in Form gebracht.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 03</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21"/></svg></div>
+        <h3>Reifen &amp; Pneu</h3>
+        <p>Reifenwechsel, Montage und Auswuchten als offizieller e-pneu Montagepartner in Matzingen.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 04</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="9" cy="12" r="2.6"/><path d="M15 10h3M15 14h3"/></svg></div>
+        <h3>Autoradio &amp; Multimedia</h3>
+        <p>Fachgerechter Einbau von Autoradios, Freisprech- und Multimediasystemen, sauber verlegt und angeschlossen.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 05</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l4-9h8l4 9"/><path d="M4 15h16v3H4z"/><path d="M8 6l-2 9M16 6l2 9M12 6v9"/></svg></div>
+        <h3>Scheibentönung</h3>
+        <p>Professionelle Folierung Ihrer Scheiben für mehr Privatsphäre, Hitzeschutz und einen edleren Auftritt.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 06</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l1 4H5z"/><path d="M5 7v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"/><path d="M9 12h6"/></svg></div>
+        <h3>Ersatz- &amp; Zubehörteile</h3>
+        <p>Verbrauchs-, Ersatz- und Zubehörteile passend zu Ihrem Fahrzeug, direkt beschafft und verbaut.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WARUM / SPLIT ================= -->
+<section class="sec" id="warum" style="padding-top:0">
+  <div class="wrap split">
+    <div class="panel-dark reveal">
+      <div class="tape thin"></div>
+      <div class="inner">
+        <div class="quotemark">&#8220;</div>
+        <blockquote>Er ist ehrlich, schnell und kompetent. Er zockt einen nicht ab.</blockquote>
+        <cite>Liane Baldauf · Google-Bewertung</cite>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="mono" style="color:var(--amber-deep);font-size:12px">02 — Warum Beck</span>
+      <h2 style="font-size:clamp(30px,4.2vw,50px);margin:15px 0 22px">Eine Garage,<br>der man<br><span class="amber">vertraut.</span></h2>
+      <p style="color:var(--steel);font-size:17.5px;margin-bottom:26px">Was die Kundschaft an Beck schätzt, steht so in fast jeder Bewertung: ehrliche Beratung, faire Preise und Arbeit, auf die man sich verlassen kann.</p>
+      <ul class="checklist">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Ehrlich beraten.</b> <span>Sie erfahren, was wirklich nötig ist, und was warten kann. Keine Arbeit, die niemand gebraucht hat.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Fairer Preis.</b> <span>Das Preis-Leistungs-Verhältnis wird in den Bewertungen immer wieder ausdrücklich gelobt.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Persönlich bei Roger.</b> <span>Ein fester Ansprechpartner, der auch im Notfall kurz Zeit findet und sein Handwerk versteht.</span></div></li>
+      </ul>
+      <a href="#kontakt" class="cta btn-lg" style="margin-top:30px">Termin anfragen
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEWERTUNGEN ================= -->
+<section class="sec reviews" id="bewertungen">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:34px">
+      <span class="mono">03 — Bewertungen</span>
+      <h2>Was Kundinnen<br>und Kunden sagen</h2>
+    </div>
+    <div class="rband reveal">
+      <div class="big">
+        <div class="n">5,0</div>
+        <div class="stars">★★★★★</div>
+        <div class="c">33 GOOGLE-BERICHTE</div>
+      </div>
+      <div class="say">Über <span>33 Bewertungen</span> und jede einzelne mit fünf Sternen. Eine Bilanz, die für sich spricht.</div>
+    </div>
+    <div class="tgrid">
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p>„Ich gebe Roger mein Auto gern, weil er ehrlich, schnell und kompetent ist. Er zockt einen nicht ab und hat auch im Notfall kurz Zeit, um behilflich zu sein. Wir kommen immer wieder gern zu dir!“</p>
+        <div class="who"><span class="av">L</span><div><b>Liane Baldauf</b><br><span>Google-Bewertung</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p>„Roger hat die Arbeit an meinem Wagen schnell, kompetent und zu einem überaus fairen Preis ausgeführt. Bei ihm fühlt man sich sehr gut aufgehoben!“</p>
+        <div class="who"><span class="av">J</span><div><b>Julio Cesar</b><br><span>Local Guide · Google</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p>„Ich bin mehr als nur zufrieden mit der erbrachten Arbeit. Der Service ist super, das Preis-Leistungs-Verhältnis ist top. Ich kann diese Garage allen sehr empfehlen!“</p>
+        <div class="who"><span class="av">S</span><div><b>Solange Herzog</b><br><span>Google-Bewertung</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÜBER ROGER ================= -->
+<section class="sec about" id="roger">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="mono">04 — Über den Betrieb</span>
+      <h2>Seit 1998 die Garage in Matzingen.</h2>
+      <p>Beck Auto-Shop &amp; Garage ist der Betrieb von Roger Beck an der St. Gallerstrasse in Matzingen. Seit über 25 Jahren kümmert er sich hier um die Fahrzeuge seiner Kundschaft, vom kleinen Service bis zum Unfallschaden.</p>
+      <p>Der Anspruch ist über die Jahre derselbe geblieben: ehrlich sagen, was ansteht, sauber arbeiten und einen fairen Preis machen. Dass dieser Weg ankommt, zeigen 33 Bewertungen mit glatten fünf Sternen.</p>
+      <div class="sign">— Roger Beck, <span>Beck Auto-Shop &amp; Garage</span></div>
+    </div>
+    <div class="emblem reveal" aria-hidden="true">
+      <div class="ring">
+        <div>
+          <div class="lb" style="margin:0 0 4px">SEIT</div>
+          <div class="yr">1998</div>
+          <div class="lb">MATZINGEN · TG</div>
+        </div>
+      </div>
+      <div class="tape thin"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec" style="padding-bottom:104px">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-inline:auto">
+      <span class="mono">05 — Häufige Fragen</span>
+      <h2>Gut zu wissen</h2>
+    </div>
+    <div class="faq">
+      <div class="qa reveal"><button>Wie vereinbare ich einen Termin?<span class="ico">+</span></button><div class="ans"><p>Am einfachsten telefonisch unter 052 720 17 58 oder über das Formular auf dieser Seite. Roger meldet sich und Sie finden gemeinsam einen passenden Termin.</p></div></div>
+      <div class="qa reveal"><button>Welche Arbeiten übernimmt Beck?<span class="ico">+</span></button><div class="ans"><p>Reparatur und Service, Karosserie- und Unfallschäden, Reifen- und Pneuservice, Autoradio- und Multimedia-Einbau sowie Scheibentönung. Vieles rund ums Auto also aus einer Hand.</p></div></div>
+      <div class="qa reveal"><button>Übernimmt Beck auch Reifen und Pneuwechsel?<span class="ico">+</span></button><div class="ans"><p>Ja. Beck ist offizieller e-pneu Montagepartner. Reifenwechsel, Montage und Auswuchten werden direkt vor Ort erledigt.</p></div></div>
+      <div class="qa reveal"><button>Kostet ein Kostenvoranschlag etwas?<span class="ico">+</span></button><div class="ans"><p>Nein. Schildern Sie Roger kurz, worum es geht, dann erhalten Sie eine ehrliche Einschätzung, bevor eine Arbeit ausgeführt wird.</p></div></div>
+      <div class="qa reveal"><button>Wann hat die Garage geöffnet?<span class="ico">+</span></button><div class="ans"><p>Montag bis Freitag von 08:00 bis 12:00 und 14:00 bis 18:00 Uhr, Samstag von 10:00 bis 14:00 Uhr. Am besten kurz anrufen, dann ist der Weg sicher nicht umsonst.</p></div></div>
+      <div class="qa reveal"><button>Wo befindet sich Beck Auto-Shop &amp; Garage?<span class="ico">+</span></button><div class="ans"><p>An der St. Gallerstrasse 200c im Murkart, 9548 Matzingen bei Frauenfeld. Parkplätze sind direkt vor Ort vorhanden.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<section class="sec" id="kontakt" style="padding-top:0">
+  <div class="wrap contact">
+    <div class="cinfo reveal">
+      <div class="tape thin"></div>
+      <span class="mono" style="color:var(--amber-bright);font-size:12px">06 — Kontakt</span>
+      <h2>Bringen Sie<br>Ihr Auto zu<br><span>Beck.</span></h2>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><span class="mono">Telefon</span><a href="tel:+41527201758" class="phonebig">052 720 17 58</a></div>
+      </div>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><span class="mono">Adresse</span><span>St. Gallerstrasse 200c, Murkart<br>9548 Matzingen</span></div>
+      </div>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div style="flex:1">
+          <span class="mono">Öffnungszeiten</span>
+          <div class="hours">
+            <div class="hr"><b>Mo — Fr</b><span>08:00 – 12:00 · 14:00 – 18:00</span></div>
+            <div class="hr"><b>Samstag</b><span>10:00 – 14:00</span></div>
+            <div class="hr"><b>Sonntag</b><span>geschlossen</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form onsubmit="return sendForm(event)">
+      <div id="formfields">
+        <div class="field"><label>Name</label><input type="text" name="name" required placeholder="Ihr Name"></div>
+        <div class="field"><label>Telefon oder E-Mail</label><input type="text" name="kontakt" required placeholder="Damit Roger sich melden kann"></div>
+        <div class="field"><label>Worum geht es?</label>
+          <select name="leistung">
+            <option>Reparatur &amp; Service</option>
+            <option>Karosserie- / Unfallschaden</option>
+            <option>Reifen &amp; Pneuservice</option>
+            <option>Autoradio- / Multimedia-Einbau</option>
+            <option>Scheibentönung</option>
+            <option>Etwas anderes</option>
+          </select>
+        </div>
+        <div class="field"><label>Kurz beschreiben</label><textarea name="msg" placeholder="Fahrzeug, Anliegen, Wunschtermin …"></textarea></div>
+        <button type="submit">Anfrage senden</button>
+        <div class="formnote">Vorschau-Formular · in der Live-Version landet die Anfrage direkt bei Roger</div>
+      </div>
+      <div class="thanks" id="thanks">
+        <div class="ok"><svg viewBox="0 0 24 24" width="28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3 style="font-size:24px">Danke, Anfrage notiert!</h3>
+        <p style="color:var(--steel);margin-top:10px">In der fertigen Version bekommt Roger Ihre Anfrage sofort. Für die Vorschau ist hier Schluss.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand"><span class="mk">B</span> BECK</div>
+        <p class="tag">Auto-Shop &amp; Garage in Matzingen. Reparatur, Karosserie, Reifen, Autoradio &amp; Scheibentönung. Bei Roger in guten Händen, seit 1998.</p>
+      </div>
+      <div class="fcol">
+        <h4>Leistungen</h4>
+        <a href="#leistungen">Reparatur &amp; Service</a>
+        <a href="#leistungen">Karosserie &amp; Unfall</a>
+        <a href="#leistungen">Reifen &amp; Pneu</a>
+        <a href="#leistungen">Scheibentönung</a>
+      </div>
+      <div class="fcol">
+        <h4>Kontakt</h4>
+        <a href="tel:+41527201758">052 720 17 58</a>
+        <span>St. Gallerstrasse 200c</span>
+        <span>9548 Matzingen</span>
+        <span>Mo–Fr 08–12 · 14–18 Uhr</span>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Beck Auto-Shop &amp; Garage · Matzingen</span>
+      <span class="credit">Design-Vorschau erstellt von <a href="https://evowebdesign.ch">evowebdesign.ch</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function closeMob(){document.getElementById('mobnav').classList.remove('show');}
+function sendForm(e){e.preventDefault();document.getElementById('formfields').style.display='none';document.getElementById('thanks').classList.add('show');return false;}
+
+document.querySelectorAll('.qa button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const qa=b.parentElement,ans=qa.querySelector('.ans'),open=qa.classList.contains('open');
+    document.querySelectorAll('.qa').forEach(x=>{x.classList.remove('open');x.querySelector('.ans').style.maxHeight=null;});
+    if(!open){qa.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+  });
+});
+
+const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoRepair",
+  "name":"Beck Auto-Shop & Garage",
+  "description":"Autowerkstatt und Garage in Matzingen bei Frauenfeld. Reparatur, Karosserie, Reifen, Autoradio-Einbau und Scheibentönung. Betrieb von Roger Beck seit 1998.",
+  "url":"https://evowebdesign.ch/beck-autoshop-preview/",
+  "telephone":"+41527201758",
+  "founder":{"@type":"Person","name":"Roger Beck"},
+  "foundingDate":"1998",
+  "priceRange":"$$",
+  "paymentAccepted":"Bar",
+  "address":{"@type":"PostalAddress","streetAddress":"St. Gallerstrasse 200c","postalCode":"9548","addressLocality":"Matzingen","addressRegion":"TG","addressCountry":"CH"},
+  "geo":{"@type":"GeoCoordinates","latitude":47.5371497,"longitude":8.9156152},
+  "areaServed":[{"@type":"City","name":"Matzingen"},{"@type":"City","name":"Frauenfeld"},{"@type":"City","name":"Wängi"}],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"12:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"14:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"14:00"}
+  ],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"33","bestRating":"5"},
+  "review":[
+    {"@type":"Review","author":{"@type":"Person","name":"Liane Baldauf"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Ich gebe Roger mein Auto gern, weil er ehrlich, schnell und kompetent ist. Er zockt einen nicht ab und hat auch im Notfall kurz Zeit."},
+    {"@type":"Review","author":{"@type":"Person","name":"Julio Cesar"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Roger hat die Arbeit an meinem Wagen schnell, kompetent und zu einem überaus fairen Preis ausgeführt. Bei ihm fühlt man sich sehr gut aufgehoben."},
+    {"@type":"Review","author":{"@type":"Person","name":"Solange Herzog"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Ich bin mehr als nur zufrieden mit der erbrachten Arbeit. Der Service ist super, das Preis-Leistungs-Verhältnis ist top."}
+  ],
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Reparatur & Service"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Karosserie- und Unfallschaden"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Reifen- und Pneuservice"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Autoradio- und Multimedia-Einbau"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Scheibentönung"}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Wie vereinbare ich einen Termin?","acceptedAnswer":{"@type":"Answer","text":"Am einfachsten telefonisch unter 052 720 17 58 oder über das Kontaktformular. Roger meldet sich und Sie finden gemeinsam einen Termin."}},
+    {"@type":"Question","name":"Welche Arbeiten übernimmt Beck?","acceptedAnswer":{"@type":"Answer","text":"Reparatur und Service, Karosserie- und Unfallschäden, Reifen- und Pneuservice, Autoradio- und Multimedia-Einbau sowie Scheibentönung."}},
+    {"@type":"Question","name":"Übernimmt Beck auch Reifen und Pneuwechsel?","acceptedAnswer":{"@type":"Answer","text":"Ja, Beck ist offizieller e-pneu Montagepartner. Reifenwechsel, Montage und Auswuchten werden direkt vor Ort erledigt."}},
+    {"@type":"Question","name":"Kostet ein Kostenvoranschlag etwas?","acceptedAnswer":{"@type":"Answer","text":"Nein. Sie erhalten eine ehrliche Einschätzung, bevor eine Arbeit ausgeführt wird."}},
+    {"@type":"Question","name":"Wann hat die Garage geöffnet?","acceptedAnswer":{"@type":"Answer","text":"Montag bis Freitag 08:00 bis 12:00 und 14:00 bis 18:00 Uhr, Samstag 10:00 bis 14:00 Uhr, Sonntag geschlossen."}},
+    {"@type":"Question","name":"Wo befindet sich Beck Auto-Shop & Garage?","acceptedAnswer":{"@type":"Answer","text":"An der St. Gallerstrasse 200c im Murkart, 9548 Matzingen bei Frauenfeld. Parkplätze sind vor Ort vorhanden."}}
+  ]
+}
+</script>
+</body>
+</html>
