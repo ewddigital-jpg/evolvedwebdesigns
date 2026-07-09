@@ -111,25 +111,23 @@ header{position:sticky;top:0;z-index:60;background:rgba(27,29,34,.86);
 .ratingpill b{font-family:'Bricolage Grotesque';font-size:19px}
 .ratingpill .g{background:var(--amber);color:var(--ink);border-radius:100px;padding:5px 12px;font-size:11px;font-weight:700;font-family:'Space Mono',monospace}
 
-/* hero servicekarte */
-.ticket{position:relative;background:var(--bone);color:var(--ink);border-radius:18px;overflow:hidden;
-  box-shadow:0 40px 80px -34px rgba(0,0,0,.7);border:1px solid rgba(0,0,0,.08)}
-.ticket .thead{background:var(--ink);color:var(--bone);padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
-.ticket .thead .mono{font-size:10.5px;color:var(--steel-2)}
-.ticket .thead b{font-family:'Bricolage Grotesque';font-size:19px;display:block;color:var(--bone);letter-spacing:-.01em}
-.ticket .stamp{width:60px;height:60px;border-radius:50%;flex:none;display:grid;place-content:center;text-align:center;
-  border:2px solid var(--amber);color:var(--amber);transform:rotate(-9deg);font-family:'Space Mono',monospace}
-.ticket .stamp b{font-family:'Bricolage Grotesque';font-size:17px;line-height:1;color:var(--amber)}
-.ticket .stamp span{font-size:7.5px;letter-spacing:.1em}
-.ticket .trow{display:flex;justify-content:space-between;gap:16px;padding:15px 24px;border-bottom:1px dashed var(--line-l);align-items:center}
-.ticket .trow:last-of-type{border-bottom:none}
-.ticket .trow .k{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
-.ticket .trow .v{font-weight:700;font-size:15.5px;text-align:right}
-.ticket .trow .v.amb{color:var(--amber-deep)}
-.ticket .tfoot{background:var(--bone-2);padding:16px 24px;display:flex;flex-wrap:wrap;gap:8px}
-.ticket .chip{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;
-  background:var(--ink);color:var(--bone);padding:5px 11px;border-radius:100px}
-.ticket .barcode{height:34px;margin:0 24px 20px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 9px,var(--ink) 9px 12px,transparent 12px 14px);opacity:.85}
+/* hero trust card */
+.herocard{position:relative;background:var(--bone);color:var(--ink);border-radius:20px;
+  padding:34px 34px 32px;box-shadow:0 40px 80px -36px rgba(0,0,0,.65);border:1px solid rgba(0,0,0,.06)}
+.herocard::before{content:"";position:absolute;top:0;left:34px;right:34px;height:4px;background:var(--amber);border-radius:0 0 4px 4px}
+.hc-top{display:flex;align-items:center;gap:15px;padding-bottom:24px;border-bottom:1px solid var(--line-l)}
+.hc-badge{width:48px;height:48px;border-radius:13px;flex:none;display:grid;place-items:center;
+  background:var(--amber);color:var(--ink);font-size:24px;line-height:1}
+.hc-stars{color:var(--amber);letter-spacing:2px;font-size:16px;line-height:1}
+.hc-sub{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--steel);text-transform:uppercase;margin-top:6px}
+.hc-score{margin-left:auto;font-family:'Bricolage Grotesque';font-weight:800;font-size:46px;line-height:.85;color:var(--ink)}
+.hc-quote{padding:24px 0;border-bottom:1px solid var(--line-l)}
+.hc-quote p{font-size:17px;line-height:1.55;color:#33363C;font-weight:500}
+.hc-author{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.03em;color:var(--steel);margin-top:14px}
+.hc-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:22px}
+.hc-facts span{display:block;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);margin-bottom:6px}
+.hc-facts b{font-family:'Bricolage Grotesque';font-weight:700;font-size:19px;letter-spacing:-.01em}
+.hc-facts b.amb{color:var(--amber-deep)}
 
 /* ---------- Marquee ---------- */
 .marquee{background:var(--ink);overflow:hidden;padding:15px 0}
@@ -381,23 +379,24 @@ footer p.tag{color:var(--steel-2);font-size:15px;max-width:34ch}
       </div>
     </div>
 
-    <div class="ticket reveal" aria-hidden="true">
-      <div class="thead">
+    <div class="herocard reveal">
+      <div class="hc-top">
+        <span class="hc-badge">★</span>
         <div>
-          <span class="mono">Servicekarte</span>
-          <b>Beck Auto-Shop &amp; Garage</b>
+          <div class="hc-stars">★★★★★</div>
+          <div class="hc-sub">33 Google-Bewertungen</div>
         </div>
-        <div class="stamp"><div><b>5,0</b><span>GOOGLE</span></div></div>
+        <div class="hc-score">5,0</div>
       </div>
-      <div class="trow"><span class="k">Betrieb</span><span class="v">Autowerkstatt &amp; Garage</span></div>
-      <div class="trow"><span class="k">Standort</span><span class="v">Matzingen · Frauenfeld</span></div>
-      <div class="trow"><span class="k">Inhaber</span><span class="v">Roger Beck</span></div>
-      <div class="trow"><span class="k">Im Betrieb seit</span><span class="v amb">1998</span></div>
-      <div class="trow"><span class="k">Bewertung</span><span class="v amb">5,0 ★ · 33 Berichte</span></div>
-      <div class="tfoot">
-        <span class="chip">Reparatur</span><span class="chip">Karosserie</span><span class="chip">Reifen</span><span class="chip">Autoradio</span><span class="chip">Scheibentönung</span>
+      <div class="hc-quote">
+        <p>„Ich gebe Roger mein Auto gern, weil er ehrlich, schnell und kompetent ist. Er zockt einen nicht ab und hat auch im Notfall kurz Zeit.“</p>
+        <div class="hc-author">Liane Baldauf · Google-Bewertung</div>
       </div>
-      <div class="barcode"></div>
+      <div class="hc-facts">
+        <div><span>Betrieb seit</span><b class="amb">1998</b></div>
+        <div><span>Standort</span><b>Matzingen</b></div>
+        <div><span>Reifen</span><b>e-pneu</b></div>
+      </div>
     </div>
   </div>
 </section>
