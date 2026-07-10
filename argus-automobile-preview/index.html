@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARGUS Automobile GmbH — Autowerkstatt Arbon | Cataldo Scelzo seit 2000</title>
+<meta name="description" content="ARGUS Automobile GmbH in Arbon am Bodensee. Service, Reparaturen, Fahrzeughandel und Oldtimer-Pflege bei Cataldo Scelzo. 4,9★ bei 8 Google-Bewertungen. Seit 2000. Jetzt Termin anfragen.">
+<link rel="canonical" href="https://evowebdesign.ch/argus-automobile-preview/">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0D1512">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ARGUS Automobile GmbH — Autowerkstatt Arbon">
+<meta property="og:description" content="Service, Reparaturen, Fahrzeughandel & Oldtimer-Pflege in Arbon. 4,9★ bei 8 Bewertungen. Bei Cataldo in besten Händen. Seit 2000.">
+<meta property="og:locale" content="de_CH">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#0C1411;
+  --forest:#0F1F1A;
+  --forest-2:#16302A;
+  --forest-3:#1E3E35;
+  --bone:#F2EEE4;
+  --bone-2:#E7E0D1;
+  --bone-3:#DAD1BD;
+  --brass:#C48A3A;
+  --brass-bright:#E3AE56;
+  --brass-deep:#8F6017;
+  --steel:#6E7C75;
+  --steel-2:#93A29A;
+  --line-d:rgba(255,255,255,.10);
+  --line-l:rgba(12,20,17,.12);
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:18px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{font-family:'Archivo Black',sans-serif;font-weight:400;line-height:1;letter-spacing:-.02em}
+.mono{font-family:'Space Mono',monospace;text-transform:uppercase;letter-spacing:.14em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.brass{color:var(--brass)}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+section{position:relative}
+.tape{height:10px;width:100%;background:
+  repeating-linear-gradient(-45deg,var(--brass) 0 18px,var(--ink) 18px 36px)}
+.tape.thin{height:7px}
+
+/* ---------- Preview ribbon ---------- */
+.previewbar{
+  background:var(--ink);color:var(--bone);text-align:center;
+  font-family:'Space Mono',monospace;font-size:12px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;padding:9px 14px}
+.previewbar a{color:var(--brass-bright);text-decoration:underline;text-underline-offset:2px}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(15,31,26,.86);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line-d)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--bone);font-family:'Archivo Black';font-size:21px;letter-spacing:-.01em}
+.brand .mk{width:38px;height:38px;border-radius:9px;flex:none;display:grid;place-items:center;
+  background:var(--brass);color:var(--ink);font-family:'Archivo Black';font-size:19px;
+  box-shadow:0 6px 18px -6px rgba(196,138,58,.7)}
+.brand small{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:9.5px;letter-spacing:.18em;color:var(--steel-2);margin-top:3px}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:15px;font-weight:500}
+.nav ul a{color:var(--steel-2);transition:color .2s}
+.nav ul a:hover{color:var(--bone)}
+.cta{display:inline-flex;align-items:center;gap:9px;background:var(--brass);color:var(--ink);
+  font-weight:700;padding:12px 20px;border-radius:100px;font-size:14.5px;
+  transition:transform .2s,box-shadow .2s;box-shadow:0 6px 22px -8px rgba(196,138,58,.8)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px -8px rgba(196,138,58,.9)}
+.cta svg{width:16px;height:16px}
+.nav .menutoggle{display:none}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--forest);color:var(--bone);padding:66px 0 78px;overflow:hidden;position:relative}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;opacity:.7;
+  background:
+   radial-gradient(900px 520px at 82% 0%,rgba(196,138,58,.16),transparent 62%),
+   radial-gradient(700px 500px at 0% 100%,rgba(255,255,255,.04),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+  background-image:linear-gradient(var(--line-d) 1px,transparent 1px),linear-gradient(90deg,var(--line-d) 1px,transparent 1px);
+  background-size:58px 58px;
+  mask-image:radial-gradient(820px 620px at 74% 34%,#000,transparent 76%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;gap:52px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:11px;color:var(--brass-bright);font-size:12px;margin-bottom:24px}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--brass)}
+.hero h1{font-size:clamp(42px,6.4vw,84px);letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--brass-bright)}
+.hero p.lead{color:#CFD3CB;font-size:19px;max-width:47ch;margin:26px 0 34px}
+.herobtns{display:flex;flex-wrap:wrap;gap:13px;align-items:center}
+.btn-ghost{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line-d);
+  padding:13px 22px;border-radius:100px;font-weight:600;font-size:14.5px;color:var(--bone);
+  transition:border-color .2s,background .2s}
+.btn-ghost:hover{border-color:var(--brass);background:rgba(196,138,58,.1)}
+.btn-lg{padding:15px 26px;font-size:15px}
+.ratingpill{display:inline-flex;align-items:center;gap:12px;margin-top:32px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line-d);border-radius:100px;padding:8px 8px 8px 18px}
+.ratingpill .stars{color:var(--brass);letter-spacing:2px;font-size:15px}
+.ratingpill b{font-family:'Archivo Black';font-size:18px}
+.ratingpill .g{background:var(--brass);color:var(--ink);border-radius:100px;padding:5px 12px;font-size:11px;font-weight:700;font-family:'Space Mono',monospace}
+
+/* hero trust card */
+.herocard{position:relative;background:var(--bone);color:var(--ink);border-radius:20px;
+  padding:34px 34px 32px;box-shadow:0 40px 80px -36px rgba(0,0,0,.65);border:1px solid rgba(0,0,0,.06)}
+.herocard::before{content:"";position:absolute;top:0;left:34px;right:34px;height:4px;background:var(--brass);border-radius:0 0 4px 4px}
+.hc-top{display:flex;align-items:center;gap:15px;padding-bottom:24px;border-bottom:1px solid var(--line-l)}
+.hc-badge{width:48px;height:48px;border-radius:13px;flex:none;display:grid;place-items:center;
+  background:var(--brass);color:var(--ink);font-size:24px;line-height:1}
+.hc-stars{color:var(--brass);letter-spacing:2px;font-size:16px;line-height:1}
+.hc-sub{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--steel);text-transform:uppercase;margin-top:6px}
+.hc-score{margin-left:auto;font-family:'Archivo Black';font-size:44px;line-height:.85;color:var(--ink)}
+.hc-quote{padding:24px 0;border-bottom:1px solid var(--line-l)}
+.hc-quote p{font-size:16.5px;line-height:1.55;color:#33403A;font-weight:500}
+.hc-author{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.03em;color:var(--steel);margin-top:14px}
+.hc-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:22px}
+.hc-facts span{display:block;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);margin-bottom:6px}
+.hc-facts b{font-family:'Archivo Black';font-size:18px;letter-spacing:-.01em}
+.hc-facts b.amb{color:var(--brass-deep)}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--ink);overflow:hidden;padding:15px 0}
+.marquee .track{display:flex;gap:46px;white-space:nowrap;width:max-content;animation:scroll 30s linear infinite}
+.marquee span{font-family:'Archivo Black';font-size:18px;color:var(--bone);
+  display:inline-flex;align-items:center;gap:46px;text-transform:uppercase;letter-spacing:.01em}
+.marquee span::after{content:"";width:8px;height:8px;background:var(--brass);border-radius:2px;transform:rotate(45deg)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- Section shell ---------- */
+.sec{padding:104px 0}
+.sec-head{max-width:680px;margin-bottom:52px}
+.sec-head .mono{color:var(--brass-deep);font-size:12px;display:block;margin-bottom:15px}
+.sec-head h2{font-size:clamp(32px,4.4vw,54px)}
+.sec-head p{color:var(--steel);margin-top:16px;font-size:18px}
+
+/* ---------- Heritage stats ---------- */
+.stats{background:var(--ink);color:var(--bone)}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:0}
+.stat{padding:54px 34px;border-left:1px solid var(--line-d);position:relative}
+.stat:first-child{border-left:none}
+.stat .n{font-family:'Archivo Black';font-size:clamp(42px,5.6vw,66px);line-height:.9;color:var(--brass)}
+.stat .t{font-weight:600;font-size:17px;margin-top:14px}
+.stat .d{color:var(--steel-2);font-size:14.5px;margin-top:6px}
+
+/* ---------- Leistungen ---------- */
+.grid-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.serv{position:relative;background:#fff;border:1px solid var(--line-l);border-radius:var(--r);
+  padding:30px 26px 32px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.serv:hover{transform:translateY(-6px);box-shadow:0 26px 50px -28px rgba(12,20,17,.4)}
+.serv::before{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:var(--brass);transition:width .35s}
+.serv:hover::before{width:100%}
+.serv .num{font-family:'Space Mono',monospace;font-size:12px;color:var(--steel);font-weight:700}
+.serv .ic{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;margin:18px 0;
+  background:var(--bone-2);color:var(--brass-deep);border:1px solid var(--line-l)}
+.serv .ic svg{width:26px;height:26px}
+.serv h3{font-size:20px;letter-spacing:-.01em}
+.serv p{color:var(--steel);font-size:15.5px;margin-top:11px}
+
+/* ---------- Split / Warum ---------- */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.panel-dark{position:relative;background:var(--forest);color:var(--bone);border-radius:20px;padding:46px 44px;overflow:hidden}
+.panel-dark::before{content:"";position:absolute;right:-70px;top:-70px;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,rgba(196,138,58,.18),transparent 70%)}
+.panel-dark .tape{position:absolute;top:0;left:0}
+.panel-dark .inner{position:relative;z-index:2;padding-top:14px}
+.quotemark{font-family:'Archivo Black';font-size:64px;color:var(--brass);line-height:.6}
+.panel-dark blockquote{font-family:'Archivo Black';font-size:clamp(21px,2.5vw,28px);letter-spacing:-.01em;margin:10px 0 20px;line-height:1.12}
+.panel-dark cite{font-style:normal;color:var(--steel-2);font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.08em}
+.checklist{list-style:none;display:grid;gap:16px}
+.checklist li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px}
+.checklist .ck{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;background:var(--brass);color:var(--ink)}
+.checklist .ck svg{width:16px;height:16px}
+.checklist b{font-weight:700}
+.checklist span{color:var(--steel)}
+
+/* ---------- Reviews ---------- */
+.reviews{background:var(--bone-2)}
+.rband{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;
+  background:#fff;border:1px solid var(--line-l);border-radius:20px;padding:38px 40px;margin-bottom:34px}
+.rband .big{text-align:center;padding-right:40px;border-right:1px solid var(--line-l)}
+.rband .big .n{font-family:'Archivo Black';font-size:64px;line-height:.9;color:var(--brass)}
+.rband .big .stars{color:var(--brass);letter-spacing:3px;font-size:18px}
+.rband .big .c{color:var(--steel);font-size:12px;margin-top:6px;font-family:'Space Mono',monospace}
+.rband .say{font-family:'Archivo Black';font-size:clamp(19px,2.3vw,26px);letter-spacing:-.01em;line-height:1.2}
+.rband .say span{color:var(--brass-deep)}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tcard{background:#fff;border:1px solid var(--line-l);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:15px}
+.tcard .stars{color:var(--brass);letter-spacing:1px;font-size:14px}
+.tcard p{font-size:16px;color:#33403A}
+.tcard .who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.tcard .av{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--brass);
+  display:grid;place-items:center;font-family:'Archivo Black';font-size:16px}
+.tcard .who b{font-weight:700;font-size:14.5px}
+.tcard .who span{color:var(--steel);font-size:11.5px;font-family:'Space Mono',monospace}
+
+/* ---------- Über Cataldo ---------- */
+.about{background:var(--forest);color:var(--bone)}
+.about .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:52px;align-items:center}
+.about .mono{color:var(--brass-bright);font-size:12px}
+.about h2{font-size:clamp(28px,3.8vw,48px);margin:15px 0 22px;max-width:20ch;line-height:1.05}
+.about p{color:#CFD3CB;max-width:60ch;font-size:17.5px}
+.about p+p{margin-top:15px}
+.about .sign{margin-top:28px;font-family:'Archivo Black';font-size:24px}
+.about .sign span{color:var(--brass)}
+.emblem{position:relative;aspect-ratio:1;border-radius:20px;border:1px solid var(--line-d);
+  background:radial-gradient(circle at 50% 35%,rgba(196,138,58,.16),transparent 60%),var(--forest-2);
+  display:grid;place-content:center;text-align:center;padding:30px;overflow:hidden}
+.emblem .ring{width:200px;height:200px;border-radius:50%;border:2px dashed rgba(196,138,58,.5);display:grid;place-content:center;margin:0 auto}
+.emblem .eye{width:46px;height:26px;margin:0 auto 10px;color:var(--brass-bright)}
+.emblem .yr{font-family:'Archivo Black';font-size:50px;color:var(--brass);line-height:.9}
+.emblem .lb{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.18em;color:var(--steel-2);margin-top:8px}
+.emblem .tape{position:absolute;bottom:0;left:0}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:860px;margin:0 auto}
+.qa{border-bottom:1px solid var(--line-l)}
+.qa button{width:100%;background:none;border:none;color:var(--ink);cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:26px 4px;text-align:left;font-family:'Space Grotesk';font-size:18.5px;font-weight:600}
+.qa .ico{flex:none;width:30px;height:30px;border-radius:8px;border:1px solid var(--line-l);display:grid;place-items:center;
+  color:var(--brass-deep);font-size:20px;transition:transform .3s,background .3s,color .3s}
+.qa.open .ico{transform:rotate(45deg);background:var(--brass);color:var(--ink);border-color:var(--brass)}
+.qa .ans{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.qa .ans p{color:var(--steel);padding:0 4px 26px;font-size:16.5px}
+
+/* ---------- Kontakt ---------- */
+.contact{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+.cinfo{background:var(--forest);color:var(--bone);border-radius:22px;padding:44px;position:relative;overflow:hidden}
+.cinfo .tape{position:absolute;top:0;left:0}
+.cinfo h2{font-size:clamp(26px,3.8vw,42px);margin-top:14px;line-height:1.05}
+.cinfo h2 span{color:var(--brass)}
+.crow{display:flex;gap:15px;align-items:flex-start;margin-top:24px}
+.crow .ic{width:46px;height:46px;border-radius:12px;flex:none;display:grid;place-items:center;
+  background:rgba(196,138,58,.14);border:1px solid rgba(196,138,58,.3);color:var(--brass-bright)}
+.crow .ic svg{width:22px;height:22px}
+.crow .mono{font-size:10.5px;color:var(--steel-2);display:block;margin-bottom:3px}
+.crow a,.crow div>span:last-child{font-size:16px;font-weight:600}
+.phonebig{font-family:'Archivo Black';font-size:24px !important;color:var(--brass) !important}
+.hours{margin-top:8px}
+.hours .hr{display:flex;justify-content:space-between;font-size:14.5px;padding:5px 0;border-bottom:1px dashed var(--line-d);color:#CFD3CB}
+.hours .hr b{color:var(--bone);font-weight:600}
+form{background:#fff;border:1px solid var(--line-l);border-radius:22px;padding:44px}
+.field{margin-bottom:17px}
+.field label{display:block;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--steel);margin-bottom:8px}
+.field input,.field textarea,.field select{width:100%;background:var(--bone);border:1px solid var(--line-l);border-radius:12px;
+  padding:14px 16px;color:var(--ink);font-family:inherit;font-size:16px;transition:border-color .2s}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--brass)}
+.field textarea{min-height:118px;resize:vertical}
+form button{width:100%;background:var(--brass);color:var(--ink);border:none;border-radius:100px;
+  padding:16px;font-family:'Space Grotesk';font-weight:700;font-size:16px;cursor:pointer;transition:transform .2s}
+form button:hover{transform:translateY(-2px)}
+.formnote{margin-top:13px;color:var(--steel);font-size:12.5px;text-align:center;font-family:'Space Mono',monospace}
+.thanks{display:none;text-align:center;padding:20px 0}
+.thanks.show{display:block}
+.thanks .ok{width:60px;height:60px;border-radius:50%;background:var(--bone-2);color:var(--brass-deep);
+  display:grid;place-items:center;margin:0 auto 18px}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:var(--bone);padding:60px 0 28px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:42px}
+.fbrand{display:flex;align-items:center;gap:11px;font-family:'Archivo Black';font-size:21px;margin-bottom:15px}
+.fbrand .mk{width:36px;height:36px;border-radius:9px;flex:none;display:grid;place-items:center;background:var(--brass);color:var(--ink);font-size:18px}
+footer p.tag{color:var(--steel-2);font-size:15px;max-width:36ch}
+.fcol h4{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--steel);text-transform:uppercase;margin-bottom:17px}
+.fcol a,.fcol span{display:block;color:var(--steel-2);font-size:15px;margin-bottom:10px;transition:color .2s}
+.fcol a:hover{color:var(--brass-bright)}
+.fbot{border-top:1px solid var(--line-d);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  color:var(--steel);font-size:13px}
+.fbot .credit a{color:var(--brass-bright);font-weight:600}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  body{font-size:16px}
+  .nav ul,.nav .cta{display:none}
+  .nav .menutoggle{display:grid}
+  .hero .wrap{grid-template-columns:1fr;gap:42px}
+  .grid-serv{grid-template-columns:1fr 1fr}
+  .stats .wrap{grid-template-columns:1fr}
+  .stat{border-left:none;border-top:1px solid var(--line-d);padding:38px 24px}
+  .stat:first-child{border-top:none}
+  .split{grid-template-columns:1fr;gap:34px}
+  .rband{grid-template-columns:1fr;gap:24px;text-align:center}
+  .rband .big{border-right:none;border-bottom:1px solid var(--line-l);padding:0 0 24px}
+  .tgrid{grid-template-columns:1fr}
+  .about .wrap{grid-template-columns:1fr;gap:34px}
+  .emblem{max-width:340px;margin:0 auto}
+  .contact{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr;gap:30px}
+  .sec{padding:78px 0}
+}
+@media(max-width:560px){
+  .grid-serv{grid-template-columns:1fr}
+  .ratingpill{flex-wrap:wrap}
+}
+.menutoggle{background:none;border:1px solid var(--line-d);border-radius:10px;width:44px;height:44px;color:var(--bone);place-items:center}
+#mobnav{display:none;position:fixed;inset:0;z-index:70;background:rgba(12,20,17,.98);backdrop-filter:blur(10px);
+  flex-direction:column;align-items:center;justify-content:center;gap:24px}
+#mobnav.show{display:flex}
+#mobnav a{font-family:'Archivo Black';font-size:28px;text-transform:uppercase;color:var(--bone)}
+#mobnav .close{position:absolute;top:24px;right:24px;font-size:34px;color:var(--steel-2)}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="previewbar">
+  Unverbindliche Design-Vorschau für ARGUS Automobile GmbH · erstellt von <a href="https://evowebdesign.ch">evowebdesign.ch</a>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <span class="mk">A</span>
+      <span>ARGUS<small>AUTOMOBILE · ARBON</small></span>
+    </a>
+    <ul>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#warum">Warum ARGUS</a></li>
+      <li><a href="#bewertungen">Bewertungen</a></li>
+      <li><a href="#cataldo">Über den Betrieb</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a href="tel:+41714468282" class="cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      071 446 82 82
+    </a>
+    <button class="menutoggle" aria-label="Menü" onclick="document.getElementById('mobnav').classList.add('show')">
+      <svg viewBox="0 0 24 24" width="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav id="mobnav">
+  <a href="#" class="close" onclick="document.getElementById('mobnav').classList.remove('show');return false;">✕</a>
+  <a href="#leistungen" onclick="closeMob()">Leistungen</a>
+  <a href="#warum" onclick="closeMob()">Warum ARGUS</a>
+  <a href="#bewertungen" onclick="closeMob()">Bewertungen</a>
+  <a href="#cataldo" onclick="closeMob()">Über den Betrieb</a>
+  <a href="#kontakt" onclick="closeMob()">Kontakt</a>
+  <a href="tel:+41714468282" class="brass" onclick="closeMob()">071 446 82 82</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow mono">Autowerkstatt · Arbon · seit 2000</span>
+      <h1>Ein Auge<br>fürs Detail.<br><em>An Ihrem Auto.</em></h1>
+      <p class="lead">Service, Reparaturen, Fahrzeughandel und die Pflege von Oldtimern. Bei Cataldo Scelzo in Arbon ist Ihr Fahrzeug in den Händen eines erfahrenen Fachmanns. Ehrlich beraten, sorgfältig gearbeitet.</p>
+      <div class="herobtns">
+        <a href="tel:+41714468282" class="cta btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Direkt anrufen</a>
+        <a href="#kontakt" class="btn-ghost btn-lg">Termin anfragen
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="ratingpill">
+        <span class="stars">★★★★★</span>
+        <b>4,9</b>
+        <span class="g">8 BEWERTUNGEN</span>
+      </div>
+    </div>
+
+    <div class="herocard reveal">
+      <div class="hc-top">
+        <span class="hc-badge">★</span>
+        <div>
+          <div class="hc-stars">★★★★★</div>
+          <div class="hc-sub">8 Google-Bewertungen</div>
+        </div>
+        <div class="hc-score">4,9</div>
+      </div>
+      <div class="hc-quote">
+        <p>„Cataldo ist ein erfahrener Autogaragist, der sein Handwerk bestens versteht. Er arbeitet zuverlässig, sorgfältig und mit einem hohen Qualitätsanspruch.“</p>
+        <div class="hc-author">Rafael Holderegger · Google-Bewertung</div>
+      </div>
+      <div class="hc-facts">
+        <div><span>Betrieb seit</span><b class="amb">2000</b></div>
+        <div><span>Standort</span><b>Arbon</b></div>
+        <div><span>Auch</span><b>Oldtimer</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Service &amp; Wartung</span><span>Reparaturen</span><span>Fahrzeughandel</span><span>Oldtimer &amp; Klassiker</span><span>Restauration</span><span>Ehrliche Beratung</span>
+    <span>Service &amp; Wartung</span><span>Reparaturen</span><span>Fahrzeughandel</span><span>Oldtimer &amp; Klassiker</span><span>Restauration</span><span>Ehrliche Beratung</span>
+  </div>
+</div>
+
+<!-- ================= STATS ================= -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="n">2000</div><div class="t">Seit über 25 Jahren</div><div class="d">Erfahrung rund ums Auto, hier in Arbon am Bodensee.</div></div>
+    <div class="stat reveal"><div class="n">4,9</div><div class="t">Bei 8 Google-Bewertungen</div><div class="d">Kundschaft, die Cataldos Handwerk und Ehrlichkeit schätzt.</div></div>
+    <div class="stat reveal"><div class="n">1</div><div class="t">Ein Ansprechpartner</div><div class="d">Vom Service über den Fahrzeugkauf bis zum Oldtimer.</div></div>
+  </div>
+</section>
+
+<!-- ================= LEISTUNGEN ================= -->
+<section class="sec" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="mono">01 — Leistungen</span>
+      <h2>Alles rund<br>ums Fahrzeug</h2>
+      <p>Ob Service, Reparatur, ein neues Fahrzeug oder ein Klassiker, der Pflege braucht: Bei ARGUS ist Ihr Auto bei einem Fachmann, der sein Handwerk versteht.</p>
+    </div>
+    <div class="grid-serv">
+      <div class="serv reveal">
+        <span class="num">/ 01</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
+        <h3>Service &amp; Wartung</h3>
+        <p>Regelmässiger Service und Wartung, damit Ihr Fahrzeug zuverlässig und sicher unterwegs bleibt.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 02</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.3L3 18l3 3 6.4-6.3a4 4 0 0 0 5.3-5.4l-2.6 2.6-2.1-2.1z"/></svg></div>
+        <h3>Reparaturen</h3>
+        <p>Reparaturen aller Art, fachgerecht ausgeführt und ehrlich beraten, bevor eine Arbeit beginnt.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 03</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l2-6-4-3H7L3 11z"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="16.5" cy="17.5" r="1.6"/></svg></div>
+        <h3>Fahrzeughandel</h3>
+        <p>An- und Verkauf von Fahrzeugen aller Marken, mit persönlicher und transparenter Beratung.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 04</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21"/></svg></div>
+        <h3>Oldtimer &amp; Klassiker</h3>
+        <p>Reparatur, Wartung und Restauration historischer Fahrzeuge, mit dem Auge fürs Detail, das Klassiker verdienen.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 05</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 12.6 12 21l-9-9V4h8z"/><circle cx="7.5" cy="7.5" r="1.4"/></svg></div>
+        <h3>Fahrzeug-Vermittlung</h3>
+        <p>Suchen oder verkaufen Sie ein bestimmtes Fahrzeug, übernimmt ARGUS die Vermittlung für Sie.</p>
+      </div>
+      <div class="serv reveal">
+        <span class="num">/ 06</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg></div>
+        <h3>Beratung &amp; Finanzierung</h3>
+        <p>Auf Wunsch Unterstützung bei der Fahrzeugfinanzierung über bevollmächtigte Partner, unkompliziert erklärt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WARUM / SPLIT ================= -->
+<section class="sec" id="warum" style="padding-top:0">
+  <div class="wrap split">
+    <div class="panel-dark reveal">
+      <div class="tape thin"></div>
+      <div class="inner">
+        <div class="quotemark">&#8220;</div>
+        <blockquote>Hier wird man nicht nur als Kunde, sondern als Mensch behandelt.</blockquote>
+        <cite>Maurice K. · Google-Bewertung</cite>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="mono" style="color:var(--brass-deep);font-size:12px">02 — Warum ARGUS</span>
+      <h2 style="font-size:clamp(28px,4vw,48px);margin:15px 0 22px;line-height:1.05">Eine Garage,<br>der man<br><span class="brass">vertraut.</span></h2>
+      <p style="color:var(--steel);font-size:17.5px;margin-bottom:26px">Was die Kundschaft an ARGUS schätzt, steht so in fast jeder Bewertung: kompetentes Handwerk, ehrliche und transparente Beratung, und ein Ansprechpartner, der sich Zeit nimmt.</p>
+      <ul class="checklist">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Persönlich bei Cataldo.</b> <span>Ein fester Ansprechpartner, der Sie kennt und sich für Ihr Anliegen Zeit nimmt.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Ehrlich &amp; transparent.</b> <span>Sie erfahren klar, was ansteht und was es kostet, bevor eine Arbeit beginnt.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Erfahrung seit 2000.</b> <span>Langjähriges Können vom täglichen Service bis zur Restauration eines Klassikers.</span></div></li>
+      </ul>
+      <a href="#kontakt" class="cta btn-lg" style="margin-top:30px">Termin anfragen
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEWERTUNGEN ================= -->
+<section class="sec reviews" id="bewertungen">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:34px">
+      <span class="mono">03 — Bewertungen</span>
+      <h2>Was Kundinnen<br>und Kunden sagen</h2>
+    </div>
+    <div class="rband reveal">
+      <div class="big">
+        <div class="n">4,9</div>
+        <div class="stars">★★★★★</div>
+        <div class="c">8 GOOGLE-BERICHTE</div>
+      </div>
+      <div class="say">Fast durchweg <span>fünf Sterne</span> und immer wieder dasselbe Lob: kompetent, zuverlässig, fair und freundlich.</div>
+    </div>
+    <div class="tgrid">
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p>„Hier wird man nicht nur als Kunde, sondern als Mensch behandelt. Cataldo ist kompetent, freundlich und immer hilfsbereit, egal ob Routine-Service, spontane Reparatur oder einfach eine fachliche Beratung.“</p>
+        <div class="who"><span class="av">M</span><div><b>Maurice K.</b><br><span>Google-Bewertung</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p>„Cataldo ist ein erfahrener Autogaragist, der sein Handwerk bestens versteht. Er arbeitet zuverlässig, sorgfältig und mit einem hohen Qualitätsanspruch. Die Beratung ist kompetent und transparent. Absolut empfehlenswert!“</p>
+        <div class="who"><span class="av">R</span><div><b>Rafael Holderegger</b><br><span>Local Guide · Google</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p>„Top Autowerkstatt! Schnell, zuverlässig, fair und sehr freundlich. Absolut empfehlenswert.“</p>
+        <div class="who"><span class="av">T</span><div><b>Tolga Özdemir</b><br><span>Google-Bewertung</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÜBER CATALDO ================= -->
+<section class="sec about" id="cataldo">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="mono">04 — Über den Betrieb</span>
+      <h2>Seit 2000 die Garage in Arbon.</h2>
+      <p>ARGUS Automobile ist der Betrieb von Cataldo Scelzo an der Romanshornerstrasse in Arbon. Seit über 25 Jahren kümmert er sich hier um die Fahrzeuge seiner Kundschaft, vom alltäglichen Service bis zur liebevollen Restauration eines Oldtimers.</p>
+      <p>Der Name ARGUS steht für den wachsamen Blick, der in jedes Detail geht. Genau so arbeitet Cataldo: aufmerksam, sorgfältig und ehrlich. Dass dieser Weg ankommt, zeigen 8 Bewertungen mit einem Schnitt von 4,9 Sternen.</p>
+      <div class="sign">— Cataldo Scelzo, <span>ARGUS Automobile GmbH</span></div>
+    </div>
+    <div class="emblem reveal" aria-hidden="true">
+      <div class="ring">
+        <div>
+          <svg class="eye" viewBox="0 0 48 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13S9 3 24 3s22 10 22 10-7 10-22 10S2 13 2 13z"/><circle cx="24" cy="13" r="5"/></svg>
+          <div class="lb" style="margin:0 0 4px">SEIT</div>
+          <div class="yr">2000</div>
+          <div class="lb">ARBON · TG</div>
+        </div>
+      </div>
+      <div class="tape thin"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec" style="padding-bottom:104px">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-inline:auto">
+      <span class="mono">05 — Häufige Fragen</span>
+      <h2>Gut zu wissen</h2>
+    </div>
+    <div class="faq">
+      <div class="qa reveal"><button>Wie vereinbare ich einen Termin?<span class="ico">+</span></button><div class="ans"><p>Am einfachsten telefonisch unter 071 446 82 82, per E-Mail an garage@argus-automobile.ch oder über das Formular auf dieser Seite. Cataldo meldet sich und Sie finden gemeinsam einen passenden Termin.</p></div></div>
+      <div class="qa reveal"><button>Welche Arbeiten übernimmt ARGUS?<span class="ico">+</span></button><div class="ans"><p>Service und Wartung, Reparaturen aller Art, Fahrzeughandel sowie die Reparatur, Wartung und Restauration von Oldtimern. Vieles rund ums Auto also aus einer Hand.</p></div></div>
+      <div class="qa reveal"><button>Betreut ARGUS auch Oldtimer und Klassiker?<span class="ico">+</span></button><div class="ans"><p>Ja. Reparatur, Wartung und Restauration historischer Fahrzeuge gehören ausdrücklich zum Angebot, ebenso die Vermittlung von Klassikern.</p></div></div>
+      <div class="qa reveal"><button>Kann ich bei ARGUS ein Fahrzeug kaufen oder verkaufen?<span class="ico">+</span></button><div class="ans"><p>Ja. ARGUS handelt mit Fahrzeugen aller Marken und übernimmt auf Wunsch auch die Vermittlung. Auf Anfrage gibt es zudem Unterstützung bei der Finanzierung über bevollmächtigte Partner.</p></div></div>
+      <div class="qa reveal"><button>Wann hat die Garage geöffnet?<span class="ico">+</span></button><div class="ans"><p>Montag bis Freitag von 08:00 bis 18:00 Uhr und Samstag von 08:00 bis 12:00 Uhr. Sonntag geschlossen. Am besten kurz anrufen, dann ist der Weg sicher nicht umsonst.</p></div></div>
+      <div class="qa reveal"><button>Wo befindet sich ARGUS Automobile?<span class="ico">+</span></button><div class="ans"><p>An der Romanshornerstrasse 83a in 9320 Arbon, direkt am Bodensee. Parkmöglichkeiten sind vor Ort vorhanden.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<section class="sec" id="kontakt" style="padding-top:0">
+  <div class="wrap contact">
+    <div class="cinfo reveal">
+      <div class="tape thin"></div>
+      <span class="mono" style="color:var(--brass-bright);font-size:12px">06 — Kontakt</span>
+      <h2>Bringen Sie<br>Ihr Auto zu<br><span>ARGUS.</span></h2>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><span class="mono">Telefon</span><a href="tel:+41714468282" class="phonebig">071 446 82 82</a></div>
+      </div>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+        <div><span class="mono">E-Mail</span><a href="mailto:garage@argus-automobile.ch">garage@argus-automobile.ch</a></div>
+      </div>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><span class="mono">Adresse</span><span>Romanshornerstrasse 83a<br>9320 Arbon</span></div>
+      </div>
+      <div class="crow">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div style="flex:1">
+          <span class="mono">Öffnungszeiten</span>
+          <div class="hours">
+            <div class="hr"><b>Mo — Fr</b><span>08:00 – 18:00</span></div>
+            <div class="hr"><b>Samstag</b><span>08:00 – 12:00</span></div>
+            <div class="hr"><b>Sonntag</b><span>geschlossen</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form onsubmit="return sendForm(event)">
+      <div id="formfields">
+        <div class="field"><label>Name</label><input type="text" name="name" required placeholder="Ihr Name"></div>
+        <div class="field"><label>Telefon oder E-Mail</label><input type="text" name="kontakt" required placeholder="Damit Cataldo sich melden kann"></div>
+        <div class="field"><label>Worum geht es?</label>
+          <select name="leistung">
+            <option>Service &amp; Wartung</option>
+            <option>Reparatur</option>
+            <option>Fahrzeug kaufen / verkaufen</option>
+            <option>Oldtimer / Klassiker</option>
+            <option>Beratung / Finanzierung</option>
+            <option>Etwas anderes</option>
+          </select>
+        </div>
+        <div class="field"><label>Kurz beschreiben</label><textarea name="msg" placeholder="Fahrzeug, Anliegen, Wunschtermin …"></textarea></div>
+        <button type="submit">Anfrage senden</button>
+        <div class="formnote">Vorschau-Formular · in der Live-Version landet die Anfrage direkt bei Cataldo</div>
+      </div>
+      <div class="thanks" id="thanks">
+        <div class="ok"><svg viewBox="0 0 24 24" width="28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3 style="font-size:24px">Danke, Anfrage notiert!</h3>
+        <p style="color:var(--steel);margin-top:10px">In der fertigen Version bekommt Cataldo Ihre Anfrage sofort. Für die Vorschau ist hier Schluss.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand"><span class="mk">A</span> ARGUS</div>
+        <p class="tag">Automobile GmbH in Arbon. Service, Reparaturen, Fahrzeughandel und Oldtimer-Pflege. Bei Cataldo in besten Händen, seit 2000.</p>
+      </div>
+      <div class="fcol">
+        <h4>Leistungen</h4>
+        <a href="#leistungen">Service &amp; Wartung</a>
+        <a href="#leistungen">Reparaturen</a>
+        <a href="#leistungen">Fahrzeughandel</a>
+        <a href="#leistungen">Oldtimer &amp; Klassiker</a>
+      </div>
+      <div class="fcol">
+        <h4>Kontakt</h4>
+        <a href="tel:+41714468282">071 446 82 82</a>
+        <a href="mailto:garage@argus-automobile.ch">garage@argus-automobile.ch</a>
+        <span>Romanshornerstrasse 83a</span>
+        <span>9320 Arbon</span>
+        <span>Mo–Fr 08–18 · Sa 08–12 Uhr</span>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 ARGUS Automobile GmbH · Arbon</span>
+      <span class="credit">Design-Vorschau erstellt von <a href="https://evowebdesign.ch">evowebdesign.ch</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function closeMob(){document.getElementById('mobnav').classList.remove('show');}
+function sendForm(e){e.preventDefault();document.getElementById('formfields').style.display='none';document.getElementById('thanks').classList.add('show');return false;}
+
+document.querySelectorAll('.qa button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const qa=b.parentElement,ans=qa.querySelector('.ans'),open=qa.classList.contains('open');
+    document.querySelectorAll('.qa').forEach(x=>{x.classList.remove('open');x.querySelector('.ans').style.maxHeight=null;});
+    if(!open){qa.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+  });
+});
+
+const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoRepair",
+  "name":"ARGUS Automobile GmbH",
+  "description":"Autowerkstatt und Fahrzeughandel in Arbon am Bodensee. Service, Reparaturen, Fahrzeughandel sowie Reparatur, Wartung und Restauration von Oldtimern. Betrieb von Cataldo Scelzo seit 2000.",
+  "url":"https://evowebdesign.ch/argus-automobile-preview/",
+  "telephone":"+41714468282",
+  "email":"garage@argus-automobile.ch",
+  "founder":{"@type":"Person","name":"Cataldo Scelzo"},
+  "foundingDate":"2000",
+  "priceRange":"$$",
+  "address":{"@type":"PostalAddress","streetAddress":"Romanshornerstrasse 83a","postalCode":"9320","addressLocality":"Arbon","addressRegion":"TG","addressCountry":"CH"},
+  "geo":{"@type":"GeoCoordinates","latitude":47.5193359,"longitude":9.4202934},
+  "areaServed":[{"@type":"City","name":"Arbon"},{"@type":"City","name":"Romanshorn"},{"@type":"City","name":"Rorschach"}],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}
+  ],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"8","bestRating":"5"},
+  "review":[
+    {"@type":"Review","author":{"@type":"Person","name":"Maurice K."},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Hier wird man nicht nur als Kunde, sondern als Mensch behandelt. Cataldo ist kompetent, freundlich und immer hilfsbereit, egal ob Routine-Service, spontane Reparatur oder fachliche Beratung."},
+    {"@type":"Review","author":{"@type":"Person","name":"Rafael Holderegger"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Cataldo ist ein erfahrener Autogaragist, der sein Handwerk bestens versteht. Er arbeitet zuverlässig, sorgfältig und mit einem hohen Qualitätsanspruch. Die Beratung ist kompetent und transparent."},
+    {"@type":"Review","author":{"@type":"Person","name":"Tolga Özdemir"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Top Autowerkstatt! Schnell, zuverlässig, fair und sehr freundlich. Absolut empfehlenswert."}
+  ],
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Service & Wartung"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Reparaturen"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Fahrzeughandel"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Oldtimer- und Klassiker-Restauration"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Fahrzeug-Vermittlung"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Beratung und Finanzierungsunterstützung"}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Wie vereinbare ich einen Termin?","acceptedAnswer":{"@type":"Answer","text":"Telefonisch unter 071 446 82 82, per E-Mail an garage@argus-automobile.ch oder über das Kontaktformular. Cataldo meldet sich und Sie finden gemeinsam einen Termin."}},
+    {"@type":"Question","name":"Welche Arbeiten übernimmt ARGUS?","acceptedAnswer":{"@type":"Answer","text":"Service und Wartung, Reparaturen aller Art, Fahrzeughandel sowie Reparatur, Wartung und Restauration von Oldtimern."}},
+    {"@type":"Question","name":"Betreut ARGUS auch Oldtimer und Klassiker?","acceptedAnswer":{"@type":"Answer","text":"Ja, Reparatur, Wartung und Restauration historischer Fahrzeuge gehören ausdrücklich zum Angebot, ebenso die Vermittlung von Klassikern."}},
+    {"@type":"Question","name":"Kann ich bei ARGUS ein Fahrzeug kaufen oder verkaufen?","acceptedAnswer":{"@type":"Answer","text":"Ja, ARGUS handelt mit Fahrzeugen aller Marken und übernimmt auf Wunsch die Vermittlung sowie Unterstützung bei der Finanzierung über bevollmächtigte Partner."}},
+    {"@type":"Question","name":"Wann hat die Garage geöffnet?","acceptedAnswer":{"@type":"Answer","text":"Montag bis Freitag 08:00 bis 18:00 Uhr, Samstag 08:00 bis 12:00 Uhr, Sonntag geschlossen."}},
+    {"@type":"Question","name":"Wo befindet sich ARGUS Automobile?","acceptedAnswer":{"@type":"Answer","text":"An der Romanshornerstrasse 83a in 9320 Arbon am Bodensee. Parkmöglichkeiten sind vor Ort vorhanden."}}
+  ]
+}
+</script>
+</body>
+</html>
