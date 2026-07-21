@@ -212,12 +212,49 @@ img{max-width:100%;display:block}
 .about2-studio img{width:100%;height:100%;object-fit:cover}
 .about2-studio .cap2{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(to top,rgba(42,20,24,.82),transparent);color:var(--porcelain);font-family:'Courier Prime',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:18px 10px 8px;text-align:center}
 
-/* ---- booking CTA panel ---- */
-.book-panel{max-width:760px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:15px;padding:58px 40px;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow);background:radial-gradient(130% 130% at 50% 0%,var(--porcelain) 0%,var(--blush) 100%)}
-.book-panel .bc-em{font-size:48px}
-.book-panel h3{font-size:clamp(24px,3vw,32px)}
-.book-panel p{color:var(--mauve);max-width:30em;font-size:16.5px}
-.book-panel .btn{margin-top:8px}
+/* ---- custom booking calendar ---- */
+.booker{position:relative;max-width:940px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;background:var(--porcelain);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+.booker-col{padding:34px 32px}
+.booker-col+.booker-col{border-left:1px solid var(--line)}
+.bk-step{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.bk-step:not(:first-child){margin-top:30px}
+.bk-num{width:26px;height:26px;flex:none;border-radius:50%;background:var(--wine);color:#fff;font-family:'Bricolage Grotesque';font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.bk-step h3{font-size:18px}
+.bk-services{display:flex;flex-direction:column;gap:8px}
+.bk-services button{display:flex;align-items:center;gap:8px;width:100%;text-align:left;padding:12px 16px;border:1.5px solid var(--line);border-radius:12px;background:var(--porcelain);font-family:inherit;font-size:15.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s}
+.bk-services button span{font-family:'Courier Prime',monospace;font-size:11.5px;font-weight:400;color:var(--rose)}
+.bk-services button em{margin-left:auto;font-style:normal;font-family:'Courier Prime',monospace;font-size:12.5px;color:var(--mauve);font-weight:400;white-space:nowrap}
+.bk-services button:hover{border-color:var(--rose)}
+.bk-services button.sel{border-color:var(--wine);background:var(--blush)}
+.bk-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.bk-cal-head span{font-family:'Bricolage Grotesque';font-weight:700;font-size:16px}
+.bk-nav{width:34px;height:34px;border-radius:9px;border:1.5px solid var(--line);background:var(--porcelain);cursor:pointer;font-size:18px;color:var(--wine);line-height:1;transition:border-color .2s,background .2s}
+.bk-nav:hover:not(:disabled){border-color:var(--wine);background:var(--blush)}
+.bk-nav:disabled{opacity:.35;cursor:not-allowed}
+.bk-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.bk-dow{text-align:center;font-family:'Courier Prime',monospace;font-size:11px;color:var(--mauve);padding:4px 0}
+.bk-day{aspect-ratio:1;border:0;background:transparent;border-radius:9px;font-family:inherit;font-size:14.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:background .2s,color .2s;padding:0}
+.bk-day:hover:not(:disabled):not(.sel){background:var(--blush)}
+.bk-day:disabled{color:rgba(42,20,24,.22);cursor:default}
+.bk-day.sel{background:var(--wine);color:#fff}
+.bk-day.empty{cursor:default}
+.bk-times{display:flex;flex-wrap:wrap;gap:8px;min-height:44px}
+.bk-hint{font-size:14px;color:var(--mauve);font-family:'Courier Prime',monospace}
+.bk-time{padding:10px 16px;border:1.5px solid var(--line);border-radius:100px;background:var(--porcelain);font-family:inherit;font-size:14.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s}
+.bk-time:hover:not(.sel){border-color:var(--rose)}
+.bk-time.sel{border-color:var(--wine);background:var(--wine);color:#fff}
+.bk-form{display:flex;flex-direction:column;gap:10px}
+.bk-form input{width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;background:var(--porcelain);font-family:inherit;font-size:16px;color:var(--ink)}
+.bk-form input:focus{outline:none;border-color:var(--wine)}
+.bk-summary{margin:18px 0 14px;font-size:14px;color:var(--mauve);min-height:1.2em;font-family:'Courier Prime',monospace;line-height:1.5}
+.bk-summary b{color:var(--wine)}
+.bk-submit{width:100%}
+.bk-submit:disabled{opacity:.5;cursor:not-allowed}
+.bk-success{position:absolute;inset:0;z-index:5;background:radial-gradient(130% 130% at 50% 0%,var(--porcelain),var(--blush));display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:40px}
+.bk-success[hidden]{display:none}
+.bk-check{width:64px;height:64px;border-radius:50%;background:var(--wine);color:#fff;font-size:32px;display:flex;align-items:center;justify-content:center}
+.bk-success h3{font-size:28px}
+.bk-success p{color:var(--mauve);max-width:26em;font-size:16px}
 
 /* ---- prices ---- */
 .prices{background:var(--oxblood);color:var(--porcelain)}
@@ -335,7 +372,9 @@ img{max-width:100%;display:block}
   .t-a{grid-column:auto;grid-row:auto}
   .pextra ul{grid-template-columns:1fr}
   .about2-studio{width:50%;left:-6px;bottom:-24px}
-  .book-panel{padding:44px 24px}
+  .booker{grid-template-columns:1fr}
+  .booker-col{padding:28px 22px}
+  .booker-col+.booker-col{border-left:0;border-top:1px solid var(--line)}
   .hero-tag{left:0}
 }
 @media(prefers-reduced-motion:reduce){
@@ -597,13 +636,45 @@ img{max-width:100%;display:block}
     <div class="wrap">
       <div class="sec-head center reveal">
         <h2>Direkt online buchen</h2>
-        <p>Wähle deine Leistung und einen freien Termin. Ohne Anruf, ohne Warten.</p>
+        <p>Wähle Leistung, Tag und Uhrzeit. Tifani bestätigt deinen Termin persönlich.</p>
       </div>
-      <div class="book-panel reveal">
-        <span class="bc-em">🗓️</span>
-        <h3>Termin bei Tifani sichern</h3>
-        <p>Freie Termine ansehen und in unter einer Minute verbindlich buchen. Die Bestätigung kommt sofort.</p>
-        <a class="btn btn-wine" href="https://nonamey5a8.setmore.com/" target="_blank" rel="noopener">Zum Buchungskalender <span class="arw">→</span></a>
+      <div class="booker reveal" id="booker">
+        <div class="booker-col">
+          <div class="bk-step"><span class="bk-num">1</span><h3>Leistung</h3></div>
+          <div class="bk-services" id="bkServices">
+            <button type="button" data-svc="Neuset (Neumodellage)">Neuset <span>Neumodellage</span><em>ab CHF 110</em></button>
+            <button type="button" data-svc="Auffüllen">Auffüllen <span>Refill</span><em>ab CHF 75</em></button>
+            <button type="button" data-svc="Maniküre">Maniküre<em>CHF 10</em></button>
+            <button type="button" data-svc="Russische Maniküre">Russische Maniküre<em>CHF 15</em></button>
+            <button type="button" data-svc="Dry Pediküre">Dry Pediküre<em>CHF 45</em></button>
+          </div>
+          <div class="bk-step"><span class="bk-num">2</span><h3>Tag</h3></div>
+          <div class="bk-cal">
+            <div class="bk-cal-head">
+              <button class="bk-nav" id="bkPrev" type="button" aria-label="Voriger Monat">‹</button>
+              <span id="bkMonth"></span>
+              <button class="bk-nav" id="bkNext" type="button" aria-label="Nächster Monat">›</button>
+            </div>
+            <div class="bk-cal-grid" id="bkGrid"></div>
+          </div>
+        </div>
+        <div class="booker-col">
+          <div class="bk-step"><span class="bk-num">3</span><h3>Uhrzeit</h3></div>
+          <div class="bk-times" id="bkTimes"><p class="bk-hint">Bitte zuerst einen Tag wählen.</p></div>
+          <div class="bk-step"><span class="bk-num">4</span><h3>Deine Daten</h3></div>
+          <div class="bk-form">
+            <input id="bkName" type="text" placeholder="Vor- und Nachname" autocomplete="name">
+            <input id="bkPhone" type="tel" placeholder="Telefonnummer" autocomplete="tel">
+          </div>
+          <div class="bk-summary" id="bkSummary"></div>
+          <button class="btn btn-wine bk-submit" id="bkSubmit" type="button" disabled>Termin anfragen <span class="arw">→</span></button>
+        </div>
+        <div class="bk-success" id="bkSuccess" hidden>
+          <span class="bk-check">✓</span>
+          <h3>Anfrage eingegangen</h3>
+          <p id="bkSuccessMsg"></p>
+          <button class="btn btn-outline" id="bkReset" type="button">Weiteren Termin anfragen</button>
+        </div>
       </div>
     </div>
   </section>
@@ -701,6 +772,76 @@ document.querySelectorAll('.faq-q').forEach(q=>{
     if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
   });
 });
+// custom booking calendar
+(function(){
+  const root=document.getElementById('booker'); if(!root) return;
+  const svcWrap=document.getElementById('bkServices'),grid=document.getElementById('bkGrid'),
+    monthLbl=document.getElementById('bkMonth'),prev=document.getElementById('bkPrev'),next=document.getElementById('bkNext'),
+    timesWrap=document.getElementById('bkTimes'),nameI=document.getElementById('bkName'),phoneI=document.getElementById('bkPhone'),
+    summary=document.getElementById('bkSummary'),submit=document.getElementById('bkSubmit'),
+    success=document.getElementById('bkSuccess'),successMsg=document.getElementById('bkSuccessMsg'),reset=document.getElementById('bkReset');
+  const SLOTS=['09:00','10:30','13:00','14:30','16:00'];
+  const MONTHS=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+  const DOW=['Mo','Di','Mi','Do','Fr','Sa','So'];
+  const state={service:'',date:null,time:''};
+  const today=new Date();today.setHours(0,0,0,0);
+  let view=new Date(today.getFullYear(),today.getMonth(),1);
+  const maxMonth=new Date(today.getFullYear(),today.getMonth()+3,1);
+  svcWrap.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+    svcWrap.querySelectorAll('button').forEach(x=>x.classList.remove('sel'));
+    b.classList.add('sel');state.service=b.dataset.svc;update();
+  }));
+  function renderCal(){
+    monthLbl.textContent=MONTHS[view.getMonth()]+' '+view.getFullYear();
+    prev.disabled=(view.getFullYear()===today.getFullYear()&&view.getMonth()===today.getMonth());
+    next.disabled=(view.getFullYear()===maxMonth.getFullYear()&&view.getMonth()===maxMonth.getMonth());
+    grid.innerHTML='';
+    DOW.forEach(d=>{const e=document.createElement('div');e.className='bk-dow';e.textContent=d;grid.appendChild(e);});
+    const first=new Date(view.getFullYear(),view.getMonth(),1);
+    const startDow=(first.getDay()+6)%7;
+    for(let i=0;i<startDow;i++){const e=document.createElement('div');e.className='bk-day empty';grid.appendChild(e);}
+    const dim=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+    for(let d=1;d<=dim;d++){
+      const cur=new Date(view.getFullYear(),view.getMonth(),d);
+      const btn=document.createElement('button');btn.type='button';btn.className='bk-day';btn.textContent=d;
+      if(cur<today){btn.disabled=true;}
+      else{
+        if(state.date&&cur.getTime()===state.date.getTime())btn.classList.add('sel');
+        btn.addEventListener('click',()=>{state.date=cur;state.time='';renderCal();renderTimes();update();});
+      }
+      grid.appendChild(btn);
+    }
+  }
+  function renderTimes(){
+    if(!state.date){timesWrap.innerHTML='<p class="bk-hint">Bitte zuerst einen Tag wählen.</p>';return;}
+    timesWrap.innerHTML='';
+    SLOTS.forEach(t=>{
+      const b=document.createElement('button');b.type='button';b.className='bk-time'+(state.time===t?' sel':'');b.textContent=t;
+      b.addEventListener('click',()=>{state.time=t;renderTimes();update();});
+      timesWrap.appendChild(b);
+    });
+  }
+  function fmtDate(d){return DOW[(d.getDay()+6)%7]+', '+d.getDate()+'. '+MONTHS[d.getMonth()]+' '+d.getFullYear();}
+  function update(){
+    const ok=state.service&&state.date&&state.time&&nameI.value.trim()&&phoneI.value.trim();
+    summary.innerHTML=(state.service&&state.date&&state.time)?'<b>'+state.service+'</b><br>'+fmtDate(state.date)+' um '+state.time+' Uhr':'';
+    submit.disabled=!ok;
+  }
+  nameI.addEventListener('input',update);phoneI.addEventListener('input',update);
+  prev.addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);renderCal();});
+  next.addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);renderCal();});
+  submit.addEventListener('click',()=>{
+    if(submit.disabled)return;
+    successMsg.textContent=state.service+' am '+fmtDate(state.date)+' um '+state.time+' Uhr. Tifani bestätigt deine Anfrage so schnell wie möglich.';
+    success.hidden=false;
+  });
+  reset.addEventListener('click',()=>{
+    state.service='';state.date=null;state.time='';
+    svcWrap.querySelectorAll('button').forEach(x=>x.classList.remove('sel'));
+    nameI.value='';phoneI.value='';success.hidden=true;renderCal();renderTimes();update();
+  });
+  renderCal();renderTimes();update();
+})();
 // reveal
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
