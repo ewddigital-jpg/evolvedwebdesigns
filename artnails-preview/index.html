@@ -422,13 +422,21 @@ section[id]{scroll-margin-top:84px}
   .cdetail{padding:13px 0}
   /* booker */
   .booker{grid-template-columns:1fr}
-  .booker-col{padding:22px 16px}
+  .booker-col{padding:18px 14px}
   .booker-col+.booker-col{border-left:0;border-top:1px solid var(--line)}
-  .bk-step{margin-bottom:12px}
-  .bk-step:not(:first-child){margin-top:20px}
-  .bk-services button{padding:11px 14px}
-  .bk-nav{width:42px;height:42px}
+  .bk-step{margin-bottom:9px}
+  .bk-step:not(:first-child){margin-top:15px}
+  .bk-step h3{font-size:16.5px}
+  .bk-services{gap:7px}
+  .bk-services button{padding:10px 14px;font-size:15px}
+  .bk-cal-head{margin-bottom:8px}
+  .bk-nav{width:40px;height:40px}
   .bk-cal-grid{gap:3px}
+  .bk-times{gap:7px;min-height:0}
+  .bk-time{padding:9px 15px}
+  .bk-form{gap:8px}
+  .bk-form input{padding:11px 14px}
+  .bk-summary{margin:12px 0 10px}
   .hero-tag{left:0}
 }
 @media(prefers-reduced-motion:reduce){
@@ -479,17 +487,15 @@ section[id]{scroll-margin-top:84px}
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <h1 class="reveal">Nägel, die kleine <span class="accent paint">Kunstwerke<svg viewBox="0 0 300 22" preserveAspectRatio="none" aria-hidden="true"><path d="M2 15 C60 6 120 5 180 8 C230 10 270 12 298 9 C270 16 210 18 150 17 C95 16 45 17 4 19 Z"/></svg></span> sind.</h1>
-        <p class="hero-lead reveal d1">Bei Tifani wird jeder Satz von Hand gestaltet, von zartem French mit Blüten bis zu aufwändiger Handmalerei. Kein Studio von der Stange, sondern ein kleines Atelier in Rorschach am Bodensee, in dem man sich Zeit für dich nimmt.</p>
+        <p class="hero-lead reveal d1">Ich mache jedes Set von Hand, in meinem kleinen Studio in Rorschach. Vom feinen French bis zu ganz eigenen Designs. Ich nehme mir Zeit für dich und deine Nägel.</p>
         <div class="hero-cta reveal d3">
           <a class="btn btn-wine" href="#buchen">Termin online buchen <span class="arw">→</span></a>
           <a class="btn btn-outline" href="tel:+41788013609">078 801 36 09</a>
         </div>
         <div class="hero-meta reveal d4">
-          <span><span class="stars">★★★★★</span> <b>5,0</b></span>
-          <span class="hero-sep"></span>
-          <span>Handgemalte Unikate</span>
-          <span class="hero-sep"></span>
-          <span>Hält bis zu <b>5 Wochen</b></span>
+          <span class="stars">★★★★★</span>
+          <b>5,0</b>
+          <span>von meinen Kundinnen</span>
         </div>
       </div>
       <figure class="hero-figure reveal d2">
@@ -502,32 +508,22 @@ section[id]{scroll-margin-top:84px}
         </div>
       </figure>
     </div>
-
-    <!-- TRUST -->
-    <div class="trust">
-      <div class="wrap trust-in">
-        <div class="trust-item reveal"><span class="k">5,0★</span><span class="l">Bewertung</span></div>
-        <div class="trust-item reveal d1"><span class="k">100%</span><span class="l">von Hand gestaltet</span></div>
-        <div class="trust-item reveal d2"><span class="k">5 Wo.</span><span class="l">Haltbarkeit</span></div>
-        <div class="trust-item reveal d3"><span class="k">24/7</span><span class="l">online buchbar</span></div>
-      </div>
-    </div>
   </section>
 
   <!-- GALLERY -->
   <section class="sec" id="arbeiten">
     <div class="wrap">
       <div class="sec-head reveal">
-        <h2>Von zart bis kompromisslos</h2>
-        <p>Ein kleiner Ausschnitt aus Tifanis Handschrift. Jedes Set entsteht individuell nach deinen Wünschen.</p>
+        <h2>Meine Arbeiten</h2>
+        <p>Ein paar Sets, die ich gemacht habe. Dein Design gestalte ich ganz nach deinen Wünschen.</p>
       </div>
       <div class="gal">
-        <a class="tile t-a reveal" href="#kontakt"><img src="img/g1-pink.jpg" width="820" height="1458" alt="Rosa Nägel mit handgemalten 3D-Blüten und Chrome-Details" loading="lazy"><span class="cap"><span>Rosé · 3D-Blüten</span><b>Nº 01</b></span></a>
-        <a class="tile t-b reveal d1" href="#kontakt"><img src="img/g2-gold.jpg" width="820" height="1458" alt="Elegante Nude-Nägel mit goldenen Blütenakzenten" loading="lazy"><span class="cap"><span>Nude · Gold</span><b>Nº 02</b></span></a>
-        <a class="tile t-c reveal d2" href="#kontakt"><img src="img/g3-tropical.jpg" width="820" height="1093" alt="Sommerliche French-Nägel mit tropischen Blüten in Orange und Pink" loading="lazy"><span class="cap"><span>Tropical French</span><b>Nº 03</b></span></a>
-        <a class="tile t-d reveal" href="#kontakt"><img src="img/g4-blue.jpg" width="820" height="1458" alt="Aufwändig handgemalte Nägel in Blau mit Chrome und Kunstmotiven" loading="lazy"><span class="cap"><span>Handpainted · Blau</span><b>Nº 04</b></span></a>
-        <a class="tile t-e reveal d1" href="#kontakt"><img src="img/g5-gothic.jpg" width="820" height="875" alt="Lange handgemalte Nägel in Dunkelrot mit Kettchen und Kunstmotiven" loading="lazy"><span class="cap"><span>Handpainted · Bordeaux</span><b>Nº 05</b></span></a>
-        <a class="tile t-f reveal d2" href="#kontakt"><img src="img/g6-fresh.jpg" width="724" height="344" alt="Frisch aufgefüllte Nägel in Rosa mit silbernen 3D-Blüten" loading="lazy"><span class="cap"><span>Rosé · Chrome-Blüten</span><b>Nº 06</b></span></a>
+        <a class="tile t-a reveal" href="#buchen"><img src="img/g1-pink.jpg" width="820" height="1458" alt="Rosa Nägel mit handgemalten 3D-Blüten und Chrome-Details" loading="lazy"><span class="cap"><span>Rosé · 3D-Blüten</span><b>Nº 01</b></span></a>
+        <a class="tile t-b reveal d1" href="#buchen"><img src="img/g2-gold.jpg" width="820" height="1458" alt="Elegante Nude-Nägel mit goldenen Blütenakzenten" loading="lazy"><span class="cap"><span>Nude · Gold</span><b>Nº 02</b></span></a>
+        <a class="tile t-c reveal d2" href="#buchen"><img src="img/g3-tropical.jpg" width="820" height="1093" alt="Sommerliche French-Nägel mit tropischen Blüten in Orange und Pink" loading="lazy"><span class="cap"><span>Tropical French</span><b>Nº 03</b></span></a>
+        <a class="tile t-d reveal" href="#buchen"><img src="img/g4-blue.jpg" width="820" height="1458" alt="Aufwändig handgemalte Nägel in Blau mit Chrome und Kunstmotiven" loading="lazy"><span class="cap"><span>Handpainted · Blau</span><b>Nº 04</b></span></a>
+        <a class="tile t-e reveal d1" href="#buchen"><img src="img/g5-gothic.jpg" width="820" height="875" alt="Lange handgemalte Nägel in Dunkelrot mit Kettchen und Kunstmotiven" loading="lazy"><span class="cap"><span>Handpainted · Bordeaux</span><b>Nº 05</b></span></a>
+        <a class="tile t-f reveal d2" href="#buchen"><img src="img/g6-fresh.jpg" width="724" height="344" alt="Frisch aufgefüllte Nägel in Rosa mit silbernen 3D-Blüten" loading="lazy"><span class="cap"><span>Rosé · Chrome-Blüten</span><b>Nº 06</b></span></a>
       </div>
     </div>
   </section>
@@ -536,14 +532,14 @@ section[id]{scroll-margin-top:84px}
   <section class="sec" id="atelier">
     <div class="wrap">
       <div class="sec-head center reveal">
-        <h2>Ein Atelier, kein Fliessband</h2>
-        <p>Handwerk, Zeit und ein gutes Gefühl. Dafür kommen Tifanis Kundinnen wieder.</p>
+        <h2>Das ist mir wichtig</h2>
+        <p>Ein paar Dinge, die dir bei mir sicher sind.</p>
       </div>
       <div class="feat-grid">
-        <div class="feat reveal"><div class="ic">🎨</div><h3>Handgemalte Unikate</h3><p>Blüten, Chrome, 3D-Elemente oder komplette Handmalerei. Dein Design wird direkt auf den Nagel gemalt, keine Massenware.</p></div>
-        <div class="feat reveal d1"><div class="ic">⏳</div><h3>Hält bis zu 5 Wochen</h3><p>Sauber gearbeitet mit Gel und Acrylgel. Deine Nägel halten, bis du wieder Lust auf ein neues Set hast.</p></div>
-        <div class="feat reveal d2"><div class="ic">🫧</div><h3>Gemütliche Atmosphäre</h3><p>Ein Getränk, Ruhe und volle Aufmerksamkeit. Bei Tifani ist der Termin auch eine kleine Auszeit.</p></div>
-        <div class="feat reveal d3"><div class="ic">📅</div><h3>Rund um die Uhr buchbar</h3><p>Termin online aussuchen, buchen, fertig. Jederzeit und ohne Warten in der Warteschleife.</p></div>
+        <div class="feat reveal"><div class="ic">🎨</div><h3>Alles von Hand</h3><p>Blüten, Chrome, 3D oder komplett handgemalte Motive. Dein Design male ich direkt auf den Nagel.</p></div>
+        <div class="feat reveal d1"><div class="ic">⏳</div><h3>Hält bis zu 5 Wochen</h3><p>Ich arbeite sauber mit Gel und Acrylgel, damit deine Nägel lange schön bleiben.</p></div>
+        <div class="feat reveal d2"><div class="ic">🫧</div><h3>Zeit für dich</h3><p>Bei mir bekommst du Ruhe, ein Getränk und meine volle Aufmerksamkeit.</p></div>
+        <div class="feat reveal d3"><div class="ic">📅</div><h3>Einfach online buchen</h3><p>Such dir jederzeit einen freien Termin aus, wann es dir gerade passt.</p></div>
       </div>
     </div>
   </section>
@@ -552,9 +548,9 @@ section[id]{scroll-margin-top:84px}
   <section class="sec" id="ueber" style="background:var(--porcelain-2)">
     <div class="wrap about2">
       <div class="about2-text reveal">
-        <h2>Hinter Art Nails steht eine Person. Tifani.</h2>
-        <p class="lede">Ich gestalte in meinem Atelier in Rorschach jedes Set von Hand. Kein Schema, keine Massenware, sondern dein Design, direkt auf den Nagel gemalt.</p>
-        <p>Am liebsten arbeite ich mit feinen Details und Farben, die zu dir passen. Ob dezent für jeden Tag oder ein Look, über den alle reden, <strong>ich nehme mir die Zeit, die es braucht.</strong> Du sollst dich wohlfühlen und mit einem Ergebnis rausgehen, das dich zum Lächeln bringt.</p>
+        <h2>Hallo, ich bin Tifani</h2>
+        <p class="lede">Ich mache Nägel in meinem kleinen Studio in Rorschach, jedes Set von Hand und ganz nach deinem Geschmack.</p>
+        <p>Ob dezent für den Alltag oder richtig auffällig, <strong>ich nehme mir die Zeit, die es braucht.</strong> Mir ist wichtig, dass du dich wohlfühlst und mit Nägeln rausgehst, die dir wirklich gefallen.</p>
         <p class="signature"><b>Tifani</b><em>Nail Artist, Rorschach</em></p>
       </div>
       <div class="about2-media reveal d1">
@@ -564,12 +560,40 @@ section[id]{scroll-margin-top:84px}
     </div>
   </section>
 
+  <!-- REVIEWS -->
+  <section class="sec" id="bewertungen">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <h2>Das sagen meine Kundinnen</h2>
+      </div>
+      <div class="rev-grid">
+        <div class="rev-score reveal">
+          <div class="big">5,0</div>
+          <div class="stars">★★★★★</div>
+          <div class="sub">aus 2 Bewertungen</div>
+        </div>
+        <div class="rev-cards">
+          <div class="rcard reveal d1">
+            <div class="stars">★★★★★</div>
+            <p class="quote">„Sie isch die bescht, es isch gemüetlich, moh kriegt sogar Getränk und Nägel hebet bi mir 5 Wuche.” 🫶🏼</p>
+            <div class="who"><span class="av">L</span><span><span class="n">Lucy Käuferle</span><br><span class="m">vor 2 Monaten</span></span></div>
+          </div>
+          <div class="rcard reveal d2">
+            <div class="stars">★★★★★</div>
+            <p class="quote">„LOVE LOVE LOVEEEEEEE”</p>
+            <div class="who"><span class="av">S</span><span><span class="n">Sina Rüegg</span><br><span class="m">vor 3 Wochen</span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PRICES -->
   <section class="sec prices" id="preise">
     <div class="wrap">
       <div class="sec-head center reveal">
-        <h2>Faire, transparente Preise</h2>
-        <p>Alle Preise in CHF. Der Preis richtet sich nach Nagellänge (Grösse) und Design-Aufwand (Level).</p>
+        <h2>Preise</h2>
+        <p>Alle Preise in CHF. Was es kostet, hängt von Nagellänge (Grösse) und Design (Level) ab.</p>
       </div>
       <div class="price-cols">
         <div class="pcard reveal">
@@ -616,78 +640,12 @@ section[id]{scroll-margin-top:84px}
     </div>
   </section>
 
-  <!-- REVIEWS -->
-  <section class="sec" id="bewertungen">
-    <div class="wrap">
-      <div class="sec-head center reveal">
-        <h2>Das sagen Tifanis Kundinnen</h2>
-      </div>
-      <div class="rev-grid">
-        <div class="rev-score reveal">
-          <div class="big">5,0</div>
-          <div class="stars">★★★★★</div>
-          <div class="sub">aus 2 Bewertungen</div>
-        </div>
-        <div class="rev-cards">
-          <div class="rcard reveal d1">
-            <div class="stars">★★★★★</div>
-            <p class="quote">„Sie isch die bescht, es isch gemüetlich, moh kriegt sogar Getränk und Nägel hebet bi mir 5 Wuche.” 🫶🏼</p>
-            <div class="who"><span class="av">L</span><span><span class="n">Lucy Käuferle</span><br><span class="m">vor 2 Monaten</span></span></div>
-          </div>
-          <div class="rcard reveal d2">
-            <div class="stars">★★★★★</div>
-            <p class="quote">„LOVE LOVE LOVEEEEEEE”</p>
-            <div class="who"><span class="av">S</span><span><span class="n">Sina Rüegg</span><br><span class="m">vor 3 Wochen</span></span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="sec" id="faq" style="background:var(--porcelain-2)">
-    <div class="wrap">
-      <div class="sec-head center reveal">
-        <h2>Gut zu wissen</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item reveal"><button class="faq-q">Wo finde ich Art Nails by Tifani?<span class="pm"></span></button><div class="faq-a"><p>Das Atelier ist am Adolf-Gaudy-Weg 4/a in 9400 Rorschach (St. Gallen), direkt am Bodensee. Terminvereinbarung am besten online oder telefonisch unter 078 801 36 09.</p></div></div>
-        <div class="faq-item reveal"><button class="faq-q">Was kostet ein neues Set?<span class="pm"></span></button><div class="faq-a"><p>Ein Neuset (Neumodellage) startet bei CHF 110 und richtet sich nach Nagellänge und Design-Aufwand. Auffüllen (Refill) gibt es ab CHF 75. Die komplette Preisliste findest du im Abschnitt „Preise”.</p></div></div>
-        <div class="faq-item reveal"><button class="faq-q">Wie sind die Nägel aufgebaut, was bedeuten „Level” und „Grösse”?<span class="pm"></span></button><div class="faq-a"><p>Die Grösse (S bis XL) steht für die Nagellänge, das Level für den Design-Aufwand: Level 1 ist schlicht oder einfarbig, Level 2 mit Design, Level 3 aufwändige Handmalerei. So zahlst du immer nur für das, was du wirklich möchtest.</p></div></div>
-        <div class="faq-item reveal"><button class="faq-q">Wie lange halten die Nägel?<span class="pm"></span></button><div class="faq-a"><p>Bei sauberer Pflege halten die Sets aus Gel und Acrylgel bis zu 5 Wochen, das bestätigen auch Stammkundinnen. Fürs Auffüllen kommst du am besten alle 3 bis 4 Wochen vorbei.</p></div></div>
-        <div class="faq-item reveal"><button class="faq-q">Macht ihr auch individuelle Designs und Handmalerei?<span class="pm"></span></button><div class="faq-a"><p>Genau das ist Tifanis Spezialität. Von zartem French mit Blüten über Chrome und 3D-Elemente bis zu komplett handgemalten Motiven. Bring deine Idee oder ein Foto mit, der Rest entsteht direkt am Nagel.</p></div></div>
-        <div class="faq-item reveal"><button class="faq-q">Übernehmt ihr auch Arbeit von einem anderen Studio?<span class="pm"></span></button><div class="faq-a"><p>Ja. Fremdarbeit entfernen kostet CHF 15. Anschliessend gestalten wir dein neues Set ganz nach deinen Wünschen.</p></div></div>
-        <div class="faq-item reveal"><button class="faq-q">Wie buche ich einen Termin?<span class="pm"></span></button><div class="faq-a"><p>Am einfachsten rund um die Uhr über den Online-Kalender („Termin buchen”). Du kannst dich auch telefonisch unter 078 801 36 09 oder über Instagram @artnails.by.tifani melden.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT / FINAL CTA -->
-  <section class="sec contact" id="kontakt">
-    <div class="wrap contact-grid">
-      <div class="reveal">
-        <h2>Bereit für deine neuen Lieblingsnägel?</h2>
-        <p class="lead">Sichere dir deinen Wunschtermin im Atelier in Rorschach, online in unter einer Minute.</p>
-        <div class="cta-row">
-          <a class="btn btn-light" href="#buchen">Termin online buchen <span class="arw">→</span></a>
-          <a class="btn btn-ghost-light" href="tel:+41788013609">Anrufen</a>
-        </div>
-      </div>
-      <div class="cdetails reveal d1">
-        <div class="cdetail"><span class="ic">📍</span><span><span class="lab">Atelier</span><span class="val">Adolf-Gaudy-Weg 4/a<br>9400 Rorschach (SG)</span></span></div>
-        <div class="cdetail"><span class="ic">📞</span><span><span class="lab">Telefon</span><a class="val" href="tel:+41788013609">078 801 36 09</a></span></div>
-        <div class="cdetail"><span class="ic">📷</span><span><span class="lab">Instagram</span><a class="val" href="https://www.instagram.com/artnails.by.tifani" target="_blank" rel="noopener">@artnails.by.tifani</a></span></div>
-        <div class="cdetail"><span class="ic">🕒</span><span><span class="lab">Termine</span><span class="val">Nach Vereinbarung · online buchbar</span></span></div>
-      </div>
-    </div>
-  </section>
-
   <!-- BOOKING CALENDAR (eigener Kalender) -->
   <section class="sec" id="buchen" style="background:var(--porcelain-2)">
     <div class="wrap">
       <div class="sec-head center reveal">
-        <h2>Direkt online buchen</h2>
-        <p>Wähle Leistung, Tag und Uhrzeit. Tifani bestätigt deinen Termin persönlich.</p>
+        <h2>Termin aussuchen</h2>
+        <p>Wähle Leistung, Tag und Uhrzeit. Ich bestätige deinen Termin persönlich.</p>
       </div>
       <div class="booker reveal" id="booker">
         <div class="booker-col">
@@ -729,6 +687,44 @@ section[id]{scroll-margin-top:84px}
       </div>
     </div>
   </section>
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <h2>Gut zu wissen</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal"><button class="faq-q">Wo bist du?<span class="pm"></span></button><div class="faq-a"><p>Mein Studio ist am Adolf-Gaudy-Weg 4/a in 9400 Rorschach (SG), direkt am Bodensee. Am besten meldest du dich online oder telefonisch unter 078 801 36 09.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">Was kostet ein neues Set?<span class="pm"></span></button><div class="faq-a"><p>Ein Neuset startet bei CHF 110 und hängt von Nagellänge und Design ab. Auffüllen gibt es ab CHF 75. Die ganze Liste findest du oben bei den Preisen.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">Was bedeuten „Level” und „Grösse”?<span class="pm"></span></button><div class="faq-a"><p>Die Grösse (S bis XL) ist die Nagellänge, das Level der Design-Aufwand: Level 1 schlicht oder einfarbig, Level 2 mit Design, Level 3 aufwändige Handmalerei. So zahlst du nur für das, was du wirklich möchtest.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">Wie lange halten die Nägel?<span class="pm"></span></button><div class="faq-a"><p>Bei guter Pflege halten meine Sets aus Gel und Acrylgel bis zu 5 Wochen. Zum Auffüllen kommst du am besten alle 3 bis 4 Wochen vorbei.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">Machst du auch individuelle Designs und Handmalerei?<span class="pm"></span></button><div class="faq-a"><p>Ja, das ist genau mein Ding. Von feinem French über Chrome und 3D bis zu komplett handgemalten Motiven. Bring deine Idee oder ein Foto mit, den Rest male ich direkt auf den Nagel.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">Übernimmst du auch Arbeit von einem anderen Studio?<span class="pm"></span></button><div class="faq-a"><p>Ja. Fremdarbeit entfernen kostet CHF 15. Danach gestalte ich dein neues Set ganz nach deinen Wünschen.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">Wie buche ich einen Termin?<span class="pm"></span></button><div class="faq-a"><p>Am einfachsten rund um die Uhr über den Kalender hier auf der Seite. Du kannst mich auch anrufen (078 801 36 09) oder auf Instagram @artnails.by.tifani schreiben.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FINAL CTA -->
+  <section class="sec contact" id="kontakt">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <h2>So erreichst du mich</h2>
+        <p class="lead">Ich freue mich auf dich. Ruf an, schreib mir auf Instagram oder such dir direkt online einen Termin aus.</p>
+        <div class="cta-row">
+          <a class="btn btn-light" href="#buchen">Termin online buchen <span class="arw">→</span></a>
+          <a class="btn btn-ghost-light" href="tel:+41788013609">Anrufen</a>
+        </div>
+      </div>
+      <div class="cdetails reveal d1">
+        <div class="cdetail"><span class="ic">📍</span><span><span class="lab">Atelier</span><span class="val">Adolf-Gaudy-Weg 4/a<br>9400 Rorschach (SG)</span></span></div>
+        <div class="cdetail"><span class="ic">📞</span><span><span class="lab">Telefon</span><a class="val" href="tel:+41788013609">078 801 36 09</a></span></div>
+        <div class="cdetail"><span class="ic">📷</span><span><span class="lab">Instagram</span><a class="val" href="https://www.instagram.com/artnails.by.tifani" target="_blank" rel="noopener">@artnails.by.tifani</a></span></div>
+        <div class="cdetail"><span class="ic">🕒</span><span><span class="lab">Termine</span><span class="val">Nach Vereinbarung · online buchbar</span></span></div>
+      </div>
+    </div>
+  </section>
+
 
 </main>
 
@@ -793,13 +789,13 @@ section[id]{scroll-margin-top:84px}
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"Wo finde ich Art Nails by Tifani?","acceptedAnswer":{"@type":"Answer","text":"Das Atelier ist am Adolf-Gaudy-Weg 4/a in 9400 Rorschach (St. Gallen), direkt am Bodensee. Terminvereinbarung online oder telefonisch unter 078 801 36 09."}},
-    {"@type":"Question","name":"Was kostet ein neues Set?","acceptedAnswer":{"@type":"Answer","text":"Ein Neuset startet bei CHF 110 und richtet sich nach Nagellänge und Design-Aufwand. Auffüllen gibt es ab CHF 75."}},
+    {"@type":"Question","name":"Wo ist Art Nails by Tifani?","acceptedAnswer":{"@type":"Answer","text":"Das Studio ist am Adolf-Gaudy-Weg 4/a in 9400 Rorschach (St. Gallen), direkt am Bodensee. Terminvereinbarung online oder telefonisch unter 078 801 36 09."}},
+    {"@type":"Question","name":"Was kostet ein neues Set?","acceptedAnswer":{"@type":"Answer","text":"Ein Neuset startet bei CHF 110 und hängt von Nagellänge und Design ab. Auffüllen gibt es ab CHF 75."}},
     {"@type":"Question","name":"Was bedeuten Level und Grösse?","acceptedAnswer":{"@type":"Answer","text":"Die Grösse S bis XL steht für die Nagellänge, das Level für den Design-Aufwand: Level 1 schlicht, Level 2 mit Design, Level 3 aufwändige Handmalerei."}},
     {"@type":"Question","name":"Wie lange halten die Nägel?","acceptedAnswer":{"@type":"Answer","text":"Bei guter Pflege halten die Sets aus Gel und Acrylgel bis zu 5 Wochen. Zum Auffüllen kommt man am besten alle 3 bis 4 Wochen."}},
-    {"@type":"Question","name":"Macht ihr individuelle Designs und Handmalerei?","acceptedAnswer":{"@type":"Answer","text":"Ja, das ist Tifanis Spezialität, von French mit Blüten über Chrome und 3D bis zu komplett handgemalten Motiven."}},
-    {"@type":"Question","name":"Übernehmt ihr Arbeit von einem anderen Studio?","acceptedAnswer":{"@type":"Answer","text":"Ja, Fremdarbeit entfernen kostet CHF 15, danach wird das neue Set nach Wunsch gestaltet."}},
-    {"@type":"Question","name":"Wie buche ich einen Termin?","acceptedAnswer":{"@type":"Answer","text":"Am einfachsten rund um die Uhr über den Online-Kalender, telefonisch unter 078 801 36 09 oder über Instagram @artnails.by.tifani."}}
+    {"@type":"Question","name":"Machst du auch individuelle Designs und Handmalerei?","acceptedAnswer":{"@type":"Answer","text":"Ja, das ist mein Spezialgebiet, von French mit Blüten über Chrome und 3D bis zu komplett handgemalten Motiven."}},
+    {"@type":"Question","name":"Übernimmst du Arbeit von einem anderen Studio?","acceptedAnswer":{"@type":"Answer","text":"Ja, Fremdarbeit entfernen kostet CHF 15, danach wird das neue Set nach Wunsch gestaltet."}},
+    {"@type":"Question","name":"Wie buche ich einen Termin?","acceptedAnswer":{"@type":"Answer","text":"Am einfachsten rund um die Uhr über den Kalender auf der Seite, telefonisch unter 078 801 36 09 oder über Instagram @artnails.by.tifani."}}
   ]
 }
 </script>
@@ -883,7 +879,7 @@ document.querySelectorAll('.faq-q').forEach(q=>{
   next.addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);renderCal();});
   submit.addEventListener('click',()=>{
     if(submit.disabled)return;
-    successMsg.textContent=state.service+' am '+fmtDate(state.date)+' um '+state.time+' Uhr. Tifani bestätigt deine Anfrage so schnell wie möglich.';
+    successMsg.textContent=state.service+' am '+fmtDate(state.date)+' um '+state.time+' Uhr. Ich bestätige deine Anfrage so schnell wie möglich.';
     success.hidden=false;
   });
   reset.addEventListener('click',()=>{
