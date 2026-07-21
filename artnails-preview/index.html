@@ -604,16 +604,15 @@ img{max-width:100%;display:block}
         <h2>Direkt online buchen</h2>
         <p>Wähle deine Leistung und einen freien Termin. Ohne Anruf, ohne Warten.</p>
       </div>
-      <div class="booking-frame reveal" id="bookingFrame">
+      <div class="booking-frame blocked reveal" id="bookingFrame">
         <div class="booking-cta">
           <span class="bc-em">🗓️</span>
           <h3>Termin bei Tifani sichern</h3>
-          <p>Wähle im Buchungskalender deine Leistung und einen freien Termin aus. Bestätigung kommt sofort.</p>
+          <p>Freie Termine ansehen und in unter einer Minute verbindlich buchen. Die Bestätigung kommt sofort.</p>
           <a class="btn btn-wine" href="https://nonamey5a8.setmore.com/" target="_blank" rel="noopener">Zum Buchungskalender <span class="arw">→</span></a>
         </div>
         <iframe id="bookingIframe" src="https://nonamey5a8.setmore.com/" title="Termin buchen bei Art Nails by Tifani" loading="lazy"></iframe>
       </div>
-      <p class="booking-fallback">Der Kalender lädt nicht? <a href="https://nonamey5a8.setmore.com/" target="_blank" rel="noopener">Hier direkt zur Buchung →</a></p>
     </div>
   </section>
 
@@ -710,18 +709,17 @@ document.querySelectorAll('.faq-q').forEach(q=>{
     if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
   });
 });
-// booking iframe: fall back to CTA if the embed is blocked by CSP/X-Frame-Options
+// booking: the frame starts with .blocked (CTA shown). If the domain CSP
+// allows the Setmore embed, the iframe fires 'load' and we reveal it inline.
 (function(){
   const bf=document.getElementById('bookingFrame'),ifr=document.getElementById('bookingIframe');
   if(!bf||!ifr)return;
-  function check(){
-    let blocked=false;
-    try{const d=ifr.contentDocument||ifr.contentWindow.document;if(!d||!d.body||d.body.childElementCount===0)blocked=true;}
-    catch(e){blocked=false;}
-    bf.classList.toggle('blocked',blocked);
-  }
-  ifr.addEventListener('load',()=>setTimeout(check,300));
-  setTimeout(check,3000);
+  ifr.addEventListener('load',function(){
+    // a successful cross-origin load means the embed is permitted -> show it
+    try{var ok=ifr.contentWindow&&ifr.contentWindow.location.href!=='about:blank';}
+    catch(e){ok=true;} // cross-origin access throws => real page loaded
+    if(ok)bf.classList.remove('blocked');
+  });
 })();
 // reveal
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
