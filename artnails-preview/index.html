@@ -164,6 +164,7 @@ img{max-width:100%;display:block}
 .trust-item+.trust-item{border-left:1px solid var(--line)}
 
 /* ---- section base ---- */
+section[id]{scroll-margin-top:84px}
 .sec{padding:96px 0}
 .sec-head{max-width:640px;margin-bottom:52px}
 .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
@@ -349,6 +350,7 @@ img{max-width:100%;display:block}
 @media(max-width:760px){
   .nav{display:none}
   .hdr .hdr-in>.btn{display:none}
+  .hdr-in{height:64px}
   .burger{display:flex}
   .mobile-nav{display:block;position:fixed;inset:0 0 0 auto;width:min(82vw,340px);background:var(--porcelain);z-index:70;transform:translateX(100%);transition:transform .38s cubic-bezier(.2,.7,.2,1);box-shadow:-30px 0 60px -30px rgba(0,0,0,.5);padding:88px 30px 30px}
   .mobile-nav.open{transform:none}
@@ -360,7 +362,13 @@ img{max-width:100%;display:block}
 }
 @media(max-width:640px){
   .wrap{padding:0 22px}
-  .sec{padding:70px 0}
+  .sec{padding:60px 0}
+  .sec-head{margin-bottom:38px}
+  .hero{padding:32px 0 24px}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{width:100%}
+  .cta-row{flex-direction:column}
+  .cta-row .btn{width:100%}
   .trust-in{grid-template-columns:1fr 1fr;gap:0}
   .trust-item{padding:18px 8px}
   .trust-item+.trust-item{border-left:0}
@@ -369,12 +377,16 @@ img{max-width:100%;display:block}
   .feat-grid{grid-template-columns:1fr}
   .gal{grid-template-columns:1fr;grid-auto-rows:auto}
   .gal .tile{aspect-ratio:4/5}
+  .gal .t-b,.gal .t-d,.gal .t-f{display:none}
   .t-a{grid-column:auto;grid-row:auto}
   .pextra ul{grid-template-columns:1fr}
   .about2-studio{width:50%;left:-6px;bottom:-24px}
   .booker{grid-template-columns:1fr}
-  .booker-col{padding:28px 22px}
+  .booker-col{padding:26px 16px}
   .booker-col+.booker-col{border-left:0;border-top:1px solid var(--line)}
+  .bk-nav{width:42px;height:42px}
+  .bk-cal-grid{gap:3px}
+  .plegend{font-size:13px}
   .hero-tag{left:0}
 }
 @media(prefers-reduced-motion:reduce){
@@ -402,7 +414,7 @@ img{max-width:100%;display:block}
       <a href="#ueber">Über Tifani</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <a class="btn btn-wine" href="https://nonamey5a8.setmore.com/" target="_blank" rel="noopener">Termin buchen <span class="arw">→</span></a>
+    <a class="btn btn-wine" href="#buchen">Termin buchen <span class="arw">→</span></a>
     <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -415,7 +427,7 @@ img{max-width:100%;display:block}
   <a href="#preise">Preise</a>
   <a href="#ueber">Über Tifani</a>
   <a href="#kontakt">Kontakt</a>
-  <a class="btn btn-wine" href="https://nonamey5a8.setmore.com/" target="_blank" rel="noopener">Termin buchen →</a>
+  <a class="btn btn-wine" href="#buchen">Termin buchen →</a>
 </nav>
 
 <main id="top">
@@ -427,7 +439,7 @@ img{max-width:100%;display:block}
         <h1 class="reveal">Nägel, die kleine <span class="accent paint">Kunstwerke<svg viewBox="0 0 300 22" preserveAspectRatio="none" aria-hidden="true"><path d="M2 15 C60 6 120 5 180 8 C230 10 270 12 298 9 C270 16 210 18 150 17 C95 16 45 17 4 19 Z"/></svg></span> sind.</h1>
         <p class="hero-lead reveal d1">Bei Tifani wird jeder Satz von Hand gestaltet, von zartem French mit Blüten bis zu aufwändiger Handmalerei. Kein Studio von der Stange, sondern ein kleines Atelier in Rorschach am Bodensee, in dem man sich Zeit für dich nimmt.</p>
         <div class="hero-cta reveal d3">
-          <a class="btn btn-wine" href="https://nonamey5a8.setmore.com/" target="_blank" rel="noopener">Termin online buchen <span class="arw">→</span></a>
+          <a class="btn btn-wine" href="#buchen">Termin online buchen <span class="arw">→</span></a>
           <a class="btn btn-outline" href="tel:+41788013609">078 801 36 09</a>
         </div>
         <div class="hero-meta reveal d4">
@@ -560,7 +572,7 @@ img{max-width:100%;display:block}
         <b>Grösse</b> S bis XL steht für die Nagellänge. <b>Level 1</b> ist schlicht, <b>Level 2</b> mit Design, <b>Level 3</b> aufwändige Handmalerei. Genaue Beratung gerne vor Ort.
       </p>
       <div style="text-align:center;margin-top:38px" class="reveal d3">
-        <a class="btn btn-light" href="https://nonamey5a8.setmore.com/" target="_blank" rel="noopener">Wunschtermin sichern <span class="arw">→</span></a>
+        <a class="btn btn-light" href="#buchen">Wunschtermin sichern <span class="arw">→</span></a>
       </div>
     </div>
   </section>
@@ -618,7 +630,7 @@ img{max-width:100%;display:block}
         <h2>Bereit für deine neuen Lieblingsnägel?</h2>
         <p class="lead">Sichere dir deinen Wunschtermin im Atelier in Rorschach, online in unter einer Minute.</p>
         <div class="cta-row">
-          <a class="btn btn-light" href="https://nonamey5a8.setmore.com/" target="_blank" rel="noopener">Termin online buchen <span class="arw">→</span></a>
+          <a class="btn btn-light" href="#buchen">Termin online buchen <span class="arw">→</span></a>
           <a class="btn btn-ghost-light" href="tel:+41788013609">Anrufen</a>
         </div>
       </div>
@@ -631,7 +643,7 @@ img{max-width:100%;display:block}
     </div>
   </section>
 
-  <!-- BOOKING CALENDAR (Setmore) -->
+  <!-- BOOKING CALENDAR (eigener Kalender) -->
   <section class="sec" id="buchen" style="background:var(--porcelain-2)">
     <div class="wrap">
       <div class="sec-head center reveal">
